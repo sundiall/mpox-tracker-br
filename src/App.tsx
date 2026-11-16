@@ -23,40 +23,75 @@ export function App() {
         onSelectUF={setSelectedUF}
       />
 
-      {/* Conteúdo Principal Dinâmico */}
+      {/* Conteúdo Principal Dinâmico com Semântica Acessível */}
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 py-6 sm:py-8">
-        {activeTab === 'painel' && (
-          <DashboardView
-            states={statesData}
-            selectedUF={selectedUF}
-            onSelectUF={setSelectedUF}
-            onNavigateToTab={setActiveTab}
-          />
-        )}
+        <section
+          id="panel-painel"
+          role="tabpanel"
+          aria-labelledby="tab-painel"
+          hidden={activeTab !== 'painel'}
+        >
+          {activeTab === 'painel' && (
+            <DashboardView
+              states={statesData}
+              selectedUF={selectedUF}
+              onSelectUF={setSelectedUF}
+              onNavigateToTab={setActiveTab}
+            />
+          )}
+        </section>
 
-        {activeTab === 'vacinas' && (
-          <VaccinesMilestonesView
-            selectedUF={selectedUF}
-          />
-        )}
+        <section
+          id="panel-vacinas"
+          role="tabpanel"
+          aria-labelledby="tab-vacinas"
+          hidden={activeTab !== 'vacinas'}
+        >
+          {activeTab === 'vacinas' && (
+            <VaccinesMilestonesView
+              selectedUF={selectedUF}
+            />
+          )}
+        </section>
 
-        {activeTab === 'guia' && <ClinicalGuideFAQView />}
+        <section
+          id="panel-postos"
+          role="tabpanel"
+          aria-labelledby="tab-postos"
+          hidden={activeTab !== 'postos'}
+        >
+          {activeTab === 'postos' && (
+            <VaccinationSitesView
+              selectedUF={selectedUF}
+              onSelectUF={setSelectedUF}
+            />
+          )}
+        </section>
 
-        {activeTab === 'postos' && (
-          <VaccinationSitesView
-            selectedUF={selectedUF}
-            onSelectUF={setSelectedUF}
-          />
-        )}
+        <section
+          id="panel-guia"
+          role="tabpanel"
+          aria-labelledby="tab-guia"
+          hidden={activeTab !== 'guia'}
+        >
+          {activeTab === 'guia' && <ClinicalGuideFAQView />}
+        </section>
 
-        {activeTab === 'alertas' && (
-          <AlertsRSSView
-            selectedUF={selectedUF}
-          />
-        )}
+        <section
+          id="panel-alertas"
+          role="tabpanel"
+          aria-labelledby="tab-alertas"
+          hidden={activeTab !== 'alertas'}
+        >
+          {activeTab === 'alertas' && (
+            <AlertsRSSView
+              selectedUF={selectedUF}
+            />
+          )}
+        </section>
       </main>
 
-      {/* Rodapé com Diretrizes Éticas e Fontes Oficiais */}
+      {/* Rodapé Institucional */}
       <Footer />
     </div>
   );

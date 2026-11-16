@@ -429,3 +429,4 @@ export const statesData: StateEpidemiology[] = [
     coberturaPopulacaoAlvo: 64.3
   }
 ];
+

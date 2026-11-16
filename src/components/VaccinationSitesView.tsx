@@ -6,8 +6,9 @@ import {
   Phone, 
   Clock, 
   Search, 
-  Filter, 
-  CalendarCheck
+  CalendarCheck,
+  CheckCircle2,
+  FileCheck2
 } from 'lucide-react';
 import { vaccinationSites } from '../data/vaccination_sites';
 
@@ -21,118 +22,159 @@ export const VaccinationSitesView: FC<VaccinationSitesViewProps> = ({
   onSelectUF
 }) => {
   const [searchQuery, setSearchQuery] = useState('');
-  const [tipoFilter, setTipoFilter] = useState('todos');
+  const [selectedRegiao, setSelectedRegiao] = useState<string>('todas');
+  const [selectedTipo, setSelectedTipo] = useState<string>('todos');
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  const pageSize = 9;
 
   const filteredSites = vaccinationSites.filter((site) => {
     const matchesUF = !selectedUF || site.uf === selectedUF;
-    const matchesTipo = tipoFilter === 'todos' || site.tipo === tipoFilter;
+    const matchesRegiao = selectedRegiao === 'todas' || site.regiao === selectedRegiao;
+    const matchesTipo = selectedTipo === 'todos' || site.tipo === selectedTipo;
     const matchesSearch =
       site.nomeUnidade.toLowerCase().includes(searchQuery.toLowerCase()) ||
       site.municipio.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      site.bairro.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      site.endereco.toLowerCase().includes(searchQuery.toLowerCase());
+      site.endereco.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      site.uf.toLowerCase().includes(searchQuery.toLowerCase());
 
-    return matchesUF && matchesTipo && matchesSearch;
+    return matchesUF && matchesRegiao && matchesTipo && matchesSearch;
   });
 
-  const uniqueUFs = Array.from(new Set(vaccinationSites.map((s) => s.uf))).sort();
+  const totalPages = Math.ceil(filteredSites.length / pageSize);
+  const paginatedSites = filteredSites.slice((currentPage - 1) * pageSize, currentPage * pageSize);
+
+  const ufsList = Array.from(new Set(vaccinationSites.map((s) => s.uf))).sort();
 
   return (
     <div className="space-y-6">
-      {/* Banner de Orientação */}
-      <div className="bg-gradient-to-r from-teal-950/40 via-slate-900 to-emerald-950/40 border border-teal-800/30 rounded-2xl p-5 backdrop-blur-md">
-        <div className="max-w-3xl space-y-2">
-          <div className="flex items-center gap-2">
-            <span className="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-teal-500/20 text-teal-300 border border-teal-500/40 flex items-center gap-1.5">
-              <Building2 className="w-3.5 h-3.5" />
-              Rede de Atenção Especializada no SUS
-            </span>
-            <span className="text-xs text-slate-400">Guia de Postos & Centros de Referência</span>
-          </div>
-          <h2 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
-            Onde se Vacinar e Testar para Mpox no Brasil
-          </h2>
-          <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-            Consulte os Centros de Testagem e Aconselhamento (CTA), Serviços de Atenção Especializada (SAE)
-            e hospitais de referência com imunizantes disponíveis para os grupos prioritários do Programa Nacional de Imunizações (PNI).
+      {/* Header Institucional */}
+      <div className="bg-slate-900 border border-slate-800 rounded-xl p-5 space-y-2">
+        <div className="flex items-center gap-2">
+          <span className="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-950 text-emerald-400 border border-emerald-800/60 flex items-center gap-1.5">
+            <Building2 className="w-3.5 h-3.5" />
+            Rede de Referência SUS
+          </span>
+          <span className="text-xs text-slate-400">Total de {vaccinationSites.length} Polos Cadastrados nas 27 UFs</span>
+        </div>
+        <h2 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
+          Diretório de Centros de Testagem, Atenção Especializada & Vacinação
+        </h2>
+        <p className="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-4xl">
+          Consulte os Centros de Testagem e Aconselhamento (CTA), Serviços de Atenção Especializada (SAE),
+          e Centros de Referência para Imunobiológicos Especiais (CRIE) em todo o território nacional.
+        </p>
+      </div>
+
+      {/* Critérios de Acesso e Vacinação (Regras PNI) */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+        <div className="p-3.5 bg-slate-900 border border-slate-800 rounded-xl space-y-1">
+          <span className="text-xs font-bold text-emerald-400 flex items-center gap-1.5">
+            <CheckCircle2 className="w-4 h-4" />
+            Pessoas Vivendo com HIV
+          </span>
+          <p className="text-xs text-slate-300 leading-relaxed">
+            Elegíveis com contagem de Linfócitos T-CD4 &lt; 200 céls/mm³ (dose padrão de 0,5 mL via subcutânea, 2 doses).
+          </p>
+        </div>
+
+        <div className="p-3.5 bg-slate-900 border border-slate-800 rounded-xl space-y-1">
+          <span className="text-xs font-bold text-cyan-400 flex items-center gap-1.5">
+            <CheckCircle2 className="w-4 h-4" />
+            Usuários de PrEP
+          </span>
+          <p className="text-xs text-slate-300 leading-relaxed">
+            Elegíveis para aplicação da dose fracionada de 0,1 mL via intradérmica (esquema com 2 doses com intervalo de 28 dias).
+          </p>
+        </div>
+
+        <div className="p-3.5 bg-slate-900 border border-slate-800 rounded-xl space-y-1">
+          <span className="text-xs font-bold text-indigo-400 flex items-center gap-1.5">
+            <CheckCircle2 className="w-4 h-4" />
+            Contatos de Casos e Laboratório
+          </span>
+          <p className="text-xs text-slate-300 leading-relaxed">
+            Profilaxia pós-exposição em até 4 a 14 dias após contato de risco ou profissionais de laboratórios NB-3.
           </p>
         </div>
       </div>
 
-      {/* Barra de Filtros e Busca */}
-      <div className="bg-slate-900/80 border border-slate-800 rounded-2xl p-4 backdrop-blur-md space-y-3">
-        <div className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3">
+      {/* Controles de Filtros e Busca */}
+      <div className="bg-slate-900 border border-slate-800 rounded-xl p-4 space-y-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
           {/* Busca por texto */}
-          <div className="relative flex-1">
-            <Search className="w-4 h-4 text-slate-400 absolute left-3 top-3" />
+          <div>
+            <Search className="w-4 h-4 text-slate-400 absolute left-3 top-2.5" />
             <input
               type="text"
-              placeholder="Buscar por unidade, cidade, bairro ou endereço..."
+              placeholder="Buscar unidade, município ou endereço..."
               value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-slate-950 border border-slate-800 rounded-xl pl-9 pr-3 py-2 text-xs text-slate-200 placeholder-slate-500 focus:outline-none focus:border-teal-500 transition-colors"
+              onChange={(e) => { setSearchQuery(e.target.value); setCurrentPage(1); }}
+              className="w-full bg-slate-950 border border-slate-800 rounded-lg pl-9 pr-3 py-1.5 text-xs text-slate-200 placeholder-slate-500 focus:outline-none focus:border-cyan-500"
             />
           </div>
 
-          {/* Filtro por UF */}
-          <div className="flex items-center gap-2">
-            <span className="text-xs text-slate-400 shrink-0">Filtrar Estado:</span>
+          {/* Filtro por Região */}
+          <div>
             <select
-              value={selectedUF || 'todos'}
-              onChange={(e) => onSelectUF(e.target.value === 'todos' ? null : e.target.value)}
-              className="bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-slate-200 focus:outline-none focus:border-teal-500"
+              value={selectedRegiao}
+              onChange={(e) => { setSelectedRegiao(e.target.value); setCurrentPage(1); }}
+              className="w-full bg-slate-950 border border-slate-800 rounded-lg px-2.5 py-1.5 text-xs text-slate-200 focus:outline-none focus:border-cyan-500"
             >
-              <option value="todos">Todos os Estados</option>
-              {uniqueUFs.map((uf) => (
+              <option value="todas">Todas as Regiões</option>
+              <option value="Sudeste">Sudeste</option>
+              <option value="Nordeste">Nordeste</option>
+              <option value="Sul">Sul</option>
+              <option value="Centro-Oeste">Centro-Oeste</option>
+              <option value="Norte">Norte</option>
+            </select>
+          </div>
+
+          {/* Filtro por UF */}
+          <div>
+            <select
+              value={selectedUF || 'todas'}
+              onChange={(e) => { onSelectUF(e.target.value === 'todas' ? null : e.target.value); setCurrentPage(1); }}
+              className="w-full bg-slate-950 border border-slate-800 rounded-lg px-2.5 py-1.5 text-xs text-slate-200 focus:outline-none focus:border-cyan-500"
+            >
+              <option value="todas">Todos os Estados (27 UFs)</option>
+              {ufsList.map((uf) => (
                 <option key={uf} value={uf}>
                   {uf}
                 </option>
               ))}
             </select>
           </div>
-        </div>
 
-        {/* Filtro por Tipo de Unidade */}
-        <div className="flex flex-wrap items-center gap-1.5 text-xs pt-2 border-t border-slate-800/60">
-          <span className="text-slate-400 mr-2 flex items-center gap-1">
-            <Filter className="w-3.5 h-3.5" />
-            Tipo:
-          </span>
-          {[
-            { id: 'todos', label: 'Todos os Serviços' },
-            { id: 'CTA', label: 'Centros de Testagem (CTA)' },
-            { id: 'SAE', label: 'Atenção Especializada (SAE)' },
-            { id: 'Centro de Referencia', label: 'Centros de Referência' },
-            { id: 'Hospital Universitario', label: 'Hospitais / Polos Universitários' }
-          ].map((t) => (
-            <button
-              key={t.id}
-              onClick={() => setTipoFilter(t.id)}
-              className={`px-2.5 py-1 rounded-lg border transition-colors ${
-                tipoFilter === t.id
-                  ? 'bg-teal-600 text-white border-teal-500 font-semibold'
-                  : 'bg-slate-950 text-slate-400 border-slate-800 hover:bg-slate-800'
-              }`}
+          {/* Filtro por Tipo */}
+          <div>
+            <select
+              value={selectedTipo}
+              onChange={(e) => { setSelectedTipo(e.target.value); setCurrentPage(1); }}
+              className="w-full bg-slate-950 border border-slate-800 rounded-lg px-2.5 py-1.5 text-xs text-slate-200 focus:outline-none focus:border-cyan-500"
             >
-              {t.label}
-            </button>
-          ))}
+              <option value="todos">Todos os Tipos de Serviço</option>
+              <option value="CTA">Centros de Testagem (CTA)</option>
+              <option value="SAE">Atenção Especializada (SAE)</option>
+              <option value="CRIE">CRIE (Imunobiológicos Especiais)</option>
+              <option value="Hospital Universitario">Hospitais Especializados</option>
+            </select>
+          </div>
         </div>
       </div>
 
-      {/* Lista de Unidades */}
+      {/* Grid de Cards de Unidades (Navegável e Sem Tabelas Longas) */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {filteredSites.map((site) => (
+        {paginatedSites.map((site) => (
           <div
             key={site.id}
-            className="bg-slate-900/80 border border-slate-800 rounded-2xl p-4.5 flex flex-col justify-between backdrop-blur-md hover:border-slate-700 transition-all text-xs space-y-3"
+            className="bg-slate-900 border border-slate-800 rounded-xl p-4.5 flex flex-col justify-between text-xs space-y-3 hover:border-slate-700 transition-colors"
           >
             <div>
               <div className="flex items-center justify-between gap-2 mb-2">
-                <span className="px-2 py-0.5 rounded font-mono font-bold bg-slate-800 text-teal-300 border border-slate-700 text-[11px]">
+                <span className="px-2 py-0.5 rounded font-mono font-bold bg-slate-800 text-cyan-300 border border-slate-700 text-[11px]">
                   {site.uf} • {site.municipio}
                 </span>
-                <span className="px-2 py-0.5 rounded-full text-[10px] font-medium bg-teal-500/15 text-teal-300 border border-teal-500/30">
+                <span className="px-2 py-0.5 rounded text-[10px] font-semibold bg-slate-800 text-slate-300 border border-slate-700">
                   {site.tipo}
                 </span>
               </div>
@@ -141,35 +183,37 @@ export const VaccinationSitesView: FC<VaccinationSitesViewProps> = ({
                 {site.nomeUnidade}
               </h3>
 
-              <div className="mt-3 space-y-2 text-slate-300">
-                <div className="flex items-start gap-2">
-                  <MapPin className="w-3.5 h-3.5 text-teal-400 shrink-0 mt-0.5" />
-                  <span>
-                    {site.endereco} — <strong className="text-slate-200">{site.bairro}</strong>
-                  </span>
-                </div>
+              <div className="mt-3 space-y-1.5 text-slate-300">
+                <p className="flex items-start gap-2 text-slate-400">
+                  <MapPin className="w-3.5 h-3.5 text-slate-500 shrink-0 mt-0.5" />
+                  <span>{site.endereco} — CEP {site.cep}</span>
+                </p>
 
-                <div className="flex items-center gap-2">
-                  <Phone className="w-3.5 h-3.5 text-teal-400 shrink-0" />
-                  <a href={`tel:${site.telefone.split('/')[0].replace(/\D/g, '')}`} className="text-cyan-400 hover:underline">
+                <p className="flex items-center gap-2 text-slate-300">
+                  <Phone className="w-3.5 h-3.5 text-cyan-400 shrink-0" />
+                  <a href={`tel:${site.telefone.replace(/\D/g, '')}`} className="text-cyan-400 hover:underline font-mono">
                     {site.telefone}
                   </a>
-                </div>
+                </p>
 
-                <div className="flex items-center gap-2">
-                  <Clock className="w-3.5 h-3.5 text-teal-400 shrink-0" />
+                <p className="flex items-center gap-2 text-slate-400">
+                  <Clock className="w-3.5 h-3.5 text-slate-500 shrink-0" />
                   <span>{site.horarioFuncionamento}</span>
-                </div>
+                </p>
 
-                <div className="flex items-center gap-2">
-                  <CalendarCheck className="w-3.5 h-3.5 text-teal-400 shrink-0" />
-                  <span className="font-medium text-slate-200">Acesso: {site.agendamento}</span>
-                </div>
+                <p className="flex items-center gap-2 text-slate-300">
+                  <CalendarCheck className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                  <span className="font-medium">Regime: {site.agendamento}</span>
+                </p>
               </div>
             </div>
 
-            <div className="pt-3 border-t border-slate-800/80">
-              <p className="text-[11px] text-slate-400 leading-relaxed italic">
+            <div className="pt-2.5 border-t border-slate-800 space-y-1">
+              <div className="text-[11px] text-slate-400 flex items-start gap-1.5">
+                <FileCheck2 className="w-3.5 h-3.5 text-slate-500 shrink-0 mt-0.5" />
+                <span>{site.requisitos}</span>
+              </div>
+              <p className="text-[11px] text-cyan-300 bg-cyan-950/20 p-2 rounded border border-cyan-800/30">
                 {site.observacoes}
               </p>
             </div>
@@ -178,8 +222,34 @@ export const VaccinationSitesView: FC<VaccinationSitesViewProps> = ({
       </div>
 
       {filteredSites.length === 0 && (
-        <div className="p-8 text-center bg-slate-900/40 border border-slate-800 rounded-2xl text-slate-400 text-xs">
-          Nenhum posto encontrado com os filtros selecionados. Tente limpar os filtros ou selecionar outro estado.
+        <div className="p-8 text-center bg-slate-900 border border-slate-800 rounded-xl text-slate-400 text-xs">
+          Nenhum polo de atendimento encontrado para os critérios selecionados.
+        </div>
+      )}
+
+      {/* Paginação */}
+      {totalPages > 1 && (
+        <div className="flex items-center justify-between text-xs text-slate-400 pt-2">
+          <span>
+            Página {currentPage} de {totalPages} ({filteredSites.length} postos encontrados)
+          </span>
+
+          <div className="flex items-center gap-1">
+            <button
+              disabled={currentPage === 1}
+              onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
+              className="px-3 py-1.5 rounded border border-slate-800 disabled:opacity-40 hover:bg-slate-800 text-slate-200"
+            >
+              Anterior
+            </button>
+            <button
+              disabled={currentPage >= totalPages}
+              onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
+              className="px-3 py-1.5 rounded border border-slate-800 disabled:opacity-40 hover:bg-slate-800 text-slate-200"
+            >
+              Próxima
+            </button>
+          </div>
         </div>
       )}
     </div>

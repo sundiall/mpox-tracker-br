@@ -67,3 +67,4 @@ export const officialAlerts: OfficialAlert[] = [
     categoria: 'Epidemiologia'
   }
 ];
+

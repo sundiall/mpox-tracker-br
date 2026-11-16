@@ -191,3 +191,4 @@ export const faqList: FAQItem[] = [
     destaque: 'Evite o uso de pomadas caseiras, álcool ou substâncias irritantes diretamente sobre as lesões abertas.'
   }
 ];
+
