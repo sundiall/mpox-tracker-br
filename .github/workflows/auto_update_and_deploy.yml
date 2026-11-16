@@ -1,0 +1,64 @@
+name: Atualização Automática de Dados & Deploy MPOX Brasil
+
+on:
+  schedule:
+    # Executa a cada 12 horas (00:00 e 12:00 UTC)
+    - cron: '0 0,12 * * *'
+  workflow_dispatch: # Permite execução manual a qualquer momento via GitHub Actions
+  push:
+    branches:
+      - main
+
+jobs:
+  update-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do Repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Executar Pipeline de Coleta de Dados (RSS & SUS)
+        run: |
+          python scripts/update_data.py
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Instalar Dependências e Compilar Aplicação
+        run: |
+          npm ci
+          npm run build
+
+      - name: Commit e Push dos Dados Atualizados
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add public/data/
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: atualização automática de dados e RSS [skip ci]" && git push)
+
+      # Opção 1: Deploy no Google Firebase Hosting (Requer FIREBASE_SERVICE_ACCOUNT nas secrets)
+      - name: Deploy no Firebase Hosting (Google Cloud)
+        if: env.FIREBASE_TOKEN != '' || env.FIREBASE_SERVICE_ACCOUNT != ''
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT }}'
+          channelId: live
+          projectId: '${{ secrets.FIREBASE_PROJECT_ID }}'
+        env:
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+
+      # Opção 2: Deploy no GitHub Pages (Fallback 100% gratuito e automático sem chaves adicionais)
+      - name: Deploy no GitHub Pages
+        if: env.FIREBASE_SERVICE_ACCOUNT == ''
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
