@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import type { FC } from 'react';
 import { 
   ResponsiveContainer, 
@@ -9,11 +9,11 @@ import {
   YAxis, 
   Tooltip, 
   Legend, 
-  CartesianGrid,
-  Area,
-  ReferenceLine
+  CartesianGrid, 
+  Area, 
+  ReferenceLine 
 } from 'recharts';
-import { getEpidemicCurve, getApplicableMilestones, getWeeklyByYear } from '../data/time_series';
+import { getEpidemicCurve, getApplicableMilestones, getWeeklyByYear, epidemicTimeSeries } from '../data/time_series';
 import { statesData } from '../data/epidemiology';
 import { formatWeekToCommonDate, getEpidemiologicalWeekDateRange } from '../utils/date_converters';
 import { 
@@ -38,6 +38,12 @@ interface EpidemicCurveChartProps {
   startWeek?: string;
   endWeek?: string;
   periodLabel?: string;
+  selectedPeriod?: string;
+  onSelectPeriod?: (period: any) => void;
+  customStartWeek?: string;
+  onSelectCustomStartWeek?: (w: string) => void;
+  customEndWeek?: string;
+  onSelectCustomEndWeek?: (w: string) => void;
 }
 
 const parseWeekNumber = (w?: string) => {
@@ -110,8 +116,27 @@ export const EpidemicCurveChart: FC<EpidemicCurveChartProps> = ({
   onSelectUF,
   startWeek,
   endWeek,
-  periodLabel
+  periodLabel,
+  selectedPeriod,
+  onSelectPeriod,
+  customStartWeek,
+  onSelectCustomStartWeek,
+  customEndWeek,
+  onSelectCustomEndWeek
 }) => {
+  // Responsividade Móvel
+  const [isMobile, setIsMobile] = useState<boolean>(
+    typeof window !== 'undefined' ? window.innerWidth < 768 : false
+  );
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const allWeeks = useMemo(() => epidemicTimeSeries.map((d) => d.semana), []);
+
   // Série contínua exibida por padrão conforme solicitado
   const [displayMode, setDisplayMode] = useState<'oficial_ano' | 'continua'>('continua');
   const [metricView, setMetricView] = useState<'novos' | 'acumulados'>('novos');
@@ -185,14 +210,21 @@ export const EpidemicCurveChart: FC<EpidemicCurveChartProps> = ({
   const trend3s = useMemo(() => analyzeTrendWindow(seriesForTrend, 3), [seriesForTrend]);
   const trend5s = useMemo(() => analyzeTrendWindow(seriesForTrend, 5), [seriesForTrend]);
 
-  // Intervalo do eixo X dinâmico para garantir espaçamento confortável sem sobreposição
+  // Intervalo do eixo X dinâmico calibrado para desktop e mobile
   const xAxisInterval = useMemo(() => {
+    if (isMobile) {
+      if (chartData.length > 150) return 26; // ~6 meses em telas mobile
+      if (chartData.length > 60) return 14;  // ~3 meses
+      if (chartData.length > 25) return 8;   // ~2 meses
+      if (chartData.length > 8) return 3;
+      return 0;
+    }
     if (chartData.length > 150) return 18; // ~4 meses
     if (chartData.length > 60) return 8;   // ~2 meses
     if (chartData.length > 25) return 4;   // ~1 mês
     if (chartData.length > 8) return 2;    // ~quinzenal
     return 0;                              // semanal
-  }, [chartData.length]);
+  }, [chartData.length, isMobile]);
 
   // Marcos aplicáveis ao território atual
   const applicableMilestones = useMemo(() => {
@@ -304,8 +336,59 @@ export const EpidemicCurveChart: FC<EpidemicCurveChartProps> = ({
           </p>
         </div>
 
-        {/* Barra de Filtro de Estado Ordenada Alfabeticamente e Modos */}
+        {/* Barra de Filtro de Estado Ordenada Alfabeticamente, Período e Modos */}
         <div className="flex flex-wrap items-center gap-2">
+          {/* Seletor Rápido de Período Temporal Integrado Diretamente ao Gráfico */}
+          {onSelectPeriod && (
+            <div className="flex items-center gap-1 bg-slate-950 p-1 rounded-lg border border-slate-800 text-xs overflow-x-auto max-w-full">
+              {[
+                { id: 'historico', label: 'Histórico' },
+                { id: 'ano2026', label: '2026' },
+                { id: 'ultimas12s', label: '12 sem' },
+                { id: 'ultimas5s', label: '5 sem' },
+                { id: 'personalizado', label: 'Custom' }
+              ].map((p) => (
+                <button
+                  key={p.id}
+                  onClick={() => onSelectPeriod(p.id)}
+                  className={`px-2 py-1 rounded text-xs transition-colors whitespace-nowrap cursor-pointer ${
+                    selectedPeriod === p.id
+                      ? 'bg-cyan-600 text-white font-medium shadow-sm'
+                      : 'text-slate-400 hover:text-slate-200'
+                  }`}
+                >
+                  {p.label}
+                </button>
+              ))}
+            </div>
+          )}
+
+          {/* Seletores Personalizados se ativo */}
+          {selectedPeriod === 'personalizado' && onSelectCustomStartWeek && onSelectCustomEndWeek && (
+            <div className="flex items-center gap-1 bg-slate-950/80 px-2 py-1 rounded-lg border border-cyan-800/60 text-slate-300 text-xs">
+              <span className="text-[10px] text-slate-400">De:</span>
+              <select
+                value={customStartWeek}
+                onChange={(e) => onSelectCustomStartWeek(e.target.value)}
+                className="bg-slate-900 border border-slate-700 text-xs text-cyan-300 rounded px-1 py-0.5 font-mono"
+              >
+                {allWeeks.map((w: string) => (
+                  <option key={w} value={w}>{w}</option>
+                ))}
+              </select>
+              <span className="text-[10px] text-slate-400">Até:</span>
+              <select
+                value={customEndWeek}
+                onChange={(e) => onSelectCustomEndWeek(e.target.value)}
+                className="bg-slate-900 border border-slate-700 text-xs text-cyan-300 rounded px-1 py-0.5 font-mono"
+              >
+                {allWeeks.map((w: string) => (
+                  <option key={w} value={w}>{w}</option>
+                ))}
+              </select>
+            </div>
+          )}
+
           {/* Seletor de Modo: Oficial PowerBI (1 a 52) vs Contínua */}
           <div className="flex items-center gap-1 bg-slate-950 p-1 rounded-lg border border-slate-800 text-xs">
             <button
@@ -316,7 +399,7 @@ export const EpidemicCurveChart: FC<EpidemicCurveChartProps> = ({
                   : 'text-slate-400 hover:text-slate-200'
               }`}
             >
-              Oficial MS (1-52 por Ano)
+              Oficial MS
             </button>
             <button
               onClick={() => setDisplayMode('continua')}
@@ -326,7 +409,7 @@ export const EpidemicCurveChart: FC<EpidemicCurveChartProps> = ({
                   : 'text-slate-400 hover:text-slate-200'
               }`}
             >
-              Série Contínua (2022-2026)
+              Contínua
             </button>
           </div>
 
@@ -599,21 +682,22 @@ export const EpidemicCurveChart: FC<EpidemicCurveChartProps> = ({
       </div>
 
       {/* Visualizador Recharts com Alternância entre Curva Oficial MS e Série Contínua */}
-      <div className="h-96 w-full pt-2">
+      <div className="h-80 sm:h-96 w-full pt-2">
         <ResponsiveContainer width="100%" height="100%">
           {displayMode === 'oficial_ano' ? (
-            <ComposedChart data={weeklyByYearChartData} margin={{ top: 25, right: 25, left: -5, bottom: 5 }}>
+            <ComposedChart data={weeklyByYearChartData} margin={{ top: 25, right: isMobile ? 12 : 25, left: isMobile ? -20 : -5, bottom: 28 }}>
               <CartesianGrid strokeDasharray="3 3" stroke="#1e293b" vertical={false} />
               <XAxis 
                 dataKey="semana" 
                 stroke="#64748b" 
-                fontSize={10} 
                 tickLine={false}
-                interval={weeklyByYearChartData.length > 20 ? 1 : 0}
-                label={{ 
+                interval={isMobile ? 3 : (weeklyByYearChartData.length > 20 ? 1 : 0)}
+                height={48}
+                tick={{ angle: -30, textAnchor: 'end', fontSize: 10, fill: '#64748b', dy: 4, dx: -3 }}
+                label={isMobile ? undefined : { 
                   value: minWeekFilter && maxWeekFilter ? `Semana epidemiológica (${minWeekFilter} a ${maxWeekFilter})` : 'Semana epidemiológica (1 a 52)', 
                   position: 'insideBottom', 
-                  offset: -2, 
+                  offset: -12, 
                   fill: '#64748b', 
                   fontSize: 10 
                 }}
@@ -637,14 +721,15 @@ export const EpidemicCurveChart: FC<EpidemicCurveChartProps> = ({
               {displayedYears.includes(2026) && <Bar dataKey="2026" name="2026" fill="#06b6d4" radius={[2, 2, 0, 0]} />}
             </ComposedChart>
           ) : (
-            <ComposedChart data={chartData} margin={{ top: 52, right: showVaccines ? 65 : 25, left: -5, bottom: 8 }}>
+            <ComposedChart data={chartData} margin={{ top: 52, right: showVaccines ? (isMobile ? 38 : 65) : (isMobile ? 12 : 25), left: isMobile ? -20 : -5, bottom: 28 }}>
               <CartesianGrid strokeDasharray="3 3" stroke="#1e293b" vertical={false} />
               <XAxis 
                 dataKey="semana" 
                 stroke="#64748b" 
-                fontSize={10} 
                 tickLine={false}
                 interval={xAxisInterval}
+                height={48}
+                tick={{ angle: -30, textAnchor: 'end', fontSize: 10, fill: '#64748b', dy: 4, dx: -3 }}
                 tickFormatter={(semana: string) => formatWeekToCommonDate(semana, chartData.length <= 15 ? 'dia_mes' : 'mes_ano')}
               />
               {/* Eixo Esquerdo: Casos Notificados */}

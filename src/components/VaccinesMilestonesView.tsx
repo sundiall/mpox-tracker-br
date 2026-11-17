@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import type { FC } from 'react';
 import { 
   Syringe, 
@@ -39,6 +39,15 @@ export const VaccinesMilestonesView: FC<VaccinesMilestonesViewProps> = ({
   selectedUF
 }) => {
   const [filterTipo, setFilterTipo] = useState<string>('todos');
+  const [isMobile, setIsMobile] = useState<boolean>(
+    typeof window !== 'undefined' ? window.innerWidth < 768 : false
+  );
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const filteredMilestones = vaccineMilestones.filter((m) => {
     const matchesTipo = filterTipo === 'todos' || m.tipo === filterTipo;
@@ -247,14 +256,15 @@ export const VaccinesMilestonesView: FC<VaccinesMilestonesViewProps> = ({
 
         <div className="h-80 w-full">
           <ResponsiveContainer width="100%" height="100%">
-            <ComposedChart data={vaccineProgressTimeData} margin={{ top: 25, right: 20, left: -5, bottom: 5 }}>
+            <ComposedChart data={vaccineProgressTimeData} margin={{ top: 25, right: isMobile ? 12 : 20, left: isMobile ? -20 : -5, bottom: 28 }}>
               <CartesianGrid strokeDasharray="3 3" stroke="#1e293b" vertical={false} />
               <XAxis 
                 dataKey="periodoRotulo" 
                 stroke="#64748b" 
-                fontSize={10} 
                 tickLine={false}
-                interval="preserveStartEnd" 
+                interval={isMobile ? 7 : 5}
+                height={48}
+                tick={{ angle: -30, textAnchor: 'end', fontSize: 10, fill: '#64748b', dy: 4, dx: -3 }}
               />
               <YAxis stroke="#64748b" fontSize={11} tickLine={false} />
               <Tooltip content={customTooltip} />

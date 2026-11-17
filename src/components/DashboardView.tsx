@@ -322,7 +322,7 @@ export const DashboardView: FC<DashboardViewProps> = ({
       </div>
 
       {/* Grid de KPIs: Todas as tarjetas compartilham exatamente as mesmas datas de início e fim */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-3.5">
         <KPICard
           titulo="Casos Confirmados"
           valor={totalConfirmados}
@@ -371,6 +371,12 @@ export const DashboardView: FC<DashboardViewProps> = ({
         startWeek={periodConfig.start}
         endWeek={periodConfig.end}
         periodLabel={periodConfig.label}
+        selectedPeriod={selectedPeriod}
+        onSelectPeriod={(p) => setSelectedPeriod(p as TemporalPeriod)}
+        customStartWeek={customStartWeek}
+        onSelectCustomStartWeek={setCustomStartWeek}
+        customEndWeek={customEndWeek}
+        onSelectCustomEndWeek={setCustomEndWeek}
       />
 
       {/* Gráfico 2: Perfil Sociodemográfico, Sintomas/Lesões e Imunologia com Donuts */}
