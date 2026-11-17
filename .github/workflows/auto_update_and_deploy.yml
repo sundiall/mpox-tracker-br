@@ -9,6 +9,11 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
 jobs:
   update-and-deploy:
     runs-on: ubuntu-latest
@@ -43,23 +48,30 @@ jobs:
           git add public/data/
           git diff --quiet && git diff --staged --quiet || (git commit -m "chore: atualização automática de dados e RSS [skip ci]" && git push)
 
-      # Opção 1: Deploy no Google Firebase Hosting (Requer FIREBASE_SERVICE_ACCOUNT nas secrets)
-      - name: Deploy no Firebase Hosting (Google Cloud)
-        if: env.FIREBASE_TOKEN != '' || env.FIREBASE_SERVICE_ACCOUNT != ''
+      # Opção 1: Deploy no Google Firebase Hosting via Service Account
+      - name: Deploy no Firebase Hosting (Service Account)
+        if: env.FIREBASE_SERVICE_ACCOUNT != ''
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT }}'
           channelId: live
-          projectId: '${{ secrets.FIREBASE_PROJECT_ID }}'
+          projectId: mpox-tracker-br
         env:
           FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
 
-      # Opção 2: Deploy no GitHub Pages (Fallback 100% gratuito e automático sem chaves adicionais)
-      - name: Deploy no GitHub Pages
-        if: env.FIREBASE_SERVICE_ACCOUNT == ''
+      # Opção 2: Deploy no Firebase Hosting via FIREBASE_TOKEN
+      - name: Deploy no Firebase Hosting (CI Token)
+        if: env.FIREBASE_SERVICE_ACCOUNT == '' && env.FIREBASE_TOKEN != ''
+        run: |
+          npx firebase-tools deploy --only hosting --project mpox-tracker-br --token "${{ secrets.FIREBASE_TOKEN }}"
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+
+      # Opção 3: Deploy no GitHub Pages (Fallback se não houver credenciais Firebase)
+      - name: Deploy no GitHub Pages (Fallback)
+        if: env.FIREBASE_SERVICE_ACCOUNT == '' && env.FIREBASE_TOKEN == ''
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
-

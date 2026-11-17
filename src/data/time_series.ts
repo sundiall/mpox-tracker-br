@@ -39,7 +39,7 @@ export const epidemicMilestones: MilestoneNote[] = [
     id: 'm1',
     semana: '2022-SE31',
     titulo: 'Pico da 1ª Onda Nacional (1.053 casos)',
-    tituloCurto: 'Pico 1ª Onda (1.053)',
+    tituloCurto: 'Pico 1ª Onda (Ago/22)',
     descricao: 'Maior registro histórico de casos semanais de mpox no Brasil em uma única semana epidemiológica (SE 31/2022 com 1.053 casos confirmados/prováveis).',
     estadosAplicaveis: ['todos'],
     categoria: 'vigilancia'
@@ -48,7 +48,7 @@ export const epidemicMilestones: MilestoneNote[] = [
     id: 'm2',
     semana: '2022-SE40',
     titulo: 'Lote 1: Lab NB-3 & PEX (9.8k doses OPAS)',
-    tituloCurto: 'Lab NB-3 (9.8k OPAS)',
+    tituloCurto: 'Lab NB-3 (Out/22)',
     descricao: 'Primeiro lote desembarcado no Brasil de vacinas MVA-BN (JYNNEOS) adquiridas pelo Ministério da Saúde via fundo rotativo da OPAS para profissionais de saúde de laboratórios NB-3 e contatos íntimos de casos confirmados (pós-exposição até 14 dias).',
     estadosAplicaveis: ['todos'],
     categoria: 'vacina'
@@ -57,7 +57,7 @@ export const epidemicMilestones: MilestoneNote[] = [
     id: 'm3',
     semana: '2023-SE11',
     titulo: 'Início Vacinação PNI: PVHA (CD4 < 200) & Pós-Exp',
-    tituloCurto: 'PNI: PVHA & Pós-Exp',
+    tituloCurto: 'PNI: PVHA (Mar/23)',
     descricao: 'Lançamento oficial da campanha pré-exposição pelo SUS voltada a Pessoas Vivendo com HIV/AIDS com Linfócitos T-CD4 < 200 céls/mm³ (via subcutânea 0,5 mL) e pós-exposição para contatos íntimos em todo o território nacional.',
     estadosAplicaveis: ['todos'],
     categoria: 'vacina'
@@ -66,7 +66,7 @@ export const epidemicMilestones: MilestoneNote[] = [
     id: 'm4',
     semana: '2023-SE14',
     titulo: 'Estratégia 1/5 Dose ID (0,1 mL) para PrEP',
-    tituloCurto: 'PrEP: 1/5 Dose ID (RJ/SP)',
+    tituloCurto: 'PrEP 1/5 ID (Abr/23)',
     descricao: 'Implementação da aplicação fracionada intradérmica de 0,1 mL pioneiramente no Rio de Janeiro (RJ) e em São Paulo (SP) para usuários em PrEP, estendendo a cobertura vacinal em 5 vezes com respaldo do ensaio NIAID (Frey et al.).',
     estadosAplicaveis: ['RJ', 'SP'],
     categoria: 'vacina'
@@ -75,7 +75,7 @@ export const epidemicMilestones: MilestoneNote[] = [
     id: 'm7',
     semana: '2023-SE34',
     titulo: 'Nota Técnica nº 22/2023-MS: Fracionamento ID Nacional',
-    tituloCurto: 'NT 22/2023: Fracionamento Nacional',
+    tituloCurto: 'NT 22 Nacional (Ago/23)',
     descricao: 'Ministério da Saúde normatiza a aplicação intradérmica fracionada (0,1 mL) em âmbito federal para otimização de estoques, estendendo a vacinação para contatos sexuais e CRIEs em todas as capitais de alta incidência.',
     estadosAplicaveis: ['todos'],
     categoria: 'vacina'
@@ -84,7 +84,7 @@ export const epidemicMilestones: MilestoneNote[] = [
     id: 'm8',
     semana: '2024-SE11',
     titulo: 'Expansão PNI: PVHA com CD4 < 350 céls/mm³',
-    tituloCurto: 'Expansão PVHA CD4 < 350',
+    tituloCurto: 'Expansão PVHA (Mar/24)',
     descricao: 'Ampliação do público prioritário no SUS para Pessoas Vivendo com HIV com contagem de CD4 até 350 céls/mm³ e pessoas em situação de vulnerabilidade acrescida acompanhadas em CTAs e serviços especializados de IST.',
     estadosAplicaveis: ['todos'],
     categoria: 'vacina'
@@ -93,7 +93,7 @@ export const epidemicMilestones: MilestoneNote[] = [
     id: 'm5',
     semana: '2024-SE33',
     titulo: 'COE Mpox & Emergência OMS Clado Ib (25k doses)',
-    tituloCurto: 'COE Clado Ib & 25k Doses',
+    tituloCurto: 'COE Clado Ib (Ago/24)',
     descricao: 'Declaração de Emergência de Saúde Pública de Importância Internacional (ESPII) pela OMS devido ao Clado Ib. Ministério da Saúde instala Centro de Operações de Emergência (COE), adquire 25 mil doses extras pela OPAS e reforça vigilância em fronteiras e capitais.',
     estadosAplicaveis: ['todos'],
     categoria: 'vigilancia'
@@ -102,7 +102,7 @@ export const epidemicMilestones: MilestoneNote[] = [
     id: 'm9',
     semana: '2026-SE42',
     titulo: 'Nota Técnica Conjunta nº 403/2026: Liberação Ampla PrEP ID',
-    tituloCurto: 'NT 403/2026: PrEP Nacional ID',
+    tituloCurto: 'NT 403 PrEP (Out/26)',
     descricao: 'Ministério da Saúde (DPNI/SVSA/MS) formaliza a recomendação nacional de vacinação por via intradérmica (0,1 mL) para todos os usuários em Profilaxia Pré-Exposição (PrEP ao HIV) e técnicos de laboratório no SUS, mantendo via SC (0,5 mL) para PVHA.',
     estadosAplicaveis: ['todos'],
     categoria: 'vacina'
@@ -111,7 +111,7 @@ export const epidemicMilestones: MilestoneNote[] = [
     id: 'm6',
     semana: '2026-SE46',
     titulo: 'Abertura Ampla PrEP & Saúde (Super Centros RJ e SP)',
-    tituloCurto: 'PrEP & Saúde Aberta (RJ/SP)',
+    tituloCurto: 'PrEP Aberta (Nov/26)',
     descricao: 'A Secretaria Municipal de Saúde do Rio de Janeiro (SMS-Rio) e centros de SP liberam formalmente a vacina MVA-BN em livre demanda para usuários em PrEP (com receita até 6 meses) e trabalhadores expostos, com cerca de 5 mil doses nos Super Centros Cariocas e CRIEs.',
     estadosAplicaveis: ['RJ', 'SP'],
     categoria: 'vacina'

@@ -15,6 +15,7 @@ import {
 } from 'recharts';
 import { getEpidemicCurve, getApplicableMilestones, getWeeklyByYear } from '../data/time_series';
 import { statesData } from '../data/epidemiology';
+import { formatWeekToCommonDate, getEpidemiologicalWeekDateRange } from '../utils/date_converters';
 import { 
   BarChart3, 
   TrendingUp, 
@@ -27,7 +28,8 @@ import {
   Info, 
   ChevronDown, 
   ChevronUp,
-  Activity
+  Activity,
+  AlertCircle
 } from 'lucide-react';
 
 interface EpidemicCurveChartProps {
@@ -163,9 +165,35 @@ export const EpidemicCurveChart: FC<EpidemicCurveChartProps> = ({
     return getWeeklyByYear(selectedUF, minWeekFilter, maxWeekFilter);
   }, [selectedUF, minWeekFilter, maxWeekFilter]);
 
-  // Semáforo epidemiológico de tendência calculando derivadas e deltas das últimas 3 e 5 semanas
-  const trend3s = useMemo(() => analyzeTrendWindow(chartData, 3), [chartData]);
-  const trend5s = useMemo(() => analyzeTrendWindow(chartData, 5), [chartData]);
+  // Verificação de fechamento da semana atual para o semáforo
+  const lastPoint = chartData.length > 0 ? chartData[chartData.length - 1] : null;
+  const lastParsed = lastPoint ? parseWeekNumber(lastPoint.semana) : null;
+  const isLastWeekComplete = useMemo(() => {
+    if (!lastParsed) return true;
+    return getEpidemiologicalWeekDateRange(lastParsed.year, lastParsed.week).isConcluida;
+  }, [lastParsed]);
+
+  // Se a semana atual não terminou, calcula a tendência sem o último dado provisório
+  const seriesForTrend = useMemo(() => {
+    if (!chartData || chartData.length < 3) return chartData;
+    if (!isLastWeekComplete) {
+      return chartData.slice(0, -1);
+    }
+    return chartData;
+  }, [chartData, isLastWeekComplete]);
+
+  // Semáforo epidemiológico de tendência calculando derivadas e deltas das últimas 3 e 5 semanas consolidadas
+  const trend3s = useMemo(() => analyzeTrendWindow(seriesForTrend, 3), [seriesForTrend]);
+  const trend5s = useMemo(() => analyzeTrendWindow(seriesForTrend, 5), [seriesForTrend]);
+
+  // Intervalo do eixo X dinâmico para garantir espaçamento confortável sem sobreposição
+  const xAxisInterval = useMemo(() => {
+    if (chartData.length > 150) return 18; // ~4 meses
+    if (chartData.length > 60) return 8;   // ~2 meses
+    if (chartData.length > 25) return 4;   // ~1 mês
+    if (chartData.length > 8) return 2;    // ~quinzenal
+    return 0;                              // semanal
+  }, [chartData.length]);
 
   // Marcos aplicáveis ao território atual
   const applicableMilestones = useMemo(() => {
@@ -208,12 +236,13 @@ export const EpidemicCurveChart: FC<EpidemicCurveChartProps> = ({
         );
       }
       const dataPoint = payload[0]?.payload;
+      const dataFormatada = formatWeekToCommonDate(label, 'intervalo_completo');
       return (
-        <div className="bg-slate-900 border border-slate-700 p-3 rounded-lg shadow-xl text-xs space-y-1.5 max-w-xs">
+        <div className="bg-slate-900 border border-slate-700 p-3 rounded-lg shadow-xl text-xs space-y-1.5 min-w-[240px]">
           <div className="font-semibold text-slate-200 border-b border-slate-800 pb-1 flex items-center justify-between gap-2">
-            <span className="flex items-center gap-1.5">
-              <Calendar className="w-3.5 h-3.5 text-cyan-400" />
-              {label}
+            <span className="flex items-center gap-1.5 text-cyan-300">
+              <Calendar className="w-3.5 h-3.5" />
+              {dataFormatada}
             </span>
             <span className="text-[10px] text-slate-400 font-mono">{dataPoint?.ano}</span>
           </div>
@@ -428,6 +457,15 @@ export const EpidemicCurveChart: FC<EpidemicCurveChartProps> = ({
           </span>
         </div>
 
+        {!isLastWeekComplete && lastPoint && (
+          <div className="flex items-center gap-2 p-2.5 rounded-lg bg-amber-950/40 border border-amber-800/60 text-xs text-amber-300">
+            <AlertCircle className="w-4 h-4 text-amber-400 shrink-0" />
+            <span>
+              <strong>Semana atual ({formatWeekToCommonDate(lastPoint.semana, 'intervalo_completo')}) em curso / não concluída:</strong> O último dado foi desconsiderado no cálculo do semáforo para evitar falso viés de queda por atraso de notificação no Sinan. A tendência reflete as semanas consolidadas fechadas.
+            </span>
+          </div>
+        )}
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           {/* Card Semáforo 1: Últimas 3 Semanas */}
           <div className={`p-3 rounded-xl border flex flex-col justify-between transition-all ${
@@ -586,10 +624,10 @@ export const EpidemicCurveChart: FC<EpidemicCurveChartProps> = ({
       </div>
 
       {/* Visualizador Recharts com Alternância entre Curva Oficial MS e Série Contínua */}
-      <div className="h-80 w-full pt-1">
+      <div className="h-96 w-full pt-2">
         <ResponsiveContainer width="100%" height="100%">
           {displayMode === 'oficial_ano' ? (
-            <ComposedChart data={weeklyByYearChartData} margin={{ top: 15, right: 15, left: -10, bottom: 0 }}>
+            <ComposedChart data={weeklyByYearChartData} margin={{ top: 25, right: 25, left: -5, bottom: 5 }}>
               <CartesianGrid strokeDasharray="3 3" stroke="#1e293b" vertical={false} />
               <XAxis 
                 dataKey="semana" 
@@ -614,7 +652,8 @@ export const EpidemicCurveChart: FC<EpidemicCurveChartProps> = ({
               <Tooltip content={customTooltip} />
               <Legend 
                 verticalAlign="bottom"
-                wrapperStyle={{ fontSize: '11px', paddingTop: '10px' }} 
+                wrapperStyle={{ fontSize: '11px', paddingTop: '14px', color: '#cbd5e1' }} 
+                formatter={(value) => <span style={{ color: '#cbd5e1', fontWeight: 500 }}>{value}</span>}
               />
               {displayedYears.includes(2022) && <Bar dataKey="2022" name="2022" fill="#22c55e" radius={[2, 2, 0, 0]} />}
               {displayedYears.includes(2023) && <Bar dataKey="2023" name="2023" fill="#f97316" radius={[2, 2, 0, 0]} />}
@@ -623,14 +662,15 @@ export const EpidemicCurveChart: FC<EpidemicCurveChartProps> = ({
               {displayedYears.includes(2026) && <Bar dataKey="2026" name="2026" fill="#06b6d4" radius={[2, 2, 0, 0]} />}
             </ComposedChart>
           ) : (
-            <ComposedChart data={chartData} margin={{ top: 15, right: showVaccines ? 40 : 15, left: -10, bottom: 0 }}>
+            <ComposedChart data={chartData} margin={{ top: 52, right: showVaccines ? 65 : 25, left: -5, bottom: 8 }}>
               <CartesianGrid strokeDasharray="3 3" stroke="#1e293b" vertical={false} />
               <XAxis 
                 dataKey="semana" 
                 stroke="#64748b" 
                 fontSize={10} 
                 tickLine={false}
-                interval={3}
+                interval={xAxisInterval}
+                tickFormatter={(semana: string) => formatWeekToCommonDate(semana, chartData.length <= 15 ? 'dia_mes' : 'mes_ano')}
               />
               {/* Eixo Esquerdo: Casos Notificados */}
               <YAxis 
@@ -652,7 +692,10 @@ export const EpidemicCurveChart: FC<EpidemicCurveChartProps> = ({
                 />
               )}
               <Tooltip content={customTooltip} />
-              <Legend wrapperStyle={{ fontSize: '11px', paddingTop: '10px' }} />
+              <Legend 
+                wrapperStyle={{ fontSize: '11px', paddingTop: '16px', color: '#cbd5e1' }}
+                formatter={(value) => <span style={{ color: '#cbd5e1', fontWeight: 500 }}>{value}</span>}
+              />
 
               {/* Doses de Vacina Aplicadas Superpostas no Mesmo Gráfico */}
               {showVaccines && (
@@ -739,6 +782,7 @@ export const EpidemicCurveChart: FC<EpidemicCurveChartProps> = ({
                 };
                 const color = colors[m.id] || '#94a3b8';
                 const dy = idx % 3 === 0 ? -8 : (idx % 3 === 1 ? -24 : -40);
+                const isNearRight = idx >= applicableMilestones.length - 2;
                 return (
                   <ReferenceLine 
                     key={m.id}
@@ -752,7 +796,8 @@ export const EpidemicCurveChart: FC<EpidemicCurveChartProps> = ({
                       dy: dy,
                       fill: color, 
                       fontSize: 10,
-                      fontWeight: 600
+                      fontWeight: 600,
+                      textAnchor: isNearRight ? 'end' : 'middle'
                     }} 
                   />
                 );
