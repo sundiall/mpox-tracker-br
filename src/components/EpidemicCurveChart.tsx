@@ -15,7 +15,20 @@ import {
 } from 'recharts';
 import { getEpidemicCurve, getApplicableMilestones, getWeeklyByYear } from '../data/time_series';
 import { statesData } from '../data/epidemiology';
-import { BarChart3, TrendingUp, Calendar, Filter, Sparkles, Syringe, Info, ChevronDown, ChevronUp } from 'lucide-react';
+import { 
+  BarChart3, 
+  TrendingUp, 
+  TrendingDown, 
+  Minus, 
+  Calendar, 
+  Filter, 
+  Sparkles, 
+  Syringe, 
+  Info, 
+  ChevronDown, 
+  ChevronUp,
+  Activity
+} from 'lucide-react';
 
 interface EpidemicCurveChartProps {
   selectedUF: string | null;
@@ -25,6 +38,71 @@ interface EpidemicCurveChartProps {
   periodLabel?: string;
 }
 
+const parseWeekNumber = (w?: string) => {
+  if (!w) return null;
+  const match = w.match(/^(\d{4})-SE(\d{1,2})$/);
+  if (!match) return null;
+  return { year: parseInt(match[1], 10), week: parseInt(match[2], 10) };
+};
+
+interface TrendAnalysis {
+  status: 'alta' | 'queda' | 'estavel';
+  deltaPercent: number;
+  slope: number;
+  casosInicial: number;
+  casosFinal: number;
+  deltaCasos: number;
+  semanas: string[];
+  casosSerie: number[];
+}
+
+const analyzeTrendWindow = (series: any[], windowSize: number): TrendAnalysis => {
+  if (!series || series.length < 2) {
+    return {
+      status: 'estavel',
+      deltaPercent: 0,
+      slope: 0,
+      casosInicial: 0,
+      casosFinal: 0,
+      deltaCasos: 0,
+      semanas: [],
+      casosSerie: []
+    };
+  }
+  const slice = series.slice(-windowSize);
+  const n = slice.length;
+  const x = slice.map((_, i) => i);
+  const y = slice.map((p) => p.casosNovos);
+  const sumX = x.reduce((a, b) => a + b, 0);
+  const sumY = y.reduce((a, b) => a + b, 0);
+  const sumXY = slice.reduce((acc, p, i) => acc + i * p.casosNovos, 0);
+  const sumXX = x.reduce((a, b) => a + b * b, 0);
+  const slope = (n * sumXY - sumX * sumY) / (n * sumXX - sumX * sumX);
+  const first = y[0];
+  const last = y[y.length - 1];
+  const deltaCasos = last - first;
+  const deltaPercent = first === 0 ? (last > 0 ? 100 : 0) : ((last - first) / first) * 100;
+
+  // Classificação estrita para o semáforo de tendência
+  let status: 'alta' | 'queda' | 'estavel' = 'estavel';
+  if (deltaPercent > 10 || slope > 1.5) {
+    status = 'alta';
+  } else if (deltaPercent < -10 || slope < -1.5) {
+    status = 'queda';
+  }
+
+  return {
+    status,
+    deltaPercent,
+    slope,
+    casosInicial: first,
+    casosFinal: last,
+    deltaCasos,
+    semanas: slice.map((s) => s.semana),
+    casosSerie: y
+  };
+};
+
 export const EpidemicCurveChart: FC<EpidemicCurveChartProps> = ({ 
   selectedUF, 
   onSelectUF,
@@ -32,12 +110,14 @@ export const EpidemicCurveChart: FC<EpidemicCurveChartProps> = ({
   endWeek,
   periodLabel
 }) => {
-  const [displayMode, setDisplayMode] = useState<'oficial_ano' | 'continua'>('oficial_ano');
+  // Série contínua exibida por padrão conforme solicitado
+  const [displayMode, setDisplayMode] = useState<'oficial_ano' | 'continua'>('continua');
   const [metricView, setMetricView] = useState<'novos' | 'acumulados'>('novos');
   const [showMilestones, setShowMilestones] = useState(true);
   const [showTrends, setShowTrends] = useState(true);
   const [showVaccines, setShowVaccines] = useState(true);
   const [isMilestonesExpanded, setIsMilestonesExpanded] = useState(false);
+  const [compareAllYears, setCompareAllYears] = useState(false);
 
   // Estados em ordem alfabética estrita pelo nome
   const sortedStates = useMemo(() => {
@@ -49,10 +129,43 @@ export const EpidemicCurveChart: FC<EpidemicCurveChartProps> = ({
     return getEpidemicCurve(selectedUF, startWeek, endWeek);
   }, [selectedUF, startWeek, endWeek]);
 
-  // Recalcula dados semanais por ano (1 a 52) idênticos ao painel oficial PowerBI do MS
+  // Filtro temporal para o gráfico Oficial (semanas 1 a 52 por ano)
+  const parsedStart = useMemo(() => parseWeekNumber(startWeek), [startWeek]);
+  const parsedEnd = useMemo(() => parseWeekNumber(endWeek), [endWeek]);
+
+  const { minWeekFilter, maxWeekFilter, activeYears } = useMemo(() => {
+    if (!parsedStart || !parsedEnd) {
+      return { minWeekFilter: undefined, maxWeekFilter: undefined, activeYears: [2022, 2023, 2024, 2025, 2026] };
+    }
+    if (parsedStart.year === parsedEnd.year) {
+      return {
+        minWeekFilter: Math.min(parsedStart.week, parsedEnd.week),
+        maxWeekFilter: Math.max(parsedStart.week, parsedEnd.week),
+        activeYears: [parsedStart.year]
+      };
+    }
+    const minYear = Math.min(parsedStart.year, parsedEnd.year);
+    const maxYear = Math.max(parsedStart.year, parsedEnd.year);
+    return {
+      minWeekFilter: undefined,
+      maxWeekFilter: undefined,
+      activeYears: [2022, 2023, 2024, 2025, 2026].filter((y) => y >= minYear && y <= maxYear)
+    };
+  }, [parsedStart, parsedEnd]);
+
+  const displayedYears = useMemo(() => {
+    if (compareAllYears) return [2022, 2023, 2024, 2025, 2026];
+    return activeYears;
+  }, [compareAllYears, activeYears]);
+
+  // Recalcula dados semanais por ano (1 a 52) filtrados pelo período
   const weeklyByYearChartData = useMemo(() => {
-    return getWeeklyByYear(selectedUF);
-  }, [selectedUF]);
+    return getWeeklyByYear(selectedUF, minWeekFilter, maxWeekFilter);
+  }, [selectedUF, minWeekFilter, maxWeekFilter]);
+
+  // Semáforo epidemiológico de tendência calculando derivadas e deltas das últimas 3 e 5 semanas
+  const trend3s = useMemo(() => analyzeTrendWindow(chartData, 3), [chartData]);
+  const trend5s = useMemo(() => analyzeTrendWindow(chartData, 5), [chartData]);
 
   // Marcos aplicáveis ao território atual
   const applicableMilestones = useMemo(() => {
@@ -171,7 +284,7 @@ export const EpidemicCurveChart: FC<EpidemicCurveChartProps> = ({
             </span>
           </div>
           <p className="text-xs text-slate-400 mt-0.5">
-            Exibindo dados para: <strong className="text-slate-200">{stateLabel}</strong> • {displayMode === 'oficial_ano' ? 'Comparação anual padronizada (SE 1 a 52)' : `Série contínua (${periodLabel || 'SE 22/2022 a SE 46/2026'})`}
+            Exibindo dados para: <strong className="text-slate-200">{stateLabel}</strong> • {displayMode === 'oficial_ano' ? `Padrão Oficial MS (Semanas ${minWeekFilter || 1} a ${maxWeekFilter || 52} • Anos: ${displayedYears.join(', ')})` : `Série contínua (${periodLabel || 'SE 22/2022 a SE 46/2026'})`}
           </p>
         </div>
 
@@ -216,6 +329,19 @@ export const EpidemicCurveChart: FC<EpidemicCurveChartProps> = ({
               ))}
             </select>
           </div>
+
+          {displayMode === 'oficial_ano' && (
+            <button
+              onClick={() => setCompareAllYears(!compareAllYears)}
+              className={`px-2.5 py-1 rounded-md text-xs border transition-colors ${
+                compareAllYears
+                  ? 'bg-slate-800 border-slate-700 text-slate-300'
+                  : 'bg-emerald-950/80 border-emerald-700 text-emerald-300 font-medium'
+              }`}
+            >
+              {compareAllYears ? 'Exibir apenas anos do recorte' : 'Comparar todos os anos (mesmas semanas)'}
+            </button>
+          )}
 
           {displayMode === 'continua' && (
             <>
@@ -285,6 +411,180 @@ export const EpidemicCurveChart: FC<EpidemicCurveChartProps> = ({
         </div>
       </div>
 
+      {/* Semáforo Epidemiológico de Tendência Recente (Últimas 3 e 5 Semanas) */}
+      <div className="bg-slate-950/90 border border-slate-800/90 rounded-xl p-3.5 space-y-3">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800/70 pb-2">
+          <div className="flex items-center gap-2">
+            <Activity className="w-4 h-4 text-cyan-400" />
+            <h4 className="text-xs font-bold text-white uppercase tracking-wider">
+              Semáforo Epidemiológico de Tendência Recente
+            </h4>
+            <span className="text-[11px] text-slate-400 font-mono hidden sm:inline">
+              (Derivada Linear & Variação • Distinto da Média Móvel)
+            </span>
+          </div>
+          <span className="text-[11px] text-slate-400">
+            Território: <strong className="text-cyan-300">{stateLabel}</strong>
+          </span>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+          {/* Card Semáforo 1: Últimas 3 Semanas */}
+          <div className={`p-3 rounded-xl border flex flex-col justify-between transition-all ${
+            trend3s.status === 'alta' 
+              ? 'bg-rose-950/20 border-rose-800/60 shadow-[0_0_15px_rgba(244,63,94,0.08)]' 
+              : trend3s.status === 'queda'
+              ? 'bg-emerald-950/20 border-emerald-800/60 shadow-[0_0_15px_rgba(16,185,129,0.08)]'
+              : 'bg-amber-950/20 border-amber-800/60 shadow-[0_0_15px_rgba(245,158,11,0.08)]'
+          }`}>
+            <div className="flex items-center justify-between gap-2">
+              <span className="text-xs font-semibold text-slate-300">
+                Tendência de Curto Prazo (3 Semanas)
+              </span>
+
+              {/* Mini-Semáforo Visual 3 Luzes */}
+              <div className="flex items-center gap-1.5 bg-slate-950 px-2.5 py-1 rounded-full border border-slate-800">
+                <span 
+                  title="Sinal Vermelho: Casos Subindo / Alta"
+                  className={`w-2.5 h-2.5 rounded-full transition-all ${
+                    trend3s.status === 'alta' 
+                      ? 'bg-rose-500 shadow-[0_0_8px_rgba(244,63,94,1)] ring-2 ring-rose-400/40 animate-pulse' 
+                      : 'bg-rose-950/60 opacity-25'
+                  }`}
+                />
+                <span 
+                  title="Sinal Amarelo: Casos Mantendo-se / Estável"
+                  className={`w-2.5 h-2.5 rounded-full transition-all ${
+                    trend3s.status === 'estavel' 
+                      ? 'bg-amber-400 shadow-[0_0_8px_rgba(251,191,36,1)] ring-2 ring-amber-300/40' 
+                      : 'bg-amber-950/60 opacity-25'
+                  }`}
+                />
+                <span 
+                  title="Sinal Verde: Casos Descendo / Queda"
+                  className={`w-2.5 h-2.5 rounded-full transition-all ${
+                    trend3s.status === 'queda' 
+                      ? 'bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,1)] ring-2 ring-emerald-300/40 animate-pulse' 
+                      : 'bg-emerald-950/60 opacity-25'
+                  }`}
+                />
+              </div>
+            </div>
+
+            <div className="flex items-baseline gap-2 pt-2">
+              {trend3s.status === 'alta' ? (
+                <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-bold bg-rose-500/20 text-rose-300 border border-rose-500/40">
+                  <TrendingUp className="w-3.5 h-3.5" />
+                  Alta (+{trend3s.deltaPercent.toFixed(1)}%)
+                </div>
+              ) : trend3s.status === 'queda' ? (
+                <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">
+                  <TrendingDown className="w-3.5 h-3.5" />
+                  Queda ({trend3s.deltaPercent.toFixed(1)}%)
+                </div>
+              ) : (
+                <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40">
+                  <Minus className="w-3.5 h-3.5" />
+                  Estável ({trend3s.deltaPercent > 0 ? '+' : ''}{trend3s.deltaPercent.toFixed(1)}%)
+                </div>
+              )}
+
+              <span className="text-xs text-slate-300 font-mono">
+                {trend3s.slope > 0 ? `+${trend3s.slope.toFixed(1)}` : trend3s.slope.toFixed(1)} casos/semana
+              </span>
+            </div>
+
+            <div className="pt-2 text-[11px] text-slate-400 space-y-0.5">
+              <p>
+                Série recente: <strong className="text-slate-200 font-mono">{trend3s.casosSerie.join(' → ')}</strong> casos ({trend3s.semanas[0] || ''} a {trend3s.semanas[trend3s.semanas.length - 1] || ''})
+              </p>
+              <p className="text-[10px] text-slate-500">
+                {trend3s.status === 'alta'
+                  ? 'Casos subindo no curto prazo. Sinal de aceleração recente.'
+                  : trend3s.status === 'queda'
+                  ? 'Casos descendo no curto prazo. Sinal favorável de desaceleração.'
+                  : 'Casos mantendo-se em patamar estável sem salto expressivo.'}
+              </p>
+            </div>
+          </div>
+
+          {/* Card Semáforo 2: Últimas 5 Semanas */}
+          <div className={`p-3 rounded-xl border flex flex-col justify-between transition-all ${
+            trend5s.status === 'alta' 
+              ? 'bg-rose-950/20 border-rose-800/60 shadow-[0_0_15px_rgba(244,63,94,0.08)]' 
+              : trend5s.status === 'queda'
+              ? 'bg-emerald-950/20 border-emerald-800/60 shadow-[0_0_15px_rgba(16,185,129,0.08)]'
+              : 'bg-amber-950/20 border-amber-800/60 shadow-[0_0_15px_rgba(245,158,11,0.08)]'
+          }`}>
+            <div className="flex items-center justify-between gap-2">
+              <span className="text-xs font-semibold text-slate-300">
+                Tendência de Médio Prazo (5 Semanas)
+              </span>
+
+              {/* Mini-Semáforo Visual 3 Luzes */}
+              <div className="flex items-center gap-1.5 bg-slate-950 px-2.5 py-1 rounded-full border border-slate-800">
+                <span 
+                  title="Sinal Vermelho: Casos Subindo / Alta"
+                  className={`w-2.5 h-2.5 rounded-full transition-all ${
+                    trend5s.status === 'alta' 
+                      ? 'bg-rose-500 shadow-[0_0_8px_rgba(244,63,94,1)] ring-2 ring-rose-400/40 animate-pulse' 
+                      : 'bg-rose-950/60 opacity-25'
+                  }`}
+                />
+                <span 
+                  title="Sinal Amarelo: Casos Mantendo-se / Estável"
+                  className={`w-2.5 h-2.5 rounded-full transition-all ${
+                    trend5s.status === 'estavel' 
+                      ? 'bg-amber-400 shadow-[0_0_8px_rgba(251,191,36,1)] ring-2 ring-amber-300/40' 
+                      : 'bg-amber-950/60 opacity-25'
+                  }`}
+                />
+                <span 
+                  title="Sinal Verde: Casos Descendo / Queda"
+                  className={`w-2.5 h-2.5 rounded-full transition-all ${
+                    trend5s.status === 'queda' 
+                      ? 'bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,1)] ring-2 ring-emerald-300/40 animate-pulse' 
+                      : 'bg-emerald-950/60 opacity-25'
+                  }`}
+                />
+              </div>
+            </div>
+
+            <div className="flex items-baseline gap-2 pt-2">
+              {trend5s.status === 'alta' ? (
+                <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-bold bg-rose-500/20 text-rose-300 border border-rose-500/40">
+                  <TrendingUp className="w-3.5 h-3.5" />
+                  Alta (+{trend5s.deltaPercent.toFixed(1)}%)
+                </div>
+              ) : trend5s.status === 'queda' ? (
+                <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">
+                  <TrendingDown className="w-3.5 h-3.5" />
+                  Queda ({trend5s.deltaPercent.toFixed(1)}%)
+                </div>
+              ) : (
+                <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40">
+                  <Minus className="w-3.5 h-3.5" />
+                  Estável ({trend5s.deltaPercent > 0 ? '+' : ''}{trend5s.deltaPercent.toFixed(1)}%)
+                </div>
+              )}
+
+              <span className="text-xs text-slate-300 font-mono">
+                {trend5s.slope > 0 ? `+${trend5s.slope.toFixed(1)}` : trend5s.slope.toFixed(1)} casos/semana
+              </span>
+            </div>
+
+            <div className="pt-2 text-[11px] text-slate-400 space-y-0.5">
+              <p>
+                Série recente: <strong className="text-slate-200 font-mono">{trend5s.casosSerie.join(' → ')}</strong> casos ({trend5s.semanas[0] || ''} a {trend5s.semanas[trend5s.semanas.length - 1] || ''})
+              </p>
+              <p className="text-[10px] text-slate-500">
+                Suaviza variações espúrias e atrasos de digitação de fichas no Sinan.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Visualizador Recharts com Alternância entre Curva Oficial MS e Série Contínua */}
       <div className="h-80 w-full pt-1">
         <ResponsiveContainer width="100%" height="100%">
@@ -296,8 +596,14 @@ export const EpidemicCurveChart: FC<EpidemicCurveChartProps> = ({
                 stroke="#64748b" 
                 fontSize={10} 
                 tickLine={false}
-                interval={1}
-                label={{ value: 'Semana epidemiológica', position: 'insideBottom', offset: -2, fill: '#64748b', fontSize: 10 }}
+                interval={weeklyByYearChartData.length > 20 ? 1 : 0}
+                label={{ 
+                  value: minWeekFilter && maxWeekFilter ? `Semana epidemiológica (${minWeekFilter} a ${maxWeekFilter})` : 'Semana epidemiológica (1 a 52)', 
+                  position: 'insideBottom', 
+                  offset: -2, 
+                  fill: '#64748b', 
+                  fontSize: 10 
+                }}
               />
               <YAxis 
                 stroke="#0891b2" 
@@ -310,11 +616,11 @@ export const EpidemicCurveChart: FC<EpidemicCurveChartProps> = ({
                 verticalAlign="bottom"
                 wrapperStyle={{ fontSize: '11px', paddingTop: '10px' }} 
               />
-              <Bar dataKey="2022" name="2022" fill="#22c55e" radius={[2, 2, 0, 0]} />
-              <Bar dataKey="2023" name="2023" fill="#f97316" radius={[2, 2, 0, 0]} />
-              <Bar dataKey="2024" name="2024" fill="#94a3b8" radius={[2, 2, 0, 0]} />
-              <Bar dataKey="2025" name="2025" fill="#eab308" radius={[2, 2, 0, 0]} />
-              <Bar dataKey="2026" name="2026" fill="#06b6d4" radius={[2, 2, 0, 0]} />
+              {displayedYears.includes(2022) && <Bar dataKey="2022" name="2022" fill="#22c55e" radius={[2, 2, 0, 0]} />}
+              {displayedYears.includes(2023) && <Bar dataKey="2023" name="2023" fill="#f97316" radius={[2, 2, 0, 0]} />}
+              {displayedYears.includes(2024) && <Bar dataKey="2024" name="2024" fill="#94a3b8" radius={[2, 2, 0, 0]} />}
+              {displayedYears.includes(2025) && <Bar dataKey="2025" name="2025" fill="#eab308" radius={[2, 2, 0, 0]} />}
+              {displayedYears.includes(2026) && <Bar dataKey="2026" name="2026" fill="#06b6d4" radius={[2, 2, 0, 0]} />}
             </ComposedChart>
           ) : (
             <ComposedChart data={chartData} margin={{ top: 15, right: showVaccines ? 40 : 15, left: -10, bottom: 0 }}>
@@ -425,11 +731,14 @@ export const EpidemicCurveChart: FC<EpidemicCurveChartProps> = ({
                   m2: '#34d399',
                   m3: '#60a5fa',
                   m4: '#c084fc',
+                  m7: '#a78bfa',
+                  m8: '#38bdf8',
                   m5: '#fb923c',
+                  m9: '#e879f9',
                   m6: '#f43f5e'
                 };
                 const color = colors[m.id] || '#94a3b8';
-                const isEven = idx % 2 === 0;
+                const dy = idx % 3 === 0 ? -8 : (idx % 3 === 1 ? -24 : -40);
                 return (
                   <ReferenceLine 
                     key={m.id}
@@ -440,7 +749,7 @@ export const EpidemicCurveChart: FC<EpidemicCurveChartProps> = ({
                     label={{ 
                       value: m.tituloCurto || m.titulo, 
                       position: 'top', 
-                      dy: isEven ? -8 : -26,
+                      dy: dy,
                       fill: color, 
                       fontSize: 10,
                       fontWeight: 600
