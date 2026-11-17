@@ -2,8 +2,12 @@ name: Atualização Automática de Dados & Deploy MPOX Brasil
 
 on:
   schedule:
-    # Executa a cada 12 horas (00:00 e 12:00 UTC)
-    - cron: '0 0,12 * * *'
+    # 1. Terça-feira 06:00 UTC (03:00 Brasília) - Logo após o fechamento e reprocessamento semanal do Ministério da Saúde / SVSA
+    - cron: '0 6 * * 2'
+    # 2. Quarta-feira 18:00 UTC (15:00 Brasília) - Segunda checagem para capturar dados consolidados tardios das secretarias estaduais
+    - cron: '0 18 * * 3'
+    # 3. Dias úteis (Seg-Sex) às 12:00 UTC (09:00 Brasília) - Varredura leve de comunicados técnicos, alertas RSS e vacinas
+    - cron: '0 12 * * 1-5'
   workflow_dispatch: # Permite execução manual a qualquer momento via GitHub Actions
   push:
     branches:

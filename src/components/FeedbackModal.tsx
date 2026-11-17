@@ -80,7 +80,7 @@ export const FeedbackModal: React.FC<FeedbackModalProps> = ({ isOpen, onClose })
   const handleMailto = () => {
     const subject = encodeURIComponent(`[Mpox Brasil Feedback] ${currentCategoryLabel}`);
     const body = encodeURIComponent(formatFeedbackBody());
-    window.open(`mailto:alamillmartinez.francisco@gmail.com?subject=${subject}&body=${body}`, '_blank');
+    window.open(`mailto:357946931+sundiall@users.noreply.github.com?subject=${subject}&body=${body}`, '_blank');
   };
 
   return (
@@ -127,7 +127,7 @@ export const FeedbackModal: React.FC<FeedbackModalProps> = ({ isOpen, onClose })
           <div className="p-3 rounded-xl bg-slate-950 border border-slate-800/90 text-slate-400 flex items-start gap-2.5">
             <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
             <div className="text-[11px] leading-relaxed">
-              <strong className="text-slate-200">Privacidade Preservada:</strong> Não armazenamos cookies de rastreamento nem registramos dados sensíveis. O feedback pode ser enviado anonimamente via e-mail ou copiado para encaminhamento no canal de sua preferência.
+              <strong className="text-slate-200">Privacidade Preservada:</strong> Não armazenamos cookies de rastreamento nem registramos dados sensíveis. O feedback é encaminhado com segurança para o e-mail oficial do mantenedor (<code className="text-cyan-300 font-mono text-[10px]">357946931+sundiall@users.noreply.github.com</code>) ou via GitHub Issues.
             </div>
           </div>
 

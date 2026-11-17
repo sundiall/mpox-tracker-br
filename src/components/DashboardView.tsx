@@ -17,6 +17,7 @@ import {
 import { nationalSummary } from '../data/epidemiology';
 import type { StateEpidemiology } from '../data/epidemiology';
 import { epidemicTimeSeries } from '../data/time_series';
+import { syncMetadata } from '../data/sync_status';
 import { KPICard } from './KPICard';
 import { EpidemicCurveChart } from './EpidemicCurveChart';
 import { DemographicBreakdownChart } from './DemographicBreakdownChart';
@@ -206,6 +207,20 @@ export const DashboardView: FC<DashboardViewProps> = ({
               >
                 OMS (WHO) <ExternalLink className="w-2.5 h-2.5" />
               </a>
+            </div>
+
+            {/* Timestamps de Atualização da SVSA/MS */}
+            <div className="flex flex-wrap items-center gap-2 pt-2 text-xs">
+              <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-950 border border-slate-800 text-[11px]">
+                <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
+                <span className="text-slate-400">Última atualização:</span>
+                <strong className="text-slate-200 font-mono">{syncMetadata.ultimaAtualizacaoFormatada}</strong>
+              </div>
+              <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-950 border border-slate-800 text-[11px]">
+                <Clock className="w-3.5 h-3.5 text-cyan-400" />
+                <span className="text-slate-400">Próxima prevista:</span>
+                <strong className="text-cyan-300 font-mono">{syncMetadata.proximaAtualizacaoPrevista}</strong>
+              </div>
             </div>
           </div>
 

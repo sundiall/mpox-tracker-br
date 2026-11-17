@@ -24,7 +24,8 @@ import {
   YAxis, 
   Tooltip, 
   Legend, 
-  CartesianGrid 
+  CartesianGrid,
+  ReferenceLine 
 } from 'recharts';
 import { vaccineMilestones, vaccinePopulationsRelease } from '../data/vaccines';
 import type { VaccineMilestone } from '../data/vaccines';
@@ -60,17 +61,37 @@ export const VaccinesMilestonesView: FC<VaccinesMilestonesViewProps> = ({
 
   const customTooltip = ({ active, payload, label }: any) => {
     if (active && payload && payload.length) {
+      const dataPoint = payload[0]?.payload;
       return (
-        <div className="bg-slate-900 border border-slate-700 p-2.5 rounded-lg shadow-xl text-xs space-y-1">
-          <p className="font-semibold text-slate-200 border-b border-slate-800 pb-1">
-            Período: {label}
+        <div className="bg-slate-900 border border-slate-700 p-3 rounded-lg shadow-xl text-xs space-y-1.5 min-w-[220px]">
+          <div className="font-semibold text-slate-200 border-b border-slate-800 pb-1 flex items-center justify-between">
+            <span className="text-cyan-300">Mês: {label}</span>
+            <span className="text-[10px] text-slate-500 font-mono">{dataPoint?.mes}</span>
+          </div>
+          <p className="text-slate-300 flex justify-between">
+            <span>Doses Distribuídas:</span>
+            <strong className="text-white font-mono">{dataPoint?.dosesDistribuidasAcumuladas?.toLocaleString('pt-BR')}</strong>
           </p>
-          <p className="text-cyan-400">
-            Doses Distribuídas: {payload[0]?.value?.toLocaleString('pt-BR')}
+          <p className="text-emerald-400 flex justify-between">
+            <span>Doses Aplicadas SUS:</span>
+            <strong className="font-mono">{dataPoint?.dosesAplicadasAcumuladas?.toLocaleString('pt-BR')}</strong>
           </p>
-          <p className="text-emerald-400">
-            Doses Aplicadas: {payload[1]?.value?.toLocaleString('pt-BR')}
-          </p>
+          <div className="pt-1 border-t border-slate-800 text-[10px] text-slate-400 space-y-0.5">
+            <div className="flex justify-between">
+              <span>1ª Dose:</span>
+              <span className="text-slate-300 font-mono">{dataPoint?.primeiraDose?.toLocaleString('pt-BR')}</span>
+            </div>
+            <div className="flex justify-between">
+              <span>2ª Dose:</span>
+              <span className="text-slate-300 font-mono">{dataPoint?.segundaDose?.toLocaleString('pt-BR')}</span>
+            </div>
+          </div>
+          {dataPoint?.marco && (
+            <div className="mt-1 p-1.5 rounded bg-purple-950/80 border border-purple-800/80 text-[10px] text-purple-200 flex items-center gap-1">
+              <Syringe className="w-3 h-3 text-purple-400 shrink-0" />
+              <span><strong>Marco:</strong> {dataPoint.marco}</span>
+            </div>
+          )}
         </div>
       );
     }
@@ -224,14 +245,23 @@ export const VaccinesMilestonesView: FC<VaccinesMilestonesViewProps> = ({
           </p>
         </div>
 
-        <div className="h-64 w-full">
+        <div className="h-80 w-full">
           <ResponsiveContainer width="100%" height="100%">
-            <ComposedChart data={vaccineProgressTimeData} margin={{ top: 10, right: 10, left: -10, bottom: 0 }}>
+            <ComposedChart data={vaccineProgressTimeData} margin={{ top: 25, right: 20, left: -5, bottom: 5 }}>
               <CartesianGrid strokeDasharray="3 3" stroke="#1e293b" vertical={false} />
-              <XAxis dataKey="periodoRotulo" stroke="#64748b" fontSize={11} tickLine={false} />
+              <XAxis 
+                dataKey="periodoRotulo" 
+                stroke="#64748b" 
+                fontSize={10} 
+                tickLine={false}
+                interval="preserveStartEnd" 
+              />
               <YAxis stroke="#64748b" fontSize={11} tickLine={false} />
               <Tooltip content={customTooltip} />
-              <Legend wrapperStyle={{ fontSize: '11px', paddingTop: '8px' }} />
+              <Legend 
+                wrapperStyle={{ fontSize: '11px', paddingTop: '10px', color: '#cbd5e1' }}
+                formatter={(val) => <span style={{ color: '#cbd5e1', fontWeight: 500 }}>{val}</span>}
+              />
               <Bar 
                 dataKey="dosesDistribuidasAcumuladas" 
                 name="Doses Distribuídas (Estoque Nacional)" 
@@ -244,8 +274,24 @@ export const VaccinesMilestonesView: FC<VaccinesMilestonesViewProps> = ({
                 name="Doses Aplicadas no SUS" 
                 stroke="#10b981" 
                 strokeWidth={3} 
-                dot={{ r: 4, fill: '#10b981' }} 
+                dot={false} 
               />
+              {/* Marcos Históricos de Imunização Posicionados na Escala Temporal Exata */}
+              {vaccineProgressTimeData.filter((d) => d.marco).map((m, idx) => (
+                <ReferenceLine
+                  key={m.mes}
+                  x={m.periodoRotulo}
+                  stroke={m.marcoCategoria === 'distribuicao' ? '#10b981' : m.marcoCategoria === 'aquisicao' ? '#38bdf8' : '#c084fc'}
+                  strokeDasharray="3 3"
+                  label={{
+                    value: m.marco,
+                    position: 'top',
+                    fill: '#cbd5e1',
+                    fontSize: 9,
+                    dy: idx % 2 === 0 ? -10 : -22
+                  }}
+                />
+              ))}
             </ComposedChart>
           </ResponsiveContainer>
         </div>

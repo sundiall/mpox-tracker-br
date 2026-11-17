@@ -6,8 +6,9 @@ import {
   Building2, 
   Rss, 
   ShieldCheck,
-  MessageSquare
+  MessageSquare 
 } from 'lucide-react';
+import { syncMetadata } from '../data/sync_status';
 
 interface NavbarProps {
   activeTab: string;
@@ -69,9 +70,15 @@ export const Navbar: FC<NavbarProps> = ({
               </button>
             )}
 
-            <div className="flex items-center gap-2 text-xs text-slate-400 bg-slate-900 px-3 py-1.5 rounded-lg border border-slate-800">
+            <div 
+              className="flex items-center gap-2 text-xs text-slate-400 bg-slate-900 px-3 py-1.5 rounded-lg border border-slate-800"
+              title={`Última atualização: ${syncMetadata.ultimaAtualizacaoFormatada} • Próxima atualização prevista: ${syncMetadata.proximaAtualizacaoPrevista}`}
+            >
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
               <span className="font-mono text-[11px] text-slate-300">Sinan / DATASUS Ativo</span>
+              <span className="text-[10px] font-mono text-cyan-400 border-l border-slate-800 pl-2 hidden sm:inline" title="Semana Epidemiológica Vigente">
+                {syncMetadata.semanaEpidemiologica}
+              </span>
             </div>
           </div>
         </div>

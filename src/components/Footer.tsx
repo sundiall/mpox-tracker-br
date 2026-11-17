@@ -1,5 +1,6 @@
 import React from 'react';
-import { ExternalLink, ShieldCheck, Heart, Database, AlertTriangle, MessageSquare, Info } from 'lucide-react';
+import { ExternalLink, ShieldCheck, Heart, Database, AlertTriangle, MessageSquare, Info, Clock } from 'lucide-react';
+import { syncMetadata } from '../data/sync_status';
 
 interface FooterProps {
   onOpenFeedback?: () => void;
@@ -170,14 +171,31 @@ export const Footer: React.FC<FooterProps> = ({ onOpenFeedback }) => {
           </div>
         </div>
 
-        <div className="pt-6 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-slate-500">
-          <div>
-            © 2026 Mpox Brasil — Coleta Não Oficial de Dados em Saúde Pública. Licença Open Source MIT.
+        {/* Timestamps de Atualização e Contato Oficial */}
+        <div className="pt-6 border-t border-slate-900 flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] text-slate-500">
+          <div className="space-y-1 text-center md:text-left">
+            <div>
+              © 2026 Mpox Brasil — Coleta Não Oficial de Dados em Saúde Pública. Licença Open Source MIT.
+            </div>
+            <div className="flex flex-wrap items-center justify-center md:justify-start gap-2 text-slate-400">
+              <span>Contato oficial:</span>
+              <a 
+                href={`mailto:${syncMetadata.emailContato}`} 
+                className="text-cyan-400 hover:underline font-mono text-[10px]"
+              >
+                {syncMetadata.emailContato}
+              </a>
+            </div>
           </div>
-          <div className="flex items-center gap-3">
+
+          <div className="flex flex-col sm:flex-row items-center sm:items-end md:items-end gap-2 text-[11px]">
             <span className="flex items-center gap-1.5 text-emerald-400">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-              Sincronizado com o PowerBI Oficial do MS (SE 46/2026)
+              <span>Última atualização: <strong className="text-slate-200">{syncMetadata.ultimaAtualizacaoFormatada}</strong></span>
+            </span>
+            <span className="flex items-center gap-1.5 text-slate-400">
+              <Clock className="w-3.5 h-3.5 text-cyan-400" />
+              <span>Próxima prevista: <strong className="text-cyan-300">{syncMetadata.proximaAtualizacaoPrevista}</strong></span>
             </span>
           </div>
         </div>
