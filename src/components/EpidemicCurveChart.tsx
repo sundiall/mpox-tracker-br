@@ -116,7 +116,6 @@ export const EpidemicCurveChart: FC<EpidemicCurveChartProps> = ({
   const [displayMode, setDisplayMode] = useState<'oficial_ano' | 'continua'>('continua');
   const [metricView, setMetricView] = useState<'novos' | 'acumulados'>('novos');
   const [showMilestones, setShowMilestones] = useState(true);
-  const [showTrends, setShowTrends] = useState(true);
   const [showVaccines, setShowVaccines] = useState(true);
   const [isMilestonesExpanded, setIsMilestonesExpanded] = useState(false);
   const [compareAllYears, setCompareAllYears] = useState(false);
@@ -254,21 +253,9 @@ export const EpidemicCurveChart: FC<EpidemicCurveChartProps> = ({
                 {dataPoint?.casosNovos?.toLocaleString('pt-BR')}
               </p>
               <p className="text-amber-400">
-                <span className="text-slate-400">Média Móvel (7d): </span>
-                {dataPoint?.mediaMovel7d}
+                <span className="text-slate-400">Média Móvel (3 Semanas / 21 Dias): </span>
+                {dataPoint?.mediaMovel7d} casos
               </p>
-              {dataPoint?.tendencia3s !== null && dataPoint?.tendencia3s !== undefined && (
-                <p className="text-rose-400 font-mono text-[11px]">
-                  <span>Regressão Linear (3 sem): </span>
-                  {dataPoint?.tendencia3s} casos/sem
-                </p>
-              )}
-              {dataPoint?.tendencia5s !== null && dataPoint?.tendencia5s !== undefined && (
-                <p className="text-sky-300 font-mono text-[11px]">
-                  <span>Regressão Linear (5 sem): </span>
-                  {dataPoint?.tendencia5s} casos/sem
-                </p>
-              )}
             </>
           ) : (
             <p className="text-indigo-300 font-semibold">
@@ -422,18 +409,6 @@ export const EpidemicCurveChart: FC<EpidemicCurveChartProps> = ({
                 >
                   Hitos Locais
                 </button>
-                {metricView === 'novos' && (
-                  <button
-                    onClick={() => setShowTrends(!showTrends)}
-                    className={`px-2 py-1 rounded border transition-colors ${
-                      showTrends 
-                        ? 'bg-cyan-950/80 border-cyan-700 text-cyan-300' 
-                        : 'bg-slate-950 border-slate-800 text-slate-500'
-                    }`}
-                  >
-                    Tendências (3s/5s)
-                  </button>
-                )}
               </div>
             </>
           )}
@@ -725,35 +700,11 @@ export const EpidemicCurveChart: FC<EpidemicCurveChartProps> = ({
                     yAxisId="casos"
                     type="monotone" 
                     dataKey="mediaMovel7d" 
-                    name="Média Móvel de Casos" 
+                    name="Média Móvel (3 Semanas / 21 Dias)" 
                     stroke="#f59e0b" 
                     strokeWidth={2} 
                     dot={false} 
                   />
-                  {showTrends && (
-                    <Line 
-                      yAxisId="casos"
-                      type="linear"
-                      dataKey="tendencia3s" 
-                      name="Tendência Linear (Últimas 3 Semanas)" 
-                      stroke="#f43f5e" 
-                      strokeDasharray="4 4" 
-                      strokeWidth={2.5} 
-                      dot={false} 
-                    />
-                  )}
-                  {showTrends && (
-                    <Line 
-                      yAxisId="casos"
-                      type="linear"
-                      dataKey="tendencia5s" 
-                      name="Tendência Linear (Últimas 5 Semanas)" 
-                      stroke="#38bdf8" 
-                      strokeDasharray="6 6" 
-                      strokeWidth={2} 
-                      dot={false} 
-                    />
-                  )}
                 </>
               ) : (
                 <Area 

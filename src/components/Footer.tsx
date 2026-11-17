@@ -1,7 +1,11 @@
 import React from 'react';
-import { ExternalLink, ShieldCheck, Heart, Database, AlertTriangle } from 'lucide-react';
+import { ExternalLink, ShieldCheck, Heart, Database, AlertTriangle, MessageSquare, Info } from 'lucide-react';
 
-export const Footer: React.FC = () => {
+interface FooterProps {
+  onOpenFeedback?: () => void;
+}
+
+export const Footer: React.FC<FooterProps> = ({ onOpenFeedback }) => {
   const sources = [
     {
       name: 'Painel Mpox Brasil — Ministério da Saúde (SVSA/CNIE)',
@@ -104,17 +108,17 @@ export const Footer: React.FC = () => {
             </p>
           </div>
 
-          {/* Coluna 2: Diretriz Ética & População-Foco */}
+          {/* Coluna 2: Diretriz Ética & Comunicação Sem Estigma */}
           <div className="space-y-2">
             <h4 className="font-bold text-white text-sm flex items-center gap-2">
               <Heart className="w-4 h-4 text-rose-400" />
               Comunicação Sem Estigma
             </h4>
             <p className="leading-relaxed text-slate-400">
-              Priorizamos informações práticas para os grupos com maior incidência estatística nos boletins
-              (homens cisgênero que fazem sexo com homens de 18 a 49 anos, independentemente de raça ou orientação),
-              afirmando com clareza científica que a mpox é uma infecção transmitida por contato físico estreito e que
-              não pertence a nenhuma identidade ou grupo social específico.
+              Promovemos a educação em saúde pública estritamente orientada por evidências científicas e vigilância
+              epidemiológica, reafirmando que a mpox é uma infecção viral transmitida prioritariamente por contato físico direto
+              pele a pele, gotículas respiratórias ou fômites contaminados, não pertencendo a nenhuma orientação sexual,
+              raça ou identidade de gênero específica.
             </p>
           </div>
 
@@ -132,6 +136,37 @@ export const Footer: React.FC = () => {
               <span className="text-cyan-300 font-bold font-mono">Disque 136 (Disque Saúde do SUS)</span>
               <p className="text-[10px] text-slate-500 mt-0.5">Ligação gratuita em todo o território nacional.</p>
             </div>
+          </div>
+        </div>
+
+        {/* Bloco de Deslinde de Responsabilidade e Canal de Feedback */}
+        <div className="p-4 rounded-xl bg-slate-900/90 border border-slate-800 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-xs">
+          <div className="flex items-start gap-3 max-w-3xl">
+            <Info className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
+            <div className="space-y-1">
+              <h5 className="font-bold text-slate-200 text-xs flex items-center gap-2">
+                Aviso Legal & Deslinde de Responsabilidade (Finalidade Científica e Aberta)
+                <span className="px-1.5 py-0.2 rounded text-[10px] font-mono bg-amber-500/20 text-amber-300 border border-amber-500/40">
+                  BETA
+                </span>
+              </h5>
+              <p className="text-[11px] text-slate-400 leading-relaxed">
+                Este portal é uma iniciativa independente de agregação de dados públicos (DATASUS / Ministério da Saúde / Sinan) e literatura científica aberta. As informações e estimativas apresentadas destinam-se exclusivamente à pesquisa acadêmica, transparência e monitoramento de vigilância em saúde. Não constituem aconselhamento médico, diagnóstico clínico ou diretriz terapêutica individual. Havendo sintomas ou necessidade clínica, recorra sempre aos serviços oficiais de saúde e unidades do SUS.
+              </p>
+            </div>
+          </div>
+
+          <div className="shrink-0 flex items-center gap-2 w-full md:w-auto justify-end">
+            {onOpenFeedback && (
+              <button
+                type="button"
+                onClick={onOpenFeedback}
+                className="w-full md:w-auto px-3.5 py-2 rounded-lg bg-cyan-950/80 hover:bg-cyan-900 border border-cyan-700/80 text-cyan-200 text-xs font-semibold flex items-center justify-center gap-2 transition-all shadow-sm"
+              >
+                <MessageSquare className="w-3.5 h-3.5 text-cyan-400" />
+                <span>Dar Feedback ao Desenvolvedor</span>
+              </button>
+            )}
           </div>
         </div>
 

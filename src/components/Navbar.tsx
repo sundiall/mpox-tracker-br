@@ -5,17 +5,20 @@ import {
   HelpCircle, 
   Building2, 
   Rss, 
-  ShieldCheck 
+  ShieldCheck,
+  MessageSquare
 } from 'lucide-react';
 
 interface NavbarProps {
   activeTab: string;
   onSelectTab: (tab: string) => void;
+  onOpenFeedback?: () => void;
 }
 
 export const Navbar: FC<NavbarProps> = ({
   activeTab,
-  onSelectTab
+  onSelectTab,
+  onOpenFeedback
 }) => {
   const tabs = [
     { id: 'painel', label: 'Painel Geral & Séries', icon: Activity },
@@ -39,6 +42,9 @@ export const Navbar: FC<NavbarProps> = ({
                 <h1 className="text-base font-bold text-white tracking-tight leading-none">
                   MPOX BRASIL
                 </h1>
+                <span className="px-1.5 py-0.5 rounded text-[10px] font-mono font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40 tracking-wider">
+                  BETA
+                </span>
                 <span className="px-2 py-0.5 rounded text-[10px] font-mono bg-slate-800 text-cyan-300 border border-slate-700">
                   Open Science
                 </span>
@@ -49,10 +55,24 @@ export const Navbar: FC<NavbarProps> = ({
             </div>
           </div>
 
-          {/* Status do Sistema no Header */}
-          <div className="flex items-center gap-2 text-xs text-slate-400 bg-slate-900 px-3 py-1.5 rounded-lg border border-slate-800 self-start md:self-auto">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            <span className="font-mono text-[11px] text-slate-300">Sinan / DATASUS Ativo</span>
+          {/* Status do Sistema & Botão de Feedback */}
+          <div className="flex items-center gap-2 self-start md:self-auto">
+            {onOpenFeedback && (
+              <button
+                type="button"
+                onClick={onOpenFeedback}
+                className="flex items-center gap-1.5 text-xs text-cyan-300 bg-cyan-950/70 hover:bg-cyan-900/80 px-2.5 py-1.5 rounded-lg border border-cyan-800/80 transition-colors font-medium cursor-pointer"
+                title="Enviar feedback ou relatar inconsistência ao desenvolvedor"
+              >
+                <MessageSquare className="w-3.5 h-3.5 text-cyan-400" />
+                <span>Feedback</span>
+              </button>
+            )}
+
+            <div className="flex items-center gap-2 text-xs text-slate-400 bg-slate-900 px-3 py-1.5 rounded-lg border border-slate-800">
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span className="font-mono text-[11px] text-slate-300">Sinan / DATASUS Ativo</span>
+            </div>
           </div>
         </div>
 

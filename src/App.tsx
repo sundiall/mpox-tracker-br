@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { statesData } from './data/epidemiology';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
+import { FeedbackModal } from './components/FeedbackModal';
 import { DashboardView } from './components/DashboardView';
 import { VaccinesMilestonesView } from './components/VaccinesMilestonesView';
 import { ClinicalGuideFAQView } from './components/ClinicalGuideFAQView';
@@ -11,6 +12,7 @@ import { AlertsRSSView } from './components/AlertsRSSView';
 export function App() {
   const [activeTab, setActiveTab] = useState<string>('painel');
   const [selectedUF, setSelectedUF] = useState<string | null>(null);
+  const [isFeedbackOpen, setIsFeedbackOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col font-sans selection:bg-cyan-500/30 selection:text-cyan-200">
@@ -18,6 +20,7 @@ export function App() {
       <Navbar
         activeTab={activeTab}
         onSelectTab={setActiveTab}
+        onOpenFeedback={() => setIsFeedbackOpen(true)}
       />
 
       {/* Conteúdo Principal Dinâmico com Semântica Acessível */}
@@ -89,7 +92,13 @@ export function App() {
       </main>
 
       {/* Rodapé Institucional */}
-      <Footer />
+      <Footer onOpenFeedback={() => setIsFeedbackOpen(true)} />
+
+      {/* Modal Seguro de Feedback com o Desenvolvedor */}
+      <FeedbackModal
+        isOpen={isFeedbackOpen}
+        onClose={() => setIsFeedbackOpen(false)}
+      />
     </div>
   );
 }
