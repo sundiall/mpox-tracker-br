@@ -231,6 +231,43 @@ export const EpidemicCurveChart: FC<EpidemicCurveChartProps> = ({
     return getApplicableMilestones(selectedUF);
   }, [selectedUF]);
 
+  // Algoritmo de detecção de sobreposição de etiquetas de marcos históricos
+  const { hasMilestoneOverlap } = useMemo(() => {
+    // Filtra marcos presentes no intervalo ativo de chartData
+    const visible = applicableMilestones
+      .map((m) => {
+        const index = chartData.findIndex((d) => d.semana === m.semana);
+        return { ...m, index };
+      })
+      .filter((m) => m.index !== -1)
+      .sort((a, b) => a.index - b.index);
+
+    if (visible.length <= 1) {
+      return { hasMilestoneOverlap: false };
+    }
+
+    // Estimativa de largura em pixels do container do gráfico
+    const containerWidth = isMobile ? 300 : 850;
+    const pxPerPoint = containerWidth / Math.max(chartData.length, 1);
+
+    // Rótulo textual ocupa ~80px. Se a distância entre marcos adjacentes for menor que 80px, há colisão
+    let overlap = false;
+    for (let i = 1; i < visible.length; i++) {
+      const distPx = (visible[i].index - visible[i - 1].index) * pxPerPoint;
+      if (distPx < 80) {
+        overlap = true;
+        break;
+      }
+    }
+
+    // Em telas móveis com 2 ou mais marcos no período, a densidade visual causa colisão
+    if (isMobile && visible.length >= 2) {
+      overlap = true;
+    }
+
+    return { hasMilestoneOverlap: overlap };
+  }, [applicableMilestones, chartData, isMobile]);
+
   const currentState = selectedUF ? statesData.find((s) => s.uf === selectedUF) : null;
   const stateLabel = currentState ? `${currentState.nome} (${currentState.uf})` : 'Brasil (Consolidado Nacional)';
 
@@ -316,7 +353,7 @@ export const EpidemicCurveChart: FC<EpidemicCurveChartProps> = ({
   };
 
   return (
-    <div className="bg-slate-900 border border-slate-800 rounded-xl p-5 space-y-4">
+    <div className="bg-slate-900 border border-slate-800 rounded-xl p-3 sm:p-5 space-y-4">
       {/* Controles Imediatos & Filtro Territorial Contextual ao Gráfico */}
       <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-3 border-b border-slate-800/80 pb-4">
         <div>
@@ -682,165 +719,172 @@ export const EpidemicCurveChart: FC<EpidemicCurveChartProps> = ({
       </div>
 
       {/* Visualizador Recharts com Alternância entre Curva Oficial MS e Série Contínua */}
-      <div className="h-80 sm:h-96 w-full pt-2">
-        <ResponsiveContainer width="100%" height="100%">
-          {displayMode === 'oficial_ano' ? (
-            <ComposedChart data={weeklyByYearChartData} margin={{ top: 25, right: isMobile ? 12 : 25, left: isMobile ? -20 : -5, bottom: 28 }}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#1e293b" vertical={false} />
-              <XAxis 
-                dataKey="semana" 
-                stroke="#64748b" 
-                tickLine={false}
-                interval={isMobile ? 3 : (weeklyByYearChartData.length > 20 ? 1 : 0)}
-                height={48}
-                tick={{ angle: -30, textAnchor: 'end', fontSize: 10, fill: '#64748b', dy: 4, dx: -3 }}
-                label={isMobile ? undefined : { 
-                  value: minWeekFilter && maxWeekFilter ? `Semana epidemiológica (${minWeekFilter} a ${maxWeekFilter})` : 'Semana epidemiológica (1 a 52)', 
-                  position: 'insideBottom', 
-                  offset: -12, 
-                  fill: '#64748b', 
-                  fontSize: 10 
-                }}
-              />
-              <YAxis 
-                stroke="#0891b2" 
-                fontSize={11} 
-                tickLine={false} 
-                axisLine={false}
-              />
-              <Tooltip content={customTooltip} />
-              <Legend 
-                verticalAlign="bottom"
-                wrapperStyle={{ fontSize: '11px', paddingTop: '14px', color: '#cbd5e1' }} 
-                formatter={(value) => <span style={{ color: '#cbd5e1', fontWeight: 500 }}>{value}</span>}
-              />
-              {displayedYears.includes(2022) && <Bar dataKey="2022" name="2022" fill="#22c55e" radius={[2, 2, 0, 0]} />}
-              {displayedYears.includes(2023) && <Bar dataKey="2023" name="2023" fill="#f97316" radius={[2, 2, 0, 0]} />}
-              {displayedYears.includes(2024) && <Bar dataKey="2024" name="2024" fill="#94a3b8" radius={[2, 2, 0, 0]} />}
-              {displayedYears.includes(2025) && <Bar dataKey="2025" name="2025" fill="#eab308" radius={[2, 2, 0, 0]} />}
-              {displayedYears.includes(2026) && <Bar dataKey="2026" name="2026" fill="#06b6d4" radius={[2, 2, 0, 0]} />}
-            </ComposedChart>
-          ) : (
-            <ComposedChart data={chartData} margin={{ top: 52, right: showVaccines ? (isMobile ? 38 : 65) : (isMobile ? 12 : 25), left: isMobile ? -20 : -5, bottom: 28 }}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#1e293b" vertical={false} />
-              <XAxis 
-                dataKey="semana" 
-                stroke="#64748b" 
-                tickLine={false}
-                interval={xAxisInterval}
-                height={48}
-                tick={{ angle: -30, textAnchor: 'end', fontSize: 10, fill: '#64748b', dy: 4, dx: -3 }}
-                tickFormatter={(semana: string) => formatWeekToCommonDate(semana, chartData.length <= 15 ? 'dia_mes' : 'mes_ano')}
-              />
-              {/* Eixo Esquerdo: Casos Notificados */}
-              <YAxis 
-                yAxisId="casos"
-                stroke="#0891b2" 
-                fontSize={11} 
-                tickLine={false} 
-                axisLine={false}
-              />
-              {/* Eixo Direito: Doses de Vacina Aplicadas */}
-              {showVaccines && (
+      <div className="bg-slate-950/90 border border-slate-800/90 rounded-xl p-2 sm:p-3.5 space-y-2">
+        {hasMilestoneOverlap && showMilestones && displayMode === 'continua' && (
+          <div className="flex items-center justify-between px-1 text-[10px] text-slate-400">
+            <span className="flex items-center gap-1.5 text-cyan-300">
+              <Sparkles className="w-3 h-3 text-cyan-400 shrink-0" />
+              <span>Símbolos nos marcos (① a ⑨) com cores temáticas evitam sobreposição. Veja detalhes nas notas abaixo.</span>
+            </span>
+          </div>
+        )}
+        <div className="h-72 sm:h-96 w-full">
+          <ResponsiveContainer width="100%" height="100%">
+            {displayMode === 'oficial_ano' ? (
+              <ComposedChart data={weeklyByYearChartData} margin={{ top: 20, right: isMobile ? 4 : 20, left: isMobile ? 0 : 5, bottom: 25 }}>
+                <CartesianGrid strokeDasharray="3 3" stroke="#1e293b" vertical={false} />
+                <XAxis 
+                  dataKey="semana" 
+                  stroke="#64748b" 
+                  tickLine={false}
+                  interval={isMobile ? 3 : (weeklyByYearChartData.length > 20 ? 1 : 0)}
+                  height={isMobile ? 38 : 48}
+                  tick={{ angle: -30, textAnchor: 'end', fontSize: isMobile ? 8 : 10, fill: '#64748b', dy: 4, dx: -3 }}
+                  label={isMobile ? undefined : { 
+                    value: minWeekFilter && maxWeekFilter ? `Semana epidemiológica (${minWeekFilter} a ${maxWeekFilter})` : 'Semana epidemiológica (1 a 52)', 
+                    position: 'insideBottom', 
+                    offset: -12, 
+                    fill: '#64748b', 
+                    fontSize: 10 
+                  }}
+                />
                 <YAxis 
-                  yAxisId="doses"
-                  orientation="right"
-                  stroke="#10b981" 
-                  fontSize={10} 
+                  stroke="#0891b2" 
+                  fontSize={isMobile ? 8 : 10} 
+                  width={isMobile ? 32 : 40}
                   tickLine={false} 
                   axisLine={false}
                 />
-              )}
-              <Tooltip content={customTooltip} />
-              <Legend 
-                wrapperStyle={{ fontSize: '11px', paddingTop: '16px', color: '#cbd5e1' }}
-                formatter={(value) => <span style={{ color: '#cbd5e1', fontWeight: 500 }}>{value}</span>}
-              />
-
-              {/* Doses de Vacina Aplicadas Superpostas no Mesmo Gráfico */}
-              {showVaccines && (
-                <Area 
-                  yAxisId="doses"
-                  type="monotone" 
-                  dataKey="dosesAcumuladas" 
-                  name="Doses Aplicadas no SUS (Eixo Direito)" 
-                  stroke="#10b981" 
-                  fill="#064e3b" 
-                  fillOpacity={0.2} 
-                  strokeWidth={2}
+                <Tooltip content={customTooltip} />
+                <Legend 
+                  verticalAlign="bottom"
+                  wrapperStyle={{ fontSize: '11px', paddingTop: '14px', color: '#cbd5e1' }} 
+                  formatter={(value) => <span style={{ color: '#cbd5e1', fontWeight: 500 }}>{value}</span>}
                 />
-              )}
-
-              {/* Casos Notificados Semanais ou Acumulados */}
-              {metricView === 'novos' ? (
-                <>
-                  <Bar 
-                    yAxisId="casos"
-                    dataKey="casosNovos" 
-                    name="Casos Notificados (Semana)" 
-                    fill="#0891b2" 
-                    radius={[3, 3, 0, 0]} 
+                {displayedYears.includes(2022) && <Bar dataKey="2022" name="2022" fill="#22c55e" radius={[2, 2, 0, 0]} />}
+                {displayedYears.includes(2023) && <Bar dataKey="2023" name="2023" fill="#f97316" radius={[2, 2, 0, 0]} />}
+                {displayedYears.includes(2024) && <Bar dataKey="2024" name="2024" fill="#94a3b8" radius={[2, 2, 0, 0]} />}
+                {displayedYears.includes(2025) && <Bar dataKey="2025" name="2025" fill="#eab308" radius={[2, 2, 0, 0]} />}
+                {displayedYears.includes(2026) && <Bar dataKey="2026" name="2026" fill="#06b6d4" radius={[2, 2, 0, 0]} />}
+              </ComposedChart>
+            ) : (
+              <ComposedChart data={chartData} margin={{ top: hasMilestoneOverlap ? 32 : 48, right: showVaccines ? (isMobile ? 0 : 20) : (isMobile ? 0 : 10), left: isMobile ? 0 : 5, bottom: 25 }}>
+                <CartesianGrid strokeDasharray="3 3" stroke="#1e293b" vertical={false} />
+                <XAxis 
+                  dataKey="semana" 
+                  stroke="#64748b" 
+                  tickLine={false}
+                  interval={xAxisInterval}
+                  height={isMobile ? 38 : 48}
+                  tick={{ angle: -30, textAnchor: 'end', fontSize: isMobile ? 8 : 10, fill: '#64748b', dy: 4, dx: -3 }}
+                  tickFormatter={(semana: string) => formatWeekToCommonDate(semana, chartData.length <= 15 ? 'dia_mes' : 'mes_ano')}
+                />
+                {/* Eixo Esquerdo: Casos Notificados */}
+                <YAxis 
+                  yAxisId="casos"
+                  stroke="#0891b2" 
+                  fontSize={isMobile ? 8 : 10} 
+                  width={isMobile ? 32 : 40}
+                  tickLine={false} 
+                  axisLine={false}
+                />
+                {/* Eixo Direito: Doses de Vacina Aplicadas */}
+                {showVaccines && (
+                  <YAxis 
+                    yAxisId="doses"
+                    orientation="right"
+                    stroke="#10b981" 
+                    fontSize={isMobile ? 8 : 10} 
+                    width={isMobile ? 34 : 45}
+                    tickLine={false} 
+                    axisLine={false}
                   />
-                  <Line 
+                )}
+                <Tooltip content={customTooltip} />
+                <Legend 
+                  wrapperStyle={{ fontSize: '11px', paddingTop: '16px', color: '#cbd5e1' }}
+                  formatter={(value) => <span style={{ color: '#cbd5e1', fontWeight: 500 }}>{value}</span>}
+                />
+
+                {/* Doses de Vacina Aplicadas Superpostas no Mesmo Gráfico */}
+                {showVaccines && (
+                  <Area 
+                    yAxisId="doses"
+                    type="monotone" 
+                    dataKey="dosesAcumuladas" 
+                    name="Doses Aplicadas no SUS (Eixo Direito)" 
+                    stroke="#10b981" 
+                    fill="#064e3b" 
+                    fillOpacity={0.2} 
+                    strokeWidth={2}
+                  />
+                )}
+
+                {/* Casos Notificados Semanais ou Acumulados */}
+                {metricView === 'novos' ? (
+                  <>
+                    <Bar 
+                      yAxisId="casos"
+                      dataKey="casosNovos" 
+                      name="Casos Notificados (Semana)" 
+                      fill="#0891b2" 
+                      radius={[3, 3, 0, 0]} 
+                    />
+                    <Line 
+                      yAxisId="casos"
+                      type="monotone" 
+                      dataKey="mediaMovel7d" 
+                      name="Média Móvel (3 Semanas / 21 Dias)" 
+                      stroke="#f59e0b" 
+                      strokeWidth={2} 
+                      dot={false} 
+                    />
+                  </>
+                ) : (
+                  <Area 
                     yAxisId="casos"
                     type="monotone" 
-                    dataKey="mediaMovel7d" 
-                    name="Média Móvel (3 Semanas / 21 Dias)" 
-                    stroke="#f59e0b" 
-                    strokeWidth={2} 
-                    dot={false} 
+                    dataKey="casosAcumulados" 
+                    name="Casos Acumulados" 
+                    stroke="#6366f1" 
+                    fill="#312e81" 
+                    fillOpacity={0.35} 
                   />
-                </>
-              ) : (
-                <Area 
-                  yAxisId="casos"
-                  type="monotone" 
-                  dataKey="casosAcumulados" 
-                  name="Casos Acumulados" 
-                  stroke="#6366f1" 
-                  fill="#312e81" 
-                  fillOpacity={0.35} 
-                />
-              )}
+                )}
 
-              {/* Hitos Vacinais Filtrados com Base na Aplicabilidade Territorial e Alturas Escalonadas */}
-              {showMilestones && applicableMilestones.map((m, idx) => {
-                const colors: Record<string, string> = {
-                  m1: '#38bdf8',
-                  m2: '#34d399',
-                  m3: '#60a5fa',
-                  m4: '#c084fc',
-                  m7: '#a78bfa',
-                  m8: '#38bdf8',
-                  m5: '#fb923c',
-                  m9: '#e879f9',
-                  m6: '#f43f5e'
-                };
-                const color = colors[m.id] || '#94a3b8';
-                const dy = idx % 3 === 0 ? -8 : (idx % 3 === 1 ? -24 : -40);
-                const isNearRight = idx >= applicableMilestones.length - 2;
-                return (
-                  <ReferenceLine 
-                    key={m.id}
-                    yAxisId="casos"
-                    x={m.semana} 
-                    stroke={color} 
-                    strokeDasharray="3 3" 
-                    label={{ 
-                      value: m.tituloCurto || m.titulo, 
-                      position: 'top', 
-                      dy: dy,
-                      fill: color, 
-                      fontSize: 10,
-                      fontWeight: 600,
-                      textAnchor: isNearRight ? 'end' : 'middle'
-                    }} 
-                  />
-                );
-              })}
-            </ComposedChart>
-          )}
-        </ResponsiveContainer>
+                {/* Hitos Vacinais Filtrados com Base na Aplicabilidade Territorial e Alturas Escalonadas */}
+                {showMilestones && applicableMilestones.map((m, idx) => {
+                  const color = m.cor || '#94a3b8';
+                  const symbol = m.simbolo || '•';
+                  const isNearRight = idx >= applicableMilestones.length - 2;
+                  const labelValue = hasMilestoneOverlap ? symbol : (m.tituloCurto || m.titulo);
+                  const dy = hasMilestoneOverlap 
+                    ? (idx % 2 === 0 ? -6 : -18)
+                    : (idx % 3 === 0 ? -8 : (idx % 3 === 1 ? -24 : -40));
+
+                  return (
+                    <ReferenceLine 
+                      key={m.id}
+                      yAxisId="casos"
+                      x={m.semana} 
+                      stroke={color} 
+                      strokeDasharray="3 3" 
+                      label={{ 
+                        value: labelValue, 
+                        position: 'top', 
+                        dy: dy,
+                        fill: color, 
+                        fontSize: hasMilestoneOverlap ? (isMobile ? 12 : 13) : 10,
+                        fontWeight: hasMilestoneOverlap ? 700 : 600,
+                        textAnchor: isNearRight && !hasMilestoneOverlap ? 'end' : 'middle'
+                      }} 
+                    />
+                  );
+                })}
+              </ComposedChart>
+            )}
+          </ResponsiveContainer>
+        </div>
       </div>
 
       {/* Rodapé Informativo das Tendências (Posicionado Acima dos Hitos) */}
@@ -892,22 +936,39 @@ export const EpidemicCurveChart: FC<EpidemicCurveChartProps> = ({
           {isMilestonesExpanded && (
             <div className="p-3.5 pt-0 border-t border-slate-900">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2.5 pt-3">
-                {applicableMilestones.map((m) => (
-                  <div key={m.id} className="p-2.5 rounded-lg bg-slate-900 border border-slate-800 space-y-1">
-                    <div className="flex items-center justify-between gap-1 text-[11px]">
-                      <strong className="text-cyan-300 font-mono">{m.semana}</strong>
-                      <span className={`px-1.5 py-0.2 rounded text-[10px] font-mono ${
-                        m.categoria === 'vacina' ? 'bg-emerald-950 text-emerald-400 border border-emerald-800' :
-                        m.categoria === 'clinica' ? 'bg-rose-950 text-rose-400 border border-rose-800' :
-                        'bg-sky-950 text-sky-400 border border-sky-800'
-                      }`}>
-                        {m.categoria}
-                      </span>
+                {applicableMilestones.map((m) => {
+                  const color = m.cor || '#94a3b8';
+                  const symbol = m.simbolo || '•';
+                  return (
+                    <div key={m.id} className="p-2.5 rounded-lg bg-slate-900 border border-slate-800 space-y-1.5">
+                      <div className="flex items-center justify-between gap-1 text-[11px]">
+                        <div className="flex items-center gap-1.5">
+                          <span 
+                            className="w-5 h-5 rounded-full flex items-center justify-center font-bold text-xs shrink-0 shadow-sm"
+                            style={{
+                              backgroundColor: `${color}25`,
+                              color: color,
+                              border: `1.5px solid ${color}`
+                            }}
+                            title={`Símbolo no gráfico: ${symbol}`}
+                          >
+                            {symbol}
+                          </span>
+                          <strong className="text-cyan-300 font-mono">{m.semana}</strong>
+                        </div>
+                        <span className={`px-1.5 py-0.2 rounded text-[10px] font-mono ${
+                          m.categoria === 'vacina' ? 'bg-emerald-950 text-emerald-400 border border-emerald-800' :
+                          m.categoria === 'clinica' ? 'bg-rose-950 text-rose-400 border border-rose-800' :
+                          'bg-sky-950 text-sky-400 border border-sky-800'
+                        }`}>
+                          {m.categoria}
+                        </span>
+                      </div>
+                      <h5 className="font-bold text-white text-[11px] leading-tight">{m.titulo}</h5>
+                      <p className="text-[11px] text-slate-400 leading-snug">{m.descricao}</p>
                     </div>
-                    <h5 className="font-bold text-white text-[11px] leading-tight">{m.titulo}</h5>
-                    <p className="text-[11px] text-slate-400 leading-snug">{m.descricao}</p>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
           )}

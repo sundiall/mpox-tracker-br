@@ -256,17 +256,17 @@ export const VaccinesMilestonesView: FC<VaccinesMilestonesViewProps> = ({
 
         <div className="h-80 w-full">
           <ResponsiveContainer width="100%" height="100%">
-            <ComposedChart data={vaccineProgressTimeData} margin={{ top: 25, right: isMobile ? 12 : 20, left: isMobile ? -20 : -5, bottom: 28 }}>
+            <ComposedChart data={vaccineProgressTimeData} margin={{ top: 25, right: isMobile ? 8 : 20, left: isMobile ? -16 : -5, bottom: 25 }}>
               <CartesianGrid strokeDasharray="3 3" stroke="#1e293b" vertical={false} />
               <XAxis 
                 dataKey="periodoRotulo" 
                 stroke="#64748b" 
                 tickLine={false}
                 interval={isMobile ? 7 : 5}
-                height={48}
-                tick={{ angle: -30, textAnchor: 'end', fontSize: 10, fill: '#64748b', dy: 4, dx: -3 }}
+                height={isMobile ? 38 : 48}
+                tick={{ angle: -30, textAnchor: 'end', fontSize: isMobile ? 8 : 10, fill: '#64748b', dy: 4, dx: -3 }}
               />
-              <YAxis stroke="#64748b" fontSize={11} tickLine={false} />
+              <YAxis stroke="#64748b" fontSize={isMobile ? 8 : 10} width={isMobile ? 28 : 45} tickLine={false} />
               <Tooltip content={customTooltip} />
               <Legend 
                 wrapperStyle={{ fontSize: '11px', paddingTop: '10px', color: '#cbd5e1' }}
