@@ -97,6 +97,121 @@ export const vaccineMilestones: VaccineMilestone[] = [
     detalhes: 'Doses mantidas a -20°C nos centros de distribuição nacional para despacho sob demanda em caso de novos clusters ou surtos localizados.',
     fonteOficial: 'Coordenação Geral de Vigilância em Saúde - SVSA/MS',
     status: 'em_andamento'
+  },
+  {
+    id: 'milestone-8',
+    data: '2026-11-17',
+    titulo: 'Liberação Ampla para Usuários de PrEP e Trabalhadores Expostos (RJ e SP)',
+    tipo: 'distribuicao',
+    quantidadeDoses: 5000,
+    publicoAlvo: 'Usuários de PrEP (com laudo/receita até 6 meses), PVHA com CD4 < 200 e profissionais expostos',
+    estadosEnvolvidos: ['RJ', 'SP'],
+    detalhes: 'A Prefeitura do Rio de Janeiro (SMS-Rio) liberou formalmente a vacinação contra Mpox para todos os usuários em uso de PrEP que nunca tenham tomado a vacina, além de trabalhadores de saúde e laboratório com risco ocupacional. Aplicação concentrada nos Super Centros Cariocas (Botafogo, Shopping Nova América, ParkShopping Campo Grande), CEVAA Dr. Álvaro Aguiar e CRIE/Fiocruz.',
+    fonteOficial: 'Secretaria Municipal de Saúde do Rio de Janeiro (SMS-Rio) / Ministério da Saúde',
+    urlFonte: 'https://prefeitura.rio/saude',
+    status: 'concluido'
   }
 ];
+
+export interface PopulationReleaseCriteria {
+  id: string;
+  populacao: string;
+  categoria: 'pre_exposicao' | 'pos_exposicao' | 'ocupacional';
+  dataLiberacao: string;
+  marcoTemporal: string;
+  criteriosElegibilidade: string;
+  documentosExigidos: string[];
+  estadosComDisponibilidade: string[];
+  esquemaVacinal: string;
+  locaisAtendimento: string;
+  statusLiberacao: 'liberado_ativo' | 'estoque_limitado' | 'sob_demanda';
+  detalhesAdicionais?: string;
+}
+
+export const vaccinePopulationsRelease: PopulationReleaseCriteria[] = [
+  {
+    id: 'pop-prep',
+    populacao: 'Usuários de Profilaxia Pré-Exposição ao HIV (PrEP)',
+    categoria: 'pre_exposicao',
+    dataLiberacao: '2023-08-18 (Pioneiro RJ/SP) • 2026-11-17 (Ampliação Ampla RJ/SP)',
+    marcoTemporal: 'Liberado com ampliação ampla no Rio de Janeiro e São Paulo',
+    criteriosElegibilidade: 'Pessoas de 18 a 49 anos em uso regular de PrEP que nunca receberam nenhuma dose da vacina de Mpox (MVA-BN / Jynneos).',
+    documentosExigidos: [
+      'Documento de identificação oficial com foto e CPF',
+      'Receita médica válida ou laudo comprobatório de uso de PrEP emitido nos últimos 6 meses',
+      'Cartão do SUS e caderneta de vacinação (se houver)'
+    ],
+    estadosComDisponibilidade: ['RJ', 'SP', 'DF'],
+    esquemaVacinal: '2 doses (0,1 mL via intradérmica ou 0,5 mL subcutânea) com intervalo de 28 dias.',
+    locaisAtendimento: 'RJ: Super Centros Cariocas de Vacinação (Botafogo, Shopping Nova América, ParkShopping Campo Grande), CEVAA Dr. Álvaro Aguiar e CRIE/Fiocruz. SP: Serviços de Atenção Especializada (SAE) e CRIEs.',
+    statusLiberacao: 'liberado_ativo',
+    detalhesAdicionais: 'A vacinação ocorre enquanto durar o estoque de doses remanescentes do Ministério da Saúde.'
+  },
+  {
+    id: 'pop-pvha',
+    populacao: 'Pessoas Vivendo com HIV/Aids (PVHA com CD4 < 200 céls/mm³)',
+    categoria: 'pre_exposicao',
+    dataLiberacao: '2023-03-13 (Campanha Nacional PNI)',
+    marcoTemporal: 'Grupo prioritário nº 1 permanente no SUS',
+    criteriosElegibilidade: 'Pessoas vivendo com HIV com idade igual ou superior a 18 anos e contagem de linfócitos T-CD4 inferior a 200 céls/mm³ (com prioridade clínica para CD4 < 100 céls/mm³).',
+    documentosExigidos: [
+      'Documento de identificação oficial com foto e CPF',
+      'Exame laboratorial comprobatório de contagem de CD4 recente (últimos 6 a 12 meses)',
+      'Relatório médico ou comprovante de acompanhamento no SAE/CTA'
+    ],
+    estadosComDisponibilidade: ['Nacional', 'SP', 'RJ', 'MG', 'BA', 'DF', 'CE', 'PR', 'RS'],
+    esquemaVacinal: '2 doses de 0,5 mL via subcutânea com intervalo de 28 dias (via subcutânea prioritária em imunodeprimidos graves).',
+    locaisAtendimento: 'Centros de Referência para Imunobiológicos Especiais (CRIE) e Serviços de Atendimento Especializado (SAE) de todo o país.',
+    statusLiberacao: 'liberado_ativo'
+  },
+  {
+    id: 'pop-pos-exposicao',
+    populacao: 'Contatos Íntimos / Comunicantes de Casos (Profilaxia Pós-Exposição)',
+    categoria: 'pos_exposicao',
+    dataLiberacao: '2023-03-13 (Campanha Nacional PNI)',
+    marcoTemporal: 'Vigilância ativa pós-contato',
+    criteriosElegibilidade: 'Pessoas de 18 a 49 anos que tiveram contato físico íntimo, contato sexual direto ou exposição a fluidos corporais de pessoa com caso confirmado ou provável de Mpox nos últimos 14 dias.',
+    documentosExigidos: [
+      'Encaminhamento da vigilância epidemiológica municipal ou relatório de investigação de contato',
+      'Documento de identificação com foto'
+    ],
+    estadosComDisponibilidade: ['Nacional'],
+    esquemaVacinal: '2 doses com intervalo de 28 dias. A 1ª dose deve ser administrada idealmente em até 4 dias após o contato para prevenir a infecção, ou em até 14 dias para reduzir a gravidade.',
+    locaisAtendimento: 'Unidades de vigilância municipal e CRIEs indicados pelo Centro de Informações Estratégicas em Vigilância em Saúde (CIEVS).',
+    statusLiberacao: 'liberado_ativo'
+  },
+  {
+    id: 'pop-laboratorio',
+    populacao: 'Profissionais de Laboratórios de Referência (Ortopoxvírus)',
+    categoria: 'ocupacional',
+    dataLiberacao: '2022-10-04 (1º Lote OPAS)',
+    marcoTemporal: 'Primeiro grupo liberado no Brasil',
+    criteriosElegibilidade: 'Técnicos e pesquisadores de laboratórios de biossegurança (NB-3 ou equivalente) que manipulam diretamente culturas ativas de vírus ou espécimes clínicos de Mpox.',
+    documentosExigidos: [
+      'Declaração de vínculo institucional e declaração de atividade com o patógeno emitida pela chefia do laboratório',
+      'Documento de identificação'
+    ],
+    estadosComDisponibilidade: ['Nacional'],
+    esquemaVacinal: '2 doses de 0,5 mL (ou 0,1 mL ID) com intervalo de 28 dias.',
+    locaisAtendimento: 'CRIEs regionais e laboratórios centrais (LACENs, Fiocruz, Instituto Adolfo Lutz, Instituto Evandro Chagas).',
+    statusLiberacao: 'liberado_ativo'
+  },
+  {
+    id: 'pop-trabalhadores-saude',
+    populacao: 'Trabalhadores de Saúde e Serviços Especializados Expostos',
+    categoria: 'ocupacional',
+    dataLiberacao: '2026-11-17 (Remessa Estratégica RJ/SP)',
+    marcoTemporal: 'Liberação ampliada recente',
+    criteriosElegibilidade: 'Profissionais de saúde atuando na linha de frente de atendimento, coleta de swab de lesões suspeitas ou serviços de isolamento em áreas de alta transmissão.',
+    documentosExigidos: [
+      'Comprovante de vínculo empregatício em serviço de saúde de referência (SAE/CTA/CRIE/Hospital de Doenças Infecciosas)',
+      'Documento profissional com foto'
+    ],
+    estadosComDisponibilidade: ['RJ', 'SP'],
+    esquemaVacinal: '2 doses com intervalo de 28 dias.',
+    locaisAtendimento: 'Super Centros de Vacinação (RJ) e Serviços Especializados (SP).',
+    statusLiberacao: 'liberado_ativo'
+  }
+];
+
 

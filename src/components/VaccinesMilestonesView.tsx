@@ -8,7 +8,12 @@ import {
   ExternalLink,
   Filter,
   CheckCircle2,
-  TrendingUp
+  TrendingUp,
+  Users,
+  FileText,
+  Clock,
+  MapPin,
+  Sparkles
 } from 'lucide-react';
 import { 
   ResponsiveContainer, 
@@ -21,7 +26,7 @@ import {
   Legend, 
   CartesianGrid 
 } from 'recharts';
-import { vaccineMilestones } from '../data/vaccines';
+import { vaccineMilestones, vaccinePopulationsRelease } from '../data/vaccines';
 import type { VaccineMilestone } from '../data/vaccines';
 import { vaccineProgressTimeData } from '../data/time_series';
 
@@ -90,6 +95,121 @@ export const VaccinesMilestonesView: FC<VaccinesMilestonesViewProps> = ({
           Acompanhamento histórico das remessas adquiridas pelo Ministério da Saúde via Fundo Rotatório da OPAS,
           regras de priorização clínica e critérios de aplicação de 1/5 da dose (intradérmica) para usuários de PrEP.
         </p>
+      </div>
+
+      {/* Alerta de Destaque: Liberação Recente para Usuários de PrEP no Rio de Janeiro e SP */}
+      <div className="bg-gradient-to-r from-emerald-950/80 via-slate-900 to-cyan-950/80 border border-emerald-500/40 rounded-xl p-4.5 space-y-2">
+        <div className="flex items-center gap-2">
+          <span className="px-2 py-0.5 rounded text-[10px] font-bold font-mono bg-emerald-500 text-slate-950">
+            LIBERAÇÃO RECENTE (17/11/2026)
+          </span>
+          <span className="text-xs font-semibold text-emerald-300 flex items-center gap-1">
+            <Sparkles className="w-3.5 h-3.5 text-emerald-400" />
+            Ampliação para Usuários de PrEP e Trabalhadores de Saúde no Rio de Janeiro
+          </span>
+        </div>
+        <p className="text-xs text-slate-200 leading-relaxed">
+          A Prefeitura do Rio de Janeiro (SMS-Rio) iniciou a vacinação ampliada contra a Mpox para <strong>todos os usuários em Profilaxia Pré-Exposição (PrEP)</strong> com laudo ou receita médica válida de até 6 meses que nunca tenham se vacinado, além de <strong>trabalhadores expostos de saúde e laboratório</strong>. A aplicação ocorre em <strong>5 polos estratégicos</strong> (Super Centros de Vacinação Botafogo, Shopping Nova América e ParkShopping Campo Grande, CEVAA Álvaro Aguiar e CRIE/Fiocruz).
+        </p>
+      </div>
+
+      {/* Seção Estruturada: Cronograma de Liberação por População & Critérios de Elegibilidade */}
+      <div className="bg-slate-900 border border-slate-800 rounded-xl p-5 space-y-4">
+        <div className="border-b border-slate-800/80 pb-3 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div>
+            <h3 className="text-base font-bold text-white flex items-center gap-2">
+              <Users className="w-4 h-4 text-cyan-400" />
+              Cronograma de Liberação por População & Critérios no SUS
+            </h3>
+            <p className="text-xs text-slate-400 mt-0.5">
+              Datas oficiais em que cada público-alvo foi contemplado, documentação necessária e via de administração
+            </p>
+          </div>
+          <span className="text-[11px] font-mono text-cyan-400 bg-cyan-950/80 px-2.5 py-1 rounded border border-cyan-800/60 self-start sm:self-auto">
+            {vaccinePopulationsRelease.length} Populações Contempladas
+          </span>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {vaccinePopulationsRelease.map((pop) => (
+            <div 
+              key={pop.id} 
+              className={`p-4 rounded-xl border transition-all flex flex-col justify-between space-y-3 ${
+                pop.id === 'pop-prep' 
+                  ? 'bg-slate-950/90 border-cyan-500/50 shadow-lg shadow-cyan-950/30' 
+                  : 'bg-slate-950/70 border-slate-800 hover:border-slate-700'
+              }`}
+            >
+              <div className="space-y-2">
+                <div className="flex flex-wrap items-center justify-between gap-1.5">
+                  <span className={`px-2 py-0.5 rounded text-[10px] font-mono font-bold ${
+                    pop.categoria === 'pre_exposicao' ? 'bg-cyan-950 text-cyan-300 border border-cyan-800' :
+                    pop.categoria === 'pos_exposicao' ? 'bg-amber-950 text-amber-300 border border-amber-800' :
+                    'bg-purple-950 text-purple-300 border border-purple-800'
+                  }`}>
+                    {pop.categoria === 'pre_exposicao' ? 'Pré-Exposição' :
+                     pop.categoria === 'pos_exposicao' ? 'Pós-Exposição (14d)' : 'Ocupacional'}
+                  </span>
+                  <span className="text-[10px] font-mono text-emerald-400 bg-emerald-950/80 px-2 py-0.5 rounded border border-emerald-800/60">
+                    {pop.statusLiberacao === 'liberado_ativo' ? 'Liberado / Ativo' : 'Sob Demanda'}
+                  </span>
+                </div>
+
+                <h4 className="text-sm font-bold text-white leading-snug">
+                  {pop.populacao}
+                </h4>
+
+                <div className="p-2 rounded bg-slate-900 border border-slate-800/80 space-y-1 text-xs">
+                  <div className="flex items-center gap-1.5 text-cyan-300 font-medium">
+                    <Clock className="w-3.5 h-3.5 text-cyan-400 shrink-0" />
+                    <span>Liberada em: <strong>{pop.dataLiberacao}</strong></span>
+                  </div>
+                  <p className="text-[11px] text-slate-400">
+                    {pop.marcoTemporal}
+                  </p>
+                </div>
+
+                <div className="space-y-1 text-xs">
+                  <span className="text-slate-400 font-semibold flex items-center gap-1">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                    Critérios de Elegibilidade:
+                  </span>
+                  <p className="text-[11px] text-slate-300 leading-relaxed pl-4">
+                    {pop.criteriosElegibilidade}
+                  </p>
+                </div>
+
+                <div className="space-y-1 text-xs">
+                  <span className="text-slate-400 font-semibold flex items-center gap-1">
+                    <FileText className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+                    Documentos Obrigatórios:
+                  </span>
+                  <ul className="list-disc list-inside text-[11px] text-slate-300 space-y-0.5 pl-1">
+                    {pop.documentosExigidos.map((doc, dIdx) => (
+                      <li key={dIdx} className="leading-snug">{doc}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              <div className="pt-2.5 border-t border-slate-800/80 space-y-1.5 text-[11px]">
+                <div className="flex items-start gap-1 text-slate-400">
+                  <Syringe className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />
+                  <span><strong>Esquema:</strong> {pop.esquemaVacinal}</span>
+                </div>
+                <div className="flex items-start gap-1 text-slate-400">
+                  <MapPin className="w-3.5 h-3.5 text-cyan-400 shrink-0 mt-0.5" />
+                  <span><strong>Locais:</strong> {pop.locaisAtendimento}</span>
+                </div>
+                {pop.detalhesAdicionais && (
+                  <p className="text-[10px] text-amber-300/90 italic pt-0.5">
+                    * {pop.detalhesAdicionais}
+                  </p>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* Gráfico Temporal de Evolução da Vacinação */}

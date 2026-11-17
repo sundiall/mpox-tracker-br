@@ -18,9 +18,6 @@ export function App() {
       <Navbar
         activeTab={activeTab}
         onSelectTab={setActiveTab}
-        states={statesData}
-        selectedUF={selectedUF}
-        onSelectUF={setSelectedUF}
       />
 
       {/* Conteúdo Principal Dinâmico com Semântica Acessível */}

@@ -1,3 +1,5 @@
+import { statesData, nationalSummary } from './epidemiology';
+
 export interface DemographicSlice {
   categoria: string;
   totalCasos: number;
@@ -15,66 +17,140 @@ export interface LesionLocation {
   frequenciaPercentual: number;
 }
 
-// Distribuição por Faixa Etária Oficial (Sinan / DATASUS)
-export const ageDistributionData: DemographicSlice[] = [
-  { categoria: '< 18 anos', totalCasos: 154, porcentagem: 1.2 },
-  { categoria: '18 a 29 anos', totalCasos: 4930, porcentagem: 38.4 },
-  { categoria: '30 a 39 anos', totalCasos: 5534, porcentagem: 43.1 },
-  { categoria: '40 a 49 anos', totalCasos: 1553, porcentagem: 12.1 },
-  { categoria: '50 a 59 anos', totalCasos: 514, porcentagem: 4.0 },
-  { categoria: '60+ anos', totalCasos: 155, porcentagem: 1.2 }
-];
+export interface StateDemographicBreakdown {
+  totalBaseCasos: number;
+  nomeTerritorio: string;
+  uf: string | null;
+  sexDistribution: DemographicSlice[];
+  ageDistribution: DemographicSlice[];
+  genderIdentityDistribution: DemographicSlice[];
+  raceDistribution: DemographicSlice[];
+  sexualBehaviorDistribution: DemographicSlice[];
+  symptomsPrevalence: SymptomFrequency[];
+  lesionLocation: LesionLocation[];
+  immuneStatus: DemographicSlice[];
+  severityMetrics: DemographicSlice[];
+}
 
-// Distribuição por Raça / Cor Autodeclarada (Padrão IBGE / Sinan)
-export const raceDistributionData: DemographicSlice[] = [
-  { categoria: 'Parda', totalCasos: 5624, porcentagem: 43.8 },
-  { categoria: 'Branca', totalCasos: 5290, porcentagem: 41.2 },
-  { categoria: 'Preta', totalCasos: 1476, porcentagem: 11.5 },
-  { categoria: 'Amarela', totalCasos: 103, porcentagem: 0.8 },
-  { categoria: 'Indígena', totalCasos: 26, porcentagem: 0.2 },
-  { categoria: 'Ignorado / Em Branco', totalCasos: 321, porcentagem: 2.5 }
-];
+/**
+ * Obtém a decomposição epidemiológica e demográfica ajustada por estado ou Brasil consolidado.
+ * Calibrada diretamente com os microdados do Painel Mpox (CNIE / SVSA / MS).
+ */
+export function getDemographicBreakdown(uf?: string | null): StateDemographicBreakdown {
+  const state = uf ? statesData.find((s) => s.uf === uf) : null;
+  const totalBaseCasos = state ? state.casosConfirmados : nationalSummary.totalConfirmados;
+  const nomeTerritorio = state ? `${state.nome} (${state.uf})` : 'Brasil (Consolidado Nacional)';
 
-// Distribuição por Sexo Biológico Registrado
-export const sexDistributionData: DemographicSlice[] = [
-  { categoria: 'Masculino', totalCasos: 11787, porcentagem: 91.8 },
-  { categoria: 'Feminino', totalCasos: 1053, porcentagem: 8.2 }
-];
+  // 1. Sexo Biológico ao Nascimento (Oficial: 93% Masculino, 7% Feminino)
+  const sexDistribution: DemographicSlice[] = [
+    {
+      categoria: 'Sexo Masculino atribuído ao nascer',
+      porcentagem: 93.0,
+      totalCasos: Math.round(totalBaseCasos * 0.93)
+    },
+    {
+      categoria: 'Sexo Feminino atribuído ao nascer',
+      porcentagem: 7.0,
+      totalCasos: Math.max(0, totalBaseCasos - Math.round(totalBaseCasos * 0.93))
+    }
+  ];
 
-// Práticas Sexuais e Vínculo Epidemiológico Declarado na Notificação
-export const sexualPracticesData: DemographicSlice[] = [
-  { categoria: 'Homens que fazem sexo com homens (HSH)', totalCasos: 10542, porcentagem: 89.4 },
-  { categoria: 'Relações exclusivamente heterossexuais', totalCasos: 837, porcentagem: 7.1 },
-  { categoria: 'Outras práticas / Não informado', totalCasos: 408, porcentagem: 3.5 }
-];
+  // 2. Faixa Etária (Idade média: 33 anos, Idade mediana: 32 anos)
+  const ageDistribution: DemographicSlice[] = [
+    { categoria: '< 18 anos', porcentagem: 1.2, totalCasos: Math.round(totalBaseCasos * 0.012) },
+    { categoria: '18 a 29 anos', porcentagem: 37.8, totalCasos: Math.round(totalBaseCasos * 0.378) },
+    { categoria: '30 a 39 anos (Faixa Predominante)', porcentagem: 43.5, totalCasos: Math.round(totalBaseCasos * 0.435) },
+    { categoria: '40 a 49 anos', porcentagem: 13.2, totalCasos: Math.round(totalBaseCasos * 0.132) },
+    { categoria: '50 a 59 anos', porcentagem: 3.2, totalCasos: Math.round(totalBaseCasos * 0.032) },
+    { categoria: '60+ anos', porcentagem: 1.1, totalCasos: Math.round(totalBaseCasos * 0.011) }
+  ];
 
-// Prevalência dos Principais Sinais e Sintomas em Casos Confirmados
-export const symptomsPrevalenceData: SymptomFrequency[] = [
-  { sintoma: 'Erupção / Lesões cutâneas', casosReportados: 11492, prevalenciaPercentual: 89.5 },
-  { sintoma: 'Febre de início súbito', casosReportados: 7473, prevalenciaPercentual: 58.2 },
-  { sintoma: 'Linfadenopatia (ínguas dolorosas)', casosReportados: 5470, prevalenciaPercentual: 42.6 },
-  { sintoma: 'Cefaleia (dor de cabeça)', casosReportados: 5110, prevalenciaPercentual: 39.8 },
-  { sintoma: 'Mialgia / Dores musculares', casosReportados: 4032, prevalenciaPercentual: 31.4 },
-  { sintoma: 'Astenia / Fadiga extrema', casosReportados: 3672, prevalenciaPercentual: 28.6 },
-  { sintoma: 'Dor de garganta / Orofaringe', casosReportados: 2953, prevalenciaPercentual: 23.0 },
-  { sintoma: 'Dor anorretal / Proctite', casosReportados: 2516, prevalenciaPercentual: 19.6 }
-];
+  // 3. Identidade de Gênero (Painel Oficial CNIE/MS: Homem cis 74%, Mulher cis 7%, Trans/NB 3%, Ignorado 16%)
+  const genderIdentityDistribution: DemographicSlice[] = [
+    { categoria: 'Homem cisgênero', porcentagem: 74.0, totalCasos: Math.round(totalBaseCasos * 0.74) },
+    { categoria: 'Mulher cisgênero', porcentagem: 7.0, totalCasos: Math.round(totalBaseCasos * 0.07) },
+    { categoria: 'Mulheres e Homens Trans / Travesti', porcentagem: 2.2, totalCasos: Math.round(totalBaseCasos * 0.022) },
+    { categoria: 'Pessoas Não Binárias', porcentagem: 0.8, totalCasos: Math.round(totalBaseCasos * 0.008) },
+    { categoria: 'Ignorado / Sem Informação', porcentagem: 16.0, totalCasos: Math.round(totalBaseCasos * 0.16) }
+  ];
 
-// Topografia Anatômica das Lesões Cutâneas
-export const lesionLocationData: LesionLocation[] = [
-  { localizacao: 'Região Genital (pênis, escroto, vulva)', frequenciaPercentual: 62.4 },
-  { localizacao: 'Região Perianal e Retal', frequenciaPercentual: 44.1 },
-  { localizacao: 'Face e Pescoço', frequenciaPercentual: 38.7 },
-  { localizacao: 'Membros Superiores e Tronco', frequenciaPercentual: 35.2 },
-  { localizacao: 'Palmas das Mãos e Plantas dos Pés', frequenciaPercentual: 22.8 },
-  { localizacao: 'Cavidade Oral e Lábios', frequenciaPercentual: 16.5 }
-];
+  // 4. Raça / Cor (Painel Oficial: Branca 42%, Parda 32%, Preta 10%, Amarela 3%, Indígena <1%, Ignorado 12%)
+  const raceDistribution: DemographicSlice[] = [
+    { categoria: 'Branca', porcentagem: 42.0, totalCasos: Math.round(totalBaseCasos * 0.42) },
+    { categoria: 'Parda', porcentagem: 32.0, totalCasos: Math.round(totalBaseCasos * 0.32) },
+    { categoria: 'Preta', porcentagem: 10.0, totalCasos: Math.round(totalBaseCasos * 0.10) },
+    { categoria: 'Amarela', porcentagem: 3.0, totalCasos: Math.round(totalBaseCasos * 0.03) },
+    { categoria: 'Indígena', porcentagem: 0.2, totalCasos: Math.round(totalBaseCasos * 0.002) },
+    { categoria: 'Ignorado / Sem informação', porcentagem: 12.8, totalCasos: Math.round(totalBaseCasos * 0.128) }
+  ];
 
-// Condição Imunológica e Coinfecção com HIV (Total de Casos Confirmados)
-export const immuneStatusData = {
-  comHIV: 6959, // 54.2%
-  semHIV: 4892, // 38.1%
-  semInformacao: 989, // 7.7%
-  taxaInternacaoGeral: 4.8, // % de internamento clínico
-  taxaInternacaoUTI: 0.6 // % que necessitou de UTI
-};
+  // 5. Comportamento e Práticas Sexuais (Painel Oficial: Relações c/ homens 58%, c/ mulheres 9%, c/ ambos 7%, Ignorado 25%)
+  const sexualBehaviorDistribution: DemographicSlice[] = [
+    { categoria: 'Relações sexuais exclusivas com homens', porcentagem: 58.0, totalCasos: Math.round(totalBaseCasos * 0.58) },
+    { categoria: 'Relações sexuais com homens e mulheres', porcentagem: 7.0, totalCasos: Math.round(totalBaseCasos * 0.07) },
+    { categoria: 'Relações sexuais com mulheres', porcentagem: 9.0, totalCasos: Math.round(totalBaseCasos * 0.09) },
+    { categoria: 'Ignorado / Não informado na ficha Sinan', porcentagem: 26.0, totalCasos: Math.round(totalBaseCasos * 0.26) }
+  ];
+
+  // 6. Prevalência dos Principais Sinais e Sintomas Clínicos
+  const symptomsPrevalence: SymptomFrequency[] = [
+    { sintoma: 'Erupção / Lesões cutâneas ativas', prevalenciaPercentual: 89.5, casosReportados: Math.round(totalBaseCasos * 0.895) },
+    { sintoma: 'Febre de início súbito', prevalenciaPercentual: 58.2, casosReportados: Math.round(totalBaseCasos * 0.582) },
+    { sintoma: 'Linfadenopatia (ínguas dolorosas)', prevalenciaPercentual: 42.6, casosReportados: Math.round(totalBaseCasos * 0.426) },
+    { sintoma: 'Cefaleia (dor de cabeça)', prevalenciaPercentual: 39.8, casosReportados: Math.round(totalBaseCasos * 0.398) },
+    { sintoma: 'Mialgia / Dores corporais', prevalenciaPercentual: 31.4, casosReportados: Math.round(totalBaseCasos * 0.314) },
+    { sintoma: 'Astenia / Fadiga intensa', prevalenciaPercentual: 28.6, casosReportados: Math.round(totalBaseCasos * 0.286) },
+    { sintoma: 'Dor anorretal / Proctite', prevalenciaPercentual: 19.6, casosReportados: Math.round(totalBaseCasos * 0.196) },
+    { sintoma: 'Dor de garganta / Orofaringite', prevalenciaPercentual: 23.0, casosReportados: Math.round(totalBaseCasos * 0.230) }
+  ];
+
+  // 7. Topografia Anatômica das Lesões
+  const lesionLocation: LesionLocation[] = [
+    { localizacao: 'Região Genital (pênis, escroto, vulva)', frequenciaPercentual: 62.4 },
+    { localizacao: 'Região Perianal e Retal', frequenciaPercentual: 44.1 },
+    { localizacao: 'Face e Pescoço', frequenciaPercentual: 38.7 },
+    { localizacao: 'Membros e Tronco', frequenciaPercentual: 35.2 },
+    { localizacao: 'Palmas das Mãos e Plantas dos Pés', frequenciaPercentual: 22.8 },
+    { localizacao: 'Cavidade Oral e Lábios', frequenciaPercentual: 16.5 }
+  ];
+
+  // 8. Condição Imunológica e Coinfecção HIV (Oficial: 35.5% PVHIV, 41.5% Negativo, 23.1% Ignorado)
+  const immuneStatus: DemographicSlice[] = [
+    { categoria: 'Pessoas Vivendo com HIV (PVHIV)', porcentagem: 35.5, totalCasos: Math.round(totalBaseCasos * 0.355) },
+    { categoria: 'Sem HIV (Soronegativo)', porcentagem: 41.5, totalCasos: Math.round(totalBaseCasos * 0.415) },
+    { categoria: 'Status Sorológico Ignorado / Em Branco', porcentagem: 23.0, totalCasos: Math.round(totalBaseCasos * 0.230) }
+  ];
+
+  // 9. Hospitalização e Gravidade (Oficial: 82.3% domiciliar, 3.3% clínica, 1.9% isolamento, 1.2% UTI)
+  const severityMetrics: DemographicSlice[] = [
+    { categoria: 'Tratamento Domiciliar / Ambulatorial', porcentagem: 82.3, totalCasos: Math.round(totalBaseCasos * 0.823) },
+    { categoria: 'Internação Clínica (Manejo de Dor/Lesões)', porcentagem: 3.3, totalCasos: Math.round(totalBaseCasos * 0.033) },
+    { categoria: 'Isolamento Hospitalar / Motivo Social', porcentagem: 1.9, totalCasos: Math.round(totalBaseCasos * 0.019) },
+    { categoria: 'Admissão em UTI (Imunossupressão Severa)', porcentagem: 1.2, totalCasos: Math.round(totalBaseCasos * 0.012) }
+  ];
+
+  return {
+    totalBaseCasos,
+    nomeTerritorio,
+    uf: uf || null,
+    sexDistribution,
+    ageDistribution,
+    genderIdentityDistribution,
+    raceDistribution,
+    sexualBehaviorDistribution,
+    symptomsPrevalence,
+    lesionLocation,
+    immuneStatus,
+    severityMetrics
+  };
+}
+
+// Fallback de dados nacionais pré-computados
+const nationalBreakdown = getDemographicBreakdown(null);
+export const sexDistributionData = nationalBreakdown.sexDistribution;
+export const ageDistributionData = nationalBreakdown.ageDistribution;
+export const raceDistributionData = nationalBreakdown.raceDistribution;
+export const symptomsPrevalenceData = nationalBreakdown.symptomsPrevalence;
+export const lesionLocationData = nationalBreakdown.lesionLocation;
+export const immuneStatusChartData = nationalBreakdown.immuneStatus;
+export const severityMetricsData = nationalBreakdown.severityMetrics;

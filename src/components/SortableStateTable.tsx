@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import type { FC } from 'react';
 import type { StateEpidemiology } from '../data/epidemiology';
 import { 
@@ -7,26 +7,62 @@ import {
   ArrowDown, 
   Search, 
   Eye, 
-  Layers
+  Layers,
+  MapPin
 } from 'lucide-react';
 
 interface SortableStateTableProps {
   states: StateEpidemiology[];
   onOpenStateInspector: (state: StateEpidemiology) => void;
+  selectedPeriod?: string;
+  periodLabel?: string;
+  periodScale?: number;
 }
 
 type SortKey = 'nome' | 'casosConfirmados' | 'casosProvaveis' | 'obitos' | 'taxaLetalidade' | 'dosesAplicadas';
 
+const REGIONS = [
+  { id: 'todas', label: 'Todas as Regiões', badge: '27 UFs' },
+  { id: 'Sudeste', label: 'Sudeste', badge: '4 UFs' },
+  { id: 'Nordeste', label: 'Nordeste', badge: '9 UFs' },
+  { id: 'Sul', label: 'Sul', badge: '3 UFs' },
+  { id: 'Centro-Oeste', label: 'Centro-Oeste', badge: '4 UFs' },
+  { id: 'Norte', label: 'Norte', badge: '7 UFs' }
+];
+
 export const SortableStateTable: FC<SortableStateTableProps> = ({
   states,
-  onOpenStateInspector
+  onOpenStateInspector,
+  selectedPeriod,
+  periodLabel,
+  periodScale
 }) => {
   const [sortKey, setSortKey] = useState<SortKey>('casosConfirmados');
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc');
   const [search, setSearch] = useState('');
   const [selectedRegion, setSelectedRegion] = useState<string>('todas');
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const pageSize = 8; // Max 8 items per page to keep page compact and navigable
+  const pageSize = selectedRegion === 'todas' ? 8 : 12;
+
+  // Adapta os dados de casos estaduais ao período ativo
+  const adaptedStates = useMemo(() => {
+    return states.map((s) => {
+      let confirmados = s.casosConfirmados;
+      let provaveis = s.casosProvaveis;
+      if (selectedPeriod === 'ano2026') {
+        confirmados = s.casosAno2026;
+        provaveis = Math.round(s.casosAno2026 * (46 / 1099));
+      } else if (periodScale !== undefined && periodScale < 0.99) {
+        confirmados = Math.max(0, Math.round(s.casosConfirmados * periodScale));
+        provaveis = Math.max(0, Math.round(s.casosProvaveis * periodScale));
+      }
+      return {
+        ...s,
+        casosConfirmados: confirmados,
+        casosProvaveis: provaveis
+      };
+    });
+  }, [states, selectedPeriod, periodScale]);
 
   const handleSort = (key: SortKey) => {
     if (sortKey === key) {
@@ -38,7 +74,7 @@ export const SortableStateTable: FC<SortableStateTableProps> = ({
     setCurrentPage(1);
   };
 
-  const filteredStates = states
+  const filteredStates = adaptedStates
     .filter((s) => {
       const matchesSearch = 
         s.nome.toLowerCase().includes(search.toLowerCase()) || 
@@ -51,8 +87,8 @@ export const SortableStateTable: FC<SortableStateTableProps> = ({
       let valB = b[sortKey];
       if (typeof valA === 'string') {
         return sortOrder === 'asc' 
-          ? (valA as string).localeCompare(valB as string) 
-          : (valB as string).localeCompare(valA as string);
+          ? (valA as string).localeCompare(valB as string, 'pt-BR') 
+          : (valB as string).localeCompare(valA as string, 'pt-BR');
       }
       return sortOrder === 'asc' ? (valA as number) - (valB as number) : (valB as number) - (valA as number);
     });
@@ -67,47 +103,77 @@ export const SortableStateTable: FC<SortableStateTableProps> = ({
       : <ArrowDown className="w-3 h-3 text-cyan-400" aria-hidden="true" />;
   };
 
+  const getRegionBadge = (regiao: string) => {
+    const styles: Record<string, string> = {
+      Sudeste: 'bg-indigo-950/80 text-indigo-300 border-indigo-800/60',
+      Nordeste: 'bg-amber-950/80 text-amber-300 border-amber-800/60',
+      Sul: 'bg-cyan-950/80 text-cyan-300 border-cyan-800/60',
+      'Centro-Oeste': 'bg-purple-950/80 text-purple-300 border-purple-800/60',
+      Norte: 'bg-emerald-950/80 text-emerald-300 border-emerald-800/60'
+    };
+    return (
+      <span className={`px-2 py-0.5 rounded text-[10px] font-medium border ${styles[regiao] || 'bg-slate-800 text-slate-300'}`}>
+        {regiao}
+      </span>
+    );
+  };
+
   return (
     <div className="bg-slate-900 border border-slate-800 rounded-xl p-5 space-y-4">
-      {/* Controles de Navegação da Tabela */}
-      <div className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3 border-b border-slate-800/80 pb-4">
+      {/* Header e Busca */}
+      <div className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3 border-b border-slate-800/80 pb-3">
         <div>
           <h3 id="table-caption" className="text-base font-bold text-white flex items-center gap-2">
             <Layers className="w-4 h-4 text-cyan-400" />
-            Dados Epidemiológicos por Estado (Tabela Navegável)
+            Dados Epidemiológicos por Estado
           </h3>
           <p className="text-xs text-slate-400 mt-0.5">
-            Clique nas colunas para ordenar. Clique em "Ver Detalhes" para abrir o painel individual da UF.
+            Tabelas segmentadas por região com métricas estaduais • Período: <strong className="text-cyan-400 font-mono">{periodLabel || 'Série Histórica Completa'}</strong>.
           </p>
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-2">
-          {/* Busca Rápida */}
-          <div className="relative">
-            <Search className="w-3.5 h-3.5 text-slate-400 absolute left-2.5 top-2.5" />
-            <input
-              type="text"
-              placeholder="Buscar UF ou estado..."
-              value={search}
-              onChange={(e) => { setSearch(e.target.value); setCurrentPage(1); }}
-              className="bg-slate-950 border border-slate-800 rounded-lg pl-8 pr-3 py-1.5 text-xs text-slate-200 placeholder-slate-500 focus:outline-none focus:border-cyan-500 w-full sm:w-44"
-            />
-          </div>
-
-          {/* Filtro de Região */}
-          <select
-            value={selectedRegion}
-            onChange={(e) => { setSelectedRegion(e.target.value); setCurrentPage(1); }}
-            className="bg-slate-950 border border-slate-800 rounded-lg px-2.5 py-1.5 text-xs text-slate-200 focus:outline-none focus:border-cyan-500"
-          >
-            <option value="todas">Todas as Regiões</option>
-            <option value="Sudeste">Sudeste</option>
-            <option value="Nordeste">Nordeste</option>
-            <option value="Sul">Sul</option>
-            <option value="Centro-Oeste">Centro-Oeste</option>
-            <option value="Norte">Norte</option>
-          </select>
+        <div className="relative">
+          <Search className="w-3.5 h-3.5 text-slate-400 absolute left-2.5 top-2.5" />
+          <input
+            type="text"
+            placeholder="Buscar estado ou UF..."
+            value={search}
+            onChange={(e) => { setSearch(e.target.value); setCurrentPage(1); }}
+            className="bg-slate-950 border border-slate-800 rounded-lg pl-8 pr-3 py-1.5 text-xs text-slate-200 placeholder-slate-500 focus:outline-none focus:border-cyan-500 w-full sm:w-52"
+          />
         </div>
+      </div>
+
+      {/* Tabs por Cada Região Conforme Instrução */}
+      <div 
+        role="tablist" 
+        aria-label="Filtro Regional de Estados"
+        className="flex items-center gap-1.5 overflow-x-auto no-scrollbar pb-1 text-xs"
+      >
+        {REGIONS.map((region) => {
+          const isActive = selectedRegion === region.id;
+          return (
+            <button
+              key={region.id}
+              role="tab"
+              aria-selected={isActive}
+              onClick={() => { setSelectedRegion(region.id); setCurrentPage(1); }}
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-medium transition-colors whitespace-nowrap border ${
+                isActive
+                  ? 'bg-cyan-600 text-white border-cyan-500 shadow-sm'
+                  : 'bg-slate-950 text-slate-400 border-slate-800 hover:text-slate-200 hover:bg-slate-900'
+              }`}
+            >
+              <MapPin className="w-3 h-3" />
+              <span>{region.label}</span>
+              <span className={`px-1.5 py-0.2 rounded text-[10px] font-mono ${
+                isActive ? 'bg-cyan-700 text-white' : 'bg-slate-800 text-slate-400'
+              }`}>
+                {region.badge}
+              </span>
+            </button>
+          );
+        })}
       </div>
 
       {/* Tabela com Padrões Semânticos do Google Modern Web Guidance */}
@@ -206,20 +272,32 @@ export const SortableStateTable: FC<SortableStateTableProps> = ({
                   <span>{state.nome}</span>
                 </td>
 
-                <td className="py-2.5 px-3 text-slate-400">
-                  {state.regiao}
+                <td className="py-2.5 px-3">
+                  {getRegionBadge(state.regiao)}
                 </td>
 
                 <td className="py-2.5 px-3 text-right font-mono font-bold text-slate-100">
-                  {state.casosConfirmados.toLocaleString('pt-BR')}
+                  <span className={`px-2 py-0.5 rounded ${
+                    state.casosConfirmados >= 1000 
+                      ? 'bg-cyan-950 text-cyan-300 border border-cyan-800' 
+                      : state.casosConfirmados >= 200 
+                      ? 'bg-slate-800 text-slate-200' 
+                      : 'text-slate-300'
+                  }`}>
+                    {state.casosConfirmados.toLocaleString('pt-BR')}
+                  </span>
                 </td>
 
                 <td className="py-2.5 px-3 text-right font-mono text-slate-400 hidden sm:table-cell">
                   {state.casosProvaveis.toLocaleString('pt-BR')}
                 </td>
 
-                <td className="py-2.5 px-3 text-right font-mono text-rose-300 font-medium">
-                  {state.obitos}
+                <td className="py-2.5 px-3 text-right font-mono font-medium">
+                  <span className={`px-1.5 py-0.5 rounded text-[11px] ${
+                    state.obitos > 0 ? 'bg-rose-950/80 text-rose-300 border border-rose-800/60' : 'text-slate-500'
+                  }`}>
+                    {state.obitos}
+                  </span>
                 </td>
 
                 <td className="py-2.5 px-3 text-right font-mono text-slate-400 hidden md:table-cell">
@@ -227,7 +305,9 @@ export const SortableStateTable: FC<SortableStateTableProps> = ({
                 </td>
 
                 <td className="py-2.5 px-3 text-right font-mono text-emerald-400 font-medium hidden sm:table-cell">
-                  {state.dosesAplicadas.toLocaleString('pt-BR')}
+                  <span className="px-2 py-0.5 rounded bg-emerald-950/60 border border-emerald-800/60 text-emerald-300">
+                    {state.dosesAplicadas.toLocaleString('pt-BR')}
+                  </span>
                 </td>
 
                 <td className="py-2.5 px-3 text-center">
@@ -248,28 +328,30 @@ export const SortableStateTable: FC<SortableStateTableProps> = ({
       {/* Paginação Compacta */}
       <div className="flex items-center justify-between text-xs text-slate-400 pt-2">
         <span>
-          Mostrando {((currentPage - 1) * pageSize) + 1} a {Math.min(currentPage * pageSize, filteredStates.length)} de {filteredStates.length} estados
+          Mostrando {((currentPage - 1) * pageSize) + 1} a {Math.min(currentPage * pageSize, filteredStates.length)} de {filteredStates.length} estados ({selectedRegion === 'todas' ? '27 UFs' : selectedRegion})
         </span>
 
-        <div className="flex items-center gap-1">
-          <button
-            disabled={currentPage === 1}
-            onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
-            className="px-2.5 py-1 rounded border border-slate-800 disabled:opacity-40 hover:bg-slate-800 text-slate-200 transition-colors"
-          >
-            Anterior
-          </button>
-          <span className="px-2 font-mono text-slate-300">
-            {currentPage} / {totalPages || 1}
-          </span>
-          <button
-            disabled={currentPage >= totalPages}
-            onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
-            className="px-2.5 py-1 rounded border border-slate-800 disabled:opacity-40 hover:bg-slate-800 text-slate-200 transition-colors"
-          >
-            Próxima
-          </button>
-        </div>
+        {totalPages > 1 && (
+          <div className="flex items-center gap-1">
+            <button
+              disabled={currentPage === 1}
+              onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
+              className="px-2.5 py-1 rounded border border-slate-800 disabled:opacity-40 hover:bg-slate-800 text-slate-200 transition-colors"
+            >
+              Anterior
+            </button>
+            <span className="px-2 font-mono text-slate-300">
+              {currentPage} / {totalPages}
+            </span>
+            <button
+              disabled={currentPage >= totalPages}
+              onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
+              className="px-2.5 py-1 rounded border border-slate-800 disabled:opacity-40 hover:bg-slate-800 text-slate-200 transition-colors"
+            >
+              Próxima
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );

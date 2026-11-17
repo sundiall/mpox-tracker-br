@@ -4,6 +4,7 @@ import type { LucideIcon } from 'lucide-react';
 interface KPICardProps {
   titulo: string;
   valor: string | number;
+  periodo?: string;
   subtexto?: string;
   icon: LucideIcon;
   badge?: {
@@ -16,6 +17,7 @@ interface KPICardProps {
 export const KPICard: FC<KPICardProps> = ({
   titulo,
   valor,
+  periodo,
   subtexto,
   icon: Icon,
   badge,
@@ -37,16 +39,25 @@ export const KPICard: FC<KPICardProps> = ({
   };
 
   return (
-    <div className="bg-slate-900/80 border border-slate-800/90 rounded-2xl p-4.5 backdrop-blur-md hover:border-slate-700 transition-all shadow-sm">
-      <div className="flex items-start justify-between">
-        <div>
-          <span className="text-xs font-medium text-slate-400 tracking-wide uppercase">{titulo}</span>
-          <div className="text-2xl sm:text-3xl font-extrabold text-white mt-1 tracking-tight">
-            {typeof valor === 'number' ? valor.toLocaleString('pt-BR') : valor}
+    <div className="bg-slate-900/80 border border-slate-800/90 rounded-2xl p-4.5 backdrop-blur-md hover:border-slate-700 transition-all shadow-sm flex flex-col justify-between">
+      <div>
+        <div className="flex items-start justify-between gap-2">
+          <span className="text-xs font-semibold text-slate-300 tracking-wide uppercase">{titulo}</span>
+          <div className={`p-2 rounded-xl border shrink-0 ${colorMap[destaqueCor]}`}>
+            <Icon className="w-4 h-4" />
           </div>
         </div>
-        <div className={`p-2.5 rounded-xl border ${colorMap[destaqueCor]}`}>
-          <Icon className="w-5 h-5" />
+
+        {periodo && (
+          <div className="mt-1">
+            <span className="inline-flex items-center gap-1 text-[11px] font-mono font-medium px-2 py-0.5 rounded bg-slate-950 text-cyan-400 border border-cyan-900/40">
+              📅 {periodo}
+            </span>
+          </div>
+        )}
+
+        <div className="text-2xl sm:text-3xl font-extrabold text-white mt-1.5 tracking-tight">
+          {typeof valor === 'number' ? valor.toLocaleString('pt-BR') : valor}
         </div>
       </div>
 

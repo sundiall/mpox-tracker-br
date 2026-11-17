@@ -177,6 +177,13 @@ export const faqList: FAQItem[] = [
     destaque: 'Consulte os Centros de Referência em IST/Aids (CTA/SAE) do seu município para checar elegibilidade e agendamento.'
   },
   {
+    id: 'faq-6b',
+    categoria: 'vacina',
+    pergunta: 'Quando a vacina foi liberada para cada população e o que mudou na recente ampliação no Rio de Janeiro e SP?',
+    resposta: 'A liberação da vacina MVA-BN no Brasil ocorreu de forma escalonada: em Out/2022 para técnicos de laboratório NB-3; em Mar/2023 pelo PNI nacional para pessoas vivendo com HIV com CD4 < 200 e profilaxia pós-exposição de contatos íntimos; em Ago/2023 autorizou-se a via intradérmica fracionada (0,1 mL) para usuários de PrEP em projetos-piloto de RJ e SP. Recentemente, a Prefeitura do Rio de Janeiro (SMS-Rio) liberou formalmente e de forma ampla as doses remanescentes para todos os usuários em uso de PrEP (com receita ou laudo de até 6 meses que nunca tenham se vacinado) e trabalhadores de saúde expostos, com aplicação nos Super Centros Cariocas (Botafogo, Shopping Nova América e ParkShopping Campo Grande), no CEVAA e na Fiocruz.',
+    destaque: 'Usuários de PrEP no Rio de Janeiro podem comparecer aos Super Centros de Vacinação com documento com foto e receita médica/laudo recente de PrEP para receber a primeira dose.'
+  },
+  {
     id: 'faq-7',
     categoria: 'sintomas',
     pergunta: 'Como diferenciar as lesões da mpox de catapora, sífilis ou herpes?',
