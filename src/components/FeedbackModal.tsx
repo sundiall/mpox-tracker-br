@@ -5,7 +5,8 @@ import {
   Mail, 
   Copy, 
   Check, 
-  ShieldCheck 
+  ShieldCheck,
+  ExternalLink 
 } from 'lucide-react';
 
 interface FeedbackModalProps {
@@ -79,7 +80,7 @@ export const FeedbackModal: React.FC<FeedbackModalProps> = ({ isOpen, onClose })
   const handleMailto = () => {
     const subject = encodeURIComponent(`[Mpox Brasil Feedback] ${currentCategoryLabel}`);
     const body = encodeURIComponent(formatFeedbackBody());
-    window.open(`mailto:dev.mpoxbrasil@gmail.com?subject=${subject}&body=${body}`, '_blank');
+    window.open(`mailto:alamillmartinez.francisco@gmail.com?subject=${subject}&body=${body}`, '_blank');
   };
 
   return (
@@ -196,14 +197,25 @@ export const FeedbackModal: React.FC<FeedbackModalProps> = ({ isOpen, onClose })
 
         {/* Rodapé com Ações Claras */}
         <div className="px-5 py-3.5 border-t border-slate-800 bg-slate-950/70 flex flex-col sm:flex-row items-center justify-between gap-2.5">
-          <button
-            type="button"
-            onClick={handleCopy}
-            className="w-full sm:w-auto px-3 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-medium border border-slate-700 flex items-center justify-center gap-1.5 transition-colors"
-          >
-            <Copy className="w-3.5 h-3.5 text-slate-400" />
-            <span>Copiar Mensagem</span>
-          </button>
+          <div className="flex items-center gap-2 w-full sm:w-auto">
+            <button
+              type="button"
+              onClick={handleCopy}
+              className="flex-1 sm:flex-none px-3 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-medium border border-slate-700 flex items-center justify-center gap-1.5 transition-colors"
+            >
+              <Copy className="w-3.5 h-3.5 text-slate-400" />
+              <span>Copiar</span>
+            </button>
+            <a
+              href="https://github.com/sundiall/mpox-tracker-br/issues"
+              target="_blank"
+              rel="noreferrer"
+              className="flex-1 sm:flex-none px-3 py-2 rounded-lg bg-slate-800/80 hover:bg-slate-700 text-slate-300 text-xs font-medium border border-slate-700 flex items-center justify-center gap-1.5 transition-colors"
+            >
+              <ExternalLink className="w-3.5 h-3.5 text-slate-400" />
+              <span>GitHub Issues</span>
+            </a>
+          </div>
 
           <div className="w-full sm:w-auto flex items-center gap-2">
             <button
@@ -211,7 +223,7 @@ export const FeedbackModal: React.FC<FeedbackModalProps> = ({ isOpen, onClose })
               onClick={onClose}
               className="flex-1 sm:flex-none px-3 py-2 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-slate-800/80 text-xs font-medium transition-colors"
             >
-              Cancelar
+              Fechar
             </button>
             <button
               type="button"
