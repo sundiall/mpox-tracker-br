@@ -1,3 +1,5 @@
+export type VaccineAvailabilityStatus = 'disponivel' | 'esgotado' | 'em_abastecimento' | 'nao_informado';
+
 export interface VaccinationSite {
   id: string;
   uf: string;
@@ -13,6 +15,9 @@ export interface VaccinationSite {
   agendamento: 'Livre Demanda' | 'Agendamento Prévio' | 'Regulação SUS / Encaminhamento';
   observacoes: string;
   requisitos: string;
+  statusEstoque?: VaccineAvailabilityStatus;
+  dataAtualizacaoStatus?: string;
+  notaStatus?: string;
 }
 
 export const vaccinationSites: VaccinationSite[] = [
@@ -32,7 +37,10 @@ export const vaccinationSites: VaccinationSite[] = [
     horarioFuncionamento: 'Segunda a sexta, das 08h às 17h',
     agendamento: 'Livre Demanda',
     observacoes: 'Centro nacional de referência em infectologia. Aplicação para usuários de PrEP, PVHA (CD4 < 200), pós-exposição e trabalhadores expostos.',
-    requisitos: 'Documento oficial com foto, cartão SUS e laudo/receita de PrEP (até 6 meses), exame CD4 ou comprovação de contato.'
+    requisitos: 'Documento oficial com foto, cartão SUS e laudo/receita de PrEP (até 6 meses), exame CD4 ou comprovação de contato.',
+    statusEstoque: 'esgotado',
+    dataAtualizacaoStatus: '2026-11-18',
+    notaStatus: 'Doses temporariamente esgotadas segundo comunicado oficial das redes. Aguardando novo lote de reposição da SMS-Rio.'
   },
   {
     id: 'rj-2',
@@ -48,7 +56,10 @@ export const vaccinationSites: VaccinationSite[] = [
     horarioFuncionamento: 'Domingo a domingo, das 08h às 22h (Horário Estendido)',
     agendamento: 'Livre Demanda',
     observacoes: 'Polo principal de vacinação ampliada contra Mpox no Rio de Janeiro. Aplicação para usuários de PrEP e trabalhadores expostos.',
-    requisitos: 'Documento com foto, CPF, cartão SUS e receita médica ou laudo comprobatório de uso de PrEP emitido nos últimos 6 meses.'
+    requisitos: 'Documento com foto, CPF, cartão SUS e receita médica ou laudo comprobatório de uso de PrEP emitido nos últimos 6 meses.',
+    statusEstoque: 'disponivel',
+    dataAtualizacaoStatus: '2026-11-18',
+    notaStatus: 'Doses disponíveis para usuários em PrEP e grupos prioritários.'
   },
   {
     id: 'rj-3',
@@ -64,7 +75,10 @@ export const vaccinationSites: VaccinationSite[] = [
     horarioFuncionamento: 'Segunda a sábado, das 10h às 22h; Domingos e feriados, das 13h às 21h',
     agendamento: 'Livre Demanda',
     observacoes: 'Ponto estratégico de vacinação na Zona Norte carioca para PrEP e populações prioritárias.',
-    requisitos: 'Documento de identidade com foto, CPF e receita/laudo de PrEP recente (até 6 meses).'
+    requisitos: 'Documento de identidade com foto, CPF e receita/laudo de PrEP recente (até 6 meses).',
+    statusEstoque: 'disponivel',
+    dataAtualizacaoStatus: '2026-11-18',
+    notaStatus: 'Doses disponíveis em livre demanda.'
   },
   {
     id: 'rj-4',
@@ -80,7 +94,10 @@ export const vaccinationSites: VaccinationSite[] = [
     horarioFuncionamento: 'Segunda a sábado, das 10h às 22h; Domingos e feriados, das 13h às 21h',
     agendamento: 'Livre Demanda',
     observacoes: 'Ponto de referência para a Zona Oeste para vacinação contra Mpox.',
-    requisitos: 'Documento oficial com foto, cartão SUS e comprovação de PrEP (receita até 6 meses) ou indicação médica.'
+    requisitos: 'Documento oficial com foto, cartão SUS e comprovação de PrEP (receita até 6 meses) ou indicação médica.',
+    statusEstoque: 'disponivel',
+    dataAtualizacaoStatus: '2026-11-18',
+    notaStatus: 'Doses disponíveis para imunização de usuários de PrEP.'
   },
   {
     id: 'rj-5',
@@ -96,7 +113,10 @@ export const vaccinationSites: VaccinationSite[] = [
     horarioFuncionamento: 'Segunda a sexta, das 08h às 17h',
     agendamento: 'Livre Demanda',
     observacoes: 'Centro histórico especializado em imunobiológicos especiais no Centro do Rio de Janeiro.',
-    requisitos: 'Documento com foto, CPF, cartão SUS e laudo/receita de PrEP emitido nos últimos 6 meses.'
+    requisitos: 'Documento com foto, CPF, cartão SUS e laudo/receita de PrEP emitido nos últimos 6 meses.',
+    statusEstoque: 'esgotado',
+    dataAtualizacaoStatus: '2026-11-18',
+    notaStatus: 'Estoque esgotado temporariamente após grande demanda. Em processo de reabastecimento pela SMS-Rio.'
   },
   {
     id: 'rj-6',

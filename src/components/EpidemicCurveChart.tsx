@@ -340,12 +340,37 @@ export const EpidemicCurveChart: FC<EpidemicCurveChartProps> = ({
             </p>
           )}
 
-          {dataPoint?.marco && (
-            <div className="mt-2 p-1.5 rounded bg-emerald-950/80 border border-emerald-800/80 text-[10px] text-emerald-300 flex items-start gap-1">
-              <Syringe className="w-3 h-3 text-emerald-400 shrink-0 mt-0.5" />
-              <span>{dataPoint.marco}</span>
-            </div>
-          )}
+          {/* Detalhes do Marco Histórico / Intervenção com data e título */}
+          {(() => {
+            const milestoneForWeek = applicableMilestones.find((m) => m.semana === dataPoint?.semana);
+            if (!milestoneForWeek) return null;
+            const mColor = milestoneForWeek.cor || '#38bdf8';
+            return (
+              <div 
+                className="mt-2.5 p-2 rounded-lg border text-xs space-y-1 shadow-lg"
+                style={{ 
+                  backgroundColor: `${mColor}18`, 
+                  borderColor: `${mColor}60` 
+                }}
+              >
+                <div className="flex items-center justify-between gap-1.5 font-bold">
+                  <span className="flex items-center gap-1.5" style={{ color: mColor }}>
+                    <span className="w-4 h-4 rounded-full flex items-center justify-center text-[10px] border border-current font-bold shrink-0">
+                      {milestoneForWeek.simbolo}
+                    </span>
+                    <span>{milestoneForWeek.titulo}</span>
+                  </span>
+                </div>
+                <div className="text-[10px] font-mono text-cyan-300 flex items-center justify-between">
+                  <span>Semana: {milestoneForWeek.semana}</span>
+                  <span>{formatWeekToCommonDate(milestoneForWeek.semana, 'intervalo_completo')}</span>
+                </div>
+                <p className="text-[11px] text-slate-300 leading-snug pt-0.5">
+                  {milestoneForWeek.descricao}
+                </p>
+              </div>
+            );
+          })()}
         </div>
       );
     }
@@ -806,11 +831,11 @@ export const EpidemicCurveChart: FC<EpidemicCurveChartProps> = ({
                   formatter={(value) => <span style={{ color: '#cbd5e1', fontWeight: 500 }}>{value}</span>}
                 />
 
-                {/* Doses de Vacina Aplicadas Superpostas no Mesmo Gráfico */}
+                {/* Doses de Vacina Aplicadas Superpostas no Mesmo Gráfico em Degraus (Stepwise) */}
                 {showVaccines && (
                   <Area 
                     yAxisId="doses"
-                    type="monotone" 
+                    type="stepAfter" 
                     dataKey="dosesAcumuladas" 
                     name="Doses Aplicadas no SUS (Eixo Direito)" 
                     stroke="#10b981" 

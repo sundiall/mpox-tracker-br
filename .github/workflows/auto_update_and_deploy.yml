@@ -30,9 +30,12 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Executar Pipeline de Coleta de Dados (RSS & SUS)
+      - name: Executar Pipeline de Coleta de Dados & Agente de Vigilância
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
           python scripts/update_data.py
+          python scripts/agentic_monitor.py
 
       - name: Configurar Node.js
         uses: actions/setup-node@v4

@@ -24,6 +24,7 @@ export const VaccinationSitesView: FC<VaccinationSitesViewProps> = ({
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedRegiao, setSelectedRegiao] = useState<string>('todas');
   const [selectedTipo, setSelectedTipo] = useState<string>('todos');
+  const [selectedStatus, setSelectedStatus] = useState<string>('todos');
   const [currentPage, setCurrentPage] = useState<number>(1);
   const pageSize = 9;
 
@@ -31,13 +32,17 @@ export const VaccinationSitesView: FC<VaccinationSitesViewProps> = ({
     const matchesUF = !selectedUF || site.uf === selectedUF;
     const matchesRegiao = selectedRegiao === 'todas' || site.regiao === selectedRegiao;
     const matchesTipo = selectedTipo === 'todos' || site.tipo === selectedTipo;
+    const matchesStatus = 
+      selectedStatus === 'todos' || 
+      (selectedStatus === 'disponivel' && site.statusEstoque === 'disponivel') ||
+      (selectedStatus === 'esgotado' && site.statusEstoque === 'esgotado');
     const matchesSearch =
       site.nomeUnidade.toLowerCase().includes(searchQuery.toLowerCase()) ||
       site.municipio.toLowerCase().includes(searchQuery.toLowerCase()) ||
       site.endereco.toLowerCase().includes(searchQuery.toLowerCase()) ||
       site.uf.toLowerCase().includes(searchQuery.toLowerCase());
 
-    return matchesUF && matchesRegiao && matchesTipo && matchesSearch;
+    return matchesUF && matchesRegiao && matchesTipo && matchesStatus && matchesSearch;
   });
 
   const totalPages = Math.ceil(filteredSites.length / pageSize);
@@ -100,7 +105,7 @@ export const VaccinationSitesView: FC<VaccinationSitesViewProps> = ({
 
       {/* Controles de Filtros e Busca */}
       <div className="bg-slate-900 border border-slate-800 rounded-xl p-4 space-y-3">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
           {/* Busca por texto */}
           <div>
             <Search className="w-4 h-4 text-slate-400 absolute left-3 top-2.5" />
@@ -152,11 +157,25 @@ export const VaccinationSitesView: FC<VaccinationSitesViewProps> = ({
               onChange={(e) => { setSelectedTipo(e.target.value); setCurrentPage(1); }}
               className="w-full bg-slate-950 border border-slate-800 rounded-lg px-2.5 py-1.5 text-xs text-slate-200 focus:outline-none focus:border-cyan-500"
             >
-              <option value="todos">Todos os Tipos de Serviço</option>
+              <option value="todos">Todos os Serviços</option>
               <option value="CTA">Centros de Testagem (CTA)</option>
               <option value="SAE">Atenção Especializada (SAE)</option>
-              <option value="CRIE">CRIE (Imunobiológicos Especiais)</option>
+              <option value="CRIE">CRIE (Especiais)</option>
+              <option value="Policlinica">Policlínicas & Super Centros</option>
               <option value="Hospital Universitario">Hospitais Especializados</option>
+            </select>
+          </div>
+
+          {/* Filtro por Disponibilidade de Vacina */}
+          <div>
+            <select
+              value={selectedStatus}
+              onChange={(e) => { setSelectedStatus(e.target.value); setCurrentPage(1); }}
+              className="w-full bg-slate-950 border border-slate-800 rounded-lg px-2.5 py-1.5 text-xs text-cyan-300 font-medium focus:outline-none focus:border-cyan-500"
+            >
+              <option value="todos">Estoque: Todos</option>
+              <option value="disponivel">🟢 Disponível</option>
+              <option value="esgotado">🔴 Esgotado</option>
             </select>
           </div>
         </div>
@@ -182,6 +201,38 @@ export const VaccinationSitesView: FC<VaccinationSitesViewProps> = ({
               <h3 className="font-bold text-white text-sm leading-snug">
                 {site.nomeUnidade}
               </h3>
+
+              {/* Status de Estoque de Vacina no Local */}
+              {site.statusEstoque && (
+                <div className={`mt-2.5 p-2 rounded-lg border text-[11px] space-y-1 ${
+                  site.statusEstoque === 'esgotado'
+                    ? 'bg-rose-950/40 border-rose-800/70 text-rose-300'
+                    : site.statusEstoque === 'disponivel'
+                    ? 'bg-emerald-950/40 border-emerald-800/70 text-emerald-300'
+                    : 'bg-amber-950/40 border-amber-800/70 text-amber-300'
+                }`}>
+                  <div className="flex items-center justify-between font-semibold">
+                    <span className="flex items-center gap-1.5">
+                      <span className={`w-2 h-2 rounded-full ${
+                        site.statusEstoque === 'esgotado' ? 'bg-rose-500 animate-pulse' :
+                        site.statusEstoque === 'disponivel' ? 'bg-emerald-400' : 'bg-amber-400'
+                      }`} />
+                      {site.statusEstoque === 'esgotado' ? 'Doses Esgotadas no Local' :
+                       site.statusEstoque === 'disponivel' ? 'Vacina Disponível' : 'Em Reabastecimento'}
+                    </span>
+                    {site.dataAtualizacaoStatus && (
+                      <span className="text-[10px] font-normal opacity-80">
+                        {site.dataAtualizacaoStatus.split('-').reverse().join('/')}
+                      </span>
+                    )}
+                  </div>
+                  {site.notaStatus && (
+                    <p className="text-[10px] text-slate-300 leading-tight">
+                      {site.notaStatus}
+                    </p>
+                  )}
+                </div>
+              )}
 
               <div className="mt-3 space-y-1.5 text-slate-300">
                 <p className="flex items-start gap-2 text-slate-400">

@@ -1,0 +1,48 @@
+{
+  "timestamp": "2026-11-18T12:16:27.660076",
+  "totalItensVarredura": 33,
+  "analiseAgente": {
+    "alteracoesEstoque": [
+      {
+        "unidade": "Instituto Nacional de Infectologia Evandro Chagas (CRIE / INI / Fiocruz)",
+        "uf": "RJ",
+        "statusEstoque": "esgotado",
+        "motivo": "Doses temporariamente esgotadas segundo informado nas redes sociais oficiais.",
+        "fonte": "https://agencia.fiocruz.br/servico-de-referencia-nacional-em-filarioses-da-fiocruz-conquista-selo-ouro-da-ona"
+      }
+    ],
+    "novosMarcos": [],
+    "alertasUrgentes": [
+      {
+        "titulo": "Rio amplia vacinação contra MPOX - Prefeitura da Cidade do Rio de Janeiro",
+        "tipo": "disponibilidade_vacina",
+        "resumo": "Rio amplia vacinação contra MPOX&nbsp;&nbsp;Prefeitura da Cidade do Rio de Janeiro",
+        "linkOficial": "https://news.google.com/rss/articles/CBMib0FVX3lxTE90RzhXSFBmaVhXdGE4bmJnN2phYmVTamFYNjUwSnc4U0M4Y1E4NENmdmJXVGw3eWZVZFQ5UW5NNjRtbjFQZHhjRGdld0FYZjY4dy1LR2YzZ1BaTF80Mmxoc2JRQVNncFBkUXJ5cUV0QQ?oc=5"
+      },
+      {
+        "titulo": "Mpox: SP recebe doses de vacina; Saiba para quais cidades elas vão e quem pode tomá-las - O GLOBO",
+        "tipo": "disponibilidade_vacina",
+        "resumo": "Mpox: SP recebe doses de vacina; Saiba para quais cidades elas vão e quem pode tomá-las&nbsp;&nbsp;O GLOBO",
+        "linkOficial": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOVzNtZnJ5aERuVEc3S184SWxIMGxaYVJaY1QtMGFmV3JPbEU2TFpBM2UwZ1h5dDNDS3RuU19yZFZQLUE1SFhfVU9yRU45YTJhYlJ1WTdtdDM3dkpkajRHdnRoenprR3pvOGk2WnhzNnJLSHBJR21ibTJaRUF1Z1F5aFptTnBMYTg2NGxhNXBycTFBdTZDU1JicXhqOWxSdEVibFFCZlYtRlRGSmJad29TZDkwRDV6ZDNlalp2dVlrelJKdENUOVFTaE92WFk1MmR1UjBIR25GU0HSAecBQVVfeXFMT04tQW1qbEFtSXV0OU9WRG5ibEJsUEl5Zkw5SkJ2cmxheGROZTZNclV1R1NsOEVoeHF4MGo4dzV1bk5JdnNEOHNsTW9IR0NHbHZCLTVBZGhPS2RYX0NmMkNDU3lqakFJSVo0Qjg5NHduYXVQeHp2QWROdUlZQlFhdGY2Ym9ud1VaZjdUdnRjM3pUNDhpNExEVERHaHhLV1M4eWFNZWVrSkxSdEtrZXVvZDZCM3lackNTSVJkRkI4QUtHRTE1RGVYRnk1V0tzTFNxcGptVHJjOXVzeXg5eU1rVGNHQnF4Sy13?oc=5"
+      },
+      {
+        "titulo": "Prefeitura do Rio amplia público de vacinação contra Mpox - CNN Brasil",
+        "tipo": "disponibilidade_vacina",
+        "resumo": "Prefeitura do Rio amplia público de vacinação contra Mpox&nbsp;&nbsp;CNN Brasil",
+        "linkOficial": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNajFWMG05R2s5TV94Zmp3SVF2elV4T0I2VWplRTgzVmdvdnI5aDBTdmdpMGZYNU5VZ2xDMU9adTlZaU9zSDdXN0o4WTJkUkwxWHl3X0M4ZjQ1OHc1dmp2SDZRenlta3ZidzZwOTE1N0NRTFhZSXJHOFJkTndHVFlBdHM4OHJTcTc3SGluRzJKWnFPbS00MFJOMFBjOWFyZDlfTUdHQ3VwRWFIV1E?oc=5"
+      },
+      {
+        "titulo": "Vacina contra mpox chega à rede pública de saúde do DF - Secretaria de Saúde do Distrito Federal",
+        "tipo": "disponibilidade_vacina",
+        "resumo": "Vacina contra mpox chega à rede pública de saúde do DF&nbsp;&nbsp;Secretaria de Saúde do Distrito Federal",
+        "linkOficial": "https://news.google.com/rss/articles/CBMijAFBVV95cUxONlZVWXYyMDR2bWI0TXBZRW84dnU3bmVVZU0xcTZqb2RLb2pmeFp4OVQ3VzI3cm11Qm9aNkIwUy1mUmxVR2tjb3lrRGp1ZU40SmJnQTFKaXNFaHVucGZIOHZiV2JTYjlsMEVuVEhSNlpZam8xZzNpRmk3Nmt5UjlzaEFENFlvN2ZMQTdGbg?oc=5"
+      },
+      {
+        "titulo": "Mpox: DF chega a 52 casos confirmados e 112 doses de vacina aplicadas - Metrópoles",
+        "tipo": "disponibilidade_vacina",
+        "resumo": "Mpox: DF chega a 52 casos confirmados e 112 doses de vacina aplicadas&nbsp;&nbsp;Metrópoles",
+        "linkOficial": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOaEhKU29SMm5YZlYwbWt4RWludHo4Q0dwZDhPRVJIU1pYUEFmMHRSOXdXTVA4TURUUGFvWk5NR2JVN3k5SEpnTncyZ0R5SExJV2Z1bG01dTJpbFdhWFh6NlFNWExYQUZGMHhvaF9IV2JlMGZIVHVsZzMzR0E1UFlRM0JRb2RTV1pWS3B6OUw0ejJmRms2dHo4VHhTbVhBOURUWm5yaWtzLWZuV0RaWVR2RW9n?oc=5"
+      }
+    ]
+  }
+}
