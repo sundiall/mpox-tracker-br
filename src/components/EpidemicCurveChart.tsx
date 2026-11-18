@@ -347,27 +347,21 @@ export const EpidemicCurveChart: FC<EpidemicCurveChartProps> = ({
             const mColor = milestoneForWeek.cor || '#38bdf8';
             return (
               <div 
-                className="mt-2.5 p-2 rounded-lg border text-xs space-y-1 shadow-lg"
+                className="mt-2 p-1.5 rounded-lg border text-xs space-y-0.5 shadow-lg"
                 style={{ 
                   backgroundColor: `${mColor}18`, 
                   borderColor: `${mColor}60` 
                 }}
               >
-                <div className="flex items-center justify-between gap-1.5 font-bold">
-                  <span className="flex items-center gap-1.5" style={{ color: mColor }}>
-                    <span className="w-4 h-4 rounded-full flex items-center justify-center text-[10px] border border-current font-bold shrink-0">
-                      {milestoneForWeek.simbolo}
-                    </span>
-                    <span>{milestoneForWeek.titulo}</span>
+                <div className="flex items-center gap-1.5 font-bold">
+                  <span className="w-4 h-4 rounded-full flex items-center justify-center text-[10px] border border-current font-bold shrink-0" style={{ color: mColor }}>
+                    {milestoneForWeek.simbolo}
                   </span>
+                  <span className="leading-tight" style={{ color: mColor }}>{milestoneForWeek.titulo}</span>
                 </div>
-                <div className="text-[10px] font-mono text-cyan-300 flex items-center justify-between">
-                  <span>Semana: {milestoneForWeek.semana}</span>
-                  <span>{formatWeekToCommonDate(milestoneForWeek.semana, 'intervalo_completo')}</span>
+                <div className="text-[10px] font-mono text-cyan-300/90 pl-5.5">
+                  {formatWeekToCommonDate(milestoneForWeek.semana, 'intervalo_completo')} • {milestoneForWeek.semana}
                 </div>
-                <p className="text-[11px] text-slate-300 leading-snug pt-0.5">
-                  {milestoneForWeek.descricao}
-                </p>
               </div>
             );
           })()}

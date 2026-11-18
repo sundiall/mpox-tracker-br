@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import type { FC } from 'react';
-import { 
-  Building2, 
-  MapPin, 
-  Phone, 
-  Clock, 
-  Search, 
+import {
+  Building2,
+  MapPin,
+  Phone,
+  Clock,
+  Search,
   CalendarCheck,
   CheckCircle2,
   FileCheck2
@@ -32,8 +32,8 @@ export const VaccinationSitesView: FC<VaccinationSitesViewProps> = ({
     const matchesUF = !selectedUF || site.uf === selectedUF;
     const matchesRegiao = selectedRegiao === 'todas' || site.regiao === selectedRegiao;
     const matchesTipo = selectedTipo === 'todos' || site.tipo === selectedTipo;
-    const matchesStatus = 
-      selectedStatus === 'todos' || 
+    const matchesStatus =
+      selectedStatus === 'todos' ||
       (selectedStatus === 'disponivel' && site.statusEstoque === 'disponivel') ||
       (selectedStatus === 'esgotado' && site.statusEstoque === 'esgotado');
     const matchesSearch =
@@ -204,21 +204,19 @@ export const VaccinationSitesView: FC<VaccinationSitesViewProps> = ({
 
               {/* Status de Estoque de Vacina no Local */}
               {site.statusEstoque && (
-                <div className={`mt-2.5 p-2 rounded-lg border text-[11px] space-y-1 ${
-                  site.statusEstoque === 'esgotado'
-                    ? 'bg-rose-950/40 border-rose-800/70 text-rose-300'
-                    : site.statusEstoque === 'disponivel'
+                <div className={`mt-2.5 p-2 rounded-lg border text-[11px] space-y-1 ${site.statusEstoque === 'esgotado'
+                  ? 'bg-rose-950/40 border-rose-800/70 text-rose-300'
+                  : site.statusEstoque === 'disponivel'
                     ? 'bg-emerald-950/40 border-emerald-800/70 text-emerald-300'
                     : 'bg-amber-950/40 border-amber-800/70 text-amber-300'
-                }`}>
+                  }`}>
                   <div className="flex items-center justify-between font-semibold">
                     <span className="flex items-center gap-1.5">
-                      <span className={`w-2 h-2 rounded-full ${
-                        site.statusEstoque === 'esgotado' ? 'bg-rose-500 animate-pulse' :
+                      <span className={`w-2 h-2 rounded-full ${site.statusEstoque === 'esgotado' ? 'bg-rose-500 animate-pulse' :
                         site.statusEstoque === 'disponivel' ? 'bg-emerald-400' : 'bg-amber-400'
-                      }`} />
+                        }`} />
                       {site.statusEstoque === 'esgotado' ? 'Doses Esgotadas no Local' :
-                       site.statusEstoque === 'disponivel' ? 'Vacina Disponível' : 'Em Reabastecimento'}
+                        site.statusEstoque === 'disponivel' ? 'Vacina Disponível' : 'Em Reabastecimento'}
                     </span>
                     {site.dataAtualizacaoStatus && (
                       <span className="text-[10px] font-normal opacity-80">

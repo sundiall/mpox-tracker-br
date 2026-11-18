@@ -227,5 +227,40 @@ def main():
 
     print(f"💾 [Agente] Relatório agéntico salvo com sucesso em: {report_file}")
 
+    # Atualização dinâmica e adaptativa do estado de vigilância
+    state_file = os.path.join(output_dir, "monitor_state.json")
+    state = {}
+    if os.path.exists(state_file):
+        try:
+            with open(state_file, "r", encoding="utf-8") as sf:
+                state = json.load(sf)
+        except Exception:
+            state = {}
+
+    tem_novidades = (
+        len(analise.get("alteracoesEstoque", [])) > 0 or 
+        len(analise.get("alertasUrgentes", [])) > 0 or 
+        len(analise.get("novosMarcos", [])) > 0
+    )
+
+    now_iso = datetime.now().isoformat()
+    state["ultimaChecagem"] = now_iso
+
+    if tem_novidades:
+        state["modo"] = "CAMPANHA_ATIVA"
+        state["diasSemNovidades"] = 0
+        state["ultimaAlteracaoCritica"] = now_iso
+        state["motivo"] = "Campanha de vacinação ativa e alterações recentes detectadas nos postos"
+    else:
+        dias_sem = state.get("diasSemNovidades", 0) + 0.1
+        state["diasSemNovidades"] = round(dias_sem, 2)
+        if dias_sem >= 5:
+            state["modo"] = "CALMA"
+            state["motivo"] = "Mais de 5 dias sem alterações críticas de estoque ou novos marcos"
+
+    with open(state_file, "w", encoding="utf-8") as sf:
+        json.dump(state, sf, ensure_ascii=False, indent=2)
+    print(f"🔄 [Agente] Estado adaptativo atualizado: modo={state.get('modo')} (dias sem novidades: {state.get('diasSemNovidades', 0)})")
+
 if __name__ == "__main__":
     main()
