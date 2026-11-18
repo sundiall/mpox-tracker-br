@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-18T20:41:43.074993",
+  "timestamp": "2026-11-18T21:41:50.528150",
   "totalItensVarredura": 32,
   "analiseAgente": {
     "alteracoesEstoque": [
@@ -13,6 +13,12 @@
     ],
     "novosMarcos": [],
     "alertasUrgentes": [
+      {
+        "titulo": "SP recebe novas doses da vacina contra a mpox; saiba quem pode receber - Agência Brasil",
+        "tipo": "disponibilidade_vacina",
+        "resumo": "SP recebe novas doses da vacina contra a mpox; saiba quem pode receber&nbsp;&nbsp;Agência Brasil",
+        "linkOficial": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQcmM2MDJIeG5QQ2ttVXJYTXlTUWZXeWFKWWJaMjREWTZQNGRELXBGZ201OEFULUVzQWJ6V0V3Ynhad2RJWjBiNDRrMnNDVjZ0SjI2eXdrVFRqaEQtVHJYZERDd1pkakJlcmRpWHFRaXZIUndVal9UVmtrN2xxTlVJcy10S2toQloxU0p5Rzg2eUZHaTVMMDNXYk1ORlZBMTBDRl9JSjIxbW1ObTJGYXRUMDdWNjlOTTFCaW9Jc19uaw?oc=5"
+      },
       {
         "titulo": "São Paulo recebe mil novas doses da vacina contra a Mpox - agenciasp.sp.gov.br",
         "tipo": "disponibilidade_vacina",
@@ -36,12 +42,6 @@
         "tipo": "disponibilidade_vacina",
         "resumo": "Rio amplia vacinação contra MPOX&nbsp;&nbsp;Prefeitura da Cidade do Rio de Janeiro",
         "linkOficial": "https://news.google.com/rss/articles/CBMib0FVX3lxTE90RzhXSFBmaVhXdGE4bmJnN2phYmVTamFYNjUwSnc4U0M4Y1E4NENmdmJXVGw3eWZVZFQ5UW5NNjRtbjFQZHhjRGdld0FYZjY4dy1LR2YzZ1BaTF80Mmxoc2JRQVNncFBkUXJ5cUV0QQ?oc=5"
-      },
-      {
-        "titulo": "Mpox: com alta de casos da doença, estados recebem doses adicionais de vacina - VEJA",
-        "tipo": "disponibilidade_vacina",
-        "resumo": "Mpox: com alta de casos da doença, estados recebem doses adicionais de vacina&nbsp;&nbsp;VEJA",
-        "linkOficial": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQNE1MR2VZd3BlaFd2RGpTZS1XTVRZMlp3RXg4RTA0TjdrWnQzQ1AyOEZLdzNfMkNTSnVqRXA3aGhhZDBxRjJ1bktUbFY3TWZqdkpXdlpDb05qVGlqWVlRRFZEVG9TMzhuNFB5UmpxX3dWVkZhR1lhREhwY241Qy1wOU5OcmoxTG9OdWx5U25UaUZYR2FvV2huNmRCQXQwYWRYcnNpb2dHRURSTE95?oc=5"
       }
     ]
   }
