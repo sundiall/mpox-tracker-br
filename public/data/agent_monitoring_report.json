@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-18T16:51:40.883173",
+  "timestamp": "2026-11-18T17:47:04.046189",
   "totalItensVarredura": 30,
   "analiseAgente": {
     "alteracoesEstoque": [
@@ -14,16 +14,16 @@
     "novosMarcos": [],
     "alertasUrgentes": [
       {
+        "titulo": "São Paulo recebe mil novas doses da vacina contra a Mpox - agenciasp.sp.gov.br",
+        "tipo": "disponibilidade_vacina",
+        "resumo": "São Paulo recebe mil novas doses da vacina contra a Mpox&nbsp;&nbsp;agenciasp.sp.gov.br",
+        "linkOficial": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNSkYzc1Jsbm1KZFk2TXJxYVhJVGd6YmpGZEktc05fWU9weXYtcDFzTGJScFI1SGh6bC1OSWt6VFhqNlJsWlZ0SzhTZFJDVzZTMWJyV0NNcDFJcmpYblpBZVJKV0NJcnJrX3lybjVsVERZdDllWl9sNHFlanpwSXhySFo0MVo5bXhRMGt6OHJzVGFBaEp0T29sS2lsRQ?oc=5"
+      },
+      {
         "titulo": "Líder em casos de Mpox no Brasil, estado de SP recebe mil doses da vacina contra a doença - G1",
         "tipo": "disponibilidade_vacina",
         "resumo": "Líder em casos de Mpox no Brasil, estado de SP recebe mil doses da vacina contra a doença&nbsp;&nbsp;G1",
         "linkOficial": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNNFp0WFpoeTRDdVBhalFMRThhNmxTQ1YydGhIZWZWWWEyaUJfcGoyMGhiODhqTE1OYXBvZV9mTGV3SzY3OE5UcFdzU0lHX1dtZWpWbHlZanR3Ukg5UE05N0Noa3NBQ2RucWdINTZud2ZkQ1lTclZPN3FFWnN4VG16ODc0UXZEMXdGaHNlWmtVTTZhX3lLazJoRVdPNUNKV2JSel90b3VvT3JObDItTVptMDAzWHJJUnY4WkJVQy1XWlBvQVpVNEFCczY1ZlVObW9sZDEzbGNBXzg0cXBxamcxdNIB7wFBVV95cUxQWGFrNUtmVklkeldnV2htU01haFNIdkYxS05uMDZEN21CS1lzLXVHT0RQT2lub2xZcTJObnQ0ZldhS1NPNG9LQWNBVG10NGtSODFsMEtsMnY0cUhVTFBUeExuYWFyUWxmUklyMlU3eEZCNDBBajFLTFhMbFdPYkdSbTM2SElhRkQ5dGxvMzhCbDF6T1R4R1V5RmxvbjBOdzFSSkRpTUN6bTBrNVBmQVNRb0pwRGdueUhpdFdUNm90VTF5OWpjTGhLNVl3VUZhbVNyY3M3dG8xWW11cEVlOWJlenZBamlEbFVGOWtFSmFOdw?oc=5"
-      },
-      {
-        "titulo": "Prefeitura do Rio amplia público de vacinação contra Mpox - CNN Brasil",
-        "tipo": "disponibilidade_vacina",
-        "resumo": "Prefeitura do Rio amplia público de vacinação contra Mpox&nbsp;&nbsp;CNN Brasil",
-        "linkOficial": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNajFWMG05R2s5TV94Zmp3SVF2elV4T0I2VWplRTgzVmdvdnI5aDBTdmdpMGZYNU5VZ2xDMU9adTlZaU9zSDdXN0o4WTJkUkwxWHl3X0M4ZjQ1OHc1dmp2SDZRenlta3ZidzZwOTE1N0NRTFhZSXJHOFJkTndHVFlBdHM4OHJTcTc3SGluRzJKWnFPbS00MFJOMFBjOWFyZDlfTUdHQ3VwRWFIV1E?oc=5"
       },
       {
         "titulo": "Rio amplia vacinação contra MPOX - Prefeitura da Cidade do Rio de Janeiro",
@@ -32,16 +32,16 @@
         "linkOficial": "https://news.google.com/rss/articles/CBMib0FVX3lxTE90RzhXSFBmaVhXdGE4bmJnN2phYmVTamFYNjUwSnc4U0M4Y1E4NENmdmJXVGw3eWZVZFQ5UW5NNjRtbjFQZHhjRGdld0FYZjY4dy1LR2YzZ1BaTF80Mmxoc2JRQVNncFBkUXJ5cUV0QQ?oc=5"
       },
       {
-        "titulo": "Vacina contra mpox chega à rede pública de saúde do DF - Secretaria de Saúde do Distrito Federal",
+        "titulo": "Prefeitura do Rio amplia público de vacinação contra Mpox - CNN Brasil",
         "tipo": "disponibilidade_vacina",
-        "resumo": "Vacina contra mpox chega à rede pública de saúde do DF&nbsp;&nbsp;Secretaria de Saúde do Distrito Federal",
-        "linkOficial": "https://news.google.com/rss/articles/CBMijAFBVV95cUxONlZVWXYyMDR2bWI0TXBZRW84dnU3bmVVZU0xcTZqb2RLb2pmeFp4OVQ3VzI3cm11Qm9aNkIwUy1mUmxVR2tjb3lrRGp1ZU40SmJnQTFKaXNFaHVucGZIOHZiV2JTYjlsMEVuVEhSNlpZam8xZzNpRmk3Nmt5UjlzaEFENFlvN2ZMQTdGbg?oc=5"
+        "resumo": "Prefeitura do Rio amplia público de vacinação contra Mpox&nbsp;&nbsp;CNN Brasil",
+        "linkOficial": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNajFWMG05R2s5TV94Zmp3SVF2elV4T0I2VWplRTgzVmdvdnI5aDBTdmdpMGZYNU5VZ2xDMU9adTlZaU9zSDdXN0o4WTJkUkwxWHl3X0M4ZjQ1OHc1dmp2SDZRenlta3ZidzZwOTE1N0NRTFhZSXJHOFJkTndHVFlBdHM4OHJTcTc3SGluRzJKWnFPbS00MFJOMFBjOWFyZDlfTUdHQ3VwRWFIV1E?oc=5"
       },
       {
-        "titulo": "São Paulo recebe mil doses de vacina contra Mpox após liderar casos da doença no Brasil - Diário de São Paulo",
+        "titulo": "Ministério da Saúde envia ao município do Rio mais mil frascos de vacina contra mpox - RADAR DIGITAL BRASÍLIA",
         "tipo": "disponibilidade_vacina",
-        "resumo": "São Paulo recebe mil doses de vacina contra Mpox após liderar casos da doença no Brasil&nbsp;&nbsp;Diário de São Paulo",
-        "linkOficial": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQOFYyN2hVamFtWlFmY0I1MkxUaXhJOFg0MnBKX1otMGVTZGFyMGg0azlPTjNhT0hmeUVJUW1GSFRpODJDaTdKQnFJU3VuYnh3ajFoNURPWFo3YnhZdUd1NHQwbmRmOFEzWlJxNkJudGZUWjQ4VEZldG9sUUc4UkV0cmVJcFl2enVNcUtVdHZDeThHMVdSSVFBS0hqQWU0RDBsTWNrVjVhMGVKdndUa0pfSDAtUHlXR0JxTmdibDZaTWtZYmt2LVFMeVR6bUgwbTlvOGtLXzNWVdIB3AFBVV95cUxQbzRDZnpWMzVrWEtzQ25DbC16akpPSHA3SEdwLXI3Qm5wdklDQ0RMR3p1dEdaQVU0MFlUVGxmeTE3ZGtPZGFVVlhxTFBtLW80ZnVBY3QwTklfQWlER2hxV1NGdkl1ZGNNNjRsTURzZE9iVHZQb3Z5Y0MwbFNWdnlRQkhRWEtYZFg0V2VzRlQzbkhfaUVEVUo0V3dTal9SNGxpS3VSZjRWaXFSMDF5ZkpORlNnbnhtVkJsQ2J5N2hKX1VVT2N1SFFMaWJzLVp1eXRqUW5lTVk0Y2RyR3ZT?oc=5"
+        "resumo": "Ministério da Saúde envia ao município do Rio mais mil frascos de vacina contra mpox&nbsp;&nbsp;RADAR DIGITAL BRASÍLIA",
+        "linkOficial": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQemczamxHMEVoVnBlYm1IZzMyNW5jeFZlRFA2cnVndkRUbDU3d0RUc0VHSDB1ZFlvazhWSUtOd0ZTNUsyS2xZWFpvRWdBQzN5aUlPUE11TjJjbTZWTjFBN0NtMG9RWllCVFhUUGsyT2pVMkd3SW9ON1ljV0YwR1R0Sngxd3cxQ012NU44YVFoelJvTkNPNDhHZVNuMmFCMjdvSFR1eWZDVlBMakFYcS1PNmFsX2V3UU1renZUSDI2TUw5em13TlE?oc=5"
       }
     ]
   }
