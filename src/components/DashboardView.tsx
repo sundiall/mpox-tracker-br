@@ -211,6 +211,10 @@ export const DashboardView: FC<DashboardViewProps> = ({
 
             {/* Timestamps de Atualização da SVSA/MS */}
             <div className="flex flex-wrap items-center gap-2 pt-2 text-xs">
+              <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-emerald-950/70 border border-emerald-500/40 text-[11px] text-emerald-300 font-semibold shadow-sm">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span>Campanha Ativa</span>
+              </div>
               <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-950 border border-slate-800 text-[11px]">
                 <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
                 <span className="text-slate-400">Última atualização:</span>

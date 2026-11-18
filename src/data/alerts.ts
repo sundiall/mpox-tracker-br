@@ -12,6 +12,17 @@ export interface OfficialAlert {
 
 export const officialAlerts: OfficialAlert[] = [
   {
+    id: 'alert-rj-esgotamento-2026',
+    dataPublicacao: '2026-11-18',
+    orgaoEmissor: 'SES-RJ',
+    ufRelacionada: 'RJ',
+    titulo: 'ALERTA: Doses de vacina contra Mpox temporariamente esgotadas no Rio de Janeiro após intensa procura de usuários em PrEP',
+    tipo: 'alerta_urgente',
+    resumo: 'A Secretaria Municipal de Saúde do Rio de Janeiro (SMS-Rio) e a SES-RJ comunicaram o esgotamento temporário das doses da vacina MVA-BN em todos os Super Centros Cariocas (Botafogo, Nova América e Campo Grande), no CEVAA e na Fiocruz. A pasta formalizou pedido urgente de novo lote de reposição junto ao Ministério da Saúde.',
+    linkOficial: 'https://prefeitura.rio/saude',
+    categoria: 'Imunização'
+  },
+  {
     id: 'alert-1',
     dataPublicacao: '2026-11-12',
     orgaoEmissor: 'Ministério da Saúde',

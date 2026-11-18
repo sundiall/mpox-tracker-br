@@ -17,6 +17,10 @@ permissions:
 jobs:
   update-and-deploy:
     runs-on: ubuntu-latest
+    env:
+      FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+      FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
     steps:
       - name: Checkout do Repositório
         uses: actions/checkout@v4
@@ -57,7 +61,7 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add public/data/
+          git add public/data/ src/data/sync_status.ts src/data/alerts.ts src/data/vaccination_sites.ts src/data/vaccines.ts
           git diff --quiet && git diff --staged --quiet || (git commit -m "chore: atualização automática de dados e RSS [skip ci]" && git push)
 
       # Opção 1: Deploy no Google Firebase Hosting via Service Account

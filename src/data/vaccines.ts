@@ -48,6 +48,7 @@ export const vaccineMilestones: VaccineMilestone[] = [
     estadosEnvolvidos: ['SP', 'RJ', 'MG', 'BA', 'DF', 'CE', 'PR', 'RS'],
     detalhes: 'Distribuição prioritária para as Unidades da Federação com mais de 80% dos casos registrados no país. Esquema original de 2 doses (0,5 mL via subcutânea) com intervalo de 28 dias.',
     fonteOficial: 'Nota Técnica nº 40/2023-CGPNI/DEIDT/SVS/MS',
+    urlFonte: 'https://www.gov.br/saude/pt-br/assuntos/noticias/2023/marco/ministerio-da-saude-inicia-vacinacao-contra-a-mpox',
     status: 'concluido'
   },
   {
@@ -58,7 +59,8 @@ export const vaccineMilestones: VaccineMilestone[] = [
     publicoAlvo: 'Usuários de PrEP (Profilaxia Pré-Exposição) e profissionais de laboratório',
     estadosEnvolvidos: ['RJ', 'SP', 'DF', 'MG', 'BA'],
     detalhes: 'Frente à escassez global do imunizante, o Ministério da Saúde orientou a administração intradérmica de 0,1 mL (1/5 da dose subcutânea padrão). A estratégia multiplica em até 5 vezes o rendimento por frasco, garantindo títulos protetores comparáveis aos 0,5 mL para indivíduos imunocompetentes e usuários de PrEP.',
-    fonteOficial: 'Informe Técnico PNI/DATHI/SVSA e Resolução ANVISA',
+    fonteOficial: 'Informe Técnico PNI/DATHI/SVSA e Resolução ANVISA (Respaldo: Frey et al., Vaccine 2015)',
+    urlFonte: 'https://pubmed.ncbi.nlm.nih.gov/26143613/',
     status: 'concluido'
   },
   {
@@ -106,8 +108,8 @@ export const vaccineMilestones: VaccineMilestone[] = [
     quantidadeDoses: 5000,
     publicoAlvo: 'Usuários de PrEP (com laudo/receita até 6 meses), PVHA com CD4 < 200 e profissionais expostos',
     estadosEnvolvidos: ['RJ', 'SP'],
-    detalhes: 'A Prefeitura do Rio de Janeiro (SMS-Rio) liberou formalmente a vacinação contra Mpox para todos os usuários em uso de PrEP que nunca tenham tomado a vacina, além de trabalhadores de saúde e laboratório com risco ocupacional. Aplicação concentrada nos Super Centros Cariocas (Botafogo, Shopping Nova América, ParkShopping Campo Grande), CEVAA Dr. Álvaro Aguiar e CRIE/Fiocruz.',
-    fonteOficial: 'Secretaria Municipal de Saúde do Rio de Janeiro (SMS-Rio) / Ministério da Saúde',
+    detalhes: 'A Prefeitura do Rio de Janeiro (SMS-Rio) liberou a vacinação contra Mpox para usuários em uso de PrEP. Em 18/11/2026, as doses disponibilizadas nos Super Centros Cariocas e postos do Rio esgotaram-se rapidamente devido à intensa procura, aguardando novo lote de reposição do Ministério da Saúde.',
+    fonteOficial: 'Secretaria Municipal de Saúde do Rio de Janeiro (SMS-Rio) / SES-RJ',
     urlFonte: 'https://prefeitura.rio/saude',
     status: 'concluido'
   }
@@ -141,11 +143,11 @@ export const vaccinePopulationsRelease: PopulationReleaseCriteria[] = [
       'Receita médica válida ou laudo comprobatório de uso de PrEP emitido nos últimos 6 meses',
       'Cartão do SUS e caderneta de vacinação (se houver)'
     ],
-    estadosComDisponibilidade: ['RJ', 'SP', 'DF'],
+    estadosComDisponibilidade: ['SP', 'DF'],
     esquemaVacinal: '2 doses (0,1 mL via intradérmica ou 0,5 mL subcutânea) com intervalo de 28 dias.',
-    locaisAtendimento: 'RJ: Super Centros Cariocas de Vacinação (Botafogo, Shopping Nova América, ParkShopping Campo Grande), CEVAA Dr. Álvaro Aguiar e CRIE/Fiocruz. SP: Serviços de Atenção Especializada (SAE) e CRIEs.',
-    statusLiberacao: 'liberado_ativo',
-    detalhesAdicionais: 'A vacinação ocorre enquanto durar o estoque de doses remanescentes do Ministério da Saúde.'
+    locaisAtendimento: 'RJ: Super Centros Cariocas (doses esgotadas temporariamente, aguardando novo lote da SMS-Rio). SP: Serviços de Atenção Especializada (SAE) e CRIEs. DF: Unidades Básicas de Saúde de referência.',
+    statusLiberacao: 'estoque_limitado',
+    detalhesAdicionais: 'AVISO URGENTE RJ (18/11/2026): Estoque esgotado temporariamente em todos os Super Centros Cariocas, CEVAA e Fiocruz após alta procura de usuários em PrEP. Em São Paulo e DF, a vacinação prossegue conforme disponibilidade dos lotes remanescentes.'
   },
   {
     id: 'pop-pvha',

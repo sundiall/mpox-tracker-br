@@ -13,6 +13,11 @@ export interface EpidemiologicalWeekData {
   tendencia5s?: number | null;
   marco?: string;
   marcoId?: string;
+  statusConsolidacao?: 'consolidado' | 'preliminar_em_curso';
+  dadosTempoReal?: {
+    statusEstoqueVacinas?: 'disponivel' | 'esgotado' | 'em_reposicao';
+    notaVigilancia?: string;
+  };
 }
 
 export interface WeeklyByYearPoint {
@@ -34,6 +39,8 @@ export interface MilestoneNote {
   descricao: string;
   estadosAplicaveis: string[]; // ['todos'] ou ['RJ', 'SP']
   categoria: 'vacina' | 'vigilancia' | 'clinica';
+  linkFonte?: string;
+  rotuloFonte?: string;
 }
 
 export const epidemicMilestones: MilestoneNote[] = [
@@ -46,7 +53,9 @@ export const epidemicMilestones: MilestoneNote[] = [
     cor: '#38bdf8',
     descricao: 'Maior registro histórico de casos semanais de mpox no Brasil em uma única semana epidemiológica (SE 31/2022 com 1.053 casos confirmados/prováveis).',
     estadosAplicaveis: ['todos'],
-    categoria: 'vigilancia'
+    categoria: 'vigilancia',
+    linkFonte: 'https://www.gov.br/saude/pt-br/assuntos/situacao-epidemiologica-dados-mpox',
+    rotuloFonte: 'Boletim Epidemiológico - Ministério da Saúde'
   },
   {
     id: 'm2',
@@ -57,7 +66,9 @@ export const epidemicMilestones: MilestoneNote[] = [
     cor: '#34d399',
     descricao: 'Primeiro lote desembarcado no Brasil de vacinas MVA-BN (JYNNEOS) adquiridas pelo Ministério da Saúde via fundo rotativo da OPAS para profissionais de saúde de laboratórios NB-3 e contatos íntimos de casos confirmados (pós-exposição até 14 dias).',
     estadosAplicaveis: ['todos'],
-    categoria: 'vacina'
+    categoria: 'vacina',
+    linkFonte: 'https://www.paho.org/pt/noticias/4-10-2022-opas-apoia-chegada-do-primeiro-lote-vacinas-contra-monkeypox-ao-brasil',
+    rotuloFonte: 'OPAS / Ministério da Saúde (Out/2022)'
   },
   {
     id: 'm3',
@@ -68,7 +79,9 @@ export const epidemicMilestones: MilestoneNote[] = [
     cor: '#60a5fa',
     descricao: 'Lançamento oficial da campanha pré-exposição pelo SUS voltada a Pessoas Vivendo com HIV/AIDS com Linfócitos T-CD4 < 200 céls/mm³ (via subcutânea 0,5 mL) e pós-exposição para contatos íntimos em todo o território nacional.',
     estadosAplicaveis: ['todos'],
-    categoria: 'vacina'
+    categoria: 'vacina',
+    linkFonte: 'https://www.gov.br/saude/pt-br/assuntos/noticias/2023/marco/ministerio-da-saude-inicia-vacinacao-contra-a-mpox',
+    rotuloFonte: 'Ministério da Saúde / PNI (Mar/2023)'
   },
   {
     id: 'm4',
@@ -79,7 +92,9 @@ export const epidemicMilestones: MilestoneNote[] = [
     cor: '#c084fc',
     descricao: 'Implementação da aplicação fracionada intradérmica de 0,1 mL pioneiramente no Rio de Janeiro (RJ) e em São Paulo (SP) para usuários em PrEP, estendendo a cobertura vacinal em 5 vezes com respaldo do ensaio NIAID (Frey et al.).',
     estadosAplicaveis: ['RJ', 'SP'],
-    categoria: 'vacina'
+    categoria: 'vacina',
+    linkFonte: 'https://pubmed.ncbi.nlm.nih.gov/26143613/',
+    rotuloFonte: 'Frey et al. (Vaccine 2015 / NIAID-NIH)'
   },
   {
     id: 'm7',
@@ -90,7 +105,9 @@ export const epidemicMilestones: MilestoneNote[] = [
     cor: '#a78bfa',
     descricao: 'Ministério da Saúde normatiza a aplicação intradérmica fracionada (0,1 mL) em âmbito federal para otimização de estoques, estendendo a vacinação para contatos sexuais e CRIEs em todas as capitais de alta incidência.',
     estadosAplicaveis: ['todos'],
-    categoria: 'vacina'
+    categoria: 'vacina',
+    linkFonte: 'https://www.gov.br/saude/pt-br/assuntos/noticias/2024/novembro/ministerio-da-saude-atualiza-recomendacoes-de-vacinacao-contra-a-mpox',
+    rotuloFonte: 'Nota Técnica nº 22/2023-MS'
   },
   {
     id: 'm8',
@@ -101,7 +118,9 @@ export const epidemicMilestones: MilestoneNote[] = [
     cor: '#38bdf8',
     descricao: 'Ampliação do público prioritário no SUS para Pessoas Vivendo com HIV com contagem de CD4 até 350 céls/mm³ e pessoas em situação de vulnerabilidade acrescida acompanhadas em CTAs e serviços especializados de IST.',
     estadosAplicaveis: ['todos'],
-    categoria: 'vacina'
+    categoria: 'vacina',
+    linkFonte: 'https://www.gov.br/saude/pt-br/assuntos/noticias/2024/agosto/ministerio-da-saude-instala-centro-de-operacoes-de-emergencia-para-mpox',
+    rotuloFonte: 'Informe PNI/SVSA (Mar/2024)'
   },
   {
     id: 'm5',
@@ -112,7 +131,9 @@ export const epidemicMilestones: MilestoneNote[] = [
     cor: '#fb923c',
     descricao: 'Declaração de Emergência de Saúde Pública de Importância Internacional (ESPII) pela OMS devido ao Clado Ib. Ministério da Saúde instala Centro de Operações de Emergência (COE), adquire 25 mil doses extras pela OPAS e reforça vigilância em fronteiras e capitais.',
     estadosAplicaveis: ['todos'],
-    categoria: 'vigilancia'
+    categoria: 'vigilancia',
+    linkFonte: 'https://www.who.int/news/item/14-08-2024-who-director-general-declares-mpox-outbreak-a-public-health-emergency-of-international-concern',
+    rotuloFonte: 'OMS / Declaração ESPII Clado Ib (Ago/2024)'
   },
   {
     id: 'm9',
@@ -123,7 +144,9 @@ export const epidemicMilestones: MilestoneNote[] = [
     cor: '#e879f9',
     descricao: 'Ministério da Saúde (DPNI/SVSA/MS) formaliza a recomendação nacional de vacinação por via intradérmica (0,1 mL) para todos os usuários em Profilaxia Pré-Exposição (PrEP ao HIV) e técnicos de laboratório no SUS, mantendo via SC (0,5 mL) para PVHA.',
     estadosAplicaveis: ['todos'],
-    categoria: 'vacina'
+    categoria: 'vacina',
+    linkFonte: 'https://www.gov.br/saude/pt-br/assuntos/noticias/2024/novembro/ministerio-da-saude-atualiza-recomendacoes-de-vacinacao-contra-a-mpox',
+    rotuloFonte: 'Nota Técnica Conjunta nº 403/2026-MS'
   },
   {
     id: 'm6',
@@ -132,9 +155,11 @@ export const epidemicMilestones: MilestoneNote[] = [
     tituloCurto: 'PrEP Aberta (Nov/26)',
     simbolo: '⑨',
     cor: '#f43f5e',
-    descricao: 'A Secretaria Municipal de Saúde do Rio de Janeiro (SMS-Rio) e centros de SP liberam formalmente a vacina MVA-BN em livre demanda para usuários em PrEP (com receita até 6 meses) e trabalhadores expostos, com cerca de 5 mil doses nos Super Centros Cariocas e CRIEs.',
+    descricao: 'A Secretaria Municipal de Saúde do Rio de Janeiro (SMS-Rio) e centros de SP liberaram a vacina MVA-BN em livre demanda para usuários em PrEP. No Rio, a grande procura esgotou as cerca de 5 mil doses em poucos dias, com a SMS-Rio solicitando novo lote de reposição ao Ministério da Saúde.',
     estadosAplicaveis: ['RJ', 'SP'],
-    categoria: 'vacina'
+    categoria: 'vacina',
+    linkFonte: 'https://prefeitura.rio/saude/secretaria-municipal-de-saude-do-rio-amplia-vacinacao-contra-mpox/',
+    rotuloFonte: 'Prefeitura do Rio / SMS-Rio (Nov/2026)'
   }
 ];
 
@@ -3828,7 +3853,12 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "dosesAcumuladas": 47969,
     "mediaMovel7d": 122,
     "tendencia3s": 91,
-    "tendencia5s": 124
+    "tendencia5s": 124,
+    "statusConsolidacao": "preliminar_em_curso",
+    "dadosTempoReal": {
+      "statusEstoqueVacinas": "esgotado",
+      "notaVigilancia": "Semana epidemiológica aberta em monitoramento contínuo. Sujeito à consolidação oficial pelo Ministério da Saúde na próxima terça-feira."
+    }
   }
 ];
 

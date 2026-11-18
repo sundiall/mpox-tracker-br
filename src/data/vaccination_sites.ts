@@ -57,9 +57,9 @@ export const vaccinationSites: VaccinationSite[] = [
     agendamento: 'Livre Demanda',
     observacoes: 'Polo principal de vacinação ampliada contra Mpox no Rio de Janeiro. Aplicação para usuários de PrEP e trabalhadores expostos.',
     requisitos: 'Documento com foto, CPF, cartão SUS e receita médica ou laudo comprobatório de uso de PrEP emitido nos últimos 6 meses.',
-    statusEstoque: 'disponivel',
+    statusEstoque: 'esgotado',
     dataAtualizacaoStatus: '2026-11-18',
-    notaStatus: 'Doses disponíveis para usuários em PrEP e grupos prioritários.'
+    notaStatus: 'Doses temporariamente esgotadas após alta procura. A SMS-Rio aguarda envio de nova remessa de vacinas pelo Ministério da Saúde.'
   },
   {
     id: 'rj-3',
@@ -76,9 +76,9 @@ export const vaccinationSites: VaccinationSite[] = [
     agendamento: 'Livre Demanda',
     observacoes: 'Ponto estratégico de vacinação na Zona Norte carioca para PrEP e populações prioritárias.',
     requisitos: 'Documento de identidade com foto, CPF e receita/laudo de PrEP recente (até 6 meses).',
-    statusEstoque: 'disponivel',
+    statusEstoque: 'esgotado',
     dataAtualizacaoStatus: '2026-11-18',
-    notaStatus: 'Doses disponíveis em livre demanda.'
+    notaStatus: 'Estoque de vacinas esgotado temporariamente. Aguardando reposição da rede municipal de saúde.'
   },
   {
     id: 'rj-4',
@@ -95,9 +95,9 @@ export const vaccinationSites: VaccinationSite[] = [
     agendamento: 'Livre Demanda',
     observacoes: 'Ponto de referência para a Zona Oeste para vacinação contra Mpox.',
     requisitos: 'Documento oficial com foto, cartão SUS e comprovação de PrEP (receita até 6 meses) ou indicação médica.',
-    statusEstoque: 'disponivel',
+    statusEstoque: 'esgotado',
     dataAtualizacaoStatus: '2026-11-18',
-    notaStatus: 'Doses disponíveis para imunização de usuários de PrEP.'
+    notaStatus: 'Estoque temporariamente esgotado. Aguardando novo lote da SMS-Rio.'
   },
   {
     id: 'rj-5',

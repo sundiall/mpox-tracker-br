@@ -30,6 +30,7 @@ import {
 import { vaccineMilestones, vaccinePopulationsRelease } from '../data/vaccines';
 import type { VaccineMilestone } from '../data/vaccines';
 import { vaccineProgressTimeData } from '../data/time_series';
+import { syncMetadata } from '../data/sync_status';
 
 interface VaccinesMilestonesViewProps {
   selectedUF: string | null;
@@ -345,15 +346,26 @@ export const VaccinesMilestonesView: FC<VaccinesMilestonesViewProps> = ({
                 </p>
               </div>
 
-              <div className="p-3 bg-slate-950 rounded-lg border border-slate-800">
-                <span className="text-xs font-semibold text-cyan-300 flex items-center gap-1.5 mb-1">
-                  <CheckCircle2 className="w-4 h-4 text-cyan-400" />
-                  Evidência Clínica (Frey et al.)
-                </span>
-                <p className="text-[11px] text-slate-300 leading-relaxed">
-                  Ensaio clínico do NIH/NIAID (Vaccine 2015) comprovou títulos de anticorpos neutralizantes e soroconversão equivalentes
-                  entre 0,1 mL ID e 0,5 mL SC.
-                </p>
+              <div className="p-3 bg-slate-950 rounded-lg border border-slate-800 flex flex-col justify-between">
+                <div>
+                  <span className="text-xs font-semibold text-cyan-300 flex items-center gap-1.5 mb-1">
+                    <CheckCircle2 className="w-4 h-4 text-cyan-400" />
+                    Evidência Clínica (Frey et al.)
+                  </span>
+                  <p className="text-[11px] text-slate-300 leading-relaxed mb-2">
+                    Ensaio clínico do NIH/NIAID (Vaccine 2015) comprovou títulos de anticorpos neutralizantes e soroconversão equivalentes
+                    entre 0,1 mL ID e 0,5 mL SC.
+                  </p>
+                </div>
+                <a
+                  href="https://pubmed.ncbi.nlm.nih.gov/26143613/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-[11px] text-cyan-400 hover:text-cyan-300 hover:underline font-medium pt-1"
+                >
+                  <ExternalLink className="w-3 h-3 shrink-0" />
+                  <span>Fonte: PubMed (NIH / Vaccine 2015)</span>
+                </a>
               </div>
 
               <div className="p-3 bg-slate-950 rounded-lg border border-slate-800">
@@ -412,7 +424,7 @@ export const VaccinesMilestonesView: FC<VaccinesMilestonesViewProps> = ({
 
       {/* Linha do Tempo de Marcos (Milestones) */}
       <div className="relative pl-6 sm:pl-8 border-l-2 border-slate-800 space-y-5">
-        {filteredMilestones.map((milestone) => {
+        {filteredMilestones.map((milestone, index) => {
           const badge = getTipoBadge(milestone.tipo);
 
           return (
@@ -443,7 +455,20 @@ export const VaccinesMilestonesView: FC<VaccinesMilestonesViewProps> = ({
                   )}
                 </div>
 
-                <h4 className="text-sm sm:text-base font-bold text-white mb-1.5">{milestone.titulo}</h4>
+                {milestone.urlFonte ? (
+                  <a
+                    href={milestone.urlFonte}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-sm sm:text-base font-bold text-white hover:text-cyan-300 transition-colors inline-flex items-center gap-1.5 mb-1.5 group/mtitle"
+                    title={`Acessar estudo / fonte oficial: ${milestone.fonteOficial}`}
+                  >
+                    <span className="group-hover/mtitle:underline">{milestone.titulo}</span>
+                    <ExternalLink className="w-3.5 h-3.5 text-cyan-400 group-hover/mtitle:translate-x-0.5 transition-transform shrink-0" />
+                  </a>
+                ) : (
+                  <h4 className="text-sm sm:text-base font-bold text-white mb-1.5">{milestone.titulo}</h4>
+                )}
 
                 <p className="text-xs text-slate-300 leading-relaxed mb-3">
                   {milestone.detalhes}
@@ -468,6 +493,19 @@ export const VaccinesMilestonesView: FC<VaccinesMilestonesViewProps> = ({
                     )}
                   </div>
                 </div>
+
+                {index === filteredMilestones.length - 1 && (
+                  <div className="mt-3 pt-2.5 border-t border-slate-800/80 flex flex-wrap items-center justify-between gap-2 text-xs">
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-950/80 border border-emerald-500/40 text-emerald-300 font-semibold text-[11px]">
+                      <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                      Campanha Ativa
+                    </span>
+                    <div className="flex items-center gap-1.5 text-slate-400 text-[11px] font-mono">
+                      <Clock className="w-3.5 h-3.5 text-cyan-400 shrink-0" />
+                      <span>Próxima atualização correspondente: <strong className="text-cyan-300">{syncMetadata.proximaAtualizacaoPrevista}</strong></span>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           );

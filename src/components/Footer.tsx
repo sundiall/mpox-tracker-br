@@ -188,15 +188,19 @@ export const Footer: React.FC<FooterProps> = ({ onOpenFeedback }) => {
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row items-center sm:items-end md:items-end gap-2 text-[11px]">
-            <span className="flex items-center gap-1.5 text-emerald-400">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-              <span>Última atualização: <strong className="text-slate-200">{syncMetadata.ultimaAtualizacaoFormatada}</strong></span>
-            </span>
-            <span className="flex items-center gap-1.5 text-slate-400">
+          <div className="flex flex-wrap items-center justify-center md:justify-end gap-2 text-[11px]">
+            <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-emerald-950/70 border border-emerald-500/40 text-[11px] text-emerald-300 font-semibold shadow-sm">
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span>Campanha Ativa</span>
+            </div>
+            <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-950 border border-slate-800 text-slate-300">
+              <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
+              <span>Última atualização: <strong className="text-slate-100 font-mono">{syncMetadata.ultimaAtualizacaoFormatada}</strong></span>
+            </div>
+            <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-950 border border-slate-800 text-slate-300">
               <Clock className="w-3.5 h-3.5 text-cyan-400" />
-              <span>Próxima prevista: <strong className="text-cyan-300">{syncMetadata.proximaAtualizacaoPrevista}</strong></span>
-            </span>
+              <span>Próxima prevista: <strong className="text-cyan-300 font-mono">{syncMetadata.proximaAtualizacaoPrevista}</strong></span>
+            </div>
           </div>
         </div>
       </div>

@@ -14,6 +14,11 @@ import urllib.parse
 import xml.etree.ElementTree as ET
 from datetime import datetime
 
+try:
+    from update_data import update_sync_status
+except ImportError:
+    from scripts.update_data import update_sync_status
+
 # Feeds de Notícias e Alertas em Tempo Real
 FEEDS = [
     {
@@ -22,9 +27,24 @@ FEEDS = [
         "tipo": "google_news"
     },
     {
-        "nome": "Google News Real-Time (Mpox RJ & SP Super Centros & CRIEs)",
-        "url": "https://news.google.com/rss/search?q=" + urllib.parse.quote("mpox (rio de janeiro OR sao paulo OR crie OR super centro) vacina") + "&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+        "nome": "Google News Real-Time (Mpox RJ & SP Super Centros & Redes Sociais)",
+        "url": "https://news.google.com/rss/search?q=" + urllib.parse.quote("mpox (vacina OR doses OR prep) (esgotou OR acabou OR 'sem doses' OR 'saude_rio' OR 'saudeprefsp' OR 'super centro' OR fila OR 'novo lote')") + "&hl=pt-BR&gl=BR&ceid=BR:pt-419",
         "tipo": "google_news"
+    },
+    {
+        "nome": "Google News Real-Time (CIEVS & Secretarias RJ, SP, DF, MG, BA)",
+        "url": "https://news.google.com/rss/search?q=" + urllib.parse.quote("mpox ('secretaria de saude' OR 'secretaria municipal' OR cievs OR 'boletim epidemiologico') (rio OR 'sao paulo' OR 'distrito federal' OR 'minas gerais')") + "&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+        "tipo": "google_news"
+    },
+    {
+        "nome": "Prefeitura da Cidade do Rio de Janeiro (SMS-Rio Notícias)",
+        "url": "https://prefeitura.rio/feed/",
+        "tipo": "institucional"
+    },
+    {
+        "nome": "Agência Brasil - Saúde (SUS & Cobertura Nacional)",
+        "url": "https://agenciabrasil.ebc.com.br/rss/saude/feed.xml",
+        "tipo": "institucional"
     },
     {
         "nome": "Ministério da Saúde - Notícias Oficiais",
@@ -40,7 +60,8 @@ FEEDS = [
 
 KEYWORDS = [
     "mpox", "varíola", "mva-bn", "jynneos", "vacina", "vacinação",
-    "fiocruz", "cevaa", "prep", "crie", "super centro", "doses", "esgotou"
+    "fiocruz", "cevaa", "prep", "crie", "super centro", "doses", "esgotou",
+    "acabou", "falta", "sem doses", "reabastecimento", "lote", "saude_rio", "saudeprefsp", "fila", "subpav"
 ]
 
 def fetch_feed_items():
@@ -89,7 +110,7 @@ def analyze_with_gemini(items, api_key):
     """
     print("🧠 [Agente] Invocando Google Gemini API para análise de impacto...")
     # Modelos suportados pela Gemini API
-    model_name = os.environ.get("GEMINI_MODEL", "gemini-1.5-flash")
+    model_name = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
     url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={api_key}"
 
     prompt = f"""
@@ -171,7 +192,16 @@ def fallback_heuristic_analysis(items):
     for it in items:
         texto = f"{it['titulo']} {it['resumo']}".lower()
 
-        # Detecção de esgotamento de vacina em postos do RJ
+        # Detecção de esgotamento de vacina em postos do RJ e Super Centros
+        if ("super centro" in texto or "botafogo" in texto or "nova américa" in texto or "campo grande" in texto or "rio de janeiro" in texto or "sms-rio" in texto) and any(p in texto for p in ["esgotou", "esgotado", "acabou", "terminou", "fila", "alta procura", "sem doses"]):
+            alteracoes.append({
+                "unidade": "Super Centros Cariocas e Postos do Rio de Janeiro",
+                "uf": "RJ",
+                "statusEstoque": "esgotado",
+                "motivo": "Doses temporariamente esgotadas na rede carioca segundo relatos e comunicados oficiais. Aguardando novo lote de reposição.",
+                "fonte": it["link"]
+            })
+
         if "fiocruz" in texto and any(p in texto for p in ["esgotou", "acabou", "terminou", "fila", "alta procura"]):
             alteracoes.append({
                 "unidade": "Instituto Nacional de Infectologia Evandro Chagas (CRIE / INI / Fiocruz)",
@@ -261,6 +291,12 @@ def main():
     with open(state_file, "w", encoding="utf-8") as sf:
         json.dump(state, sf, ensure_ascii=False, indent=2)
     print(f"🔄 [Agente] Estado adaptativo atualizado: modo={state.get('modo')} (dias sem novidades: {state.get('diasSemNovidades', 0)})")
+
+    # Atualizar metadados globais de sincronização e horários
+    try:
+        update_sync_status()
+    except Exception as e:
+        print(f"⚠️ Erro ao atualizar metadados de sincronização: {e}")
 
 if __name__ == "__main__":
     main()

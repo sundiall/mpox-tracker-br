@@ -8,8 +8,86 @@
       name="description"
       content="Monitoramento independente de dados de Mpox no Brasil, distribuição de vacinas MVA-BN (estratégia intradérmica 0,1 mL), guia clínico, fases de transmissão e locais de vacinação no SUS."
     />
+    <link rel="canonical" href="https://mpox-tracker-br.web.app/" />
     <meta name="theme-color" content="#020617" />
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2306b6d4' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z'/></svg>" />
+
+    <!-- Open Graph / Redes Sociais -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:url" content="https://mpox-tracker-br.web.app/" />
+    <meta property="og:site_name" content="Mpox Brasil" />
+    <meta property="og:title" content="Mpox Brasil — Painel Epidemiológico, Vacinas & Guia Clínico" />
+    <meta property="og:description" content="Monitoramento epidemiológico independente de Mpox no Brasil, vacinação intradérmica MVA-BN, guia clínico sem estigmas e mapa de postos no SUS." />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Mpox Brasil — Painel Epidemiológico, Vacinas & Guia Clínico" />
+    <meta name="twitter:description" content="Monitoramento epidemiológico independente de Mpox no Brasil, vacinação intradérmica MVA-BN, guia clínico sem estigmas e mapa de postos no SUS." />
+
+    <!-- Dados Estruturados Schema.org (Google & LLM/IA Indexing) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "MedicalWebPage",
+          "@id": "https://mpox-tracker-br.web.app/#webpage",
+          "url": "https://mpox-tracker-br.web.app/",
+          "name": "Mpox Brasil — Painel Epidemiológico, Vacinas & Guia Clínico",
+          "description": "Monitoramento independente de dados de Mpox no Brasil, distribuição de vacinas MVA-BN (estratégia intradérmica 0,1 mL), guia clínico e locais de vacinação no SUS.",
+          "inLanguage": "pt-BR",
+          "about": {
+            "@type": "MedicalCondition",
+            "name": "Mpox",
+            "code": {
+              "@type": "MedicalCode",
+              "code": "B04",
+              "codingSystem": "ICD-10"
+            }
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://mpox-tracker-br.web.app/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Como o vírus da mpox é transmitido na prática?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A principal via de transmissão é o contato físico direto e prolongado pele a pele com lesões cutâneas, crostas ou fluidos corporais de uma pessoa infectada (relações sexuais, beijos, abraços) ou contato com objetos/roupas contaminadas."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Qual é o período exato em que uma pessoa com mpox transmite o vírus?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A transmissão se inicia com os primeiros sintomas clínicos e continua até que todas as feridas tenham secado, todas as crostas tenham se desprendido e uma nova camada de pele íntegra tenha se formado (geralmente 2 a 4 semanas)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Por que é utilizada 1/5 da dose (0,1 mL intradérmica) da vacina MVA-BN no Brasil?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Devido à escassez global do imunizante MVA-BN (JYNNEOS), a aplicação intradérmica de 0,1 mL induz resposta imune equivalente à dose subcutânea de 0,5 mL (ensaio clínico NIH/NIAID), multiplicando em até 5 vezes o alcance do estoque disponível para usuários de PrEP."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Quem pode se vacinar contra mpox no SUS?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A vacinação é prioritária para grupos de maior vulnerabilidade: pessoas vivendo com HIV com imunossupressão (CD4 < 200), usuários cadastrados de PrEP, contatos próximos pós-exposição e profissionais de laboratório NB-3."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
   </head>
   <body class="bg-slate-950 text-slate-100 min-h-screen">
     <div id="root"></div>

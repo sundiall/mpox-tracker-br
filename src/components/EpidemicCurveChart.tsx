@@ -11,9 +11,11 @@ import {
   Legend, 
   CartesianGrid, 
   Area, 
-  ReferenceLine 
+  ReferenceLine,
+  Cell
 } from 'recharts';
 import { getEpidemicCurve, getApplicableMilestones, getWeeklyByYear, epidemicTimeSeries } from '../data/time_series';
+import { syncMetadata } from '../data/sync_status';
 import { statesData } from '../data/epidemiology';
 import { formatWeekToCommonDate, getEpidemiologicalWeekDateRange } from '../utils/date_converters';
 import { 
@@ -29,7 +31,9 @@ import {
   ChevronDown, 
   ChevronUp,
   Activity,
-  AlertCircle
+  AlertCircle,
+  ExternalLink,
+  Clock
 } from 'lucide-react';
 
 interface EpidemicCurveChartProps {
@@ -340,6 +344,24 @@ export const EpidemicCurveChart: FC<EpidemicCurveChartProps> = ({
             </p>
           )}
 
+          {/* Alerta de Semana em Curso / Dados Preliminares */}
+          {dataPoint?.statusConsolidacao === 'preliminar_em_curso' && (
+            <div className="mt-2 p-2 rounded-lg bg-cyan-950/40 border border-cyan-500/40 text-cyan-200 text-[11px] space-y-1">
+              <div className="flex items-center gap-1.5 font-semibold text-cyan-300">
+                <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+                <span>Semana em Curso • Dados Preliminares</span>
+              </div>
+              <p className="text-[10px] text-slate-300 leading-snug">
+                {dataPoint?.dadosTempoReal?.notaVigilancia || 'Dados parciais sujeitos à consolidação pelo Ministério da Saúde.'}
+              </p>
+              {dataPoint?.dadosTempoReal?.statusEstoqueVacinas === 'esgotado' && (
+                <div className="text-[10px] font-semibold text-rose-300 bg-rose-950/60 px-1.5 py-0.5 rounded border border-rose-800/60 mt-1">
+                  ⚠️ Doses esgotadas temporariamente em polos do RJ
+                </div>
+              )}
+            </div>
+          )}
+
           {/* Detalhes do Marco Histórico / Intervenção com data e título */}
           {(() => {
             const milestoneForWeek = applicableMilestones.find((m) => m.semana === dataPoint?.semana);
@@ -387,8 +409,16 @@ export const EpidemicCurveChart: FC<EpidemicCurveChartProps> = ({
               {currentState ? currentState.uf : 'BR'}
             </span>
           </div>
-          <p className="text-xs text-slate-400 mt-0.5">
-            Exibindo dados para: <strong className="text-slate-200">{stateLabel}</strong> • {displayMode === 'oficial_ano' ? `Padrão Oficial MS (Semanas ${minWeekFilter || 1} a ${maxWeekFilter || 52} • Anos: ${displayedYears.join(', ')})` : `Série contínua (${periodLabel || 'SE 22/2022 a SE 46/2026'})`}
+          <p className="text-xs text-slate-400 mt-0.5 flex flex-wrap items-center gap-x-2 gap-y-1">
+            <span>
+              Exibindo dados para: <strong className="text-slate-200">{stateLabel}</strong> • {displayMode === 'oficial_ano' ? `Padrão Oficial MS (Semanas ${minWeekFilter || 1} a ${maxWeekFilter || 52} • Anos: ${displayedYears.join(', ')})` : `Série contínua (${periodLabel || 'SE 22/2022 a SE 46/2026'})`}
+            </span>
+            {displayMode === 'continua' && (
+              <span className="inline-flex items-center gap-1 text-[10px] text-cyan-300 bg-cyan-950/60 px-2 py-0.5 rounded border border-cyan-500/30 font-medium">
+                <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
+                Barra Hachurada: Semana em curso (dados preliminares em tempo real)
+              </span>
+            )}
           </p>
         </div>
 
@@ -788,6 +818,12 @@ export const EpidemicCurveChart: FC<EpidemicCurveChartProps> = ({
               </ComposedChart>
             ) : (
               <ComposedChart data={chartData} margin={{ top: hasMilestoneOverlap ? 32 : 48, right: showVaccines ? (isMobile ? 0 : 20) : (isMobile ? 0 : 10), left: isMobile ? 0 : 5, bottom: 25 }}>
+                <defs>
+                  <pattern id="stripe-preliminar" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+                    <line x1="0" y1="0" x2="0" y2="6" stroke="#38bdf8" strokeWidth="2" />
+                    <line x1="0" y1="0" x2="6" y2="0" stroke="#0e7490" strokeWidth="0.8" />
+                  </pattern>
+                </defs>
                 <CartesianGrid strokeDasharray="3 3" stroke="#1e293b" vertical={false} />
                 <XAxis 
                   dataKey="semana" 
@@ -848,7 +884,19 @@ export const EpidemicCurveChart: FC<EpidemicCurveChartProps> = ({
                       name="Casos Notificados (Semana)" 
                       fill="#0891b2" 
                       radius={[3, 3, 0, 0]} 
-                    />
+                    >
+                      {chartData.map((entry, index) => {
+                        const isPreliminar = entry.statusConsolidacao === 'preliminar_em_curso';
+                        return (
+                          <Cell 
+                            key={`cell-${index}`} 
+                            fill={isPreliminar ? "url(#stripe-preliminar)" : "#0891b2"}
+                            stroke={isPreliminar ? "#38bdf8" : undefined}
+                            strokeWidth={isPreliminar ? 1.5 : 0}
+                          />
+                        );
+                      })}
+                    </Bar>
                     <Line 
                       yAxisId="casos"
                       type="monotone" 
@@ -955,39 +1003,99 @@ export const EpidemicCurveChart: FC<EpidemicCurveChartProps> = ({
           {isMilestonesExpanded && (
             <div className="p-3.5 pt-0 border-t border-slate-900">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2.5 pt-3">
-                {applicableMilestones.map((m) => {
+                {applicableMilestones.map((m, idx) => {
                   const color = m.cor || '#94a3b8';
                   const symbol = m.simbolo || '•';
+                  const isLatest = idx === applicableMilestones.length - 1;
                   return (
-                    <div key={m.id} className="p-2.5 rounded-lg bg-slate-900 border border-slate-800 space-y-1.5">
-                      <div className="flex items-center justify-between gap-1 text-[11px]">
-                        <div className="flex items-center gap-1.5">
-                          <span 
-                            className="w-5 h-5 rounded-full flex items-center justify-center font-bold text-xs shrink-0 shadow-sm"
-                            style={{
-                              backgroundColor: `${color}25`,
-                              color: color,
-                              border: `1.5px solid ${color}`
-                            }}
-                            title={`Símbolo no gráfico: ${symbol}`}
-                          >
-                            {symbol}
+                    <div key={m.id} className="p-2.5 rounded-lg bg-slate-900 border border-slate-800 space-y-1.5 flex flex-col justify-between">
+                      <div className="space-y-1.5">
+                        <div className="flex items-center justify-between gap-1 text-[11px]">
+                          <div className="flex items-center gap-1.5">
+                            <span 
+                              className="w-5 h-5 rounded-full flex items-center justify-center font-bold text-xs shrink-0 shadow-sm"
+                              style={{
+                                backgroundColor: `${color}25`,
+                                color: color,
+                                border: `1.5px solid ${color}`
+                              }}
+                              title={`Símbolo no gráfico: ${symbol}`}
+                            >
+                              {symbol}
+                            </span>
+                            <strong className="text-cyan-300 font-mono">{m.semana}</strong>
+                          </div>
+                          <span className={`px-1.5 py-0.2 rounded text-[10px] font-mono ${
+                            m.categoria === 'vacina' ? 'bg-emerald-950 text-emerald-400 border border-emerald-800' :
+                            m.categoria === 'clinica' ? 'bg-rose-950 text-rose-400 border border-rose-800' :
+                            'bg-sky-950 text-sky-400 border border-sky-800'
+                          }`}>
+                            {m.categoria}
                           </span>
-                          <strong className="text-cyan-300 font-mono">{m.semana}</strong>
                         </div>
-                        <span className={`px-1.5 py-0.2 rounded text-[10px] font-mono ${
-                          m.categoria === 'vacina' ? 'bg-emerald-950 text-emerald-400 border border-emerald-800' :
-                          m.categoria === 'clinica' ? 'bg-rose-950 text-rose-400 border border-rose-800' :
-                          'bg-sky-950 text-sky-400 border border-sky-800'
-                        }`}>
-                          {m.categoria}
-                        </span>
+                        {m.linkFonte ? (
+                          <a
+                            href={m.linkFonte}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group/title inline-flex items-center gap-1.5 font-bold text-white text-[11px] leading-tight hover:text-cyan-300 transition-colors"
+                            title={`Acessar estudo / fonte oficial: ${m.rotuloFonte || m.titulo}`}
+                          >
+                            <span className="group-hover/title:underline">{m.titulo}</span>
+                            <ExternalLink className="w-3 h-3 text-cyan-400 shrink-0 group-hover/title:translate-x-0.5 transition-transform" />
+                          </a>
+                        ) : (
+                          <h5 className="font-bold text-white text-[11px] leading-tight">{m.titulo}</h5>
+                        )}
+                        <p className="text-[11px] text-slate-400 leading-snug">{m.descricao}</p>
                       </div>
-                      <h5 className="font-bold text-white text-[11px] leading-tight">{m.titulo}</h5>
-                      <p className="text-[11px] text-slate-400 leading-snug">{m.descricao}</p>
+                      <div className="space-y-1.5 pt-1.5 border-t border-slate-800/80 mt-1">
+                        {m.linkFonte && (
+                          <div>
+                            <a
+                              href={m.linkFonte}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-1 text-[10px] text-cyan-400 hover:text-cyan-300 hover:underline font-medium"
+                            >
+                              <ExternalLink className="w-3 h-3 shrink-0" />
+                              <span className="truncate">Fonte: {m.rotuloFonte || 'Ver fonte oficial'}</span>
+                            </a>
+                          </div>
+                        )}
+                        {isLatest && (
+                          <div className="pt-1 border-t border-slate-800/60 flex flex-wrap items-center justify-between gap-1 text-[9.5px]">
+                            <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded-full bg-emerald-950/90 border border-emerald-500/40 text-emerald-300 font-semibold">
+                              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                              Campanha Ativa
+                            </span>
+                            <span className="text-slate-400 font-mono flex items-center gap-1">
+                              <Clock className="w-2.5 h-2.5 text-cyan-400 shrink-0" />
+                              <span>Próxima: <strong className="text-cyan-300">{syncMetadata.proximaAtualizacaoPrevista}</strong></span>
+                            </span>
+                          </div>
+                        )}
+                      </div>
                     </div>
                   );
                 })}
+              </div>
+
+              {/* Rodapé da Última Atualização da Campanha */}
+              <div className="mt-3 pt-2.5 border-t border-slate-800/80 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs bg-slate-900/60 p-2.5 rounded-lg border border-slate-800/50">
+                <div className="flex items-center gap-2">
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-950 border border-emerald-500/40 text-emerald-300 text-[11px] font-semibold shadow-sm">
+                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    Campanha Ativa
+                  </span>
+                  <span className="text-slate-300 text-[11px]">
+                    Última atualização: <strong className="text-slate-100 font-mono">{syncMetadata.ultimaAtualizacaoFormatada}</strong>
+                  </span>
+                </div>
+                <div className="flex items-center gap-1.5 text-[11px] text-slate-400 font-mono">
+                  <Clock className="w-3.5 h-3.5 text-cyan-400 shrink-0" />
+                  <span>Próxima atualização correspondente: <strong className="text-cyan-300">{syncMetadata.proximaAtualizacaoPrevista}</strong></span>
+                </div>
               </div>
             </div>
           )}
