@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-11-18T21:41:50.528150",
-  "totalItensVarredura": 32,
+  "timestamp": "2026-11-18T22:26:59.875312",
+  "totalItensVarredura": 44,
   "analiseAgente": {
     "alteracoesEstoque": [
       {
@@ -26,6 +26,12 @@
         "linkOficial": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNSkYzc1Jsbm1KZFk2TXJxYVhJVGd6YmpGZEktc05fWU9weXYtcDFzTGJScFI1SGh6bC1OSWt6VFhqNlJsWlZ0SzhTZFJDVzZTMWJyV0NNcDFJcmpYblpBZVJKV0NJcnJrX3lybjVsVERZdDllWl9sNHFlanpwSXhySFo0MVo5bXhRMGt6OHJzVGFBaEp0T29sS2lsRQ?oc=5"
       },
       {
+        "titulo": "Ministério da Saúde envia ao município do Rio mais mil frascos de vacina contra mpox - GOV.BR",
+        "tipo": "disponibilidade_vacina",
+        "resumo": "Ministério da Saúde envia ao município do Rio mais mil frascos de vacina contra mpox&nbsp;&nbsp;GOV.BR",
+        "linkOficial": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQbl9qdXR0TUdTNkZIT2JIU0dOeEd5Y1VDSE5YZ0pZaGhHWTVWNFFtMEdYS2pDQXFTWURiRkh4TEdHaHd5Z19tWDRtSmYtRnBhR0VFZkJLNWdua1U0WUUta2RER0Vma25vV0lkb3RDNU1pdG5UU0ZUNER2WHM1dFRNdFhjUE1uQTJNeFNkTl9WSHR2YzVVTl9naVJJSDRIZFFvNnZxY3JuOFAwRklNdGVLZlFjXzZJbFU2cWxnMUVEcEhaNUkxQ2w0cVoxZE1OSDFiOFpuNGtobHphVllkNVhsTw?oc=5"
+      },
+      {
         "titulo": "Líder em casos de Mpox no Brasil, estado de SP recebe mil doses da vacina contra a doença - G1",
         "tipo": "disponibilidade_vacina",
         "resumo": "Líder em casos de Mpox no Brasil, estado de SP recebe mil doses da vacina contra a doença&nbsp;&nbsp;G1",
@@ -36,12 +42,6 @@
         "tipo": "disponibilidade_vacina",
         "resumo": "Após 433 casos de Mpox, SP recebe mil novas doses de vacina&nbsp;&nbsp;CNN Brasil",
         "linkOficial": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNSEQzWkRmVWFpM19Ic3o5TEpLekpObXF1X1lMVVBvOHZSZk5IaFo3cXJkQzQyX2VqeFNKUzBsaHpnWGdQWVEtYm9Qa2ROVU5IQmpZbjMxdWRmNEwzY1BheVk0S2N4U0x5S1BjdmpMdmlWaG8wZHlJaEJ6TUdqSzRST3NDTmE1Mk5KUmVmdlBLVmxsUUkwSEFYUU83SG8ycFhaLXpIakpjUXRRTEEwZUE?oc=5"
-      },
-      {
-        "titulo": "Rio amplia vacinação contra MPOX - Prefeitura da Cidade do Rio de Janeiro",
-        "tipo": "disponibilidade_vacina",
-        "resumo": "Rio amplia vacinação contra MPOX&nbsp;&nbsp;Prefeitura da Cidade do Rio de Janeiro",
-        "linkOficial": "https://news.google.com/rss/articles/CBMib0FVX3lxTE90RzhXSFBmaVhXdGE4bmJnN2phYmVTamFYNjUwSnc4U0M4Y1E4NENmdmJXVGw3eWZVZFQ5UW5NNjRtbjFQZHhjRGdld0FYZjY4dy1LR2YzZ1BaTF80Mmxoc2JRQVNncFBkUXJ5cUV0QQ?oc=5"
       }
     ]
   }
