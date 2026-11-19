@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-11-19T21:39:31.412459",
-  "totalItensVarredura": 53,
+  "timestamp": "2026-11-19T22:38:15.908295",
+  "totalItensVarredura": 52,
   "analiseAgente": {
     "alteracoesEstoque": [
       {
@@ -52,6 +52,14 @@
         "fonte": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNSkYzc1Jsbm1KZFk2TXJxYVhJVGd6YmpGZEktc05fWU9weXYtcDFzTGJScFI1SGh6bC1OSWt6VFhqNlJsWlZ0SzhTZFJDVzZTMWJyV0NNcDFJcmpYblpBZVJKV0NJcnJrX3lybjVsVERZdDllWl9sNHFlanpwSXhySFo0MVo5bXhRMGt6OHJzVGFBaEp0T29sS2lsRQ?oc=5"
       },
       {
+        "unidade": "Rede Especializada de São Paulo (SAEs e CRIEs)",
+        "uf": "SP",
+        "statusEstoque": "disponivel",
+        "motivo": "Recebimento e distribuição de novo lote de 1.000 doses da vacina MVA-BN aos SAEs e CRIEs.",
+        "previsaoFutura": "Doses de primeira aplicação ativas. Segunda dose recomendada a partir de 28 dias para consolidar imunidade.",
+        "fonte": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOcGR3cm1XeFlxVGtYMTVHQTVNYW9MOExkYkRLRjhRc1IxdWVQZVdGamFPVnBZbzhjTjliellvbVBuTkFIM25HV1ZBMjk4T2cxbzBnQVFIRzRqNHVJWDVWMDFidm1hOU1zWUQ2dHZRWVpfMWdqX3FzWUNic1pPUmdSa2RadV9XTUM0Y21KNG5keWJjdHlDSlhxbFpRYWF2ZWRLSzBhUzBxdFdFMm1S0gGyAUFVX3lxTFBNd0cyWGVSNDRTSFNOREJRcXlJRTNUZTdrMk8yU0ZrbU5leDBJYmNsazhvZGx5THdZV083MlpiWE1BZGhtM3lWbTNOdURsYU5BNlBRcWJmTlZXNFBrbHE5bjdfVzRqR3RtNVRocUg5OVU5XzVFRi1sSjhLN3JFTVNiR1luV3pqa3FkOEpIMng3SlJpai02VkNBSlBLUmxnQjVmeWRTZ3U1eXNhdmw5NnR5TlE?oc=5"
+      },
+      {
         "unidade": "Polos de Vacinação de Belo Horizonte (Hospital Eduardo de Menezes, URS Centro-Sul, Sagrada Família, Orestes Diniz, CRIE)",
         "uf": "MG",
         "statusEstoque": "disponivel",
@@ -65,7 +73,7 @@
         "statusEstoque": "disponivel",
         "motivo": "Recebimento e distribuição de novo lote de 1.000 doses da vacina MVA-BN aos SAEs e CRIEs.",
         "previsaoFutura": "Doses de primeira aplicação ativas. Segunda dose recomendada a partir de 28 dias para consolidar imunidade.",
-        "fonte": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQdmZMYnNEUER4ZHpPaDVEV28zNDlnSi10UXBmRDZXYVBLcExRTXlqaDI2R0FSQTRtR1FoRE9vVjhVTUtIRlFNdU11U3dVRWk0enExWE1xV295OTBLcWthNjNONmg5aHZ2X2o3TDA1N3BmajRmOWlDWFV3YmJGSkRjZ3llTGhwenZLeUE5cHNaMm00RGEwNXRYWDhXSjNKSHNZdUFpdW53QlgyS2ZaRF9CTXRaeEY4eFBzbWduNTgzUUVJeDM5RjBMQmx2U2JNWWNxMWJwT3o5Tll5OFU0RlNF?oc=5"
+        "fonte": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxORkFocy1paUFwNWpCNXJJcTR3YWxYSTRqajk4QWxKa3VZS0lYa2RwbXVhWllYQ0dZY1NXWjYzT2JNWGJFeXlfSmh1dVFiR21ZYlVWQnB4bkJMX3ZCbG5yWGllZTZuRk5TM2x1bU1EVzdELTE0aEJyV2RyempMV3NVb2J5Q21ja3p3dzZXd1NsM3F0UU1ua2Y0VlZrZmJleHFYSzVqalNTT0N0RGloZWpsc2ZNUzZqaW1CVmlGeUN3UGM4THF2TXVoZlFydU1oSkJK?oc=5"
       },
       {
         "unidade": "Rede Especializada de São Paulo (SAEs e CRIEs)",
@@ -90,14 +98,6 @@
         "motivo": "Recebimento e distribuição de novo lote de 1.000 doses da vacina MVA-BN aos SAEs e CRIEs.",
         "previsaoFutura": "Doses de primeira aplicação ativas. Segunda dose recomendada a partir de 28 dias para consolidar imunidade.",
         "fonte": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNU0RGOXB1N0VFV25fNVJIektkV25FLUp4MmhlR0EwRTZ3Z1kyM2xDNFZDSmpZckU5Zjc3WFBBUGdjVEo1YWllSkQxWTlzS2pSTFlMRFQwRng4dTJmc3VmZWxsdENad1V1ZXZwZ01PZmpuMVkwb3RGbk40Zk9uVlJJUVN3UWNyaWIwc2l3?oc=5"
-      },
-      {
-        "unidade": "Super Centros Cariocas (Botafogo, Shopping Nova América, ParkShopping Campo Grande)",
-        "uf": "RJ",
-        "statusEstoque": "disponivel",
-        "motivo": "Reabastecido com novo lote de 1.000 frascos (até 5.000 doses intradérmicas) enviado pelo Ministério da Saúde. Vacinação ativa.",
-        "previsaoFutura": "Vacinação ativa nos Super Centros enquanto durar o lote. Novos repasses federais previstos conforme demanda.",
-        "fonte": "https://prefeitura.rio/saude/rio-retoma-vacinacao-contra-a-mpox-apos-chegada-de-novas-doses/"
       },
       {
         "unidade": "Rede Especializada de São Paulo (SAEs e CRIEs)",
