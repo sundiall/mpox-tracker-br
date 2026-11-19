@@ -9,10 +9,18 @@ import {
   CalendarCheck,
   CheckCircle2,
   FileCheck2,
-  Sparkles
+  Sparkles,
+  AlertCircle,
+  RotateCcw
 } from 'lucide-react';
 import { vaccinationSites } from '../data/vaccination_sites';
 import type { VaccinationSite } from '../data/vaccination_sites';
+
+const ALL_BRAZILIAN_UFS = [
+  'AC', 'AL', 'AP', 'AM', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA',
+  'MT', 'MS', 'MG', 'PA', 'PB', 'PR', 'PE', 'PI', 'RJ', 'RN',
+  'RS', 'RO', 'RR', 'SC', 'SP', 'SE', 'TO'
+];
 
 interface VaccinationSitesViewProps {
   selectedUF: string | null;
@@ -30,7 +38,7 @@ export const VaccinationSitesView: FC<VaccinationSitesViewProps> = ({
   const [selectedTipo, setSelectedTipo] = useState<string>('todos');
   const [selectedStatus, setSelectedStatus] = useState<string>('todos');
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const pageSize = 9;
+  const pageSize = 24;
 
   useEffect(() => {
     fetch('/data/vaccination_sites.json')
@@ -63,8 +71,6 @@ export const VaccinationSitesView: FC<VaccinationSitesViewProps> = ({
 
   const totalPages = Math.ceil(filteredSites.length / pageSize);
   const paginatedSites = filteredSites.slice((currentPage - 1) * pageSize, currentPage * pageSize);
-
-  const ufsList = Array.from(new Set(sites.map((s) => s.uf))).sort();
 
   return (
     <div className="space-y-6">
@@ -126,7 +132,55 @@ export const VaccinationSitesView: FC<VaccinationSitesViewProps> = ({
       </div>
 
       {/* Controles de Filtros e Busca */}
-      <div className="bg-slate-900 border border-slate-800 rounded-xl p-4 space-y-3">
+      <div className="bg-slate-900 border border-slate-800 rounded-xl p-4 space-y-3.5">
+        {/* Atalhos Rápidos de Estados Confirmados */}
+        <div className="flex flex-wrap items-center gap-2 pt-0.5">
+          <span className="text-[11px] font-medium text-slate-400 mr-1 flex items-center gap-1">
+            <Building2 className="w-3.5 h-3.5 text-cyan-400" />
+            Polos Confirmados:
+          </span>
+          <button
+            onClick={() => { onSelectUF(null); setCurrentPage(1); }}
+            className={`px-3 py-1 rounded-lg text-xs font-medium transition-all ${
+              !selectedUF
+                ? 'bg-cyan-950/80 text-cyan-300 border border-cyan-500/70 shadow-[0_0_10px_rgba(6,182,212,0.25)]'
+                : 'bg-slate-950 text-slate-300 border border-slate-800 hover:border-slate-700'
+            }`}
+          >
+            Todos ({sites.length})
+          </button>
+          <button
+            onClick={() => { onSelectUF('MG'); setCurrentPage(1); }}
+            className={`px-3 py-1 rounded-lg text-xs font-medium transition-all ${
+              selectedUF === 'MG'
+                ? 'bg-cyan-950/80 text-cyan-300 border border-cyan-500/70 shadow-[0_0_10px_rgba(6,182,212,0.25)]'
+                : 'bg-slate-950 text-slate-300 border border-slate-800 hover:border-slate-700'
+            }`}
+          >
+            Belo Horizonte / MG ({sites.filter((s) => s.uf === 'MG').length})
+          </button>
+          <button
+            onClick={() => { onSelectUF('RJ'); setCurrentPage(1); }}
+            className={`px-3 py-1 rounded-lg text-xs font-medium transition-all ${
+              selectedUF === 'RJ'
+                ? 'bg-cyan-950/80 text-cyan-300 border border-cyan-500/70 shadow-[0_0_10px_rgba(6,182,212,0.25)]'
+                : 'bg-slate-950 text-slate-300 border border-slate-800 hover:border-slate-700'
+            }`}
+          >
+            Rio de Janeiro / RJ ({sites.filter((s) => s.uf === 'RJ').length})
+          </button>
+          <button
+            onClick={() => { onSelectUF('SP'); setCurrentPage(1); }}
+            className={`px-3 py-1 rounded-lg text-xs font-medium transition-all ${
+              selectedUF === 'SP'
+                ? 'bg-cyan-950/80 text-cyan-300 border border-cyan-500/70 shadow-[0_0_10px_rgba(6,182,212,0.25)]'
+                : 'bg-slate-950 text-slate-300 border border-slate-800 hover:border-slate-700'
+            }`}
+          >
+            São Paulo / SP ({sites.filter((s) => s.uf === 'SP').length})
+          </button>
+        </div>
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
           {/* Busca por texto */}
           <div>
@@ -164,11 +218,14 @@ export const VaccinationSitesView: FC<VaccinationSitesViewProps> = ({
               className="w-full bg-slate-950 border border-slate-800 rounded-lg px-2.5 py-1.5 text-xs text-slate-200 focus:outline-none focus:border-cyan-500"
             >
               <option value="todas">Todos os Estados (27 UFs)</option>
-              {ufsList.map((uf) => (
-                <option key={uf} value={uf}>
-                  {uf}
-                </option>
-              ))}
+              {ALL_BRAZILIAN_UFS.map((uf) => {
+                const count = sites.filter((s) => s.uf === uf).length;
+                return (
+                  <option key={uf} value={uf}>
+                    {uf} {count > 0 ? `(${count} polo${count > 1 ? 's' : ''})` : '(Sem informação)'}
+                  </option>
+                );
+              })}
             </select>
           </div>
 
@@ -254,6 +311,19 @@ export const VaccinationSitesView: FC<VaccinationSitesViewProps> = ({
                 </div>
               )}
 
+              {/* Previsão Futura e Próximas Etapas */}
+              {site.previsaoFutura && (
+                <div className="mt-2.5 p-2 rounded-lg bg-indigo-950/40 border border-indigo-800/70 text-indigo-200 text-[11px] space-y-1">
+                  <div className="flex items-center gap-1.5 font-semibold text-indigo-300">
+                    <Sparkles className="w-3.5 h-3.5 text-indigo-400 shrink-0" />
+                    <span>Previsão & Próximas Etapas</span>
+                  </div>
+                  <p className="text-[10px] text-slate-300 leading-tight">
+                    {site.previsaoFutura}
+                  </p>
+                </div>
+              )}
+
               <div className="mt-3 space-y-1.5 text-slate-300">
                 <p className="flex items-start gap-2 text-slate-400">
                   <MapPin className="w-3.5 h-3.5 text-slate-500 shrink-0 mt-0.5" />
@@ -293,8 +363,35 @@ export const VaccinationSitesView: FC<VaccinationSitesViewProps> = ({
       </div>
 
       {filteredSites.length === 0 && (
-        <div className="p-8 text-center bg-slate-900 border border-slate-800 rounded-xl text-slate-400 text-xs">
-          Nenhum polo de atendimento encontrado para os critérios selecionados.
+        <div className="p-8 text-center bg-slate-900 border border-slate-800 rounded-xl space-y-3">
+          <div className="w-10 h-10 rounded-full bg-amber-950/50 border border-amber-800/60 text-amber-400 flex items-center justify-center mx-auto">
+            <AlertCircle className="w-5 h-5" />
+          </div>
+          <h3 className="text-sm font-bold text-white">
+            Sem informação por enquanto
+          </h3>
+          <p className="text-xs text-slate-300 max-w-md mx-auto leading-relaxed">
+            {selectedUF
+              ? `Não há polos com vacinação confirmada ou doses ativas cadastradas para o estado ${selectedUF} no momento.`
+              : 'Não há polos de atendimento encontrados para os filtros selecionados no momento.'}
+            {' '}O agente de monitoramento oficial atualiza periodicamente a rede de imunização conforme novas remessas do Ministério da Saúde e Secretarias forem confirmadas.
+          </p>
+          <div className="pt-2">
+            <button
+              onClick={() => {
+                onSelectUF(null);
+                setSelectedRegiao('todas');
+                setSelectedTipo('todos');
+                setSelectedStatus('todos');
+                setSearchQuery('');
+                setCurrentPage(1);
+              }}
+              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-cyan-950/80 text-cyan-300 border border-cyan-500/50 hover:bg-cyan-900/50 transition-colors"
+            >
+              <RotateCcw className="w-3.5 h-3.5" />
+              Ver Polos Confirmados ({sites.length})
+            </button>
+          </div>
         </div>
       )}
 

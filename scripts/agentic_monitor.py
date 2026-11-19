@@ -123,10 +123,11 @@ Sua tarefa é extrair e produzir um objeto JSON estritamente válido com a segui
 {{
   "alteracoesEstoque": [
     {{
-      "unidade": "nome da unidade (ex: 'Fiocruz', 'CEVAA', 'Super Centro Botafogo')",
-      "uf": "RJ, SP, etc.",
-      "statusEstoque": "esgotado" | "disponivel" | "em_abastecimento",
+      "unidade": "nome da unidade (ex: 'Fiocruz', 'CEVAA', 'Super Centro Botafogo', 'Hospital Eduardo de Menezes')",
+      "uf": "RJ, SP, MG, etc.",
+      "statusEstoque": "esgotado" | "disponivel" | "em_abastecimento" | "previsto",
       "motivo": "resumo de 1 frase justificando com base no comunicado",
+      "previsaoFutura": "previsão de datas, chegada de lotes futuros ou ampliação de grupos elegíveis (ex: 'Ampliação para todas as PVHA a partir de 30/11')",
       "fonte": "nome da fonte ou link"
     }}
   ],
@@ -210,6 +211,7 @@ def fallback_heuristic_analysis(items):
                     "uf": "RJ",
                     "statusEstoque": "disponivel",
                     "motivo": "Reabastecido com novo lote de 1.000 frascos (até 5.000 doses intradérmicas) enviado pelo Ministério da Saúde. Vacinação ativa.",
+                    "previsaoFutura": "Vacinação ativa nos Super Centros enquanto durar o lote. Novos repasses federais previstos conforme demanda.",
                     "fonte": it["link"]
                 })
             elif is_esgotamento:
@@ -218,6 +220,7 @@ def fallback_heuristic_analysis(items):
                     "uf": "RJ",
                     "statusEstoque": "esgotado",
                     "motivo": "Doses temporariamente esgotadas na rede carioca segundo relatos e comunicados oficiais. Aguardando novo lote de reposição.",
+                    "previsaoFutura": "Aguardando confirmação de despacho de novo lote pelo Ministério da Saúde.",
                     "fonte": it["link"]
                 })
 
@@ -229,6 +232,7 @@ def fallback_heuristic_analysis(items):
                     "uf": "MG",
                     "statusEstoque": "disponivel",
                     "motivo": "Prefeitura de Belo Horizonte iniciou vacinação em 5 unidades para grupos prioritários e anunciou expansão para 30/11.",
+                    "previsaoFutura": "A partir de 30/11: Ampliação para todas as pessoas vivendo com HIV/Aids (PVHA), independente de contagem de CD4 (campanha até 04/12).",
                     "fonte": it["link"]
                 })
 
@@ -240,6 +244,7 @@ def fallback_heuristic_analysis(items):
                     "uf": "SP",
                     "statusEstoque": "disponivel",
                     "motivo": "Recebimento e distribuição de novo lote de 1.000 doses da vacina MVA-BN aos SAEs e CRIEs.",
+                    "previsaoFutura": "Doses de primeira aplicação ativas. Segunda dose recomendada a partir de 28 dias para consolidar imunidade.",
                     "fonte": it["link"]
                 })
 
@@ -249,6 +254,7 @@ def fallback_heuristic_analysis(items):
                 "uf": "RJ",
                 "statusEstoque": "em_abastecimento" if is_reabastecimento else "esgotado",
                 "motivo": "Processo de reabastecimento pela SMS-Rio com chegada da nova remessa." if is_reabastecimento else "Estoque temporariamente esgotado.",
+                "previsaoFutura": "Previsão de retorno da vacinação na Cinelândia assim que concluída a conferência interna do novo lote.",
                 "fonte": it["link"]
             })
 
@@ -265,6 +271,55 @@ def fallback_heuristic_analysis(items):
         "novosMarcos": [],
         "alertasUrgentes": alertas[:6]
     }
+
+def update_sites_and_alerts_from_report(analise, output_dir):
+    """
+    Atualiza o estoque e previsão futura dos polos confirmados em public/data/vaccination_sites.json
+    com base nas alterações estruturadas extraídas pelo Agente.
+    """
+    sites_json_path = os.path.join(output_dir, "vaccination_sites.json")
+    if not os.path.exists(sites_json_path):
+        return
+
+    try:
+        with open(sites_json_path, "r", encoding="utf-8") as f:
+            sites = json.load(f)
+
+        alteracoes = analise.get("alteracoesEstoque", [])
+        if not alteracoes:
+            return
+
+        updated = False
+        today_str = datetime.now().strftime("%Y-%m-%d")
+
+        for alt in alteracoes:
+            alt_uf = alt.get("uf", "").upper()
+            alt_unit = alt.get("unidade", "").lower()
+            new_status = alt.get("statusEstoque")
+            motivo = alt.get("motivo")
+            previsao = alt.get("previsaoFutura")
+
+            for s in sites:
+                matches_uf = alt_uf and s.get("uf") == alt_uf
+                matches_unit = any(w in s.get("nomeUnidade", "").lower() for w in ["super centro", "botafogo", "eduardo de menezes", "sagrada família", "crt", "henfil", "campos elíseos"] if w in alt_unit)
+
+                if matches_uf and (matches_unit or "super centro" in alt_unit or "polos" in alt_unit or "rede" in alt_unit):
+                    if new_status and s.get("statusEstoque") != new_status:
+                        s["statusEstoque"] = new_status
+                        s["dataAtualizacaoStatus"] = today_str
+                        if motivo:
+                            s["notaStatus"] = motivo
+                        updated = True
+                    if previsao and s.get("previsaoFutura") != previsao:
+                        s["previsaoFutura"] = previsao
+                        updated = True
+
+        if updated:
+            with open(sites_json_path, "w", encoding="utf-8") as f:
+                json.dump(sites, f, ensure_ascii=False, indent=2)
+            print("✅ [Agente] vaccination_sites.json atualizado com novas previsões e status.")
+    except Exception as e:
+        print(f"⚠️ Erro ao conciliar alterações de postos: {e}")
 
 def main():
     items = fetch_feed_items()
@@ -288,6 +343,9 @@ def main():
         }, f, ensure_ascii=False, indent=2)
 
     print(f"💾 [Agente] Relatório agéntico salvo com sucesso em: {report_file}")
+
+    # Conciliar alterações detectadas com os postos de vacinação
+    update_sites_and_alerts_from_report(analise, output_dir)
 
     # Atualização dinâmica e adaptativa do estado de vigilância
     state_file = os.path.join(output_dir, "monitor_state.json")

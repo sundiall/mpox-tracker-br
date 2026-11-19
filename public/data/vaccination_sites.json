@@ -14,9 +14,10 @@
     "agendamento": "Livre Demanda",
     "observacoes": "Centro nacional de referência em infectologia. Aplicação para usuários de PrEP, PVHA (CD4 < 200), pós-exposição e trabalhadores expostos.",
     "requisitos": "Documento oficial com foto, cartão SUS e laudo/receita de PrEP (até 6 meses), exame CD4 ou comprovação de contato.",
-    "statusEstoque": "esgotado",
-    "dataAtualizacaoStatus": "2026-11-18",
-    "notaStatus": "Doses temporariamente esgotadas segundo comunicado oficial das redes. Aguardando novo lote de reposição da SMS-Rio."
+    "statusEstoque": "em_abastecimento",
+    "dataAtualizacaoStatus": "2026-11-19",
+    "notaStatus": "Em processo de recebimento de doses do novo lote federal de 1.000 frascos.",
+    "previsaoFutura": "Previsão de reposição com fracionamento do novo lote federal repassado ao município do Rio."
   },
   {
     "id": "rj-2",
@@ -35,7 +36,8 @@
     "requisitos": "Documento com foto, CPF, cartão SUS e receita médica ou laudo comprobatório de uso de PrEP emitido nos últimos 6 meses.",
     "statusEstoque": "disponivel",
     "dataAtualizacaoStatus": "2026-11-19",
-    "notaStatus": "Reabastecido com novo lote federal de 1.000 frascos (até 5.000 doses fracionadas). Vacinação ativa para PrEP e PVHA (CD4 < 200). Horário normalizado das 08h às 22h."
+    "notaStatus": "Reabastecido com novo lote federal de 1.000 frascos (até 5.000 doses fracionadas). Vacinação ativa para PrEP e PVHA (CD4 < 200). Horário normalizado das 08h às 22h.",
+    "previsaoFutura": "Vacinação em andamento enquanto durarem os frascos do lote. Novos repasses federais previstos sob demanda da SMS-Rio."
   },
   {
     "id": "rj-3",
@@ -54,7 +56,8 @@
     "requisitos": "Documento de identidade com foto, CPF e receita/laudo de PrEP recente (até 6 meses).",
     "statusEstoque": "disponivel",
     "dataAtualizacaoStatus": "2026-11-19",
-    "notaStatus": "Reabastecido com novo lote de vacinas. Atendimento normalizado nos horários do shopping para grupos prioritários elegíveis."
+    "notaStatus": "Reabastecido com novo lote de vacinas. Atendimento normalizado nos horários do shopping para grupos prioritários elegíveis.",
+    "previsaoFutura": "Horário estendido no centro comercial (seg-sáb 10h-22h, dom 13h-21h) para atendimento aos usuários em PrEP."
   },
   {
     "id": "rj-4",
@@ -73,7 +76,8 @@
     "requisitos": "Documento oficial com foto, cartão SUS e comprovação de PrEP (receita até 6 meses) ou indicação médica.",
     "statusEstoque": "disponivel",
     "dataAtualizacaoStatus": "2026-11-19",
-    "notaStatus": "Reabastecido pela SMS-Rio com nova remessa federal. Doses ativas para usuários de PrEP e pessoas com imunossupressão."
+    "notaStatus": "Reabastecido pela SMS-Rio com nova remessa federal. Doses ativas para usuários de PrEP e pessoas com imunossupressão.",
+    "previsaoFutura": "Atendimento no shopping com aplicação da dose de 0,1 mL intradérmica para os grupos prioritários."
   },
   {
     "id": "rj-5",
@@ -92,23 +96,8 @@
     "requisitos": "Documento com foto, CPF, cartão SUS e laudo/receita de PrEP emitido nos últimos 6 meses.",
     "statusEstoque": "em_abastecimento",
     "dataAtualizacaoStatus": "2026-11-19",
-    "notaStatus": "Em processo de reabastecimento pela rede municipal com a chegada do novo lote."
-  },
-  {
-    "id": "rj-6",
-    "uf": "RJ",
-    "estado": "Rio de Janeiro",
-    "regiao": "Sudeste",
-    "municipio": "Niterói",
-    "nomeUnidade": "Policlínica Regional Sérgio Arouca (SAE Niterói)",
-    "tipo": "SAE",
-    "endereco": "Rua Vital Brazil Filho, s/n - Vital Brazil",
-    "cep": "24230-340",
-    "telefone": "(21) 2711-0099",
-    "horarioFuncionamento": "Segunda a sexta, das 08h às 16h",
-    "agendamento": "Livre Demanda",
-    "observacoes": "Atendimento para municípios da Região Metropolitana II.",
-    "requisitos": "Cartão SUS, documento com foto e comprovação de grupo prioritário."
+    "notaStatus": "Em processo de reabastecimento pela rede municipal com a chegada do novo lote.",
+    "previsaoFutura": "Previsão de retorno da vacinação na Cinelândia assim que concluída a distribuição interna dos frascos."
   },
   {
     "id": "sp-1",
@@ -127,7 +116,8 @@
     "requisitos": "Documento oficial com foto, cartão SUS e comprovante de critério clínico (PrEP ou PVHA).",
     "statusEstoque": "disponivel",
     "dataAtualizacaoStatus": "2026-11-19",
-    "notaStatus": "Lote de 1.000 doses distribuído pela SES/SMS. Vacinação ativa para PrEP e PVHA elegíveis."
+    "notaStatus": "Lote de 1.000 doses distribuído pela SES/SMS. Vacinação ativa para PrEP e PVHA elegíveis.",
+    "previsaoFutura": "Doses de D1 ativas. D2 prevista a partir de 28 dias para consolidação imunológica."
   },
   {
     "id": "sp-2",
@@ -146,7 +136,8 @@
     "requisitos": "Documento com foto e cartão SUS.",
     "statusEstoque": "disponivel",
     "dataAtualizacaoStatus": "2026-11-19",
-    "notaStatus": "Doses disponíveis para grupos prioritários e usuários de PrEP."
+    "notaStatus": "Doses disponíveis para grupos prioritários e usuários de PrEP.",
+    "previsaoFutura": "Atendimento contínuo no centro histórico enquanto houver disponibilidade do lote."
   },
   {
     "id": "sp-3",
@@ -165,7 +156,8 @@
     "requisitos": "Documento com foto, cartão SUS e laudo/receita de PrEP recente.",
     "statusEstoque": "disponivel",
     "dataAtualizacaoStatus": "2026-11-19",
-    "notaStatus": "Polo da rede municipal de SP abastecido com novo lote."
+    "notaStatus": "Polo da rede municipal de SP abastecido com novo lote.",
+    "previsaoFutura": "Repasse municipal garantindo continuidade da profilaxia pré-exposição."
   },
   {
     "id": "sp-4",
@@ -184,7 +176,8 @@
     "requisitos": "Encaminhamento médico com justificativa clínica, documento com foto e cartão SUS.",
     "statusEstoque": "disponivel",
     "dataAtualizacaoStatus": "2026-11-19",
-    "notaStatus": "Doses disponíveis para atendimento especializado e contatos de risco."
+    "notaStatus": "Doses disponíveis para atendimento especializado e contatos de risco.",
+    "previsaoFutura": "Atendimento especializado para contatos diretos e laboratoristas encaminhados."
   },
   {
     "id": "sp-5",
@@ -203,7 +196,8 @@
     "requisitos": "Documento oficial com foto, cartão SUS e comprovação de PrEP.",
     "statusEstoque": "disponivel",
     "dataAtualizacaoStatus": "2026-11-19",
-    "notaStatus": "Atendimento e vacinação disponíveis para público elegível."
+    "notaStatus": "Atendimento e vacinação disponíveis para público elegível.",
+    "previsaoFutura": "Acolhimento na Zona Oeste com aplicação de doses fracionadas de 0,1 mL."
   },
   {
     "id": "sp-6",
@@ -222,7 +216,8 @@
     "requisitos": "Cartão SUS, comprovante de residência e documento com foto.",
     "statusEstoque": "disponivel",
     "dataAtualizacaoStatus": "2026-11-19",
-    "notaStatus": "Doses disponíveis mediante agendamento prévio na unidade."
+    "notaStatus": "Doses disponíveis mediante agendamento prévio na unidade.",
+    "previsaoFutura": "Previsão de novas vagas de agendamento conforme liberação de lotes estaduais."
   },
   {
     "id": "mg-1",
@@ -241,7 +236,8 @@
     "requisitos": "Documento de identificação com foto, cartão SUS e receita/laudo comprobatório de PrEP ou condição clínica.",
     "statusEstoque": "disponivel",
     "dataAtualizacaoStatus": "2026-11-19",
-    "notaStatus": "Vacinação iniciada pela Prefeitura de BH. Doses disponíveis das 08h às 16h."
+    "notaStatus": "Vacinação iniciada pela Prefeitura de BH. Doses disponíveis das 08h às 16h.",
+    "previsaoFutura": "A partir de 30/11: Ampliação geral para todas as pessoas vivendo com HIV/Aids (PVHA), independente de contagem de CD4 (campanha até 04/12)."
   },
   {
     "id": "mg-2",
@@ -260,7 +256,8 @@
     "requisitos": "Documento oficial com foto, cartão SUS e comprovação de PrEP recente.",
     "statusEstoque": "disponivel",
     "dataAtualizacaoStatus": "2026-11-19",
-    "notaStatus": "Doses disponíveis para retirada/aplicação na região Centro-Sul de BH."
+    "notaStatus": "Doses disponíveis para retirada/aplicação na região Centro-Sul de BH.",
+    "previsaoFutura": "Atendimento de seg a sex das 08h às 16h. Ampliação para todas as PVHA a partir de 30/11."
   },
   {
     "id": "mg-3",
@@ -279,7 +276,8 @@
     "requisitos": "Documento com foto, cartão SUS e laudo/receita de PrEP.",
     "statusEstoque": "disponivel",
     "dataAtualizacaoStatus": "2026-11-19",
-    "notaStatus": "Vacinação em andamento para grupos prioritários da PBH."
+    "notaStatus": "Vacinação em andamento para grupos prioritários da PBH.",
+    "previsaoFutura": "Doses ativas para PrEP e PVHA (CD4 < 200). A partir de 30/11: abertura irrestrita para todas as PVHA."
   },
   {
     "id": "mg-4",
@@ -298,7 +296,8 @@
     "requisitos": "Documento com foto, cartão SUS e indicação/receita médica.",
     "statusEstoque": "disponivel",
     "dataAtualizacaoStatus": "2026-11-19",
-    "notaStatus": "Doses disponíveis para grupos prioritários."
+    "notaStatus": "Doses disponíveis para grupos prioritários.",
+    "previsaoFutura": "Atendimento das 08h às 16h para pacientes acompanhados e PrEP. Ampliação geral a partir de 30/11."
   },
   {
     "id": "mg-5",
@@ -317,390 +316,7 @@
     "requisitos": "Documento oficial com foto, cartão SUS e encaminhamento/comprovante profissional.",
     "statusEstoque": "disponivel",
     "dataAtualizacaoStatus": "2026-11-19",
-    "notaStatus": "Referência especial da PBH ativa para laboratoristas e rede privada."
-  },
-  {
-    "id": "es-1",
-    "uf": "ES",
-    "estado": "Espírito Santo",
-    "regiao": "Sudeste",
-    "municipio": "Vitória",
-    "nomeUnidade": "CRIE Vitória / Hospital Estadual Infantil Nossa Senhora da Glória",
-    "tipo": "CRIE",
-    "endereco": "Alameda Mary Ubirajara, 205 - Santa Lúcia",
-    "cep": "29056-030",
-    "telefone": "(27) 3636-7500",
-    "horarioFuncionamento": "Segunda a sexta, das 08h às 16h30",
-    "agendamento": "Regulação SUS / Encaminhamento",
-    "observacoes": "Polo de dispensação e aplicação de imunobiológicos estratégicos no ES.",
-    "requisitos": "Laudo médico justificando o critério do PNI e documento com foto."
-  },
-  {
-    "id": "df-1",
-    "uf": "DF",
-    "estado": "Distrito Federal",
-    "regiao": "Centro-Oeste",
-    "municipio": "Brasília",
-    "nomeUnidade": "Hospital Dia da Asa Sul (Unidade Mista de Saúde de Brasília)",
-    "tipo": "Centro de Referencia",
-    "endereco": "EQS 508/509 - Asa Sul",
-    "cep": "70351-580",
-    "telefone": "(61) 3443-4340",
-    "horarioFuncionamento": "Segunda a sexta, das 07h às 18h",
-    "agendamento": "Livre Demanda",
-    "observacoes": "Principal serviço de infectologia ambulatorial e dispensação de imunobiológicos do DF.",
-    "requisitos": "Documento com foto, cartão SUS e comprovante de elegibilidade."
-  },
-  {
-    "id": "go-1",
-    "uf": "GO",
-    "estado": "Goiás",
-    "regiao": "Centro-Oeste",
-    "municipio": "Goiânia",
-    "nomeUnidade": "Hospital de Doenças Tropicais Dr. Anuar Auad (HDT / SES-GO)",
-    "tipo": "Hospital Universitario",
-    "endereco": "Alameda do Contorno, 3556 - Jardim Bela Vista",
-    "cep": "74853-120",
-    "telefone": "(62) 3201-3600",
-    "horarioFuncionamento": "Segunda a sexta, das 08h às 17h",
-    "agendamento": "Regulação SUS / Encaminhamento",
-    "observacoes": "Hospital de referência em infectologia do Centro-Oeste.",
-    "requisitos": "Encaminhamento médico pelo sistema de regulação e documento com foto."
-  },
-  {
-    "id": "mt-1",
-    "uf": "MT",
-    "estado": "Mato Grosso",
-    "regiao": "Centro-Oeste",
-    "municipio": "Cuiabá",
-    "nomeUnidade": "CRIE Mato Grosso / Hospital Universitário Júlio Müller (HUJM)",
-    "tipo": "CRIE",
-    "endereco": "Rua Luís Philippe Pereira Leite, s/n - Alvorada",
-    "cep": "78048-902",
-    "telefone": "(65) 3615-7200",
-    "horarioFuncionamento": "Segunda a sexta, das 07h30 às 16h",
-    "agendamento": "Regulação SUS / Encaminhamento",
-    "observacoes": "Centro especializado no atendimento de imunossuprimidos e profissionais expostos.",
-    "requisitos": "Relatório médico e cartão SUS."
-  },
-  {
-    "id": "ms-1",
-    "uf": "MS",
-    "estado": "Mato Grosso do Sul",
-    "regiao": "Centro-Oeste",
-    "municipio": "Campo Grande",
-    "nomeUnidade": "Hospital Dia Professora Esterina Corsini (HUMAP / UFMS)",
-    "tipo": "Hospital Universitario",
-    "endereco": "Av. Senador Filinto Müller, 355 - Vila Ipiranga",
-    "cep": "79080-190",
-    "telefone": "(67) 3345-3000",
-    "horarioFuncionamento": "Segunda a sexta, das 07h às 16h",
-    "agendamento": "Regulação SUS / Encaminhamento",
-    "observacoes": "Referência em infectologia e vigilância no MS.",
-    "requisitos": "Documento com foto, cartão SUS e laudo médico."
-  },
-  {
-    "id": "ba-1",
-    "uf": "BA",
-    "estado": "Bahia",
-    "regiao": "Nordeste",
-    "municipio": "Salvador",
-    "nomeUnidade": "Centro Estadual Especializado em Diagnóstico, Assistência e Pesquisa (CEDAP)",
-    "tipo": "Centro de Referencia",
-    "endereco": "Rua Comendador José Alves Ferreira, 240 - Garcia",
-    "cep": "40100-160",
-    "telefone": "(71) 3116-8888",
-    "horarioFuncionamento": "Segunda a sexta, das 07h30 às 17h",
-    "agendamento": "Livre Demanda",
-    "observacoes": "Maior polo ambulatorial da Bahia em IST/Aids e imunização especial.",
-    "requisitos": "Documento oficial com foto e cartão do SUS."
-  },
-  {
-    "id": "ce-1",
-    "uf": "CE",
-    "estado": "Ceará",
-    "regiao": "Nordeste",
-    "municipio": "Fortaleza",
-    "nomeUnidade": "Hospital São José de Doenças Infecciosas (HSJ / SESA-CE)",
-    "tipo": "Hospital Universitario",
-    "endereco": "Rua Nestor Barbosa, 315 - Parquelândia",
-    "cep": "60455-610",
-    "telefone": "(85) 3101-2321",
-    "horarioFuncionamento": "Atendimento ambulatorial das 08h às 16h",
-    "agendamento": "Livre Demanda",
-    "observacoes": "Polo de testagem molecular RT-PCR e imunização de grupos de alto risco.",
-    "requisitos": "Documento com foto e cartão SUS."
-  },
-  {
-    "id": "pe-1",
-    "uf": "PE",
-    "estado": "Pernambuco",
-    "regiao": "Nordeste",
-    "municipio": "Recife",
-    "nomeUnidade": "Hospital Universitário Oswaldo Cruz (HUOC / CRIE PE)",
-    "tipo": "CRIE",
-    "endereco": "Rua Arnóbio Marquês, 310 - Santo Amaro",
-    "cep": "50100-130",
-    "telefone": "(81) 3184-1200",
-    "horarioFuncionamento": "Segunda a sexta, das 07h às 16h",
-    "agendamento": "Regulação SUS / Encaminhamento",
-    "observacoes": "Referência estadual em doenças infectocontagiosas e imunobiológicos especiais.",
-    "requisitos": "Cartão SUS, RG/CPF e laudo médico comprobatório."
-  },
-  {
-    "id": "rn-1",
-    "uf": "RN",
-    "estado": "Rio Grande do Norte",
-    "regiao": "Nordeste",
-    "municipio": "Natal",
-    "nomeUnidade": "Hospital Giselda Trigueiro (HGT / SESAP-RN)",
-    "tipo": "Hospital Universitario",
-    "endereco": "Rua Cônego Monte, 110 - Quintas",
-    "cep": "59035-170",
-    "telefone": "(84) 3232-7900",
-    "horarioFuncionamento": "Segunda a sexta, das 08h às 16h",
-    "agendamento": "Regulação SUS / Encaminhamento",
-    "observacoes": "Hospital estadual de referência em infectologia do RN.",
-    "requisitos": "Documento de identificação e encaminhamento médico."
-  },
-  {
-    "id": "pb-1",
-    "uf": "PB",
-    "estado": "Paraíba",
-    "regiao": "Nordeste",
-    "municipio": "João Pessoa",
-    "nomeUnidade": "Complexo Hospitalar de Doenças Infectocontagiosas Clementino Fraga",
-    "tipo": "Hospital Universitario",
-    "endereco": "Rua Esther Ribeiro Coutinho, s/n - Jaguaribe",
-    "cep": "58015-270",
-    "telefone": "(83) 3218-5400",
-    "horarioFuncionamento": "Segunda a sexta, das 08h às 16h",
-    "agendamento": "Livre Demanda",
-    "observacoes": "Referência em acolhimento e vacinação de contingente prioritário.",
-    "requisitos": "Cartão do SUS e documento oficial com foto."
-  },
-  {
-    "id": "ma-1",
-    "uf": "MA",
-    "estado": "Maranhão",
-    "regiao": "Nordeste",
-    "municipio": "São Luís",
-    "nomeUnidade": "Hospital Presidente Vargas / SAE São Luís",
-    "tipo": "SAE",
-    "endereco": "Rua da Palma, 384 - Centro",
-    "cep": "65010-440",
-    "telefone": "(98) 3218-8700",
-    "horarioFuncionamento": "Segunda a sexta, das 08h às 17h",
-    "agendamento": "Livre Demanda",
-    "observacoes": "Serviço de referência maranhense para vigilância e imunobiológicos.",
-    "requisitos": "Documento oficial e cartão SUS."
-  },
-  {
-    "id": "al-1",
-    "uf": "AL",
-    "estado": "Alagoas",
-    "regiao": "Nordeste",
-    "municipio": "Maceió",
-    "nomeUnidade": "Hospital Escola Dr. Helvio Auto (HEHA / UNCISAL)",
-    "tipo": "Hospital Universitario",
-    "endereco": "Rua Cônego Fernando Lyra, s/n - Trapiche da Barra",
-    "cep": "57010-380",
-    "telefone": "(82) 3315-3224",
-    "horarioFuncionamento": "Segunda a sexta, das 08h às 16h",
-    "agendamento": "Regulação SUS / Encaminhamento",
-    "observacoes": "Único hospital público especializado em doenças infectocontagiosas em AL.",
-    "requisitos": "Encaminhamento pela rede de saúde e cartão SUS."
-  },
-  {
-    "id": "se-1",
-    "uf": "SE",
-    "estado": "Sergipe",
-    "regiao": "Nordeste",
-    "municipio": "Aracaju",
-    "nomeUnidade": "CRIE Sergipe / Hospital de Urgências de Sergipe (HUSE)",
-    "tipo": "CRIE",
-    "endereco": "Av. Pres. Tancredo Neves, s/n - Capucho",
-    "cep": "49095-000",
-    "telefone": "(79) 3216-2600",
-    "horarioFuncionamento": "Segunda a sexta, das 07h às 16h",
-    "agendamento": "Regulação SUS / Encaminhamento",
-    "observacoes": "Dispensação de vacinas especiais para público elegível.",
-    "requisitos": "Laudo médico e documento de identidade."
-  },
-  {
-    "id": "pi-1",
-    "uf": "PI",
-    "estado": "Piauí",
-    "regiao": "Nordeste",
-    "municipio": "Teresina",
-    "nomeUnidade": "Instituto de Doenças Tropicais Natan Portella (IDTNP)",
-    "tipo": "Hospital Universitario",
-    "endereco": "Rua Governador Raimundo Artur de Vasconcelos, 151 - Centro",
-    "cep": "64001-450",
-    "telefone": "(86) 3216-3600",
-    "horarioFuncionamento": "Segunda a sexta, das 08h às 17h",
-    "agendamento": "Livre Demanda",
-    "observacoes": "Polo central piauiense para diagnóstico molecular e imunização de alto risco.",
-    "requisitos": "Cartão SUS e documento com foto."
-  },
-  {
-    "id": "pr-1",
-    "uf": "PR",
-    "estado": "Paraná",
-    "regiao": "Sul",
-    "municipio": "Curitiba",
-    "nomeUnidade": "Centro de Orientação e Aconselhamento de Curitiba (COA)",
-    "tipo": "CTA",
-    "endereco": "Rua Francisco Torres, 830 - Centro",
-    "cep": "80060-130",
-    "telefone": "(41) 3321-2826",
-    "horarioFuncionamento": "Segunda a sexta, das 08h às 17h",
-    "agendamento": "Livre Demanda",
-    "observacoes": "Polo de vacinação e profilaxias pré-exposição de Curitiba.",
-    "requisitos": "Cartão do SUS e documento oficial com foto."
-  },
-  {
-    "id": "rs-1",
-    "uf": "RS",
-    "estado": "Rio Grande do Sul",
-    "regiao": "Sul",
-    "municipio": "Porto Alegre",
-    "nomeUnidade": "Centro de Saúde Santa Marta (SAE Porto Alegre)",
-    "tipo": "SAE",
-    "endereco": "Rua Capitão Montanha, 27 - Centro Histórico",
-    "cep": "90010-040",
-    "telefone": "(51) 3289-5400",
-    "horarioFuncionamento": "Segunda a sexta, das 08h às 17h",
-    "agendamento": "Livre Demanda",
-    "observacoes": "Atendimento metropolitano da capital gaúcha para imunização especial.",
-    "requisitos": "Documento com foto e cartão SUS."
-  },
-  {
-    "id": "sc-1",
-    "uf": "SC",
-    "estado": "Santa Catarina",
-    "regiao": "Sul",
-    "municipio": "Florianópolis",
-    "nomeUnidade": "Hospital Nereu Ramos / CRIE Santa Catarina",
-    "tipo": "CRIE",
-    "endereco": "Rua Rui Barbosa, s/n - Agronômica",
-    "cep": "88025-301",
-    "telefone": "(48) 3664-5800",
-    "horarioFuncionamento": "Segunda a sexta, das 08h às 16h",
-    "agendamento": "Regulação SUS / Encaminhamento",
-    "observacoes": "Hospital estadual especializado em doenças infectocontagiosas em SC.",
-    "requisitos": "Documento de identificação, cartão SUS e laudo clínico."
-  },
-  {
-    "id": "pa-1",
-    "uf": "PA",
-    "estado": "Pará",
-    "regiao": "Norte",
-    "municipio": "Belém",
-    "nomeUnidade": "Unidade de Referência Especializada em Doenças Infecciosas Parasitárias Especiais (URE DIPE)",
-    "tipo": "Centro de Referencia",
-    "endereco": "Av. Alcindo Cacela, 1421 - Umarizal",
-    "cep": "66060-000",
-    "telefone": "(91) 3242-6022",
-    "horarioFuncionamento": "Segunda a sexta, das 07h30 às 16h",
-    "agendamento": "Livre Demanda",
-    "observacoes": "Principal polo de vigilância em saúde infectológica no Pará.",
-    "requisitos": "Cartão SUS e documento com foto."
-  },
-  {
-    "id": "am-1",
-    "uf": "AM",
-    "estado": "Amazonas",
-    "regiao": "Norte",
-    "municipio": "Manaus",
-    "nomeUnidade": "Fundação de Medicina Tropical Doutor Heitor Vieira Dourado (FMT-HVD)",
-    "tipo": "Hospital Universitario",
-    "endereco": "Av. Pedro Teixeira, 25 - Dom Pedro",
-    "cep": "69040-000",
-    "telefone": "(92) 2127-3555",
-    "horarioFuncionamento": "Atendimento contínuo; CRIE das 08h às 16h",
-    "agendamento": "Regulação SUS / Encaminhamento",
-    "observacoes": "Maior centro de infectologia da Região Amazônica.",
-    "requisitos": "Documento de identificação e relatório clínico."
-  },
-  {
-    "id": "to-1",
-    "uf": "TO",
-    "estado": "Tocantins",
-    "regiao": "Norte",
-    "municipio": "Palmas",
-    "nomeUnidade": "Hospital Geral de Palmas (HGP / CRIE Tocantins)",
-    "tipo": "CRIE",
-    "endereco": "Avenida NS-01, Área Verde - Plano Diretor Sul",
-    "cep": "77015-002",
-    "telefone": "(63) 3218-7800",
-    "horarioFuncionamento": "Segunda a sexta, das 08h às 16h",
-    "agendamento": "Regulação SUS / Encaminhamento",
-    "observacoes": "Dispensação regulada de imunobiológicos para grupos com indicação formal.",
-    "requisitos": "Relatório médico e cartão SUS."
-  },
-  {
-    "id": "ro-1",
-    "uf": "RO",
-    "estado": "Rondônia",
-    "regiao": "Norte",
-    "municipio": "Porto Velho",
-    "nomeUnidade": "Centro de Medicina Tropical de Rondônia (CEMETRON)",
-    "tipo": "Hospital Universitario",
-    "endereco": "Av. Guaporé, 215 - Três Marias",
-    "cep": "76812-536",
-    "telefone": "(69) 3216-2200",
-    "horarioFuncionamento": "Segunda a sexta, das 08h às 17h",
-    "agendamento": "Regulação SUS / Encaminhamento",
-    "observacoes": "Hospital público especializado em infecções e endemias em RO.",
-    "requisitos": "Cartão SUS e documento oficial."
-  },
-  {
-    "id": "ap-1",
-    "uf": "AP",
-    "estado": "Amapá",
-    "regiao": "Norte",
-    "municipio": "Macapá",
-    "nomeUnidade": "Centro de Referência em Doenças Tropicais (CRDT Macapá)",
-    "tipo": "Centro de Referencia",
-    "endereco": "Rua Cândido Mendes, 1071 - Centro",
-    "cep": "68900-100",
-    "telefone": "(96) 3212-6130",
-    "horarioFuncionamento": "Segunda a sexta, das 08h às 16h",
-    "agendamento": "Livre Demanda",
-    "observacoes": "Polo estadual de vigilância, testagem e imunização em Macapá.",
-    "requisitos": "Cartão do SUS e documento oficial com foto."
-  },
-  {
-    "id": "ac-1",
-    "uf": "AC",
-    "estado": "Acre",
-    "regiao": "Norte",
-    "municipio": "Rio Branco",
-    "nomeUnidade": "Hospital das Clínicas do Acre (Fundhacre / CRIE Acre)",
-    "tipo": "CRIE",
-    "endereco": "Rodovia BR-364, Km 02 - Distrito Industrial",
-    "cep": "69914-220",
-    "telefone": "(68) 3215-2600",
-    "horarioFuncionamento": "Segunda a sexta, das 07h30 às 16h",
-    "agendamento": "Regulação SUS / Encaminhamento",
-    "observacoes": "Polo regulador e de aplicação de imunobiológicos especiais no AC.",
-    "requisitos": "Documento oficial e laudo médico do SUS."
-  },
-  {
-    "id": "rr-1",
-    "uf": "RR",
-    "estado": "Roraima",
-    "regiao": "Norte",
-    "municipio": "Boa Vista",
-    "nomeUnidade": "CRIE Roraima / Hospital Geral de Roraima Rubens de Souza Bento",
-    "tipo": "CRIE",
-    "endereco": "Av. Brigadeiro Eduardo Gomes, 3510 - Aeroporto",
-    "cep": "69310-005",
-    "telefone": "(95) 2121-0600",
-    "horarioFuncionamento": "Segunda a sexta, das 08h às 16h",
-    "agendamento": "Regulação SUS / Encaminhamento",
-    "observacoes": "Vigilância epidemiológica e imunização em fronteira e capital.",
-    "requisitos": "Cartão SUS e documento com foto."
+    "notaStatus": "Referência especial da PBH ativa para laboratoristas e rede privada.",
+    "previsaoFutura": "Atendimento à rede privada, SAE Unifenas e técnicos de laboratório. Ampliação para todas as PVHA em 30/11."
   }
 ]
