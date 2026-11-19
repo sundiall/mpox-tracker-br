@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-11-19T21:05:53.354906",
-  "totalItensVarredura": 59,
+  "timestamp": "2026-11-19T21:39:31.412459",
+  "totalItensVarredura": 53,
   "analiseAgente": {
     "alteracoesEstoque": [
       {
@@ -58,6 +58,14 @@
         "motivo": "Prefeitura de Belo Horizonte iniciou vacinação em 5 unidades para grupos prioritários e anunciou expansão para 30/11.",
         "previsaoFutura": "A partir de 30/11: Ampliação para todas as pessoas vivendo com HIV/Aids (PVHA), independente de contagem de CD4 (campanha até 04/12).",
         "fonte": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxObGVKcUNXWjZlUTNZalFHaWNMbjJYdTR5aHZFeHd6WmNVSWt3ZTZOYVdSU3pEWGpkNGg1MzlCdFlVdjBnQWhRd0JIZWh4WF9NTjY1TkdUYjU2ZWY3M0dGZ0wyYTZJUld1TmQ2U1VPZWo4QlNQOTBGRE1JdnRWYnZ3aHlyallBRDNuYXA0NnFHRlpYbDVQc2c5T2NrS1lIWXBvZlpWcEJ6bVlvSld4ZWNJYWhDT0dDREFYSVo2dTZlUXhSb1pWVVN6ZQ?oc=5"
+      },
+      {
+        "unidade": "Rede Especializada de São Paulo (SAEs e CRIEs)",
+        "uf": "SP",
+        "statusEstoque": "disponivel",
+        "motivo": "Recebimento e distribuição de novo lote de 1.000 doses da vacina MVA-BN aos SAEs e CRIEs.",
+        "previsaoFutura": "Doses de primeira aplicação ativas. Segunda dose recomendada a partir de 28 dias para consolidar imunidade.",
+        "fonte": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQdmZMYnNEUER4ZHpPaDVEV28zNDlnSi10UXBmRDZXYVBLcExRTXlqaDI2R0FSQTRtR1FoRE9vVjhVTUtIRlFNdU11U3dVRWk0enExWE1xV295OTBLcWthNjNONmg5aHZ2X2o3TDA1N3BmajRmOWlDWFV3YmJGSkRjZ3llTGhwenZLeUE5cHNaMm00RGEwNXRYWDhXSjNKSHNZdUFpdW53QlgyS2ZaRF9CTXRaeEY4eFBzbWduNTgzUUVJeDM5RjBMQmx2U2JNWWNxMWJwT3o5Tll5OFU0RlNF?oc=5"
       },
       {
         "unidade": "Rede Especializada de São Paulo (SAEs e CRIEs)",
