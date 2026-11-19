@@ -18,8 +18,8 @@ export interface SyncMetadata {
 }
 
 export const syncMetadata: SyncMetadata = {
-  ultimaAtualizacaoDados: "2026-11-19T11:49:13.182156-03:00",
-  ultimaAtualizacaoFormatada: "19/11/2026 às 11:49 BRT (SE 46/2026)",
+  ultimaAtualizacaoDados: "2026-11-19T11:52:12.377840-03:00",
+  ultimaAtualizacaoFormatada: "19/11/2026 às 11:52 BRT (SE 46/2026)",
   semanaEpidemiologica: "SE 46/2026",
   proximaAtualizacaoPrevista: "19/11 às 12:00 BRT (Vigilância Horária) • 24/11 às 03:00 BRT (SE 47/2026)",
   proximaSemanaPrevista: "SE 47/2026",

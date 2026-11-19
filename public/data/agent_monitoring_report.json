@@ -1,62 +1,102 @@
 {
-  "timestamp": "2026-11-19T11:49:13.096793",
+  "timestamp": "2026-11-19T14:52:12.031545",
   "totalItensVarredura": 43,
   "analiseAgente": {
     "alteracoesEstoque": [
       {
-        "unidade": "Rede Municipal de Saúde do Rio de Janeiro",
-        "uf": "RJ",
-        "statusEstoque": "em_abastecimento",
-        "motivo": "Ministério da Saúde repassou mais mil frascos da vacina contra mpox para reforçar a imunização municipal.",
-        "fonte": "GOV.BR"
-      },
-      {
-        "unidade": "Rede de Vacinação do Estado de São Paulo",
+        "unidade": "Rede Especializada de São Paulo (SAEs e CRIEs)",
         "uf": "SP",
-        "statusEstoque": "em_abastecimento",
-        "motivo": "Recebimento de mil novas doses enviadas pelo Programa Nacional de Imunizações para atendimento de grupos prioritários.",
-        "fonte": "agenciasp.sp.gov.br"
+        "statusEstoque": "disponivel",
+        "motivo": "Recebimento e distribuição de novo lote de 1.000 doses da vacina MVA-BN aos SAEs e CRIEs.",
+        "fonte": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQcmM2MDJIeG5QQ2ttVXJYTXlTUWZXeWFKWWJaMjREWTZQNGRELXBGZ201OEFULUVzQWJ6V0V3Ynhad2RJWjBiNDRrMnNDVjZ0SjI2eXdrVFRqaEQtVHJYZERDd1pkakJlcmRpWHFRaXZIUndVal9UVmtrN2xxTlVJcy10S2toQloxU0p5Rzg2eUZHaTVMMDNXYk1ORlZBMTBDRl9JSjIxbW1ObTJGYXRUMDdWNjlOTTFCaW9Jc19uaw?oc=5"
       },
       {
-        "unidade": "Rede de Centros de Saúde de Belo Horizonte (PBH)",
+        "unidade": "Super Centros Cariocas (Botafogo, Shopping Nova América, ParkShopping Campo Grande)",
+        "uf": "RJ",
+        "statusEstoque": "disponivel",
+        "motivo": "Reabastecido com novo lote de 1.000 frascos (até 5.000 doses intradérmicas) enviado pelo Ministério da Saúde. Vacinação ativa.",
+        "fonte": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQbl9qdXR0TUdTNkZIT2JIU0dOeEd5Y1VDSE5YZ0pZaGhHWTVWNFFtMEdYS2pDQXFTWURiRkh4TEdHaHd5Z19tWDRtSmYtRnBhR0VFZkJLNWdua1U0WUUta2RER0Vma25vV0lkb3RDNU1pdG5UU0ZUNER2WHM1dFRNdFhjUE1uQTJNeFNkTl9WSHR2YzVVTl9naVJJSDRIZFFvNnZxY3JuOFAwRklNdGVLZlFjXzZJbFU2cWxnMUVEcEhaNUkxQ2w0cVoxZE1OSDFiOFpuNGtobHphVllkNVhsTw?oc=5"
+      },
+      {
+        "unidade": "Rede Especializada de São Paulo (SAEs e CRIEs)",
+        "uf": "SP",
+        "statusEstoque": "disponivel",
+        "motivo": "Recebimento e distribuição de novo lote de 1.000 doses da vacina MVA-BN aos SAEs e CRIEs.",
+        "fonte": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNSkYzc1Jsbm1KZFk2TXJxYVhJVGd6YmpGZEktc05fWU9weXYtcDFzTGJScFI1SGh6bC1OSWt6VFhqNlJsWlZ0SzhTZFJDVzZTMWJyV0NNcDFJcmpYblpBZVJKV0NJcnJrX3lybjVsVERZdDllWl9sNHFlanpwSXhySFo0MVo5bXhRMGt6OHJzVGFBaEp0T29sS2lsRQ?oc=5"
+      },
+      {
+        "unidade": "Polos de Vacinação de Belo Horizonte (Hospital Eduardo de Menezes, URS Centro-Sul, Sagrada Família, Orestes Diniz, CRIE)",
         "uf": "MG",
         "statusEstoque": "disponivel",
-        "motivo": "Ampliação da imunização contra mpox a partir de remessa com 200 vacinas destinadas aos grupos elegíveis.",
-        "fonte": "Prefeitura de Belo Horizonte"
-      }
-    ],
-    "novosMarcos": [
-      {
-        "titulo": "Ampliação da Imunização de Grupos Prioritários em Belo Horizonte",
-        "dataEstimada": "2026-11",
-        "categoria": "vacina",
-        "descricao": "Prefeitura de Belo Horizonte estende o cronograma de vacinação contra mpox para públicos prioritários a partir de 19 de novembro."
+        "motivo": "Prefeitura de Belo Horizonte iniciou vacinação em 5 unidades para grupos prioritários e anunciou expansão para 30/11.",
+        "fonte": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxObGVKcUNXWjZlUTNZalFHaWNMbjJYdTR5aHZFeHd6WmNVSWt3ZTZOYVdSU3pEWGpkNGg1MzlCdFlVdjBnQWhRd0JIZWh4WF9NTjY1TkdUYjU2ZWY3M0dGZ0wyYTZJUld1TmQ2U1VPZWo4QlNQOTBGRE1JdnRWYnZ3aHlyallBRDNuYXA0NnFHRlpYbDVQc2c5T2NrS1lIWXBvZlpWcEJ6bVlvSld4ZWNJYWhDT0dDREFYSVo2dTZlUXhSb1pWVVN6ZQ?oc=5"
       },
       {
-        "titulo": "Repasse Emergencial de Doses a Capitais Prioritárias (SP e RJ)",
-        "dataEstimada": "2026-11",
-        "categoria": "vacina",
-        "descricao": "Ministério da Saúde executa remessas pontuais de mil frascos/doses para São Paulo e Rio de Janeiro para conter aumento recente de transmissibilidade."
+        "unidade": "Super Centros Cariocas (Botafogo, Shopping Nova América, ParkShopping Campo Grande)",
+        "uf": "RJ",
+        "statusEstoque": "disponivel",
+        "motivo": "Reabastecido com novo lote de 1.000 frascos (até 5.000 doses intradérmicas) enviado pelo Ministério da Saúde. Vacinação ativa.",
+        "fonte": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPa2U2T3V4YkdIRFpsSi1RMmRlX1M4NnpUOVNuVUo3Y1lybGlhWHRBVkdvcjFnVVhsdW9OV2pHMWxrQUZUN2xodUtUMGFOcWIzYnRXSjJtMVViT3FNQmlWZEY2T09nQ3lVUmVMN05qVEpCWUVDNFpWdDF2bUotd1dDRGlTemxoRk85SkFaeTk4ZEJGaTFpSW82cXhVamNXandBQkd4Ry1NMjhLb0lFVnNJ?oc=5"
+      },
+      {
+        "unidade": "Rede Especializada de São Paulo (SAEs e CRIEs)",
+        "uf": "SP",
+        "statusEstoque": "disponivel",
+        "motivo": "Recebimento e distribuição de novo lote de 1.000 doses da vacina MVA-BN aos SAEs e CRIEs.",
+        "fonte": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNSEQzWkRmVWFpM19Ic3o5TEpLekpObXF1X1lMVVBvOHZSZk5IaFo3cXJkQzQyX2VqeFNKUzBsaHpnWGdQWVEtYm9Qa2ROVU5IQmpZbjMxdWRmNEwzY1BheVk0S2N4U0x5S1BjdmpMdmlWaG8wZHlJaEJ6TUdqSzRST3NDTmE1Mk5KUmVmdlBLVmxsUUkwSEFYUU83SG8ycFhaLXpIakpjUXRRTEEwZUE?oc=5"
+      },
+      {
+        "unidade": "Rede Especializada de São Paulo (SAEs e CRIEs)",
+        "uf": "SP",
+        "statusEstoque": "disponivel",
+        "motivo": "Recebimento e distribuição de novo lote de 1.000 doses da vacina MVA-BN aos SAEs e CRIEs.",
+        "fonte": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNU0RGOXB1N0VFV25fNVJIektkV25FLUp4MmhlR0EwRTZ3Z1kyM2xDNFZDSmpZckU5Zjc3WFBBUGdjVEo1YWllSkQxWTlzS2pSTFlMRFQwRng4dTJmc3VmZWxsdENad1V1ZXZwZ01PZmpuMVkwb3RGbk40Zk9uVlJJUVN3UWNyaWIwc2l3?oc=5"
+      },
+      {
+        "unidade": "Rede Especializada de São Paulo (SAEs e CRIEs)",
+        "uf": "SP",
+        "statusEstoque": "disponivel",
+        "motivo": "Recebimento e distribuição de novo lote de 1.000 doses da vacina MVA-BN aos SAEs e CRIEs.",
+        "fonte": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-11/sp-recebe-novas-doses-da-vacina-contra-mpox-saiba-quem-pode-receber"
       }
     ],
+    "novosMarcos": [],
     "alertasUrgentes": [
       {
-        "titulo": "Chegada de mil frascos de vacina contra mpox ao Rio de Janeiro",
+        "titulo": "SP recebe novas doses da vacina contra a mpox; saiba quem pode receber - Agência Brasil",
         "tipo": "disponibilidade_vacina",
-        "resumo": "Município do Rio de Janeiro é reabastecido com mil frascos de vacina enviados pelo Ministério da Saúde para público prioritário.",
+        "resumo": "SP recebe novas doses da vacina contra a mpox; saiba quem pode receber&nbsp;&nbsp;Agência Brasil",
+        "linkOficial": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQcmM2MDJIeG5QQ2ttVXJYTXlTUWZXeWFKWWJaMjREWTZQNGRELXBGZ201OEFULUVzQWJ6V0V3Ynhad2RJWjBiNDRrMnNDVjZ0SjI2eXdrVFRqaEQtVHJYZERDd1pkakJlcmRpWHFRaXZIUndVal9UVmtrN2xxTlVJcy10S2toQloxU0p5Rzg2eUZHaTVMMDNXYk1ORlZBMTBDRl9JSjIxbW1ObTJGYXRUMDdWNjlOTTFCaW9Jc19uaw?oc=5"
+      },
+      {
+        "titulo": "Ministério da Saúde envia ao município do Rio mais mil frascos de vacina contra mpox - GOV.BR",
+        "tipo": "disponibilidade_vacina",
+        "resumo": "Ministério da Saúde envia ao município do Rio mais mil frascos de vacina contra mpox&nbsp;&nbsp;GOV.BR",
         "linkOficial": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQbl9qdXR0TUdTNkZIT2JIU0dOeEd5Y1VDSE5YZ0pZaGhHWTVWNFFtMEdYS2pDQXFTWURiRkh4TEdHaHd5Z19tWDRtSmYtRnBhR0VFZkJLNWdua1U0WUUta2RER0Vma25vV0lkb3RDNU1pdG5UU0ZUNER2WHM1dFRNdFhjUE1uQTJNeFNkTl9WSHR2YzVVTl9naVJJSDRIZFFvNnZxY3JuOFAwRklNdGVLZlFjXzZJbFU2cWxnMUVEcEhaNUkxQ2w0cVoxZE1OSDFiOFpuNGtobHphVllkNVhsTw?oc=5"
       },
       {
-        "titulo": "Disponibilização de novas doses e critérios em São Paulo",
+        "titulo": "São Paulo recebe mil novas doses da vacina contra a Mpox - agenciasp.sp.gov.br",
         "tipo": "disponibilidade_vacina",
-        "resumo": "São Paulo recebe remessa de mil doses para manter o atendimento a grupos elegíveis pelo SUS diante da procura vacinal.",
+        "resumo": "São Paulo recebe mil novas doses da vacina contra a Mpox&nbsp;&nbsp;agenciasp.sp.gov.br",
         "linkOficial": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNSkYzc1Jsbm1KZFk2TXJxYVhJVGd6YmpGZEktc05fWU9weXYtcDFzTGJScFI1SGh6bC1OSWt6VFhqNlJsWlZ0SzhTZFJDVzZTMWJyV0NNcDFJcmpYblpBZVJKV0NJcnJrX3lybjVsVERZdDllWl9sNHFlanpwSXhySFo0MVo5bXhRMGt6OHJzVGFBaEp0T29sS2lsRQ?oc=5"
       },
       {
-        "titulo": "Aumento de 20% nos casos no país e restrição ao SUS",
-        "tipo": "nota_tecnica",
-        "resumo": "Notificações sobem 20% no Brasil; vacina permanece restrita ao SUS para grupos específicos, sem liberação na rede privada.",
+        "titulo": "Casos de Mpox crescem 20% no Brasil; saiba se a vacina está disponível na rede particular - Valor Econômico",
+        "tipo": "disponibilidade_vacina",
+        "resumo": "Casos de Mpox crescem 20% no Brasil; saiba se a vacina está disponível na rede particular&nbsp;&nbsp;Valor Econômico",
         "linkOficial": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOSWpsamdpbXBTckpKNndMeGVfXzV4QTIwZkNWMFNiS242ZjQzZ0RuVWJUcml1di1zc1JtSHhGaDBkWGJMbDQxcExJaUJ2Y1lDVUM2c3RUSk13bzRNSzFwOW1BZDZYZEhKaGVsNmoxS1VLaU8yeUtjckNIY1lIemJxeVhTV1VaQXhCTTNjd2RHa04xdHFHQm13UnE3ZlRKYmtwcGhqSmdDRXVsaXhWclJDUVRHaGR4WnE2UUlieFEyb1BuTXlzLV9aQmlsRmRHVW9GTjlvT3Z3Q25CUFU4bkxNNzRFWnDSAfMBQVVfeXFMT0FqVEQ1SzEwWEsxRFFJMldUZVRSNFBFWnh4ZXJPcGtUa2tXNk40cXJjUGpvcGRmQ1U2OWNOd1NwTDlTdEtaWXBBWW9BMjB3WXpZZGdvaVhhc3J3MTl5V0VKLXJCWUtjVXMtVTE5QW1Fcm5zOE1LcTJPZDFGdm5USGlBYWhHblBJWFJlYmVWS2JxclREWm5OUVZJbGpSMDYzZm5wdGs4c0s0VWxxcGxWZXpxUWFkeUpSVHF5dS1mZ1dtaEhDZzNVUWtPS2NuaHpjQ1VtbndmOGlvLWtjSzZqalM2SlZLcWp3U19jTkplam5BVm9B?oc=5"
+      },
+      {
+        "titulo": "PBH inicia vacinação contra mpox para grupos prioritários e imunização será ampliada nesta quinta-feira (19) - Prefeitura de Belo Horizonte",
+        "tipo": "disponibilidade_vacina",
+        "resumo": "PBH inicia vacinação contra mpox para grupos prioritários e imunização será ampliada nesta quinta-feira (19)&nbsp;&nbsp;Prefeitura de Belo Horizonte",
+        "linkOficial": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxObGVKcUNXWjZlUTNZalFHaWNMbjJYdTR5aHZFeHd6WmNVSWt3ZTZOYVdSU3pEWGpkNGg1MzlCdFlVdjBnQWhRd0JIZWh4WF9NTjY1TkdUYjU2ZWY3M0dGZ0wyYTZJUld1TmQ2U1VPZWo4QlNQOTBGRE1JdnRWYnZ3aHlyallBRDNuYXA0NnFHRlpYbDVQc2c5T2NrS1lIWXBvZlpWcEJ6bVlvSld4ZWNJYWhDT0dDREFYSVo2dTZlUXhSb1pWVVN6ZQ?oc=5"
+      },
+      {
+        "titulo": "Rio de Janeiro recebe mais mil frascos de vacina contra Mpox - CNN Brasil",
+        "tipo": "disponibilidade_vacina",
+        "resumo": "Rio de Janeiro recebe mais mil frascos de vacina contra Mpox&nbsp;&nbsp;CNN Brasil",
+        "linkOficial": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPa2U2T3V4YkdIRFpsSi1RMmRlX1M4NnpUOVNuVUo3Y1lybGlhWHRBVkdvcjFnVVhsdW9OV2pHMWxrQUZUN2xodUtUMGFOcWIzYnRXSjJtMVViT3FNQmlWZEY2T09nQ3lVUmVMN05qVEpCWUVDNFpWdDF2bUotd1dDRGlTemxoRk85SkFaeTk4ZEJGaTFpSW82cXhVamNXandBQkd4Ry1NMjhLb0lFVnNJ?oc=5"
       }
     ]
   }
