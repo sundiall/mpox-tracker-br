@@ -1,5 +1,28 @@
 {
-  "ultimaAtualizacao": "2026-11-19T19:52:58.026991",
-  "totalItens": 0,
-  "itens": []
+  "ultimaAtualizacao": "2026-11-19T20:42:49.501271",
+  "totalItens": 2,
+  "itens": [
+    {
+      "id": "rss-1",
+      "dataPublicacao": "2026-11-19",
+      "orgaoEmissor": "Fiocruz",
+      "ufRelacionada": "Nacional",
+      "titulo": "Nav. ed. pt Entrevista PJ.2.1",
+      "tipo": "disponibilidade_vacina",
+      "resumo": "Nav. ed. pt Entrevista PJ.2.1\nrenata.moehlecke\nQui, 19/11/2026 - 16:57\n\n\n  \n    Tipo de caixa\n              Duplo horizontal\n          \n\n  \n    Título\n              Entrevista: PJ.2.1, nova linhagem no Brasil\n          \n\n  \n    Imagem\n                \n\n\n          \n\n  \n    Chamada...",
+      "linkOficial": "https://agencia.fiocruz.br/nav-ed-pt-entrevista-pj21",
+      "categoria": "Imunização"
+    },
+    {
+      "id": "rss-2",
+      "dataPublicacao": "2026-11-19",
+      "orgaoEmissor": "Fiocruz",
+      "ufRelacionada": "Nacional",
+      "titulo": "PJ.2.1: virologista da Fiocruz explica a nova linhagem do coronavírus em circulação no Brasil",
+      "tipo": "disponibilidade_vacina",
+      "resumo": "PJ.2.1: virologista da Fiocruz explica a nova linhagem do coronavírus em circulação no Brasil\n\n            A Organização Mundial da Saúde (OMS) classificou a linhagem PJ.2.1 do Sars-CoV-2 como variante sob monitoramento. Identificada inicialmente no Canadá, em maio de 2026, a var...",
+      "linkOficial": "https://agencia.fiocruz.br/pj21-virologista-da-fiocruz-explica-nova-linhagem-do-coronavirus-em-circulacao-no-brasil",
+      "categoria": "Imunização"
+    }
+  ]
 }
