@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-11-19T20:42:54.952263",
-  "totalItensVarredura": 48,
+  "timestamp": "2026-11-19T21:05:53.354906",
+  "totalItensVarredura": 59,
   "analiseAgente": {
     "alteracoesEstoque": [
       {
@@ -33,7 +33,7 @@
         "statusEstoque": "disponivel",
         "motivo": "Recebimento e distribuição de novo lote de 1.000 doses da vacina MVA-BN aos SAEs e CRIEs.",
         "previsaoFutura": "Doses de primeira aplicação ativas. Segunda dose recomendada a partir de 28 dias para consolidar imunidade.",
-        "fonte": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQRmRUemF4aUp6SlRDMFVaT2U2S215dDNJbXhZcWgyek5hZk8wdkplTXdlaHBJYzJySERMZEJXVEFVdUxOZUc0aWFaMXI2TGtxVGxrNzloWnNYc0tISXh2WmxKZlVlMk01OTUtenNNVEdWNTZUbEotVGNfQnR1LVJZR09KUDJKT2ZMTDVuenl1cTBtb0NkcVFkMlBETkVKbklRazNNQWFFSWdPVDVJcjVpeE5yTk8xUkNCZ3N4Uk9MT1AtUk41N3A1a1UwcWNwV1E?oc=5"
+        "fonte": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPXzlXYlNjWDdFc0ZMZkR2NmZwNGxvY0h5SXFaV3g1Q0hGaHVvcGRZbXpiTkpDcGpZT2QzVHVzOUgwLWJQZ2NPU0pvSDBKYzFMblZWVE4tSVBjQjFzZnBPX3lUVVZZdVBhRFR4dDlkMzMyaVp2RHZPUTdnYkZVQ3NOZTlnQlN2ejVBNHpBRV81VV93Ym1BdlBobUxzZEZkOGZjczgtQUhQMzhuWmR6Q3RWc2JzbTczZWdUS3dJb0k5UGNDWENBcW1VaGZR0gHYAUFVX3lxTFB5azVRZ2FjZ0FtaUl1YVZJYnZGRXlZZjB2NTNEbmJNRWZEbGFmUndkYU5Dc3RhY1dtakJ4Y2FiWjRBTFdscG1TbjcydnFwX1owM0tpWC0waDdnV3lFRUVSTXloNzdscHB1by1zNnJuX3o2ODFuaG9rdnBxRldGc0xEQ1EycDJVMC1YYW9mVERQd2VVZzdYWkVtakNZV204OUM0b0dsYnhlcWhGSU5lNGV5a0xFaHBqUjB0R2VCMmMxcEhpMjF6cE84MXlUaHkwWE9uMm9sTWtyUw?oc=5"
       },
       {
         "unidade": "Rede Especializada de São Paulo (SAEs e CRIEs)",
@@ -41,7 +41,7 @@
         "statusEstoque": "disponivel",
         "motivo": "Recebimento e distribuição de novo lote de 1.000 doses da vacina MVA-BN aos SAEs e CRIEs.",
         "previsaoFutura": "Doses de primeira aplicação ativas. Segunda dose recomendada a partir de 28 dias para consolidar imunidade.",
-        "fonte": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPXzlXYlNjWDdFc0ZMZkR2NmZwNGxvY0h5SXFaV3g1Q0hGaHVvcGRZbXpiTkpDcGpZT2QzVHVzOUgwLWJQZ2NPU0pvSDBKYzFMblZWVE4tSVBjQjFzZnBPX3lUVVZZdVBhRFR4dDlkMzMyaVp2RHZPUTdnYkZVQ3NOZTlnQlN2ejVBNHpBRV81VV93Ym1BdlBobUxzZEZkOGZjczgtQUhQMzhuWmR6Q3RWc2JzbTczZWdUS3dJb0k5UGNDWENBcW1VaGZR0gHYAUFVX3lxTFB5azVRZ2FjZ0FtaUl1YVZJYnZGRXlZZjB2NTNEbmJNRWZEbGFmUndkYU5Dc3RhY1dtakJ4Y2FiWjRBTFdscG1TbjcydnFwX1owM0tpWC0waDdnV3lFRUVSTXloNzdscHB1by1zNnJuX3o2ODFuaG9rdnBxRldGc0xEQ1EycDJVMC1YYW9mVERQd2VVZzdYWkVtakNZV204OUM0b0dsYnhlcWhGSU5lNGV5a0xFaHBqUjB0R2VCMmMxcEhpMjF6cE84MXlUaHkwWE9uMm9sTWtyUw?oc=5"
+        "fonte": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQRmRUemF4aUp6SlRDMFVaT2U2S215dDNJbXhZcWgyek5hZk8wdkplTXdlaHBJYzJySERMZEJXVEFVdUxOZUc0aWFaMXI2TGtxVGxrNzloWnNYc0tISXh2WmxKZlVlMk01OTUtenNNVEdWNTZUbEotVGNfQnR1LVJZR09KUDJKT2ZMTDVuenl1cTBtb0NkcVFkMlBETkVKbklRazNNQWFFSWdPVDVJcjVpeE5yTk8xUkNCZ3N4Uk9MT1AtUk41N3A1a1UwcWNwV1E?oc=5"
       },
       {
         "unidade": "Rede Especializada de São Paulo (SAEs e CRIEs)",
@@ -121,16 +121,16 @@
         "linkOficial": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQbl9qdXR0TUdTNkZIT2JIU0dOeEd5Y1VDSE5YZ0pZaGhHWTVWNFFtMEdYS2pDQXFTWURiRkh4TEdHaHd5Z19tWDRtSmYtRnBhR0VFZkJLNWdua1U0WUUta2RER0Vma25vV0lkb3RDNU1pdG5UU0ZUNER2WHM1dFRNdFhjUE1uQTJNeFNkTl9WSHR2YzVVTl9naVJJSDRIZFFvNnZxY3JuOFAwRklNdGVLZlFjXzZJbFU2cWxnMUVEcEhaNUkxQ2w0cVoxZE1OSDFiOFpuNGtobHphVllkNVhsTw?oc=5"
       },
       {
-        "titulo": "Mpox Avança em São Paulo e Estado Recebe Novas Doses de Vacina; Veja os Grupos Prioritários - Forbes Brasil",
-        "tipo": "disponibilidade_vacina",
-        "resumo": "Mpox Avança em São Paulo e Estado Recebe Novas Doses de Vacina; Veja os Grupos Prioritários&nbsp;&nbsp;Forbes Brasil",
-        "linkOficial": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQRmRUemF4aUp6SlRDMFVaT2U2S215dDNJbXhZcWgyek5hZk8wdkplTXdlaHBJYzJySERMZEJXVEFVdUxOZUc0aWFaMXI2TGtxVGxrNzloWnNYc0tISXh2WmxKZlVlMk01OTUtenNNVEdWNTZUbEotVGNfQnR1LVJZR09KUDJKT2ZMTDVuenl1cTBtb0NkcVFkMlBETkVKbklRazNNQWFFSWdPVDVJcjVpeE5yTk8xUkNCZ3N4Uk9MT1AtUk41N3A1a1UwcWNwV1E?oc=5"
-      },
-      {
         "titulo": "Após alta de casos, Estado de SP recebe mais mil doses de vacina contra Mpox - Valor Econômico",
         "tipo": "disponibilidade_vacina",
         "resumo": "Após alta de casos, Estado de SP recebe mais mil doses de vacina contra Mpox&nbsp;&nbsp;Valor Econômico",
         "linkOficial": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPXzlXYlNjWDdFc0ZMZkR2NmZwNGxvY0h5SXFaV3g1Q0hGaHVvcGRZbXpiTkpDcGpZT2QzVHVzOUgwLWJQZ2NPU0pvSDBKYzFMblZWVE4tSVBjQjFzZnBPX3lUVVZZdVBhRFR4dDlkMzMyaVp2RHZPUTdnYkZVQ3NOZTlnQlN2ejVBNHpBRV81VV93Ym1BdlBobUxzZEZkOGZjczgtQUhQMzhuWmR6Q3RWc2JzbTczZWdUS3dJb0k5UGNDWENBcW1VaGZR0gHYAUFVX3lxTFB5azVRZ2FjZ0FtaUl1YVZJYnZGRXlZZjB2NTNEbmJNRWZEbGFmUndkYU5Dc3RhY1dtakJ4Y2FiWjRBTFdscG1TbjcydnFwX1owM0tpWC0waDdnV3lFRUVSTXloNzdscHB1by1zNnJuX3o2ODFuaG9rdnBxRldGc0xEQ1EycDJVMC1YYW9mVERQd2VVZzdYWkVtakNZV204OUM0b0dsYnhlcWhGSU5lNGV5a0xFaHBqUjB0R2VCMmMxcEhpMjF6cE84MXlUaHkwWE9uMm9sTWtyUw?oc=5"
+      },
+      {
+        "titulo": "Mpox Avança em São Paulo e Estado Recebe Novas Doses de Vacina; Veja os Grupos Prioritários - Forbes Brasil",
+        "tipo": "disponibilidade_vacina",
+        "resumo": "Mpox Avança em São Paulo e Estado Recebe Novas Doses de Vacina; Veja os Grupos Prioritários&nbsp;&nbsp;Forbes Brasil",
+        "linkOficial": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQRmRUemF4aUp6SlRDMFVaT2U2S215dDNJbXhZcWgyek5hZk8wdkplTXdlaHBJYzJySERMZEJXVEFVdUxOZUc0aWFaMXI2TGtxVGxrNzloWnNYc0tISXh2WmxKZlVlMk01OTUtenNNVEdWNTZUbEotVGNfQnR1LVJZR09KUDJKT2ZMTDVuenl1cTBtb0NkcVFkMlBETkVKbklRazNNQWFFSWdPVDVJcjVpeE5yTk8xUkNCZ3N4Uk9MT1AtUk41N3A1a1UwcWNwV1E?oc=5"
       },
       {
         "titulo": "São Paulo recebe mil novas doses da vacina contra a Mpox - agenciasp.sp.gov.br",
