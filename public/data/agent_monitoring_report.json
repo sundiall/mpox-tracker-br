@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-19T14:52:12.031545",
+  "timestamp": "2026-11-19T15:13:55.958092",
   "totalItensVarredura": 43,
   "analiseAgente": {
     "alteracoesEstoque": [
@@ -8,6 +8,7 @@
         "uf": "SP",
         "statusEstoque": "disponivel",
         "motivo": "Recebimento e distribuição de novo lote de 1.000 doses da vacina MVA-BN aos SAEs e CRIEs.",
+        "previsaoFutura": "Doses de primeira aplicação ativas. Segunda dose recomendada a partir de 28 dias para consolidar imunidade.",
         "fonte": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQcmM2MDJIeG5QQ2ttVXJYTXlTUWZXeWFKWWJaMjREWTZQNGRELXBGZ201OEFULUVzQWJ6V0V3Ynhad2RJWjBiNDRrMnNDVjZ0SjI2eXdrVFRqaEQtVHJYZERDd1pkakJlcmRpWHFRaXZIUndVal9UVmtrN2xxTlVJcy10S2toQloxU0p5Rzg2eUZHaTVMMDNXYk1ORlZBMTBDRl9JSjIxbW1ObTJGYXRUMDdWNjlOTTFCaW9Jc19uaw?oc=5"
       },
       {
@@ -15,6 +16,7 @@
         "uf": "RJ",
         "statusEstoque": "disponivel",
         "motivo": "Reabastecido com novo lote de 1.000 frascos (até 5.000 doses intradérmicas) enviado pelo Ministério da Saúde. Vacinação ativa.",
+        "previsaoFutura": "Vacinação ativa nos Super Centros enquanto durar o lote. Novos repasses federais previstos conforme demanda.",
         "fonte": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQbl9qdXR0TUdTNkZIT2JIU0dOeEd5Y1VDSE5YZ0pZaGhHWTVWNFFtMEdYS2pDQXFTWURiRkh4TEdHaHd5Z19tWDRtSmYtRnBhR0VFZkJLNWdua1U0WUUta2RER0Vma25vV0lkb3RDNU1pdG5UU0ZUNER2WHM1dFRNdFhjUE1uQTJNeFNkTl9WSHR2YzVVTl9naVJJSDRIZFFvNnZxY3JuOFAwRklNdGVLZlFjXzZJbFU2cWxnMUVEcEhaNUkxQ2w0cVoxZE1OSDFiOFpuNGtobHphVllkNVhsTw?oc=5"
       },
       {
@@ -22,6 +24,7 @@
         "uf": "SP",
         "statusEstoque": "disponivel",
         "motivo": "Recebimento e distribuição de novo lote de 1.000 doses da vacina MVA-BN aos SAEs e CRIEs.",
+        "previsaoFutura": "Doses de primeira aplicação ativas. Segunda dose recomendada a partir de 28 dias para consolidar imunidade.",
         "fonte": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNSkYzc1Jsbm1KZFk2TXJxYVhJVGd6YmpGZEktc05fWU9weXYtcDFzTGJScFI1SGh6bC1OSWt6VFhqNlJsWlZ0SzhTZFJDVzZTMWJyV0NNcDFJcmpYblpBZVJKV0NJcnJrX3lybjVsVERZdDllWl9sNHFlanpwSXhySFo0MVo5bXhRMGt6OHJzVGFBaEp0T29sS2lsRQ?oc=5"
       },
       {
@@ -29,6 +32,7 @@
         "uf": "MG",
         "statusEstoque": "disponivel",
         "motivo": "Prefeitura de Belo Horizonte iniciou vacinação em 5 unidades para grupos prioritários e anunciou expansão para 30/11.",
+        "previsaoFutura": "A partir de 30/11: Ampliação para todas as pessoas vivendo com HIV/Aids (PVHA), independente de contagem de CD4 (campanha até 04/12).",
         "fonte": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxObGVKcUNXWjZlUTNZalFHaWNMbjJYdTR5aHZFeHd6WmNVSWt3ZTZOYVdSU3pEWGpkNGg1MzlCdFlVdjBnQWhRd0JIZWh4WF9NTjY1TkdUYjU2ZWY3M0dGZ0wyYTZJUld1TmQ2U1VPZWo4QlNQOTBGRE1JdnRWYnZ3aHlyallBRDNuYXA0NnFHRlpYbDVQc2c5T2NrS1lIWXBvZlpWcEJ6bVlvSld4ZWNJYWhDT0dDREFYSVo2dTZlUXhSb1pWVVN6ZQ?oc=5"
       },
       {
@@ -36,6 +40,7 @@
         "uf": "RJ",
         "statusEstoque": "disponivel",
         "motivo": "Reabastecido com novo lote de 1.000 frascos (até 5.000 doses intradérmicas) enviado pelo Ministério da Saúde. Vacinação ativa.",
+        "previsaoFutura": "Vacinação ativa nos Super Centros enquanto durar o lote. Novos repasses federais previstos conforme demanda.",
         "fonte": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPa2U2T3V4YkdIRFpsSi1RMmRlX1M4NnpUOVNuVUo3Y1lybGlhWHRBVkdvcjFnVVhsdW9OV2pHMWxrQUZUN2xodUtUMGFOcWIzYnRXSjJtMVViT3FNQmlWZEY2T09nQ3lVUmVMN05qVEpCWUVDNFpWdDF2bUotd1dDRGlTemxoRk85SkFaeTk4ZEJGaTFpSW82cXhVamNXandBQkd4Ry1NMjhLb0lFVnNJ?oc=5"
       },
       {
@@ -43,6 +48,7 @@
         "uf": "SP",
         "statusEstoque": "disponivel",
         "motivo": "Recebimento e distribuição de novo lote de 1.000 doses da vacina MVA-BN aos SAEs e CRIEs.",
+        "previsaoFutura": "Doses de primeira aplicação ativas. Segunda dose recomendada a partir de 28 dias para consolidar imunidade.",
         "fonte": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNSEQzWkRmVWFpM19Ic3o5TEpLekpObXF1X1lMVVBvOHZSZk5IaFo3cXJkQzQyX2VqeFNKUzBsaHpnWGdQWVEtYm9Qa2ROVU5IQmpZbjMxdWRmNEwzY1BheVk0S2N4U0x5S1BjdmpMdmlWaG8wZHlJaEJ6TUdqSzRST3NDTmE1Mk5KUmVmdlBLVmxsUUkwSEFYUU83SG8ycFhaLXpIakpjUXRRTEEwZUE?oc=5"
       },
       {
@@ -50,6 +56,7 @@
         "uf": "SP",
         "statusEstoque": "disponivel",
         "motivo": "Recebimento e distribuição de novo lote de 1.000 doses da vacina MVA-BN aos SAEs e CRIEs.",
+        "previsaoFutura": "Doses de primeira aplicação ativas. Segunda dose recomendada a partir de 28 dias para consolidar imunidade.",
         "fonte": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNU0RGOXB1N0VFV25fNVJIektkV25FLUp4MmhlR0EwRTZ3Z1kyM2xDNFZDSmpZckU5Zjc3WFBBUGdjVEo1YWllSkQxWTlzS2pSTFlMRFQwRng4dTJmc3VmZWxsdENad1V1ZXZwZ01PZmpuMVkwb3RGbk40Zk9uVlJJUVN3UWNyaWIwc2l3?oc=5"
       },
       {
@@ -57,6 +64,7 @@
         "uf": "SP",
         "statusEstoque": "disponivel",
         "motivo": "Recebimento e distribuição de novo lote de 1.000 doses da vacina MVA-BN aos SAEs e CRIEs.",
+        "previsaoFutura": "Doses de primeira aplicação ativas. Segunda dose recomendada a partir de 28 dias para consolidar imunidade.",
         "fonte": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-11/sp-recebe-novas-doses-da-vacina-contra-mpox-saiba-quem-pode-receber"
       }
     ],
