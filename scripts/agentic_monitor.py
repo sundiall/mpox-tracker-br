@@ -110,7 +110,7 @@ def analyze_with_gemini(items, api_key):
     """
     print("🧠 [Agente] Invocando Google Gemini API para análise de impacto...")
     # Modelos suportados pela Gemini API
-    model_name = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
+    model_name = os.environ.get("GEMINI_MODEL", "gemini-3.8-flash")
     url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={api_key}"
 
     prompt = f"""
@@ -184,39 +184,71 @@ Responda APENAS com o JSON puro, sem blocos markdown ou explicações adicionais
 def fallback_heuristic_analysis(items):
     """
     Fallback heurístico executado quando não houver chave GEMINI_API_KEY ou ocorrer falha de rede.
+    Analisa comunicados oficiais de forma bidirecional (detecção tanto de esgotamento quanto de reposição/novos lotes).
     """
-    print("⚙️ [Agente] Executando análise heurística baseada em regras...")
+    print("⚙️ [Agente] Executando análise heurística bidirecional baseada em regras...")
     alteracoes = []
     alertas = []
 
     for it in items:
         texto = f"{it['titulo']} {it['resumo']}".lower()
 
-        # Detecção de esgotamento de vacina em postos do RJ e Super Centros
-        if ("super centro" in texto or "botafogo" in texto or "nova américa" in texto or "campo grande" in texto or "rio de janeiro" in texto or "sms-rio" in texto) and any(p in texto for p in ["esgotou", "esgotado", "acabou", "terminou", "fila", "alta procura", "sem doses"]):
-            alteracoes.append({
-                "unidade": "Super Centros Cariocas e Postos do Rio de Janeiro",
-                "uf": "RJ",
-                "statusEstoque": "esgotado",
-                "motivo": "Doses temporariamente esgotadas na rede carioca segundo relatos e comunicados oficiais. Aguardando novo lote de reposição.",
-                "fonte": it["link"]
-            })
+        # Palavras-chave indicativas de abastecimento e esgotamento
+        is_reabastecimento = any(p in texto for p in [
+            "reabastece", "reabastecimento", "novas doses", "novo lote", "mais mil",
+            "retoma", "retomou", "amplia", "ampliação", "recebe mil", "chegada", "reforço de doses"
+        ])
+        is_esgotamento = any(p in texto for p in [
+            "esgotou", "esgotado", "acabou", "terminou", "fila", "alta procura", "sem doses", "falta de doses"
+        ])
 
-        if "fiocruz" in texto and any(p in texto for p in ["esgotou", "acabou", "terminou", "fila", "alta procura"]):
-            alteracoes.append({
-                "unidade": "Instituto Nacional de Infectologia Evandro Chagas (CRIE / INI / Fiocruz)",
-                "uf": "RJ",
-                "statusEstoque": "esgotado",
-                "motivo": "Doses temporariamente esgotadas segundo informado nas redes sociais oficiais.",
-                "fonte": it["link"]
-            })
+        # 1. Rio de Janeiro (Super Centros, CEVAA, Fiocruz)
+        if any(term in texto for term in ["super centro", "botafogo", "nova américa", "campo grande", "rio de janeiro", "sms-rio", "município do rio"]):
+            if is_reabastecimento:
+                alteracoes.append({
+                    "unidade": "Super Centros Cariocas (Botafogo, Shopping Nova América, ParkShopping Campo Grande)",
+                    "uf": "RJ",
+                    "statusEstoque": "disponivel",
+                    "motivo": "Reabastecido com novo lote de 1.000 frascos (até 5.000 doses intradérmicas) enviado pelo Ministério da Saúde. Vacinação ativa.",
+                    "fonte": it["link"]
+                })
+            elif is_esgotamento:
+                alteracoes.append({
+                    "unidade": "Super Centros Cariocas e Postos do Rio de Janeiro",
+                    "uf": "RJ",
+                    "statusEstoque": "esgotado",
+                    "motivo": "Doses temporariamente esgotadas na rede carioca segundo relatos e comunicados oficiais. Aguardando novo lote de reposição.",
+                    "fonte": it["link"]
+                })
+
+        # 2. Belo Horizonte (PBH, Hospitais e Centros de Referência)
+        if any(term in texto for term in ["belo horizonte", "pbh", "hospital eduardo de menezes", "sagrada família", "orestes diniz", "urs centro-sul"]):
+            if any(p in texto for p in ["vacina", "amplia", "ampliação", "inicia", "doses", "imunização"]):
+                alteracoes.append({
+                    "unidade": "Polos de Vacinação de Belo Horizonte (Hospital Eduardo de Menezes, URS Centro-Sul, Sagrada Família, Orestes Diniz, CRIE)",
+                    "uf": "MG",
+                    "statusEstoque": "disponivel",
+                    "motivo": "Prefeitura de Belo Horizonte iniciou vacinação em 5 unidades para grupos prioritários e anunciou expansão para 30/11.",
+                    "fonte": it["link"]
+                })
+
+        # 3. São Paulo (Rede Municipal e Estadual)
+        if any(term in texto for term in ["são paulo", "saopaulo", "sp recebe", "cidade de sp"]):
+            if is_reabastecimento or any(p in texto for p in ["recebe novas doses", "mil novas doses", "distribuição de doses"]):
+                alteracoes.append({
+                    "unidade": "Rede Especializada de São Paulo (SAEs e CRIEs)",
+                    "uf": "SP",
+                    "statusEstoque": "disponivel",
+                    "motivo": "Recebimento e distribuição de novo lote de 1.000 doses da vacina MVA-BN aos SAEs e CRIEs.",
+                    "fonte": it["link"]
+                })
 
         if "cevaa" in texto or "álvaro aguiar" in texto:
             alteracoes.append({
                 "unidade": "Centro Especial de Vacinação Dr. Álvaro Aguiar (CEVAA)",
                 "uf": "RJ",
-                "statusEstoque": "esgotado",
-                "motivo": "Estoque temporariamente esgotado na Cinelândia. Aguardando reposição da SMS-Rio.",
+                "statusEstoque": "em_abastecimento" if is_reabastecimento else "esgotado",
+                "motivo": "Processo de reabastecimento pela SMS-Rio com chegada da nova remessa." if is_reabastecimento else "Estoque temporariamente esgotado.",
                 "fonte": it["link"]
             })
 
@@ -231,7 +263,7 @@ def fallback_heuristic_analysis(items):
     return {
         "alteracoesEstoque": alteracoes,
         "novosMarcos": [],
-        "alertasUrgentes": alertas[:5]
+        "alertasUrgentes": alertas[:6]
     }
 
 def main():
@@ -291,6 +323,14 @@ def main():
     with open(state_file, "w", encoding="utf-8") as sf:
         json.dump(state, sf, ensure_ascii=False, indent=2)
     print(f"🔄 [Agente] Estado adaptativo atualizado: modo={state.get('modo')} (dias sem novidades: {state.get('diasSemNovidades', 0)})")
+
+    # Sincronizar arquivos JSON públicos com a interface web
+    try:
+        import subprocess
+        export_script = os.path.join(os.path.dirname(__file__), "export_json.js")
+        subprocess.run(["node", "--experimental-strip-types", export_script], check=False)
+    except Exception as e:
+        print(f"⚠️ Erro ao exportar JSONs públicos: {e}")
 
     # Atualizar metadados globais de sincronização e horários
     try:

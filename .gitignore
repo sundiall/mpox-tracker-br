@@ -23,6 +23,12 @@ dist-ssr
 *.sln
 *.sw?
 
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+scratch/
+
 # Security & Credentials
 .env
 .env.*

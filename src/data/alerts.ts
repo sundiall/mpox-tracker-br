@@ -1,7 +1,7 @@
 export interface OfficialAlert {
   id: string;
   dataPublicacao: string; // YYYY-MM-DD
-  orgaoEmissor: 'Ministério da Saúde' | 'Anvisa' | 'Fiocruz' | 'SES-RJ' | 'SES-SP' | 'OMS / OPAS';
+  orgaoEmissor: 'Ministério da Saúde' | 'Anvisa' | 'Fiocruz' | 'SES-RJ' | 'SES-SP' | 'OMS / OPAS' | 'Prefeitura de BH' | 'SMS-Rio' | 'SES-MG';
   ufRelacionada: string; // 'Nacional' ou UF
   titulo: string;
   tipo: 'alerta_urgente' | 'disponibilidade_vacina' | 'nota_tecnica' | 'avanco_cientifico';
@@ -12,13 +12,46 @@ export interface OfficialAlert {
 
 export const officialAlerts: OfficialAlert[] = [
   {
+    id: 'alert-rj-reabastecimento-2026-11-19',
+    dataPublicacao: '2026-11-19',
+    orgaoEmissor: 'SES-RJ',
+    ufRelacionada: 'RJ',
+    titulo: 'Rio de Janeiro retoma vacinação contra Mpox em 3 Super Centros após reabastecimento com 1.000 frascos',
+    tipo: 'disponibilidade_vacina',
+    resumo: 'O Ministério da Saúde enviou remessa emergencial com 1.000 frascos de vacina MVA-BN (potencial de até 5.000 doses fracionadas de 0,1 mL) à capital fluminense. A vacinação foi retomada nos Super Centros Cariocas de Botafogo, Shopping Nova América (Zona Norte) e ParkShopping Campo Grande (Zona Oeste) para usuários de PrEP e pessoas vivendo com HIV com CD4 < 200.',
+    linkOficial: 'https://prefeitura.rio/saude',
+    categoria: 'Imunização'
+  },
+  {
+    id: 'alert-bh-ampliacao-2026-11-19',
+    dataPublicacao: '2026-11-19',
+    orgaoEmissor: 'Prefeitura de BH',
+    ufRelacionada: 'MG',
+    titulo: 'Prefeitura de Belo Horizonte amplia vacinação contra Mpox nesta quinta-feira (19/11) e anuncia expansão para 30/11',
+    tipo: 'disponibilidade_vacina',
+    resumo: 'A Secretaria Municipal de Saúde de BH disponibilizou doses da vacina MVA-BN em 5 serviços de referência (Hospital Eduardo de Menezes, URS Centro-Sul, CTA/SAE Sagrada Família, CTR Orestes Diniz e CRIE Hospital Odilon Behrens). A imunização atende usuários de PrEP, PVHA com CD4 < 200 e laboratoristas a partir de 19/11, e será estendida a todas as pessoas com HIV/Aids a partir de 30/11.',
+    linkOficial: 'https://prefeitura.pbh.gov.br/noticias',
+    categoria: 'Imunização'
+  },
+  {
+    id: 'alert-sp-novas-doses-2026-11-19',
+    dataPublicacao: '2026-11-19',
+    orgaoEmissor: 'SES-SP',
+    ufRelacionada: 'SP',
+    titulo: 'São Paulo recebe 1.000 novas doses de vacina contra Mpox e abastece rede de SAEs e Centros de Referência',
+    tipo: 'disponibilidade_vacina',
+    resumo: 'O estado e município de São Paulo receberam novo lote federal com 1.000 doses da vacina MVA-BN. A distribuição contempla a rede de Serviços de Atenção Especializada (SAEs Campos Elíseos, Lapa, Santana, Butantã, Santo Amaro, Ipiranga, Cidade Líder II) e CRIEs para usuários de PrEP em acompanhamento e PVHA elegíveis.',
+    linkOficial: 'https://www.saude.sp.gov.br',
+    categoria: 'Imunização'
+  },
+  {
     id: 'alert-rj-esgotamento-2026',
     dataPublicacao: '2026-11-18',
     orgaoEmissor: 'SES-RJ',
     ufRelacionada: 'RJ',
-    titulo: 'ALERTA: Doses de vacina contra Mpox temporariamente esgotadas no Rio de Janeiro após intensa procura de usuários em PrEP',
+    titulo: 'Histórico: Doses de vacina contra Mpox temporariamente esgotadas no Rio de Janeiro após intensa procura',
     tipo: 'alerta_urgente',
-    resumo: 'A Secretaria Municipal de Saúde do Rio de Janeiro (SMS-Rio) e a SES-RJ comunicaram o esgotamento temporário das doses da vacina MVA-BN em todos os Super Centros Cariocas (Botafogo, Nova América e Campo Grande), no CEVAA e na Fiocruz. A pasta formalizou pedido urgente de novo lote de reposição junto ao Ministério da Saúde.',
+    resumo: 'A Secretaria Municipal de Saúde do Rio de Janeiro comunicou o esgotamento temporário das doses da vacina MVA-BN na rede municipal devido à alta procura no início da semana, prontamente sanado com a chegada do novo lote em 19/11.',
     linkOficial: 'https://prefeitura.rio/saude',
     categoria: 'Imunização'
   },

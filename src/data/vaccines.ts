@@ -112,6 +112,19 @@ export const vaccineMilestones: VaccineMilestone[] = [
     fonteOficial: 'Secretaria Municipal de Saúde do Rio de Janeiro (SMS-Rio) / SES-RJ',
     urlFonte: 'https://prefeitura.rio/saude',
     status: 'concluido'
+  },
+  {
+    id: 'milestone-9',
+    data: '2026-11-19',
+    titulo: 'Reabastecimento Emergencial no RJ (1.000 frascos) e Expansão de Campanha em BH e SP',
+    tipo: 'distribuicao',
+    quantidadeDoses: 6000,
+    publicoAlvo: 'Usuários de PrEP, PVHA com imunocomprometimento grave e expansão anunciada para todas as PVHA (BH)',
+    estadosEnvolvidos: ['RJ', 'MG', 'SP'],
+    detalhes: 'O Ministério da Saúde enviou 1.000 frascos adicionais ao município do Rio de Janeiro (retomando a imunização nos 3 Super Centros Cariocas) e 1.000 doses a São Paulo. Em Belo Horizonte, a Prefeitura anunciou a vacinação imediata em 5 unidades de referência e a expansão geral para todas as pessoas vivendo com HIV a partir de 30/11.',
+    fonteOficial: 'Ministério da Saúde, SMS-Rio, PBH e SES-SP',
+    urlFonte: 'https://www.gov.br/saude/pt-br',
+    status: 'em_andamento'
   }
 ];
 

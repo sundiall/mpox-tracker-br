@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import type { FC } from 'react';
 import {
   Building2,
@@ -8,9 +8,11 @@ import {
   Search,
   CalendarCheck,
   CheckCircle2,
-  FileCheck2
+  FileCheck2,
+  Sparkles
 } from 'lucide-react';
 import { vaccinationSites } from '../data/vaccination_sites';
+import type { VaccinationSite } from '../data/vaccination_sites';
 
 interface VaccinationSitesViewProps {
   selectedUF: string | null;
@@ -21,6 +23,8 @@ export const VaccinationSitesView: FC<VaccinationSitesViewProps> = ({
   selectedUF,
   onSelectUF
 }) => {
+  const [sites, setSites] = useState<VaccinationSite[]>(vaccinationSites);
+  const [isLiveSynced, setIsLiveSynced] = useState<boolean>(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedRegiao, setSelectedRegiao] = useState<string>('todas');
   const [selectedTipo, setSelectedTipo] = useState<string>('todos');
@@ -28,7 +32,19 @@ export const VaccinationSitesView: FC<VaccinationSitesViewProps> = ({
   const [currentPage, setCurrentPage] = useState<number>(1);
   const pageSize = 9;
 
-  const filteredSites = vaccinationSites.filter((site) => {
+  useEffect(() => {
+    fetch('/data/vaccination_sites.json')
+      .then((res) => (res.ok ? res.json() : null))
+      .then((data) => {
+        if (data && Array.isArray(data) && data.length > 0) {
+          setSites(data);
+          setIsLiveSynced(true);
+        }
+      })
+      .catch(() => {});
+  }, []);
+
+  const filteredSites = sites.filter((site) => {
     const matchesUF = !selectedUF || site.uf === selectedUF;
     const matchesRegiao = selectedRegiao === 'todas' || site.regiao === selectedRegiao;
     const matchesTipo = selectedTipo === 'todos' || site.tipo === selectedTipo;
@@ -48,7 +64,7 @@ export const VaccinationSitesView: FC<VaccinationSitesViewProps> = ({
   const totalPages = Math.ceil(filteredSites.length / pageSize);
   const paginatedSites = filteredSites.slice((currentPage - 1) * pageSize, currentPage * pageSize);
 
-  const ufsList = Array.from(new Set(vaccinationSites.map((s) => s.uf))).sort();
+  const ufsList = Array.from(new Set(sites.map((s) => s.uf))).sort();
 
   return (
     <div className="space-y-6">
@@ -59,7 +75,13 @@ export const VaccinationSitesView: FC<VaccinationSitesViewProps> = ({
             <Building2 className="w-3.5 h-3.5" />
             Rede de Referência SUS
           </span>
-          <span className="text-xs text-slate-400">Total de {vaccinationSites.length} Polos Cadastrados nas 27 UFs</span>
+          <span className="text-xs text-slate-400">Total de {sites.length} Polos Cadastrados nas 27 UFs</span>
+          {isLiveSynced && (
+            <span className="px-2 py-0.5 rounded-full text-[10px] font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 flex items-center gap-1">
+              <Sparkles className="w-3 h-3 text-emerald-400" />
+              Sincronizado em Tempo Real
+            </span>
+          )}
         </div>
         <h2 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
           Diretório de Centros de Testagem, Atenção Especializada & Vacinação

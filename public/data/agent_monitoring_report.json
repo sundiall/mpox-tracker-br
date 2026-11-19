@@ -1,47 +1,62 @@
 {
-  "timestamp": "2026-11-19T14:10:27.840638",
-  "totalItensVarredura": 46,
+  "timestamp": "2026-11-19T11:49:13.096793",
+  "totalItensVarredura": 43,
   "analiseAgente": {
     "alteracoesEstoque": [
       {
-        "unidade": "Instituto Nacional de Infectologia Evandro Chagas (CRIE / INI / Fiocruz)",
+        "unidade": "Rede Municipal de Saúde do Rio de Janeiro",
         "uf": "RJ",
-        "statusEstoque": "esgotado",
-        "motivo": "Doses temporariamente esgotadas segundo informado nas redes sociais oficiais.",
-        "fonte": "https://agencia.fiocruz.br/servico-de-referencia-nacional-em-filarioses-da-fiocruz-conquista-selo-ouro-da-ona"
+        "statusEstoque": "em_abastecimento",
+        "motivo": "Ministério da Saúde repassou mais mil frascos da vacina contra mpox para reforçar a imunização municipal.",
+        "fonte": "GOV.BR"
+      },
+      {
+        "unidade": "Rede de Vacinação do Estado de São Paulo",
+        "uf": "SP",
+        "statusEstoque": "em_abastecimento",
+        "motivo": "Recebimento de mil novas doses enviadas pelo Programa Nacional de Imunizações para atendimento de grupos prioritários.",
+        "fonte": "agenciasp.sp.gov.br"
+      },
+      {
+        "unidade": "Rede de Centros de Saúde de Belo Horizonte (PBH)",
+        "uf": "MG",
+        "statusEstoque": "disponivel",
+        "motivo": "Ampliação da imunização contra mpox a partir de remessa com 200 vacinas destinadas aos grupos elegíveis.",
+        "fonte": "Prefeitura de Belo Horizonte"
       }
     ],
-    "novosMarcos": [],
+    "novosMarcos": [
+      {
+        "titulo": "Ampliação da Imunização de Grupos Prioritários em Belo Horizonte",
+        "dataEstimada": "2026-11",
+        "categoria": "vacina",
+        "descricao": "Prefeitura de Belo Horizonte estende o cronograma de vacinação contra mpox para públicos prioritários a partir de 19 de novembro."
+      },
+      {
+        "titulo": "Repasse Emergencial de Doses a Capitais Prioritárias (SP e RJ)",
+        "dataEstimada": "2026-11",
+        "categoria": "vacina",
+        "descricao": "Ministério da Saúde executa remessas pontuais de mil frascos/doses para São Paulo e Rio de Janeiro para conter aumento recente de transmissibilidade."
+      }
+    ],
     "alertasUrgentes": [
       {
-        "titulo": "Ministério da Saúde envia ao município do Rio mais mil frascos de vacina contra mpox - GOV.BR",
+        "titulo": "Chegada de mil frascos de vacina contra mpox ao Rio de Janeiro",
         "tipo": "disponibilidade_vacina",
-        "resumo": "Ministério da Saúde envia ao município do Rio mais mil frascos de vacina contra mpox&nbsp;&nbsp;GOV.BR",
+        "resumo": "Município do Rio de Janeiro é reabastecido com mil frascos de vacina enviados pelo Ministério da Saúde para público prioritário.",
         "linkOficial": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQbl9qdXR0TUdTNkZIT2JIU0dOeEd5Y1VDSE5YZ0pZaGhHWTVWNFFtMEdYS2pDQXFTWURiRkh4TEdHaHd5Z19tWDRtSmYtRnBhR0VFZkJLNWdua1U0WUUta2RER0Vma25vV0lkb3RDNU1pdG5UU0ZUNER2WHM1dFRNdFhjUE1uQTJNeFNkTl9WSHR2YzVVTl9naVJJSDRIZFFvNnZxY3JuOFAwRklNdGVLZlFjXzZJbFU2cWxnMUVEcEhaNUkxQ2w0cVoxZE1OSDFiOFpuNGtobHphVllkNVhsTw?oc=5"
       },
       {
-        "titulo": "SP recebe novas doses da vacina contra a mpox; saiba quem pode receber - Agência Brasil",
+        "titulo": "Disponibilização de novas doses e critérios em São Paulo",
         "tipo": "disponibilidade_vacina",
-        "resumo": "SP recebe novas doses da vacina contra a mpox; saiba quem pode receber&nbsp;&nbsp;Agência Brasil",
-        "linkOficial": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQcmM2MDJIeG5QQ2ttVXJYTXlTUWZXeWFKWWJaMjREWTZQNGRELXBGZ201OEFULUVzQWJ6V0V3Ynhad2RJWjBiNDRrMnNDVjZ0SjI2eXdrVFRqaEQtVHJYZERDd1pkakJlcmRpWHFRaXZIUndVal9UVmtrN2xxTlVJcy10S2toQloxU0p5Rzg2eUZHaTVMMDNXYk1ORlZBMTBDRl9JSjIxbW1ObTJGYXRUMDdWNjlOTTFCaW9Jc19uaw?oc=5"
-      },
-      {
-        "titulo": "Com 200 vacinas, BH ampliará vacinação contra Mpox nesta quinta-feira para grupos prioritários - G1",
-        "tipo": "disponibilidade_vacina",
-        "resumo": "Com 200 vacinas, BH ampliará vacinação contra Mpox nesta quinta-feira para grupos prioritários&nbsp;&nbsp;G1",
-        "linkOficial": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNQ0RpNlJ1Mks1Y3lfOFBzR0FTcC1rX25KZ3lLZzB3aC1Za2w1UWJqQzhndGZKdmk0RVBfcDhMVGg2X1FtVXlDS21WSThLT0NrUUZLUXh6cEV0VkF0Q0FxLURzTWtsbUloRXRGTUJYQWNtSzEwSktkRlNReWxCUFNEcGJYYlhzUmJ4SVlHdjFySlVwRG9RWlRwa1JOQmhlUGpEOXh3NzByVEVtRjI0ZHE3dE5JUjktZkoteGE5dVpYMVg1SWhSWU5WS2NncW5vR2_SAd4BQVVfeXFMTW1aZllZa1FTVGxYWVdLVjBNcm9VOG5tdkJsZFNXZmhxYVZ2NFhCUkNSREhsRUExTkQyZXV0cnhHaDV4RkV6WTZkU3E1UUs4VDVPVU0zQUhDSk5ZQTVoZmFWWnMwN0lHOTBmMWtKamZCbWwtTV9VLWlvMnpHQ3p0eWkxdGQzZXZLVV9wLUg4UG03QkJPLVlTSjc4cVZaRDRPWDlUZ2N5YXg4Zm9kTGVJd0dJRDNad2hWNm1mbFpmdkdzTmpJOVdHTTZ6dmNjS3I0aUNZTVlPTElER0ZwcnZn?oc=5"
-      },
-      {
-        "titulo": "São Paulo recebe mil novas doses da vacina contra a Mpox - agenciasp.sp.gov.br",
-        "tipo": "disponibilidade_vacina",
-        "resumo": "São Paulo recebe mil novas doses da vacina contra a Mpox&nbsp;&nbsp;agenciasp.sp.gov.br",
+        "resumo": "São Paulo recebe remessa de mil doses para manter o atendimento a grupos elegíveis pelo SUS diante da procura vacinal.",
         "linkOficial": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNSkYzc1Jsbm1KZFk2TXJxYVhJVGd6YmpGZEktc05fWU9weXYtcDFzTGJScFI1SGh6bC1OSWt6VFhqNlJsWlZ0SzhTZFJDVzZTMWJyV0NNcDFJcmpYblpBZVJKV0NJcnJrX3lybjVsVERZdDllWl9sNHFlanpwSXhySFo0MVo5bXhRMGt6OHJzVGFBaEp0T29sS2lsRQ?oc=5"
       },
       {
-        "titulo": "PBH inicia vacinação contra mpox para grupos prioritários e imunização será ampliada nesta quinta-feira (19) - Prefeitura de Belo Horizonte",
-        "tipo": "disponibilidade_vacina",
-        "resumo": "PBH inicia vacinação contra mpox para grupos prioritários e imunização será ampliada nesta quinta-feira (19)&nbsp;&nbsp;Prefeitura de Belo Horizonte",
-        "linkOficial": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxObGVKcUNXWjZlUTNZalFHaWNMbjJYdTR5aHZFeHd6WmNVSWt3ZTZOYVdSU3pEWGpkNGg1MzlCdFlVdjBnQWhRd0JIZWh4WF9NTjY1TkdUYjU2ZWY3M0dGZ0wyYTZJUld1TmQ2U1VPZWo4QlNQOTBGRE1JdnRWYnZ3aHlyallBRDNuYXA0NnFHRlpYbDVQc2c5T2NrS1lIWXBvZlpWcEJ6bVlvSld4ZWNJYWhDT0dDREFYSVo2dTZlUXhSb1pWVVN6ZQ?oc=5"
+        "titulo": "Aumento de 20% nos casos no país e restrição ao SUS",
+        "tipo": "nota_tecnica",
+        "resumo": "Notificações sobem 20% no Brasil; vacina permanece restrita ao SUS para grupos específicos, sem liberação na rede privada.",
+        "linkOficial": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOSWpsamdpbXBTckpKNndMeGVfXzV4QTIwZkNWMFNiS242ZjQzZ0RuVWJUcml1di1zc1JtSHhGaDBkWGJMbDQxcExJaUJ2Y1lDVUM2c3RUSk13bzRNSzFwOW1BZDZYZEhKaGVsNmoxS1VLaU8yeUtjckNIY1lIemJxeVhTV1VaQXhCTTNjd2RHa04xdHFHQm13UnE3ZlRKYmtwcGhqSmdDRXVsaXhWclJDUVRHaGR4WnE2UUlieFEyb1BuTXlzLV9aQmlsRmRHVW9GTjlvT3Z3Q25CUFU4bkxNNzRFWnDSAfMBQVVfeXFMT0FqVEQ1SzEwWEsxRFFJMldUZVRSNFBFWnh4ZXJPcGtUa2tXNk40cXJjUGpvcGRmQ1U2OWNOd1NwTDlTdEtaWXBBWW9BMjB3WXpZZGdvaVhhc3J3MTl5V0VKLXJCWUtjVXMtVTE5QW1Fcm5zOE1LcTJPZDFGdm5USGlBYWhHblBJWFJlYmVWS2JxclREWm5OUVZJbGpSMDYzZm5wdGs4c0s0VWxxcGxWZXpxUWFkeUpSVHF5dS1mZ1dtaEhDZzNVUWtPS2NuaHpjQ1VtbndmOGlvLWtjSzZqalM2SlZLcWp3U19jTkplam5BVm9B?oc=5"
       }
     ]
   }

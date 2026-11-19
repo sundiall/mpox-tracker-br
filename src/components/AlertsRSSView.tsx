@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import type { FC } from 'react';
 import { 
   Rss, 
@@ -18,8 +18,22 @@ export const AlertsRSSView: FC<AlertsRSSViewProps> = ({
 }) => {
   const [categoriaFilter, setCategoriaFilter] = useState('todas');
   const [search, setSearch] = useState('');
+  const [alerts, setAlerts] = useState<OfficialAlert[]>(officialAlerts);
+  const [isLiveSynced, setIsLiveSynced] = useState<boolean>(false);
 
-  const filteredAlerts = officialAlerts.filter((alert) => {
+  useEffect(() => {
+    fetch('/data/alerts.json')
+      .then((res) => (res.ok ? res.json() : null))
+      .then((data) => {
+        if (data && Array.isArray(data) && data.length > 0) {
+          setAlerts(data);
+          setIsLiveSynced(true);
+        }
+      })
+      .catch(() => {});
+  }, []);
+
+  const filteredAlerts = alerts.filter((alert) => {
     const matchesUF = !selectedUF || alert.ufRelacionada === 'Nacional' || alert.ufRelacionada === selectedUF;
     const matchesCat = categoriaFilter === 'todas' || alert.categoria === categoriaFilter;
     const matchesSearch =
@@ -54,6 +68,12 @@ export const AlertsRSSView: FC<AlertsRSSViewProps> = ({
               Feed Oficial & Monitoramento de Notícias
             </span>
             <span className="text-xs text-slate-400">Atualizações de Órgãos Sanitários</span>
+            {isLiveSynced && (
+              <span className="px-2 py-0.5 rounded-full text-[10px] font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 flex items-center gap-1">
+                <Sparkles className="w-3 h-3 text-emerald-400" />
+                Sincronizado em Tempo Real
+              </span>
+            )}
           </div>
           <h2 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
             Avisos de Disponibilidade, Notas Técnicas & Vigilância
