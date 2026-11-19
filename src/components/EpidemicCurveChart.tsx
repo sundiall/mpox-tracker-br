@@ -235,42 +235,16 @@ export const EpidemicCurveChart: FC<EpidemicCurveChartProps> = ({
     return getApplicableMilestones(selectedUF);
   }, [selectedUF]);
 
-  // Algoritmo de detecção de sobreposição de etiquetas de marcos históricos
-  const { hasMilestoneOverlap } = useMemo(() => {
-    // Filtra marcos presentes no intervalo ativo de chartData
-    const visible = applicableMilestones
+  // Marcos visíveis no intervalo ativo de chartData
+  const visibleMilestones = useMemo(() => {
+    return applicableMilestones
       .map((m) => {
         const index = chartData.findIndex((d) => d.semana === m.semana);
         return { ...m, index };
       })
       .filter((m) => m.index !== -1)
       .sort((a, b) => a.index - b.index);
-
-    if (visible.length <= 1) {
-      return { hasMilestoneOverlap: false };
-    }
-
-    // Estimativa de largura em pixels do container do gráfico
-    const containerWidth = isMobile ? 300 : 850;
-    const pxPerPoint = containerWidth / Math.max(chartData.length, 1);
-
-    // Rótulo textual ocupa ~80px. Se a distância entre marcos adjacentes for menor que 80px, há colisão
-    let overlap = false;
-    for (let i = 1; i < visible.length; i++) {
-      const distPx = (visible[i].index - visible[i - 1].index) * pxPerPoint;
-      if (distPx < 80) {
-        overlap = true;
-        break;
-      }
-    }
-
-    // Em telas móveis com 2 ou mais marcos no período, a densidade visual causa colisão
-    if (isMobile && visible.length >= 2) {
-      overlap = true;
-    }
-
-    return { hasMilestoneOverlap: overlap };
-  }, [applicableMilestones, chartData, isMobile]);
+  }, [applicableMilestones, chartData]);
 
   const currentState = selectedUF ? statesData.find((s) => s.uf === selectedUF) : null;
   const stateLabel = currentState ? `${currentState.nome} (${currentState.uf})` : 'Brasil (Consolidado Nacional)';
@@ -769,11 +743,11 @@ export const EpidemicCurveChart: FC<EpidemicCurveChartProps> = ({
 
       {/* Visualizador Recharts com Alternância entre Curva Oficial MS e Série Contínua */}
       <div className="bg-slate-950/90 border border-slate-800/90 rounded-xl p-2 sm:p-3.5 space-y-2">
-        {hasMilestoneOverlap && showMilestones && displayMode === 'continua' && (
+        {visibleMilestones.length > 0 && showMilestones && displayMode === 'continua' && (
           <div className="flex items-center justify-between px-1 text-[10px] text-slate-400">
             <span className="flex items-center gap-1.5 text-cyan-300">
               <Sparkles className="w-3 h-3 text-cyan-400 shrink-0" />
-              <span>Símbolos nos marcos (① a ⑨) com cores temáticas evitam sobreposição. Veja detalhes nas notas abaixo.</span>
+              <span>Veja detalhes nas notas abaixo.</span>
             </span>
           </div>
         )}
@@ -817,7 +791,7 @@ export const EpidemicCurveChart: FC<EpidemicCurveChartProps> = ({
                 {displayedYears.includes(2026) && <Bar dataKey="2026" name="2026" fill="#06b6d4" radius={[2, 2, 0, 0]} />}
               </ComposedChart>
             ) : (
-              <ComposedChart data={chartData} margin={{ top: hasMilestoneOverlap ? 32 : 48, right: showVaccines ? (isMobile ? 0 : 20) : (isMobile ? 0 : 10), left: isMobile ? 0 : 5, bottom: 25 }}>
+              <ComposedChart data={chartData} margin={{ top: 32, right: showVaccines ? (isMobile ? 0 : 20) : (isMobile ? 0 : 10), left: isMobile ? 0 : 5, bottom: 25 }}>
                 <defs>
                   <pattern id="stripe-preliminar" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
                     <line x1="0" y1="0" x2="0" y2="6" stroke="#38bdf8" strokeWidth="2" />
@@ -919,15 +893,11 @@ export const EpidemicCurveChart: FC<EpidemicCurveChartProps> = ({
                   />
                 )}
 
-                {/* Hitos Vacinais Filtrados com Base na Aplicabilidade Territorial e Alturas Escalonadas */}
+                {/* Hitos Vacinais Filtrados com Base na Aplicabilidade Territorial e Símbolos Temáticos */}
                 {showMilestones && applicableMilestones.map((m, idx) => {
                   const color = m.cor || '#94a3b8';
                   const symbol = m.simbolo || '•';
-                  const isNearRight = idx >= applicableMilestones.length - 2;
-                  const labelValue = hasMilestoneOverlap ? symbol : (m.tituloCurto || m.titulo);
-                  const dy = hasMilestoneOverlap 
-                    ? (idx % 2 === 0 ? -6 : -18)
-                    : (idx % 3 === 0 ? -8 : (idx % 3 === 1 ? -24 : -40));
+                  const dy = idx % 2 === 0 ? -8 : -20;
 
                   return (
                     <ReferenceLine 
@@ -937,13 +907,13 @@ export const EpidemicCurveChart: FC<EpidemicCurveChartProps> = ({
                       stroke={color} 
                       strokeDasharray="3 3" 
                       label={{ 
-                        value: labelValue, 
+                        value: symbol, 
                         position: 'top', 
                         dy: dy,
                         fill: color, 
-                        fontSize: hasMilestoneOverlap ? (isMobile ? 12 : 13) : 10,
-                        fontWeight: hasMilestoneOverlap ? 700 : 600,
-                        textAnchor: isNearRight && !hasMilestoneOverlap ? 'end' : 'middle'
+                        fontSize: isMobile ? 12 : 13,
+                        fontWeight: 700,
+                        textAnchor: 'middle'
                       }} 
                     />
                   );
