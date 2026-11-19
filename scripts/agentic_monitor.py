@@ -37,6 +37,11 @@ FEEDS = [
         "tipo": "google_news"
     },
     {
+        "nome": "Google News Real-Time (Mpox Tier 1: CE, DF, SC, PR, RS, PE, RO)",
+        "url": "https://news.google.com/rss/search?q=" + urllib.parse.quote("mpox (vacina OR doses OR prep OR crie) (ceara OR fortaleza OR brasilia OR 'distrito federal' OR curitiba OR 'porto alegre' OR recife OR 'porto velho' OR 'hospital sao jose' OR cemetron OR huoc)") + "&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+        "tipo": "google_news"
+    },
+    {
         "nome": "Prefeitura da Cidade do Rio de Janeiro (SMS-Rio Notícias)",
         "url": "https://prefeitura.rio/feed/",
         "tipo": "institucional"
@@ -61,7 +66,8 @@ FEEDS = [
 KEYWORDS = [
     "mpox", "varíola", "mva-bn", "jynneos", "vacina", "vacinação",
     "fiocruz", "cevaa", "prep", "crie", "super centro", "doses", "esgotou",
-    "acabou", "falta", "sem doses", "reabastecimento", "lote", "saude_rio", "saudeprefsp", "fila", "subpav"
+    "acabou", "falta", "sem doses", "reabastecimento", "lote", "saude_rio", "saudeprefsp", "fila", "subpav",
+    "ceara", "fortaleza", "brasilia", "curitiba", "porto alegre", "recife", "porto velho", "huoc", "cemetron", "hub", "hsj"
 ]
 
 def fetch_feed_items():

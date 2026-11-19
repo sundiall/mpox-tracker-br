@@ -1,5 +1,16 @@
 [
   {
+    "id": "alert-tier1-rede-referencia-2026-11-19",
+    "dataPublicacao": "2026-11-19",
+    "orgaoEmissor": "Ministério da Saúde",
+    "ufRelacionada": "Nacional",
+    "titulo": "Mapeamento oficial: Rede de CRIEs e polos estratégicos para vacinação de Mpox em estados prioritários (Tier 1)",
+    "tipo": "nota_tecnica",
+    "resumo": "A plataforma incorporou a rede oficial de Centros de Referência para Imunobiológicos Especiais (CRIEs) e ambulatórios de IST/PrEP em 7 estados de alta prioridade (Ceará, Distrito Federal, Santa Catarina, Paraná, Rio Grande do Sul, Pernambuco e Rondônia). As unidades estão estruturadas para aplicação por regulação e agendamento nominal conforme critérios técnicos do PNI/SVSA.",
+    "linkOficial": "https://www.gov.br/saude/pt-br/composicao/svsa/cnie/painel-mpox",
+    "categoria": "Imunização"
+  },
+  {
     "id": "alert-rj-reabastecimento-2026-11-19",
     "dataPublicacao": "2026-11-19",
     "orgaoEmissor": "SES-RJ",

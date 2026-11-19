@@ -22,6 +22,19 @@ const ALL_BRAZILIAN_UFS = [
   'RS', 'RO', 'RR', 'SC', 'SP', 'SE', 'TO'
 ];
 
+const STATE_NAMES: Record<string, string> = {
+  MG: 'Belo Horizonte / MG',
+  RJ: 'Rio de Janeiro / RJ',
+  SP: 'São Paulo / SP',
+  CE: 'Ceará / CE',
+  DF: 'Distrito Federal / DF',
+  SC: 'Santa Catarina / SC',
+  PR: 'Paraná / PR',
+  RS: 'Rio Grande do Sul / RS',
+  PE: 'Pernambuco / PE',
+  RO: 'Rondônia / RO'
+};
+
 interface VaccinationSitesViewProps {
   selectedUF: string | null;
   onSelectUF: (uf: string | null) => void;
@@ -38,7 +51,7 @@ export const VaccinationSitesView: FC<VaccinationSitesViewProps> = ({
   const [selectedTipo, setSelectedTipo] = useState<string>('todos');
   const [selectedStatus, setSelectedStatus] = useState<string>('todos');
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const pageSize = 24;
+  const pageSize = 36;
 
   useEffect(() => {
     fetch('/data/vaccination_sites.json')
@@ -134,14 +147,14 @@ export const VaccinationSitesView: FC<VaccinationSitesViewProps> = ({
       {/* Controles de Filtros e Busca */}
       <div className="bg-slate-900 border border-slate-800 rounded-xl p-4 space-y-3.5">
         {/* Atalhos Rápidos de Estados Confirmados */}
-        <div className="flex flex-wrap items-center gap-2 pt-0.5">
+        <div className="flex flex-wrap items-center gap-1.5 pt-0.5">
           <span className="text-[11px] font-medium text-slate-400 mr-1 flex items-center gap-1">
             <Building2 className="w-3.5 h-3.5 text-cyan-400" />
-            Polos Confirmados:
+            Polos por UF:
           </span>
           <button
             onClick={() => { onSelectUF(null); setCurrentPage(1); }}
-            className={`px-3 py-1 rounded-lg text-xs font-medium transition-all ${
+            className={`px-2.5 py-1 rounded-lg text-xs font-medium transition-all ${
               !selectedUF
                 ? 'bg-cyan-950/80 text-cyan-300 border border-cyan-500/70 shadow-[0_0_10px_rgba(6,182,212,0.25)]'
                 : 'bg-slate-950 text-slate-300 border border-slate-800 hover:border-slate-700'
@@ -149,36 +162,35 @@ export const VaccinationSitesView: FC<VaccinationSitesViewProps> = ({
           >
             Todos ({sites.length})
           </button>
-          <button
-            onClick={() => { onSelectUF('MG'); setCurrentPage(1); }}
-            className={`px-3 py-1 rounded-lg text-xs font-medium transition-all ${
-              selectedUF === 'MG'
-                ? 'bg-cyan-950/80 text-cyan-300 border border-cyan-500/70 shadow-[0_0_10px_rgba(6,182,212,0.25)]'
-                : 'bg-slate-950 text-slate-300 border border-slate-800 hover:border-slate-700'
-            }`}
-          >
-            Belo Horizonte / MG ({sites.filter((s) => s.uf === 'MG').length})
-          </button>
-          <button
-            onClick={() => { onSelectUF('RJ'); setCurrentPage(1); }}
-            className={`px-3 py-1 rounded-lg text-xs font-medium transition-all ${
-              selectedUF === 'RJ'
-                ? 'bg-cyan-950/80 text-cyan-300 border border-cyan-500/70 shadow-[0_0_10px_rgba(6,182,212,0.25)]'
-                : 'bg-slate-950 text-slate-300 border border-slate-800 hover:border-slate-700'
-            }`}
-          >
-            Rio de Janeiro / RJ ({sites.filter((s) => s.uf === 'RJ').length})
-          </button>
-          <button
-            onClick={() => { onSelectUF('SP'); setCurrentPage(1); }}
-            className={`px-3 py-1 rounded-lg text-xs font-medium transition-all ${
-              selectedUF === 'SP'
-                ? 'bg-cyan-950/80 text-cyan-300 border border-cyan-500/70 shadow-[0_0_10px_rgba(6,182,212,0.25)]'
-                : 'bg-slate-950 text-slate-300 border border-slate-800 hover:border-slate-700'
-            }`}
-          >
-            São Paulo / SP ({sites.filter((s) => s.uf === 'SP').length})
-          </button>
+          {Array.from(new Set(sites.map((s) => s.uf)))
+            .sort((a, b) => {
+              const priority = ['SP', 'RJ', 'MG', 'CE', 'DF', 'SC', 'PR', 'RS', 'PE', 'RO'];
+              const idxA = priority.indexOf(a);
+              const idxB = priority.indexOf(b);
+              if (idxA !== -1 && idxB !== -1) return idxA - idxB;
+              if (idxA !== -1) return -1;
+              if (idxB !== -1) return 1;
+              return a.localeCompare(b);
+            })
+            .map((uf) => {
+              const count = sites.filter((s) => s.uf === uf).length;
+              const isSelected = selectedUF === uf;
+              const label = STATE_NAMES[uf] || uf;
+              return (
+                <button
+                  key={uf}
+                  onClick={() => { onSelectUF(isSelected ? null : uf); setCurrentPage(1); }}
+                  className={`px-2.5 py-1 rounded-lg text-xs font-medium transition-all ${
+                    isSelected
+                      ? 'bg-cyan-950/80 text-cyan-300 border border-cyan-500/70 shadow-[0_0_10px_rgba(6,182,212,0.25)]'
+                      : 'bg-slate-950 text-slate-300 border border-slate-800 hover:border-slate-700'
+                  }`}
+                  title={label}
+                >
+                  {label} ({count})
+                </button>
+              );
+            })}
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
