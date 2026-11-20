@@ -1,16 +1,8 @@
 {
-  "timestamp": "2026-11-20T02:45:30.813117",
-  "totalItensVarredura": 54,
+  "timestamp": "2026-11-20T10:49:57.502229",
+  "totalItensVarredura": 51,
   "analiseAgente": {
     "alteracoesEstoque": [
-      {
-        "unidade": "Super Centros Cariocas (Botafogo, Shopping Nova América, ParkShopping Campo Grande)",
-        "uf": "RJ",
-        "statusEstoque": "disponivel",
-        "motivo": "Reabastecido com novo lote de 1.000 frascos (até 5.000 doses intradérmicas) enviado pelo Ministério da Saúde. Vacinação ativa.",
-        "previsaoFutura": "Vacinação ativa nos Super Centros enquanto durar o lote. Novos repasses federais previstos conforme demanda.",
-        "fonte": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNTDZWdzdJZi1tcXpSYXIzd2JFX2JYN2N5LURCeGgxbGhZc3h2bmVpNWdQMi1BaDE4X2d4RjdYSXlPYlFzOGVFQi1JcENGR0NPVVlIcDBneHJfdS11RDZfdk11LW1kbHVtalVwSVJYalVsbVlpRTF3VVozV3lnazBGZ054dUZLZldyd2hKMHdvOE45c0xJN1dN?oc=5"
-      },
       {
         "unidade": "Rede Especializada de São Paulo (SAEs e CRIEs)",
         "uf": "SP",
@@ -33,7 +25,7 @@
         "statusEstoque": "disponivel",
         "motivo": "Recebimento e distribuição de novo lote de 1.000 doses da vacina MVA-BN aos SAEs e CRIEs.",
         "previsaoFutura": "Doses de primeira aplicação ativas. Segunda dose recomendada a partir de 28 dias para consolidar imunidade.",
-        "fonte": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPXzlXYlNjWDdFc0ZMZkR2NmZwNGxvY0h5SXFaV3g1Q0hGaHVvcGRZbXpiTkpDcGpZT2QzVHVzOUgwLWJQZ2NPU0pvSDBKYzFMblZWVE4tSVBjQjFzZnBPX3lUVVZZdVBhRFR4dDlkMzMyaVp2RHZPUTdnYkZVQ3NOZTlnQlN2ejVBNHpBRV81VV93Ym1BdlBobUxzZEZkOGZjczgtQUhQMzhuWmR6Q3RWc2JzbTczZWdUS3dJb0k5UGNDWENBcW1VaGZR0gHYAUFVX3lxTFB5azVRZ2FjZ0FtaUl1YVZJYnZGRXlZZjB2NTNEbmJNRWZEbGFmUndkYU5Dc3RhY1dtakJ4Y2FiWjRBTFdscG1TbjcydnFwX1owM0tpWC0waDdnV3lFRUVSTXloNzdscHB1by1zNnJuX3o2ODFuaG9rdnBxRldGc0xEQ1EycDJVMC1YYW9mVERQd2VVZzdYWkVtakNZV204OUM0b0dsYnhlcWhGSU5lNGV5a0xFaHBqUjB0R2VCMmMxcEhpMjF6cE84MXlUaHkwWE9uMm9sTWtyUw?oc=5"
+        "fonte": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNNFp0WFpoeTRDdVBhalFMRThhNmxTQ1YydGhIZWZWWWEyaUJfcGoyMGhiODhqTE1OYXBvZV9mTGV3SzY3OE5UcFdzU0lHX1dtZWpWbHlZanR3Ukg5UE05N0Noa3NBQ2RucWdINTZud2ZkQ1lTclZPN3FFWnN4VG16ODc0UXZEMXdGaHNlWmtVTTZhX3lLazJoRVdPNUNKV2JSel90b3VvT3JObDItTVptMDAzWHJJUnY4WkJVQy1XWlBvQVpVNEFCczY1ZlVObW9sZDEzbGNBXzg0cXBxamcxdNIB7wFBVV95cUxQWGFrNUtmVklkeldnV2htU01haFNIdkYxS05uMDZEN21CS1lzLXVHT0RQT2lub2xZcTJObnQ0ZldhS1NPNG9LQWNBVG10NGtSODFsMEtsMnY0cUhVTFBUeExuYWFyUWxmUklyMlU3eEZCNDBBajFLTFhMbFdPYkdSbTM2SElhRkQ5dGxvMzhCbDF6T1R4R1V5RmxvbjBOdzFSSkRpTUN6bTBrNVBmQVNRb0pwRGdueUhpdFdUNm90VTF5OWpjTGhLNVl3VUZhbVNyY3M3dG8xWW11cEVlOWJlenZBamlEbFVGOWtFSmFOdw?oc=5"
       },
       {
         "unidade": "Rede Especializada de São Paulo (SAEs e CRIEs)",
@@ -42,14 +34,6 @@
         "motivo": "Recebimento e distribuição de novo lote de 1.000 doses da vacina MVA-BN aos SAEs e CRIEs.",
         "previsaoFutura": "Doses de primeira aplicação ativas. Segunda dose recomendada a partir de 28 dias para consolidar imunidade.",
         "fonte": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNSkYzc1Jsbm1KZFk2TXJxYVhJVGd6YmpGZEktc05fWU9weXYtcDFzTGJScFI1SGh6bC1OSWt6VFhqNlJsWlZ0SzhTZFJDVzZTMWJyV0NNcDFJcmpYblpBZVJKV0NJcnJrX3lybjVsVERZdDllWl9sNHFlanpwSXhySFo0MVo5bXhRMGt6OHJzVGFBaEp0T29sS2lsRQ?oc=5"
-      },
-      {
-        "unidade": "Rede Especializada de São Paulo (SAEs e CRIEs)",
-        "uf": "SP",
-        "statusEstoque": "disponivel",
-        "motivo": "Recebimento e distribuição de novo lote de 1.000 doses da vacina MVA-BN aos SAEs e CRIEs.",
-        "previsaoFutura": "Doses de primeira aplicação ativas. Segunda dose recomendada a partir de 28 dias para consolidar imunidade.",
-        "fonte": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQRmRUemF4aUp6SlRDMFVaT2U2S215dDNJbXhZcWgyek5hZk8wdkplTXdlaHBJYzJySERMZEJXVEFVdUxOZUc0aWFaMXI2TGtxVGxrNzloWnNYc0tISXh2WmxKZlVlMk01OTUtenNNVEdWNTZUbEotVGNfQnR1LVJZR09KUDJKT2ZMTDVuenl1cTBtb0NkcVFkMlBETkVKbklRazNNQWFFSWdPVDVJcjVpeE5yTk8xUkNCZ3N4Uk9MT1AtUk41N3A1a1UwcWNwV1E?oc=5"
       },
       {
         "unidade": "Polos de Vacinação de Belo Horizonte (Hospital Eduardo de Menezes, URS Centro-Sul, Sagrada Família, Orestes Diniz, CRIE)",
@@ -65,6 +49,14 @@
         "statusEstoque": "disponivel",
         "motivo": "Recebimento e distribuição de novo lote de 1.000 doses da vacina MVA-BN aos SAEs e CRIEs.",
         "previsaoFutura": "Doses de primeira aplicação ativas. Segunda dose recomendada a partir de 28 dias para consolidar imunidade.",
+        "fonte": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQRmRUemF4aUp6SlRDMFVaT2U2S215dDNJbXhZcWgyek5hZk8wdkplTXdlaHBJYzJySERMZEJXVEFVdUxOZUc0aWFaMXI2TGtxVGxrNzloWnNYc0tISXh2WmxKZlVlMk01OTUtenNNVEdWNTZUbEotVGNfQnR1LVJZR09KUDJKT2ZMTDVuenl1cTBtb0NkcVFkMlBETkVKbklRazNNQWFFSWdPVDVJcjVpeE5yTk8xUkNCZ3N4Uk9MT1AtUk41N3A1a1UwcWNwV1E?oc=5"
+      },
+      {
+        "unidade": "Rede Especializada de São Paulo (SAEs e CRIEs)",
+        "uf": "SP",
+        "statusEstoque": "disponivel",
+        "motivo": "Recebimento e distribuição de novo lote de 1.000 doses da vacina MVA-BN aos SAEs e CRIEs.",
+        "previsaoFutura": "Doses de primeira aplicação ativas. Segunda dose recomendada a partir de 28 dias para consolidar imunidade.",
         "fonte": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOcGR3cm1XeFlxVGtYMTVHQTVNYW9MOExkYkRLRjhRc1IxdWVQZVdGamFPVnBZbzhjTjliellvbVBuTkFIM25HV1ZBMjk4T2cxbzBnQVFIRzRqNHVJWDVWMDFidm1hOU1zWUQ2dHZRWVpfMWdqX3FzWUNic1pPUmdSa2RadV9XTUM0Y21KNG5keWJjdHlDSlhxbFpRYWF2ZWRLSzBhUzBxdFdFMm1S0gGyAUFVX3lxTFBNd0cyWGVSNDRTSFNOREJRcXlJRTNUZTdrMk8yU0ZrbU5leDBJYmNsazhvZGx5THdZV083MlpiWE1BZGhtM3lWbTNOdURsYU5BNlBRcWJmTlZXNFBrbHE5bjdfVzRqR3RtNVRocUg5OVU5XzVFRi1sSjhLN3JFTVNiR1luV3pqa3FkOEpIMng3SlJpai02VkNBSlBLUmxnQjVmeWRTZ3U1eXNhdmw5NnR5TlE?oc=5"
       },
       {
@@ -73,15 +65,7 @@
         "statusEstoque": "disponivel",
         "motivo": "Recebimento e distribuição de novo lote de 1.000 doses da vacina MVA-BN aos SAEs e CRIEs.",
         "previsaoFutura": "Doses de primeira aplicação ativas. Segunda dose recomendada a partir de 28 dias para consolidar imunidade.",
-        "fonte": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOZkt0VG1HcjlaYmZfaU9OVXhzYVY4dWxDMTdLcnBQS2RXTXhLZUwxVllUS1NmaEk3aE00WXJnYm1laHVQdzVHR3hWS1FrbzVvbmRXOVkycC1yT0ZGZjBEMWIxSVNNejhwSHpXQmh0TWNvVVhfVUxYc0dhWVdTWmdtRnI5cXlTd2VNaFFHUVE4eldUVVd2NjVOMDBOTVI?oc=5"
-      },
-      {
-        "unidade": "Rede Especializada de São Paulo (SAEs e CRIEs)",
-        "uf": "SP",
-        "statusEstoque": "disponivel",
-        "motivo": "Recebimento e distribuição de novo lote de 1.000 doses da vacina MVA-BN aos SAEs e CRIEs.",
-        "previsaoFutura": "Doses de primeira aplicação ativas. Segunda dose recomendada a partir de 28 dias para consolidar imunidade.",
-        "fonte": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNNFp0WFpoeTRDdVBhalFMRThhNmxTQ1YydGhIZWZWWWEyaUJfcGoyMGhiODhqTE1OYXBvZV9mTGV3SzY3OE5UcFdzU0lHX1dtZWpWbHlZanR3Ukg5UE05N0Noa3NBQ2RucWdINTZud2ZkQ1lTclZPN3FFWnN4VG16ODc0UXZEMXdGaHNlWmtVTTZhX3lLazJoRVdPNUNKV2JSel90b3VvT3JObDItTVptMDAzWHJJUnY4WkJVQy1XWlBvQVpVNEFCczY1ZlVObW9sZDEzbGNBXzg0cXBxamcxdNIB7wFBVV95cUxQWGFrNUtmVklkeldnV2htU01haFNIdkYxS05uMDZEN21CS1lzLXVHT0RQT2lub2xZcTJObnQ0ZldhS1NPNG9LQWNBVG10NGtSODFsMEtsMnY0cUhVTFBUeExuYWFyUWxmUklyMlU3eEZCNDBBajFLTFhMbFdPYkdSbTM2SElhRkQ5dGxvMzhCbDF6T1R4R1V5RmxvbjBOdzFSSkRpTUN6bTBrNVBmQVNRb0pwRGdueUhpdFdUNm90VTF5OWpjTGhLNVl3VUZhbVNyY3M3dG8xWW11cEVlOWJlenZBamlEbFVGOWtFSmFOdw?oc=5"
+        "fonte": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPXzlXYlNjWDdFc0ZMZkR2NmZwNGxvY0h5SXFaV3g1Q0hGaHVvcGRZbXpiTkpDcGpZT2QzVHVzOUgwLWJQZ2NPU0pvSDBKYzFMblZWVE4tSVBjQjFzZnBPX3lUVVZZdVBhRFR4dDlkMzMyaVp2RHZPUTdnYkZVQ3NOZTlnQlN2ejVBNHpBRV81VV93Ym1BdlBobUxzZEZkOGZjczgtQUhQMzhuWmR6Q3RWc2JzbTczZWdUS3dJb0k5UGNDWENBcW1VaGZR0gHYAUFVX3lxTFB5azVRZ2FjZ0FtaUl1YVZJYnZGRXlZZjB2NTNEbmJNRWZEbGFmUndkYU5Dc3RhY1dtakJ4Y2FiWjRBTFdscG1TbjcydnFwX1owM0tpWC0waDdnV3lFRUVSTXloNzdscHB1by1zNnJuX3o2ODFuaG9rdnBxRldGc0xEQ1EycDJVMC1YYW9mVERQd2VVZzdYWkVtakNZV204OUM0b0dsYnhlcWhGSU5lNGV5a0xFaHBqUjB0R2VCMmMxcEhpMjF6cE84MXlUaHkwWE9uMm9sTWtyUw?oc=5"
       },
       {
         "unidade": "Super Centros Cariocas (Botafogo, Shopping Nova América, ParkShopping Campo Grande)",
@@ -119,34 +103,34 @@
     "novosMarcos": [],
     "alertasUrgentes": [
       {
-        "titulo": "Rio retoma vacinação contra a MPOX após chegada de novas doses - Prefeitura da Cidade do Rio de Janeiro",
-        "tipo": "disponibilidade_vacina",
-        "resumo": "Rio retoma vacinação contra a MPOX após chegada de novas doses&nbsp;&nbsp;Prefeitura da Cidade do Rio de Janeiro",
-        "linkOficial": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNTDZWdzdJZi1tcXpSYXIzd2JFX2JYN2N5LURCeGgxbGhZc3h2bmVpNWdQMi1BaDE4X2d4RjdYSXlPYlFzOGVFQi1JcENGR0NPVVlIcDBneHJfdS11RDZfdk11LW1kbHVtalVwSVJYalVsbVlpRTF3VVozV3lnazBGZ054dUZLZldyd2hKMHdvOE45c0xJN1dN?oc=5"
-      },
-      {
         "titulo": "SP recebe novas doses da vacina contra a mpox; saiba quem pode receber - Agência Brasil",
         "tipo": "disponibilidade_vacina",
         "resumo": "SP recebe novas doses da vacina contra a mpox; saiba quem pode receber&nbsp;&nbsp;Agência Brasil",
         "linkOficial": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQcmM2MDJIeG5QQ2ttVXJYTXlTUWZXeWFKWWJaMjREWTZQNGRELXBGZ201OEFULUVzQWJ6V0V3Ynhad2RJWjBiNDRrMnNDVjZ0SjI2eXdrVFRqaEQtVHJYZERDd1pkakJlcmRpWHFRaXZIUndVal9UVmtrN2xxTlVJcy10S2toQloxU0p5Rzg2eUZHaTVMMDNXYk1ORlZBMTBDRl9JSjIxbW1ObTJGYXRUMDdWNjlOTTFCaW9Jc19uaw?oc=5"
       },
       {
-        "titulo": "Ministério da Saúde envia ao município do Rio mais mil frascos de vacina contra mpox - GOV.BR",
+        "titulo": "Ministério da Saúde envia ao município do Rio mais mil frascos de vacina contra mpox - Governo Federal",
         "tipo": "disponibilidade_vacina",
-        "resumo": "Ministério da Saúde envia ao município do Rio mais mil frascos de vacina contra mpox&nbsp;&nbsp;GOV.BR",
+        "resumo": "Ministério da Saúde envia ao município do Rio mais mil frascos de vacina contra mpox&nbsp;&nbsp;Governo Federal",
         "linkOficial": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQbl9qdXR0TUdTNkZIT2JIU0dOeEd5Y1VDSE5YZ0pZaGhHWTVWNFFtMEdYS2pDQXFTWURiRkh4TEdHaHd5Z19tWDRtSmYtRnBhR0VFZkJLNWdua1U0WUUta2RER0Vma25vV0lkb3RDNU1pdG5UU0ZUNER2WHM1dFRNdFhjUE1uQTJNeFNkTl9WSHR2YzVVTl9naVJJSDRIZFFvNnZxY3JuOFAwRklNdGVLZlFjXzZJbFU2cWxnMUVEcEhaNUkxQ2w0cVoxZE1OSDFiOFpuNGtobHphVllkNVhsTw?oc=5"
       },
       {
-        "titulo": "Após alta de casos, Estado de SP recebe mais mil doses de vacina contra Mpox - Valor Econômico",
+        "titulo": "Líder em casos de Mpox no Brasil, estado de SP recebe mil doses da vacina contra a doença - G1",
         "tipo": "disponibilidade_vacina",
-        "resumo": "Após alta de casos, Estado de SP recebe mais mil doses de vacina contra Mpox&nbsp;&nbsp;Valor Econômico",
-        "linkOficial": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPXzlXYlNjWDdFc0ZMZkR2NmZwNGxvY0h5SXFaV3g1Q0hGaHVvcGRZbXpiTkpDcGpZT2QzVHVzOUgwLWJQZ2NPU0pvSDBKYzFMblZWVE4tSVBjQjFzZnBPX3lUVVZZdVBhRFR4dDlkMzMyaVp2RHZPUTdnYkZVQ3NOZTlnQlN2ejVBNHpBRV81VV93Ym1BdlBobUxzZEZkOGZjczgtQUhQMzhuWmR6Q3RWc2JzbTczZWdUS3dJb0k5UGNDWENBcW1VaGZR0gHYAUFVX3lxTFB5azVRZ2FjZ0FtaUl1YVZJYnZGRXlZZjB2NTNEbmJNRWZEbGFmUndkYU5Dc3RhY1dtakJ4Y2FiWjRBTFdscG1TbjcydnFwX1owM0tpWC0waDdnV3lFRUVSTXloNzdscHB1by1zNnJuX3o2ODFuaG9rdnBxRldGc0xEQ1EycDJVMC1YYW9mVERQd2VVZzdYWkVtakNZV204OUM0b0dsYnhlcWhGSU5lNGV5a0xFaHBqUjB0R2VCMmMxcEhpMjF6cE84MXlUaHkwWE9uMm9sTWtyUw?oc=5"
+        "resumo": "Líder em casos de Mpox no Brasil, estado de SP recebe mil doses da vacina contra a doença&nbsp;&nbsp;G1",
+        "linkOficial": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNNFp0WFpoeTRDdVBhalFMRThhNmxTQ1YydGhIZWZWWWEyaUJfcGoyMGhiODhqTE1OYXBvZV9mTGV3SzY3OE5UcFdzU0lHX1dtZWpWbHlZanR3Ukg5UE05N0Noa3NBQ2RucWdINTZud2ZkQ1lTclZPN3FFWnN4VG16ODc0UXZEMXdGaHNlWmtVTTZhX3lLazJoRVdPNUNKV2JSel90b3VvT3JObDItTVptMDAzWHJJUnY4WkJVQy1XWlBvQVpVNEFCczY1ZlVObW9sZDEzbGNBXzg0cXBxamcxdNIB7wFBVV95cUxQWGFrNUtmVklkeldnV2htU01haFNIdkYxS05uMDZEN21CS1lzLXVHT0RQT2lub2xZcTJObnQ0ZldhS1NPNG9LQWNBVG10NGtSODFsMEtsMnY0cUhVTFBUeExuYWFyUWxmUklyMlU3eEZCNDBBajFLTFhMbFdPYkdSbTM2SElhRkQ5dGxvMzhCbDF6T1R4R1V5RmxvbjBOdzFSSkRpTUN6bTBrNVBmQVNRb0pwRGdueUhpdFdUNm90VTF5OWpjTGhLNVl3VUZhbVNyY3M3dG8xWW11cEVlOWJlenZBamlEbFVGOWtFSmFOdw?oc=5"
       },
       {
         "titulo": "São Paulo recebe mil novas doses da vacina contra a Mpox - agenciasp.sp.gov.br",
         "tipo": "disponibilidade_vacina",
         "resumo": "São Paulo recebe mil novas doses da vacina contra a Mpox&nbsp;&nbsp;agenciasp.sp.gov.br",
         "linkOficial": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNSkYzc1Jsbm1KZFk2TXJxYVhJVGd6YmpGZEktc05fWU9weXYtcDFzTGJScFI1SGh6bC1OSWt6VFhqNlJsWlZ0SzhTZFJDVzZTMWJyV0NNcDFJcmpYblpBZVJKV0NJcnJrX3lybjVsVERZdDllWl9sNHFlanpwSXhySFo0MVo5bXhRMGt6OHJzVGFBaEp0T29sS2lsRQ?oc=5"
+      },
+      {
+        "titulo": "PBH inicia vacinação contra mpox para grupos prioritários e imunização será ampliada nesta quinta-feira (19) - Prefeitura de Belo Horizonte",
+        "tipo": "disponibilidade_vacina",
+        "resumo": "PBH inicia vacinação contra mpox para grupos prioritários e imunização será ampliada nesta quinta-feira (19)&nbsp;&nbsp;Prefeitura de Belo Horizonte",
+        "linkOficial": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxObGVKcUNXWjZlUTNZalFHaWNMbjJYdTR5aHZFeHd6WmNVSWt3ZTZOYVdSU3pEWGpkNGg1MzlCdFlVdjBnQWhRd0JIZWh4WF9NTjY1TkdUYjU2ZWY3M0dGZ0wyYTZJUld1TmQ2U1VPZWo4QlNQOTBGRE1JdnRWYnZ3aHlyallBRDNuYXA0NnFHRlpYbDVQc2c5T2NrS1lIWXBvZlpWcEJ6bVlvSld4ZWNJYWhDT0dDREFYSVo2dTZlUXhSb1pWVVN6ZQ?oc=5"
       },
       {
         "titulo": "Mpox Avança em São Paulo e Estado Recebe Novas Doses de Vacina; Veja os Grupos Prioritários - Forbes Brasil",
