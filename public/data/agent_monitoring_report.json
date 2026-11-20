@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-11-20T19:50:31.814080",
-  "totalItensVarredura": 49,
+  "timestamp": "2026-11-20T20:39:24.691247",
+  "totalItensVarredura": 46,
   "analiseAgente": {
     "alteracoesEstoque": [
       {
@@ -44,12 +44,12 @@
         "fonte": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNX3NFN3RNQzF6QnJyaTlxSW5IUm1WQ0N1TXZGSGI1NF9VY1Y3NUk2d1Rzcmk2VzYxVWV2TzVLNGw5WGRzazNBazJrQmdPdndvR19MenpRa3dYVERZdFN2UEY4bVczZlhDdzAtRndaYjZWcEtOSnB0WEhENzdqNUEybEdtUklVdEk0NEhUVEhDb2gtWWprc05HVmticXI4QnJYQUhlWDhhSkFnM1BJQnczMg?oc=5"
       },
       {
-        "unidade": "Super Centros Cariocas (Botafogo, Shopping Nova América, ParkShopping Campo Grande)",
-        "uf": "RJ",
+        "unidade": "Rede Especializada de São Paulo (SAEs e CRIEs)",
+        "uf": "SP",
         "statusEstoque": "disponivel",
-        "motivo": "Reabastecido com novo lote de 1.000 frascos (até 5.000 doses intradérmicas) enviado pelo Ministério da Saúde. Vacinação ativa.",
-        "previsaoFutura": "Vacinação ativa nos Super Centros enquanto durar o lote. Novos repasses federais previstos conforme demanda.",
-        "fonte": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPa2U2T3V4YkdIRFpsSi1RMmRlX1M4NnpUOVNuVUo3Y1lybGlhWHRBVkdvcjFnVVhsdW9OV2pHMWxrQUZUN2xodUtUMGFOcWIzYnRXSjJtMVViT3FNQmlWZEY2T09nQ3lVUmVMN05qVEpCWUVDNFpWdDF2bUotd1dDRGlTemxoRk85SkFaeTk4ZEJGaTFpSW82cXhVamNXandBQkd4Ry1NMjhLb0lFVnNJ?oc=5"
+        "motivo": "Recebimento e distribuição de novo lote de 1.000 doses da vacina MVA-BN aos SAEs e CRIEs.",
+        "previsaoFutura": "Doses de primeira aplicação ativas. Segunda dose recomendada a partir de 28 dias para consolidar imunidade.",
+        "fonte": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQRmRUemF4aUp6SlRDMFVaT2U2S215dDNJbXhZcWgyek5hZk8wdkplTXdlaHBJYzJySERMZEJXVEFVdUxOZUc0aWFaMXI2TGtxVGxrNzloWnNYc0tISXh2WmxKZlVlMk01OTUtenNNVEdWNTZUbEotVGNfQnR1LVJZR09KUDJKT2ZMTDVuenl1cTBtb0NkcVFkMlBETkVKbklRazNNQWFFSWdPVDVJcjVpeE5yTk8xUkNCZ3N4Uk9MT1AtUk41N3A1a1UwcWNwV1E?oc=5"
       },
       {
         "unidade": "Rede Especializada de São Paulo (SAEs e CRIEs)",
@@ -57,15 +57,7 @@
         "statusEstoque": "disponivel",
         "motivo": "Recebimento e distribuição de novo lote de 1.000 doses da vacina MVA-BN aos SAEs e CRIEs.",
         "previsaoFutura": "Doses de primeira aplicação ativas. Segunda dose recomendada a partir de 28 dias para consolidar imunidade.",
-        "fonte": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9FcnNSQXZRSFZ3WGN0cFY4SS1mbGtWT0JaNm82VzM2YlRaM3FJNjl5bzF4alpIaHEwVUNwR09hdzFZemkyOHo0X0dsX2FPM0hNWnc4LUQ4Q0UzbVh5RWIyNHo2SUVDRDVyTGJETXR5ZGk2aXVDblBnM3gyXy0?oc=5"
-      },
-      {
-        "unidade": "Super Centros Cariocas (Botafogo, Shopping Nova América, ParkShopping Campo Grande)",
-        "uf": "RJ",
-        "statusEstoque": "disponivel",
-        "motivo": "Reabastecido com novo lote de 1.000 frascos (até 5.000 doses intradérmicas) enviado pelo Ministério da Saúde. Vacinação ativa.",
-        "previsaoFutura": "Vacinação ativa nos Super Centros enquanto durar o lote. Novos repasses federais previstos conforme demanda.",
-        "fonte": "https://prefeitura.rio/saude/rio-retoma-vacinacao-contra-a-mpox-apos-chegada-de-novas-doses/"
+        "fonte": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNU0RGOXB1N0VFV25fNVJIektkV25FLUp4MmhlR0EwRTZ3Z1kyM2xDNFZDSmpZckU5Zjc3WFBBUGdjVEo1YWllSkQxWTlzS2pSTFlMRFQwRng4dTJmc3VmZWxsdENad1V1ZXZwZ01PZmpuMVkwb3RGbk40Zk9uVlJJUVN3UWNyaWIwc2l3?oc=5"
       },
       {
         "unidade": "Rede Especializada de São Paulo (SAEs e CRIEs)",
@@ -109,10 +101,10 @@
         "linkOficial": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxObGVKcUNXWjZlUTNZalFHaWNMbjJYdTR5aHZFeHd6WmNVSWt3ZTZOYVdSU3pEWGpkNGg1MzlCdFlVdjBnQWhRd0JIZWh4WF9NTjY1TkdUYjU2ZWY3M0dGZ0wyYTZJUld1TmQ2U1VPZWo4QlNQOTBGRE1JdnRWYnZ3aHlyallBRDNuYXA0NnFHRlpYbDVQc2c5T2NrS1lIWXBvZlpWcEJ6bVlvSld4ZWNJYWhDT0dDREFYSVo2dTZlUXhSb1pWVVN6ZQ?oc=5"
       },
       {
-        "titulo": "SP recebe mil doses de vacina contra mpox; região terá 23 - Folha de Alphaville",
+        "titulo": "Prefeitura do Rio amplia público de vacinação contra Mpox - CNN Brasil",
         "tipo": "disponibilidade_vacina",
-        "resumo": "SP recebe mil doses de vacina contra mpox; região terá 23&nbsp;&nbsp;Folha de Alphaville",
-        "linkOficial": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNX3NFN3RNQzF6QnJyaTlxSW5IUm1WQ0N1TXZGSGI1NF9VY1Y3NUk2d1Rzcmk2VzYxVWV2TzVLNGw5WGRzazNBazJrQmdPdndvR19MenpRa3dYVERZdFN2UEY4bVczZlhDdzAtRndaYjZWcEtOSnB0WEhENzdqNUEybEdtUklVdEk0NEhUVEhDb2gtWWprc05HVmticXI4QnJYQUhlWDhhSkFnM1BJQnczMg?oc=5"
+        "resumo": "Prefeitura do Rio amplia público de vacinação contra Mpox&nbsp;&nbsp;CNN Brasil",
+        "linkOficial": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNajFWMG05R2s5TV94Zmp3SVF2elV4T0I2VWplRTgzVmdvdnI5aDBTdmdpMGZYNU5VZ2xDMU9adTlZaU9zSDdXN0o4WTJkUkwxWHl3X0M4ZjQ1OHc1dmp2SDZRenlta3ZidzZwOTE1N0NRTFhZSXJHOFJkTndHVFlBdHM4OHJTcTc3SGluRzJKWnFPbS00MFJOMFBjOWFyZDlfTUdHQ3VwRWFIV1E?oc=5"
       }
     ]
   }
