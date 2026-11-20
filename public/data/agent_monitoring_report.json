@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-20T15:44:52.713071",
+  "timestamp": "2026-11-20T16:48:01.638402",
   "totalItensVarredura": 51,
   "analiseAgente": {
     "alteracoesEstoque": [
@@ -41,6 +41,14 @@
         "statusEstoque": "disponivel",
         "motivo": "Recebimento e distribuição de novo lote de 1.000 doses da vacina MVA-BN aos SAEs e CRIEs.",
         "previsaoFutura": "Doses de primeira aplicação ativas. Segunda dose recomendada a partir de 28 dias para consolidar imunidade.",
+        "fonte": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxORkFocy1paUFwNWpCNXJJcTR3YWxYSTRqajk4QWxKa3VZS0lYa2RwbXVhWllYQ0dZY1NXWjYzT2JNWGJFeXlfSmh1dVFiR21ZYlVWQnB4bkJMX3ZCbG5yWGllZTZuRk5TM2x1bU1EVzdELTE0aEJyV2RyempMV3NVb2J5Q21ja3p3dzZXd1NsM3F0UU1ua2Y0VlZrZmJleHFYSzVqalNTT0N0RGloZWpsc2ZNUzZqaW1CVmlGeUN3UGM4THF2TXVoZlFydU1oSkJK?oc=5"
+      },
+      {
+        "unidade": "Rede Especializada de São Paulo (SAEs e CRIEs)",
+        "uf": "SP",
+        "statusEstoque": "disponivel",
+        "motivo": "Recebimento e distribuição de novo lote de 1.000 doses da vacina MVA-BN aos SAEs e CRIEs.",
+        "previsaoFutura": "Doses de primeira aplicação ativas. Segunda dose recomendada a partir de 28 dias para consolidar imunidade.",
         "fonte": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNX3NFN3RNQzF6QnJyaTlxSW5IUm1WQ0N1TXZGSGI1NF9VY1Y3NUk2d1Rzcmk2VzYxVWV2TzVLNGw5WGRzazNBazJrQmdPdndvR19MenpRa3dYVERZdFN2UEY4bVczZlhDdzAtRndaYjZWcEtOSnB0WEhENzdqNUEybEdtUklVdEk0NEhUVEhDb2gtWWprc05HVmticXI4QnJYQUhlWDhhSkFnM1BJQnczMg?oc=5"
       },
       {
@@ -49,7 +57,31 @@
         "statusEstoque": "disponivel",
         "motivo": "Recebimento e distribuição de novo lote de 1.000 doses da vacina MVA-BN aos SAEs e CRIEs.",
         "previsaoFutura": "Doses de primeira aplicação ativas. Segunda dose recomendada a partir de 28 dias para consolidar imunidade.",
-        "fonte": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPXzlXYlNjWDdFc0ZMZkR2NmZwNGxvY0h5SXFaV3g1Q0hGaHVvcGRZbXpiTkpDcGpZT2QzVHVzOUgwLWJQZ2NPU0pvSDBKYzFMblZWVE4tSVBjQjFzZnBPX3lUVVZZdVBhRFR4dDlkMzMyaVp2RHZPUTdnYkZVQ3NOZTlnQlN2ejVBNHpBRV81VV93Ym1BdlBobUxzZEZkOGZjczgtQUhQMzhuWmR6Q3RWc2JzbTczZWdUS3dJb0k5UGNDWENBcW1VaGZR0gHYAUFVX3lxTFB5azVRZ2FjZ0FtaUl1YVZJYnZGRXlZZjB2NTNEbmJNRWZEbGFmUndkYU5Dc3RhY1dtakJ4Y2FiWjRBTFdscG1TbjcydnFwX1owM0tpWC0waDdnV3lFRUVSTXloNzdscHB1by1zNnJuX3o2ODFuaG9rdnBxRldGc0xEQ1EycDJVMC1YYW9mVERQd2VVZzdYWkVtakNZV204OUM0b0dsYnhlcWhGSU5lNGV5a0xFaHBqUjB0R2VCMmMxcEhpMjF6cE84MXlUaHkwWE9uMm9sTWtyUw?oc=5"
+        "fonte": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOcGR3cm1XeFlxVGtYMTVHQTVNYW9MOExkYkRLRjhRc1IxdWVQZVdGamFPVnBZbzhjTjliellvbVBuTkFIM25HV1ZBMjk4T2cxbzBnQVFIRzRqNHVJWDVWMDFidm1hOU1zWUQ2dHZRWVpfMWdqX3FzWUNic1pPUmdSa2RadV9XTUM0Y21KNG5keWJjdHlDSlhxbFpRYWF2ZWRLSzBhUzBxdFdFMm1S0gGyAUFVX3lxTFBNd0cyWGVSNDRTSFNOREJRcXlJRTNUZTdrMk8yU0ZrbU5leDBJYmNsazhvZGx5THdZV083MlpiWE1BZGhtM3lWbTNOdURsYU5BNlBRcWJmTlZXNFBrbHE5bjdfVzRqR3RtNVRocUg5OVU5XzVFRi1sSjhLN3JFTVNiR1luV3pqa3FkOEpIMng3SlJpai02VkNBSlBLUmxnQjVmeWRTZ3U1eXNhdmw5NnR5TlE?oc=5"
+      },
+      {
+        "unidade": "Rede Especializada de São Paulo (SAEs e CRIEs)",
+        "uf": "SP",
+        "statusEstoque": "disponivel",
+        "motivo": "Recebimento e distribuição de novo lote de 1.000 doses da vacina MVA-BN aos SAEs e CRIEs.",
+        "previsaoFutura": "Doses de primeira aplicação ativas. Segunda dose recomendada a partir de 28 dias para consolidar imunidade.",
+        "fonte": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQRmRUemF4aUp6SlRDMFVaT2U2S215dDNJbXhZcWgyek5hZk8wdkplTXdlaHBJYzJySERMZEJXVEFVdUxOZUc0aWFaMXI2TGtxVGxrNzloWnNYc0tISXh2WmxKZlVlMk01OTUtenNNVEdWNTZUbEotVGNfQnR1LVJZR09KUDJKT2ZMTDVuenl1cTBtb0NkcVFkMlBETkVKbklRazNNQWFFSWdPVDVJcjVpeE5yTk8xUkNCZ3N4Uk9MT1AtUk41N3A1a1UwcWNwV1E?oc=5"
+      },
+      {
+        "unidade": "Rede Especializada de São Paulo (SAEs e CRIEs)",
+        "uf": "SP",
+        "statusEstoque": "disponivel",
+        "motivo": "Recebimento e distribuição de novo lote de 1.000 doses da vacina MVA-BN aos SAEs e CRIEs.",
+        "previsaoFutura": "Doses de primeira aplicação ativas. Segunda dose recomendada a partir de 28 dias para consolidar imunidade.",
+        "fonte": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOZkt0VG1HcjlaYmZfaU9OVXhzYVY4dWxDMTdLcnBQS2RXTXhLZUwxVllUS1NmaEk3aE00WXJnYm1laHVQdzVHR3hWS1FrbzVvbmRXOVkycC1yT0ZGZjBEMWIxSVNNejhwSHpXQmh0TWNvVVhfVUxYc0dhWVdTWmdtRnI5cXlTd2VNaFFHUVE4eldUVVd2NjVOMDBOTVI?oc=5"
+      },
+      {
+        "unidade": "Rede Especializada de São Paulo (SAEs e CRIEs)",
+        "uf": "SP",
+        "statusEstoque": "disponivel",
+        "motivo": "Recebimento e distribuição de novo lote de 1.000 doses da vacina MVA-BN aos SAEs e CRIEs.",
+        "previsaoFutura": "Doses de primeira aplicação ativas. Segunda dose recomendada a partir de 28 dias para consolidar imunidade.",
+        "fonte": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPXzlXYlNjWDdFc0ZMZkR2NmZwNGxvY0h5SXFaV3g1Q0hGaHVvcGRZbXpiTkpDcGpZT2QzVHVzOUgwLWJQZ2NPU0pvSDBKYzFMblZWVE4tSVBjQjFzZnBPX3lUVVZZdVBhRFR4dDlkMzMyaVp2RHZPUTdnYkZVQ3NOZTlnQlN2ejVBNHpBRV81VV93Ym1BdlBobUxzZEZkOGZjczgtQUhQMzhuWmR6Q3RWc2JzbTczZWdUS3dJb0k5UGNDWENBcW1VaGZR?oc=5"
       },
       {
         "unidade": "Super Centros Cariocas (Botafogo, Shopping Nova América, ParkShopping Campo Grande)",
@@ -117,10 +149,10 @@
         "linkOficial": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxObGVKcUNXWjZlUTNZalFHaWNMbjJYdTR5aHZFeHd6WmNVSWt3ZTZOYVdSU3pEWGpkNGg1MzlCdFlVdjBnQWhRd0JIZWh4WF9NTjY1TkdUYjU2ZWY3M0dGZ0wyYTZJUld1TmQ2U1VPZWo4QlNQOTBGRE1JdnRWYnZ3aHlyallBRDNuYXA0NnFHRlpYbDVQc2c5T2NrS1lIWXBvZlpWcEJ6bVlvSld4ZWNJYWhDT0dDREFYSVo2dTZlUXhSb1pWVVN6ZQ?oc=5"
       },
       {
-        "titulo": "SP recebe mil doses de vacina contra mpox; região terá 23 - Folha de Alphaville",
+        "titulo": "18/11/2026 - São Paulo recebe mil novas doses da vacina contra a Mpox - Secretaria de Estado da Saúde de São Paulo",
         "tipo": "disponibilidade_vacina",
-        "resumo": "SP recebe mil doses de vacina contra mpox; região terá 23&nbsp;&nbsp;Folha de Alphaville",
-        "linkOficial": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNX3NFN3RNQzF6QnJyaTlxSW5IUm1WQ0N1TXZGSGI1NF9VY1Y3NUk2d1Rzcmk2VzYxVWV2TzVLNGw5WGRzazNBazJrQmdPdndvR19MenpRa3dYVERZdFN2UEY4bVczZlhDdzAtRndaYjZWcEtOSnB0WEhENzdqNUEybEdtUklVdEk0NEhUVEhDb2gtWWprc05HVmticXI4QnJYQUhlWDhhSkFnM1BJQnczMg?oc=5"
+        "resumo": "18/11/2026 - São Paulo recebe mil novas doses da vacina contra a Mpox&nbsp;&nbsp;Secretaria de Estado da Saúde de São Paulo",
+        "linkOficial": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxORkFocy1paUFwNWpCNXJJcTR3YWxYSTRqajk4QWxKa3VZS0lYa2RwbXVhWllYQ0dZY1NXWjYzT2JNWGJFeXlfSmh1dVFiR21ZYlVWQnB4bkJMX3ZCbG5yWGllZTZuRk5TM2x1bU1EVzdELTE0aEJyV2RyempMV3NVb2J5Q21ja3p3dzZXd1NsM3F0UU1ua2Y0VlZrZmJleHFYSzVqalNTT0N0RGloZWpsc2ZNUzZqaW1CVmlGeUN3UGM4THF2TXVoZlFydU1oSkJK?oc=5"
       }
     ]
   }
