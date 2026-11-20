@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-11-20T14:06:05.434649",
-  "totalItensVarredura": 52,
+  "timestamp": "2026-11-20T15:44:52.713071",
+  "totalItensVarredura": 51,
   "analiseAgente": {
     "alteracoesEstoque": [
       {
@@ -42,14 +42,6 @@
         "motivo": "Recebimento e distribuição de novo lote de 1.000 doses da vacina MVA-BN aos SAEs e CRIEs.",
         "previsaoFutura": "Doses de primeira aplicação ativas. Segunda dose recomendada a partir de 28 dias para consolidar imunidade.",
         "fonte": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNX3NFN3RNQzF6QnJyaTlxSW5IUm1WQ0N1TXZGSGI1NF9VY1Y3NUk2d1Rzcmk2VzYxVWV2TzVLNGw5WGRzazNBazJrQmdPdndvR19MenpRa3dYVERZdFN2UEY4bVczZlhDdzAtRndaYjZWcEtOSnB0WEhENzdqNUEybEdtUklVdEk0NEhUVEhDb2gtWWprc05HVmticXI4QnJYQUhlWDhhSkFnM1BJQnczMg?oc=5"
-      },
-      {
-        "unidade": "Rede Especializada de São Paulo (SAEs e CRIEs)",
-        "uf": "SP",
-        "statusEstoque": "disponivel",
-        "motivo": "Recebimento e distribuição de novo lote de 1.000 doses da vacina MVA-BN aos SAEs e CRIEs.",
-        "previsaoFutura": "Doses de primeira aplicação ativas. Segunda dose recomendada a partir de 28 dias para consolidar imunidade.",
-        "fonte": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQRmRUemF4aUp6SlRDMFVaT2U2S215dDNJbXhZcWgyek5hZk8wdkplTXdlaHBJYzJySERMZEJXVEFVdUxOZUc0aWFaMXI2TGtxVGxrNzloWnNYc0tISXh2WmxKZlVlMk01OTUtenNNVEdWNTZUbEotVGNfQnR1LVJZR09KUDJKT2ZMTDVuenl1cTBtb0NkcVFkMlBETkVKbklRazNNQWFFSWdPVDVJcjVpeE5yTk8xUkNCZ3N4Uk9MT1AtUk41N3A1a1UwcWNwV1E?oc=5"
       },
       {
         "unidade": "Rede Especializada de São Paulo (SAEs e CRIEs)",
@@ -101,9 +93,9 @@
         "linkOficial": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQcmM2MDJIeG5QQ2ttVXJYTXlTUWZXeWFKWWJaMjREWTZQNGRELXBGZ201OEFULUVzQWJ6V0V3Ynhad2RJWjBiNDRrMnNDVjZ0SjI2eXdrVFRqaEQtVHJYZERDd1pkakJlcmRpWHFRaXZIUndVal9UVmtrN2xxTlVJcy10S2toQloxU0p5Rzg2eUZHaTVMMDNXYk1ORlZBMTBDRl9JSjIxbW1ObTJGYXRUMDdWNjlOTTFCaW9Jc19uaw?oc=5"
       },
       {
-        "titulo": "Ministério da Saúde envia ao município do Rio mais mil frascos de vacina contra mpox - GOV.BR",
+        "titulo": "Ministério da Saúde envia ao município do Rio mais mil frascos de vacina contra mpox - Governo Federal",
         "tipo": "disponibilidade_vacina",
-        "resumo": "Ministério da Saúde envia ao município do Rio mais mil frascos de vacina contra mpox&nbsp;&nbsp;GOV.BR",
+        "resumo": "Ministério da Saúde envia ao município do Rio mais mil frascos de vacina contra mpox&nbsp;&nbsp;Governo Federal",
         "linkOficial": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQbl9qdXR0TUdTNkZIT2JIU0dOeEd5Y1VDSE5YZ0pZaGhHWTVWNFFtMEdYS2pDQXFTWURiRkh4TEdHaHd5Z19tWDRtSmYtRnBhR0VFZkJLNWdua1U0WUUta2RER0Vma25vV0lkb3RDNU1pdG5UU0ZUNER2WHM1dFRNdFhjUE1uQTJNeFNkTl9WSHR2YzVVTl9naVJJSDRIZFFvNnZxY3JuOFAwRklNdGVLZlFjXzZJbFU2cWxnMUVEcEhaNUkxQ2w0cVoxZE1OSDFiOFpuNGtobHphVllkNVhsTw?oc=5"
       },
       {
