@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-11-23T12:54:32.459646",
-  "totalItensVarredura": 40,
+  "timestamp": "2026-11-23T14:15:09.146523",
+  "totalItensVarredura": 42,
   "analiseAgente": {
     "alteracoesEstoque": [
       {
@@ -34,6 +34,14 @@
         "motivo": "Prefeitura de Belo Horizonte iniciou vacinação em 5 unidades para grupos prioritários e anunciou expansão para 30/11.",
         "previsaoFutura": "A partir de 30/11: Ampliação para todas as pessoas vivendo com HIV/Aids (PVHA), independente de contagem de CD4 (campanha até 04/12).",
         "fonte": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxObGVKcUNXWjZlUTNZalFHaWNMbjJYdTR5aHZFeHd6WmNVSWt3ZTZOYVdSU3pEWGpkNGg1MzlCdFlVdjBnQWhRd0JIZWh4WF9NTjY1TkdUYjU2ZWY3M0dGZ0wyYTZJUld1TmQ2U1VPZWo4QlNQOTBGRE1JdnRWYnZ3aHlyallBRDNuYXA0NnFHRlpYbDVQc2c5T2NrS1lIWXBvZlpWcEJ6bVlvSld4ZWNJYWhDT0dDREFYSVo2dTZlUXhSb1pWVVN6ZQ?oc=5"
+      },
+      {
+        "unidade": "Super Centros Cariocas (Botafogo, Shopping Nova América, ParkShopping Campo Grande)",
+        "uf": "RJ",
+        "statusEstoque": "disponivel",
+        "motivo": "Reabastecido com novo lote de 1.000 frascos (até 5.000 doses intradérmicas) enviado pelo Ministério da Saúde. Vacinação ativa.",
+        "previsaoFutura": "Vacinação ativa nos Super Centros enquanto durar o lote. Novos repasses federais previstos conforme demanda.",
+        "fonte": "https://news.google.com/rss/articles/CBMib0FVX3lxTE90RzhXSFBmaVhXdGE4bmJnN2phYmVTamFYNjUwSnc4U0M4Y1E4NENmdmJXVGw3eWZVZFQ5UW5NNjRtbjFQZHhjRGdld0FYZjY4dy1LR2YzZ1BaTF80Mmxoc2JRQVNncFBkUXJ5cUV0QQ?oc=5"
       },
       {
         "unidade": "Super Centros Cariocas (Botafogo, Shopping Nova América, ParkShopping Campo Grande)",
