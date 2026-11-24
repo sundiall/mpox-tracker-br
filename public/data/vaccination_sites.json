@@ -56,8 +56,8 @@
     "agendamento": "Livre Demanda",
     "observacoes": "Ponto estratégico de vacinação na Zona Norte carioca para PrEP e populações prioritárias.",
     "requisitos": "Documento de identidade com foto, CPF e receita/laudo de PrEP recente (até 6 meses).",
-    "statusEstoque": "disponivel",
-    "dataAtualizacaoStatus": "2026-11-24",
+    "statusEstoque": "esgotado",
+    "dataAtualizacaoStatus": "2026-11-23",
     "notaStatus": "Vacinação ativa/reabastecida segundo comunicado oficial.",
     "fonteStatus": "https://prefeitura.rio/saude/vacina-contra-mpox-segue-disponivel-apenas-no-super-centro-de-botafogo/",
     "previsaoFutura": "Doses ativas para os grupos prioritários elegíveis."
