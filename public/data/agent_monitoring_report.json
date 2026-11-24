@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-24T01:48:37.310074",
+  "timestamp": "2026-11-24T01:54:18.070852",
   "totalItensVarredura": 51,
   "analiseAgente": {
     "alteracoesEstoque": [
@@ -38,6 +38,42 @@
         "motivo": "Vacinação ativa/reabastecida segundo comunicado oficial.",
         "previsaoFutura": "Doses ativas para os grupos prioritários elegíveis.",
         "fonte": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPN0Zhd0M0NU9oTUUtOV9HSzRRb2dwekZyN3VIMjUtOUVXOFBlckdZanF1a1czWmtmNjFhV1JZNUVnT3VSZkFhVWRPVVdOTDlnU3lRbVZ1WGhtOTV1c1dKMnQyNUk1clJiY2U5NjR1LVJtMWJVLWVWajJzN1lYNlpKUnFzT2ptTTQ?oc=5"
+      },
+      {
+        "siteId": "rj-2",
+        "unidade": "Super Centro Carioca de Vacinação — Botafogo",
+        "uf": "RJ",
+        "statusEstoque": "disponivel",
+        "motivo": "Vacinação ativa/reabastecida segundo comunicado oficial.",
+        "previsaoFutura": "Doses ativas para os grupos prioritários elegíveis.",
+        "fonte": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNU0RGOXB1N0VFV25fNVJIektkV25FLUp4MmhlR0EwRTZ3Z1kyM2xDNFZDSmpZckU5Zjc3WFBBUGdjVEo1YWllSkQxWTlzS2pSTFlMRFQwRng4dTJmc3VmZWxsdENad1V1ZXZwZ01PZmpuMVkwb3RGbk40Zk9uVlJJUVN3UWNyaWIwc2l3?oc=5"
+      },
+      {
+        "siteId": "rj-3",
+        "unidade": "Super Centro Carioca de Vacinação — Zona Norte (Shopping Nova América)",
+        "uf": "RJ",
+        "statusEstoque": "disponivel",
+        "motivo": "Vacinação ativa/reabastecida segundo comunicado oficial.",
+        "previsaoFutura": "Doses ativas para os grupos prioritários elegíveis.",
+        "fonte": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNU0RGOXB1N0VFV25fNVJIektkV25FLUp4MmhlR0EwRTZ3Z1kyM2xDNFZDSmpZckU5Zjc3WFBBUGdjVEo1YWllSkQxWTlzS2pSTFlMRFQwRng4dTJmc3VmZWxsdENad1V1ZXZwZ01PZmpuMVkwb3RGbk40Zk9uVlJJUVN3UWNyaWIwc2l3?oc=5"
+      },
+      {
+        "siteId": "rj-4",
+        "unidade": "Super Centro Carioca de Vacinação — Zona Oeste (ParkShopping Campo Grande)",
+        "uf": "RJ",
+        "statusEstoque": "disponivel",
+        "motivo": "Vacinação ativa/reabastecida segundo comunicado oficial.",
+        "previsaoFutura": "Doses ativas para os grupos prioritários elegíveis.",
+        "fonte": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNU0RGOXB1N0VFV25fNVJIektkV25FLUp4MmhlR0EwRTZ3Z1kyM2xDNFZDSmpZckU5Zjc3WFBBUGdjVEo1YWllSkQxWTlzS2pSTFlMRFQwRng4dTJmc3VmZWxsdENad1V1ZXZwZ01PZmpuMVkwb3RGbk40Zk9uVlJJUVN3UWNyaWIwc2l3?oc=5"
+      },
+      {
+        "siteId": "sp-5",
+        "unidade": "SAE Lapa — Paulo César Bonfim",
+        "uf": "SP",
+        "statusEstoque": "disponivel",
+        "motivo": "Vacinação ativa/reabastecida segundo comunicado oficial.",
+        "previsaoFutura": "Doses ativas para os grupos prioritários elegíveis.",
+        "fonte": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNU0RGOXB1N0VFV25fNVJIektkV25FLUp4MmhlR0EwRTZ3Z1kyM2xDNFZDSmpZckU5Zjc3WFBBUGdjVEo1YWllSkQxWTlzS2pSTFlMRFQwRng4dTJmc3VmZWxsdENad1V1ZXZwZ01PZmpuMVkwb3RGbk40Zk9uVlJJUVN3UWNyaWIwc2l3?oc=5"
       },
       {
         "siteId": "rj-1",
