@@ -14,11 +14,11 @@
     "agendamento": "Livre Demanda",
     "observacoes": "Centro nacional de referência em infectologia. Aplicação para usuários de PrEP, PVHA (CD4 < 200), pós-exposição e trabalhadores expostos.",
     "requisitos": "Documento oficial com foto, cartão SUS e laudo/receita de PrEP (até 6 meses), exame CD4 ou comprovação de contato.",
-    "statusEstoque": "esgotado",
-    "dataAtualizacaoStatus": "2026-11-23",
-    "notaStatus": "Notícias recentes confirmam que a vacina contra mpox acabou no Rio de Janeiro após o uso de cerca de 8 mil doses e os postos pararam.",
+    "statusEstoque": "disponivel",
+    "dataAtualizacaoStatus": "2026-11-24",
+    "notaStatus": "Vacinação ativa/reabastecida segundo comunicado oficial.",
     "fonteStatus": "https://www.ini.fiocruz.br/ini-fiocruz-e-a-unidade-de-referencia-para-atendimento-de-casos-de-mpox-com-atendimento-24h-todos-os-dias/",
-    "previsaoFutura": "Aguardando novas remessas do Ministério da Saúde."
+    "previsaoFutura": "Doses ativas para os grupos prioritários elegíveis."
   },
   {
     "id": "rj-2",
