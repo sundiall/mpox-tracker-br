@@ -39,7 +39,7 @@
     "dataAtualizacaoStatus": "2026-11-19",
     "notaStatus": "Reabastecido com novo lote federal de 1.000 frascos (até 5.000 doses fracionadas). Vacinação ativa para PrEP e PVHA (CD4 < 200). Horário normalizado das 08h às 22h.",
     "fonteStatus": "https://prefeitura.rio/saude/vacina-contra-mpox-segue-disponivel-apenas-no-super-centro-de-botafogo/",
-    "previsaoFutura": "Atendimento focado nos grupos prioritários estabelecidos pelo Ministério da Saúde."
+    "previsaoFutura": "Atendimento mantido para o público prioritário enquanto durarem os frascos da cota recebida."
   },
   {
     "id": "rj-3",
@@ -60,7 +60,7 @@
     "dataAtualizacaoStatus": "2026-11-23",
     "notaStatus": "Aplicação suspensa temporariamente devido ao término total das doses disponíveis.",
     "fonteStatus": "https://prefeitura.rio/saude/vacina-contra-mpox-segue-disponivel-apenas-no-super-centro-de-botafogo/",
-    "previsaoFutura": "Aguardando novo repasse federal para reabertura de postos periféricos."
+    "previsaoFutura": "Reabertura e descentralização dependem do repasse de novos lotes pelo Ministério da Saúde."
   },
   {
     "id": "rj-4",
@@ -81,7 +81,7 @@
     "dataAtualizacaoStatus": "2026-11-23",
     "notaStatus": "Atendimento suspenso após o término das doses alocadas à unidade.",
     "fonteStatus": "https://prefeitura.rio/saude/vacina-contra-mpox-segue-disponivel-apenas-no-super-centro-de-botafogo/",
-    "previsaoFutura": "Sem previsão imediata de envio de doses a esta unidade descentralizada."
+    "previsaoFutura": "Aguardando envio de quantitativo adicional de doses para retomada do ponto na Zona Oeste."
   },
   {
     "id": "rj-5",
