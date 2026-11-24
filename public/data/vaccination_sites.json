@@ -39,7 +39,7 @@
     "dataAtualizacaoStatus": "2026-11-19",
     "notaStatus": "Reabastecido com novo lote federal de 1.000 frascos (até 5.000 doses fracionadas). Vacinação ativa para PrEP e PVHA (CD4 < 200). Horário normalizado das 08h às 22h.",
     "fonteStatus": "https://prefeitura.rio/saude/vacina-contra-mpox-segue-disponivel-apenas-no-super-centro-de-botafogo/",
-    "previsaoFutura": "Ministério da Saúde enviou remessa emergencial de 1.000 frascos para reabastecimento municipal."
+    "previsaoFutura": "Atendimento mantido para o público prioritário enquanto durarem os frascos da cota recebida."
   },
   {
     "id": "rj-3",
@@ -60,7 +60,7 @@
     "dataAtualizacaoStatus": "2026-11-23",
     "notaStatus": "Aplicação suspensa temporariamente devido ao término total das doses disponíveis.",
     "fonteStatus": "https://prefeitura.rio/saude/vacina-contra-mpox-segue-disponivel-apenas-no-super-centro-de-botafogo/",
-    "previsaoFutura": "Aguardando redistribuição interna do novo lote de 1.000 frascos enviado pelo Ministério da Saúde."
+    "previsaoFutura": "Reabertura e descentralização dependem do repasse de novos lotes pelo Ministério da Saúde."
   },
   {
     "id": "rj-4",
@@ -81,7 +81,7 @@
     "dataAtualizacaoStatus": "2026-11-23",
     "notaStatus": "Atendimento suspenso após o término das doses alocadas à unidade.",
     "fonteStatus": "https://prefeitura.rio/saude/vacina-contra-mpox-segue-disponivel-apenas-no-super-centro-de-botafogo/",
-    "previsaoFutura": "Previsão de retomada com o repasse das novas doses federais recebidas pelo município."
+    "previsaoFutura": "Aguardando envio de quantitativo adicional de doses para retomada do ponto na Zona Oeste."
   },
   {
     "id": "rj-5",
@@ -123,7 +123,7 @@
     "dataAtualizacaoStatus": "2026-11-24",
     "notaStatus": "Recebimento e distribuição de novo lote de doses da vacina MVA-BN aos SAEs e CRIEs.",
     "fonteStatus": "https://www.agenciasp.sp.gov.br/saude/sao-paulo-recebe-mil-novas-doses-da-vacina-contra-a-mpox/",
-    "previsaoFutura": "Atendimento direcionado aos grupos prioritários vigentes estabelecidos pelo Ministério da Saúde."
+    "previsaoFutura": "Doses de primeira aplicação ativas. Segunda dose recomendada a partir de 28 dias."
   },
   {
     "id": "sp-2",
