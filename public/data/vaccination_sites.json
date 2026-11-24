@@ -56,11 +56,11 @@
     "agendamento": "Livre Demanda",
     "observacoes": "Ponto estratégico de vacinação na Zona Norte carioca para PrEP e populações prioritárias.",
     "requisitos": "Documento de identidade com foto, CPF e receita/laudo de PrEP recente (até 6 meses).",
-    "statusEstoque": "disponivel",
+    "statusEstoque": "esgotado",
     "dataAtualizacaoStatus": "2026-11-24",
-    "notaStatus": "Vacinação ativa/reabastecida segundo comunicado oficial.",
+    "notaStatus": "Esgotamento ou suspensão explícita de doses noticiada em comunicado oficial.",
     "fonteStatus": "https://prefeitura.rio/saude/vacina-contra-mpox-segue-disponivel-apenas-no-super-centro-de-botafogo/",
-    "previsaoFutura": "Doses ativas para os grupos prioritários elegíveis."
+    "previsaoFutura": "Aguardando envio e redistribuição de novos lotes pelo Ministério da Saúde."
   },
   {
     "id": "rj-4",
@@ -77,11 +77,11 @@
     "agendamento": "Livre Demanda",
     "observacoes": "Ponto de referência para a Zona Oeste para vacinação contra Mpox.",
     "requisitos": "Documento oficial com foto, cartão SUS e comprovação de PrEP (receita até 6 meses) ou indicação médica.",
-    "statusEstoque": "disponivel",
+    "statusEstoque": "esgotado",
     "dataAtualizacaoStatus": "2026-11-24",
-    "notaStatus": "Vacinação ativa/reabastecida segundo comunicado oficial.",
+    "notaStatus": "Esgotamento ou suspensão explícita de doses noticiada em comunicado oficial.",
     "fonteStatus": "https://prefeitura.rio/saude/vacina-contra-mpox-segue-disponivel-apenas-no-super-centro-de-botafogo/",
-    "previsaoFutura": "Doses ativas para os grupos prioritários elegíveis."
+    "previsaoFutura": "Aguardando envio e redistribuição de novos lotes pelo Ministério da Saúde."
   },
   {
     "id": "rj-5",

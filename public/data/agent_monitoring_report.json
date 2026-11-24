@@ -1,8 +1,53 @@
 {
-  "timestamp": "2026-11-24T14:12:04.889239",
-  "totalItensVarredura": 2,
+  "timestamp": "2026-11-24T15:55:11.527704",
+  "totalItensVarredura": 25,
   "analiseAgente": {
     "alteracoesEstoque": [
+      {
+        "siteId": "rj-1",
+        "unidade": "Instituto Nacional de Infectologia Evandro Chagas (CRIE / INI / Fiocruz)",
+        "uf": "RJ",
+        "statusEstoque": "esgotado",
+        "motivo": "Esgotamento ou suspensão explícita de doses noticiada em comunicado oficial.",
+        "previsaoFutura": "Aguardando envio e redistribuição de novos lotes pelo Ministério da Saúde.",
+        "fonte": "https://news.google.com/rss/articles/CBMif0FVX3lxTE92ODNoYXJXWTlxbHYyQTZ1Z0JBSzVZTFBPV2RmVE50NTZhajVOODNndG42Ul9wRXNxSGsyTTFVQk1WeVRlc19FSnB5eXU1OW1yeHgyczlWQlJTdkVNUU1nc1Z4R2pCMEtwSWtUY0VDTlJuaU5aZ3lMeExkNl9rSnM?oc=5"
+      },
+      {
+        "siteId": "rj-2",
+        "unidade": "Super Centro Carioca de Vacinação — Botafogo",
+        "uf": "RJ",
+        "statusEstoque": "esgotado",
+        "motivo": "Esgotamento ou suspensão explícita de doses noticiada em comunicado oficial.",
+        "previsaoFutura": "Aguardando envio e redistribuição de novos lotes pelo Ministério da Saúde.",
+        "fonte": "https://news.google.com/rss/articles/CBMif0FVX3lxTE92ODNoYXJXWTlxbHYyQTZ1Z0JBSzVZTFBPV2RmVE50NTZhajVOODNndG42Ul9wRXNxSGsyTTFVQk1WeVRlc19FSnB5eXU1OW1yeHgyczlWQlJTdkVNUU1nc1Z4R2pCMEtwSWtUY0VDTlJuaU5aZ3lMeExkNl9rSnM?oc=5"
+      },
+      {
+        "siteId": "rj-3",
+        "unidade": "Super Centro Carioca de Vacinação — Zona Norte (Shopping Nova América)",
+        "uf": "RJ",
+        "statusEstoque": "esgotado",
+        "motivo": "Esgotamento ou suspensão explícita de doses noticiada em comunicado oficial.",
+        "previsaoFutura": "Aguardando envio e redistribuição de novos lotes pelo Ministério da Saúde.",
+        "fonte": "https://news.google.com/rss/articles/CBMif0FVX3lxTE92ODNoYXJXWTlxbHYyQTZ1Z0JBSzVZTFBPV2RmVE50NTZhajVOODNndG42Ul9wRXNxSGsyTTFVQk1WeVRlc19FSnB5eXU1OW1yeHgyczlWQlJTdkVNUU1nc1Z4R2pCMEtwSWtUY0VDTlJuaU5aZ3lMeExkNl9rSnM?oc=5"
+      },
+      {
+        "siteId": "rj-4",
+        "unidade": "Super Centro Carioca de Vacinação — Zona Oeste (ParkShopping Campo Grande)",
+        "uf": "RJ",
+        "statusEstoque": "esgotado",
+        "motivo": "Esgotamento ou suspensão explícita de doses noticiada em comunicado oficial.",
+        "previsaoFutura": "Aguardando envio e redistribuição de novos lotes pelo Ministério da Saúde.",
+        "fonte": "https://news.google.com/rss/articles/CBMif0FVX3lxTE92ODNoYXJXWTlxbHYyQTZ1Z0JBSzVZTFBPV2RmVE50NTZhajVOODNndG42Ul9wRXNxSGsyTTFVQk1WeVRlc19FSnB5eXU1OW1yeHgyczlWQlJTdkVNUU1nc1Z4R2pCMEtwSWtUY0VDTlJuaU5aZ3lMeExkNl9rSnM?oc=5"
+      },
+      {
+        "siteId": "rj-5",
+        "unidade": "Centro Especial de Vacinação Dr. Álvaro Aguiar (CEVAA)",
+        "uf": "RJ",
+        "statusEstoque": "esgotado",
+        "motivo": "Esgotamento ou suspensão explícita de doses noticiada em comunicado oficial.",
+        "previsaoFutura": "Aguardando envio e redistribuição de novos lotes pelo Ministério da Saúde.",
+        "fonte": "https://news.google.com/rss/articles/CBMif0FVX3lxTE92ODNoYXJXWTlxbHYyQTZ1Z0JBSzVZTFBPV2RmVE50NTZhajVOODNndG42Ul9wRXNxSGsyTTFVQk1WeVRlc19FSnB5eXU1OW1yeHgyczlWQlJTdkVNUU1nc1Z4R2pCMEtwSWtUY0VDTlJuaU5aZ3lMeExkNl9rSnM?oc=5"
+      },
       {
         "siteId": "rj-2",
         "unidade": "Super Centro Carioca de Vacinação — Botafogo",
@@ -16,16 +61,40 @@
     "novosMarcos": [],
     "alertasUrgentes": [
       {
-        "titulo": "Vacina contra MPOX segue disponível apenas no Super Centro de Botafogo",
+        "titulo": "Rio de Janeiro suspende vacinação contra Mpox por falta de doses - Agência Brasil",
         "tipo": "disponibilidade_vacina",
-        "resumo": "Mais de 7 mil pessoas foram vacinadas contra a MPOX com as doses enviadas pelo Ministério da Saúde, e os [&#8230;]\nO post Vacina contra MPOX segue disponível apenas no Super Centro de Botafogo apareceu primeiro em Prefeitura da Cidade do Rio de Janeiro - prefeitura.rio.",
-        "linkOficial": "https://prefeitura.rio/saude/vacina-contra-mpox-segue-disponivel-apenas-no-super-centro-de-botafogo/"
+        "resumo": "Rio de Janeiro suspende vacinação contra Mpox por falta de doses&nbsp;&nbsp;Agência Brasil",
+        "linkOficial": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPTmg3d3B6YWVOb0NiWGNoZTI0YnRhOE1FWDFoMHppWWgyLXpfTjF1T2RqSlVtWG45bjYxTDVpeTlZakdldHhfX1FlWWZURXdDdER4TjBQZFlNajBkZ1U0UFZTdC1LOEZxdWxDWEpyNFZYNDVGbS0welJST1NIQjF6dGthd2tQQmRFU2JHRGVfbllzcW1kazNGM25nZVVFTC1rak5KTXQwMkVmelV2a0RSOEVIUExvTUNwZVNweFBpQWl4U05WelhJRE1udGZVYTkwRUtvRmd3?oc=5"
       },
       {
-        "titulo": "SP ganha novas doses da vacina contra a mpox; saiba quem pode receber",
+        "titulo": "Ministério da Saúde envia ao município do Rio mais mil frascos de vacina contra mpox - Governo Federal",
         "tipo": "disponibilidade_vacina",
-        "resumo": "Com o aumento de número de casos, o Ministério da Saúde começou a enviar novas doses de vacina contra a mpox para o estado de São Paulo. Segundo a Secretaria estadual da Saúde, São Paulo recebeu esta semana uma nova remessa de mil doses da vacina, que já estão sendo distribuídas para atender aos gru",
-        "linkOficial": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-11/sp-recebe-novas-doses-da-vacina-contra-mpox-saiba-quem-pode-receber"
+        "resumo": "Ministério da Saúde envia ao município do Rio mais mil frascos de vacina contra mpox&nbsp;&nbsp;Governo Federal",
+        "linkOficial": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQbl9qdXR0TUdTNkZIT2JIU0dOeEd5Y1VDSE5YZ0pZaGhHWTVWNFFtMEdYS2pDQXFTWURiRkh4TEdHaHd5Z19tWDRtSmYtRnBhR0VFZkJLNWdua1U0WUUta2RER0Vma25vV0lkb3RDNU1pdG5UU0ZUNER2WHM1dFRNdFhjUE1uQTJNeFNkTl9WSHR2YzVVTl9naVJJSDRIZFFvNnZxY3JuOFAwRklNdGVLZlFjXzZJbFU2cWxnMUVEcEhaNUkxQ2w0cVoxZE1OSDFiOFpuNGtobHphVllkNVhsTw?oc=5"
+      },
+      {
+        "titulo": "São Paulo recebe mil novas doses da vacina contra a Mpox - agenciasp.sp.gov.br",
+        "tipo": "disponibilidade_vacina",
+        "resumo": "São Paulo recebe mil novas doses da vacina contra a Mpox&nbsp;&nbsp;agenciasp.sp.gov.br",
+        "linkOficial": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNSkYzc1Jsbm1KZFk2TXJxYVhJVGd6YmpGZEktc05fWU9weXYtcDFzTGJScFI1SGh6bC1OSWt6VFhqNlJsWlZ0SzhTZFJDVzZTMWJyV0NNcDFJcmpYblpBZVJKV0NJcnJrX3lybjVsVERZdDllWl9sNHFlanpwSXhySFo0MVo5bXhRMGt6OHJzVGFBaEp0T29sS2lsRQ?oc=5"
+      },
+      {
+        "titulo": "18/11/2026 - São Paulo recebe mil novas doses da vacina contra a Mpox - Secretaria de Estado da Saúde de São Paulo",
+        "tipo": "disponibilidade_vacina",
+        "resumo": "18/11/2026 - São Paulo recebe mil novas doses da vacina contra a Mpox&nbsp;&nbsp;Secretaria de Estado da Saúde de São Paulo",
+        "linkOficial": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxORkFocy1paUFwNWpCNXJJcTR3YWxYSTRqajk4QWxKa3VZS0lYa2RwbXVhWllYQ0dZY1NXWjYzT2JNWGJFeXlfSmh1dVFiR21ZYlVWQnB4bkJMX3ZCbG5yWGllZTZuRk5TM2x1bU1EVzdELTE0aEJyV2RyempMV3NVb2J5Q21ja3p3dzZXd1NsM3F0UU1ua2Y0VlZrZmJleHFYSzVqalNTT0N0RGloZWpsc2ZNUzZqaW1CVmlGeUN3UGM4THF2TXVoZlFydU1oSkJK?oc=5"
+      },
+      {
+        "titulo": "PBH inicia vacinação contra mpox para grupos prioritários e imunização será ampliada nesta quinta-feira (19) - Prefeitura de Belo Horizonte",
+        "tipo": "disponibilidade_vacina",
+        "resumo": "PBH inicia vacinação contra mpox para grupos prioritários e imunização será ampliada nesta quinta-feira (19)&nbsp;&nbsp;Prefeitura de Belo Horizonte",
+        "linkOficial": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxObGVKcUNXWjZlUTNZalFHaWNMbjJYdTR5aHZFeHd6WmNVSWt3ZTZOYVdSU3pEWGpkNGg1MzlCdFlVdjBnQWhRd0JIZWh4WF9NTjY1TkdUYjU2ZWY3M0dGZ0wyYTZJUld1TmQ2U1VPZWo4QlNQOTBGRE1JdnRWYnZ3aHlyallBRDNuYXA0NnFHRlpYbDVQc2c5T2NrS1lIWXBvZlpWcEJ6bVlvSld4ZWNJYWhDT0dDREFYSVo2dTZlUXhSb1pWVVN6ZQ?oc=5"
+      },
+      {
+        "titulo": "SP ganha novas doses da vacina contra a mpox; saiba quem pode receber - Agência Brasil",
+        "tipo": "disponibilidade_vacina",
+        "resumo": "SP ganha novas doses da vacina contra a mpox; saiba quem pode receber&nbsp;&nbsp;Agência Brasil",
+        "linkOficial": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQcmM2MDJIeG5QQ2ttVXJYTXlTUWZXeWFKWWJaMjREWTZQNGRELXBGZ201OEFULUVzQWJ6V0V3Ynhad2RJWjBiNDRrMnNDVjZ0SjI2eXdrVFRqaEQtVHJYZERDd1pkakJlcmRpWHFRaXZIUndVal9UVmtrN2xxTlVJcy10S2toQloxU0p5Rzg2eUZHaTVMMDNXYk1ORlZBMTBDRl9JSjIxbW1ObTJGYXRUMDdWNjlOTTFCaW9Jc19uaw?oc=5"
       }
     ]
   }
