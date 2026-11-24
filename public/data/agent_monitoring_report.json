@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-24T01:08:51.972404",
+  "timestamp": "2026-11-23T22:36:21.100449",
   "totalItensVarredura": 47,
   "analiseAgente": {
     "alteracoesEstoque": [
@@ -7,94 +7,50 @@
         "siteId": "rj-2",
         "unidade": "Super Centro Carioca de Vacinação — Botafogo",
         "uf": "RJ",
-        "statusEstoque": "disponivel",
-        "motivo": "Reabastecido com novo lote federal de frascos. Vacinação ativa.",
-        "previsaoFutura": "Atendimento mantido para o público prioritário enquanto durarem os frascos da cota recebida.",
-        "fonte": "https://prefeitura.rio/saude/vacina-contra-mpox-segue-disponivel-apenas-no-super-centro-de-botafogo/"
-      },
-      {
-        "siteId": "rj-3",
-        "unidade": "Super Centro Carioca de Vacinação — Zona Norte (Shopping Nova América)",
-        "uf": "RJ",
         "statusEstoque": "esgotado",
-        "motivo": "Aplicação temporariamente descontinuada na unidade, com doses centralizadas em Botafogo.",
-        "previsaoFutura": "Reabertura e descentralização dependem do repasse de novos lotes pelo Ministério da Saúde.",
-        "fonte": "https://prefeitura.rio/saude/vacina-contra-mpox-segue-disponivel-apenas-no-super-centro-de-botafogo/"
-      },
-      {
-        "siteId": "rj-4",
-        "unidade": "Super Centro Carioca de Vacinação — Zona Oeste (ParkShopping Campo Grande)",
-        "uf": "RJ",
-        "statusEstoque": "esgotado",
-        "motivo": "Serviço suspenso no polo regional, com doses centralizadas no Super Centro de Botafogo.",
-        "previsaoFutura": "Aguardando envio de quantitativo adicional de doses para retomada do ponto na Zona Oeste.",
-        "fonte": "https://prefeitura.rio/saude/vacina-contra-mpox-segue-disponivel-apenas-no-super-centro-de-botafogo/"
-      },
-      {
-        "siteId": "rj-2",
-        "unidade": "Super Centro Carioca de Vacinação — Botafogo",
-        "uf": "RJ",
-        "statusEstoque": "disponivel",
-        "motivo": "Vacinação ativa e centralizada pela SMS-Rio na unidade Botafogo (08h às 22h).",
-        "previsaoFutura": "Atendimento mantido para o público prioritário enquanto durarem os frascos da cota recebida.",
-        "fonte": "https://prefeitura.rio/saude/vacina-contra-mpox-segue-disponivel-apenas-no-super-centro-de-botafogo/"
-      },
-      {
-        "siteId": "rj-3",
-        "unidade": "Super Centro Carioca de Vacinação — Zona Norte (Shopping Nova América)",
-        "uf": "RJ",
-        "statusEstoque": "esgotado",
-        "motivo": "Aplicação temporariamente descontinuada na unidade, com doses restantes centralizadas no Super Centro de Botafogo.",
-        "previsaoFutura": "Reabertura e descentralização dependem do repasse de novos lotes pelo Ministério da Saúde.",
-        "fonte": "https://prefeitura.rio/saude/vacina-contra-mpox-segue-disponivel-apenas-no-super-centro-de-botafogo/"
-      },
-      {
-        "siteId": "rj-4",
-        "unidade": "Super Centro Carioca de Vacinação — Zona Oeste (ParkShopping Campo Grande)",
-        "uf": "RJ",
-        "statusEstoque": "esgotado",
-        "motivo": "Serviço suspenso no polo regional, com imunização restrita à unidade de Botafogo.",
-        "previsaoFutura": "Aguardando envio de quantitativo adicional de doses para retomada do ponto na Zona Oeste.",
-        "fonte": "https://prefeitura.rio/saude/vacina-contra-mpox-segue-disponivel-apenas-no-super-centro-de-botafogo/"
+        "motivo": "Estoque de vacinas contra mpox se esgotou após a aplicação de cerca de 8 mil doses no município, paralisando temporariamente o atendimento no último polo que ainda dispunha de doses",
+        "previsaoFutura": "Aguardando liberação e distribuição do novo repasse de frascos enviados pelo Ministério da Saúde e da remessa federal de 25 mil doses",
+        "fonte": "https://news.google.com/rss/articles/CBMif0FVX3lxTE92ODNoYXJXWTlxbHYyQTZ1Z0JBSzVZTFBPV2RmVE50NTZhajVOODNndG42Ul9wRXNxSGsyTTFVQk1WeVRlc19FSnB5eXU1OW1yeHgyczlWQlJTdkVNUU1nc1Z4R2pCMEtwSWtUY0VDTlJuaU5aZ3lMeExkNl9rSnM?oc=5"
       }
     ],
-    "novosMarcos": [],
+    "novosMarcos": [
+      {
+        "titulo": "Início da vacinação contra Mpox no Estado de São Paulo",
+        "dataEstimada": "2026-11",
+        "categoria": "vacina",
+        "descricao": "Início formal da distribuição e aplicação do lote de mil doses da vacina contra mpox para grupos prioritários nos serviços de referência da rede SUS paulista em 23/11/2026."
+      },
+      {
+        "titulo": "Brasil supera 600 casos notificados de Mpox em novembro",
+        "dataEstimada": "2026-11",
+        "categoria": "vigilancia",
+        "descricao": "Aceleração da transmissão comunitária no país com mais de 600 casos no mês de novembro de 2026, com São Paulo e Distrito Federal liderando a alta de diagnósticos."
+      },
+      {
+        "titulo": "Entrega do lote federal de 25 mil doses de imunizantes contra Mpox",
+        "dataEstimada": "2026-12",
+        "categoria": "vacina",
+        "descricao": "Previsão de desembarque e liberação de 25 mil doses adquiridas pelo Ministério da Saúde via cooperação internacional para reforço do estoque estratégico nacional."
+      }
+    ],
     "alertasUrgentes": [
       {
-        "titulo": "Mpox: vacina contra a doença começa a ser distribuída em SP nesta segunda; veja quem pode tomar - G1",
+        "titulo": "Esgotamento das doses de vacina contra Mpox na rede municipal do Rio de Janeiro",
         "tipo": "disponibilidade_vacina",
-        "resumo": "Mpox: vacina contra a doença começa a ser distribuída em SP nesta segunda; veja quem pode tomar&nbsp;&nbsp;G1",
-        "linkOficial": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxOVHJTeUtFNlE1anVZZGd0Ym00bGstSDJqRDFHdUJEcHFOZmJsTDl1WVBHWlIxYnRualVuN2RJYUNMdEZKMm1VR3FSWDM4RXRva2RLdXNqSS0tYXhrOS1BU1FKVW1NMFlzZlRpNjRvdDg0R1JwREhtM0tMOFBud1VjTkxQWm9kdUtsNmJiU3pHX24zVl9mb1BreXhuaDVkSjU3UkRsXzg4bVRxMWJSLWpiVjRBS1MySUZ5aGFPTFlYWDNYR1gzNkZlRWs4V250MUliRlRwTTI4NnhVTmRzekRFalZVMHZXbnfSAfYBQVVfeXFMTXJCZmJ3c3IxLXk3NnltTVc4S1drbXZHNEFHdUlVOW1SYW5VNGs5T3ZvaVhFXzNSU1QwVDNURklxYk5nS29ELWRLNGdNTnBXd3JSeXp5c200SGV1ZnlOS3ZKa0IyZ05Jb0ZGcDZoYW1oQ1FYNVF4SU5lUkI0WGxJc0lyNXU5YnVNOFFsa2xZYjR2eDA3S25VdlRma3drSTN0Y1NLSWRHYmRhcC1MU2FnQjdoT09IUTlGdV9QQjJ1RUlqX3ZMMl9iNG4tYnp6anRZRnZrMjVQY2M4a3NoeTdnVER0QWU0Qjh0Z0tIcnkzYm1LUC1RZDZ3?oc=5"
+        "resumo": "Após a aplicação de mais de 8 mil doses, o município do Rio de Janeiro paralisou a aplicação nos Super Centros Cariocas de Vacinação por falta de imunizantes, aguardando novas remessas do Ministério da Saúde.",
+        "linkOficial": "https://prefeitura.rio/saude/vacina-contra-mpox-segue-disponivel-apenas-no-super-centro-de-botafogo/"
       },
       {
-        "titulo": "São Paulo começa a distribuir vacina contra Mpox nesta segunda (23) - CNN Brasil",
-        "tipo": "disponibilidade_vacina",
-        "resumo": "São Paulo começa a distribuir vacina contra Mpox nesta segunda (23)&nbsp;&nbsp;CNN Brasil",
-        "linkOficial": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPOTNKSmUyaUFiWHZIRUZiQ1R6aGNaOW1GVm5uRWVwSWZoTjQ4NzU3STF5dDF5OXRkWHNxczBKZ1BvZE40QnhfY09FRmdjR3RzdWJlNlVReGhsYlNGQmdGZy1RWmVsbWE2QUlKVldkVTNSLUZ0UjlpWWZJaldqOHpLQXVodGlZVldjTE9VNDhPM2NFdENhak9lS3ZHNmxqWG9OLXdz?oc=5"
+        "titulo": "Distribuição de vacinas e elegibilidade prioritária iniciada em São Paulo",
+        "tipo": "criterios_elegibilidade",
+        "resumo": "Governo do Estado de São Paulo inicia aplicação de lote da vacina direcionada a pessoas vivendo com HIV com contagem de CD4 inferior a 200 células/mm³ e profissionais de laboratório expostos ao vírus.",
+        "linkOficial": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-11/sp-recebe-novas-doses-da-vacina-contra-mpox-saiba-quem-pode-receber"
       },
       {
-        "titulo": "SP ganha novas doses da vacina contra a mpox; saiba quem pode receber - Agência Brasil",
-        "tipo": "disponibilidade_vacina",
-        "resumo": "SP ganha novas doses da vacina contra a mpox; saiba quem pode receber&nbsp;&nbsp;Agência Brasil",
-        "linkOficial": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQcmM2MDJIeG5QQ2ttVXJYTXlTUWZXeWFKWWJaMjREWTZQNGRELXBGZ201OEFULUVzQWJ6V0V3Ynhad2RJWjBiNDRrMnNDVjZ0SjI2eXdrVFRqaEQtVHJYZERDd1pkakJlcmRpWHFRaXZIUndVal9UVmtrN2xxTlVJcy10S2toQloxU0p5Rzg2eUZHaTVMMDNXYk1ORlZBMTBDRl9JSjIxbW1ObTJGYXRUMDdWNjlOTTFCaW9Jc19uaw?oc=5"
-      },
-      {
-        "titulo": "Ministério da Saúde envia ao município do Rio mais mil frascos de vacina contra mpox - Governo Federal",
-        "tipo": "disponibilidade_vacina",
-        "resumo": "Ministério da Saúde envia ao município do Rio mais mil frascos de vacina contra mpox&nbsp;&nbsp;Governo Federal",
-        "linkOficial": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQbl9qdXR0TUdTNkZIT2JIU0dOeEd5Y1VDSE5YZ0pZaGhHWTVWNFFtMEdYS2pDQXFTWURiRkh4TEdHaHd5Z19tWDRtSmYtRnBhR0VFZkJLNWdua1U0WUUta2RER0Vma25vV0lkb3RDNU1pdG5UU0ZUNER2WHM1dFRNdFhjUE1uQTJNeFNkTl9WSHR2YzVVTl9naVJJSDRIZFFvNnZxY3JuOFAwRklNdGVLZlFjXzZJbFU2cWxnMUVEcEhaNUkxQ2w0cVoxZE1OSDFiOFpuNGtobHphVllkNVhsTw?oc=5"
-      },
-      {
-        "titulo": "Estado de São Paulo começa a aplicar vacina contra mpox; saiba quem pode receber - Folha de S.Paulo",
-        "tipo": "disponibilidade_vacina",
-        "resumo": "Estado de São Paulo começa a aplicar vacina contra mpox; saiba quem pode receber&nbsp;&nbsp;Folha de S.Paulo",
-        "linkOficial": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNeDd1bEdoVFJQN1Y4OWFvZ3R2SVVhQ1drNk5WWmFQelgxenJkQTFLdlFNaC1WamlROVFsX192WF9KdFljNkdUN0t5UTNWeVFLa2hSSFo5NXQtcGRpaC1fbnB4Q0lLelBYQUNtMjJJYjJaaXFuTmJkdnN4YWpBRmkwcVhhT29jQ0dVTmlpN09JbTlqN1BPcUVPN1NUaGdPa3l0OVEtNmFOMnVqWnhUTmNNdjlORnM4Mnl6SDhqR1ZHSmRyNHpvTHN2cDBEbk9YNFZCLUNKMm54ZFR6Nkk?oc=5"
-      },
-      {
-        "titulo": "São Paulo recebe mil novas doses da vacina contra a Mpox - agenciasp.sp.gov.br",
-        "tipo": "disponibilidade_vacina",
-        "resumo": "São Paulo recebe mil novas doses da vacina contra a Mpox&nbsp;&nbsp;agenciasp.sp.gov.br",
-        "linkOficial": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNSkYzc1Jsbm1KZFk2TXJxYVhJVGd6YmpGZEktc05fWU9weXYtcDFzTGJScFI1SGh6bC1OSWt6VFhqNlJsWlZ0SzhTZFJDVzZTMWJyV0NNcDFJcmpYblpBZVJKV0NJcnJrX3lybjVsVERZdDllWl9sNHFlanpwSXhySFo0MVo5bXhRMGt6OHJzVGFBaEp0T29sS2lsRQ?oc=5"
+        "titulo": "Alerta epidemiológico de disparada de casos de Mpox em SP e avanço no DF",
+        "tipo": "nota_tecnica",
+        "resumo": "Vigilância Epidemiológica reporta mais de 600 casos em novembro no território nacional, com expressivo aumento nas regiões metropolitanas de SP, interior paulista (Botucatu) e quase duplicação de registros recentes no Distrito Federal.",
+        "linkOficial": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOQkFMS0NvSXpWa2NUdE1FVVRDLTZVMlk5aUhjZzFhUU1RMmIwTy1NeW1nci1pYUNKNGk5NG1KLWtjNUg1ZkcwTHpoYWt6QldTREwyUlkyRDYtTUEwVmNfa3g2TlFZSzJvR2h5dmlUVUwtNEhqQW5yQXlxREU5cFE1cjFWX21rYlpscThRdDFSZG9nZTc4SjZ6d3AxM2R4ZHY0aGoyWVlZcng1RmtmZzdLTllSMnY0UQ?oc=5"
       }
     ]
   }

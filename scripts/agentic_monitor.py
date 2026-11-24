@@ -115,84 +115,84 @@ def analyze_with_gemini(items, api_key):
     Envia as notícias coletadas para a API do Google Gemini para classificação agéntica estruturada.
     """
     print("🧠 [Agente] Invocando Google Gemini API para análise de impacto...")
-    # Modelos suportados pela Gemini API
     model_name = os.environ.get("GEMINI_MODEL", "gemini-3.8-flash")
     url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={api_key}"
 
-    # Priorizar e filtrar notícias com foco operacional de vacinação e municípios
+    # Carregar a base oficial completa de postos para passar contexto integral ao Agente
+    sites_json_path = os.path.join(os.path.dirname(__file__), "..", "public", "data", "vaccination_sites.json")
+    known_sites = []
+    if os.path.exists(sites_json_path):
+        try:
+            with open(sites_json_path, "r", encoding="utf-8") as f:
+                raw_sites = json.load(f)
+                known_sites = [{"id": s["id"], "uf": s["uf"], "municipio": s["municipio"], "nomeUnidade": s["nomeUnidade"], "statusAtual": s.get("statusEstoque", "em_abastecimento")} for s in raw_sites]
+        except Exception:
+            pass
+
+    # Priorizar e reter todas as notícias operacionais de vacinação sem corte arbitrário (até 60 itens)
     prioritized_items = []
     other_items = []
-    vaccine_terms = ["vacina", "doses", "super centro", "botafogo", "lote", "crie", "esgotou", "suspensa", "apenas", "pbh", "sms-rio", "saudeprefsp"]
+    vaccine_terms = ["vacina", "doses", "super centro", "lote", "crie", "esgotou", "suspensa", "polo", "hub", "partenon", "santa marta", "cevaa", "sms", "ses"]
     for it in items:
         t = f"{it.get('titulo', '')} {it.get('resumo', '')}".lower()
         if any(w in t for w in vaccine_terms):
             prioritized_items.append(it)
         else:
             other_items.append(it)
-    selected_items = (prioritized_items + other_items)[:25]
+    # Ordenar notícias cronologicamente (da mais recente para a mais antiga)
+    def parse_item_date(it):
+        raw = it.get("data", "")
+        if not raw:
+            return datetime.min
+        try:
+            from email.utils import parsedate_to_datetime
+            return parsedate_to_datetime(raw)
+        except Exception:
+            return datetime.min
+
+    selected_items = sorted(prioritized_items + other_items, key=parse_item_date, reverse=True)[:60]
 
     prompt = f"""
-Você é o Agente de Vigilância Epidemiológica da plataforma pública MPOX Brasil (https://mpox-tracker-br.web.app).
-Analise com rigor factual a seguinte lista de notícias, comunicados e matérias sobre mpox coletadas hoje ({datetime.now().strftime('%d/%m/%Y')}):
+Você é o Agente Autônomo de Vigilância Epidemiológica da plataforma oficial MPOX Brasil (https://mpox-tracker-br.web.app).
+Analise com rigor factual as seguintes notícias, comunicados e matérias sobre mpox coletadas em tempo real ({datetime.now().strftime('%d/%m/%Y')}):
 
+NOTÍCIAS COLETADAS:
 {json.dumps(selected_items, ensure_ascii=False, indent=2)}
 
-Sua tarefa é extrair e produzir um objeto JSON estritamente válido.
-IMPORTANTE SOBRE UNIDADES, ELEGIBILIDADE E FONTES:
-1. EXPLICITUDE DE DESTINAÇÃO: A notícia ou comunicado oficial DEVE mencionar explicitamente o nome ou local da unidade para onde as doses foram enviadas antes de alterar qualquer status para 'disponivel'.
-   - NUNCA assuma que uma remessa enviada ao Estado ou Município abastece automaticamente todos os postos.
-   - Se uma notícia cita apenas "Estado recebe lote" ou "Prefeitura recebe doses", NÃO marque todas as unidades como 'disponivel'. Registre apenas as unidades citadas nominalmente.
-2. POLÍTICA DE CENTRALIZAÇÃO DO RIO DE JANEIRO:
-   - A SMS-Rio centralizou as doses no Super Centro de Botafogo ('rj-2').
-   - Os centros Nova América ('rj-3') e Campo Grande ('rj-4') NÃO devem ser alterados para 'disponivel' a menos que o comunicado da SMS-Rio afirme expressamente a reabertura/retomada de vacinação nessas unidades específicas.
-3. PRESERVAÇÃO DE FONTES OFICIAIS:
-   - Forneça sempre o link direto oficial do órgão ou notícia.
-   - NUNCA utilize links transitórios de agregadores como 'news.google.com'.
-Ids de referência conhecidas:
-- 'rj-1': CRIE / INI / Fiocruz
-- 'rj-2': Super Centro Carioca de Vacinação — Botafogo
-- 'rj-3': Super Centro Carioca de Vacinação — Zona Norte (Shopping Nova América)
-- 'rj-4': Super Centro Carioca de Vacinação — Zona Oeste (ParkShopping Campo Grande)
-- 'rj-5': CEVAA (Dr. Álvaro Aguiar)
-- 'sp-1': CRT DST/Aids-SP
-- 'sp-2': CTA Henfil
-- 'sp-3': SAE Campos Elíseos
-- 'sp-4': CRIE HC / Emílio Ribas
-- 'sp-5': SAE Lapa
-- 'sp-6': Centro de Referência Campinas
-- 'mg-1': Hospital Eduardo de Menezes
-- 'mg-2': URS Centro-Sul
-- 'mg-3': CTA/SAE Sagrada Família
-- 'mg-4': CTR Orestes Diniz
-- 'mg-5': CRIE Hospital Odilon Behrens
-- 'ce-1': CRIE Ceará (Hospital São José)
-- 'df-1': CRIE DF (HUB / UnB)
-- 'df-2': Hospital Dia da Asa Sul
-- 'sc-1': CRIE Santa Catarina (Hospital Nereu Ramos)
-- 'pr-1': CRIE Paraná (CHC / UFPR)
-- 'pr-2': COA Curitiba
-- 'rs-1': CRIE Rio Grande do Sul (Sanatório Partenon)
-- 'rs-2': Centro de Saúde Santa Marta
-- 'pe-1': CRIE Pernambuco (HUOC / UPE)
-- 'pe-2': Policlínica Gouveia de Barros
-- 'ro-1': CRIE Rondônia (CEMETRON)
+CATÁLOGO OFICIAL DE CENTROS DE VACINAÇÃO MONITORDADOS:
+{json.dumps(known_sites, ensure_ascii=False, indent=2)}
+
+DIRETRIZES AGÉNTICAS DE AVALIAÇÃO:
+1. ORDEM CRONOLÓGICA E ESTADO MAIS RECENTE:
+   - As notícias estão ordenadas da MAIS RECENTE para a mais antiga.
+   - Em caso de comunicados conflitantes sobre a mesma cidade ou unidade ao longo do dia, o fato noticiado no horário mais recente PREVALECE.
+   - Exemplo: se no início do dia foi anunciado que as vacinas seguiam disponíveis em um polo concentrado, mas horas depois a Secretaria de Saúde ou a imprensa noticiou que as doses acabaram/esgotaram e os postos pararam, o status final é 'esgotado'.
+2. DECISÃO DINÂMICA E SEM REGRAS FIXAS:
+   - Determine com base puramente nas notícias e comunicados se houve alteração real de disponibilidade em algum centro específico.
+   - Uma unidade passa a 'disponivel', 'esgotado', 'em_abastecimento' ou 'previsto' de acordo com as informações factuais vigentes mais recentes.
+   - Se um comunicado oficial (ex: prefeitura ou secretaria) afirma que a vacinação está ativa/retomada ou suspensa/esgotada em determinado polo, mapeie diretamente para a id correspondente do centro.
+3. EXPLICITUDE DE DESTINAÇÃO:
+   - Apenas reporte alteração de status para centros onde a notícia fornece evidência direta (nominal, regional ou por comunicado de órgão responsável).
+   - Se uma notícia é puramente genérica sem especificar unidades, não invente alterações individuais.
+4. PRESERVAÇÃO DE FONTES:
+   - Identifique e aponte o link da fonte oficial que comprova o fato. Evite links de agregadores quando houver fonte institucional direta.
 
 Estrutura JSON esperada:
 {{
   "alteracoesEstoque": [
     {{
-      "siteId": "id específica do centro (ex: 'rj-2', 'rj-3') ou vazio se não identificado",
-      "unidade": "nome da unidade individual",
-      "uf": "RJ, SP, MG, etc.",
-      "statusEstoque": "esgotado" | "disponivel" | "em_abastecimento" | "previsto",
-      "motivo": "resumo de 1 frase justificando com base no comunicado oficial",
-      "previsaoFutura": "previsão de datas, chegada de lotes futuros ou ampliação de grupos elegíveis",
-      "fonte": "nome da fonte ou link"
+      "siteId": "id exata do catálogo correspondente (ex: 'rj-1', 'rj-2', 'df-1', 'rs-1', etc.)",
+      "unidade": "nome da unidade correspondente",
+      "uf": "UF",
+      "statusEstoque": "disponivel" | "esgotado" | "em_abastecimento" | "previsto",
+      "motivo": "justificativa sucinta baseada estritamente no comunicado/notícia",
+      "previsaoFutura": "previsão de reposição, próximos lotes ou grupos elegíveis",
+      "fonte": "URL oficial ou nome da fonte"
     }}
   ],
   "novosMarcos": [
     {{
-      "titulo": "título do marco (apenas se for política pública ou fato histórico novo)",
+      "titulo": "título do marco",
       "dataEstimada": "YYYY-MM ou semana",
       "categoria": "vacina" | "vigilancia" | "clinica",
       "descricao": "resumo do marco"
@@ -208,7 +208,7 @@ Estrutura JSON esperada:
   ]
 }}
 
-Responda APENAS com o JSON puro, sem blocos markdown ou explicações adicionais.
+Responda APENAS com o JSON puro, sem blocos markdown ou texto explicativo.
 """
 
     payload = {
@@ -243,164 +243,75 @@ Responda APENAS com o JSON puro, sem blocos markdown ou explicações adicionais
 
 def fallback_heuristic_analysis(items):
     """
-    Fallback heurístico executado quando não houver chave GEMINI_API_KEY ou ocorrer falha de rede.
-    Analisa comunicados oficiais de forma bidirecional (detecção tanto de esgotamento quanto de reposição/novos lotes).
+    Análise de contingência sem regras fixas de cidade/unidade.
+    Realiza mapeamento dinâmico entre o catálogo oficial de postos e os comunicados recebidos.
     """
-    print("⚙️ [Agente] Executando análise heurística bidirecional baseada em regras...")
+    print("⚙️ [Agente] Executando correspondência dinâmica entre catálogo oficial e notícias...")
     alteracoes = []
     alertas = []
 
-    for it in items:
-        texto = f"{it['titulo']} {it['resumo']}".lower()
+    # Carregar catálogo oficial para correspondência dinâmica agéntica
+    sites_json_path = os.path.join(os.path.dirname(__file__), "..", "public", "data", "vaccination_sites.json")
+    known_sites = []
+    if os.path.exists(sites_json_path):
+        try:
+            with open(sites_json_path, "r", encoding="utf-8") as f:
+                known_sites = json.load(f)
+        except Exception:
+            pass
 
-        # Palavras-chave indicativas de abastecimento e esgotamento
+    for it in items:
+        texto = f"{it.get('titulo', '')} {it.get('resumo', '')}".lower()
+
         is_reabastecimento = any(p in texto for p in [
             "reabastece", "reabastecimento", "novas doses", "novo lote", "mais mil",
-            "retoma", "retomou", "amplia", "ampliação", "recebe mil", "chegada", "reforço de doses"
+            "retoma", "retomou", "amplia", "ampliação", "recebe mil", "chegada", "reforço de doses", "começa vacinação", "inicia vacinação"
         ])
         is_esgotamento = any(p in texto for p in [
-            "esgotou", "esgotado", "acabou", "terminou", "fila", "alta procura", "sem doses", "falta de doses"
+            "esgotou", "esgotado", "acabou", "terminou", "fila", "alta procura", "sem doses", "falta de doses", "suspensa"
         ])
 
-        # 1. Rio de Janeiro (Detecção individual e específica por Centro)
-        if any(term in texto for term in ["super centro", "botafogo", "nova américa", "campo grande", "rio de janeiro", "sms-rio", "município do rio"]):
-            # Caso 1.1: Disponibilidade explícita em Botafogo / Suspensão ou centralização nos outros centros
-            if ("apenas" in texto and "botafogo" in texto) or ("centralizada" in texto and "botafogo" in texto):
-                alteracoes.append({
-                    "siteId": "rj-2",
-                    "unidade": "Super Centro Carioca de Vacinação — Botafogo",
-                    "uf": "RJ",
-                    "statusEstoque": "disponivel",
-                    "motivo": "Vacinação ativa e centralizada pela SMS-Rio na unidade Botafogo (08h às 22h).",
-                    "previsaoFutura": "Atendimento mantido para o público prioritário enquanto durarem os frascos da cota recebida.",
-                    "fonte": "https://prefeitura.rio/saude/vacina-contra-mpox-segue-disponivel-apenas-no-super-centro-de-botafogo/"
-                })
-                alteracoes.append({
-                    "siteId": "rj-3",
-                    "unidade": "Super Centro Carioca de Vacinação — Zona Norte (Shopping Nova América)",
-                    "uf": "RJ",
-                    "statusEstoque": "esgotado",
-                    "motivo": "Aplicação temporariamente descontinuada na unidade, com doses restantes centralizadas no Super Centro de Botafogo.",
-                    "previsaoFutura": "Reabertura e descentralização dependem do repasse de novos lotes pelo Ministério da Saúde.",
-                    "fonte": "https://prefeitura.rio/saude/vacina-contra-mpox-segue-disponivel-apenas-no-super-centro-de-botafogo/"
-                })
-                alteracoes.append({
-                    "siteId": "rj-4",
-                    "unidade": "Super Centro Carioca de Vacinação — Zona Oeste (ParkShopping Campo Grande)",
-                    "uf": "RJ",
-                    "statusEstoque": "esgotado",
-                    "motivo": "Serviço suspenso no polo regional, com imunização restrita à unidade de Botafogo.",
-                    "previsaoFutura": "Aguardando envio de quantitativo adicional de doses para retomada do ponto na Zona Oeste.",
-                    "fonte": "https://prefeitura.rio/saude/vacina-contra-mpox-segue-disponivel-apenas-no-super-centro-de-botafogo/"
-                })
-            elif is_reabastecimento:
-                # Se notícia menciona reabastecimento de lote federal no Rio de forma genérica,
-                # no Rio a diretriz da SMS-Rio concentra no Super Centro de Botafogo,
-                # e mantém Nova América e Campo Grande esgotados até descentralização explícita.
-                alteracoes.append({
-                    "siteId": "rj-2",
-                    "unidade": "Super Centro Carioca de Vacinação — Botafogo",
-                    "uf": "RJ",
-                    "statusEstoque": "disponivel",
-                    "motivo": "Reabastecido com novo lote federal de frascos. Vacinação ativa.",
-                    "previsaoFutura": "Atendimento mantido para o público prioritário enquanto durarem os frascos da cota recebida.",
-                    "fonte": "https://prefeitura.rio/saude/vacina-contra-mpox-segue-disponivel-apenas-no-super-centro-de-botafogo/"
-                })
-                alteracoes.append({
-                    "siteId": "rj-3",
-                    "unidade": "Super Centro Carioca de Vacinação — Zona Norte (Shopping Nova América)",
-                    "uf": "RJ",
-                    "statusEstoque": "esgotado",
-                    "motivo": "Aplicação temporariamente descontinuada na unidade, com doses centralizadas em Botafogo.",
-                    "previsaoFutura": "Reabertura e descentralização dependem do repasse de novos lotes pelo Ministério da Saúde.",
-                    "fonte": "https://prefeitura.rio/saude/vacina-contra-mpox-segue-disponivel-apenas-no-super-centro-de-botafogo/"
-                })
-                alteracoes.append({
-                    "siteId": "rj-4",
-                    "unidade": "Super Centro Carioca de Vacinação — Zona Oeste (ParkShopping Campo Grande)",
-                    "uf": "RJ",
-                    "statusEstoque": "esgotado",
-                    "motivo": "Serviço suspenso no polo regional, com doses centralizadas no Super Centro de Botafogo.",
-                    "previsaoFutura": "Aguardando envio de quantitativo adicional de doses para retomada do ponto na Zona Oeste.",
-                    "fonte": "https://prefeitura.rio/saude/vacina-contra-mpox-segue-disponivel-apenas-no-super-centro-de-botafogo/"
-                })
-            elif is_esgotamento:
-                for sid, sname in [
-                    ("rj-2", "Super Centro Carioca de Vacinação — Botafogo"),
-                    ("rj-3", "Super Centro Carioca de Vacinação — Zona Norte (Shopping Nova América)"),
-                    ("rj-4", "Super Centro Carioca de Vacinação — Zona Oeste (ParkShopping Campo Grande)")
-                ]:
+        # Busca correspondência nominal dinâmica em cada um dos centros monitorados
+        for site in known_sites:
+            s_name = site.get("nomeUnidade", "").lower()
+            s_id = site.get("id")
+            s_mun = site.get("municipio", "").lower()
+            s_uf = site.get("uf", "")
+
+            # Extrair tokens significativos do centro (ignorando stopwords comuns)
+            name_tokens = [w for w in re.split(r'[\s\(\)/—\-,]+', s_name) if len(w) > 4 and w not in ["centro", "saúde", "hospital", "unidade", "especial", "referência", "serviço"]]
+
+            # Mapeamento dinâmico: o centro é citado diretamente se algum dos seus tokens distintivos constar no texto
+            matched = any(tok in texto for tok in name_tokens)
+
+            if matched:
+                if is_esgotamento:
                     alteracoes.append({
-                        "siteId": sid,
-                        "unidade": sname,
-                        "uf": "RJ",
+                        "siteId": s_id,
+                        "unidade": site.get("nomeUnidade"),
+                        "uf": s_uf,
                         "statusEstoque": "esgotado",
-                        "motivo": "Doses temporariamente esgotadas segundo comunicados oficiais. Aguardando reposição.",
-                        "previsaoFutura": "Aguardando confirmação de despacho de novo lote pelo Ministério da Saúde.",
-                        "fonte": it["link"]
+                        "motivo": f"Suspensão ou esgotamento de doses noticiado em comunicado oficial.",
+                        "previsaoFutura": "Aguardando envio e redistribuição de novos lotes pelo Ministério da Saúde.",
+                        "fonte": it.get("link")
                     })
-
-        # 2. Belo Horizonte (Hospitais e Centros de Referência por ID com menção explícita)
-        if any(term in texto for term in ["belo horizonte", "pbh"]):
-            mg_catalog = [
-                ("mg-1", "Hospital Eduardo de Menezes", ["eduardo de menezes", "fhemig"]),
-                ("mg-2", "URS Centro-Sul / Serviço de Saúde do Viajante", ["centro-sul", "viajante"]),
-                ("mg-3", "CTA / SAE Sagrada Família", ["sagrada família", "sagrada familia"]),
-                ("mg-4", "CTR Orestes Diniz", ["orestes diniz"]),
-                ("mg-5", "CRIE Hospital Odilon Behrens", ["odilon behrens", "hob"])
-            ]
-            for sid, sname, tokens in mg_catalog:
-                if any(t in texto for t in tokens):
-                    if is_reabastecimento or any(p in texto for p in ["vacina", "amplia", "doses"]):
-                        alteracoes.append({
-                            "siteId": sid,
-                            "unidade": sname,
-                            "uf": "MG",
-                            "statusEstoque": "disponivel",
-                            "motivo": f"Vacinação ativa na unidade {sname} segundo informe da PBH/SES-MG.",
-                            "previsaoFutura": "Ampliação para todas as PVHA independente de contagem de CD4.",
-                            "fonte": it["link"]
-                        })
-
-        # 3. São Paulo (SAEs e CRIEs com menção explícita)
-        if any(term in texto for term in ["são paulo", "saopaulo", "sp recebe", "cidade de sp"]):
-            sp_catalog = [
-                ("sp-1", "Centro de Referência e Treinamento DST/Aids-SP (CRT DST/Aids)", ["crt", "santa cruz"]),
-                ("sp-2", "CTA Henfil", ["henfil"]),
-                ("sp-3", "SAE Campos Elíseos", ["campos elíseos", "campos eliseos"]),
-                ("sp-4", "CRIE Hospital das Clínicas / Emílio Ribas", ["emílio ribas", "emilio ribas", "hospital das clínicas", "hc"]),
-                ("sp-5", "SAE Lapa — Paulo César Bonfim", ["lapa", "bonfim"])
-            ]
-            for sid, sname, tokens in sp_catalog:
-                if any(t in texto for t in tokens):
-                    if is_reabastecimento or any(p in texto for p in ["recebe novas doses", "mil novas doses", "distribuição"]):
-                        alteracoes.append({
-                            "siteId": sid,
-                            "unidade": sname,
-                            "uf": "SP",
-                            "statusEstoque": "disponivel",
-                            "motivo": f"Recebimento e disponibilização de doses no polo {sname}.",
-                            "previsaoFutura": "Doses de primeira aplicação ativas. Segunda dose recomendada a partir de 28 dias.",
-                            "fonte": it["link"]
-                        })
-
-        if "cevaa" in texto or "álvaro aguiar" in texto:
-            alteracoes.append({
-                "siteId": "rj-5",
-                "unidade": "Centro Especial de Vacinação Dr. Álvaro Aguiar (CEVAA)",
-                "uf": "RJ",
-                "statusEstoque": "em_abastecimento" if is_reabastecimento else "esgotado",
-                "motivo": "Processo de reabastecimento pela SMS-Rio." if is_reabastecimento else "Estoque temporariamente esgotado.",
-                "previsaoFutura": "Previsão de retorno assim que concluída a conferência interna do novo lote.",
-                "fonte": it["link"]
-            })
+                elif is_reabastecimento:
+                    alteracoes.append({
+                        "siteId": s_id,
+                        "unidade": site.get("nomeUnidade"),
+                        "uf": s_uf,
+                        "statusEstoque": "disponivel",
+                        "motivo": f"Vacinação ativa/reabastecida segundo comunicado oficial.",
+                        "previsaoFutura": "Doses ativas para os grupos prioritários elegíveis.",
+                        "fonte": it.get("link")
+                    })
 
         if "vacina" in texto:
             alertas.append({
-                "titulo": it["titulo"],
+                "titulo": it.get("titulo"),
                 "tipo": "disponibilidade_vacina",
-                "resumo": it["resumo"],
-                "linkOficial": it["link"]
+                "resumo": it.get("resumo"),
+                "linkOficial": it.get("link")
             })
 
     return {
@@ -442,58 +353,25 @@ def update_sites_and_alerts_from_report(analise, output_dir):
                 # 1. Correspondência exata por siteId (prioridade máxima e independente)
                 matches_id = alt_id and s.get("id", "").strip().lower() == alt_id
 
-                # 2. Correspondência cirúrgica por nome / UF caso não haja siteId explícito
-                matches_uf = alt_uf and s.get("uf") == alt_uf
+                # 2. Correspondência dinâmica por nome / tokens caso não haja siteId explícito
                 matches_unit = False
-                if not alt_id and matches_uf:
+                if not alt_id:
                     s_name = s.get("nomeUnidade", "").lower()
-                    # Mapeamento estrito por tokens representativos de unidade
-                    if "botafogo" in alt_unit and "botafogo" in s_name:
-                        matches_unit = True
-                    elif ("nova américa" in alt_unit or "nova america" in alt_unit) and "nova américa" in s_name:
-                        matches_unit = True
-                    elif "campo grande" in alt_unit and "campo grande" in s_name:
-                        matches_unit = True
-                    elif "cevaa" in alt_unit or "álvaro aguiar" in alt_unit:
-                        matches_unit = "álvaro aguiar" in s_name or "cevaa" in s_name
-                    elif "eduardo de menezes" in alt_unit and "eduardo de menezes" in s_name:
-                        matches_unit = True
-                    elif "sagrada família" in alt_unit and "sagrada família" in s_name:
-                        matches_unit = True
-                    elif "crt" in alt_unit and "crt" in s_name:
-                        matches_unit = True
-                    elif "henfil" in alt_unit and "henfil" in s_name:
-                        matches_unit = True
-                    elif "campos elíseos" in alt_unit and "campos elíseos" in s_name:
-                        matches_unit = True
+                    matches_uf = not alt_uf or s.get("uf") == alt_uf
+                    if matches_uf:
+                        alt_tokens = [w for w in re.split(r'[\s\(\)/—\-,]+', alt_unit) if len(w) > 4 and w not in ["centro", "saúde", "hospital", "unidade", "especial", "referência", "serviço"]]
+                        if alt_tokens and any(tok in s_name for tok in alt_tokens):
+                            matches_unit = True
 
-                # Validação de Segurança e Explicitude:
-                # Uma unidade só pode transicionar para 'disponivel' se:
-                # a) O 'motivo' ou o texto da alteração citar expressamente a unidade ou seu identificador
-                # b) Não for uma alteração genérica de estado/município
                 if matches_id or matches_unit:
-                    s_name_lower = s.get("nomeUnidade", "").lower()
-                    motivo_lower = (motivo or "").lower()
-                    unit_explicitly_mentioned = (
-                        matches_id or
-                        any(token in motivo_lower for token in [
-                            "botafogo", "nova américa", "campo grande", "cevaa", "álvaro aguiar",
-                            "eduardo de menezes", "sagrada família", "crt", "henfil", "campos elíseos",
-                            "emílio ribas", "clínicas", "lapa", "campinas", "cemetron", "huoc"
-                        ])
-                    )
-
-                    # Regra de Ouro: Notícia genérica não pode ativar 'disponivel' sem menção explícita
-                    if new_status == "disponivel" and not unit_explicitly_mentioned:
-                        print(f"ℹ️ [Validador] Ignorando status 'disponivel' para '{s.get('nomeUnidade')}' - sem menção nominal explícita no comunicado.")
-                    elif new_status and s.get("statusEstoque") != new_status:
+                    if new_status and s.get("statusEstoque") != new_status:
                         s["statusEstoque"] = new_status
                         s["dataAtualizacaoStatus"] = today_str
                         if motivo:
                             s["notaStatus"] = motivo
                         updated = True
 
-                    # Preservar URLs oficiais já verificadas contra substituição por links transitórios do Google News
+                    # Preservar URLs oficiais ou atualizar quando houver nova fonte válida
                     if fonte and fonte.startswith("http") and not ("news.google.com" in fonte) and s.get("fonteStatus") != fonte:
                         s["fonteStatus"] = fonte
                         updated = True
