@@ -278,11 +278,18 @@ def fallback_heuristic_analysis(items):
             s_mun = site.get("municipio", "").lower()
             s_uf = site.get("uf", "")
 
-            # Extrair tokens significativos do centro (ignorando stopwords comuns)
-            name_tokens = [w for w in re.split(r'[\s\(\)/—\-,]+', s_name) if len(w) > 4 and w not in ["centro", "saúde", "hospital", "unidade", "especial", "referência", "serviço"]]
+            # Extrair tokens distintivos do centro (eliminando termos administrativos e conectivos genéricos)
+            generic_words = {
+                "centro", "saúde", "saude", "hospital", "unidade", "especial", "especiais", "referência", "referencia",
+                "serviço", "servico", "vacinação", "vacinacao", "sala", "posto", "atendimento", "ambulatorio",
+                "policlinica", "instituto", "super", "carioca", "zona", "norte", "oeste", "leste", "sul",
+                "região", "regiao", "shopping", "geral", "municipal", "estadual", "federal", "público", "publico",
+                "para", "com", "sem", "por", "dos", "das", "pelas", "pelos", "sobre", "entre", "imunobiológicos", "imunobiologicos"
+            }
+            name_tokens = [w for w in re.split(r'[\s\(\)/—\-,]+', s_name) if len(w) > 3 and w not in generic_words]
 
             # Mapeamento dinâmico: o centro é citado diretamente se algum dos seus tokens distintivos constar no texto
-            matched = any(tok in texto for tok in name_tokens)
+            matched = len(name_tokens) > 0 and any(tok in texto for tok in name_tokens)
 
             if matched:
                 if is_esgotamento:
@@ -359,7 +366,14 @@ def update_sites_and_alerts_from_report(analise, output_dir):
                     s_name = s.get("nomeUnidade", "").lower()
                     matches_uf = not alt_uf or s.get("uf") == alt_uf
                     if matches_uf:
-                        alt_tokens = [w for w in re.split(r'[\s\(\)/—\-,]+', alt_unit) if len(w) > 4 and w not in ["centro", "saúde", "hospital", "unidade", "especial", "referência", "serviço"]]
+                        generic_words = {
+                            "centro", "saúde", "saude", "hospital", "unidade", "especial", "especiais", "referência", "referencia",
+                            "serviço", "servico", "vacinação", "vacinacao", "sala", "posto", "atendimento", "ambulatorio",
+                            "policlinica", "instituto", "super", "carioca", "zona", "norte", "oeste", "leste", "sul",
+                            "região", "regiao", "shopping", "geral", "municipal", "estadual", "federal", "público", "publico",
+                            "para", "com", "sem", "por", "dos", "das", "pelas", "pelos", "sobre", "entre", "imunobiológicos", "imunobiologicos"
+                        }
+                        alt_tokens = [w for w in re.split(r'[\s\(\)/—\-,]+', alt_unit) if len(w) > 3 and w not in generic_words]
                         if alt_tokens and any(tok in s_name for tok in alt_tokens):
                             matches_unit = True
 

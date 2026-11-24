@@ -61,11 +61,11 @@ export const vaccinationSites: VaccinationSite[] = [
     agendamento: 'Livre Demanda',
     observacoes: 'Polo principal de vacinação ampliada contra Mpox no Rio de Janeiro. Aplicação para usuários de PrEP e trabalhadores expostos.',
     requisitos: 'Documento com foto, CPF, cartão SUS e receita médica ou laudo comprobatório de uso de PrEP emitido nos últimos 6 meses.',
-    statusEstoque: 'disponivel',
-    dataAtualizacaoStatus: '2026-11-19',
-    notaStatus: 'Reabastecido com novo lote federal de 1.000 frascos (até 5.000 doses fracionadas). Vacinação ativa para PrEP e PVHA (CD4 < 200). Horário normalizado das 08h às 22h.',
+    statusEstoque: 'esgotado',
+    dataAtualizacaoStatus: '2026-11-23',
+    notaStatus: 'Estoque de vacinas contra mpox esgotado no polo após aplicação de cerca de 8 mil doses na capital fluminense.',
     fonteStatus: 'https://prefeitura.rio/saude/vacina-contra-mpox-segue-disponivel-apenas-no-super-centro-de-botafogo/',
-    previsaoFutura: 'Vacinação em andamento enquanto durarem os frascos do lote. Novos repasses federais previstos sob demanda da SMS-Rio.'
+    previsaoFutura: 'Aguardando envio e liberação de nova remessa de doses pelo Ministério da Saúde.'
   },
   {
     id: 'rj-3',

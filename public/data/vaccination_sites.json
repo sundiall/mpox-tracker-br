@@ -35,11 +35,11 @@
     "agendamento": "Livre Demanda",
     "observacoes": "Polo principal de vacinação ampliada contra Mpox no Rio de Janeiro. Aplicação para usuários de PrEP e trabalhadores expostos.",
     "requisitos": "Documento com foto, CPF, cartão SUS e receita médica ou laudo comprobatório de uso de PrEP emitido nos últimos 6 meses.",
-    "statusEstoque": "disponivel",
-    "dataAtualizacaoStatus": "2026-11-24",
-    "notaStatus": "Vacinação ativa/reabastecida segundo comunicado oficial.",
+    "statusEstoque": "esgotado",
+    "dataAtualizacaoStatus": "2026-11-23",
+    "notaStatus": "Esgotamento das doses no município do Rio de Janeiro após a aplicação de cerca de 8 mil imunizantes, levando à interrupção do atendimento no polo.",
     "fonteStatus": "https://prefeitura.rio/saude/vacina-contra-mpox-segue-disponivel-apenas-no-super-centro-de-botafogo/",
-    "previsaoFutura": "Doses ativas para os grupos prioritários elegíveis."
+    "previsaoFutura": "Aguardando envio e liberação de nova remessa de doses pelo Ministério da Saúde."
   },
   {
     "id": "rj-3",
@@ -56,11 +56,11 @@
     "agendamento": "Livre Demanda",
     "observacoes": "Ponto estratégico de vacinação na Zona Norte carioca para PrEP e populações prioritárias.",
     "requisitos": "Documento de identidade com foto, CPF e receita/laudo de PrEP recente (até 6 meses).",
-    "statusEstoque": "disponivel",
-    "dataAtualizacaoStatus": "2026-11-24",
-    "notaStatus": "Vacinação ativa/reabastecida segundo comunicado oficial.",
+    "statusEstoque": "esgotado",
+    "dataAtualizacaoStatus": "2026-11-23",
+    "notaStatus": "Atendimento suspenso pela Secretaria Municipal de Saúde em razão da falta de estoque de vacinas contra a mpox.",
     "fonteStatus": "https://prefeitura.rio/saude/vacina-contra-mpox-segue-disponivel-apenas-no-super-centro-de-botafogo/",
-    "previsaoFutura": "Doses ativas para os grupos prioritários elegíveis."
+    "previsaoFutura": "Retomada condicionada ao recebimento de novo lote do Ministério da Saúde."
   },
   {
     "id": "rj-4",
@@ -77,11 +77,11 @@
     "agendamento": "Livre Demanda",
     "observacoes": "Ponto de referência para a Zona Oeste para vacinação contra Mpox.",
     "requisitos": "Documento oficial com foto, cartão SUS e comprovação de PrEP (receita até 6 meses) ou indicação médica.",
-    "statusEstoque": "disponivel",
-    "dataAtualizacaoStatus": "2026-11-24",
-    "notaStatus": "Vacinação ativa/reabastecida segundo comunicado oficial.",
+    "statusEstoque": "esgotado",
+    "dataAtualizacaoStatus": "2026-11-23",
+    "notaStatus": "Aplicação suspensa pela Prefeitura do Rio de Janeiro por desabastecimento de doses do imunizante.",
     "fonteStatus": "https://prefeitura.rio/saude/vacina-contra-mpox-segue-disponivel-apenas-no-super-centro-de-botafogo/",
-    "previsaoFutura": "Doses ativas para os grupos prioritários elegíveis."
+    "previsaoFutura": "Retomada condicionada ao recebimento de novo lote do Ministério da Saúde."
   },
   {
     "id": "rj-5",
