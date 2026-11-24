@@ -256,51 +256,66 @@ def fallback_heuristic_analysis(items):
 
         # 1. Rio de Janeiro (Detecção individual e específica por Centro)
         if any(term in texto for term in ["super centro", "botafogo", "nova américa", "campo grande", "rio de janeiro", "sms-rio", "município do rio"]):
-            # Caso 1.1: Disponibilidade explícita em Botafogo / Suspensão nos outros centros
-            if "apenas" in texto and "botafogo" in texto and any(s in texto for s in ["suspensa", "esgotad", "reduzid"]):
+            # Caso 1.1: Disponibilidade explícita em Botafogo / Suspensão ou centralização nos outros centros
+            if ("apenas" in texto and "botafogo" in texto) or ("centralizada" in texto and "botafogo" in texto):
                 alteracoes.append({
                     "siteId": "rj-2",
                     "unidade": "Super Centro Carioca de Vacinação — Botafogo",
                     "uf": "RJ",
                     "statusEstoque": "disponivel",
                     "motivo": "Vacinação ativa e centralizada pela SMS-Rio na unidade Botafogo (08h às 22h).",
-                    "previsaoFutura": "Doses mantidas ativas para PrEP e PVHA (CD4 < 200). Aguardando novas remessas complementares do Ministério da Saúde.",
-                    "fonte": it["link"]
+                    "previsaoFutura": "Atendimento mantido para o público prioritário enquanto durarem os frascos da cota recebida.",
+                    "fonte": "https://prefeitura.rio/saude/vacina-contra-mpox-segue-disponivel-apenas-no-super-centro-de-botafogo/"
                 })
                 alteracoes.append({
                     "siteId": "rj-3",
                     "unidade": "Super Centro Carioca de Vacinação — Zona Norte (Shopping Nova América)",
                     "uf": "RJ",
                     "statusEstoque": "esgotado",
-                    "motivo": "Aplicação temporariamente suspensa pela SMS-Rio devido à redução de estoques municipais.",
-                    "previsaoFutura": "Previsão de retomada após chegada e distribuição de novos lotes federais pelo Ministério da Saúde.",
-                    "fonte": it["link"]
+                    "motivo": "Aplicação temporariamente descontinuada na unidade, com doses restantes centralizadas no Super Centro de Botafogo.",
+                    "previsaoFutura": "Reabertura e descentralização dependem do repasse de novos lotes pelo Ministério da Saúde.",
+                    "fonte": "https://prefeitura.rio/saude/vacina-contra-mpox-segue-disponivel-apenas-no-super-centro-de-botafogo/"
                 })
                 alteracoes.append({
                     "siteId": "rj-4",
                     "unidade": "Super Centro Carioca de Vacinação — Zona Oeste (ParkShopping Campo Grande)",
                     "uf": "RJ",
                     "statusEstoque": "esgotado",
-                    "motivo": "Aplicação temporariamente suspensa pela SMS-Rio devido à redução de estoques municipais.",
-                    "previsaoFutura": "Previsão de retomada após chegada e distribuição de novos lotes federais pelo Ministério da Saúde.",
-                    "fonte": it["link"]
+                    "motivo": "Serviço suspenso no polo regional, com imunização restrita à unidade de Botafogo.",
+                    "previsaoFutura": "Aguardando envio de quantitativo adicional de doses para retomada do ponto na Zona Oeste.",
+                    "fonte": "https://prefeitura.rio/saude/vacina-contra-mpox-segue-disponivel-apenas-no-super-centro-de-botafogo/"
                 })
             elif is_reabastecimento:
-                # Reabastecimento geral
-                for sid, sname in [
-                    ("rj-2", "Super Centro Carioca de Vacinação — Botafogo"),
-                    ("rj-3", "Super Centro Carioca de Vacinação — Zona Norte (Shopping Nova América)"),
-                    ("rj-4", "Super Centro Carioca de Vacinação — Zona Oeste (ParkShopping Campo Grande)")
-                ]:
-                    alteracoes.append({
-                        "siteId": sid,
-                        "unidade": sname,
-                        "uf": "RJ",
-                        "statusEstoque": "disponivel",
-                        "motivo": "Reabastecido com novo lote de frascos enviado pelo Ministério da Saúde. Vacinação ativa.",
-                        "previsaoFutura": "Vacinação ativa enquanto durar o lote repassado pelo Ministério da Saúde.",
-                        "fonte": it["link"]
-                    })
+                # Se notícia menciona reabastecimento de lote federal no Rio de forma genérica,
+                # no Rio a diretriz da SMS-Rio concentra no Super Centro de Botafogo,
+                # e mantém Nova América e Campo Grande esgotados até descentralização explícita.
+                alteracoes.append({
+                    "siteId": "rj-2",
+                    "unidade": "Super Centro Carioca de Vacinação — Botafogo",
+                    "uf": "RJ",
+                    "statusEstoque": "disponivel",
+                    "motivo": "Reabastecido com novo lote federal de frascos. Vacinação ativa.",
+                    "previsaoFutura": "Atendimento mantido para o público prioritário enquanto durarem os frascos da cota recebida.",
+                    "fonte": "https://prefeitura.rio/saude/vacina-contra-mpox-segue-disponivel-apenas-no-super-centro-de-botafogo/"
+                })
+                alteracoes.append({
+                    "siteId": "rj-3",
+                    "unidade": "Super Centro Carioca de Vacinação — Zona Norte (Shopping Nova América)",
+                    "uf": "RJ",
+                    "statusEstoque": "esgotado",
+                    "motivo": "Aplicação temporariamente descontinuada na unidade, com doses centralizadas em Botafogo.",
+                    "previsaoFutura": "Reabertura e descentralização dependem do repasse de novos lotes pelo Ministério da Saúde.",
+                    "fonte": "https://prefeitura.rio/saude/vacina-contra-mpox-segue-disponivel-apenas-no-super-centro-de-botafogo/"
+                })
+                alteracoes.append({
+                    "siteId": "rj-4",
+                    "unidade": "Super Centro Carioca de Vacinação — Zona Oeste (ParkShopping Campo Grande)",
+                    "uf": "RJ",
+                    "statusEstoque": "esgotado",
+                    "motivo": "Serviço suspenso no polo regional, com doses centralizadas no Super Centro de Botafogo.",
+                    "previsaoFutura": "Aguardando envio de quantitativo adicional de doses para retomada do ponto na Zona Oeste.",
+                    "fonte": "https://prefeitura.rio/saude/vacina-contra-mpox-segue-disponivel-apenas-no-super-centro-de-botafogo/"
+                })
             elif is_esgotamento:
                 for sid, sname in [
                     ("rj-2", "Super Centro Carioca de Vacinação — Botafogo"),
@@ -447,7 +462,8 @@ def update_sites_and_alerts_from_report(analise, output_dir):
                         if motivo:
                             s["notaStatus"] = motivo
                         updated = True
-                    if fonte and fonte.startswith("http") and s.get("fonteStatus") != fonte:
+                    # Preservar URLs oficiais já verificadas contra substituição por links transitórios do Google News
+                    if fonte and fonte.startswith("http") and not ("news.google.com" in fonte) and s.get("fonteStatus") != fonte:
                         s["fonteStatus"] = fonte
                         updated = True
                     if previsao and s.get("previsaoFutura") != previsao:

@@ -39,7 +39,7 @@
     "dataAtualizacaoStatus": "2026-11-19",
     "notaStatus": "Reabastecido com novo lote federal de 1.000 frascos (até 5.000 doses fracionadas). Vacinação ativa para PrEP e PVHA (CD4 < 200). Horário normalizado das 08h às 22h.",
     "fonteStatus": "https://prefeitura.rio/saude/vacina-contra-mpox-segue-disponivel-apenas-no-super-centro-de-botafogo/",
-    "previsaoFutura": "Vacinação ativa enquanto durar o lote repassado pelo Ministério da Saúde."
+    "previsaoFutura": "Ministério da Saúde enviou remessa emergencial de 1.000 frascos para reabastecimento municipal."
   },
   {
     "id": "rj-3",
@@ -56,11 +56,11 @@
     "agendamento": "Livre Demanda",
     "observacoes": "Ponto estratégico de vacinação na Zona Norte carioca para PrEP e populações prioritárias.",
     "requisitos": "Documento de identidade com foto, CPF e receita/laudo de PrEP recente (até 6 meses).",
-    "statusEstoque": "disponivel",
-    "dataAtualizacaoStatus": "2026-11-24",
-    "notaStatus": "Reabastecido com novo lote de frascos enviado pelo Ministério da Saúde. Vacinação ativa.",
+    "statusEstoque": "esgotado",
+    "dataAtualizacaoStatus": "2026-11-23",
+    "notaStatus": "Aplicação suspensa temporariamente devido ao término total das doses disponíveis.",
     "fonteStatus": "https://prefeitura.rio/saude/vacina-contra-mpox-segue-disponivel-apenas-no-super-centro-de-botafogo/",
-    "previsaoFutura": "Vacinação ativa enquanto durar o lote repassado pelo Ministério da Saúde."
+    "previsaoFutura": "Aguardando redistribuição interna do novo lote de 1.000 frascos enviado pelo Ministério da Saúde."
   },
   {
     "id": "rj-4",
@@ -77,11 +77,11 @@
     "agendamento": "Livre Demanda",
     "observacoes": "Ponto de referência para a Zona Oeste para vacinação contra Mpox.",
     "requisitos": "Documento oficial com foto, cartão SUS e comprovação de PrEP (receita até 6 meses) ou indicação médica.",
-    "statusEstoque": "disponivel",
-    "dataAtualizacaoStatus": "2026-11-24",
-    "notaStatus": "Reabastecido com novo lote de frascos enviado pelo Ministério da Saúde. Vacinação ativa.",
+    "statusEstoque": "esgotado",
+    "dataAtualizacaoStatus": "2026-11-23",
+    "notaStatus": "Atendimento suspenso após o término das doses alocadas à unidade.",
     "fonteStatus": "https://prefeitura.rio/saude/vacina-contra-mpox-segue-disponivel-apenas-no-super-centro-de-botafogo/",
-    "previsaoFutura": "Vacinação ativa enquanto durar o lote repassado pelo Ministério da Saúde."
+    "previsaoFutura": "Previsão de retomada com o repasse das novas doses federais recebidas pelo município."
   },
   {
     "id": "rj-5",
@@ -123,7 +123,7 @@
     "dataAtualizacaoStatus": "2026-11-24",
     "notaStatus": "Recebimento e distribuição de novo lote de doses da vacina MVA-BN aos SAEs e CRIEs.",
     "fonteStatus": "https://www.agenciasp.sp.gov.br/saude/sao-paulo-recebe-mil-novas-doses-da-vacina-contra-a-mpox/",
-    "previsaoFutura": "Doses de primeira aplicação ativas. Segunda dose recomendada a partir de 28 dias."
+    "previsaoFutura": "Atendimento direcionado aos grupos prioritários vigentes estabelecidos pelo Ministério da Saúde."
   },
   {
     "id": "sp-2",
