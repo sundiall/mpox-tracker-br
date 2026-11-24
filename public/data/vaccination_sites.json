@@ -14,11 +14,11 @@
     "agendamento": "Livre Demanda",
     "observacoes": "Centro nacional de referência em infectologia. Aplicação para usuários de PrEP, PVHA (CD4 < 200), pós-exposição e trabalhadores expostos.",
     "requisitos": "Documento oficial com foto, cartão SUS e laudo/receita de PrEP (até 6 meses), exame CD4 ou comprovação de contato.",
-    "statusEstoque": "disponivel",
-    "dataAtualizacaoStatus": "2026-11-24",
-    "notaStatus": "Vacinação ativa/reabastecida segundo comunicado oficial.",
+    "statusEstoque": "esgotado",
+    "dataAtualizacaoStatus": "2026-11-23",
+    "notaStatus": "Notícias recentes confirmam que a vacina contra mpox acabou no Rio de Janeiro após o uso de cerca de 8 mil doses e os postos pararam.",
     "fonteStatus": "https://www.ini.fiocruz.br/ini-fiocruz-e-a-unidade-de-referencia-para-atendimento-de-casos-de-mpox-com-atendimento-24h-todos-os-dias/",
-    "previsaoFutura": "Doses ativas para os grupos prioritários elegíveis."
+    "previsaoFutura": "Aguardando nova remessa do Ministério da Saúde para reposição nos postos cariocas."
   },
   {
     "id": "rj-2",
@@ -35,11 +35,11 @@
     "agendamento": "Livre Demanda",
     "observacoes": "Polo principal de vacinação ampliada contra Mpox no Rio de Janeiro. Aplicação para usuários de PrEP e trabalhadores expostos.",
     "requisitos": "Documento com foto, CPF, cartão SUS e receita médica ou laudo comprobatório de uso de PrEP emitido nos últimos 6 meses.",
-    "statusEstoque": "disponivel",
-    "dataAtualizacaoStatus": "2026-11-24",
-    "notaStatus": "Vacinação ativa/reabastecida segundo comunicado oficial.",
+    "statusEstoque": "esgotado",
+    "dataAtualizacaoStatus": "2026-11-23",
+    "notaStatus": "Esgotamento total das doses no município do Rio de Janeiro relatado em boletins recentes, com paralisação geral dos postos.",
     "fonteStatus": "https://prefeitura.rio/saude/vacina-contra-mpox-segue-disponivel-apenas-no-super-centro-de-botafogo/",
-    "previsaoFutura": "Doses ativas para os grupos prioritários elegíveis."
+    "previsaoFutura": "Novos lotes previstos após distribuição de novas remessas pelo Ministério da Saúde."
   },
   {
     "id": "rj-3",
@@ -56,11 +56,11 @@
     "agendamento": "Livre Demanda",
     "observacoes": "Ponto estratégico de vacinação na Zona Norte carioca para PrEP e populações prioritárias.",
     "requisitos": "Documento de identidade com foto, CPF e receita/laudo de PrEP recente (até 6 meses).",
-    "statusEstoque": "disponivel",
-    "dataAtualizacaoStatus": "2026-11-24",
-    "notaStatus": "Vacinação ativa/reabastecida segundo comunicado oficial.",
+    "statusEstoque": "esgotado",
+    "dataAtualizacaoStatus": "2026-11-23",
+    "notaStatus": "Esgotamento geral das doses de vacina contra mpox na cidade do Rio de Janeiro.",
     "fonteStatus": "https://prefeitura.rio/saude/vacina-contra-mpox-segue-disponivel-apenas-no-super-centro-de-botafogo/",
-    "previsaoFutura": "Doses ativas para os grupos prioritários elegíveis."
+    "previsaoFutura": "Sem previsão imediata até novo envio federal."
   },
   {
     "id": "rj-4",
@@ -77,11 +77,11 @@
     "agendamento": "Livre Demanda",
     "observacoes": "Ponto de referência para a Zona Oeste para vacinação contra Mpox.",
     "requisitos": "Documento oficial com foto, cartão SUS e comprovação de PrEP (receita até 6 meses) ou indicação médica.",
-    "statusEstoque": "disponivel",
-    "dataAtualizacaoStatus": "2026-11-24",
-    "notaStatus": "Vacinação ativa/reabastecida segundo comunicado oficial.",
+    "statusEstoque": "esgotado",
+    "dataAtualizacaoStatus": "2026-11-23",
+    "notaStatus": "Paralisação geral da vacinação por esgotamento de estoque no município do Rio.",
     "fonteStatus": "https://prefeitura.rio/saude/vacina-contra-mpox-segue-disponivel-apenas-no-super-centro-de-botafogo/",
-    "previsaoFutura": "Doses ativas para os grupos prioritários elegíveis."
+    "previsaoFutura": "Aguardando novas remessas do Ministério da Saúde."
   },
   {
     "id": "rj-5",
@@ -123,7 +123,7 @@
     "dataAtualizacaoStatus": "2026-11-24",
     "notaStatus": "Recebimento e distribuição de novo lote de doses da vacina MVA-BN aos SAEs e CRIEs.",
     "fonteStatus": "https://www.agenciasp.sp.gov.br/saude/sao-paulo-recebe-mil-novas-doses-da-vacina-contra-a-mpox/",
-    "previsaoFutura": "Atendimento direcionado aos grupos prioritários vigentes estabelecidos pelo Ministério da Saúde."
+    "previsaoFutura": "Atendimento aos grupos prioritários conforme novas entregas."
   },
   {
     "id": "sp-2",

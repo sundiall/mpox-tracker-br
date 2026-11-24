@@ -115,7 +115,7 @@ def analyze_with_gemini(items, api_key):
     Envia as notícias coletadas para a API do Google Gemini para classificação agéntica estruturada.
     """
     print("🧠 [Agente] Invocando Google Gemini API para análise de impacto...")
-    model_name = os.environ.get("GEMINI_MODEL", "gemini-3.8-flash")
+    model_name = os.environ.get("GEMINI_MODEL", "gemini-3.5-flash-lite")
     url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={api_key}"
 
     # Carregar a base oficial completa de postos para passar contexto integral ao Agente
@@ -166,15 +166,15 @@ DIRETRIZES AGÉNTICAS DE AVALIAÇÃO:
 1. ORDEM CRONOLÓGICA E ESTADO MAIS RECENTE:
    - As notícias estão ordenadas da MAIS RECENTE para a mais antiga.
    - Em caso de comunicados conflitantes sobre a mesma cidade ou unidade ao longo do dia, o fato noticiado no horário mais recente PREVALECE.
-   - Exemplo: se no início do dia foi anunciado que as vacinas seguiam disponíveis em um polo concentrado, mas horas depois a Secretaria de Saúde ou a imprensa noticiou que as doses acabaram/esgotaram e os postos pararam, o status final é 'esgotado'.
-2. DECISÃO DINÂMICA E SEM REGRAS FIXAS:
-   - Determine com base puramente nas notícias e comunicados se houve alteração real de disponibilidade em algum centro específico.
+   - Se uma notícia no início do dia informava que a vacinação estava concentrada ou restrita a um único polo (ex: 'segue disponível apenas no Super Centro de Botafogo'), mas uma notícia posterior do mesmo dia noticiou o esgotamento total das doses no município e a paralisação dos postos ('Vacina contra mpox acaba no Rio após 8 mil doses e postos param'), o status de TODOS os polos do município (incluindo Botafogo, Fiocruz, CEVAA, Nova América e Campo Grande) é 'esgotado'.
+2. ESGOTAMENTO MUNICIPAL OU REGIONAL:
+   - Quando um comunicado ou matéria factual confirma que os estoques de vacina acabaram em uma capital ou município inteiro, aplique 'esgotado' a todos os centros cadastrados naquele município que dependiam desse estoque.
+3. DECISÃO DINÂMICA E SEM REGRAS FIXAS:
+   - Determine com base puramente nas notícias e comunicados se houve alteração real de disponibilidade em centros específicos ou na rede municipal.
    - Uma unidade passa a 'disponivel', 'esgotado', 'em_abastecimento' ou 'previsto' de acordo com as informações factuais vigentes mais recentes.
-   - Se um comunicado oficial (ex: prefeitura ou secretaria) afirma que a vacinação está ativa/retomada ou suspensa/esgotada em determinado polo, mapeie diretamente para a id correspondente do centro.
-3. EXPLICITUDE DE DESTINAÇÃO:
-   - Apenas reporte alteração de status para centros onde a notícia fornece evidência direta (nominal, regional ou por comunicado de órgão responsável).
-   - Se uma notícia é puramente genérica sem especificar unidades, não invente alterações individuais.
-4. PRESERVAÇÃO DE FONTES:
+4. EXPLICITUDE DE DESTINAÇÃO:
+   - Não invente alterações individuais para centros quando as notícias forem genéricas sem vinculação geográfica.
+5. PRESERVAÇÃO DE FONTES:
    - Identifique e aponte o link da fonte oficial que comprova o fato. Evite links de agregadores quando houver fonte institucional direta.
 
 Estrutura JSON esperada:
@@ -272,24 +272,30 @@ def fallback_heuristic_analysis(items):
         ])
 
         # Busca correspondência nominal dinâmica em cada um dos centros monitorados
+        # Checar se a notícia trata de esgotamento total em âmbito municipal/capital
+        is_esgotamento_cidade_rio = is_esgotamento and ("rio" in texto or "carioca" in texto or "sms-rio" in texto) and any(w in texto for w in ["acaba", "esgotou", "esgotaram", "postos param", "paralisa", "sem doses"])
+
         for site in known_sites:
             s_name = site.get("nomeUnidade", "").lower()
             s_id = site.get("id")
             s_mun = site.get("municipio", "").lower()
             s_uf = site.get("uf", "")
 
-            # Extrair tokens distintivos do centro (eliminando termos administrativos e conectivos genéricos)
+            # Excluir termos administrativos, conectivos e palavras comuns de cabeçalho
             generic_words = {
                 "centro", "saúde", "saude", "hospital", "unidade", "especial", "especiais", "referência", "referencia",
                 "serviço", "servico", "vacinação", "vacinacao", "sala", "posto", "atendimento", "ambulatorio",
                 "policlinica", "instituto", "super", "zona", "norte", "oeste", "leste", "sul",
                 "região", "regiao", "shopping", "geral", "municipal", "estadual", "federal", "público", "publico",
-                "para", "com", "sem", "por", "dos", "das", "pelas", "pelos", "sobre", "entre", "imunobiológicos", "imunobiologicos"
+                "para", "com", "sem", "por", "dos", "das", "pelas", "pelos", "sobre", "entre", "imunobiológicos", "imunobiologicos",
+                "nova", "novas", "novo", "novos", "campo", "grande", "paulo"
             }
             name_tokens = [w for w in re.split(r'[\s\(\)/—\-,]+', s_name) if len(w) > 3 and w not in generic_words]
 
-            # Mapeamento dinâmico: o centro é citado diretamente se algum dos seus tokens distintivos constar no texto
+            # Mapeamento dinâmico: correspondência de tokens distintivos ou abrangência de esgotamento municipal
             matched = len(name_tokens) > 0 and any(tok in texto for tok in name_tokens)
+            if is_esgotamento_cidade_rio and s_uf == "RJ":
+                matched = True
 
             if matched:
                 if is_esgotamento:
