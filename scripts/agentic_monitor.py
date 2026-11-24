@@ -94,7 +94,11 @@ def fetch_feed_items():
                     clean_desc = re.sub(r'<[^>]+>', '', description).strip()
                     full_text = f"{title} {clean_desc}".lower()
 
-                    if any(kw in full_text for kw in KEYWORDS):
+                    # Requisito temático estrito: o item DEVE tratar de mpox/varíola E de vacinação/doses
+                    is_mpox = any(w in full_text for w in ["mpox", "varíola", "variola", "mva-bn", "jynneos", "monkeypox"])
+                    is_vaccine = any(w in full_text for w in ["vacina", "vacinação", "vacinacao", "imunização", "imunizacao", "doses", "prep", "crie", "super centro"])
+
+                    if is_mpox and is_vaccine:
                         if link not in seen_links:
                             seen_links.add(link)
                             items.append({
