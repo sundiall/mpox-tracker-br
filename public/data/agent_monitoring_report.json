@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-11-24T20:42:49.348526",
-  "totalItensVarredura": 24,
+  "timestamp": "2026-11-24T21:45:23.126131",
+  "totalItensVarredura": 22,
   "analiseAgente": {
     "alteracoesEstoque": [
       {
@@ -55,15 +55,6 @@
         "statusEstoque": "disponivel",
         "motivo": "Vacinação ativa/reabastecida segundo comunicado oficial.",
         "previsaoFutura": "Doses ativas para os grupos prioritários elegíveis.",
-        "fonte": "https://prefeitura.rio/saude/vacina-contra-mpox-segue-disponivel-apenas-no-super-centro-de-botafogo/"
-      },
-      {
-        "siteId": "rj-2",
-        "unidade": "Super Centro Carioca de Vacinação — Botafogo",
-        "uf": "RJ",
-        "statusEstoque": "disponivel",
-        "motivo": "Vacinação ativa/reabastecida segundo comunicado oficial.",
-        "previsaoFutura": "Doses ativas para os grupos prioritários elegíveis.",
         "fonte": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNU0RGOXB1N0VFV25fNVJIektkV25FLUp4MmhlR0EwRTZ3Z1kyM2xDNFZDSmpZckU5Zjc3WFBBUGdjVEo1YWllSkQxWTlzS2pSTFlMRFQwRng4dTJmc3VmZWxsdENad1V1ZXZwZ01PZmpuMVkwb3RGbk40Zk9uVlJJUVN3UWNyaWIwc2l3?oc=5"
       },
       {
@@ -88,9 +79,15 @@
     "novosMarcos": [],
     "alertasUrgentes": [
       {
-        "titulo": "Rio de Janeiro suspende vacinação contra Mpox por falta de doses - Agência Brasil",
+        "titulo": "MS não deve receber novas doses da vacina contra Mpox, informa Ministério da Saúde - Midiamax",
         "tipo": "disponibilidade_vacina",
-        "resumo": "Rio de Janeiro suspende vacinação contra Mpox por falta de doses&nbsp;&nbsp;Agência Brasil",
+        "resumo": "MS não deve receber novas doses da vacina contra Mpox, informa Ministério da Saúde&nbsp;&nbsp;Midiamax",
+        "linkOficial": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNcXNpNUVmM2d6S1A0YnN1YzNYQ0lBc0tNSXI1cHBFZ1lFelZEeVJjVlhSYUpEVnowdDZnMTZMaW1Bbjh0aE55UHhZMmVtM0Z0dVJpdFhrcHgxcF9PUUtYdlRZM2dnQjZ4YnIzd2RIR2RRSzNHaEpOYzIwa1owc194aUxfeUpmMkV3dVZnOXR5ak8xMmdkOFVaQkVzQlhrU19RS1hreUJaTVZPRWVuNXh3TERMVVN6UQ?oc=5"
+      },
+      {
+        "titulo": "Rio de Janeiro suspende vacinação contra Mpox por falta de doses - EBC - Empresa Brasil de Comunicação",
+        "tipo": "disponibilidade_vacina",
+        "resumo": "Rio de Janeiro suspende vacinação contra Mpox por falta de doses&nbsp;&nbsp;EBC - Empresa Brasil de Comunicação",
         "linkOficial": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPTmg3d3B6YWVOb0NiWGNoZTI0YnRhOE1FWDFoMHppWWgyLXpfTjF1T2RqSlVtWG45bjYxTDVpeTlZakdldHhfX1FlWWZURXdDdER4TjBQZFlNajBkZ1U0UFZTdC1LOEZxdWxDWEpyNFZYNDVGbS0welJST1NIQjF6dGthd2tQQmRFU2JHRGVfbllzcW1kazNGM25nZVVFTC1rak5KTXQwMkVmelV2a0RSOEVIUExvTUNwZVNweFBpQWl4U05WelhJRE1udGZVYTkwRUtvRmd3?oc=5"
       },
       {
@@ -98,18 +95,6 @@
         "tipo": "disponibilidade_vacina",
         "resumo": "Vacina contra mpox acaba no Rio após 8 mil doses e postos param&nbsp;&nbsp;Povo na Rua",
         "linkOficial": "https://news.google.com/rss/articles/CBMif0FVX3lxTE92ODNoYXJXWTlxbHYyQTZ1Z0JBSzVZTFBPV2RmVE50NTZhajVOODNndG42Ul9wRXNxSGsyTTFVQk1WeVRlc19FSnB5eXU1OW1yeHgyczlWQlJTdkVNUU1nc1Z4R2pCMEtwSWtUY0VDTlJuaU5aZ3lMeExkNl9rSnM?oc=5"
-      },
-      {
-        "titulo": "Mpox: Prefeitura do Rio suspende vacinação - O GLOBO",
-        "tipo": "disponibilidade_vacina",
-        "resumo": "Mpox: Prefeitura do Rio suspende vacinação&nbsp;&nbsp;O GLOBO",
-        "linkOficial": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOdDZ2LU56ZDQ4d2o3eWpSUVZlaUJ4M0ttX1dQcVJvN004aFdxR2dmRkM5Z0cyZHJyOUN1bnltd01lRGRIb2ZfeEVTTjBaOUUtMFVDdG41MVdZdks2OHJRLWJ6ZGdqV1FyT2VwUHgzN2JoU2xpdmpWZkE2VXVjcE5xU0hGbzVRVzcxbEtzMi13Q0l1WHVTSlU0bUNadkJSaE1ReG1oaU9XTmVqOWFrWF9HbjU5Qk8yRnZuTHhnejQ2Y0VQRW9ORllkZFF2dWNhZUZsMWt1Qk5DQll6ZXNhX0HSAewBQVVfeXFMUDhlNko0bjVDd2ZrN3YzV0ZPS0NPZGdEcFBjUHhsa0RKX04zWVFKbllvWGpBUmxkYUp4aUtqY3JlUDAzTHdRN0hxUnB5eFFiLXU5VnRHa0hhekNVM1FuRVR2aUZpeFowMF9FNE9jaTZxRG9rVzRuNkR6WEFVT1JwaE9KakZYWEZGYWxDeGp3b1hyYTVWTW5KMEgtTkZSQzNXS3BPY1RnYTl2Z3pOSzhCSUtyUVh5YnBpWmMxOUxmVTNrekF3RVJYZ0RSek10VFlUSlVCYTNuUkdzckNwWEhyVTh4elhNeFlLc0x6eEw?oc=5"
-      },
-      {
-        "titulo": "Vacina contra MPOX segue disponível apenas no Super Centro de Botafogo",
-        "tipo": "disponibilidade_vacina",
-        "resumo": "Mais de 7 mil pessoas foram vacinadas contra a MPOX com as doses enviadas pelo Ministério da Saúde, e os [&#8230;]\nO post Vacina contra MPOX segue disponível apenas no Super Centro de Botafogo apareceu primeiro em Prefeitura da Cidade do Rio de Janeiro - prefeitura.rio.",
-        "linkOficial": "https://prefeitura.rio/saude/vacina-contra-mpox-segue-disponivel-apenas-no-super-centro-de-botafogo/"
       },
       {
         "titulo": "Vacina contra mpox: São Paulo recebe novo lote de doses - Amazonas1",
@@ -122,6 +107,12 @@
         "tipo": "disponibilidade_vacina",
         "resumo": "São Paulo recebe mil novas doses de vacina contra a mpox&nbsp;&nbsp;Diário Carioca",
         "linkOficial": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNU0RGOXB1N0VFV25fNVJIektkV25FLUp4MmhlR0EwRTZ3Z1kyM2xDNFZDSmpZckU5Zjc3WFBBUGdjVEo1YWllSkQxWTlzS2pSTFlMRFQwRng4dTJmc3VmZWxsdENad1V1ZXZwZ01PZmpuMVkwb3RGbk40Zk9uVlJJUVN3UWNyaWIwc2l3?oc=5"
+      },
+      {
+        "titulo": "SP ganha novas doses da vacina contra a mpox; saiba quem pode receber - Agência Brasil",
+        "tipo": "disponibilidade_vacina",
+        "resumo": "SP ganha novas doses da vacina contra a mpox; saiba quem pode receber&nbsp;&nbsp;Agência Brasil",
+        "linkOficial": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQcmM2MDJIeG5QQ2ttVXJYTXlTUWZXeWFKWWJaMjREWTZQNGRELXBGZ201OEFULUVzQWJ6V0V3Ynhad2RJWjBiNDRrMnNDVjZ0SjI2eXdrVFRqaEQtVHJYZERDd1pkakJlcmRpWHFRaXZIUndVal9UVmtrN2xxTlVJcy10S2toQloxU0p5Rzg2eUZHaTVMMDNXYk1ORlZBMTBDRl9JSjIxbW1ObTJGYXRUMDdWNjlOTTFCaW9Jc19uaw?oc=5"
       }
     ]
   }
