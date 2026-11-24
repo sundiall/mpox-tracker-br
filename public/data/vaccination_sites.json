@@ -56,11 +56,11 @@
     "agendamento": "Livre Demanda",
     "observacoes": "Ponto estratégico de vacinação na Zona Norte carioca para PrEP e populações prioritárias.",
     "requisitos": "Documento de identidade com foto, CPF e receita/laudo de PrEP recente (até 6 meses).",
-    "statusEstoque": "esgotado",
-    "dataAtualizacaoStatus": "2026-11-23",
-    "notaStatus": "Atendimento suspenso pela Secretaria Municipal de Saúde em razão da falta de estoque de vacinas contra a mpox.",
+    "statusEstoque": "disponivel",
+    "dataAtualizacaoStatus": "2026-11-24",
+    "notaStatus": "Vacinação ativa/reabastecida segundo comunicado oficial.",
     "fonteStatus": "https://prefeitura.rio/saude/vacina-contra-mpox-segue-disponivel-apenas-no-super-centro-de-botafogo/",
-    "previsaoFutura": "Retomada condicionada ao recebimento de novo lote do Ministério da Saúde."
+    "previsaoFutura": "Doses ativas para os grupos prioritários elegíveis."
   },
   {
     "id": "rj-4",
@@ -518,11 +518,11 @@
     "agendamento": "Regulação SUS / Encaminhamento",
     "observacoes": "Referência central do SUS em Pernambuco para atendimento de infectologia e imunização especial na RMR.",
     "requisitos": "Documento com foto, cartão SUS e encaminhamento do médico assistente ou laudo laboratorial.",
-    "statusEstoque": "em_abastecimento",
-    "dataAtualizacaoStatus": "2026-11-19",
-    "notaStatus": "Referência de imunobiológicos para a Região Metropolitana do Recife.",
+    "statusEstoque": "disponivel",
+    "dataAtualizacaoStatus": "2026-11-24",
+    "notaStatus": "Vacinação ativa/reabastecida segundo comunicado oficial.",
     "fonteStatus": "https://portalcievs.saude.pe.gov.br/noticias/DOCUMENTOS/monkeypox",
-    "previsaoFutura": "Aguardando envio de lote da SVSA/MS com destinação a usuários de PrEP e contatos pós-exposição na RMR."
+    "previsaoFutura": "Doses ativas para os grupos prioritários elegíveis."
   },
   {
     "id": "pe-2",
