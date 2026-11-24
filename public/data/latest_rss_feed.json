@@ -1,16 +1,16 @@
 {
-  "ultimaAtualizacao": "2026-11-24T17:43:28.738776",
+  "ultimaAtualizacao": "2026-11-24T18:44:08.071491",
   "totalItens": 1,
   "itens": [
     {
       "id": "rss-1",
       "dataPublicacao": "2026-11-24",
       "orgaoEmissor": "Fiocruz",
-      "ufRelacionada": "Nacional",
-      "titulo": "Nav. ed. pt Entrevista PJ.2.1",
+      "ufRelacionada": "RJ",
+      "titulo": "Sarau na Fiocruz Mata Atlântica debate saúde e ecologia",
       "tipo": "disponibilidade_vacina",
-      "resumo": "Nav. ed. pt Entrevista PJ.2.1\nrenata.moehlecke\nQui, 19/11/2026 - 16:57\n\n\n  \n    Tipo de caixa\n              Duplo horizontal\n          \n\n  \n    Título\n              Entrevista: PJ.2.1, nova linhagem no Brasil\n          \n\n  \n    Imagem\n                \n\n\n          \n\n  \n    Chamada...",
-      "linkOficial": "https://agencia.fiocruz.br/nav-ed-pt-entrevista-pj21",
+      "resumo": "Sarau na Fiocruz Mata Atlântica debate saúde e ecologia \n\n            Em sua 5ª edição e com uma temática que celebra as tradicionais festas juninas, o evento Sarau Junino: Saúde e Ecologia em Cena, promovido pela Fiocruz Mata Atlântica (FMA), abre as portas, neste sábado (28/11)...",
+      "linkOficial": "https://agencia.fiocruz.br/sarau-na-fiocruz-mata-atlantica-debate-saude-e-ecologia",
       "categoria": "Imunização"
     }
   ]
