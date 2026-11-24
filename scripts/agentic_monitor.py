@@ -167,19 +167,23 @@ CATÁLOGO OFICIAL DE CENTROS DE VACINAÇÃO MONITORDADOS:
 {json.dumps(known_sites, ensure_ascii=False, indent=2)}
 
 DIRETRIZES AGÉNTICAS DE AVALIAÇÃO:
-1. ORDEM CRONOLÓGICA E ESTADO MAIS RECENTE:
+1. TRÊS REQUISITOS OBRIGATÓRIOS PARA QUALQUER ALTERAÇÃO DE STATUS:
+   Para que uma notícia gere uma alteração de status em 'alteracoesEstoque', a notícia DEVE CONTER EXPLICITAMENTE TODAS as 3 informações a seguir:
+   a) A vacina contra MPOX (varíola dos macacos, MVA-BN, Jynneos). Não altere com notícias genéricas de outras vacinas ou saúde geral.
+   b) O centro / polo de vacinação específico (ou a rede municipal claramente nomeada, ex: "todos os postos do Rio", "Super Centro de Botafogo", "CRIE Fiocruz").
+   c) A situação explícita do estoque: se as doses estão DISPONÍVEIS / reabastecidas OU se as doses estão ESGOTADAS / acabaram / foram suspensas por falta de vacina.
+   -> REGRA DE DESCARTE ESTRITO: Se a notícia NÃO contiver todas essas três informações explícitas para permitir uma interpretação segura, DESCARTE A NOTÍCIA COMPLETAMENTE para fins de alteração de estoque (não gere alteração inventada ou presumida).
+
+2. ORDEM CRONOLÓGICA E PREVALÊNCIA TEMPORAL:
    - As notícias estão ordenadas da MAIS RECENTE para a mais antiga.
    - Em caso de comunicados conflitantes sobre a mesma cidade ou unidade ao longo do dia, o fato noticiado no horário mais recente PREVALECE.
-   - Se uma notícia no início do dia informava que a vacinação estava concentrada ou restrita a um único polo (ex: 'segue disponível apenas no Super Centro de Botafogo'), mas uma notícia posterior do mesmo dia noticiou o esgotamento total das doses no município e a paralisação dos postos ('Vacina contra mpox acaba no Rio após 8 mil doses e postos param'), o status de TODOS os polos do município (incluindo Botafogo, Fiocruz, CEVAA, Nova América e Campo Grande) é 'esgotado'.
-2. ESGOTAMENTO MUNICIPAL OU REGIONAL:
-   - Quando um comunicado ou matéria factual confirma que os estoques de vacina acabaram em uma capital ou município inteiro, aplique 'esgotado' a todos os centros cadastrados naquele município que dependiam desse estoque.
-3. DECISÃO DINÂMICA E SEM REGRAS FIXAS:
-   - Determine com base puramente nas notícias e comunicados se houve alteração real de disponibilidade em centros específicos ou na rede municipal.
-   - Uma unidade passa a 'disponivel', 'esgotado', 'em_abastecimento' ou 'previsto' de acordo com as informações factuais vigentes mais recentes.
-4. EXPLICITUDE DE DESTINAÇÃO:
-   - Não invente alterações individuais para centros quando as notícias forem genéricas sem vinculação geográfica.
-5. PRESERVAÇÃO DE FONTES:
-   - Identifique e aponte o link da fonte oficial que comprova o fato. Evite links de agregadores quando houver fonte institucional direta.
+   - Exemplo: se no início do dia foi anunciado que as vacinas seguiam disponíveis em um polo (ex: 'segue disponível apenas em Botafogo'), mas horas depois a Secretaria de Saúde ou a imprensa noticiou que as doses acabaram e os postos pararam ('Vacina contra mpox acaba no Rio após 8 mil doses e postos param'), a notícia mais recente prevalece e o status final é 'esgotado'.
+
+3. ABRANGÊNCIA FACTUAL MUNICIPAL:
+   - Se uma notícia factual e recente comprovar que as doses de mpox se esgotaram em toda a rede de um município/capital e os postos foram paralisados, interprete essa informação aplicando 'esgotado' aos centros cadastrados daquele município que dependiam do lote esgotado.
+
+4. PRESERVAÇÃO DE FONTES:
+   - Indique a URL oficial da matéria que sustenta diretamente a interpretação. Evite links de agregadores genéricos quando houver link institucional.
 
 Estrutura JSON esperada:
 {{
@@ -247,14 +251,17 @@ Responda APENAS com o JSON puro, sem blocos markdown ou texto explicativo.
 
 def fallback_heuristic_analysis(items):
     """
-    Análise de contingência sem regras fixas de cidade/unidade.
-    Realiza mapeamento dinâmico entre o catálogo oficial de postos e os comunicados recebidos.
+    Análise de contingência agéntica quando a Gemini API não responder.
+    Exige obrigatoriamente as 3 informações para qualquer alteração:
+    1) Menção explícita a mpox/varíola dos macacos;
+    2) Menção explícita ao centro ou rede municipal;
+    3) Menção explícita à disponibilidade ou esgotamento.
+    Caso falte qualquer uma das 3, a notícia é descartada.
     """
     print("⚙️ [Agente] Executando correspondência dinâmica entre catálogo oficial e notícias...")
     alteracoes = []
     alertas = []
 
-    # Carregar catálogo oficial para correspondência dinâmica agéntica
     sites_json_path = os.path.join(os.path.dirname(__file__), "..", "public", "data", "vaccination_sites.json")
     known_sites = []
     if os.path.exists(sites_json_path):
@@ -267,25 +274,32 @@ def fallback_heuristic_analysis(items):
     for it in items:
         texto = f"{it.get('titulo', '')} {it.get('resumo', '')}".lower()
 
+        # Requisito 1: Deve mencionar explicitamente MPOX
+        has_mpox = any(w in texto for w in ["mpox", "varíola", "variola", "mva-bn", "jynneos", "monkeypox"])
+        if not has_mpox:
+            continue
+
+        # Requisito 3: Deve mencionar explicitamente situação de estoque (disponível ou esgotado)
         is_reabastecimento = any(p in texto for p in [
             "reabastece", "reabastecimento", "novas doses", "novo lote", "mais mil",
-            "retoma", "retomou", "amplia", "ampliação", "recebe mil", "chegada", "reforço de doses", "começa vacinação", "inicia vacinação"
+            "retoma", "retomou", "amplia vacinação", "recebe mil", "chegada de doses", "reforço de doses",
+            "começa a vacinar", "inicia vacinação", "segue disponível"
         ])
         is_esgotamento = any(p in texto for p in [
-            "esgotou", "esgotado", "acabou", "terminou", "fila", "alta procura", "sem doses", "falta de doses", "suspensa"
+            "esgotou", "esgotado", "acabou", "terminou", "sem doses", "falta de doses", "paralisa", "postos param", "aplicação suspensa", "suspende vacinação"
         ])
 
-        # Busca correspondência nominal dinâmica em cada um dos centros monitorados
-        # Checar se a notícia trata de esgotamento total em âmbito municipal/capital
-        is_esgotamento_cidade_rio = is_esgotamento and ("rio" in texto or "carioca" in texto or "sms-rio" in texto) and any(w in texto for w in ["acaba", "esgotou", "esgotaram", "postos param", "paralisa", "sem doses"])
+        if not (is_reabastecimento or is_esgotamento):
+            continue
+
+        # Requisito 2: Deve identificar explicitamente o centro ou a rede municipal correspondente
+        is_esgotamento_cidade_rio = is_esgotamento and ("rio" in texto or "carioca" in texto or "sms-rio" in texto) and any(w in texto for w in ["acaba", "esgotou", "postos param", "paralisa", "sem doses", "após 8 mil"])
 
         for site in known_sites:
             s_name = site.get("nomeUnidade", "").lower()
             s_id = site.get("id")
-            s_mun = site.get("municipio", "").lower()
             s_uf = site.get("uf", "")
 
-            # Excluir termos administrativos, conectivos e palavras comuns de cabeçalho
             generic_words = {
                 "centro", "saúde", "saude", "hospital", "unidade", "especial", "especiais", "referência", "referencia",
                 "serviço", "servico", "vacinação", "vacinacao", "sala", "posto", "atendimento", "ambulatorio",
@@ -296,11 +310,11 @@ def fallback_heuristic_analysis(items):
             }
             name_tokens = [w for w in re.split(r'[\s\(\)/—\-,]+', s_name) if len(w) > 3 and w not in generic_words]
 
-            # Mapeamento dinâmico: correspondência de tokens distintivos ou abrangência de esgotamento municipal
             matched = len(name_tokens) > 0 and any(tok in texto for tok in name_tokens)
             if is_esgotamento_cidade_rio and s_uf == "RJ":
                 matched = True
 
+            # Se atende a todos os 3 requisitos, gera a alteração estruturada
             if matched:
                 if is_esgotamento:
                     alteracoes.append({
@@ -308,7 +322,7 @@ def fallback_heuristic_analysis(items):
                         "unidade": site.get("nomeUnidade"),
                         "uf": s_uf,
                         "statusEstoque": "esgotado",
-                        "motivo": f"Suspensão ou esgotamento de doses noticiado em comunicado oficial.",
+                        "motivo": f"Esgotamento ou suspensão explícita de doses noticiada em comunicado oficial.",
                         "previsaoFutura": "Aguardando envio e redistribuição de novos lotes pelo Ministério da Saúde.",
                         "fonte": it.get("link")
                     })
