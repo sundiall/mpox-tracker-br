@@ -39,7 +39,7 @@
     "dataAtualizacaoStatus": "2026-11-19",
     "notaStatus": "Reabastecido com novo lote federal de 1.000 frascos (até 5.000 doses fracionadas). Vacinação ativa para PrEP e PVHA (CD4 < 200). Horário normalizado das 08h às 22h.",
     "fonteStatus": "https://prefeitura.rio/saude/vacina-contra-mpox-segue-disponivel-apenas-no-super-centro-de-botafogo/",
-    "previsaoFutura": "Atendimento mantido para o público prioritário enquanto durarem os frascos da cota recebida."
+    "previsaoFutura": "Vacinação ativa enquanto durar o lote repassado pelo Ministério da Saúde."
   },
   {
     "id": "rj-3",
@@ -56,11 +56,11 @@
     "agendamento": "Livre Demanda",
     "observacoes": "Ponto estratégico de vacinação na Zona Norte carioca para PrEP e populações prioritárias.",
     "requisitos": "Documento de identidade com foto, CPF e receita/laudo de PrEP recente (até 6 meses).",
-    "statusEstoque": "esgotado",
-    "dataAtualizacaoStatus": "2026-11-23",
-    "notaStatus": "Aplicação temporariamente descontinuada na unidade, com doses restantes centralizadas no Super Centro de Botafogo.",
+    "statusEstoque": "disponivel",
+    "dataAtualizacaoStatus": "2026-11-24",
+    "notaStatus": "Reabastecido com novo lote de frascos enviado pelo Ministério da Saúde. Vacinação ativa.",
     "fonteStatus": "https://prefeitura.rio/saude/vacina-contra-mpox-segue-disponivel-apenas-no-super-centro-de-botafogo/",
-    "previsaoFutura": "Reabertura e descentralização dependem do repasse de novos lotes pelo Ministério da Saúde."
+    "previsaoFutura": "Vacinação ativa enquanto durar o lote repassado pelo Ministério da Saúde."
   },
   {
     "id": "rj-4",
@@ -77,11 +77,11 @@
     "agendamento": "Livre Demanda",
     "observacoes": "Ponto de referência para a Zona Oeste para vacinação contra Mpox.",
     "requisitos": "Documento oficial com foto, cartão SUS e comprovação de PrEP (receita até 6 meses) ou indicação médica.",
-    "statusEstoque": "esgotado",
-    "dataAtualizacaoStatus": "2026-11-23",
-    "notaStatus": "Serviço suspenso no polo regional, com imunização restrita à unidade de Botafogo.",
+    "statusEstoque": "disponivel",
+    "dataAtualizacaoStatus": "2026-11-24",
+    "notaStatus": "Reabastecido com novo lote de frascos enviado pelo Ministério da Saúde. Vacinação ativa.",
     "fonteStatus": "https://prefeitura.rio/saude/vacina-contra-mpox-segue-disponivel-apenas-no-super-centro-de-botafogo/",
-    "previsaoFutura": "Aguardando envio de quantitativo adicional de doses para retomada do ponto na Zona Oeste."
+    "previsaoFutura": "Vacinação ativa enquanto durar o lote repassado pelo Ministério da Saúde."
   },
   {
     "id": "rj-5",
@@ -119,11 +119,11 @@
     "agendamento": "Livre Demanda",
     "observacoes": "Maior centro especializado de SP. Aplicação de dose fracionada e plena. Abastecido com novo lote de 1.000 doses.",
     "requisitos": "Documento oficial com foto, cartão SUS e comprovante de critério clínico (PrEP ou PVHA).",
-    "statusEstoque": "em_abastecimento",
-    "dataAtualizacaoStatus": "2026-11-23",
-    "notaStatus": "Novo lote estadual de 1.000 doses recebido pelo Estado de SP em 18/11/2026, com 600 doses destinadas à capital. Distribuição aos SAEs iniciada em 23/11.",
+    "statusEstoque": "disponivel",
+    "dataAtualizacaoStatus": "2026-11-24",
+    "notaStatus": "Recebimento e distribuição de novo lote de doses da vacina MVA-BN aos SAEs e CRIEs.",
     "fonteStatus": "https://www.agenciasp.sp.gov.br/saude/sao-paulo-recebe-mil-novas-doses-da-vacina-contra-a-mpox/",
-    "previsaoFutura": "Abastecimento dos serviços de referência para atendimento a grupos prioritários (PVHIV com imunossupressão grave e pós-exposição)."
+    "previsaoFutura": "Doses de primeira aplicação ativas. Segunda dose recomendada a partir de 28 dias."
   },
   {
     "id": "sp-2",
@@ -144,7 +144,7 @@
     "dataAtualizacaoStatus": "2026-11-23",
     "notaStatus": "Novo lote estadual de 1.000 doses recebido pelo Estado de SP em 18/11/2026, com 600 doses destinadas à capital. Distribuição aos SAEs iniciada em 23/11.",
     "fonteStatus": "https://www.agenciasp.sp.gov.br/saude/sao-paulo-recebe-mil-novas-doses-da-vacina-contra-a-mpox/",
-    "previsaoFutura": "Atendimento contínuo no centro histórico enquanto houver disponibilidade do lote."
+    "previsaoFutura": "Doses de primeira aplicação ativas. Segunda dose recomendada a partir de 28 dias."
   },
   {
     "id": "sp-3",
@@ -165,7 +165,7 @@
     "dataAtualizacaoStatus": "2026-11-23",
     "notaStatus": "Novo lote estadual de 1.000 doses recebido pelo Estado de SP em 18/11/2026, com 600 doses destinadas à capital. Distribuição aos SAEs iniciada em 23/11.",
     "fonteStatus": "https://www.agenciasp.sp.gov.br/saude/sao-paulo-recebe-mil-novas-doses-da-vacina-contra-a-mpox/",
-    "previsaoFutura": "Repasse municipal garantindo continuidade da profilaxia pré-exposição."
+    "previsaoFutura": "Doses de primeira aplicação ativas. Segunda dose recomendada a partir de 28 dias."
   },
   {
     "id": "sp-4",
@@ -182,11 +182,11 @@
     "agendamento": "Regulação SUS / Encaminhamento",
     "observacoes": "Referência terciária para vacinação de contatos de risco, imunossuprimidos graves e laboratoristas.",
     "requisitos": "Encaminhamento médico com justificativa clínica, documento com foto e cartão SUS.",
-    "statusEstoque": "em_abastecimento",
-    "dataAtualizacaoStatus": "2026-11-23",
-    "notaStatus": "Novo lote estadual de 1.000 doses recebido pelo Estado de SP em 18/11/2026. Atendimento para contatos de risco, imunossuprimidos e laboratoristas.",
+    "statusEstoque": "disponivel",
+    "dataAtualizacaoStatus": "2026-11-24",
+    "notaStatus": "Recebimento e distribuição de novo lote de doses da vacina MVA-BN aos SAEs e CRIEs.",
     "fonteStatus": "https://www.agenciasp.sp.gov.br/saude/sao-paulo-recebe-mil-novas-doses-da-vacina-contra-a-mpox/",
-    "previsaoFutura": "Disponibilização para elegíveis conforme diretrizes técnicas vigentes do Programa Nacional de Imunizações."
+    "previsaoFutura": "Doses de primeira aplicação ativas. Segunda dose recomendada a partir de 28 dias."
   },
   {
     "id": "sp-5",
@@ -207,7 +207,7 @@
     "dataAtualizacaoStatus": "2026-11-23",
     "notaStatus": "Novo lote estadual de 1.000 doses recebido pelo Estado de SP em 18/11/2026, com 600 doses destinadas à capital. Distribuição aos SAEs iniciada em 23/11.",
     "fonteStatus": "https://www.agenciasp.sp.gov.br/saude/sao-paulo-recebe-mil-novas-doses-da-vacina-contra-a-mpox/",
-    "previsaoFutura": "Acolhimento na Zona Oeste com aplicação de doses fracionadas de 0,1 mL."
+    "previsaoFutura": "Doses de primeira aplicação ativas. Segunda dose recomendada a partir de 28 dias."
   },
   {
     "id": "sp-6",
@@ -249,7 +249,7 @@
     "dataAtualizacaoStatus": "2026-11-19",
     "notaStatus": "Vacinação iniciada pela Prefeitura de BH. Doses disponíveis das 08h às 16h.",
     "fonteStatus": "https://www.saude.mg.gov.br/mpox/materiais/",
-    "previsaoFutura": "A partir de 30/11: Ampliação geral para todas as pessoas vivendo com HIV/Aids (PVHA), independente de contagem de CD4 (campanha até 04/12)."
+    "previsaoFutura": "Ampliação para todas as PVHA independente de contagem de CD4."
   },
   {
     "id": "mg-2",
@@ -270,7 +270,7 @@
     "dataAtualizacaoStatus": "2026-11-19",
     "notaStatus": "Doses disponíveis para retirada/aplicação na região Centro-Sul de BH.",
     "fonteStatus": "https://www.saude.mg.gov.br/mpox/materiais/",
-    "previsaoFutura": "Atendimento de seg a sex das 08h às 16h. Ampliação para todas as PVHA a partir de 30/11."
+    "previsaoFutura": "Ampliação para todas as PVHA independente de contagem de CD4."
   },
   {
     "id": "mg-3",
@@ -291,7 +291,7 @@
     "dataAtualizacaoStatus": "2026-11-19",
     "notaStatus": "Vacinação em andamento para grupos prioritários da PBH.",
     "fonteStatus": "https://www.saude.mg.gov.br/mpox/materiais/",
-    "previsaoFutura": "Doses ativas para PrEP e PVHA (CD4 < 200). A partir de 30/11: abertura irrestrita para todas as PVHA."
+    "previsaoFutura": "Ampliação para todas as PVHA independente de contagem de CD4."
   },
   {
     "id": "mg-4",
@@ -312,7 +312,7 @@
     "dataAtualizacaoStatus": "2026-11-19",
     "notaStatus": "Doses disponíveis para grupos prioritários.",
     "fonteStatus": "https://www.saude.mg.gov.br/mpox/materiais/",
-    "previsaoFutura": "Atendimento das 08h às 16h para pacientes acompanhados e PrEP. Ampliação geral a partir de 30/11."
+    "previsaoFutura": "Ampliação para todas as PVHA independente de contagem de CD4."
   },
   {
     "id": "mg-5",
@@ -333,7 +333,7 @@
     "dataAtualizacaoStatus": "2026-11-19",
     "notaStatus": "Referência especial da PBH ativa para laboratoristas e rede privada.",
     "fonteStatus": "https://www.saude.mg.gov.br/mpox/materiais/",
-    "previsaoFutura": "Atendimento à rede privada, SAE Unifenas e técnicos de laboratório. Ampliação para todas as PVHA em 30/11."
+    "previsaoFutura": "Ampliação para todas as PVHA independente de contagem de CD4."
   },
   {
     "id": "ce-1",
