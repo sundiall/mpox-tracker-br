@@ -138,8 +138,16 @@ Analise com rigor factual a seguinte lista de notícias, comunicados e matérias
 {json.dumps(selected_items, ensure_ascii=False, indent=2)}
 
 Sua tarefa é extrair e produzir um objeto JSON estritamente válido.
-IMPORTANTE SOBRE UNIDADES E IDs:
-Cada unidade deve ser reportada de forma individual e específica com sua respectiva id de centro sempre que aplicável.
+IMPORTANTE SOBRE UNIDADES, ELEGIBILIDADE E FONTES:
+1. EXPLICITUDE DE DESTINAÇÃO: A notícia ou comunicado oficial DEVE mencionar explicitamente o nome ou local da unidade para onde as doses foram enviadas antes de alterar qualquer status para 'disponivel'.
+   - NUNCA assuma que uma remessa enviada ao Estado ou Município abastece automaticamente todos os postos.
+   - Se uma notícia cita apenas "Estado recebe lote" ou "Prefeitura recebe doses", NÃO marque todas as unidades como 'disponivel'. Registre apenas as unidades citadas nominalmente.
+2. POLÍTICA DE CENTRALIZAÇÃO DO RIO DE JANEIRO:
+   - A SMS-Rio centralizou as doses no Super Centro de Botafogo ('rj-2').
+   - Os centros Nova América ('rj-3') e Campo Grande ('rj-4') NÃO devem ser alterados para 'disponivel' a menos que o comunicado da SMS-Rio afirme expressamente a reabertura/retomada de vacinação nessas unidades específicas.
+3. PRESERVAÇÃO DE FONTES OFICIAIS:
+   - Forneça sempre o link direto oficial do órgão ou notícia.
+   - NUNCA utilize links transitórios de agregadores como 'news.google.com'.
 Ids de referência conhecidas:
 - 'rj-1': CRIE / INI / Fiocruz
 - 'rj-2': Super Centro Carioca de Vacinação — Botafogo
@@ -332,45 +340,49 @@ def fallback_heuristic_analysis(items):
                         "fonte": it["link"]
                     })
 
-        # 2. Belo Horizonte (Hospitais e Centros de Referência por ID)
-        if any(term in texto for term in ["belo horizonte", "pbh", "hospital eduardo de menezes", "sagrada família", "orestes diniz", "urs centro-sul"]):
-            if any(p in texto for p in ["vacina", "amplia", "ampliação", "inicia", "doses", "imunização"]):
-                for sid, sname in [
-                    ("mg-1", "Hospital Eduardo de Menezes"),
-                    ("mg-2", "URS Centro-Sul / Serviço de Saúde do Viajante"),
-                    ("mg-3", "CTA / SAE Sagrada Família"),
-                    ("mg-4", "CTR Orestes Diniz"),
-                    ("mg-5", "CRIE Hospital Odilon Behrens")
-                ]:
-                    alteracoes.append({
-                        "siteId": sid,
-                        "unidade": sname,
-                        "uf": "MG",
-                        "statusEstoque": "disponivel",
-                        "motivo": "Vacinação ativa pela PBH com ampliação programada.",
-                        "previsaoFutura": "Ampliação para todas as PVHA independente de contagem de CD4.",
-                        "fonte": it["link"]
-                    })
+        # 2. Belo Horizonte (Hospitais e Centros de Referência por ID com menção explícita)
+        if any(term in texto for term in ["belo horizonte", "pbh"]):
+            mg_catalog = [
+                ("mg-1", "Hospital Eduardo de Menezes", ["eduardo de menezes", "fhemig"]),
+                ("mg-2", "URS Centro-Sul / Serviço de Saúde do Viajante", ["centro-sul", "viajante"]),
+                ("mg-3", "CTA / SAE Sagrada Família", ["sagrada família", "sagrada familia"]),
+                ("mg-4", "CTR Orestes Diniz", ["orestes diniz"]),
+                ("mg-5", "CRIE Hospital Odilon Behrens", ["odilon behrens", "hob"])
+            ]
+            for sid, sname, tokens in mg_catalog:
+                if any(t in texto for t in tokens):
+                    if is_reabastecimento or any(p in texto for p in ["vacina", "amplia", "doses"]):
+                        alteracoes.append({
+                            "siteId": sid,
+                            "unidade": sname,
+                            "uf": "MG",
+                            "statusEstoque": "disponivel",
+                            "motivo": f"Vacinação ativa na unidade {sname} segundo informe da PBH/SES-MG.",
+                            "previsaoFutura": "Ampliação para todas as PVHA independente de contagem de CD4.",
+                            "fonte": it["link"]
+                        })
 
-        # 3. São Paulo (SAEs e CRIEs por ID)
+        # 3. São Paulo (SAEs e CRIEs com menção explícita)
         if any(term in texto for term in ["são paulo", "saopaulo", "sp recebe", "cidade de sp"]):
-            if is_reabastecimento or any(p in texto for p in ["recebe novas doses", "mil novas doses", "distribuição de doses"]):
-                for sid, sname in [
-                    ("sp-1", "Centro de Referência e Treinamento DST/Aids-SP (CRT DST/Aids)"),
-                    ("sp-2", "CTA Henfil"),
-                    ("sp-3", "SAE Campos Elíseos"),
-                    ("sp-4", "CRIE Hospital das Clínicas / Emílio Ribas"),
-                    ("sp-5", "SAE Lapa — Paulo César Bonfim")
-                ]:
-                    alteracoes.append({
-                        "siteId": sid,
-                        "unidade": sname,
-                        "uf": "SP",
-                        "statusEstoque": "disponivel",
-                        "motivo": "Recebimento e distribuição de novo lote de doses da vacina MVA-BN aos SAEs e CRIEs.",
-                        "previsaoFutura": "Doses de primeira aplicação ativas. Segunda dose recomendada a partir de 28 dias.",
-                        "fonte": it["link"]
-                    })
+            sp_catalog = [
+                ("sp-1", "Centro de Referência e Treinamento DST/Aids-SP (CRT DST/Aids)", ["crt", "santa cruz"]),
+                ("sp-2", "CTA Henfil", ["henfil"]),
+                ("sp-3", "SAE Campos Elíseos", ["campos elíseos", "campos eliseos"]),
+                ("sp-4", "CRIE Hospital das Clínicas / Emílio Ribas", ["emílio ribas", "emilio ribas", "hospital das clínicas", "hc"]),
+                ("sp-5", "SAE Lapa — Paulo César Bonfim", ["lapa", "bonfim"])
+            ]
+            for sid, sname, tokens in sp_catalog:
+                if any(t in texto for t in tokens):
+                    if is_reabastecimento or any(p in texto for p in ["recebe novas doses", "mil novas doses", "distribuição"]):
+                        alteracoes.append({
+                            "siteId": sid,
+                            "unidade": sname,
+                            "uf": "SP",
+                            "statusEstoque": "disponivel",
+                            "motivo": f"Recebimento e disponibilização de doses no polo {sname}.",
+                            "previsaoFutura": "Doses de primeira aplicação ativas. Segunda dose recomendada a partir de 28 dias.",
+                            "fonte": it["link"]
+                        })
 
         if "cevaa" in texto or "álvaro aguiar" in texto:
             alteracoes.append({
@@ -455,13 +467,32 @@ def update_sites_and_alerts_from_report(analise, output_dir):
                     elif "campos elíseos" in alt_unit and "campos elíseos" in s_name:
                         matches_unit = True
 
+                # Validação de Segurança e Explicitude:
+                # Uma unidade só pode transicionar para 'disponivel' se:
+                # a) O 'motivo' ou o texto da alteração citar expressamente a unidade ou seu identificador
+                # b) Não for uma alteração genérica de estado/município
                 if matches_id or matches_unit:
-                    if new_status and s.get("statusEstoque") != new_status:
+                    s_name_lower = s.get("nomeUnidade", "").lower()
+                    motivo_lower = (motivo or "").lower()
+                    unit_explicitly_mentioned = (
+                        matches_id or
+                        any(token in motivo_lower for token in [
+                            "botafogo", "nova américa", "campo grande", "cevaa", "álvaro aguiar",
+                            "eduardo de menezes", "sagrada família", "crt", "henfil", "campos elíseos",
+                            "emílio ribas", "clínicas", "lapa", "campinas", "cemetron", "huoc"
+                        ])
+                    )
+
+                    # Regra de Ouro: Notícia genérica não pode ativar 'disponivel' sem menção explícita
+                    if new_status == "disponivel" and not unit_explicitly_mentioned:
+                        print(f"ℹ️ [Validador] Ignorando status 'disponivel' para '{s.get('nomeUnidade')}' - sem menção nominal explícita no comunicado.")
+                    elif new_status and s.get("statusEstoque") != new_status:
                         s["statusEstoque"] = new_status
                         s["dataAtualizacaoStatus"] = today_str
                         if motivo:
                             s["notaStatus"] = motivo
                         updated = True
+
                     # Preservar URLs oficiais já verificadas contra substituição por links transitórios do Google News
                     if fonte and fonte.startswith("http") and not ("news.google.com" in fonte) and s.get("fonteStatus") != fonte:
                         s["fonteStatus"] = fonte

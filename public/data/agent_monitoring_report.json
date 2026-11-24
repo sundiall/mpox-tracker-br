@@ -1,24 +1,15 @@
 {
-  "timestamp": "2026-11-23T21:59:39.954173",
-  "totalItensVarredura": 51,
+  "timestamp": "2026-11-23T22:07:32.438114",
+  "totalItensVarredura": 48,
   "analiseAgente": {
     "alteracoesEstoque": [
-      {
-        "siteId": "rj-2",
-        "unidade": "Super Centro Carioca de Vacinação — Botafogo",
-        "uf": "RJ",
-        "statusEstoque": "disponivel",
-        "motivo": "Única unidade na capital com doses remanescentes ativas após o esgotamento nos demais postos.",
-        "previsaoFutura": "Ministério da Saúde enviou remessa emergencial de 1.000 frascos para reabastecimento municipal.",
-        "fonte": "Prefeitura da Cidade do Rio de Janeiro"
-      },
       {
         "siteId": "rj-3",
         "unidade": "Super Centro Carioca de Vacinação — Zona Norte (Shopping Nova América)",
         "uf": "RJ",
         "statusEstoque": "esgotado",
-        "motivo": "Aplicação suspensa temporariamente devido ao término total das doses disponíveis.",
-        "previsaoFutura": "Aguardando redistribuição interna do novo lote de 1.000 frascos enviado pelo Ministério da Saúde.",
+        "motivo": "Aplicação suspensa pela Prefeitura do Rio devido ao desabastecimento de doses no local.",
+        "previsaoFutura": "Aguardando novo repasse federal para reabertura de postos periféricos.",
         "fonte": "O GLOBO"
       },
       {
@@ -26,46 +17,55 @@
         "unidade": "Super Centro Carioca de Vacinação — Zona Oeste (ParkShopping Campo Grande)",
         "uf": "RJ",
         "statusEstoque": "esgotado",
-        "motivo": "Atendimento suspenso após o término das doses alocadas à unidade.",
-        "previsaoFutura": "Previsão de retomada com o repasse das novas doses federais recebidas pelo município.",
+        "motivo": "Aplicação de imunizantes suspensa por falta de doses na unidade.",
+        "previsaoFutura": "Sem previsão imediata de envio de doses a esta unidade descentralizada.",
         "fonte": "O GLOBO"
       },
       {
-        "siteId": "sp-1",
-        "unidade": "CRT DST/Aids-SP",
-        "uf": "SP",
+        "siteId": "rj-2",
+        "unidade": "Super Centro Carioca de Vacinação — Botafogo",
+        "uf": "RJ",
         "statusEstoque": "disponivel",
-        "motivo": "Início da distribuição e aplicação do novo lote de mil doses repassado pela Secretaria de Estado da Saúde.",
-        "previsaoFutura": "Atendimento direcionado aos grupos prioritários vigentes estabelecidos pelo Ministério da Saúde.",
-        "fonte": "Secretaria de Estado da Saúde de São Paulo / G1"
+        "motivo": "Concentração da aplicação das doses restantes e remessa adicional de mil frascos enviada pelo Ministério da Saúde.",
+        "previsaoFutura": "Atendimento focado nos grupos prioritários estabelecidos pelo Ministério da Saúde.",
+        "fonte": "Governo Federal / O GLOBO"
+      },
+      {
+        "siteId": "",
+        "unidade": "Rede de Imunização do Estado de São Paulo",
+        "uf": "SP",
+        "statusEstoque": "em_abastecimento",
+        "motivo": "Início da distribuição de lote de 1.000 doses recebidas do Ministério da Saúde a partir de 23 de novembro.",
+        "previsaoFutura": "Aplicação direcionada a grupos prioritários e pessoas vivendo com HIV/aids com imunossupressão.",
+        "fonte": "G1 / Governo do Estado de SP"
       }
     ],
     "novosMarcos": [
       {
-        "titulo": "Início da Distribuição e Aplicação de Novo Lote de Vacinas em São Paulo",
+        "titulo": "Aquisição emergencial de 25 mil doses de vacina contra mpox pelo Ministério da Saúde",
         "dataEstimada": "2026-11",
         "categoria": "vacina",
-        "descricao": "Estado de São Paulo inicia a distribuição e aplicação de remessa emergencial com mil novas doses de imunizante contra mpox para grupos prioritários."
+        "descricao": "Ministério da Saúde concretizou aquisição e tratativas internacionais junto à OPAS para suprir o desabastecimento em estados com alta transmissão."
       },
       {
-        "titulo": "Aquisição Federal de Remessa com 25 Mil Doses de Imunizantes",
+        "titulo": "Distribuição de novo lote de vacinas contra mpox em SP e RJ",
         "dataEstimada": "2026-11",
         "categoria": "vacina",
-        "descricao": "Ministério da Saúde estrutura distribuição nacional de 25 mil doses para mitigar o desabastecimento nos estados com maior incidência."
+        "descricao": "Início do repasse e aplicação das remessas de mil frascos/doses para o Estado de São Paulo e o Município do Rio de Janeiro."
       }
     ],
     "alertasUrgentes": [
       {
-        "titulo": "Vacinação contra Mpox no Rio de Janeiro restrita a Botafogo",
+        "titulo": "Centralização de vacinação contra mpox no Rio de Janeiro",
         "tipo": "disponibilidade_vacina",
-        "resumo": "Após aplicação de mais de 7 mil doses, os postos de Nova América e Campo Grande suspenderam a vacinação; apenas o Super Centro de Botafogo segue aplicando.",
-        "linkOficial": "https://prefeitura.rio/saude/vacina-contra-mpox-segue-disponivel-apenas-no-super-centro-de-botafogo/"
+        "resumo": "Prefeitura do Rio suspendeu a aplicação nos centros dos shoppings Nova América e Campo Grande por escassez de doses, mantendo atendimento centralizado na unidade Botafogo.",
+        "linkOficial": "https://oglobo.globo.com/saude/noticia/2026/11/23/mpox-prefeitura-do-rio-suspende-vacinacao-em-dois-centros-de-saude-veja-onde-ainda-ha-doses.ghtml"
       },
       {
-        "titulo": "São Paulo inicia distribuição de vacinas contra Mpox para grupos prioritários",
+        "titulo": "Início da distribuição de 1.000 doses da vacina contra mpox em SP",
         "tipo": "disponibilidade_vacina",
-        "resumo": "Governo do Estado de SP iniciou nesta segunda-feira (23/11) a distribuição do lote com mil doses aos serviços de referência da rede pública.",
-        "linkOficial": "https://www.saopaulo.sp.gov.br"
+        "resumo": "São Paulo iniciou a distribuição das doses recebidas do Ministério da Saúde para imunização de públicos de maior vulnerabilidade clínica.",
+        "linkOficial": "https://g1.globo.com/sp/sao-paulo/noticia/2026/11/23/mpox-vacina-contra-a-doenca-comeca-a-ser-distribuida-em-sp-nesta-segunda-veja-quem-pode-tomar.ghtml"
       }
     ]
   }
