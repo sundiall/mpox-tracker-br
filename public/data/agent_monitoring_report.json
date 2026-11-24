@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-11-24T01:54:18.070852",
-  "totalItensVarredura": 51,
+  "timestamp": "2026-11-24T02:04:48.626520",
+  "totalItensVarredura": 47,
   "analiseAgente": {
     "alteracoesEstoque": [
       {
@@ -29,6 +29,24 @@
         "motivo": "Vacinação ativa/reabastecida segundo comunicado oficial.",
         "previsaoFutura": "Doses ativas para os grupos prioritários elegíveis.",
         "fonte": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNSkYzc1Jsbm1KZFk2TXJxYVhJVGd6YmpGZEktc05fWU9weXYtcDFzTGJScFI1SGh6bC1OSWt6VFhqNlJsWlZ0SzhTZFJDVzZTMWJyV0NNcDFJcmpYblpBZVJKV0NJcnJrX3lybjVsVERZdDllWl9sNHFlanpwSXhySFo0MVo5bXhRMGt6OHJzVGFBaEp0T29sS2lsRQ?oc=5"
+      },
+      {
+        "siteId": "rj-3",
+        "unidade": "Super Centro Carioca de Vacinação — Zona Norte (Shopping Nova América)",
+        "uf": "RJ",
+        "statusEstoque": "disponivel",
+        "motivo": "Vacinação ativa/reabastecida segundo comunicado oficial.",
+        "previsaoFutura": "Doses ativas para os grupos prioritários elegíveis.",
+        "fonte": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxORkFocy1paUFwNWpCNXJJcTR3YWxYSTRqajk4QWxKa3VZS0lYa2RwbXVhWllYQ0dZY1NXWjYzT2JNWGJFeXlfSmh1dVFiR21ZYlVWQnB4bkJMX3ZCbG5yWGllZTZuRk5TM2x1bU1EVzdELTE0aEJyV2RyempMV3NVb2J5Q21ja3p3dzZXd1NsM3F0UU1ua2Y0VlZrZmJleHFYSzVqalNTT0N0RGloZWpsc2ZNUzZqaW1CVmlGeUN3UGM4THF2TXVoZlFydU1oSkJK?oc=5"
+      },
+      {
+        "siteId": "sp-5",
+        "unidade": "SAE Lapa — Paulo César Bonfim",
+        "uf": "SP",
+        "statusEstoque": "disponivel",
+        "motivo": "Vacinação ativa/reabastecida segundo comunicado oficial.",
+        "previsaoFutura": "Doses ativas para os grupos prioritários elegíveis.",
+        "fonte": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxORkFocy1paUFwNWpCNXJJcTR3YWxYSTRqajk4QWxKa3VZS0lYa2RwbXVhWllYQ0dZY1NXWjYzT2JNWGJFeXlfSmh1dVFiR21ZYlVWQnB4bkJMX3ZCbG5yWGllZTZuRk5TM2x1bU1EVzdELTE0aEJyV2RyempMV3NVb2J5Q21ja3p3dzZXd1NsM3F0UU1ua2Y0VlZrZmJleHFYSzVqalNTT0N0RGloZWpsc2ZNUzZqaW1CVmlGeUN3UGM4THF2TXVoZlFydU1oSkJK?oc=5"
       },
       {
         "siteId": "sp-5",
@@ -163,10 +181,10 @@
         "linkOficial": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNeDd1bEdoVFJQN1Y4OWFvZ3R2SVVhQ1drNk5WWmFQelgxenJkQTFLdlFNaC1WamlROVFsX192WF9KdFljNkdUN0t5UTNWeVFLa2hSSFo5NXQtcGRpaC1fbnB4Q0lLelBYQUNtMjJJYjJaaXFuTmJkdnN4YWpBRmkwcVhhT29jQ0dVTmlpN09JbTlqN1BPcUVPN1NUaGdPa3l0OVEtNmFOMnVqWnhUTmNNdjlORnM4Mnl6SDhqR1ZHSmRyNHpvTHN2cDBEbk9YNFZCLUNKMm54ZFR6Nkk?oc=5"
       },
       {
-        "titulo": "São Paulo recebe mil novas doses da vacina contra a Mpox - agenciasp.sp.gov.br",
+        "titulo": "Vacina contra a Mpox começa a ser distribuída no Brasil; saiba quem pode receber - URB News",
         "tipo": "disponibilidade_vacina",
-        "resumo": "São Paulo recebe mil novas doses da vacina contra a Mpox&nbsp;&nbsp;agenciasp.sp.gov.br",
-        "linkOficial": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNSkYzc1Jsbm1KZFk2TXJxYVhJVGd6YmpGZEktc05fWU9weXYtcDFzTGJScFI1SGh6bC1OSWt6VFhqNlJsWlZ0SzhTZFJDVzZTMWJyV0NNcDFJcmpYblpBZVJKV0NJcnJrX3lybjVsVERZdDllWl9sNHFlanpwSXhySFo0MVo5bXhRMGt6OHJzVGFBaEp0T29sS2lsRQ?oc=5"
+        "resumo": "Vacina contra a Mpox começa a ser distribuída no Brasil; saiba quem pode receber&nbsp;&nbsp;URB News",
+        "linkOficial": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQOEx3ME1wSVVmc3RnY183Y0s0VTBBOVpqNXRPVVN1dnQ0aGNHMWtJampjZzQ1MGdMV1lndWZ5dmR4RkpsVWtmMTE2SHdVZjJKaWx0dTFLcHIxU2RaZWV6ZmhrT0RYQzI2cmJnaVJxWVJkcGRMLXZOMHdUcUVIYkVseFhsNy1fdjBNLUlRVzBydEdTd294Qnc2eTEwWGdXUFFweHlhdWFwWjVkc2VYUmpsMUVLOXFOQQ?oc=5"
       }
     ]
   }
