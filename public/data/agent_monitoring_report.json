@@ -1,22 +1,65 @@
 {
-  "timestamp": "2026-11-24T02:21:36.786236",
-  "totalItensVarredura": 27,
+  "timestamp": "2026-11-24T02:27:44.758191",
+  "totalItensVarredura": 28,
   "analiseAgente": {
-    "alteracoesEstoque": [],
+    "alteracoesEstoque": [
+      {
+        "siteId": "rj-1",
+        "unidade": "Instituto Nacional de Infectologia Evandro Chagas (CRIE / INI / Fiocruz)",
+        "uf": "RJ",
+        "statusEstoque": "esgotado",
+        "motivo": "Esgotamento ou suspensão explícita de doses noticiada em comunicado oficial.",
+        "previsaoFutura": "Aguardando envio e redistribuição de novos lotes pelo Ministério da Saúde.",
+        "fonte": "https://news.google.com/rss/articles/CBMif0FVX3lxTE92ODNoYXJXWTlxbHYyQTZ1Z0JBSzVZTFBPV2RmVE50NTZhajVOODNndG42Ul9wRXNxSGsyTTFVQk1WeVRlc19FSnB5eXU1OW1yeHgyczlWQlJTdkVNUU1nc1Z4R2pCMEtwSWtUY0VDTlJuaU5aZ3lMeExkNl9rSnM?oc=5"
+      },
+      {
+        "siteId": "rj-2",
+        "unidade": "Super Centro Carioca de Vacinação — Botafogo",
+        "uf": "RJ",
+        "statusEstoque": "esgotado",
+        "motivo": "Esgotamento ou suspensão explícita de doses noticiada em comunicado oficial.",
+        "previsaoFutura": "Aguardando envio e redistribuição de novos lotes pelo Ministério da Saúde.",
+        "fonte": "https://news.google.com/rss/articles/CBMif0FVX3lxTE92ODNoYXJXWTlxbHYyQTZ1Z0JBSzVZTFBPV2RmVE50NTZhajVOODNndG42Ul9wRXNxSGsyTTFVQk1WeVRlc19FSnB5eXU1OW1yeHgyczlWQlJTdkVNUU1nc1Z4R2pCMEtwSWtUY0VDTlJuaU5aZ3lMeExkNl9rSnM?oc=5"
+      },
+      {
+        "siteId": "rj-3",
+        "unidade": "Super Centro Carioca de Vacinação — Zona Norte (Shopping Nova América)",
+        "uf": "RJ",
+        "statusEstoque": "esgotado",
+        "motivo": "Esgotamento ou suspensão explícita de doses noticiada em comunicado oficial.",
+        "previsaoFutura": "Aguardando envio e redistribuição de novos lotes pelo Ministério da Saúde.",
+        "fonte": "https://news.google.com/rss/articles/CBMif0FVX3lxTE92ODNoYXJXWTlxbHYyQTZ1Z0JBSzVZTFBPV2RmVE50NTZhajVOODNndG42Ul9wRXNxSGsyTTFVQk1WeVRlc19FSnB5eXU1OW1yeHgyczlWQlJTdkVNUU1nc1Z4R2pCMEtwSWtUY0VDTlJuaU5aZ3lMeExkNl9rSnM?oc=5"
+      },
+      {
+        "siteId": "rj-4",
+        "unidade": "Super Centro Carioca de Vacinação — Zona Oeste (ParkShopping Campo Grande)",
+        "uf": "RJ",
+        "statusEstoque": "esgotado",
+        "motivo": "Esgotamento ou suspensão explícita de doses noticiada em comunicado oficial.",
+        "previsaoFutura": "Aguardando envio e redistribuição de novos lotes pelo Ministério da Saúde.",
+        "fonte": "https://news.google.com/rss/articles/CBMif0FVX3lxTE92ODNoYXJXWTlxbHYyQTZ1Z0JBSzVZTFBPV2RmVE50NTZhajVOODNndG42Ul9wRXNxSGsyTTFVQk1WeVRlc19FSnB5eXU1OW1yeHgyczlWQlJTdkVNUU1nc1Z4R2pCMEtwSWtUY0VDTlJuaU5aZ3lMeExkNl9rSnM?oc=5"
+      },
+      {
+        "siteId": "rj-5",
+        "unidade": "Centro Especial de Vacinação Dr. Álvaro Aguiar (CEVAA)",
+        "uf": "RJ",
+        "statusEstoque": "esgotado",
+        "motivo": "Esgotamento ou suspensão explícita de doses noticiada em comunicado oficial.",
+        "previsaoFutura": "Aguardando envio e redistribuição de novos lotes pelo Ministério da Saúde.",
+        "fonte": "https://news.google.com/rss/articles/CBMif0FVX3lxTE92ODNoYXJXWTlxbHYyQTZ1Z0JBSzVZTFBPV2RmVE50NTZhajVOODNndG42Ul9wRXNxSGsyTTFVQk1WeVRlc19FSnB5eXU1OW1yeHgyczlWQlJTdkVNUU1nc1Z4R2pCMEtwSWtUY0VDTlJuaU5aZ3lMeExkNl9rSnM?oc=5"
+      },
+      {
+        "siteId": "rj-2",
+        "unidade": "Super Centro Carioca de Vacinação — Botafogo",
+        "uf": "RJ",
+        "statusEstoque": "disponivel",
+        "motivo": "Vacinação ativa/reabastecida segundo comunicado oficial.",
+        "previsaoFutura": "Doses ativas para os grupos prioritários elegíveis.",
+        "fonte": "https://prefeitura.rio/saude/vacina-contra-mpox-segue-disponivel-apenas-no-super-centro-de-botafogo/"
+      }
+    ],
     "novosMarcos": [],
     "alertasUrgentes": [
-      {
-        "titulo": "Mpox: vacina contra a doença começa a ser distribuída em SP nesta segunda; veja quem pode tomar - G1",
-        "tipo": "disponibilidade_vacina",
-        "resumo": "Mpox: vacina contra a doença começa a ser distribuída em SP nesta segunda; veja quem pode tomar&nbsp;&nbsp;G1",
-        "linkOficial": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxOVHJTeUtFNlE1anVZZGd0Ym00bGstSDJqRDFHdUJEcHFOZmJsTDl1WVBHWlIxYnRualVuN2RJYUNMdEZKMm1VR3FSWDM4RXRva2RLdXNqSS0tYXhrOS1BU1FKVW1NMFlzZlRpNjRvdDg0R1JwREhtM0tMOFBud1VjTkxQWm9kdUtsNmJiU3pHX24zVl9mb1BreXhuaDVkSjU3UkRsXzg4bVRxMWJSLWpiVjRBS1MySUZ5aGFPTFlYWDNYR1gzNkZlRWs4V250MUliRlRwTTI4NnhVTmRzekRFalZVMHZXbnfSAfYBQVVfeXFMTXJCZmJ3c3IxLXk3NnltTVc4S1drbXZHNEFHdUlVOW1SYW5VNGs5T3ZvaVhFXzNSU1QwVDNURklxYk5nS29ELWRLNGdNTnBXd3JSeXp5c200SGV1ZnlOS3ZKa0IyZ05Jb0ZGcDZoYW1oQ1FYNVF4SU5lUkI0WGxJc0lyNXU5YnVNOFFsa2xZYjR2eDA3S25VdlRma3drSTN0Y1NLSWRHYmRhcC1MU2FnQjdoT09IUTlGdV9QQjJ1RUlqX3ZMMl9iNG4tYnp6anRZRnZrMjVQY2M4a3NoeTdnVER0QWU0Qjh0Z0tIcnkzYm1LUC1RZDZ3?oc=5"
-      },
-      {
-        "titulo": "São Paulo começa a distribuir vacina contra Mpox nesta segunda (23) - CNN Brasil",
-        "tipo": "disponibilidade_vacina",
-        "resumo": "São Paulo começa a distribuir vacina contra Mpox nesta segunda (23)&nbsp;&nbsp;CNN Brasil",
-        "linkOficial": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPOTNKSmUyaUFiWHZIRUZiQ1R6aGNaOW1GVm5uRWVwSWZoTjQ4NzU3STF5dDF5OXRkWHNxczBKZ1BvZE40QnhfY09FRmdjR3RzdWJlNlVReGhsYlNGQmdGZy1RWmVsbWE2QUlKVldkVTNSLUZ0UjlpWWZJaldqOHpLQXVodGlZVldjTE9VNDhPM2NFdENhak9lS3ZHNmxqWG9OLXdz?oc=5"
-      },
       {
         "titulo": "SP ganha novas doses da vacina contra a mpox; saiba quem pode receber - Agência Brasil",
         "tipo": "disponibilidade_vacina",
@@ -30,16 +73,28 @@
         "linkOficial": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQbl9qdXR0TUdTNkZIT2JIU0dOeEd5Y1VDSE5YZ0pZaGhHWTVWNFFtMEdYS2pDQXFTWURiRkh4TEdHaHd5Z19tWDRtSmYtRnBhR0VFZkJLNWdua1U0WUUta2RER0Vma25vV0lkb3RDNU1pdG5UU0ZUNER2WHM1dFRNdFhjUE1uQTJNeFNkTl9WSHR2YzVVTl9naVJJSDRIZFFvNnZxY3JuOFAwRklNdGVLZlFjXzZJbFU2cWxnMUVEcEhaNUkxQ2w0cVoxZE1OSDFiOFpuNGtobHphVllkNVhsTw?oc=5"
       },
       {
-        "titulo": "Estado de São Paulo começa a aplicar vacina contra mpox; saiba quem pode receber - Folha de S.Paulo",
-        "tipo": "disponibilidade_vacina",
-        "resumo": "Estado de São Paulo começa a aplicar vacina contra mpox; saiba quem pode receber&nbsp;&nbsp;Folha de S.Paulo",
-        "linkOficial": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNeDd1bEdoVFJQN1Y4OWFvZ3R2SVVhQ1drNk5WWmFQelgxenJkQTFLdlFNaC1WamlROVFsX192WF9KdFljNkdUN0t5UTNWeVFLa2hSSFo5NXQtcGRpaC1fbnB4Q0lLelBYQUNtMjJJYjJaaXFuTmJkdnN4YWpBRmkwcVhhT29jQ0dVTmlpN09JbTlqN1BPcUVPN1NUaGdPa3l0OVEtNmFOMnVqWnhUTmNNdjlORnM4Mnl6SDhqR1ZHSmRyNHpvTHN2cDBEbk9YNFZCLUNKMm54ZFR6Nkk?oc=5"
-      },
-      {
         "titulo": "São Paulo recebe mil novas doses da vacina contra a Mpox - agenciasp.sp.gov.br",
         "tipo": "disponibilidade_vacina",
         "resumo": "São Paulo recebe mil novas doses da vacina contra a Mpox&nbsp;&nbsp;agenciasp.sp.gov.br",
         "linkOficial": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNSkYzc1Jsbm1KZFk2TXJxYVhJVGd6YmpGZEktc05fWU9weXYtcDFzTGJScFI1SGh6bC1OSWt6VFhqNlJsWlZ0SzhTZFJDVzZTMWJyV0NNcDFJcmpYblpBZVJKV0NJcnJrX3lybjVsVERZdDllWl9sNHFlanpwSXhySFo0MVo5bXhRMGt6OHJzVGFBaEp0T29sS2lsRQ?oc=5"
+      },
+      {
+        "titulo": "18/11/2026 - São Paulo recebe mil novas doses da vacina contra a Mpox - Secretaria de Estado da Saúde de São Paulo",
+        "tipo": "disponibilidade_vacina",
+        "resumo": "18/11/2026 - São Paulo recebe mil novas doses da vacina contra a Mpox&nbsp;&nbsp;Secretaria de Estado da Saúde de São Paulo",
+        "linkOficial": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxORkFocy1paUFwNWpCNXJJcTR3YWxYSTRqajk4QWxKa3VZS0lYa2RwbXVhWllYQ0dZY1NXWjYzT2JNWGJFeXlfSmh1dVFiR21ZYlVWQnB4bkJMX3ZCbG5yWGllZTZuRk5TM2x1bU1EVzdELTE0aEJyV2RyempMV3NVb2J5Q21ja3p3dzZXd1NsM3F0UU1ua2Y0VlZrZmJleHFYSzVqalNTT0N0RGloZWpsc2ZNUzZqaW1CVmlGeUN3UGM4THF2TXVoZlFydU1oSkJK?oc=5"
+      },
+      {
+        "titulo": "PBH inicia vacinação contra mpox para grupos prioritários e imunização será ampliada nesta quinta-feira (19) - Prefeitura de Belo Horizonte",
+        "tipo": "disponibilidade_vacina",
+        "resumo": "PBH inicia vacinação contra mpox para grupos prioritários e imunização será ampliada nesta quinta-feira (19)&nbsp;&nbsp;Prefeitura de Belo Horizonte",
+        "linkOficial": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxObGVKcUNXWjZlUTNZalFHaWNMbjJYdTR5aHZFeHd6WmNVSWt3ZTZOYVdSU3pEWGpkNGg1MzlCdFlVdjBnQWhRd0JIZWh4WF9NTjY1TkdUYjU2ZWY3M0dGZ0wyYTZJUld1TmQ2U1VPZWo4QlNQOTBGRE1JdnRWYnZ3aHlyallBRDNuYXA0NnFHRlpYbDVQc2c5T2NrS1lIWXBvZlpWcEJ6bVlvSld4ZWNJYWhDT0dDREFYSVo2dTZlUXhSb1pWVVN6ZQ?oc=5"
+      },
+      {
+        "titulo": "Mpox: Prefeitura do Rio suspende vacinação em dois centros de saúde; veja onde ainda há doses - O GLOBO",
+        "tipo": "disponibilidade_vacina",
+        "resumo": "Mpox: Prefeitura do Rio suspende vacinação em dois centros de saúde; veja onde ainda há doses&nbsp;&nbsp;O GLOBO",
+        "linkOficial": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOdDZ2LU56ZDQ4d2o3eWpSUVZlaUJ4M0ttX1dQcVJvN004aFdxR2dmRkM5Z0cyZHJyOUN1bnltd01lRGRIb2ZfeEVTTjBaOUUtMFVDdG41MVdZdks2OHJRLWJ6ZGdqV1FyT2VwUHgzN2JoU2xpdmpWZkE2VXVjcE5xU0hGbzVRVzcxbEtzMi13Q0l1WHVTSlU0bUNadkJSaE1ReG1oaU9XTmVqOWFrWF9HbjU5Qk8yRnZuTHhnejQ2Y0VQRW9ORllkZFF2dWNhZUZsMWt1Qk5DQll6ZXNhX0HSAewBQVVfeXFMUDhlNko0bjVDd2ZrN3YzV0ZPS0NPZGdEcFBjUHhsa0RKX04zWVFKbllvWGpBUmxkYUp4aUtqY3JlUDAzTHdRN0hxUnB5eFFiLXU5VnRHa0hhekNVM1FuRVR2aUZpeFowMF9FNE9jaTZxRG9rVzRuNkR6WEFVT1JwaE9KakZYWEZGYWxDeGp3b1hyYTVWTW5KMEgtTkZSQzNXS3BPY1RnYTl2Z3pOSzhCSUtyUVh5YnBpWmMxOUxmVTNrekF3RVJYZ0RSek10VFlUSlVCYTNuUkdzckNwWEhyVTh4elhNeFlLc0x6eEw?oc=5"
       }
     ]
   }
