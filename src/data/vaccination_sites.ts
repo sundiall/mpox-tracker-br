@@ -18,6 +18,7 @@ export interface VaccinationSite {
   statusEstoque?: VaccineAvailabilityStatus;
   dataAtualizacaoStatus?: string;
   notaStatus?: string;
+  fonteStatus?: string; // Link direto para a fonte oficial ou matéria da atualização
   previsaoFutura?: string; // Previsão de chegada de novos lotes, expansão de público ou datas de campanha
 }
 
@@ -42,6 +43,7 @@ export const vaccinationSites: VaccinationSite[] = [
     statusEstoque: 'em_abastecimento',
     dataAtualizacaoStatus: '2026-11-19',
     notaStatus: 'Em processo de recebimento de doses do novo lote federal de 1.000 frascos.',
+    fonteStatus: 'https://www.ini.fiocruz.br/ini-fiocruz-e-a-unidade-de-referencia-para-atendimento-de-casos-de-mpox-com-atendimento-24h-todos-os-dias/',
     previsaoFutura: 'Previsão de reposição com fracionamento do novo lote federal repassado ao município do Rio.'
   },
   {
@@ -62,6 +64,7 @@ export const vaccinationSites: VaccinationSite[] = [
     statusEstoque: 'disponivel',
     dataAtualizacaoStatus: '2026-11-19',
     notaStatus: 'Reabastecido com novo lote federal de 1.000 frascos (até 5.000 doses fracionadas). Vacinação ativa para PrEP e PVHA (CD4 < 200). Horário normalizado das 08h às 22h.',
+    fonteStatus: 'https://prefeitura.rio/saude/vacina-contra-mpox-segue-disponivel-apenas-no-super-centro-de-botafogo/',
     previsaoFutura: 'Vacinação em andamento enquanto durarem os frascos do lote. Novos repasses federais previstos sob demanda da SMS-Rio.'
   },
   {
@@ -79,10 +82,11 @@ export const vaccinationSites: VaccinationSite[] = [
     agendamento: 'Livre Demanda',
     observacoes: 'Ponto estratégico de vacinação na Zona Norte carioca para PrEP e populações prioritárias.',
     requisitos: 'Documento de identidade com foto, CPF e receita/laudo de PrEP recente (até 6 meses).',
-    statusEstoque: 'disponivel',
-    dataAtualizacaoStatus: '2026-11-19',
-    notaStatus: 'Reabastecido com novo lote de vacinas. Atendimento normalizado nos horários do shopping para grupos prioritários elegíveis.',
-    previsaoFutura: 'Horário estendido no centro comercial (seg-sáb 10h-22h, dom 13h-21h) para atendimento aos usuários em PrEP.'
+    statusEstoque: 'esgotado',
+    dataAtualizacaoStatus: '2026-11-23',
+    notaStatus: 'Aplicação temporariamente descontinuada na unidade, com doses restantes centralizadas no Super Centro de Botafogo.',
+    fonteStatus: 'https://prefeitura.rio/saude/vacina-contra-mpox-segue-disponivel-apenas-no-super-centro-de-botafogo/',
+    previsaoFutura: 'Reabertura e descentralização dependem do repasse de novos lotes pelo Ministério da Saúde.'
   },
   {
     id: 'rj-4',
@@ -99,10 +103,11 @@ export const vaccinationSites: VaccinationSite[] = [
     agendamento: 'Livre Demanda',
     observacoes: 'Ponto de referência para a Zona Oeste para vacinação contra Mpox.',
     requisitos: 'Documento oficial com foto, cartão SUS e comprovação de PrEP (receita até 6 meses) ou indicação médica.',
-    statusEstoque: 'disponivel',
-    dataAtualizacaoStatus: '2026-11-19',
-    notaStatus: 'Reabastecido pela SMS-Rio com nova remessa federal. Doses ativas para usuários de PrEP e pessoas com imunossupressão.',
-    previsaoFutura: 'Atendimento no shopping com aplicação da dose de 0,1 mL intradérmica para os grupos prioritários.'
+    statusEstoque: 'esgotado',
+    dataAtualizacaoStatus: '2026-11-23',
+    notaStatus: 'Serviço suspenso no polo regional, com imunização restrita à unidade de Botafogo.',
+    fonteStatus: 'https://prefeitura.rio/saude/vacina-contra-mpox-segue-disponivel-apenas-no-super-centro-de-botafogo/',
+    previsaoFutura: 'Aguardando envio de quantitativo adicional de doses para retomada do ponto na Zona Oeste.'
   },
   {
     id: 'rj-5',
@@ -122,6 +127,7 @@ export const vaccinationSites: VaccinationSite[] = [
     statusEstoque: 'em_abastecimento',
     dataAtualizacaoStatus: '2026-11-19',
     notaStatus: 'Em processo de reabastecimento pela rede municipal com a chegada do novo lote.',
+    fonteStatus: 'https://prefeitura.rio/saude/vacina-contra-mpox-segue-disponivel-apenas-no-super-centro-de-botafogo/',
     previsaoFutura: 'Previsão de retorno da vacinação na Cinelândia assim que concluída a distribuição interna dos frascos.'
   },
 
@@ -142,9 +148,10 @@ export const vaccinationSites: VaccinationSite[] = [
     observacoes: 'Maior centro especializado de SP. Aplicação de dose fracionada e plena. Abastecido com novo lote de 1.000 doses.',
     requisitos: 'Documento oficial com foto, cartão SUS e comprovante de critério clínico (PrEP ou PVHA).',
     statusEstoque: 'disponivel',
-    dataAtualizacaoStatus: '2026-11-19',
-    notaStatus: 'Lote de 1.000 doses distribuído pela SES/SMS. Vacinação ativa para PrEP e PVHA elegíveis.',
-    previsaoFutura: 'Doses de D1 ativas. D2 prevista a partir de 28 dias para consolidação imunológica.'
+    dataAtualizacaoStatus: '2026-11-23',
+    notaStatus: 'Novo lote estadual de 1.000 doses recebido pelo Estado de SP em 18/11/2026, com 600 doses destinadas à capital. Distribuição aos SAEs iniciada em 23/11.',
+    fonteStatus: 'https://www.agenciasp.sp.gov.br/saude/sao-paulo-recebe-mil-novas-doses-da-vacina-contra-a-mpox/',
+    previsaoFutura: 'Doses ativas para usuários de PrEP e pessoas com HIV (CD4 < 200). Segunda dose a partir de 28 dias.'
   },
   {
     id: 'sp-2',
@@ -162,8 +169,9 @@ export const vaccinationSites: VaccinationSite[] = [
     observacoes: 'Polo de testagem rápida, acompanhamento de profilaxias e vacinação no centro paulistano.',
     requisitos: 'Documento com foto e cartão SUS.',
     statusEstoque: 'disponivel',
-    dataAtualizacaoStatus: '2026-11-19',
-    notaStatus: 'Doses disponíveis para grupos prioritários e usuários de PrEP.',
+    dataAtualizacaoStatus: '2026-11-23',
+    notaStatus: 'Novo lote estadual de 1.000 doses recebido pelo Estado de SP em 18/11/2026, com 600 doses destinadas à capital. Distribuição aos SAEs iniciada em 23/11.',
+    fonteStatus: 'https://www.agenciasp.sp.gov.br/saude/sao-paulo-recebe-mil-novas-doses-da-vacina-contra-a-mpox/',
     previsaoFutura: 'Atendimento contínuo no centro histórico enquanto houver disponibilidade do lote.'
   },
   {
@@ -182,8 +190,9 @@ export const vaccinationSites: VaccinationSite[] = [
     observacoes: 'Serviço de Atenção Especializada na região central de São Paulo com oferta de vacinação contra Mpox.',
     requisitos: 'Documento com foto, cartão SUS e laudo/receita de PrEP recente.',
     statusEstoque: 'disponivel',
-    dataAtualizacaoStatus: '2026-11-19',
-    notaStatus: 'Polo da rede municipal de SP abastecido com novo lote.',
+    dataAtualizacaoStatus: '2026-11-23',
+    notaStatus: 'Novo lote estadual de 1.000 doses recebido pelo Estado de SP em 18/11/2026, com 600 doses destinadas à capital. Distribuição aos SAEs iniciada em 23/11.',
+    fonteStatus: 'https://www.agenciasp.sp.gov.br/saude/sao-paulo-recebe-mil-novas-doses-da-vacina-contra-a-mpox/',
     previsaoFutura: 'Repasse municipal garantindo continuidade da profilaxia pré-exposição.'
   },
   {
@@ -202,8 +211,9 @@ export const vaccinationSites: VaccinationSite[] = [
     observacoes: 'Referência terciária para vacinação de contatos de risco, imunossuprimidos graves e laboratoristas.',
     requisitos: 'Encaminhamento médico com justificativa clínica, documento com foto e cartão SUS.',
     statusEstoque: 'disponivel',
-    dataAtualizacaoStatus: '2026-11-19',
-    notaStatus: 'Doses disponíveis para atendimento especializado e contatos de risco.',
+    dataAtualizacaoStatus: '2026-11-23',
+    notaStatus: 'Novo lote estadual de 1.000 doses recebido pelo Estado de SP em 18/11/2026. Atendimento para contatos de risco, imunossuprimidos e laboratoristas.',
+    fonteStatus: 'https://www.agenciasp.sp.gov.br/saude/sao-paulo-recebe-mil-novas-doses-da-vacina-contra-a-mpox/',
     previsaoFutura: 'Atendimento especializado para contatos diretos e laboratoristas encaminhados.'
   },
   {
@@ -222,8 +232,9 @@ export const vaccinationSites: VaccinationSite[] = [
     observacoes: 'Unidade de referência na Zona Oeste paulistana para acompanhamento de PrEP e imunização contra Mpox.',
     requisitos: 'Documento oficial com foto, cartão SUS e comprovação de PrEP.',
     statusEstoque: 'disponivel',
-    dataAtualizacaoStatus: '2026-11-19',
-    notaStatus: 'Atendimento e vacinação disponíveis para público elegível.',
+    dataAtualizacaoStatus: '2026-11-23',
+    notaStatus: 'Novo lote estadual de 1.000 doses recebido pelo Estado de SP em 18/11/2026, com 600 doses destinadas à capital. Distribuição aos SAEs iniciada em 23/11.',
+    fonteStatus: 'https://www.agenciasp.sp.gov.br/saude/sao-paulo-recebe-mil-novas-doses-da-vacina-contra-a-mpox/',
     previsaoFutura: 'Acolhimento na Zona Oeste com aplicação de doses fracionadas de 0,1 mL.'
   },
   {
@@ -242,8 +253,9 @@ export const vaccinationSites: VaccinationSite[] = [
     observacoes: 'Atendimento da Região Metropolitana de Campinas.',
     requisitos: 'Cartão SUS, comprovante de residência e documento com foto.',
     statusEstoque: 'disponivel',
-    dataAtualizacaoStatus: '2026-11-19',
-    notaStatus: 'Doses disponíveis mediante agendamento prévio na unidade.',
+    dataAtualizacaoStatus: '2026-11-23',
+    notaStatus: 'Distribuição regional da nova cota da SES-SP aos GVEs do interior (incluindo Região de Campinas) iniciada em 23/11/2026.',
+    fonteStatus: 'https://www.agenciasp.sp.gov.br/saude/sao-paulo-recebe-mil-novas-doses-da-vacina-contra-a-mpox/',
     previsaoFutura: 'Previsão de novas vagas de agendamento conforme liberação de lotes estaduais.'
   },
 
@@ -266,6 +278,7 @@ export const vaccinationSites: VaccinationSite[] = [
     statusEstoque: 'disponivel',
     dataAtualizacaoStatus: '2026-11-19',
     notaStatus: 'Vacinação iniciada pela Prefeitura de BH. Doses disponíveis das 08h às 16h.',
+    fonteStatus: 'https://www.saude.mg.gov.br/mpox/materiais/',
     previsaoFutura: 'A partir de 30/11: Ampliação geral para todas as pessoas vivendo com HIV/Aids (PVHA), independente de contagem de CD4 (campanha até 04/12).'
   },
   {
@@ -286,6 +299,7 @@ export const vaccinationSites: VaccinationSite[] = [
     statusEstoque: 'disponivel',
     dataAtualizacaoStatus: '2026-11-19',
     notaStatus: 'Doses disponíveis para retirada/aplicação na região Centro-Sul de BH.',
+    fonteStatus: 'https://www.saude.mg.gov.br/mpox/materiais/',
     previsaoFutura: 'Atendimento de seg a sex das 08h às 16h. Ampliação para todas as PVHA a partir de 30/11.'
   },
   {
@@ -306,6 +320,7 @@ export const vaccinationSites: VaccinationSite[] = [
     statusEstoque: 'disponivel',
     dataAtualizacaoStatus: '2026-11-19',
     notaStatus: 'Vacinação em andamento para grupos prioritários da PBH.',
+    fonteStatus: 'https://www.saude.mg.gov.br/mpox/materiais/',
     previsaoFutura: 'Doses ativas para PrEP e PVHA (CD4 < 200). A partir de 30/11: abertura irrestrita para todas as PVHA.'
   },
   {
@@ -326,6 +341,7 @@ export const vaccinationSites: VaccinationSite[] = [
     statusEstoque: 'disponivel',
     dataAtualizacaoStatus: '2026-11-19',
     notaStatus: 'Doses disponíveis para grupos prioritários.',
+    fonteStatus: 'https://www.saude.mg.gov.br/mpox/materiais/',
     previsaoFutura: 'Atendimento das 08h às 16h para pacientes acompanhados e PrEP. Ampliação geral a partir de 30/11.'
   },
   {
@@ -346,6 +362,7 @@ export const vaccinationSites: VaccinationSite[] = [
     statusEstoque: 'disponivel',
     dataAtualizacaoStatus: '2026-11-19',
     notaStatus: 'Referência especial da PBH ativa para laboratoristas e rede privada.',
+    fonteStatus: 'https://www.saude.mg.gov.br/mpox/materiais/',
     previsaoFutura: 'Atendimento à rede privada, SAE Unifenas e técnicos de laboratório. Ampliação para todas as PVHA em 30/11.'
   },
 
@@ -368,6 +385,7 @@ export const vaccinationSites: VaccinationSite[] = [
     statusEstoque: 'em_abastecimento',
     dataAtualizacaoStatus: '2026-11-19',
     notaStatus: 'Aguardando repasse da nova cota emergencial do Ministério da Saúde.',
+    fonteStatus: 'https://www.ce.gov.br/saude/download/notas-tecnicas/',
     previsaoFutura: 'Previsão de recebimento de cota proporcional do lote emergencial do Ministério da Saúde para reposição em Fortaleza.'
   },
 
@@ -390,6 +408,7 @@ export const vaccinationSites: VaccinationSite[] = [
     statusEstoque: 'em_abastecimento',
     dataAtualizacaoStatus: '2026-11-19',
     notaStatus: 'Aplicação nominal para casos regulados e contatos de risco.',
+    fonteStatus: 'https://www.saude.df.gov.br/w/vacina-contra-mpox-chega-a-rede-publica-de-saude-do-df',
     previsaoFutura: 'Previsão de abertura para usuários em PrEP no DF mediante liberação do novo lote centralizado do Ministério da Saúde.'
   },
   {
@@ -410,6 +429,7 @@ export const vaccinationSites: VaccinationSite[] = [
     statusEstoque: 'em_abastecimento',
     dataAtualizacaoStatus: '2026-11-19',
     notaStatus: 'Polo ambulatorial prioritário para dispensação da SES-DF.',
+    fonteStatus: 'https://www.saude.df.gov.br/w/vacina-contra-mpox-chega-a-rede-publica-de-saude-do-df',
     previsaoFutura: 'Polo prioritário para distribuição das novas remessas de vacina intradérmica (0,1 mL) da SES-DF.'
   },
 
@@ -432,6 +452,7 @@ export const vaccinationSites: VaccinationSite[] = [
     statusEstoque: 'em_abastecimento',
     dataAtualizacaoStatus: '2026-11-19',
     notaStatus: 'Fluxo centralizado via DIVE/SC para grupos de alta vulnerabilidade.',
+    fonteStatus: 'https://dive.saude.sc.gov.br/index.php/component/phocadownload/category/21-doencas-e-agravos/136-mpox?Itemid=101',
     previsaoFutura: 'Previsão de reposição de doses fracionadas pela DIVE/SC conforme cronograma de envio da SVSA/MS.'
   },
 
@@ -454,6 +475,7 @@ export const vaccinationSites: VaccinationSite[] = [
     statusEstoque: 'em_abastecimento',
     dataAtualizacaoStatus: '2026-11-19',
     notaStatus: 'Atendimento sob regulação da SESA-PR.',
+    fonteStatus: 'https://www.saude.pr.gov.br/Pagina/Mpox',
     previsaoFutura: 'Aguardando homologação de nova cota de vacina MVA-BN para distribuição pela SESA-PR.'
   },
   {
@@ -474,6 +496,7 @@ export const vaccinationSites: VaccinationSite[] = [
     statusEstoque: 'em_abastecimento',
     dataAtualizacaoStatus: '2026-11-19',
     notaStatus: 'Polo ambulatorial designado para PrEP na capital paranaense.',
+    fonteStatus: 'https://www.saude.pr.gov.br/Pagina/Mpox',
     previsaoFutura: 'Polo ambulatorial designado para aplicação fracionada (0,1 mL) a usuários de PrEP em Curitiba.'
   },
 
@@ -496,6 +519,7 @@ export const vaccinationSites: VaccinationSite[] = [
     statusEstoque: 'em_abastecimento',
     dataAtualizacaoStatus: '2026-11-19',
     notaStatus: 'Polo estadual do CEVS/RS para distribuição de imunobiológicos.',
+    fonteStatus: 'https://www.estado.rs.gov.br/secretaria-estadual-da-saude-confirma-primeiro-caso-de-mpox-em-2026-e-reforca-importancia-da-prevencao',
     previsaoFutura: 'Previsão de abastecimento prioritário pelo CEVS/RS com fracionamento de doses da remessa federal.'
   },
   {
@@ -516,6 +540,7 @@ export const vaccinationSites: VaccinationSite[] = [
     statusEstoque: 'em_abastecimento',
     dataAtualizacaoStatus: '2026-11-19',
     notaStatus: 'Polo de apoio na capital gaúcha.',
+    fonteStatus: 'https://www.estado.rs.gov.br/secretaria-estadual-da-saude-confirma-primeiro-caso-de-mpox-em-2026-e-reforca-importancia-da-prevencao',
     previsaoFutura: 'Unidade de referência na capital gaúcha para administração de doses a pacientes em acompanhamento.'
   },
 
@@ -538,6 +563,7 @@ export const vaccinationSites: VaccinationSite[] = [
     statusEstoque: 'em_abastecimento',
     dataAtualizacaoStatus: '2026-11-19',
     notaStatus: 'Referência de imunobiológicos para a Região Metropolitana do Recife.',
+    fonteStatus: 'https://portalcievs.saude.pe.gov.br/noticias/DOCUMENTOS/monkeypox',
     previsaoFutura: 'Aguardando envio de lote da SVSA/MS com destinação a usuários de PrEP e contatos pós-exposição na RMR.'
   },
   {
@@ -558,6 +584,7 @@ export const vaccinationSites: VaccinationSite[] = [
     statusEstoque: 'em_abastecimento',
     dataAtualizacaoStatus: '2026-11-19',
     notaStatus: 'Ambulatório municipal de IST/HIV preparado para aplicação.',
+    fonteStatus: 'https://portalcievs.saude.pe.gov.br/noticias/DOCUMENTOS/monkeypox',
     previsaoFutura: 'Polo ambulatorial metropolitano para dispensação orientada de doses pela SES-PE.'
   },
 
@@ -580,6 +607,7 @@ export const vaccinationSites: VaccinationSite[] = [
     statusEstoque: 'em_abastecimento',
     dataAtualizacaoStatus: '2026-11-19',
     notaStatus: 'Centro de referência para a Região Norte sob monitoramento da Agevisa-RO.',
+    fonteStatus: 'https://rondonia.ro.gov.br/publicacao/plano-de-contingencia-estadual-monkeypox/',
     previsaoFutura: 'Aguardando envio de nova remessa pelo Ministério da Saúde em resposta ao aumento de notificações na Região Norte.'
   },
 ];

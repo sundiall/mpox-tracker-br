@@ -19,9 +19,33 @@ fs.writeFileSync(
   'utf-8'
 );
 
+// Preservar alterações dinâmicas de status feitas pelo agente se já existirem
+const sitesJsonPath = path.join(outputDir, 'vaccination_sites.json');
+let sitesToExport = vaccinationSites;
+if (fs.existsSync(sitesJsonPath)) {
+  try {
+    const existing = JSON.parse(fs.readFileSync(sitesJsonPath, 'utf-8'));
+    if (Array.isArray(existing) && existing.length > 0) {
+      // Mesclar mantendo status dinâmico atualizado pelo agente
+      const statusMap = new Map(existing.map((s) => [s.id, {
+        statusEstoque: s.statusEstoque,
+        dataAtualizacaoStatus: s.dataAtualizacaoStatus,
+        notaStatus: s.notaStatus,
+        previsaoFutura: s.previsaoFutura
+      }]));
+      sitesToExport = vaccinationSites.map((s) => {
+        const dynamicData = statusMap.get(s.id);
+        return dynamicData ? { ...s, ...dynamicData, fonteStatus: s.fonteStatus } : s;
+      });
+    }
+  } catch (e) {
+    console.warn('Aviso ao mesclar vaccination_sites.json:', e);
+  }
+}
+
 fs.writeFileSync(
-  path.join(outputDir, 'vaccination_sites.json'),
-  JSON.stringify(vaccinationSites, null, 2),
+  sitesJsonPath,
+  JSON.stringify(sitesToExport, null, 2),
   'utf-8'
 );
 

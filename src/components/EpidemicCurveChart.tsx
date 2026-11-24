@@ -198,17 +198,28 @@ export const EpidemicCurveChart: FC<EpidemicCurveChartProps> = ({
   const lastParsed = lastPoint ? parseWeekNumber(lastPoint.semana) : null;
   const isLastWeekComplete = useMemo(() => {
     if (!lastParsed) return true;
-    return getEpidemiologicalWeekDateRange(lastParsed.year, lastParsed.week).isConcluida;
-  }, [lastParsed]);
+    // Se explicitamente marcado como preliminar em curso, nunca é consolidada
+    if (lastPoint?.statusConsolidacao === 'preliminar_em_curso') {
+      return false;
+    }
+    // A consolidação oficial do Sinan/MS ocorre na terça-feira seguinte (após o encerramento no sábado)
+    const range = getEpidemiologicalWeekDateRange(lastParsed.year, lastParsed.week);
+    const now = new Date();
+    // Considerar concluída e consolidada apenas após a terça-feira de consolidação (range.endDate + ~60h)
+    const consolidationDate = new Date(range.endDate.getTime() + 60 * 3600000);
+    return now.getTime() > consolidationDate.getTime();
+  }, [lastParsed, lastPoint]);
 
-  // Se a semana atual não terminou, calcula a tendência sem o último dado provisório
+  // Se a semana mais recente for preliminar ou não consolidada, exclui do cálculo do semáforo de tendência
   const seriesForTrend = useMemo(() => {
     if (!chartData || chartData.length < 3) return chartData;
-    if (!isLastWeekComplete) {
-      return chartData.slice(0, -1);
+    // Filtrar qualquer semana marcada com status preliminar
+    const filtered = chartData.filter((d) => d.statusConsolidacao !== 'preliminar_em_curso');
+    if (!isLastWeekComplete && filtered.length > 0 && filtered[filtered.length - 1].semana === lastPoint?.semana) {
+      return filtered.slice(0, -1);
     }
-    return chartData;
-  }, [chartData, isLastWeekComplete]);
+    return filtered;
+  }, [chartData, isLastWeekComplete, lastPoint]);
 
   // Semáforo epidemiológico de tendência calculando derivadas e deltas das últimas 3 e 5 semanas consolidadas
   const trend3s = useMemo(() => analyzeTrendWindow(seriesForTrend, 3), [seriesForTrend]);

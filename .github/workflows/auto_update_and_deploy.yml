@@ -37,37 +37,49 @@ jobs:
 
       - name: Executar Pipeline de Coleta de Dados & Agente de Vigilância
         if: steps.gatekeeper.outputs.should_run == 'true' || github.event_name != 'schedule'
+        id: data_pipeline
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
           python scripts/update_data.py
           python scripts/agentic_monitor.py
+          
+          # Verificar se houve alteração nos dados coletados
+          git add public/data/ src/data/sync_status.ts src/data/alerts.ts src/data/vaccination_sites.ts src/data/vaccines.ts
+          if git diff --staged --quiet; then
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+            echo "ℹ️ [Estratégia A] Nenhum dado novo detectado. Omitindo etapas de build e deploy para economizar minutos de Actions."
+          else
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+            echo "✅ [Estratégia A] Alterações em dados confirmadas. Prosseguindo com build, commit e deploy."
+          fi
 
       - name: Configurar Node.js
-        if: steps.gatekeeper.outputs.should_run == 'true' || github.event_name != 'schedule'
+        if: (steps.gatekeeper.outputs.should_run == 'true' || github.event_name != 'schedule') && (steps.data_pipeline.outputs.has_changes == 'true' || github.event_name != 'schedule')
         uses: actions/setup-node@v4
         with:
           node-version: '22'
           cache: 'npm'
 
       - name: Instalar Dependências e Compilar Aplicação
-        if: steps.gatekeeper.outputs.should_run == 'true' || github.event_name != 'schedule'
+        if: (steps.gatekeeper.outputs.should_run == 'true' || github.event_name != 'schedule') && (steps.data_pipeline.outputs.has_changes == 'true' || github.event_name != 'schedule')
         run: |
           npm ci
           node --experimental-strip-types scripts/export_json.js
           npm run build
 
       - name: Commit e Push dos Dados Atualizados
-        if: steps.gatekeeper.outputs.should_run == 'true' || github.event_name != 'schedule'
+        if: (steps.gatekeeper.outputs.should_run == 'true' || github.event_name != 'schedule') && steps.data_pipeline.outputs.has_changes == 'true'
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add public/data/ src/data/sync_status.ts src/data/alerts.ts src/data/vaccination_sites.ts src/data/vaccines.ts
-          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: atualização automática de dados e RSS [skip ci]" && git push)
+          git commit -m "chore: atualização automática de dados e RSS [skip ci]"
+          git push
 
       # Opção 1: Deploy no Google Firebase Hosting via Service Account
       - name: Deploy no Firebase Hosting (Service Account)
-        if: (steps.gatekeeper.outputs.should_run == 'true' || github.event_name != 'schedule') && env.FIREBASE_SERVICE_ACCOUNT != ''
+        if: (steps.gatekeeper.outputs.should_run == 'true' || github.event_name != 'schedule') && (steps.data_pipeline.outputs.has_changes == 'true' || github.event_name != 'schedule') && env.FIREBASE_SERVICE_ACCOUNT != ''
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
@@ -79,7 +91,7 @@ jobs:
 
       # Opção 2: Deploy no Firebase Hosting via FIREBASE_TOKEN
       - name: Deploy no Firebase Hosting (CI Token)
-        if: (steps.gatekeeper.outputs.should_run == 'true' || github.event_name != 'schedule') && env.FIREBASE_SERVICE_ACCOUNT == '' && env.FIREBASE_TOKEN != ''
+        if: (steps.gatekeeper.outputs.should_run == 'true' || github.event_name != 'schedule') && (steps.data_pipeline.outputs.has_changes == 'true' || github.event_name != 'schedule') && env.FIREBASE_SERVICE_ACCOUNT == '' && env.FIREBASE_TOKEN != ''
         run: |
           npx firebase-tools deploy --only hosting --project mpox-tracker-br --token "${{ secrets.FIREBASE_TOKEN }}"
         env:
@@ -87,7 +99,7 @@ jobs:
 
       # Opção 3: Deploy no GitHub Pages (Fallback se não houver credenciais Firebase)
       - name: Deploy no GitHub Pages (Fallback)
-        if: (steps.gatekeeper.outputs.should_run == 'true' || github.event_name != 'schedule') && env.FIREBASE_SERVICE_ACCOUNT == '' && env.FIREBASE_TOKEN == ''
+        if: (steps.gatekeeper.outputs.should_run == 'true' || github.event_name != 'schedule') && (steps.data_pipeline.outputs.has_changes == 'true' || github.event_name != 'schedule') && env.FIREBASE_SERVICE_ACCOUNT == '' && env.FIREBASE_TOKEN == ''
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

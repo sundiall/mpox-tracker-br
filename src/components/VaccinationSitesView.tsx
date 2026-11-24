@@ -11,7 +11,8 @@ import {
   FileCheck2,
   Sparkles,
   AlertCircle,
-  RotateCcw
+  RotateCcw,
+  ExternalLink
 } from 'lucide-react';
 import { vaccinationSites } from '../data/vaccination_sites';
 import type { VaccinationSite } from '../data/vaccination_sites';
@@ -54,7 +55,7 @@ export const VaccinationSitesView: FC<VaccinationSitesViewProps> = ({
   const pageSize = 36;
 
   useEffect(() => {
-    fetch('/data/vaccination_sites.json')
+    fetch(`/data/vaccination_sites.json?t=${Date.now()}`)
       .then((res) => (res.ok ? res.json() : null))
       .then((data) => {
         if (data && Array.isArray(data) && data.length > 0) {
@@ -309,11 +310,25 @@ export const VaccinationSitesView: FC<VaccinationSitesViewProps> = ({
                       {site.statusEstoque === 'esgotado' ? 'Doses Esgotadas no Local' :
                         site.statusEstoque === 'disponivel' ? 'Vacina Disponível' : 'Em Reabastecimento'}
                     </span>
-                    {site.dataAtualizacaoStatus && (
-                      <span className="text-[10px] font-normal opacity-80">
-                        {site.dataAtualizacaoStatus.split('-').reverse().join('/')}
-                      </span>
-                    )}
+                    <div className="flex items-center gap-1.5">
+                      {site.dataAtualizacaoStatus && (
+                        <span className="text-[10px] font-normal opacity-80">
+                          {site.dataAtualizacaoStatus.split('-').reverse().join('/')}
+                        </span>
+                      )}
+                      {site.fonteStatus && (
+                        <a
+                          href={site.fonteStatus}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          title="Abrir comunicado oficial em nova janela"
+                          className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-black/40 hover:bg-black/70 border border-white/20 text-[10px] text-slate-200 hover:text-white transition-all shadow-sm"
+                        >
+                          <span>Fonte</span>
+                          <ExternalLink className="w-3 h-3 text-cyan-300" />
+                        </a>
+                      )}
+                    </div>
                   </div>
                   {site.notaStatus && (
                     <p className="text-[10px] text-slate-300 leading-tight">

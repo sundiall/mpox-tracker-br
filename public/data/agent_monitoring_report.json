@@ -1,102 +1,80 @@
 {
-  "timestamp": "2026-11-24T00:43:13.669978",
-  "totalItensVarredura": 53,
+  "timestamp": "2026-11-23T14:01:32.305081",
+  "totalItensVarredura": 29,
   "analiseAgente": {
     "alteracoesEstoque": [
       {
-        "unidade": "Super Centros Cariocas (Botafogo, Shopping Nova América, ParkShopping Campo Grande)",
+        "siteId": "rj-2",
+        "unidade": "Super Centro Carioca de Vacinação — Botafogo",
         "uf": "RJ",
         "statusEstoque": "disponivel",
-        "motivo": "Reabastecido com novo lote de 1.000 frascos (até 5.000 doses intradérmicas) enviado pelo Ministério da Saúde. Vacinação ativa.",
-        "previsaoFutura": "Vacinação ativa nos Super Centros enquanto durar o lote. Novos repasses federais previstos conforme demanda.",
-        "fonte": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQbl9qdXR0TUdTNkZIT2JIU0dOeEd5Y1VDSE5YZ0pZaGhHWTVWNFFtMEdYS2pDQXFTWURiRkh4TEdHaHd5Z19tWDRtSmYtRnBhR0VFZkJLNWdua1U0WUUta2RER0Vma25vV0lkb3RDNU1pdG5UU0ZUNER2WHM1dFRNdFhjUE1uQTJNeFNkTl9WSHR2YzVVTl9naVJJSDRIZFFvNnZxY3JuOFAwRklNdGVLZlFjXzZJbFU2cWxnMUVEcEhaNUkxQ2w0cVoxZE1OSDFiOFpuNGtobHphVllkNVhsTw?oc=5"
+        "motivo": "A SMS-Rio comunicou que a aplicação da vacina contra mpox segue ativa e concentrada na unidade após recebimento de remessa do Ministério da Saúde.",
+        "previsaoFutura": "Atendimento mantido para o público prioritário enquanto durarem os frascos da cota recebida.",
+        "fonte": "Prefeitura da Cidade do Rio de Janeiro (SMS-Rio Notícias)"
       },
       {
-        "unidade": "Rede Especializada de São Paulo (SAEs e CRIEs)",
-        "uf": "SP",
-        "statusEstoque": "disponivel",
-        "motivo": "Recebimento e distribuição de novo lote de 1.000 doses da vacina MVA-BN aos SAEs e CRIEs.",
-        "previsaoFutura": "Doses de primeira aplicação ativas. Segunda dose recomendada a partir de 28 dias para consolidar imunidade.",
-        "fonte": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNSkYzc1Jsbm1KZFk2TXJxYVhJVGd6YmpGZEktc05fWU9weXYtcDFzTGJScFI1SGh6bC1OSWt6VFhqNlJsWlZ0SzhTZFJDVzZTMWJyV0NNcDFJcmpYblpBZVJKV0NJcnJrX3lybjVsVERZdDllWl9sNHFlanpwSXhySFo0MVo5bXhRMGt6OHJzVGFBaEp0T29sS2lsRQ?oc=5"
-      },
-      {
-        "unidade": "Rede Especializada de São Paulo (SAEs e CRIEs)",
-        "uf": "SP",
-        "statusEstoque": "disponivel",
-        "motivo": "Recebimento e distribuição de novo lote de 1.000 doses da vacina MVA-BN aos SAEs e CRIEs.",
-        "previsaoFutura": "Doses de primeira aplicação ativas. Segunda dose recomendada a partir de 28 dias para consolidar imunidade.",
-        "fonte": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxORkFocy1paUFwNWpCNXJJcTR3YWxYSTRqajk4QWxKa3VZS0lYa2RwbXVhWllYQ0dZY1NXWjYzT2JNWGJFeXlfSmh1dVFiR21ZYlVWQnB4bkJMX3ZCbG5yWGllZTZuRk5TM2x1bU1EVzdELTE0aEJyV2RyempMV3NVb2J5Q21ja3p3dzZXd1NsM3F0UU1ua2Y0VlZrZmJleHFYSzVqalNTT0N0RGloZWpsc2ZNUzZqaW1CVmlGeUN3UGM4THF2TXVoZlFydU1oSkJK?oc=5"
-      },
-      {
-        "unidade": "Polos de Vacinação de Belo Horizonte (Hospital Eduardo de Menezes, URS Centro-Sul, Sagrada Família, Orestes Diniz, CRIE)",
-        "uf": "MG",
-        "statusEstoque": "disponivel",
-        "motivo": "Prefeitura de Belo Horizonte iniciou vacinação em 5 unidades para grupos prioritários e anunciou expansão para 30/11.",
-        "previsaoFutura": "A partir de 30/11: Ampliação para todas as pessoas vivendo com HIV/Aids (PVHA), independente de contagem de CD4 (campanha até 04/12).",
-        "fonte": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxObGVKcUNXWjZlUTNZalFHaWNMbjJYdTR5aHZFeHd6WmNVSWt3ZTZOYVdSU3pEWGpkNGg1MzlCdFlVdjBnQWhRd0JIZWh4WF9NTjY1TkdUYjU2ZWY3M0dGZ0wyYTZJUld1TmQ2U1VPZWo4QlNQOTBGRE1JdnRWYnZ3aHlyallBRDNuYXA0NnFHRlpYbDVQc2c5T2NrS1lIWXBvZlpWcEJ6bVlvSld4ZWNJYWhDT0dDREFYSVo2dTZlUXhSb1pWVVN6ZQ?oc=5"
-      },
-      {
-        "unidade": "Rede Especializada de São Paulo (SAEs e CRIEs)",
-        "uf": "SP",
-        "statusEstoque": "disponivel",
-        "motivo": "Recebimento e distribuição de novo lote de 1.000 doses da vacina MVA-BN aos SAEs e CRIEs.",
-        "previsaoFutura": "Doses de primeira aplicação ativas. Segunda dose recomendada a partir de 28 dias para consolidar imunidade.",
-        "fonte": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPN0Zhd0M0NU9oTUUtOV9HSzRRb2dwekZyN3VIMjUtOUVXOFBlckdZanF1a1czWmtmNjFhV1JZNUVnT3VSZkFhVWRPVVdOTDlnU3lRbVZ1WGhtOTV1c1dKMnQyNUk1clJiY2U5NjR1LVJtMWJVLWVWajJzN1lYNlpKUnFzT2ptTTQ?oc=5"
-      },
-      {
-        "unidade": "Super Centros Cariocas (Botafogo, Shopping Nova América, ParkShopping Campo Grande)",
+        "siteId": "rj-3",
+        "unidade": "Super Centro Carioca de Vacinação — Zona Norte (Shopping Nova América)",
         "uf": "RJ",
-        "statusEstoque": "disponivel",
-        "motivo": "Reabastecido com novo lote de 1.000 frascos (até 5.000 doses intradérmicas) enviado pelo Ministério da Saúde. Vacinação ativa.",
-        "previsaoFutura": "Vacinação ativa nos Super Centros enquanto durar o lote. Novos repasses federais previstos conforme demanda.",
-        "fonte": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPa2U2T3V4YkdIRFpsSi1RMmRlX1M4NnpUOVNuVUo3Y1lybGlhWHRBVkdvcjFnVVhsdW9OV2pHMWxrQUZUN2xodUtUMGFOcWIzYnRXSjJtMVViT3FNQmlWZEY2T09nQ3lVUmVMN05qVEpCWUVDNFpWdDF2bUotd1dDRGlTemxoRk85SkFaeTk4ZEJGaTFpSW82cXhVamNXandBQkd4Ry1NMjhLb0lFVnNJ?oc=5"
+        "statusEstoque": "esgotado",
+        "motivo": "Aplicação temporariamente descontinuada na unidade, com doses restantes centralizadas no Super Centro de Botafogo.",
+        "previsaoFutura": "Reabertura e descentralização dependem do repasse de novos lotes pelo Ministério da Saúde.",
+        "fonte": "Prefeitura da Cidade do Rio de Janeiro (SMS-Rio Notícias)"
       },
       {
-        "unidade": "Rede Especializada de São Paulo (SAEs e CRIEs)",
+        "siteId": "rj-4",
+        "unidade": "Super Centro Carioca de Vacinação — Zona Oeste (ParkShopping Campo Grande)",
+        "uf": "RJ",
+        "statusEstoque": "esgotado",
+        "motivo": "Serviço suspenso no polo regional, com imunização restrita à unidade de Botafogo.",
+        "previsaoFutura": "Aguardando envio de quantitativo adicional de doses para retomada do ponto na Zona Oeste.",
+        "fonte": "Prefeitura da Cidade do Rio de Janeiro (SMS-Rio Notícias)"
+      },
+      {
+        "siteId": "sp-1",
+        "unidade": "CRT DST/Aids-SP",
         "uf": "SP",
-        "statusEstoque": "disponivel",
-        "motivo": "Recebimento e distribuição de novo lote de 1.000 doses da vacina MVA-BN aos SAEs e CRIEs.",
-        "previsaoFutura": "Doses de primeira aplicação ativas. Segunda dose recomendada a partir de 28 dias para consolidar imunidade.",
-        "fonte": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-11/sp-recebe-novas-doses-da-vacina-contra-mpox-saiba-quem-pode-receber"
+        "statusEstoque": "em_abastecimento",
+        "motivo": "Secretaria de Estado da Saúde de SP iniciou a distribuição de nova remessa de mil doses repassadas pelo Ministério da Saúde.",
+        "previsaoFutura": "Abastecimento dos serviços de referência para atendimento a grupos prioritários (PVHIV com imunossupressão grave e pós-exposição).",
+        "fonte": "Agência Brasil - Saúde (SUS & Cobertura Nacional)"
+      },
+      {
+        "siteId": "sp-4",
+        "unidade": "CRIE HC / Emílio Ribas",
+        "uf": "SP",
+        "statusEstoque": "em_abastecimento",
+        "motivo": "Recepção e remanejamento do lote estadual de mil doses para os centros de referência da capital paulista.",
+        "previsaoFutura": "Disponibilização para elegíveis conforme diretrizes técnicas vigentes do Programa Nacional de Imunizações.",
+        "fonte": "Agência Brasil - Saúde (SUS & Cobertura Nacional)"
       }
     ],
-    "novosMarcos": [],
+    "novosMarcos": [
+      {
+        "titulo": "Aquisição e distribuição de remessa de 25 mil doses pelo Ministério da Saúde",
+        "dataEstimada": "2026-11",
+        "categoria": "vacina",
+        "descricao": "O Ministério da Saúde contratualizou lote emergencial de 25 mil doses para mitigar o desabastecimento nos estados com maior incidência (RJ e SP)."
+      },
+      {
+        "titulo": "Alerta de aceleração de casos no Distrito Federal e Ceará",
+        "dataEstimada": "2026-11",
+        "categoria": "vigilancia",
+        "descricao": "Secretarias de Saúde registram avanço expressivo de casos confirmados e reforçam protocolos de busca ativa e monitoramento genômico."
+      }
+    ],
     "alertasUrgentes": [
       {
-        "titulo": "Mpox: vacina contra a doença começa a ser distribuída em SP nesta segunda; veja quem pode tomar - G1",
+        "titulo": "Rio de Janeiro restringe vacinação de mpox exclusivamente ao Super Centro de Botafogo",
         "tipo": "disponibilidade_vacina",
-        "resumo": "Mpox: vacina contra a doença começa a ser distribuída em SP nesta segunda; veja quem pode tomar&nbsp;&nbsp;G1",
-        "linkOficial": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxOVHJTeUtFNlE1anVZZGd0Ym00bGstSDJqRDFHdUJEcHFOZmJsTDl1WVBHWlIxYnRualVuN2RJYUNMdEZKMm1VR3FSWDM4RXRva2RLdXNqSS0tYXhrOS1BU1FKVW1NMFlzZlRpNjRvdDg0R1JwREhtM0tMOFBud1VjTkxQWm9kdUtsNmJiU3pHX24zVl9mb1BreXhuaDVkSjU3UkRsXzg4bVRxMWJSLWpiVjRBS1MySUZ5aGFPTFlYWDNYR1gzNkZlRWs4V250MUliRlRwTTI4NnhVTmRzekRFalZVMHZXbnfSAfYBQVVfeXFMTXJCZmJ3c3IxLXk3NnltTVc4S1drbXZHNEFHdUlVOW1SYW5VNGs5T3ZvaVhFXzNSU1QwVDNURklxYk5nS29ELWRLNGdNTnBXd3JSeXp5c200SGV1ZnlOS3ZKa0IyZ05Jb0ZGcDZoYW1oQ1FYNVF4SU5lUkI0WGxJc0lyNXU5YnVNOFFsa2xZYjR2eDA3S25VdlRma3drSTN0Y1NLSWRHYmRhcC1MU2FnQjdoT09IUTlGdV9QQjJ1RUlqX3ZMMl9iNG4tYnp6anRZRnZrMjVQY2M4a3NoeTdnVER0QWU0Qjh0Z0tIcnkzYm1LUC1RZDZ3?oc=5"
+        "resumo": "Diante da restrição na quantidade de doses entregues, a Secretaria Municipal de Saúde centralizou todo o estoque no Super Centro de Botafogo, desativando os postos de Nova América e Campo Grande.",
+        "linkOficial": "https://prefeitura.rio/saude/vacina-contra-mpox-segue-disponivel-apenas-no-super-centro-de-botafogo/"
       },
       {
-        "titulo": "São Paulo começa a distribuir vacina contra Mpox nesta segunda (23) - CNN Brasil",
+        "titulo": "São Paulo recebe remessa emergencial com mil doses e inicia distribuição na rede de referência",
         "tipo": "disponibilidade_vacina",
-        "resumo": "São Paulo começa a distribuir vacina contra Mpox nesta segunda (23)&nbsp;&nbsp;CNN Brasil",
-        "linkOficial": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPOTNKSmUyaUFiWHZIRUZiQ1R6aGNaOW1GVm5uRWVwSWZoTjQ4NzU3STF5dDF5OXRkWHNxczBKZ1BvZE40QnhfY09FRmdjR3RzdWJlNlVReGhsYlNGQmdGZy1RWmVsbWE2QUlKVldkVTNSLUZ0UjlpWWZJaldqOHpLQXVodGlZVldjTE9VNDhPM2NFdENhak9lS3ZHNmxqWG9OLXdz?oc=5"
-      },
-      {
-        "titulo": "SP ganha novas doses da vacina contra a mpox; saiba quem pode receber - Agência Brasil",
-        "tipo": "disponibilidade_vacina",
-        "resumo": "SP ganha novas doses da vacina contra a mpox; saiba quem pode receber&nbsp;&nbsp;Agência Brasil",
-        "linkOficial": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQcmM2MDJIeG5QQ2ttVXJYTXlTUWZXeWFKWWJaMjREWTZQNGRELXBGZ201OEFULUVzQWJ6V0V3Ynhad2RJWjBiNDRrMnNDVjZ0SjI2eXdrVFRqaEQtVHJYZERDd1pkakJlcmRpWHFRaXZIUndVal9UVmtrN2xxTlVJcy10S2toQloxU0p5Rzg2eUZHaTVMMDNXYk1ORlZBMTBDRl9JSjIxbW1ObTJGYXRUMDdWNjlOTTFCaW9Jc19uaw?oc=5"
-      },
-      {
-        "titulo": "Ministério da Saúde envia ao município do Rio mais mil frascos de vacina contra mpox - Governo Federal",
-        "tipo": "disponibilidade_vacina",
-        "resumo": "Ministério da Saúde envia ao município do Rio mais mil frascos de vacina contra mpox&nbsp;&nbsp;Governo Federal",
-        "linkOficial": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQbl9qdXR0TUdTNkZIT2JIU0dOeEd5Y1VDSE5YZ0pZaGhHWTVWNFFtMEdYS2pDQXFTWURiRkh4TEdHaHd5Z19tWDRtSmYtRnBhR0VFZkJLNWdua1U0WUUta2RER0Vma25vV0lkb3RDNU1pdG5UU0ZUNER2WHM1dFRNdFhjUE1uQTJNeFNkTl9WSHR2YzVVTl9naVJJSDRIZFFvNnZxY3JuOFAwRklNdGVLZlFjXzZJbFU2cWxnMUVEcEhaNUkxQ2w0cVoxZE1OSDFiOFpuNGtobHphVllkNVhsTw?oc=5"
-      },
-      {
-        "titulo": "Estado de São Paulo começa a aplicar vacina contra mpox; saiba quem pode receber - Folha de S.Paulo",
-        "tipo": "disponibilidade_vacina",
-        "resumo": "Estado de São Paulo começa a aplicar vacina contra mpox; saiba quem pode receber&nbsp;&nbsp;Folha de S.Paulo",
-        "linkOficial": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNeDd1bEdoVFJQN1Y4OWFvZ3R2SVVhQ1drNk5WWmFQelgxenJkQTFLdlFNaC1WamlROVFsX192WF9KdFljNkdUN0t5UTNWeVFLa2hSSFo5NXQtcGRpaC1fbnB4Q0lLelBYQUNtMjJJYjJaaXFuTmJkdnN4YWpBRmkwcVhhT29jQ0dVTmlpN09JbTlqN1BPcUVPN1NUaGdPa3l0OVEtNmFOMnVqWnhUTmNNdjlORnM4Mnl6SDhqR1ZHSmRyNHpvTHN2cDBEbk9YNFZCLUNKMm54ZFR6Nkk?oc=5"
-      },
-      {
-        "titulo": "Vacina contra a Mpox começa a ser distribuída no Brasil; saiba quem pode receber - URB News",
-        "tipo": "disponibilidade_vacina",
-        "resumo": "Vacina contra a Mpox começa a ser distribuída no Brasil; saiba quem pode receber&nbsp;&nbsp;URB News",
-        "linkOficial": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQOEx3ME1wSVVmc3RnY183Y0s0VTBBOVpqNXRPVVN1dnQ0aGNHMWtJampjZzQ1MGdMV1lndWZ5dmR4RkpsVWtmMTE2SHdVZjJKaWx0dTFLcHIxU2RaZWV6ZmhrT0RYQzI2cmJnaVJxWVJkcGRMLXZOMHdUcUVIYkVseFhsNy1fdjBNLUlRVzBydEdTd294Qnc2eTEwWGdXUFFweHlhdWFwWjVkc2VYUmpsMUVLOXFOQQ?oc=5"
+        "resumo": "O Estado de São Paulo recebeu 1.000 novas doses da vacina contra mpox para abastecer serviços especializados voltados a grupos de alto risco clínico e contatos elegíveis.",
+        "linkOficial": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-11/sp-recebe-novas-doses-da-vacina-contra-mpox-saiba-quem-pode-receber"
       }
     ]
   }
