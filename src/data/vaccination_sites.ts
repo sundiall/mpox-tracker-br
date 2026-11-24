@@ -40,11 +40,11 @@ export const vaccinationSites: VaccinationSite[] = [
     agendamento: 'Livre Demanda',
     observacoes: 'Centro nacional de referência em infectologia. Aplicação para usuários de PrEP, PVHA (CD4 < 200), pós-exposição e trabalhadores expostos.',
     requisitos: 'Documento oficial com foto, cartão SUS e laudo/receita de PrEP (até 6 meses), exame CD4 ou comprovação de contato.',
-    statusEstoque: 'em_abastecimento',
-    dataAtualizacaoStatus: '2026-11-19',
-    notaStatus: 'Em processo de recebimento de doses do novo lote federal de 1.000 frascos.',
+    statusEstoque: 'esgotado',
+    dataAtualizacaoStatus: '2026-11-23',
+    notaStatus: 'Estoque de vacinas contra mpox esgotado na unidade. Atendimento de vacinação suspenso até novo repasse federal.',
     fonteStatus: 'https://www.ini.fiocruz.br/ini-fiocruz-e-a-unidade-de-referencia-para-atendimento-de-casos-de-mpox-com-atendimento-24h-todos-os-dias/',
-    previsaoFutura: 'Previsão de reposição com fracionamento do novo lote federal repassado ao município do Rio.'
+    previsaoFutura: 'Aguardando liberação e envio de novo lote de imunizantes pelo Ministério da Saúde.'
   },
   {
     id: 'rj-2',
@@ -124,11 +124,11 @@ export const vaccinationSites: VaccinationSite[] = [
     agendamento: 'Livre Demanda',
     observacoes: 'Centro histórico especializado em imunobiológicos especiais no Centro do Rio de Janeiro.',
     requisitos: 'Documento com foto, CPF, cartão SUS e laudo/receita de PrEP emitido nos últimos 6 meses.',
-    statusEstoque: 'em_abastecimento',
-    dataAtualizacaoStatus: '2026-11-19',
-    notaStatus: 'Em processo de reabastecimento pela rede municipal com a chegada do novo lote.',
+    statusEstoque: 'esgotado',
+    dataAtualizacaoStatus: '2026-11-23',
+    notaStatus: 'Doses esgotadas no polo central da Cinelândia. Atendimento suspenso temporariamente por falta de vacinas.',
     fonteStatus: 'https://prefeitura.rio/saude/vacina-contra-mpox-segue-disponivel-apenas-no-super-centro-de-botafogo/',
-    previsaoFutura: 'Previsão de retorno da vacinação na Cinelândia assim que concluída a distribuição interna dos frascos.'
+    previsaoFutura: 'Aguardando recebimento e distribuição de novas remessas federais pelo município do Rio.'
   },
 
   // São Paulo

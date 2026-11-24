@@ -14,11 +14,11 @@
     "agendamento": "Livre Demanda",
     "observacoes": "Centro nacional de referência em infectologia. Aplicação para usuários de PrEP, PVHA (CD4 < 200), pós-exposição e trabalhadores expostos.",
     "requisitos": "Documento oficial com foto, cartão SUS e laudo/receita de PrEP (até 6 meses), exame CD4 ou comprovação de contato.",
-    "statusEstoque": "disponivel",
-    "dataAtualizacaoStatus": "2026-11-24",
-    "notaStatus": "Vacinação ativa/reabastecida segundo comunicado oficial.",
+    "statusEstoque": "esgotado",
+    "dataAtualizacaoStatus": "2026-11-23",
+    "notaStatus": "Estoque de vacinas contra mpox esgotado na unidade. Atendimento de vacinação suspenso até novo repasse federal.",
     "fonteStatus": "https://www.ini.fiocruz.br/ini-fiocruz-e-a-unidade-de-referencia-para-atendimento-de-casos-de-mpox-com-atendimento-24h-todos-os-dias/",
-    "previsaoFutura": "Doses ativas para os grupos prioritários elegíveis."
+    "previsaoFutura": "Aguardando liberação e envio de novo lote de imunizantes pelo Ministério da Saúde."
   },
   {
     "id": "rj-2",
@@ -98,11 +98,11 @@
     "agendamento": "Livre Demanda",
     "observacoes": "Centro histórico especializado em imunobiológicos especiais no Centro do Rio de Janeiro.",
     "requisitos": "Documento com foto, CPF, cartão SUS e laudo/receita de PrEP emitido nos últimos 6 meses.",
-    "statusEstoque": "disponivel",
-    "dataAtualizacaoStatus": "2026-11-24",
-    "notaStatus": "Vacinação ativa/reabastecida segundo comunicado oficial.",
+    "statusEstoque": "esgotado",
+    "dataAtualizacaoStatus": "2026-11-23",
+    "notaStatus": "Doses esgotadas no polo central da Cinelândia. Atendimento suspenso temporariamente por falta de vacinas.",
     "fonteStatus": "https://prefeitura.rio/saude/vacina-contra-mpox-segue-disponivel-apenas-no-super-centro-de-botafogo/",
-    "previsaoFutura": "Doses ativas para os grupos prioritários elegíveis."
+    "previsaoFutura": "Aguardando recebimento e distribuição de novas remessas federais pelo município do Rio."
   },
   {
     "id": "sp-1",

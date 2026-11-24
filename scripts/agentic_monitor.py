@@ -282,7 +282,7 @@ def fallback_heuristic_analysis(items):
             generic_words = {
                 "centro", "saúde", "saude", "hospital", "unidade", "especial", "especiais", "referência", "referencia",
                 "serviço", "servico", "vacinação", "vacinacao", "sala", "posto", "atendimento", "ambulatorio",
-                "policlinica", "instituto", "super", "carioca", "zona", "norte", "oeste", "leste", "sul",
+                "policlinica", "instituto", "super", "zona", "norte", "oeste", "leste", "sul",
                 "região", "regiao", "shopping", "geral", "municipal", "estadual", "federal", "público", "publico",
                 "para", "com", "sem", "por", "dos", "das", "pelas", "pelos", "sobre", "entre", "imunobiológicos", "imunobiologicos"
             }
@@ -369,7 +369,7 @@ def update_sites_and_alerts_from_report(analise, output_dir):
                         generic_words = {
                             "centro", "saúde", "saude", "hospital", "unidade", "especial", "especiais", "referência", "referencia",
                             "serviço", "servico", "vacinação", "vacinacao", "sala", "posto", "atendimento", "ambulatorio",
-                            "policlinica", "instituto", "super", "carioca", "zona", "norte", "oeste", "leste", "sul",
+                            "policlinica", "instituto", "super", "zona", "norte", "oeste", "leste", "sul",
                             "região", "regiao", "shopping", "geral", "municipal", "estadual", "federal", "público", "publico",
                             "para", "com", "sem", "por", "dos", "das", "pelas", "pelos", "sobre", "entre", "imunobiológicos", "imunobiologicos"
                         }
