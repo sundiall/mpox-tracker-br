@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-24T16:54:55.919969",
+  "timestamp": "2026-11-24T14:29:28.146410",
   "totalItensVarredura": 25,
   "analiseAgente": {
     "alteracoesEstoque": [
@@ -8,93 +8,112 @@
         "unidade": "Instituto Nacional de Infectologia Evandro Chagas (CRIE / INI / Fiocruz)",
         "uf": "RJ",
         "statusEstoque": "esgotado",
-        "motivo": "Esgotamento ou suspensão explícita de doses noticiada em comunicado oficial.",
-        "previsaoFutura": "Aguardando envio e redistribuição de novos lotes pelo Ministério da Saúde.",
-        "fonte": "https://news.google.com/rss/articles/CBMif0FVX3lxTE92ODNoYXJXWTlxbHYyQTZ1Z0JBSzVZTFBPV2RmVE50NTZhajVOODNndG42Ul9wRXNxSGsyTTFVQk1WeVRlc19FSnB5eXU1OW1yeHgyczlWQlJTdkVNUU1nc1Z4R2pCMEtwSWtUY0VDTlJuaU5aZ3lMeExkNl9rSnM?oc=5"
+        "motivo": "Secretaria de Saúde e agências confirmam a suspensão da vacinação e o esgotamento total das doses no Rio de Janeiro após o término do lote.",
+        "previsaoFutura": "Aguardando nova remessa de lotes internacionais negociados pelo Ministério da Saúde (25 mil doses previstas para as próximas semanas).",
+        "fonte": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPTmg3d3B6YWVOb0NiWGNoZTI0YnRhOE1FWDFoMHppWWgyLXpfTjF1T2RqSlVtWG45bjYxTDVpeTlZakdldHhfX1FlWWZURXdDdER4TjBQZFlNajBkZ1U0UFZTdC1LOEZxdWxDWEpyNFZYNDVGbS0welJST1NIQjF6dGthd2tQQmRFU2JHRGVfbllzcW1kazNGM25nZVVFTC1rak5KTXQwMkVmelV2a0RSOEVIUExvTUNwZVNweFBpQWl4U05WelhJRE1udGZVYTkwRUtvRmd3?oc=5"
       },
       {
         "siteId": "rj-2",
         "unidade": "Super Centro Carioca de Vacinação — Botafogo",
         "uf": "RJ",
         "statusEstoque": "esgotado",
-        "motivo": "Esgotamento ou suspensão explícita de doses noticiada em comunicado oficial.",
-        "previsaoFutura": "Aguardando envio e redistribuição de novos lotes pelo Ministério da Saúde.",
-        "fonte": "https://news.google.com/rss/articles/CBMif0FVX3lxTE92ODNoYXJXWTlxbHYyQTZ1Z0JBSzVZTFBPV2RmVE50NTZhajVOODNndG42Ul9wRXNxSGsyTTFVQk1WeVRlc19FSnB5eXU1OW1yeHgyczlWQlJTdkVNUU1nc1Z4R2pCMEtwSWtUY0VDTlJuaU5aZ3lMeExkNl9rSnM?oc=5"
+        "motivo": "Notícias mais recentes de 24/11/2026 confirmam a suspensão e paralisação dos postos, incluindo o Super Centro de Botafogo, devido ao esgotamento das doses.",
+        "previsaoFutura": "Aguardando chegada de novos lotes federais.",
+        "fonte": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPTmg3d3B6YWVOb0NiWGNoZTI0YnRhOE1FWDFoMHppWWgyLXpfTjF1T2RqSlVtWG45bjYxTDVpeTlZakdldHhfX1FlWWZURXdDdER4TjBQZFlNajBkZ1U0UFZTdC1LOEZxdWxDWEpyNFZYNDVGbS0welJST1NIQjF6dGthd2tQQmRFU2JHRGVfbllzcW1kazNGM25nZVVFTC1rak5KTXQwMkVmelV2a0RSOEVIUExvTUNwZVNweFBpQWl4U05WelhJRE1udGZVYTkwRUtvRmd3?oc=5"
       },
       {
         "siteId": "rj-3",
         "unidade": "Super Centro Carioca de Vacinação — Zona Norte (Shopping Nova América)",
         "uf": "RJ",
         "statusEstoque": "esgotado",
-        "motivo": "Esgotamento ou suspensão explícita de doses noticiada em comunicado oficial.",
-        "previsaoFutura": "Aguardando envio e redistribuição de novos lotes pelo Ministério da Saúde.",
-        "fonte": "https://news.google.com/rss/articles/CBMif0FVX3lxTE92ODNoYXJXWTlxbHYyQTZ1Z0JBSzVZTFBPV2RmVE50NTZhajVOODNndG42Ul9wRXNxSGsyTTFVQk1WeVRlc19FSnB5eXU1OW1yeHgyczlWQlJTdkVNUU1nc1Z4R2pCMEtwSWtUY0VDTlJuaU5aZ3lMeExkNl9rSnM?oc=5"
+        "motivo": "Suspensão generalizada da vacinação contra mpox na cidade do Rio de Janeiro por falta de doses.",
+        "previsaoFutura": "Reposição atrelada à chegada de novas remessas nacionais.",
+        "fonte": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPTmg3d3B6YWVOb0NiWGNoZTI0YnRhOE1FWDFoMHppWWgyLXpfTjF1T2RqSlVtWG45bjYxTDVpeTlZakdldHhfX1FlWWZURXdDdER4TjBQZFlNajBkZ1U0UFZTdC1LOEZxdWxDWEpyNFZYNDVGbS0welJST1NIQjF6dGthd2tQQmRFU2JHRGVfbllzcW1kazNGM25nZVVFTC1rak5KTXQwMkVmelV2a0RSOEVIUExvTUNwZVNweFBpQWl4U05WelhJRE1udGZVYTkwRUtvRmd3?oc=5"
       },
       {
         "siteId": "rj-4",
         "unidade": "Super Centro Carioca de Vacinação — Zona Oeste (ParkShopping Campo Grande)",
         "uf": "RJ",
         "statusEstoque": "esgotado",
-        "motivo": "Esgotamento ou suspensão explícita de doses noticiada em comunicado oficial.",
-        "previsaoFutura": "Aguardando envio e redistribuição de novos lotes pelo Ministério da Saúde.",
-        "fonte": "https://news.google.com/rss/articles/CBMif0FVX3lxTE92ODNoYXJXWTlxbHYyQTZ1Z0JBSzVZTFBPV2RmVE50NTZhajVOODNndG42Ul9wRXNxSGsyTTFVQk1WeVRlc19FSnB5eXU1OW1yeHgyczlWQlJTdkVNUU1nc1Z4R2pCMEtwSWtUY0VDTlJuaU5aZ3lMeExkNl9rSnM?oc=5"
+        "motivo": "Suspensão generalizada da vacinação contra mpox na cidade do Rio de Janeiro por falta de doses.",
+        "previsaoFutura": "Reposição atrelada à chegada de novas remessas nacionais.",
+        "fonte": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPTmg3d3B6YWVOb0NiWGNoZTI0YnRhOE1FWDFoMHppWWgyLXpfTjF1T2RqSlVtWG45bjYxTDVpeTlZakdldHhfX1FlWWZURXdDdER4TjBQZFlNajBkZ1U0UFZTdC1LOEZxdWxDWEpyNFZYNDVGbS0welJST1NIQjF6dGthd2tQQmRFU2JHRGVfbllzcW1kazNGM25nZVVFTC1rak5KTXQwMkVmelV2a0RSOEVIUExvTUNwZVNweFBpQWl4U05WelhJRE1udGZVYTkwRUtvRmd3?oc=5"
       },
       {
         "siteId": "rj-5",
         "unidade": "Centro Especial de Vacinação Dr. Álvaro Aguiar (CEVAA)",
         "uf": "RJ",
         "statusEstoque": "esgotado",
-        "motivo": "Esgotamento ou suspensão explícita de doses noticiada em comunicado oficial.",
-        "previsaoFutura": "Aguardando envio e redistribuição de novos lotes pelo Ministério da Saúde.",
-        "fonte": "https://news.google.com/rss/articles/CBMif0FVX3lxTE92ODNoYXJXWTlxbHYyQTZ1Z0JBSzVZTFBPV2RmVE50NTZhajVOODNndG42Ul9wRXNxSGsyTTFVQk1WeVRlc19FSnB5eXU1OW1yeHgyczlWQlJTdkVNUU1nc1Z4R2pCMEtwSWtUY0VDTlJuaU5aZ3lMeExkNl9rSnM?oc=5"
+        "motivo": "Suspensão generalizada da vacinação contra mpox na cidade do Rio de Janeiro por falta de doses.",
+        "previsaoFutura": "Reposição atrelada à chegada de novas remessas nacionais.",
+        "fonte": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPTmg3d3B6YWVOb0NiWGNoZTI0YnRhOE1FWDFoMHppWWgyLXpfTjF1T2RqSlVtWG45bjYxTDVpeTlZakdldHhfX1FlWWZURXdDdER4TjBQZFlNajBkZ1U0UFZTdC1LOEZxdWxDWEpyNFZYNDVGbS0welJST1NIQjF6dGthd2tQQmRFU2JHRGVfbllzcW1kazNGM25nZVVFTC1rak5KTXQwMkVmelV2a0RSOEVIUExvTUNwZVNweFBpQWl4U05WelhJRE1udGZVYTkwRUtvRmd3?oc=5"
       },
       {
-        "siteId": "rj-2",
-        "unidade": "Super Centro Carioca de Vacinação — Botafogo",
-        "uf": "RJ",
+        "siteId": "sp-1",
+        "unidade": "Centro de Referência e Treinamento DST/Aids-SP (CRT DST/Aids)",
+        "uf": "SP",
         "statusEstoque": "disponivel",
-        "motivo": "Vacinação ativa/reabastecida segundo comunicado oficial.",
-        "previsaoFutura": "Doses ativas para os grupos prioritários elegíveis.",
-        "fonte": "https://prefeitura.rio/saude/vacina-contra-mpox-segue-disponivel-apenas-no-super-centro-de-botafogo/"
+        "motivo": "Início da distribuição e aplicação de novas doses da vacina contra mpox no estado e capital paulista em 23/11/2026.",
+        "previsaoFutura": "Vans e postos aplicam o lote recém-distribuído para grupos prioritários.",
+        "fonte": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNazZPcmFHSGU4ZXA4SzRRZF9sY3YwdGFpQXF1eld3ZzBjdXNhTTlQUUMzUEtZVHBRSUtHbjVJVzdZZFU1ZnJoOHdpOUxBWGVEQzMyRE9vZVVXTGpGeE5sbWxwazRTaXQtZEhlcWpzWWRUa1U1S0hnbDJJc3RJSEZKMGVzN3dkWFRrX0Ixdzg0dmswR0llZnJMZGZwQmdPQ0VqdGJEaWpGYm0tQl93Q0JTYUdCZnJydW1kY0lz0gHAAUFVX3lxTFBFOE9JcGQ2aXVTMkJKVDM0SjI2RzhJeGp3YUx4czVjbUMtZTVWeUpHQmxqaGhIUk8ybE85RU1IM2xnREFmbU1Da0dZYmdyd2JUX2VNN2RmUWtseFJscnd3UkpzTzU3d0xURmZFS09lU3E0bENRUjlWazRVRzlrQm1ER1lyX2FUcUg0M1JCUk1pMW1mNTBOSXh3Z0JkX3pZVEptdmpwUXlJUTVLUWRzUmZzNDFOalZUUWdjWThJTHpGaA?oc=5"
+      },
+      {
+        "siteId": "sp-2",
+        "unidade": "CTA Henfil (Centro de Testagem e Aconselhamento)",
+        "uf": "SP",
+        "statusEstoque": "disponivel",
+        "motivo": "Início da distribuição e aplicação de novas doses da vacina contra mpox no estado e capital paulista em 23/11/2026.",
+        "previsaoFutura": "Continuidade da vacinação conforme disponibilidade do lote.",
+        "fonte": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNazZPcmFHSGU4ZXA4SzRRZF9sY3YwdGFpQXF1eld3ZzBjdXNhTTlQUUMzUEtZVHBRSUtHbjVJVzdZZFU1ZnJoOHdpOUxBWGVEQzMyRE9vZVVXTGpGeE5sbWxwazRTaXQtZEhlcWpzWWRUa1U1S0hnbDJJc3RJSEZKMGVzN3dkWFRrX0Ixdzg0dmswR0llZnJMZGZwQmdPQ0VqdGJEaWpGYm0tQl93Q0JTYUdCZnJydW1kY0lz0gHAAUFVX3lxTFBFOE9JcGQ2aXVTMkJKVDM0SjI2RzhJeGp3YUx4czVjbUMtZTVWeUpHQmxqaGhIUk8ybE85RU1IM2xnREFmbU1Da0dZYmdyd2JUX2VNN2RmUWtseFJscnd3UkpzTzU3d0xURmZFS09lU3E0bENRUjlWazRVRzlrQm1ER1lyX2FUcUg0M1JCUk1pMW1mNTBOSXh3Z0JkX3pZVEptdmpwUXlJUTVLUWRzUmZzNDFOalZUUWdjWThJTHpGaA?oc=5"
+      },
+      {
+        "siteId": "sp-3",
+        "unidade": "SAE Campos Elíseos",
+        "uf": "SP",
+        "statusEstoque": "disponivel",
+        "motivo": "Início da distribuição e aplicação de novas doses da vacina contra mpox no estado e capital paulista em 23/11/2026.",
+        "previsaoFutura": "Continuidade da vacinação conforme disponibilidade do lote.",
+        "fonte": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNazZPcmFHSGU4ZXA4SzRRZF9sY3YwdGFpQXF1eld3ZzBjdXNhTTlQUUMzUEtZVHBRSUtHbjVJVzdZZFU1ZnJoOHdpOUxBWGVEQzMyRE9vZVVXTGpGeE5sbWxwazRTaXQtZEhlcWpzWWRUa1U1S0hnbDJJc3RJSEZKMGVzN3dkWFRrX0Ixdzg0dmswR0llZnJMZGZwQmdPQ0VqdGJEaWpGYm0tQl93Q0JTYUdCZnJydW1kY0lz0gHAAUFVX3lxTFBFOE9JcGQ2aXVTMkJKVDM0SjI2RzhJeGp3YUx4czVjbUMtZTVWeUpHQmxqaGhIUk8ybE85RU1IM2xnREFmbU1Da0dZYmdyd2JUX2VNN2RmUWtseFJscnd3UkpzTzU3d0xURmZFS09lU3E0bENRUjlWazRVRzlrQm1ER1lyX2FUcUg0M1JCUk1pMW1mNTBOSXh3Z0JkX3pZVEptdmpwUXlJUTVLUWRzUmZzNDFOalZUUWdjWThJTHpGaA?oc=5"
+      },
+      {
+        "siteId": "sp-4",
+        "unidade": "CRIE - Centro de Referência para Imunobiológicos Especiais (Hospital das Clínicas / Emílio Ribas)",
+        "uf": "SP",
+        "statusEstoque": "disponivel",
+        "motivo": "Início da distribuição e aplicação de novas doses da vacina contra mpox no estado e capital paulista em 23/11/2026.",
+        "previsaoFutura": "Continuidade da vacinação conforme disponibilidade do lote.",
+        "fonte": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNazZPcmFHSGU4ZXA4SzRRZF9sY3YwdGFpQXF1eld3ZzBjdXNhTTlQUUMzUEtZVHBRSUtHbjVJVzdZZFU1ZnJoOHdpOUxBWGVEQzMyRE9vZVVXTGpGeE5sbWxwazRTaXQtZEhlcWpzWWRUa1U1S0hnbDJJc3RJSEZKMGVzN3dkWFRrX0Ixdzg0dmswR0llZnJMZGZwQmdPQ0VqdGJEaWpGYm0tQl93Q0JTYUdCZnJydW1kY0lz0gHAAUFVX3lxTFBFOE9JcGQ2aXVTMkJKVDM0SjI2RzhJeGp3YUx4czVjbUMtZTVWeUpHQmxqaGhIUk8ybE85RU1IM2xnREFmbU1Da0dZYmdyd2JUX2VNN2RmUWtseFJscnd3UkpzTzU3d0xURmZFS09lU3E0bENRUjlWazRVRzlrQm1ER1lyX2FUcUg0M1JCUk1pMW1mNTBOSXh3Z0JkX3pZVEptdmpwUXlJUTVLUWRzUmZzNDFOalZUUWdjWThJTHpGaA?oc=5"
+      },
+      {
+        "siteId": "sp-5",
+        "unidade": "SAE Lapa — Paulo César Bonfim",
+        "uf": "SP",
+        "statusEstoque": "disponivel",
+        "motivo": "Início da distribuição e aplicação de novas doses da vacina contra mpox no estado e capital paulista em 23/11/2026.",
+        "previsaoFutura": "Continuidade da vacinação conforme disponibilidade do lote.",
+        "fonte": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNazZPcmFHSGU4ZXA4SzRRZF9sY3YwdGFpQXF1eld3ZzBjdXNhTTlQUUMzUEtZVHBRSUtHbjVJVzdZZFU1ZnJoOHdpOUxBWGVEQzMyRE9vZVVXTGpGeE5sbWxwazRTaXQtZEhlcWpzWWRUa1U1S0hnbDJJc3RJSEZKMGVzN3dkWFRrX0Ixdzg0dmswR0llZnJMZGZwQmdPQ0VqdGJEaWpGYm0tQl93Q0JTYUdCZnJydW1kY0lz0gHAAUFVX3lxTFBFOE9JcGQ2aXVTMkJKVDM0SjI2RzhJeGp3YUx4czVjbUMtZTVWeUpHQmxqaGhIUk8ybE85RU1IM2xnREFmbU1Da0dZYmdyd2JUX2VNN2RmUWtseFJscnd3UkpzTzU3d0xURmZFS09lU3E0bENRUjlWazRVRzlrQm1ER1lyX2FUcUg0M1JCUk1pMW1mNTBOSXh3Z0JkX3pZVEptdmpwUXlJUTVLUWRzUmZzNDFOalZUUWdjWThJTHpGaA?oc=5"
       }
     ],
-    "novosMarcos": [],
+    "novosMarcos": [
+      {
+        "titulo": "Garantia de 25 mil doses via negociação internacional",
+        "dataEstimada": "2026-11",
+        "categoria": "vacina",
+        "descricao": "Ministério da Saúde garantiu a aquisição de um lote de 25 mil doses de vacinas contra mpox por meio de articulação internacional e OPAS para suprir a demanda dos estados."
+      }
+    ],
     "alertasUrgentes": [
       {
-        "titulo": "Rio de Janeiro suspende vacinação contra Mpox por falta de doses - Agência Brasil",
+        "titulo": "Suspensão temporária da vacinação no Rio de Janeiro",
         "tipo": "disponibilidade_vacina",
-        "resumo": "Rio de Janeiro suspende vacinação contra Mpox por falta de doses&nbsp;&nbsp;Agência Brasil",
+        "resumo": "A Prefeitura do Rio de Janeiro suspendeu a aplicação de vacinas contra mpox devido ao esgotamento das doses nos postos. Nova remessa é aguardada.",
         "linkOficial": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPTmg3d3B6YWVOb0NiWGNoZTI0YnRhOE1FWDFoMHppWWgyLXpfTjF1T2RqSlVtWG45bjYxTDVpeTlZakdldHhfX1FlWWZURXdDdER4TjBQZFlNajBkZ1U0UFZTdC1LOEZxdWxDWEpyNFZYNDVGbS0welJST1NIQjF6dGthd2tQQmRFU2JHRGVfbllzcW1kazNGM25nZVVFTC1rak5KTXQwMkVmelV2a0RSOEVIUExvTUNwZVNweFBpQWl4U05WelhJRE1udGZVYTkwRUtvRmd3?oc=5"
       },
       {
-        "titulo": "Ministério da Saúde envia ao município do Rio mais mil frascos de vacina contra mpox - Governo Federal",
+        "titulo": "Início da distribuição de novas doses em São Paulo",
         "tipo": "disponibilidade_vacina",
-        "resumo": "Ministério da Saúde envia ao município do Rio mais mil frascos de vacina contra mpox&nbsp;&nbsp;Governo Federal",
-        "linkOficial": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQbl9qdXR0TUdTNkZIT2JIU0dOeEd5Y1VDSE5YZ0pZaGhHWTVWNFFtMEdYS2pDQXFTWURiRkh4TEdHaHd5Z19tWDRtSmYtRnBhR0VFZkJLNWdua1U0WUUta2RER0Vma25vV0lkb3RDNU1pdG5UU0ZUNER2WHM1dFRNdFhjUE1uQTJNeFNkTl9WSHR2YzVVTl9naVJJSDRIZFFvNnZxY3JuOFAwRklNdGVLZlFjXzZJbFU2cWxnMUVEcEhaNUkxQ2w0cVoxZE1OSDFiOFpuNGtobHphVllkNVhsTw?oc=5"
-      },
-      {
-        "titulo": "São Paulo recebe mil novas doses da vacina contra a Mpox - agenciasp.sp.gov.br",
-        "tipo": "disponibilidade_vacina",
-        "resumo": "São Paulo recebe mil novas doses da vacina contra a Mpox&nbsp;&nbsp;agenciasp.sp.gov.br",
-        "linkOficial": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNSkYzc1Jsbm1KZFk2TXJxYVhJVGd6YmpGZEktc05fWU9weXYtcDFzTGJScFI1SGh6bC1OSWt6VFhqNlJsWlZ0SzhTZFJDVzZTMWJyV0NNcDFJcmpYblpBZVJKV0NJcnJrX3lybjVsVERZdDllWl9sNHFlanpwSXhySFo0MVo5bXhRMGt6OHJzVGFBaEp0T29sS2lsRQ?oc=5"
-      },
-      {
-        "titulo": "PBH inicia vacinação contra mpox para grupos prioritários e imunização será ampliada nesta quinta-feira (19) - Prefeitura de Belo Horizonte",
-        "tipo": "disponibilidade_vacina",
-        "resumo": "PBH inicia vacinação contra mpox para grupos prioritários e imunização será ampliada nesta quinta-feira (19)&nbsp;&nbsp;Prefeitura de Belo Horizonte",
-        "linkOficial": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxObGVKcUNXWjZlUTNZalFHaWNMbjJYdTR5aHZFeHd6WmNVSWt3ZTZOYVdSU3pEWGpkNGg1MzlCdFlVdjBnQWhRd0JIZWh4WF9NTjY1TkdUYjU2ZWY3M0dGZ0wyYTZJUld1TmQ2U1VPZWo4QlNQOTBGRE1JdnRWYnZ3aHlyallBRDNuYXA0NnFHRlpYbDVQc2c5T2NrS1lIWXBvZlpWcEJ6bVlvSld4ZWNJYWhDT0dDREFYSVo2dTZlUXhSb1pWVVN6ZQ?oc=5"
-      },
-      {
-        "titulo": "SP ganha novas doses da vacina contra a mpox; saiba quem pode receber - Agência Brasil",
-        "tipo": "disponibilidade_vacina",
-        "resumo": "SP ganha novas doses da vacina contra a mpox; saiba quem pode receber&nbsp;&nbsp;Agência Brasil",
-        "linkOficial": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQcmM2MDJIeG5QQ2ttVXJYTXlTUWZXeWFKWWJaMjREWTZQNGRELXBGZ201OEFULUVzQWJ6V0V3Ynhad2RJWjBiNDRrMnNDVjZ0SjI2eXdrVFRqaEQtVHJYZERDd1pkakJlcmRpWHFRaXZIUndVal9UVmtrN2xxTlVJcy10S2toQloxU0p5Rzg2eUZHaTVMMDNXYk1ORlZBMTBDRl9JSjIxbW1ObTJGYXRUMDdWNjlOTTFCaW9Jc19uaw?oc=5"
-      },
-      {
-        "titulo": "Líder em casos de Mpox no Brasil, estado de SP recebe mil doses da vacina contra a doença - G1",
-        "tipo": "disponibilidade_vacina",
-        "resumo": "Líder em casos de Mpox no Brasil, estado de SP recebe mil doses da vacina contra a doença&nbsp;&nbsp;G1",
-        "linkOficial": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNNFp0WFpoeTRDdVBhalFMRThhNmxTQ1YydGhIZWZWWWEyaUJfcGoyMGhiODhqTE1OYXBvZV9mTGV3SzY3OE5UcFdzU0lHX1dtZWpWbHlZanR3Ukg5UE05N0Noa3NBQ2RucWdINTZud2ZkQ1lTclZPN3FFWnN4VG16ODc0UXZEMXdGaHNlWmtVTTZhX3lLazJoRVdPNUNKV2JSel90b3VvT3JObDItTVptMDAzWHJJUnY4WkJVQy1XWlBvQVpVNEFCczY1ZlVObW9sZDEzbGNBXzg0cXBxamcxdNIB7wFBVV95cUxQWGFrNUtmVklkeldnV2htU01haFNIdkYxS05uMDZEN21CS1lzLXVHT0RQT2lub2xZcTJObnQ0ZldhS1NPNG9LQWNBVG10NGtSODFsMEtsMnY0cUhVTFBUeExuYWFyUWxmUklyMlU3eEZCNDBBajFLTFhMbFdPYkdSbTM2SElhRkQ5dGxvMzhCbDF6T1R4R1V5RmxvbjBOdzFSSkRpTUN6bTBrNVBmQVNRb0pwRGdueUhpdFdUNm90VTF5OWpjTGhLNVl3VUZhbVNyY3M3dG8xWW11cEVlOWJlenZBamlEbFVGOWtFSmFOdw?oc=5"
+        "resumo": "O estado de São Paulo começou a distribuir um novo lote com mil doses da vacina contra mpox para os grupos prioritários definidos pelo SUS.",
+        "linkOficial": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNazZPcmFHSGU4ZXA4SzRRZF9sY3YwdGFpQXF1eld3ZzBjdXNhTTlQUUMzUEtZVHBRSUtHbjVJVzdZZFU1ZnJoOHdpOUxBWGVEQzMyRE9vZVVXTGpGeE5sbWxwazRTaXQtZEhlcWpzWWRUa1U1S0hnbDJJc3RJSEZKMGVzN3dkWFRrX0Ixdzg0dmswR0llZnJMZGZwQmdPQ0VqdGJEaWpGYm0tQl93Q0JTYUdCZnJydW1kY0lz0gHAAUFVX3lxTFBFOE9JcGQ2aXVTMkJKVDM0SjI2RzhJeGp3YUx4czVjbUMtZTVWeUpHQmxqaGhIUk8ybE85RU1IM2xnREFmbU1Da0dZYmdyd2JUX2VNN2RmUWtseFJscnd3UkpzTzU3d0xURmZFS09lU3E0bENRUjlWazRVRzlrQm1ER1lyX2FUcUg0M1JCUk1pMW1mNTBOSXh3Z0JkX3pZVEptdmpwUXlJUTVLUWRzUmZzNDFOalZUUWdjWThJTHpGaA?oc=5"
       }
     ]
   }

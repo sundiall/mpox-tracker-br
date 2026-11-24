@@ -262,6 +262,19 @@ def fallback_heuristic_analysis(items):
     alteracoes = []
     alertas = []
 
+    # Ordenar rigorosamente da notícia mais recente para a mais antiga
+    def get_item_datetime(it):
+        raw = it.get("data", "")
+        if not raw:
+            return datetime.min
+        try:
+            from email.utils import parsedate_to_datetime
+            return parsedate_to_datetime(raw)
+        except Exception:
+            return datetime.min
+
+    sorted_items = sorted(items, key=get_item_datetime, reverse=True)
+
     sites_json_path = os.path.join(os.path.dirname(__file__), "..", "public", "data", "vaccination_sites.json")
     known_sites = []
     if os.path.exists(sites_json_path):
@@ -271,7 +284,7 @@ def fallback_heuristic_analysis(items):
         except Exception:
             pass
 
-    for it in items:
+    for it in sorted_items:
         texto = f"{it.get('titulo', '')} {it.get('resumo', '')}".lower()
 
         # Requisito 1: Deve mencionar explicitamente MPOX
@@ -370,6 +383,7 @@ def update_sites_and_alerts_from_report(analise, output_dir):
 
         updated = False
         today_str = datetime.now().strftime("%Y-%m-%d")
+        processed_site_ids = set()
 
         for alt in alteracoes:
             alt_id = alt.get("siteId", "").strip().lower()
@@ -381,8 +395,9 @@ def update_sites_and_alerts_from_report(analise, output_dir):
             fonte = alt.get("fonte")
 
             for s in sites:
+                s_id = s.get("id", "").strip().lower()
                 # 1. Correspondência exata por siteId (prioridade máxima e independente)
-                matches_id = alt_id and s.get("id", "").strip().lower() == alt_id
+                matches_id = alt_id and s_id == alt_id
 
                 # 2. Correspondência dinâmica por nome / tokens caso não haja siteId explícito
                 matches_unit = False
@@ -402,6 +417,13 @@ def update_sites_and_alerts_from_report(analise, output_dir):
                             matches_unit = True
 
                 if matches_id or matches_unit:
+                    # Prevalência Cronológica: a lista alteracoes vem ordenada da notícia MAIS RECENTE para a mais antiga.
+                    # A primeira alteração atribuída a um polo é a cronologicamente soberana.
+                    # Notícias mais antigas subsequentes na lista NÃO podem sobrescrever a decisão mais recente.
+                    if s_id in processed_site_ids:
+                        continue
+                    processed_site_ids.add(s_id)
+
                     if new_status and s.get("statusEstoque") != new_status:
                         s["statusEstoque"] = new_status
                         s["dataAtualizacaoStatus"] = today_str
