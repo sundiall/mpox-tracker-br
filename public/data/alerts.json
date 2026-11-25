@@ -1,5 +1,27 @@
 [
   {
+    "id": "alert-rj-2026-11-25-rio-recebe-nesta-semana-novas-doses-de-v",
+    "dataPublicacao": "2026-11-25",
+    "orgaoEmissor": "SES-RJ",
+    "ufRelacionada": "RJ",
+    "titulo": "Rio recebe nesta semana novas doses de vacina contra a mpox - Agência Brasil",
+    "tipo": "disponibilidade_vacina",
+    "resumo": "Rio recebe nesta semana novas doses de vacina contra a mpox  Agência Brasil",
+    "linkOficial": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOWDJWaHFiVFV1QTc2b0xaUHFhNnBhUVZxZmpVa1lrcU05UTNxdDF5bkl2V1RGX1E3cTBGQkY2NnlGaGhrb0ZndUpSSVZQTW1Td0RJQ0k3SE5BZjBjbmloR09XeEtWTFgzWERGT2VTcFpEbkhSWXlnZy0yZTA2ZVE3N3RCTnlTRktyYlNwZFVKdjV3Rk1WVkZoRmNORUxrb1FpVVJXSDA3em0xTGpieWdYWlln?oc=5",
+    "categoria": "Imunização"
+  },
+  {
+    "id": "alert-rj-2026-11-25-rio-recebe-nesta-semana-novas-doses",
+    "dataPublicacao": "2026-11-25",
+    "orgaoEmissor": "SMS-Rio",
+    "ufRelacionada": "RJ",
+    "titulo": "Rio recebe nesta semana novas doses de vacina contra a mpox",
+    "tipo": "alerta_urgente",
+    "resumo": "A Secretaria Municipal de Saúde (SMS) do Rio informou que mais de 8 mil pessoas foram vacinadas contra a mpox com todas as doses enviadas pelo Ministério da Saúde desde a retomada da imunização no dia 6 de novembro. No momento, os estoques da vacina no município estão esgotados.\n\nEm nota, o Ministér",
+    "linkOficial": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-11/rio-recebe-nesta-semana-novas-doses-de-vacina-contra-mpox",
+    "categoria": "Imunização"
+  },
+  {
     "id": "alert-rj-2026-11-24-rio-de-janeiro-suspende-vacina-o-co",
     "dataPublicacao": "2026-11-24",
     "orgaoEmissor": "SES-RJ",
