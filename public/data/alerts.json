@@ -1,5 +1,16 @@
 [
   {
+    "id": "alert-rj-2026-11-25-rio-recebe-nesta-semana-novas-doses",
+    "dataPublicacao": "2026-11-25",
+    "orgaoEmissor": "SES-RJ",
+    "ufRelacionada": "RJ",
+    "titulo": "Rio recebe nesta semana novas doses de vacina contra a mpox - Poder360",
+    "tipo": "disponibilidade_vacina",
+    "resumo": "Rio recebe nesta semana novas doses de vacina contra a mpox  Poder360",
+    "linkOficial": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQalBaM1VNVnBEU3hyYTFUV2JfNXhhN05MdDNSNXEySHRWT0ZxQkVUYlp3X2lGRWJDQzFaS1EtMVBnci05NUNPLUdxOEVmX1BSWjBwQlR0OUstcEtMNnlXbDJzMWFxZjNxbUt3ZUg0SG1oWHJQQXM2ZWhXU0VXLUhwam1xdk5LSzB3bnp1aGJxSVFPUHdQVFZUTnNSRjBRTWMtZHc?oc=5",
+    "categoria": "Imunização"
+  },
+  {
     "id": "alert-sp-2026-11-25-s-o-paulo-recebe-mil-doses-da-vacina-con",
     "dataPublicacao": "2026-11-25",
     "orgaoEmissor": "SES-SP",
