@@ -91,7 +91,9 @@ def fetch_feed_items():
                     pub_date = item.findtext("pubDate") or ""
                     description = item.findtext("description") or ""
 
-                    clean_desc = re.sub(r'<[^>]+>', '', description).strip()
+                    clean_desc = re.sub(r'<[^>]+>', '', description)
+                    import html
+                    clean_desc = html.unescape(clean_desc).replace('\xa0', ' ').replace('&nbsp;', ' ').strip()
                     full_text = f"{title} {clean_desc}".lower()
 
                     # Requisito temático estrito: o item DEVE tratar de mpox/varíola E de vacinação/doses
@@ -522,10 +524,12 @@ def update_alerts_from_report(analise, output_dir):
     seen_titles = {a.get("titulo", "").strip().lower() for a in existing_alerts if a.get("titulo")}
 
     valid_new = []
+    import html
     for na in new_alerts:
         title = na.get("titulo", "").strip()
         if not title:
             continue
+        title = html.unescape(title).replace('\xa0', ' ').replace('&nbsp;', ' ').strip()
         title_lower = title.lower()
         if title_lower in seen_titles:
             continue
@@ -535,6 +539,8 @@ def update_alerts_from_report(analise, output_dir):
             clean_slug = re.sub(r'[^a-z0-9]+', '-', title_lower)[:35].strip('-')
             slug = f"alert-{na.get('ufRelacionada', 'br').lower()}-{na.get('dataPublicacao', '2026')}-{clean_slug}"
 
+        resumo = html.unescape(na.get("resumo", "")).replace('\xa0', ' ').replace('&nbsp;', ' ').strip()
+
         clean_alert = {
             "id": slug,
             "dataPublicacao": na.get("dataPublicacao", datetime.now().strftime("%Y-%m-%d")),
@@ -542,7 +548,7 @@ def update_alerts_from_report(analise, output_dir):
             "ufRelacionada": na.get("ufRelacionada", "Nacional"),
             "titulo": title,
             "tipo": na.get("tipo", "disponibilidade_vacina"),
-            "resumo": na.get("resumo", ""),
+            "resumo": resumo,
             "linkOficial": na.get("linkOficial", ""),
             "categoria": na.get("categoria", "Imunização")
         }
