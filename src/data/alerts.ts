@@ -18,7 +18,7 @@ export const officialAlerts: OfficialAlert[] = [
     "ufRelacionada": "RJ",
     "titulo": "Rio de Janeiro suspende vacinação contra Mpox por falta de doses - EBC - Empresa Brasil de Comunicação",
     "tipo": "alerta_urgente",
-    "resumo": "Rio de Janeiro suspende vacinação contra Mpox por falta de doses&nbsp;&nbsp;EBC - Empresa Brasil de Comunicação",
+    "resumo": "Rio de Janeiro suspende vacinação contra Mpox por falta de doses EBC - Empresa Brasil de Comunicação",
     "linkOficial": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPTmg3d3B6YWVOb0NiWGNoZTI0YnRhOE1FWDFoMHppWWgyLXpfTjF1T2RqSlVtWG45bjYxTDVpeTlZakdldHhfX1FlWWZURXdDdER4TjBQZFlNajBkZ1U0UFZTdC1LOEZxdWxDWEpyNFZYNDVGbS0welJST1NIQjF6dGthd2tQQmRFU2JHRGVfbllzcW1kazNGM25nZVVFTC1rak5KTXQwMkVmelV2a0RSOEVIUExvTUNwZVNweFBpQWl4U05WelhJRE1udGZVYTkwRUtvRmd3?oc=5",
     "categoria": "Imunização"
   },
@@ -62,7 +62,7 @@ export const officialAlerts: OfficialAlert[] = [
     "ufRelacionada": "RJ",
     "titulo": "Vacina contra mpox acaba no Rio após 8 mil doses e postos param - Povo na Rua",
     "tipo": "alerta_urgente",
-    "resumo": "Vacina contra mpox acaba no Rio após 8 mil doses e postos param&nbsp;&nbsp;Povo na Rua",
+    "resumo": "Vacina contra mpox acaba no Rio após 8 mil doses e postos param Povo na Rua",
     "linkOficial": "https://news.google.com/rss/articles/CBMif0FVX3lxTE92ODNoYXJXWTlxbHYyQTZ1Z0JBSzVZTFBPV2RmVE50NTZhajVOODNndG42Ul9wRXNxSGsyTTFVQk1WeVRlc19FSnB5eXU1OW1yeHgyczlWQlJTdkVNUU1nc1Z4R2pCMEtwSWtUY0VDTlJuaU5aZ3lMeExkNl9rSnM?oc=5",
     "categoria": "Imunização"
   },
@@ -73,7 +73,7 @@ export const officialAlerts: OfficialAlert[] = [
     "ufRelacionada": "SP",
     "titulo": "Vacina contra mpox: São Paulo recebe novo lote de doses - Amazonas1",
     "tipo": "disponibilidade_vacina",
-    "resumo": "Vacina contra mpox: São Paulo recebe novo lote de doses&nbsp;&nbsp;Amazonas1",
+    "resumo": "Vacina contra mpox: São Paulo recebe novo lote de doses Amazonas1",
     "linkOficial": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPN0Zhd0M0NU9oTUUtOV9HSzRRb2dwekZyN3VIMjUtOUVXOFBlckdZanF1a1czWmtmNjFhV1JZNUVnT3VSZkFhVWRPVVdOTDlnU3lRbVZ1WGhtOTV1c1dKMnQyNUk1clJiY2U5NjR1LVJtMWJVLWVWajJzN1lYNlpKUnFzT2ptTTQ?oc=5",
     "categoria": "Imunização"
   },
@@ -84,7 +84,7 @@ export const officialAlerts: OfficialAlert[] = [
     "ufRelacionada": "RJ",
     "titulo": "Rio de Janeiro recebe mais mil frascos de vacina contra Mpox - CNN Brasil",
     "tipo": "disponibilidade_vacina",
-    "resumo": "Rio de Janeiro recebe mais mil frascos de vacina contra Mpox&nbsp;&nbsp;CNN Brasil",
+    "resumo": "Rio de Janeiro recebe mais mil frascos de vacina contra Mpox CNN Brasil",
     "linkOficial": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPa2U2T3V4YkdIRFpsSi1RMmRlX1M4NnpUOVNuVUo3Y1lybGlhWHRBVkdvcjFnVVhsdW9OV2pHMWxrQUZUN2xodUtUMGFOcWIzYnRXSjJtMVViT3FNQmlWZEY2T09nQ3lVUmVMN05qVEpCWUVDNFpWdDF2bUotd1dDRGlTemxoRk85SkFaeTk4ZEJGaTFpSW82cXhVamNXandBQkd4Ry1NMjhLb0lFVnNJ?oc=5",
     "categoria": "Imunização"
   },
@@ -139,7 +139,7 @@ export const officialAlerts: OfficialAlert[] = [
     "ufRelacionada": "SP",
     "titulo": "18/11/2026 - São Paulo recebe mil novas doses da vacina contra a Mpox - Secretaria de Estado da Saúde de São Paulo",
     "tipo": "disponibilidade_vacina",
-    "resumo": "18/11/2026 - São Paulo recebe mil novas doses da vacina contra a Mpox  Secretaria de Estado da Saúde de São Paulo",
+    "resumo": "18/11/2026 - São Paulo recebe mil novas doses da vacina contra a Mpox Secretaria de Estado da Saúde de São Paulo",
     "linkOficial": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxORkFocy1paUFwNWpCNXJJcTR3YWxYSTRqajk4QWxKa3VZS0lYa2RwbXVhWllYQ0dZY1NXWjYzT2JNWGJFeXlfSmh1dVFiR21ZYlVWQnB4bkJMX3ZCbG5yWGllZTZuRk5TM2x1bU1EVzdELTE0aEJyV2RyempMV3NVb2J5Q21ja3p3dzZXd1NsM3F0UU1ua2Y0VlZrZmJleHFYSzVqalNTT0N0RGloZWpsc2ZNUzZqaW1CVmlGeUN3UGM4THF2TXVoZlFydU1oSkJK?oc=5",
     "categoria": "Imunização"
   },
@@ -150,7 +150,7 @@ export const officialAlerts: OfficialAlert[] = [
     "ufRelacionada": "SP",
     "titulo": "SP ganha novas doses da vacina contra a mpox; saiba quem pode receber - Agência Brasil",
     "tipo": "disponibilidade_vacina",
-    "resumo": "SP ganha novas doses da vacina contra a mpox; saiba quem pode receber&nbsp;&nbsp;Agência Brasil",
+    "resumo": "SP ganha novas doses da vacina contra a mpox; saiba quem pode receber Agência Brasil",
     "linkOficial": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQcmM2MDJIeG5QQ2ttVXJYTXlTUWZXeWFKWWJaMjREWTZQNGRELXBGZ201OEFULUVzQWJ6V0V3Ynhad2RJWjBiNDRrMnNDVjZ0SjI2eXdrVFRqaEQtVHJYZERDd1pkakJlcmRpWHFRaXZIUndVal9UVmtrN2xxTlVJcy10S2toQloxU0p5Rzg2eUZHaTVMMDNXYk1ORlZBMTBDRl9JSjIxbW1ObTJGYXRUMDdWNjlOTTFCaW9Jc19uaw?oc=5",
     "categoria": "Imunização"
   },
@@ -161,7 +161,7 @@ export const officialAlerts: OfficialAlert[] = [
     "ufRelacionada": "RJ",
     "titulo": "Ministério envia vacina contra mpox ao Rio, que está com aplicação suspensa por falta de doses - G1",
     "tipo": "alerta_urgente",
-    "resumo": "Ministério envia vacina contra mpox ao Rio, que está com aplicação suspensa por falta de doses&nbsp;&nbsp;G1",
+    "resumo": "Ministério envia vacina contra mpox ao Rio, que está com aplicação suspensa por falta de doses G1",
     "linkOficial": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxOamNLUm5QcFFwb2dSdnlwUXQxWlhTdVNESlRqbGZQeDllMzNxM2k5alA2dWZodFlHTlEtbXJ1X1VIU29iNUdzZGtTazFVRjlueUJaX3ZZVmQxSHgxZjJuUDV3aFJOX3JVcF9kQmJwNWlIWjR0azY0R2NpWk11cGFtR2FSRTdtWXM5eDBlQU1DSXpYMnRYai03WmdESGdyQ3U3eU96ZS04V2dYTi14OWhpZm1hMmFkRWxpTmVBOVZyM0xsT2V2XzBqaHNVMlY2V2Vsc1NvWldqWUlKTW43SWgtclBfcGN4MlZwUnlhSEZJYkEyZ2ZK0gGDAkFVX3lxTE9fWDhKRi1lU3pZWVdhWkV5Y0hGeEdlUVd0b2hnWkg2NVdZTzJ3Tk9VNEM0R0swS050TlpxNVdlTVdPZ3lPb2lfUGVpWW9JX1NhU3hkc2J2aWlBUUpfR3ljaDhIUjFNSUpNZnAtVGpzd0k4M1M5Y0g1MnNqejNISTk5cE9nOWVzRDVTOWNnWUxERUt1SGJJTlZSZWNobnB1bkVqQ0FnbW02c3FRUl8wbXhnZUpkTTBQYjhVTXAtS2lEQllkUmtTSmNWVDFVYzN5QTJObnAxNmVHUVJrWEhOUlpxeW1scEJKVEVScUlIWHNjeDhrSGMtblhOcEtCV3FEUlIwb1E?oc=5",
     "categoria": "Imunização"
   },
@@ -172,7 +172,7 @@ export const officialAlerts: OfficialAlert[] = [
     "ufRelacionada": "RJ",
     "titulo": "Ministério da Saúde envia ao município do Rio mais mil frascos de vacina contra mpox - Governo Federal",
     "tipo": "disponibilidade_vacina",
-    "resumo": "Ministério da Saúde envia ao município do Rio mais mil frascos de vacina contra mpox&nbsp;&nbsp;Governo Federal",
+    "resumo": "Ministério da Saúde envia ao município do Rio mais mil frascos de vacina contra mpox Governo Federal",
     "linkOficial": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQbl9qdXR0TUdTNkZIT2JIU0dOeEd5Y1VDSE5YZ0pZaGhHWTVWNFFtMEdYS2pDQXFTWURiRkh4TEdHaHd5Z19tWDRtSmYtRnBhR0VFZkJLNWdua1U0WUUta2RER0Vma25vV0lkb3RDNU1pdG5UU0ZUNER2WHM1dFRNdFhjUE1uQTJNeFNkTl9WSHR2YzVVTl9naVJJSDRIZFFvNnZxY3JuOFAwRklNdGVLZlFjXzZJbFU2cWxnMUVEcEhaNUkxQ2w0cVoxZE1OSDFiOFpuNGtobHphVllkNVhsTw?oc=5",
     "categoria": "Imunização"
   },
@@ -183,7 +183,7 @@ export const officialAlerts: OfficialAlert[] = [
     "ufRelacionada": "SP",
     "titulo": "Líder em casos de Mpox no Brasil, estado de SP recebe mil doses da vacina contra a doença - G1",
     "tipo": "disponibilidade_vacina",
-    "resumo": "Líder em casos de Mpox no Brasil, estado de SP recebe mil doses da vacina contra a doença&nbsp;&nbsp;G1",
+    "resumo": "Líder em casos de Mpox no Brasil, estado de SP recebe mil doses da vacina contra a doença G1",
     "linkOficial": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNNFp0WFpoeTRDdVBhalFMRThhNmxTQ1YydGhIZWZWWWEyaUJfcGoyMGhiODhqTE1OYXBvZV9mTGV3SzY3OE5UcFdzU0lHX1dtZWpWbHlZanR3Ukg5UE05N0Noa3NBQ2RucWdINTZud2ZkQ1lTclZPN3FFWnN4VG16ODc0UXZEMXdGaHNlWmtVTTZhX3lLazJoRVdPNUNKV2JSel90b3VvT3JObDItTVptMDAzWHJJUnY4WkJVQy1XWlBvQVpVNEFCczY1ZlVObW9sZDEzbGNBXzg0cXBxamcxdNIB7wFBVV95cUxQWGFrNUtmVklkeldnV2htU01haFNIdkYxS05uMDZEN21CS1lzLXVHT0RQT2lub2xZcTJObnQ0ZldhS1NPNG9LQWNBVG10NGtSODFsMEtsMnY0cUhVTFBUeExuYWFyUWxmUklyMlU3eEZCNDBBajFLTFhMbFdPYkdSbTM2SElhRkQ5dGxvMzhCbDF6T1R4R1V5RmxvbjBOdzFSSkRpTUN6bTBrNVBmQVNRb0pwRGdueUhpdFdUNm90VTF5OWpjTGhLNVl3VUZhbVNyY3M3dG8xWW11cEVlOWJlenZBamlEbFVGOWtFSmFOdw?oc=5",
     "categoria": "Imunização"
   },
@@ -194,7 +194,7 @@ export const officialAlerts: OfficialAlert[] = [
     "ufRelacionada": "RJ",
     "titulo": "PBH inicia vacinação contra mpox para grupos prioritários e imunização será ampliada nesta quinta-feira (19) - Prefeitura de Belo Horizonte",
     "tipo": "disponibilidade_vacina",
-    "resumo": "PBH inicia vacinação contra mpox para grupos prioritários e imunização será ampliada nesta quinta-feira (19)&nbsp;&nbsp;Prefeitura de Belo Horizonte",
+    "resumo": "PBH inicia vacinação contra mpox para grupos prioritários e imunização será ampliada nesta quinta-feira (19) Prefeitura de Belo Horizonte",
     "linkOficial": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxObGVKcUNXWjZlUTNZalFHaWNMbjJYdTR5aHZFeHd6WmNVSWt3ZTZOYVdSU3pEWGpkNGg1MzlCdFlVdjBnQWhRd0JIZWh4WF9NTjY1TkdUYjU2ZWY3M0dGZ0wyYTZJUld1TmQ2U1VPZWo4QlNQOTBGRE1JdnRWYnZ3aHlyallBRDNuYXA0NnFHRlpYbDVQc2c5T2NrS1lIWXBvZlpWcEJ6bVlvSld4ZWNJYWhDT0dDREFYSVo2dTZlUXhSb1pWVVN6ZQ?oc=5",
     "categoria": "Imunização"
   },
@@ -205,7 +205,7 @@ export const officialAlerts: OfficialAlert[] = [
     "ufRelacionada": "SP",
     "titulo": "São Paulo recebe mil novas doses da vacina contra a Mpox - agenciasp.sp.gov.br",
     "tipo": "disponibilidade_vacina",
-    "resumo": "São Paulo recebe mil novas doses da vacina contra a Mpox&nbsp;&nbsp;agenciasp.sp.gov.br",
+    "resumo": "São Paulo recebe mil novas doses da vacina contra a Mpox agenciasp.sp.gov.br",
     "linkOficial": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNSkYzc1Jsbm1KZFk2TXJxYVhJVGd6YmpGZEktc05fWU9weXYtcDFzTGJScFI1SGh6bC1OSWt6VFhqNlJsWlZ0SzhTZFJDVzZTMWJyV0NNcDFJcmpYblpBZVJKV0NJcnJrX3lybjVsVERZdDllWl9sNHFlanpwSXhySFo0MVo5bXhRMGt6OHJzVGFBaEp0T29sS2lsRQ?oc=5",
     "categoria": "Imunização"
   },

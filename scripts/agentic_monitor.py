@@ -560,6 +560,12 @@ def update_alerts_from_report(analise, output_dir):
         return
 
     merged = valid_new + existing_alerts
+    for a in merged:
+        if a.get("titulo"):
+            a["titulo"] = html.unescape(a["titulo"]).replace('\xa0', ' ').replace('&nbsp;', ' ').strip()
+        if a.get("resumo"):
+            a["resumo"] = html.unescape(a["resumo"]).replace('\xa0', ' ').replace('&nbsp;', ' ').strip()
+
     def parse_alert_date(a):
         try:
             return datetime.strptime(a.get("dataPublicacao", "2026-01-01"), "%Y-%m-%d")
