@@ -12,6 +12,17 @@ export interface OfficialAlert {
 
 export const officialAlerts: OfficialAlert[] = [
   {
+    "id": "alert-sp-2026-11-25-mpox-n-mero-de-casos-passa-de-1-500-no-b",
+    "dataPublicacao": "2026-11-25",
+    "orgaoEmissor": "SES-SP",
+    "ufRelacionada": "SP",
+    "titulo": "Mpox: número de casos passa de 1 500 no Brasil e São Paulo inicia vacinação com novas doses - VEJA",
+    "tipo": "disponibilidade_vacina",
+    "resumo": "Mpox: número de casos passa de 1 500 no Brasil e São Paulo inicia vacinação com novas doses  VEJA",
+    "linkOficial": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPS3RNR2xIakQ1YkFwazNKMXBrbldRN09heVZheTR0NmVXQXJXUzRyMG5qZmMyeWNITG05U2NVNmhia1VJRmQ3WFh3QjJvQWhveWQzbnBBSzkxQlY0Q1NCOFFpc1QzeTdEendDUVhkYS1PNkNOQV93OEFsbkg2OENJODRHNElaZkR0dlJidDR2M1l0NkZYbnI1S2FVZGtlaHVvbDNIcGg3SzdacjBfV3VHZ1VEOS1lRTNEODJSVkdpWGs?oc=5",
+    "categoria": "Imunização"
+  },
+  {
     "id": "alert-rj-2026-11-25-rio-recebe-novo-lote-da-vacina-contra-mp",
     "dataPublicacao": "2026-11-25",
     "orgaoEmissor": "SES-RJ",
