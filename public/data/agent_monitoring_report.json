@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-11-25T11:48:25.942501",
-  "totalItensVarredura": 25,
+  "timestamp": "2026-11-25T12:57:38.783370",
+  "totalItensVarredura": 23,
   "analiseAgente": {
     "alteracoesEstoque": [
       {
@@ -83,9 +83,9 @@
         "dataPublicacao": "2026-11-24",
         "orgaoEmissor": "SES-RJ",
         "ufRelacionada": "RJ",
-        "titulo": "Rio de Janeiro suspende vacinação contra Mpox por falta de doses - EBC - Empresa Brasil de Comunicação",
+        "titulo": "Rio de Janeiro suspende vacinação contra Mpox por falta de doses - Agência Brasil",
         "tipo": "alerta_urgente",
-        "resumo": "Rio de Janeiro suspende vacinação contra Mpox por falta de doses  EBC - Empresa Brasil de Comunicação",
+        "resumo": "Rio de Janeiro suspende vacinação contra Mpox por falta de doses  Agência Brasil",
         "linkOficial": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPTmg3d3B6YWVOb0NiWGNoZTI0YnRhOE1FWDFoMHppWWgyLXpfTjF1T2RqSlVtWG45bjYxTDVpeTlZakdldHhfX1FlWWZURXdDdER4TjBQZFlNajBkZ1U0UFZTdC1LOEZxdWxDWEpyNFZYNDVGbS0welJST1NIQjF6dGthd2tQQmRFU2JHRGVfbllzcW1kazNGM25nZVVFTC1rak5KTXQwMkVmelV2a0RSOEVIUExvTUNwZVNweFBpQWl4U05WelhJRE1udGZVYTkwRUtvRmd3?oc=5",
         "categoria": "Imunização"
       },
@@ -195,9 +195,9 @@
         "dataPublicacao": "2026-11-24",
         "orgaoEmissor": "SES-RJ",
         "ufRelacionada": "RJ",
-        "titulo": "Rio de Janeiro suspende vacinação contra Mpox por falta de doses - EBC - Empresa Brasil de Comunicação",
+        "titulo": "Rio de Janeiro suspende vacinação contra Mpox por falta de doses - Agência Brasil",
         "tipo": "alerta_urgente",
-        "resumo": "Rio de Janeiro suspende vacinação contra Mpox por falta de doses  EBC - Empresa Brasil de Comunicação",
+        "resumo": "Rio de Janeiro suspende vacinação contra Mpox por falta de doses  Agência Brasil",
         "linkOficial": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPTmg3d3B6YWVOb0NiWGNoZTI0YnRhOE1FWDFoMHppWWgyLXpfTjF1T2RqSlVtWG45bjYxTDVpeTlZakdldHhfX1FlWWZURXdDdER4TjBQZFlNajBkZ1U0UFZTdC1LOEZxdWxDWEpyNFZYNDVGbS0welJST1NIQjF6dGthd2tQQmRFU2JHRGVfbllzcW1kazNGM25nZVVFTC1rak5KTXQwMkVmelV2a0RSOEVIUExvTUNwZVNweFBpQWl4U05WelhJRE1udGZVYTkwRUtvRmd3?oc=5",
         "categoria": "Imunização"
       },

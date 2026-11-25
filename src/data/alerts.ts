@@ -12,6 +12,17 @@ export interface OfficialAlert {
 
 export const officialAlerts: OfficialAlert[] = [
   {
+    "id": "alert-rj-2026-11-24-rio-de-janeiro-suspende-vacina-o-co",
+    "dataPublicacao": "2026-11-24",
+    "orgaoEmissor": "SES-RJ",
+    "ufRelacionada": "RJ",
+    "titulo": "Rio de Janeiro suspende vacinação contra Mpox por falta de doses - Agência Brasil",
+    "tipo": "alerta_urgente",
+    "resumo": "Rio de Janeiro suspende vacinação contra Mpox por falta de doses  Agência Brasil",
+    "linkOficial": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPTmg3d3B6YWVOb0NiWGNoZTI0YnRhOE1FWDFoMHppWWgyLXpfTjF1T2RqSlVtWG45bjYxTDVpeTlZakdldHhfX1FlWWZURXdDdER4TjBQZFlNajBkZ1U0UFZTdC1LOEZxdWxDWEpyNFZYNDVGbS0welJST1NIQjF6dGthd2tQQmRFU2JHRGVfbllzcW1kazNGM25nZVVFTC1rak5KTXQwMkVmelV2a0RSOEVIUExvTUNwZVNweFBpQWl4U05WelhJRE1udGZVYTkwRUtvRmd3?oc=5",
+    "categoria": "Imunização"
+  },
+  {
     "id": "alert-rj-2026-11-24-rio-de-janeiro-suspende-vacina-o-contra",
     "dataPublicacao": "2026-11-24",
     "orgaoEmissor": "SES-RJ",
