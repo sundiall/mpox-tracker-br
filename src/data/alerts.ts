@@ -12,6 +12,28 @@ export interface OfficialAlert {
 
 export const officialAlerts: OfficialAlert[] = [
   {
+    "id": "alert-rj-2026-11-25-rio-recebe-novo-lote-da-vacina-contra-mp",
+    "dataPublicacao": "2026-11-25",
+    "orgaoEmissor": "SES-RJ",
+    "ufRelacionada": "RJ",
+    "titulo": "Rio recebe novo lote da vacina contra mpox para grupos de risco - Povo na Rua",
+    "tipo": "disponibilidade_vacina",
+    "resumo": "Rio recebe novo lote da vacina contra mpox para grupos de risco  Povo na Rua",
+    "linkOficial": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNQVEzMHZkUVp1YnJkMDZxSjNib3hqTVRXbzlBRnFrZ1NESGQ0NEpnNnhFd3IzYnVwY0xJZ0ttcXNjWmppTU83NXN1VGQxTUlkRGprVnNrVC1QXzZncXhqaGY2c003NTd1bzQzMlJmT3Z2VFY1MHpQYUtCdHVUako4eWdfZw?oc=5",
+    "categoria": "Imunização"
+  },
+  {
+    "id": "alert-rj-2026-11-25-rio-de-janeiro-retoma-vacina-o-contra-a",
+    "dataPublicacao": "2026-11-25",
+    "orgaoEmissor": "SES-RJ",
+    "ufRelacionada": "RJ",
+    "titulo": "Rio de Janeiro retoma vacinação contra a mpox nesta semana com chegada de novas doses para segunda aplicação - Fato Paulista",
+    "tipo": "disponibilidade_vacina",
+    "resumo": "Rio de Janeiro retoma vacinação contra a mpox nesta semana com chegada de novas doses para segunda aplicação  Fato Paulista",
+    "linkOficial": "https://news.google.com/rss/articles/CBMifkFVX3lxTE13OWMzektQSDhIYVZjRjZ0TjJ3cEFDbFp0NEpPVUh2MjZXSnpwSVJYT2sxcVJ3VHpzb0pubzh6Z0gyX25wMmNiVkg5QzBuYUczVk5xUFhpTjhqcGRxM0w4VXpLZTN6TFVEMVY2cWwycnJYWmNlay1ERWt6a0hDdw?oc=5",
+    "categoria": "Imunização"
+  },
+  {
     "id": "alert-rj-2026-11-25-rio-recebe-nesta-semana-novas-doses-de-v",
     "dataPublicacao": "2026-11-25",
     "orgaoEmissor": "SES-RJ",
