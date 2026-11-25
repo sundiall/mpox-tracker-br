@@ -4,6 +4,8 @@ import { fileURLToPath } from 'node:url';
 import { officialAlerts } from '../src/data/alerts.ts';
 import { vaccinationSites } from '../src/data/vaccination_sites.ts';
 import { vaccineMilestones } from '../src/data/vaccines.ts';
+import { epidemicTimeSeries, weeklyByYearData, epidemicMilestones, vaccineProgressTimeData } from '../src/data/time_series.ts';
+import { statesData, nationalSummary } from '../src/data/epidemiology.ts';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -78,4 +80,25 @@ fs.writeFileSync(
   'utf-8'
 );
 
-console.log(`✅ [Export JSON] Sincronizados ${officialAlerts.length} alertas, ${vaccinationSites.length} postos e ${vaccineMilestones.length} marcos em ${outputDir}`);
+fs.writeFileSync(
+  path.join(outputDir, 'time_series.json'),
+  JSON.stringify({
+    epidemicTimeSeries,
+    weeklyByYearData,
+    epidemicMilestones,
+    vaccineProgressTimeData,
+    ultimaAtualizacao: new Date().toISOString()
+  }, null, 2),
+  'utf-8'
+);
+
+fs.writeFileSync(
+  path.join(outputDir, 'epidemiology.json'),
+  JSON.stringify({
+    nationalSummary,
+    statesData
+  }, null, 2),
+  'utf-8'
+);
+
+console.log(`✅ [Export JSON] Sincronizados ${officialAlerts.length} alertas, ${vaccinationSites.length} postos, ${vaccineMilestones.length} marcos, ${epidemicTimeSeries.length} semanas e ${statesData.length} UFs em ${outputDir}`);

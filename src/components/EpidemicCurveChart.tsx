@@ -15,6 +15,7 @@ import {
   Cell
 } from 'recharts';
 import { getEpidemicCurve, getApplicableMilestones, getWeeklyByYear, epidemicTimeSeries } from '../data/time_series';
+import type { EpidemiologicalWeekData } from '../data/time_series';
 import { syncMetadata } from '../data/sync_status';
 import { statesData } from '../data/epidemiology';
 import { formatWeekToCommonDate, getEpidemiologicalWeekDateRange } from '../utils/date_converters';
@@ -37,6 +38,7 @@ import {
 } from 'lucide-react';
 
 interface EpidemicCurveChartProps {
+  timeSeries?: EpidemiologicalWeekData[];
   selectedUF: string | null;
   onSelectUF: (uf: string | null) => void;
   startWeek?: string;
@@ -125,6 +127,7 @@ export const EpidemicCurveChart: FC<EpidemicCurveChartProps> = ({
   onSelectPeriod,
   customStartWeek,
   onSelectCustomStartWeek,
+  timeSeries,
   customEndWeek,
   onSelectCustomEndWeek
 }) => {
@@ -139,7 +142,7 @@ export const EpidemicCurveChart: FC<EpidemicCurveChartProps> = ({
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const allWeeks = useMemo(() => epidemicTimeSeries.map((d) => d.semana), []);
+  const allWeeks = useMemo(() => (timeSeries || epidemicTimeSeries).map((d) => d.semana), [timeSeries]);
 
   // Série contínua exibida por padrão conforme solicitado
   const [displayMode, setDisplayMode] = useState<'oficial_ano' | 'continua'>('continua');
@@ -156,8 +159,8 @@ export const EpidemicCurveChart: FC<EpidemicCurveChartProps> = ({
 
   // Recalcula dinamicamente a curva contínua com base no estado e período selecionados
   const chartData = useMemo(() => {
-    return getEpidemicCurve(selectedUF, startWeek, endWeek);
-  }, [selectedUF, startWeek, endWeek]);
+    return getEpidemicCurve(selectedUF, startWeek, endWeek, timeSeries);
+  }, [selectedUF, startWeek, endWeek, timeSeries]);
 
   // Filtro temporal para o gráfico Oficial (semanas 1 a 52 por ano)
   const parsedStart = useMemo(() => parseWeekNumber(startWeek), [startWeek]);

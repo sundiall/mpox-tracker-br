@@ -165,420 +165,428 @@ export const epidemicMilestones: MilestoneNote[] = [
 
 export const weeklyByYearData: WeeklyByYearPoint[] = [
   {
+    "semana": 1,
     "2022": 0,
     "2023": 49,
     "2024": 44,
     "2025": 18,
-    "2026": 4,
-    "semana": 1
+    "2026": 4
   },
   {
+    "semana": 2,
     "2022": 0,
     "2023": 48,
     "2024": 44,
     "2025": 44,
-    "2026": 17,
-    "semana": 2
+    "2026": 17
   },
   {
+    "semana": 3,
     "2022": 0,
     "2023": 53,
     "2024": 34,
     "2025": 23,
-    "2026": 15,
-    "semana": 3
+    "2026": 16
   },
   {
+    "semana": 4,
     "2022": 0,
     "2023": 34,
     "2024": 48,
     "2025": 33,
-    "2026": 18,
-    "semana": 4
+    "2026": 18
   },
   {
+    "semana": 5,
     "2022": 0,
     "2023": 28,
     "2024": 39,
     "2025": 36,
-    "2026": 15,
-    "semana": 5
+    "2026": 15
   },
   {
+    "semana": 6,
     "2022": 0,
     "2023": 14,
     "2024": 34,
     "2025": 46,
-    "2026": 13,
-    "semana": 6
+    "2026": 13
   },
   {
+    "semana": 7,
     "2022": 0,
     "2023": 17,
     "2024": 27,
     "2025": 16,
-    "2026": 15,
-    "semana": 7
+    "2026": 15
   },
   {
+    "semana": 8,
     "2022": 0,
     "2023": 7,
     "2024": 37,
     "2025": 30,
-    "2026": 17,
-    "semana": 8
+    "2026": 17
   },
   {
+    "semana": 9,
     "2022": 0,
     "2023": 11,
     "2024": 30,
     "2025": 23,
-    "2026": 38,
-    "semana": 9
+    "2026": 38
   },
   {
+    "semana": 10,
     "2022": 0,
     "2023": 14,
     "2024": 31,
     "2025": 17,
-    "2026": 30,
-    "semana": 10
+    "2026": 29
   },
   {
+    "semana": 11,
     "2022": 0,
     "2023": 17,
     "2024": 30,
     "2025": 41,
-    "2026": 17,
-    "semana": 11
+    "2026": 17
   },
   {
+    "semana": 12,
     "2022": 0,
     "2023": 11,
     "2024": 19,
     "2025": 36,
-    "2026": 16,
-    "semana": 12
+    "2026": 16
   },
   {
+    "semana": 13,
     "2022": 0,
     "2023": 11,
     "2024": 17,
     "2025": 32,
-    "2026": 15,
-    "semana": 13
+    "2026": 16
   },
   {
+    "semana": 14,
     "2022": 0,
     "2023": 4,
     "2024": 23,
     "2025": 22,
-    "2026": 16,
-    "semana": 14
+    "2026": 16
   },
   {
+    "semana": 15,
     "2022": 0,
     "2023": 3,
     "2024": 25,
     "2025": 28,
-    "2026": 18,
-    "semana": 15
+    "2026": 18
   },
   {
+    "semana": 16,
     "2022": 0,
     "2023": 6,
     "2024": 15,
     "2025": 25,
-    "2026": 17,
-    "semana": 16
+    "2026": 17
   },
   {
+    "semana": 17,
     "2022": 0,
     "2023": 9,
     "2024": 22,
     "2025": 20,
-    "2026": 5,
-    "semana": 17
+    "2026": 5
   },
   {
+    "semana": 18,
     "2022": 0,
     "2023": 8,
     "2024": 16,
     "2025": 26,
-    "2026": 14,
-    "semana": 18
+    "2026": 14
   },
   {
+    "semana": 19,
     "2022": 1,
     "2023": 5,
     "2024": 16,
     "2025": 31,
-    "2026": 15,
-    "semana": 19
+    "2026": 15
   },
   {
+    "semana": 20,
     "2022": 0,
     "2023": 11,
     "2024": 22,
     "2025": 25,
-    "2026": 17,
-    "semana": 20
+    "2026": 17
   },
   {
+    "semana": 21,
     "2022": 0,
     "2023": 3,
     "2024": 14,
     "2025": 26,
-    "2026": 15,
-    "semana": 21
+    "2026": 15
   },
   {
+    "semana": 22,
     "2022": 0,
     "2023": 6,
     "2024": 9,
     "2025": 24,
-    "2026": 10,
-    "semana": 22
+    "2026": 10
   },
   {
+    "semana": 23,
     "2022": 5,
     "2023": 4,
     "2024": 15,
     "2025": 18,
-    "2026": 4,
-    "semana": 23
+    "2026": 4
   },
   {
+    "semana": 24,
     "2022": 9,
     "2023": 7,
     "2024": 7,
     "2025": 24,
-    "2026": 9,
-    "semana": 24
+    "2026": 9
   },
   {
+    "semana": 25,
     "2022": 17,
     "2023": 5,
     "2024": 9,
     "2025": 14,
-    "2026": 13,
-    "semana": 25
+    "2026": 13
   },
   {
+    "semana": 26,
     "2022": 94,
     "2023": 3,
     "2024": 9,
     "2025": 18,
-    "2026": 7,
-    "semana": 26
+    "2026": 7
   },
   {
+    "semana": 27,
     "2022": 189,
     "2023": 7,
     "2024": 13,
     "2025": 20,
-    "2026": 6,
-    "semana": 27
+    "2026": 6
   },
   {
+    "semana": 28,
     "2022": 295,
     "2023": 3,
     "2024": 9,
     "2025": 21,
-    "2026": 2,
-    "semana": 28
+    "2026": 2
   },
   {
+    "semana": 29,
     "2022": 503,
     "2023": 15,
     "2024": 18,
     "2025": 23,
-    "2026": 10,
-    "semana": 29
+    "2026": 10
   },
   {
+    "semana": 30,
     "2022": 808,
     "2023": 9,
     "2024": 27,
     "2025": 21,
-    "2026": 5,
-    "semana": 30
+    "2026": 5
   },
   {
+    "semana": 31,
     "2022": 1053,
     "2023": 11,
     "2024": 28,
     "2025": 20,
-    "2026": 14,
-    "semana": 31
+    "2026": 14
   },
   {
+    "semana": 32,
     "2022": 949,
     "2023": 10,
     "2024": 38,
     "2025": 19,
-    "2026": 7,
-    "semana": 32
+    "2026": 7
   },
   {
+    "semana": 33,
     "2022": 902,
     "2023": 10,
     "2024": 54,
     "2025": 20,
-    "2026": 10,
-    "semana": 33
+    "2026": 10
   },
   {
+    "semana": 34,
     "2022": 967,
     "2023": 6,
     "2024": 79,
     "2025": 23,
-    "2026": 17,
-    "semana": 34
+    "2026": 17
   },
   {
+    "semana": 35,
     "2022": 729,
     "2023": 12,
     "2024": 97,
     "2025": 23,
-    "2026": 9,
-    "semana": 35
+    "2026": 9
   },
   {
+    "semana": 36,
     "2022": 650,
     "2023": 11,
     "2024": 94,
     "2025": 20,
-    "2026": 9,
-    "semana": 36
+    "2026": 9
   },
   {
+    "semana": 37,
     "2022": 588,
     "2023": 15,
     "2024": 76,
     "2025": 18,
-    "2026": 16,
-    "semana": 37
+    "2026": 16
   },
   {
+    "semana": 38,
     "2022": 516,
     "2023": 13,
     "2024": 69,
     "2025": 17,
-    "2026": 10,
-    "semana": 38
+    "2026": 9
   },
   {
+    "semana": 39,
     "2022": 440,
     "2023": 8,
     "2024": 60,
     "2025": 18,
-    "2026": 28,
-    "semana": 39
+    "2026": 28
   },
   {
+    "semana": 40,
     "2022": 373,
     "2023": 14,
     "2024": 69,
     "2025": 13,
-    "2026": 32,
-    "semana": 40
+    "2026": 31
   },
   {
+    "semana": 41,
     "2022": 272,
     "2023": 14,
     "2024": 83,
     "2025": 19,
-    "2026": 48,
-    "semana": 41
+    "2026": 49
   },
   {
+    "semana": 42,
     "2022": 254,
     "2023": 24,
     "2024": 69,
     "2025": 7,
-    "2026": 50,
-    "semana": 42
+    "2026": 52
   },
   {
+    "semana": 43,
     "2022": 230,
     "2023": 38,
     "2024": 70,
     "2025": 7,
-    "2026": 73,
-    "semana": 43
+    "2026": 75
   },
   {
+    "semana": 44,
     "2022": 164,
     "2023": 24,
     "2024": 74,
     "2025": 10,
-    "2026": 119,
-    "semana": 44
+    "2026": 134
   },
   {
+    "semana": 45,
     "2022": 155,
     "2023": 38,
     "2024": 83,
-    "2025": 19,
-    "2026": 188,
-    "semana": 45
+    "2025": 18,
+    "2026": 212
   },
   {
+    "semana": 46,
     "2022": 129,
     "2023": 18,
     "2024": 57,
     "2025": 10,
-    "2026": 58,
-    "semana": 46
+    "2026": 267
   },
   {
+    "semana": 47,
     "2022": 118,
     "2023": 26,
     "2024": 54,
     "2025": 8,
-    "2026": 0,
-    "semana": 47
+    "2026": 255
   },
   {
+    "semana": 48,
     "2022": 115,
     "2023": 28,
     "2024": 46,
     "2025": 12,
-    "2026": 0,
-    "semana": 48
+    "2026": 25
   },
   {
+    "semana": 49,
     "2022": 90,
     "2023": 20,
     "2024": 55,
     "2025": 13,
-    "2026": 0,
-    "semana": 49
+    "2026": 0
   },
   {
+    "semana": 50,
     "2022": 100,
     "2023": 23,
     "2024": 43,
     "2025": 19,
-    "2026": 0,
-    "semana": 50
+    "2026": 0
   },
   {
+    "semana": 51,
     "2022": 50,
     "2023": 23,
     "2024": 36,
     "2025": 16,
-    "2026": 0,
-    "semana": 51
+    "2026": 0
   },
   {
+    "semana": 52,
     "2022": 59,
     "2023": 22,
     "2024": 32,
     "2025": 10,
-    "2026": 0,
-    "semana": 52
+    "2026": 0
+  },
+  {
+    "semana": 53,
+    "2022": 0,
+    "2023": 0,
+    "2024": 0,
+    "2025": 0,
+    "2026": 0
   }
 ];
 
@@ -590,12 +598,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 0,
     "casosAcumulados": 0,
     "obitosNovos": 0,
-    "obitosAcumulados": 1,
+    "obitosAcumulados": 0,
     "dosesNovas": 0,
     "dosesAcumuladas": 0,
     "mediaMovel7d": 0,
-    "tendencia3s": null,
-    "tendencia5s": null
+    "tendencia3s": 0,
+    "tendencia5s": 0,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2022-SE23",
@@ -604,12 +613,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 5,
     "casosAcumulados": 5,
     "obitosNovos": 0,
-    "obitosAcumulados": 1,
+    "obitosAcumulados": 0,
     "dosesNovas": 0,
     "dosesAcumuladas": 0,
-    "mediaMovel7d": 3,
-    "tendencia3s": null,
-    "tendencia5s": null
+    "mediaMovel7d": 2,
+    "tendencia3s": 2,
+    "tendencia5s": 2,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2022-SE24",
@@ -618,12 +628,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 9,
     "casosAcumulados": 14,
     "obitosNovos": 0,
-    "obitosAcumulados": 1,
+    "obitosAcumulados": 0,
     "dosesNovas": 0,
     "dosesAcumuladas": 0,
     "mediaMovel7d": 5,
-    "tendencia3s": 9,
-    "tendencia5s": null
+    "tendencia3s": 5,
+    "tendencia5s": 5,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2022-SE25",
@@ -632,12 +643,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 17,
     "casosAcumulados": 31,
     "obitosNovos": 0,
-    "obitosAcumulados": 1,
+    "obitosAcumulados": 0,
     "dosesNovas": 0,
     "dosesAcumuladas": 0,
     "mediaMovel7d": 10,
-    "tendencia3s": 16,
-    "tendencia5s": null
+    "tendencia3s": 10,
+    "tendencia5s": 9,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2022-SE26",
@@ -646,12 +658,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 94,
     "casosAcumulados": 125,
     "obitosNovos": 0,
-    "obitosAcumulados": 1,
+    "obitosAcumulados": 0,
     "dosesNovas": 0,
     "dosesAcumuladas": 0,
     "mediaMovel7d": 40,
-    "tendencia3s": 83,
-    "tendencia5s": 65
+    "tendencia3s": 38,
+    "tendencia5s": 37,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2022-SE27",
@@ -660,12 +673,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 189,
     "casosAcumulados": 314,
     "obitosNovos": 0,
-    "obitosAcumulados": 1,
+    "obitosAcumulados": 0,
     "dosesNovas": 0,
     "dosesAcumuladas": 0,
     "mediaMovel7d": 100,
-    "tendencia3s": 186,
-    "tendencia5s": 153
+    "tendencia3s": 95,
+    "tendencia5s": 92,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2022-SE28",
@@ -674,12 +688,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 295,
     "casosAcumulados": 609,
     "obitosNovos": 0,
-    "obitosAcumulados": 1,
+    "obitosAcumulados": 0,
     "dosesNovas": 0,
     "dosesAcumuladas": 0,
     "mediaMovel7d": 193,
-    "tendencia3s": 293,
-    "tendencia5s": 270
+    "tendencia3s": 183,
+    "tendencia5s": 178,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2022-SE29",
@@ -692,8 +707,9 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "dosesNovas": 0,
     "dosesAcumuladas": 0,
     "mediaMovel7d": 329,
-    "tendencia3s": 486,
-    "tendencia5s": 454
+    "tendencia3s": 313,
+    "tendencia5s": 303,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2022-SE30",
@@ -702,12 +718,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 808,
     "casosAcumulados": 1920,
     "obitosNovos": 1,
-    "obitosAcumulados": 1,
+    "obitosAcumulados": 2,
     "dosesNovas": 0,
     "dosesAcumuladas": 0,
     "mediaMovel7d": 535,
-    "tendencia3s": 792,
-    "tendencia5s": 726
+    "tendencia3s": 508,
+    "tendencia5s": 492,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2022-SE31",
@@ -716,13 +733,14 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 1053,
     "casosAcumulados": 2973,
     "obitosNovos": 1,
-    "obitosAcumulados": 1,
+    "obitosAcumulados": 3,
     "dosesNovas": 0,
     "dosesAcumuladas": 0,
     "mediaMovel7d": 788,
-    "tendencia3s": 1063,
-    "tendencia5s": 1018,
-    "marco": "Pico da 1ª Onda (1.053 casos/semana)",
+    "tendencia3s": 749,
+    "tendencia5s": 725,
+    "statusConsolidacao": "consolidado",
+    "marco": "Pico da 1\u00aa Onda (1.053 casos/semana)",
     "marcoId": "m1"
   },
   {
@@ -732,12 +750,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 949,
     "casosAcumulados": 3922,
     "obitosNovos": 1,
-    "obitosAcumulados": 14,
+    "obitosAcumulados": 4,
     "dosesNovas": 0,
     "dosesAcumuladas": 0,
     "mediaMovel7d": 937,
-    "tendencia3s": 1007,
-    "tendencia5s": 1093
+    "tendencia3s": 890,
+    "tendencia5s": 862,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2022-SE33",
@@ -746,12 +765,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 902,
     "casosAcumulados": 4824,
     "obitosNovos": 1,
-    "obitosAcumulados": 14,
+    "obitosAcumulados": 5,
     "dosesNovas": 0,
     "dosesAcumuladas": 0,
     "mediaMovel7d": 968,
-    "tendencia3s": 893,
-    "tendencia5s": 1031
+    "tendencia3s": 920,
+    "tendencia5s": 891,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2022-SE34",
@@ -760,12 +780,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 967,
     "casosAcumulados": 5791,
     "obitosNovos": 3,
-    "obitosAcumulados": 14,
+    "obitosAcumulados": 8,
     "dosesNovas": 0,
     "dosesAcumuladas": 0,
     "mediaMovel7d": 939,
-    "tendencia3s": 948,
-    "tendencia5s": 969
+    "tendencia3s": 892,
+    "tendencia5s": 864,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2022-SE35",
@@ -774,12 +795,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 729,
     "casosAcumulados": 6520,
     "obitosNovos": 1,
-    "obitosAcumulados": 14,
+    "obitosAcumulados": 9,
     "dosesNovas": 0,
     "dosesAcumuladas": 0,
     "mediaMovel7d": 866,
-    "tendencia3s": 780,
-    "tendencia5s": 794
+    "tendencia3s": 823,
+    "tendencia5s": 797,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2022-SE36",
@@ -788,12 +810,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 650,
     "casosAcumulados": 7170,
     "obitosNovos": 1,
-    "obitosAcumulados": 14,
+    "obitosAcumulados": 10,
     "dosesNovas": 0,
     "dosesAcumuladas": 0,
     "mediaMovel7d": 782,
-    "tendencia3s": 624,
-    "tendencia5s": 685
+    "tendencia3s": 743,
+    "tendencia5s": 719,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2022-SE37",
@@ -802,12 +825,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 588,
     "casosAcumulados": 7758,
     "obitosNovos": 1,
-    "obitosAcumulados": 14,
+    "obitosAcumulados": 11,
     "dosesNovas": 0,
     "dosesAcumuladas": 0,
     "mediaMovel7d": 656,
-    "tendencia3s": 585,
-    "tendencia5s": 578
+    "tendencia3s": 623,
+    "tendencia5s": 604,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2022-SE38",
@@ -816,12 +840,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 516,
     "casosAcumulados": 8274,
     "obitosNovos": 1,
-    "obitosAcumulados": 14,
+    "obitosAcumulados": 12,
     "dosesNovas": 0,
     "dosesAcumuladas": 0,
     "mediaMovel7d": 585,
-    "tendencia3s": 518,
-    "tendencia5s": 481
+    "tendencia3s": 556,
+    "tendencia5s": 538,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2022-SE39",
@@ -830,12 +855,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 440,
     "casosAcumulados": 8714,
     "obitosNovos": 0,
-    "obitosAcumulados": 14,
+    "obitosAcumulados": 12,
     "dosesNovas": 0,
     "dosesAcumuladas": 0,
     "mediaMovel7d": 515,
-    "tendencia3s": 441,
-    "tendencia5s": 442
+    "tendencia3s": 489,
+    "tendencia5s": 474,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2022-SE40",
@@ -844,12 +870,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 373,
     "casosAcumulados": 9087,
     "obitosNovos": 0,
-    "obitosAcumulados": 14,
+    "obitosAcumulados": 12,
     "dosesNovas": 172,
     "dosesAcumuladas": 172,
     "mediaMovel7d": 443,
-    "tendencia3s": 372,
-    "tendencia5s": 373,
+    "tendencia3s": 421,
+    "tendencia5s": 408,
+    "statusConsolidacao": "consolidado",
     "marco": "Chegada Vacinas OPAS (9.8k doses)",
     "marcoId": "m2"
   },
@@ -860,12 +887,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 272,
     "casosAcumulados": 9359,
     "obitosNovos": 0,
-    "obitosAcumulados": 14,
+    "obitosAcumulados": 12,
     "dosesNovas": 145,
     "dosesAcumuladas": 317,
     "mediaMovel7d": 362,
-    "tendencia3s": 278,
-    "tendencia5s": 283
+    "tendencia3s": 344,
+    "tendencia5s": 333,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2022-SE42",
@@ -874,12 +902,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 254,
     "casosAcumulados": 9613,
     "obitosNovos": 0,
-    "obitosAcumulados": 14,
+    "obitosAcumulados": 12,
     "dosesNovas": 123,
     "dosesAcumuladas": 440,
     "mediaMovel7d": 300,
-    "tendencia3s": 240,
-    "tendencia5s": 233
+    "tendencia3s": 285,
+    "tendencia5s": 276,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2022-SE43",
@@ -888,12 +917,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 230,
     "casosAcumulados": 9843,
     "obitosNovos": 0,
-    "obitosAcumulados": 14,
+    "obitosAcumulados": 12,
     "dosesNovas": 125,
     "dosesAcumuladas": 565,
     "mediaMovel7d": 252,
-    "tendencia3s": 231,
-    "tendencia5s": 206
+    "tendencia3s": 239,
+    "tendencia5s": 232,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2022-SE44",
@@ -902,12 +932,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 164,
     "casosAcumulados": 10007,
     "obitosNovos": 0,
-    "obitosAcumulados": 14,
+    "obitosAcumulados": 12,
     "dosesNovas": 151,
     "dosesAcumuladas": 716,
     "mediaMovel7d": 216,
-    "tendencia3s": 171,
-    "tendencia5s": 167
+    "tendencia3s": 205,
+    "tendencia5s": 199,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2022-SE45",
@@ -916,12 +947,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 155,
     "casosAcumulados": 10162,
     "obitosNovos": 0,
-    "obitosAcumulados": 14,
+    "obitosAcumulados": 12,
     "dosesNovas": 176,
     "dosesAcumuladas": 892,
     "mediaMovel7d": 183,
-    "tendencia3s": 146,
-    "tendencia5s": 150
+    "tendencia3s": 174,
+    "tendencia5s": 168,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2022-SE46",
@@ -930,12 +962,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 129,
     "casosAcumulados": 10291,
     "obitosNovos": 0,
-    "obitosAcumulados": 14,
+    "obitosAcumulados": 12,
     "dosesNovas": 177,
     "dosesAcumuladas": 1069,
     "mediaMovel7d": 149,
-    "tendencia3s": 132,
-    "tendencia5s": 121
+    "tendencia3s": 142,
+    "tendencia5s": 137,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2022-SE47",
@@ -944,12 +977,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 118,
     "casosAcumulados": 10409,
     "obitosNovos": 0,
-    "obitosAcumulados": 14,
+    "obitosAcumulados": 12,
     "dosesNovas": 154,
     "dosesAcumuladas": 1223,
     "mediaMovel7d": 134,
-    "tendencia3s": 116,
-    "tendencia5s": 107
+    "tendencia3s": 127,
+    "tendencia5s": 123,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2022-SE48",
@@ -958,12 +992,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 115,
     "casosAcumulados": 10524,
     "obitosNovos": 0,
-    "obitosAcumulados": 14,
+    "obitosAcumulados": 12,
     "dosesNovas": 127,
     "dosesAcumuladas": 1350,
     "mediaMovel7d": 121,
-    "tendencia3s": 114,
-    "tendencia5s": 109
+    "tendencia3s": 115,
+    "tendencia5s": 111,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2022-SE49",
@@ -972,12 +1007,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 90,
     "casosAcumulados": 10614,
     "obitosNovos": 0,
-    "obitosAcumulados": 14,
+    "obitosAcumulados": 12,
     "dosesNovas": 121,
     "dosesAcumuladas": 1471,
     "mediaMovel7d": 108,
-    "tendencia3s": 94,
-    "tendencia5s": 93
+    "tendencia3s": 103,
+    "tendencia5s": 99,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2022-SE50",
@@ -986,12 +1022,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 100,
     "casosAcumulados": 10714,
     "obitosNovos": 0,
-    "obitosAcumulados": 14,
+    "obitosAcumulados": 12,
     "dosesNovas": 142,
     "dosesAcumuladas": 1613,
     "mediaMovel7d": 102,
-    "tendencia3s": 94,
-    "tendencia5s": 93
+    "tendencia3s": 97,
+    "tendencia5s": 94,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2022-SE51",
@@ -1000,12 +1037,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 50,
     "casosAcumulados": 10764,
     "obitosNovos": 0,
-    "obitosAcumulados": 14,
+    "obitosAcumulados": 12,
     "dosesNovas": 170,
     "dosesAcumuladas": 1783,
     "mediaMovel7d": 80,
-    "tendencia3s": 60,
-    "tendencia5s": 64
+    "tendencia3s": 76,
+    "tendencia5s": 74,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2022-SE52",
@@ -1014,12 +1052,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 59,
     "casosAcumulados": 10823,
     "obitosNovos": 0,
-    "obitosAcumulados": 14,
+    "obitosAcumulados": 12,
     "dosesNovas": 180,
     "dosesAcumuladas": 1963,
     "mediaMovel7d": 70,
-    "tendencia3s": 49,
-    "tendencia5s": 52
+    "tendencia3s": 66,
+    "tendencia5s": 64,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2023-SE01",
@@ -1028,12 +1067,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 49,
     "casosAcumulados": 10872,
     "obitosNovos": 0,
-    "obitosAcumulados": 16,
+    "obitosAcumulados": 12,
     "dosesNovas": 0,
     "dosesAcumuladas": 1963,
     "mediaMovel7d": 53,
-    "tendencia3s": 52,
-    "tendencia5s": 45
+    "tendencia3s": 50,
+    "tendencia5s": 49,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2023-SE02",
@@ -1042,12 +1082,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 48,
     "casosAcumulados": 10920,
     "obitosNovos": 0,
-    "obitosAcumulados": 16,
+    "obitosAcumulados": 12,
     "dosesNovas": 0,
     "dosesAcumuladas": 1963,
     "mediaMovel7d": 52,
-    "tendencia3s": 47,
-    "tendencia5s": 40
+    "tendencia3s": 49,
+    "tendencia5s": 48,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2023-SE03",
@@ -1056,12 +1097,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 53,
     "casosAcumulados": 10973,
     "obitosNovos": 0,
-    "obitosAcumulados": 16,
+    "obitosAcumulados": 12,
     "dosesNovas": 0,
     "dosesAcumuladas": 1963,
     "mediaMovel7d": 50,
-    "tendencia3s": 52,
-    "tendencia5s": 51
+    "tendencia3s": 48,
+    "tendencia5s": 46,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2023-SE04",
@@ -1070,12 +1112,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 34,
     "casosAcumulados": 11007,
     "obitosNovos": 0,
-    "obitosAcumulados": 16,
+    "obitosAcumulados": 12,
     "dosesNovas": 0,
     "dosesAcumuladas": 1963,
     "mediaMovel7d": 45,
-    "tendencia3s": 38,
-    "tendencia5s": 39
+    "tendencia3s": 43,
+    "tendencia5s": 41,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2023-SE05",
@@ -1084,12 +1127,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 28,
     "casosAcumulados": 11035,
     "obitosNovos": 0,
-    "obitosAcumulados": 16,
+    "obitosAcumulados": 12,
     "dosesNovas": 0,
     "dosesAcumuladas": 1963,
     "mediaMovel7d": 38,
-    "tendencia3s": 26,
-    "tendencia5s": 31
+    "tendencia3s": 36,
+    "tendencia5s": 35,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2023-SE06",
@@ -1098,12 +1142,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 14,
     "casosAcumulados": 11049,
     "obitosNovos": 0,
-    "obitosAcumulados": 16,
+    "obitosAcumulados": 12,
     "dosesNovas": 0,
     "dosesAcumuladas": 1963,
     "mediaMovel7d": 25,
-    "tendencia3s": 15,
-    "tendencia5s": 17
+    "tendencia3s": 24,
+    "tendencia5s": 23,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2023-SE07",
@@ -1112,12 +1157,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 17,
     "casosAcumulados": 11066,
     "obitosNovos": 0,
-    "obitosAcumulados": 16,
+    "obitosAcumulados": 12,
     "dosesNovas": 0,
     "dosesAcumuladas": 1963,
     "mediaMovel7d": 20,
-    "tendencia3s": 14,
-    "tendencia5s": 11
+    "tendencia3s": 19,
+    "tendencia5s": 18,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2023-SE08",
@@ -1126,12 +1172,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 7,
     "casosAcumulados": 11073,
     "obitosNovos": 0,
-    "obitosAcumulados": 16,
+    "obitosAcumulados": 12,
     "dosesNovas": 0,
     "dosesAcumuladas": 1963,
     "mediaMovel7d": 13,
-    "tendencia3s": 9,
-    "tendencia5s": 7
+    "tendencia3s": 12,
+    "tendencia5s": 12,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2023-SE09",
@@ -1140,12 +1187,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 11,
     "casosAcumulados": 11084,
     "obitosNovos": 0,
-    "obitosAcumulados": 16,
+    "obitosAcumulados": 12,
     "dosesNovas": 0,
     "dosesAcumuladas": 1963,
     "mediaMovel7d": 12,
-    "tendencia3s": 9,
-    "tendencia5s": 7
+    "tendencia3s": 11,
+    "tendencia5s": 11,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2023-SE10",
@@ -1154,12 +1202,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 14,
     "casosAcumulados": 11098,
     "obitosNovos": 0,
-    "obitosAcumulados": 16,
+    "obitosAcumulados": 12,
     "dosesNovas": 0,
     "dosesAcumuladas": 1963,
     "mediaMovel7d": 11,
-    "tendencia3s": 14,
-    "tendencia5s": 11
+    "tendencia3s": 10,
+    "tendencia5s": 10,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2023-SE11",
@@ -1168,13 +1217,14 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 17,
     "casosAcumulados": 11115,
     "obitosNovos": 0,
-    "obitosAcumulados": 16,
+    "obitosAcumulados": 12,
     "dosesNovas": 800,
     "dosesAcumuladas": 2763,
     "mediaMovel7d": 14,
-    "tendencia3s": 17,
-    "tendencia5s": 15,
-    "marco": "Início Vacinação PNI (SUS)",
+    "tendencia3s": 13,
+    "tendencia5s": 13,
+    "statusConsolidacao": "consolidado",
+    "marco": "In\u00edcio Vacina\u00e7\u00e3o PNI (SUS)",
     "marcoId": "m3"
   },
   {
@@ -1184,12 +1234,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 11,
     "casosAcumulados": 11126,
     "obitosNovos": 0,
-    "obitosAcumulados": 16,
+    "obitosAcumulados": 12,
     "dosesNovas": 985,
     "dosesAcumuladas": 3748,
     "mediaMovel7d": 14,
     "tendencia3s": 13,
-    "tendencia5s": 15
+    "tendencia5s": 13,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2023-SE13",
@@ -1198,12 +1249,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 11,
     "casosAcumulados": 11137,
     "obitosNovos": 0,
-    "obitosAcumulados": 16,
+    "obitosAcumulados": 12,
     "dosesNovas": 1368,
     "dosesAcumuladas": 5116,
     "mediaMovel7d": 13,
-    "tendencia3s": 10,
-    "tendencia5s": 12
+    "tendencia3s": 12,
+    "tendencia5s": 12,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2023-SE14",
@@ -1212,13 +1264,14 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 4,
     "casosAcumulados": 11141,
     "obitosNovos": 0,
-    "obitosAcumulados": 16,
+    "obitosAcumulados": 12,
     "dosesNovas": 1596,
     "dosesAcumuladas": 6712,
     "mediaMovel7d": 9,
-    "tendencia3s": 5,
-    "tendencia5s": 6,
-    "marco": "Estratégia 1/5 Dose ID (0,1 mL)",
+    "tendencia3s": 9,
+    "tendencia5s": 8,
+    "statusConsolidacao": "consolidado",
+    "marco": "Estrat\u00e9gia 1/5 Dose ID (0,1 mL)",
     "marcoId": "m4"
   },
   {
@@ -1228,12 +1281,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 3,
     "casosAcumulados": 11144,
     "obitosNovos": 0,
-    "obitosAcumulados": 16,
+    "obitosAcumulados": 12,
     "dosesNovas": 1460,
     "dosesAcumuladas": 8172,
     "mediaMovel7d": 6,
-    "tendencia3s": 2,
-    "tendencia5s": 2
+    "tendencia3s": 6,
+    "tendencia5s": 6,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2023-SE16",
@@ -1242,12 +1296,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 6,
     "casosAcumulados": 11150,
     "obitosNovos": 0,
-    "obitosAcumulados": 16,
+    "obitosAcumulados": 12,
     "dosesNovas": 1085,
     "dosesAcumuladas": 9257,
     "mediaMovel7d": 4,
-    "tendencia3s": 5,
-    "tendencia5s": 3
+    "tendencia3s": 4,
+    "tendencia5s": 4,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2023-SE17",
@@ -1256,12 +1311,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 9,
     "casosAcumulados": 11159,
     "obitosNovos": 0,
-    "obitosAcumulados": 16,
+    "obitosAcumulados": 12,
     "dosesNovas": 815,
     "dosesAcumuladas": 10072,
     "mediaMovel7d": 6,
-    "tendencia3s": 9,
-    "tendencia5s": 6
+    "tendencia3s": 6,
+    "tendencia5s": 6,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2023-SE18",
@@ -1270,12 +1326,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 8,
     "casosAcumulados": 11167,
     "obitosNovos": 0,
-    "obitosAcumulados": 16,
+    "obitosAcumulados": 12,
     "dosesNovas": 900,
     "dosesAcumuladas": 10972,
     "mediaMovel7d": 8,
-    "tendencia3s": 9,
-    "tendencia5s": 9
+    "tendencia3s": 8,
+    "tendencia5s": 7,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2023-SE19",
@@ -1284,12 +1341,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 5,
     "casosAcumulados": 11172,
     "obitosNovos": 0,
-    "obitosAcumulados": 16,
+    "obitosAcumulados": 12,
     "dosesNovas": 1260,
     "dosesAcumuladas": 12232,
     "mediaMovel7d": 7,
-    "tendencia3s": 5,
-    "tendencia5s": 7
+    "tendencia3s": 7,
+    "tendencia5s": 6,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2023-SE20",
@@ -1298,12 +1356,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 11,
     "casosAcumulados": 11183,
     "obitosNovos": 0,
-    "obitosAcumulados": 16,
+    "obitosAcumulados": 12,
     "dosesNovas": 1565,
     "dosesAcumuladas": 13797,
     "mediaMovel7d": 8,
-    "tendencia3s": 10,
-    "tendencia5s": 9
+    "tendencia3s": 8,
+    "tendencia5s": 7,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2023-SE21",
@@ -1312,12 +1371,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 3,
     "casosAcumulados": 11186,
     "obitosNovos": 0,
-    "obitosAcumulados": 16,
+    "obitosAcumulados": 12,
     "dosesNovas": 1535,
     "dosesAcumuladas": 15332,
     "mediaMovel7d": 6,
-    "tendencia3s": 5,
-    "tendencia5s": 5
+    "tendencia3s": 6,
+    "tendencia5s": 6,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2023-SE22",
@@ -1326,12 +1386,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 6,
     "casosAcumulados": 11192,
     "obitosNovos": 0,
-    "obitosAcumulados": 16,
+    "obitosAcumulados": 12,
     "dosesNovas": 1196,
     "dosesAcumuladas": 16528,
     "mediaMovel7d": 7,
-    "tendencia3s": 4,
-    "tendencia5s": 5
+    "tendencia3s": 7,
+    "tendencia5s": 6,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2023-SE23",
@@ -1340,12 +1401,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 4,
     "casosAcumulados": 11196,
     "obitosNovos": 0,
-    "obitosAcumulados": 16,
+    "obitosAcumulados": 12,
     "dosesNovas": 862,
     "dosesAcumuladas": 17390,
     "mediaMovel7d": 4,
-    "tendencia3s": 5,
-    "tendencia5s": 4
+    "tendencia3s": 4,
+    "tendencia5s": 4,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2023-SE24",
@@ -1354,12 +1416,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 7,
     "casosAcumulados": 11203,
     "obitosNovos": 0,
-    "obitosAcumulados": 16,
+    "obitosAcumulados": 12,
     "dosesNovas": 838,
     "dosesAcumuladas": 18228,
     "mediaMovel7d": 6,
     "tendencia3s": 6,
-    "tendencia5s": 5
+    "tendencia5s": 6,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2023-SE25",
@@ -1368,12 +1431,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 5,
     "casosAcumulados": 11208,
     "obitosNovos": 0,
-    "obitosAcumulados": 16,
+    "obitosAcumulados": 12,
     "dosesNovas": 1147,
     "dosesAcumuladas": 19375,
     "mediaMovel7d": 5,
-    "tendencia3s": 6,
-    "tendencia5s": 6
+    "tendencia3s": 5,
+    "tendencia5s": 5,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2023-SE26",
@@ -1382,12 +1446,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 3,
     "casosAcumulados": 11211,
     "obitosNovos": 0,
-    "obitosAcumulados": 16,
+    "obitosAcumulados": 12,
     "dosesNovas": 1505,
     "dosesAcumuladas": 20880,
     "mediaMovel7d": 5,
-    "tendencia3s": 3,
-    "tendencia5s": 4
+    "tendencia3s": 5,
+    "tendencia5s": 5,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2023-SE27",
@@ -1396,12 +1461,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 7,
     "casosAcumulados": 11218,
     "obitosNovos": 0,
-    "obitosAcumulados": 16,
+    "obitosAcumulados": 12,
     "dosesNovas": 1583,
     "dosesAcumuladas": 22463,
     "mediaMovel7d": 5,
-    "tendencia3s": 6,
-    "tendencia5s": 6
+    "tendencia3s": 5,
+    "tendencia5s": 5,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2023-SE28",
@@ -1410,12 +1476,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 3,
     "casosAcumulados": 11221,
     "obitosNovos": 0,
-    "obitosAcumulados": 16,
+    "obitosAcumulados": 12,
     "dosesNovas": 1308,
     "dosesAcumuladas": 23771,
     "mediaMovel7d": 4,
     "tendencia3s": 4,
-    "tendencia5s": 4
+    "tendencia5s": 4,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2023-SE29",
@@ -1424,12 +1491,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 15,
     "casosAcumulados": 11236,
     "obitosNovos": 0,
-    "obitosAcumulados": 16,
+    "obitosAcumulados": 12,
     "dosesNovas": 935,
     "dosesAcumuladas": 24706,
     "mediaMovel7d": 8,
-    "tendencia3s": 12,
-    "tendencia5s": 11
+    "tendencia3s": 8,
+    "tendencia5s": 7,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2023-SE30",
@@ -1438,12 +1506,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 9,
     "casosAcumulados": 11245,
     "obitosNovos": 0,
-    "obitosAcumulados": 16,
+    "obitosAcumulados": 12,
     "dosesNovas": 805,
     "dosesAcumuladas": 25511,
     "mediaMovel7d": 9,
-    "tendencia3s": 12,
-    "tendencia5s": 11
+    "tendencia3s": 9,
+    "tendencia5s": 8,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2023-SE31",
@@ -1452,12 +1521,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 11,
     "casosAcumulados": 11256,
     "obitosNovos": 0,
-    "obitosAcumulados": 16,
+    "obitosAcumulados": 12,
     "dosesNovas": 1038,
     "dosesAcumuladas": 26549,
     "mediaMovel7d": 12,
-    "tendencia3s": 10,
-    "tendencia5s": 12
+    "tendencia3s": 11,
+    "tendencia5s": 11,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2023-SE32",
@@ -1466,12 +1536,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 10,
     "casosAcumulados": 11266,
     "obitosNovos": 0,
-    "obitosAcumulados": 16,
+    "obitosAcumulados": 12,
     "dosesNovas": 1421,
     "dosesAcumuladas": 27970,
     "mediaMovel7d": 10,
-    "tendencia3s": 11,
-    "tendencia5s": 12
+    "tendencia3s": 10,
+    "tendencia5s": 9,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2023-SE33",
@@ -1480,12 +1551,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 10,
     "casosAcumulados": 11276,
     "obitosNovos": 0,
-    "obitosAcumulados": 16,
+    "obitosAcumulados": 12,
     "dosesNovas": 1600,
     "dosesAcumuladas": 29570,
     "mediaMovel7d": 10,
     "tendencia3s": 10,
-    "tendencia5s": 9
+    "tendencia5s": 9,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2023-SE34",
@@ -1494,12 +1566,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 6,
     "casosAcumulados": 11282,
     "obitosNovos": 0,
-    "obitosAcumulados": 16,
+    "obitosAcumulados": 12,
     "dosesNovas": 1412,
     "dosesAcumuladas": 30982,
     "mediaMovel7d": 9,
-    "tendencia3s": 7,
-    "tendencia5s": 8
+    "tendencia3s": 9,
+    "tendencia5s": 8,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2023-SE35",
@@ -1508,12 +1581,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 12,
     "casosAcumulados": 11294,
     "obitosNovos": 0,
-    "obitosAcumulados": 16,
+    "obitosAcumulados": 12,
     "dosesNovas": 1029,
     "dosesAcumuladas": 32011,
     "mediaMovel7d": 9,
-    "tendencia3s": 10,
-    "tendencia5s": 9
+    "tendencia3s": 9,
+    "tendencia5s": 8,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2023-SE36",
@@ -1522,12 +1596,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 11,
     "casosAcumulados": 11305,
     "obitosNovos": 0,
-    "obitosAcumulados": 16,
+    "obitosAcumulados": 12,
     "dosesNovas": 130,
     "dosesAcumuladas": 32141,
     "mediaMovel7d": 10,
-    "tendencia3s": 12,
-    "tendencia5s": 11
+    "tendencia3s": 10,
+    "tendencia5s": 9,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2023-SE37",
@@ -1536,12 +1611,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 15,
     "casosAcumulados": 11320,
     "obitosNovos": 0,
-    "obitosAcumulados": 16,
+    "obitosAcumulados": 12,
     "dosesNovas": 148,
     "dosesAcumuladas": 32289,
     "mediaMovel7d": 13,
-    "tendencia3s": 14,
-    "tendencia5s": 14
+    "tendencia3s": 12,
+    "tendencia5s": 12,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2023-SE38",
@@ -1550,12 +1626,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 13,
     "casosAcumulados": 11333,
     "obitosNovos": 0,
-    "obitosAcumulados": 16,
+    "obitosAcumulados": 12,
     "dosesNovas": 195,
     "dosesAcumuladas": 32484,
     "mediaMovel7d": 13,
-    "tendencia3s": 14,
-    "tendencia5s": 15
+    "tendencia3s": 12,
+    "tendencia5s": 12,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2023-SE39",
@@ -1564,12 +1641,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 8,
     "casosAcumulados": 11341,
     "obitosNovos": 0,
-    "obitosAcumulados": 16,
+    "obitosAcumulados": 12,
     "dosesNovas": 228,
     "dosesAcumuladas": 32712,
     "mediaMovel7d": 12,
-    "tendencia3s": 9,
-    "tendencia5s": 11
+    "tendencia3s": 11,
+    "tendencia5s": 11,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2023-SE40",
@@ -1578,12 +1656,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 14,
     "casosAcumulados": 11355,
     "obitosNovos": 0,
-    "obitosAcumulados": 16,
+    "obitosAcumulados": 12,
     "dosesNovas": 217,
     "dosesAcumuladas": 32929,
     "mediaMovel7d": 12,
-    "tendencia3s": 12,
-    "tendencia5s": 12
+    "tendencia3s": 11,
+    "tendencia5s": 11,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2023-SE41",
@@ -1592,12 +1671,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 14,
     "casosAcumulados": 11369,
     "obitosNovos": 0,
-    "obitosAcumulados": 16,
+    "obitosAcumulados": 12,
     "dosesNovas": 172,
     "dosesAcumuladas": 33101,
     "mediaMovel7d": 12,
-    "tendencia3s": 15,
-    "tendencia5s": 13
+    "tendencia3s": 11,
+    "tendencia5s": 11,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2023-SE42",
@@ -1606,12 +1686,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 24,
     "casosAcumulados": 11393,
     "obitosNovos": 0,
-    "obitosAcumulados": 16,
+    "obitosAcumulados": 12,
     "dosesNovas": 134,
     "dosesAcumuladas": 33235,
     "mediaMovel7d": 17,
-    "tendencia3s": 22,
-    "tendencia5s": 20
+    "tendencia3s": 16,
+    "tendencia5s": 16,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2023-SE43",
@@ -1620,12 +1701,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 38,
     "casosAcumulados": 11431,
     "obitosNovos": 0,
-    "obitosAcumulados": 16,
+    "obitosAcumulados": 12,
     "dosesNovas": 138,
     "dosesAcumuladas": 33373,
     "mediaMovel7d": 25,
-    "tendencia3s": 37,
-    "tendencia5s": 34
+    "tendencia3s": 24,
+    "tendencia5s": 23,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2023-SE44",
@@ -1634,12 +1716,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 24,
     "casosAcumulados": 11455,
     "obitosNovos": 0,
-    "obitosAcumulados": 16,
+    "obitosAcumulados": 12,
     "dosesNovas": 181,
     "dosesAcumuladas": 33554,
     "mediaMovel7d": 29,
-    "tendencia3s": 29,
-    "tendencia5s": 32
+    "tendencia3s": 28,
+    "tendencia5s": 27,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2023-SE45",
@@ -1648,12 +1731,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 38,
     "casosAcumulados": 11493,
     "obitosNovos": 0,
-    "obitosAcumulados": 16,
+    "obitosAcumulados": 12,
     "dosesNovas": 223,
     "dosesAcumuladas": 33777,
     "mediaMovel7d": 33,
-    "tendencia3s": 33,
-    "tendencia5s": 37
+    "tendencia3s": 31,
+    "tendencia5s": 30,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2023-SE46",
@@ -1662,12 +1746,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 18,
     "casosAcumulados": 11511,
     "obitosNovos": 0,
-    "obitosAcumulados": 16,
+    "obitosAcumulados": 12,
     "dosesNovas": 225,
     "dosesAcumuladas": 34002,
     "mediaMovel7d": 27,
-    "tendencia3s": 24,
-    "tendencia5s": 26
+    "tendencia3s": 26,
+    "tendencia5s": 25,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2023-SE47",
@@ -1676,12 +1761,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 26,
     "casosAcumulados": 11537,
     "obitosNovos": 0,
-    "obitosAcumulados": 16,
+    "obitosAcumulados": 12,
     "dosesNovas": 186,
     "dosesAcumuladas": 34188,
     "mediaMovel7d": 27,
-    "tendencia3s": 21,
-    "tendencia5s": 23
+    "tendencia3s": 26,
+    "tendencia5s": 25,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2023-SE48",
@@ -1690,12 +1776,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 28,
     "casosAcumulados": 11565,
     "obitosNovos": 0,
-    "obitosAcumulados": 16,
+    "obitosAcumulados": 12,
     "dosesNovas": 142,
     "dosesAcumuladas": 34330,
     "mediaMovel7d": 24,
-    "tendencia3s": 29,
-    "tendencia5s": 26
+    "tendencia3s": 23,
+    "tendencia5s": 22,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2023-SE49",
@@ -1704,12 +1791,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 20,
     "casosAcumulados": 11585,
     "obitosNovos": 0,
-    "obitosAcumulados": 16,
+    "obitosAcumulados": 12,
     "dosesNovas": 132,
     "dosesAcumuladas": 34462,
     "mediaMovel7d": 25,
-    "tendencia3s": 22,
-    "tendencia5s": 21
+    "tendencia3s": 24,
+    "tendencia5s": 23,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2023-SE50",
@@ -1718,12 +1806,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 23,
     "casosAcumulados": 11608,
     "obitosNovos": 0,
-    "obitosAcumulados": 16,
+    "obitosAcumulados": 12,
     "dosesNovas": 167,
     "dosesAcumuladas": 34629,
     "mediaMovel7d": 24,
-    "tendencia3s": 21,
-    "tendencia5s": 24
+    "tendencia3s": 23,
+    "tendencia5s": 22,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2023-SE51",
@@ -1732,12 +1821,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 23,
     "casosAcumulados": 11631,
     "obitosNovos": 0,
-    "obitosAcumulados": 16,
+    "obitosAcumulados": 12,
     "dosesNovas": 214,
     "dosesAcumuladas": 34843,
     "mediaMovel7d": 22,
-    "tendencia3s": 24,
-    "tendencia5s": 22
+    "tendencia3s": 21,
+    "tendencia5s": 20,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2023-SE52",
@@ -1746,12 +1836,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 22,
     "casosAcumulados": 11653,
     "obitosNovos": 0,
-    "obitosAcumulados": 16,
+    "obitosAcumulados": 12,
     "dosesNovas": 229,
     "dosesAcumuladas": 35072,
     "mediaMovel7d": 23,
     "tendencia3s": 22,
-    "tendencia5s": 21
+    "tendencia5s": 21,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2024-SE01",
@@ -1760,12 +1851,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 44,
     "casosAcumulados": 11697,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 77,
     "dosesAcumuladas": 35149,
     "mediaMovel7d": 30,
-    "tendencia3s": 40,
-    "tendencia5s": 36
+    "tendencia3s": 28,
+    "tendencia5s": 28,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2024-SE02",
@@ -1774,12 +1866,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 44,
     "casosAcumulados": 11741,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 78,
     "dosesAcumuladas": 35227,
     "mediaMovel7d": 37,
-    "tendencia3s": 48,
-    "tendencia5s": 44
+    "tendencia3s": 35,
+    "tendencia5s": 34,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2024-SE03",
@@ -1788,12 +1881,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 34,
     "casosAcumulados": 11775,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 63,
     "dosesAcumuladas": 35290,
     "mediaMovel7d": 41,
-    "tendencia3s": 36,
-    "tendencia5s": 42
+    "tendencia3s": 39,
+    "tendencia5s": 38,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2024-SE04",
@@ -1802,12 +1896,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 48,
     "casosAcumulados": 11823,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 45,
     "dosesAcumuladas": 35335,
     "mediaMovel7d": 42,
-    "tendencia3s": 44,
-    "tendencia5s": 47
+    "tendencia3s": 40,
+    "tendencia5s": 39,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2024-SE05",
@@ -1816,12 +1911,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 39,
     "casosAcumulados": 11862,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 41,
     "dosesAcumuladas": 35376,
     "mediaMovel7d": 40,
-    "tendencia3s": 43,
-    "tendencia5s": 41
+    "tendencia3s": 38,
+    "tendencia5s": 37,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2024-SE06",
@@ -1830,12 +1926,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 34,
     "casosAcumulados": 11896,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 54,
     "dosesAcumuladas": 35430,
     "mediaMovel7d": 40,
-    "tendencia3s": 33,
-    "tendencia5s": 37
+    "tendencia3s": 38,
+    "tendencia5s": 37,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2024-SE07",
@@ -1844,12 +1941,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 27,
     "casosAcumulados": 11923,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 73,
     "dosesAcumuladas": 35503,
     "mediaMovel7d": 33,
-    "tendencia3s": 27,
-    "tendencia5s": 31
+    "tendencia3s": 31,
+    "tendencia5s": 30,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2024-SE08",
@@ -1858,12 +1956,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 37,
     "casosAcumulados": 11960,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 80,
     "dosesAcumuladas": 35583,
     "mediaMovel7d": 33,
-    "tendencia3s": 34,
-    "tendencia5s": 30
+    "tendencia3s": 31,
+    "tendencia5s": 30,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2024-SE09",
@@ -1872,12 +1971,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 30,
     "casosAcumulados": 11990,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 68,
     "dosesAcumuladas": 35651,
     "mediaMovel7d": 31,
-    "tendencia3s": 33,
-    "tendencia5s": 30
+    "tendencia3s": 29,
+    "tendencia5s": 29,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2024-SE10",
@@ -1886,12 +1986,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 31,
     "casosAcumulados": 12021,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 49,
     "dosesAcumuladas": 35700,
     "mediaMovel7d": 33,
-    "tendencia3s": 30,
-    "tendencia5s": 31
+    "tendencia3s": 31,
+    "tendencia5s": 30,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2024-SE11",
@@ -1900,12 +2001,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 30,
     "casosAcumulados": 12051,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 40,
     "dosesAcumuladas": 35740,
     "mediaMovel7d": 30,
-    "tendencia3s": 30,
-    "tendencia5s": 31
+    "tendencia3s": 28,
+    "tendencia5s": 28,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2024-SE12",
@@ -1914,12 +2016,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 19,
     "casosAcumulados": 12070,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 49,
     "dosesAcumuladas": 35789,
     "mediaMovel7d": 27,
-    "tendencia3s": 21,
-    "tendencia5s": 22
+    "tendencia3s": 26,
+    "tendencia5s": 25,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2024-SE13",
@@ -1928,12 +2031,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 17,
     "casosAcumulados": 12087,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 68,
     "dosesAcumuladas": 35857,
     "mediaMovel7d": 22,
-    "tendencia3s": 16,
-    "tendencia5s": 18
+    "tendencia3s": 21,
+    "tendencia5s": 20,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2024-SE14",
@@ -1942,12 +2046,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 23,
     "casosAcumulados": 12110,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 80,
     "dosesAcumuladas": 35937,
     "mediaMovel7d": 20,
-    "tendencia3s": 22,
-    "tendencia5s": 18
+    "tendencia3s": 19,
+    "tendencia5s": 18,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2024-SE15",
@@ -1956,12 +2061,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 25,
     "casosAcumulados": 12135,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 73,
     "dosesAcumuladas": 36010,
     "mediaMovel7d": 22,
-    "tendencia3s": 26,
-    "tendencia5s": 22
+    "tendencia3s": 21,
+    "tendencia5s": 20,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2024-SE16",
@@ -1970,12 +2076,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 15,
     "casosAcumulados": 12150,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 54,
     "dosesAcumuladas": 36064,
     "mediaMovel7d": 21,
-    "tendencia3s": 17,
-    "tendencia5s": 20
+    "tendencia3s": 20,
+    "tendencia5s": 19,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2024-SE17",
@@ -1984,12 +2091,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 22,
     "casosAcumulados": 12172,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 41,
     "dosesAcumuladas": 36105,
     "mediaMovel7d": 21,
-    "tendencia3s": 19,
-    "tendencia5s": 21
+    "tendencia3s": 20,
+    "tendencia5s": 19,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2024-SE18",
@@ -1998,12 +2106,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 16,
     "casosAcumulados": 12188,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 45,
     "dosesAcumuladas": 36150,
     "mediaMovel7d": 18,
-    "tendencia3s": 18,
-    "tendencia5s": 17
+    "tendencia3s": 17,
+    "tendencia5s": 17,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2024-SE19",
@@ -2012,12 +2121,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 16,
     "casosAcumulados": 12204,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 63,
     "dosesAcumuladas": 36213,
     "mediaMovel7d": 18,
-    "tendencia3s": 15,
-    "tendencia5s": 15
+    "tendencia3s": 17,
+    "tendencia5s": 17,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2024-SE20",
@@ -2026,12 +2136,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 22,
     "casosAcumulados": 12226,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 78,
     "dosesAcumuladas": 36291,
     "mediaMovel7d": 18,
-    "tendencia3s": 21,
-    "tendencia5s": 20
+    "tendencia3s": 17,
+    "tendencia5s": 17,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2024-SE21",
@@ -2040,12 +2151,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 14,
     "casosAcumulados": 12240,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 77,
     "dosesAcumuladas": 36368,
     "mediaMovel7d": 17,
     "tendencia3s": 16,
-    "tendencia5s": 16
+    "tendencia5s": 16,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2024-SE22",
@@ -2054,12 +2166,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 9,
     "casosAcumulados": 12249,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 60,
     "dosesAcumuladas": 36428,
     "mediaMovel7d": 15,
-    "tendencia3s": 9,
-    "tendencia5s": 12
+    "tendencia3s": 14,
+    "tendencia5s": 14,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2024-SE23",
@@ -2068,12 +2181,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 15,
     "casosAcumulados": 12264,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 43,
     "dosesAcumuladas": 36471,
     "mediaMovel7d": 13,
-    "tendencia3s": 13,
-    "tendencia5s": 12
+    "tendencia3s": 12,
+    "tendencia5s": 12,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2024-SE24",
@@ -2082,12 +2196,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 7,
     "casosAcumulados": 12271,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 42,
     "dosesAcumuladas": 36513,
     "mediaMovel7d": 10,
-    "tendencia3s": 9,
-    "tendencia5s": 8
+    "tendencia3s": 10,
+    "tendencia5s": 9,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2024-SE25",
@@ -2096,12 +2211,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 9,
     "casosAcumulados": 12280,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 57,
     "dosesAcumuladas": 36570,
     "mediaMovel7d": 10,
-    "tendencia3s": 7,
-    "tendencia5s": 8
+    "tendencia3s": 10,
+    "tendencia5s": 9,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2024-SE26",
@@ -2110,12 +2226,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 9,
     "casosAcumulados": 12289,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 75,
     "dosesAcumuladas": 36645,
     "mediaMovel7d": 8,
-    "tendencia3s": 9,
-    "tendencia5s": 9
+    "tendencia3s": 8,
+    "tendencia5s": 7,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2024-SE27",
@@ -2124,12 +2241,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 13,
     "casosAcumulados": 12302,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 79,
     "dosesAcumuladas": 36724,
     "mediaMovel7d": 10,
-    "tendencia3s": 12,
-    "tendencia5s": 10
+    "tendencia3s": 10,
+    "tendencia5s": 9,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2024-SE28",
@@ -2138,12 +2256,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 9,
     "casosAcumulados": 12311,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 65,
     "dosesAcumuladas": 36789,
     "mediaMovel7d": 10,
     "tendencia3s": 10,
-    "tendencia5s": 11
+    "tendencia5s": 9,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2024-SE29",
@@ -2152,12 +2271,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 18,
     "casosAcumulados": 12329,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 47,
     "dosesAcumuladas": 36836,
     "mediaMovel7d": 13,
-    "tendencia3s": 16,
-    "tendencia5s": 15
+    "tendencia3s": 12,
+    "tendencia5s": 12,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2024-SE30",
@@ -2166,12 +2286,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 27,
     "casosAcumulados": 12356,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 40,
     "dosesAcumuladas": 36876,
     "mediaMovel7d": 18,
-    "tendencia3s": 27,
-    "tendencia5s": 23
+    "tendencia3s": 17,
+    "tendencia5s": 17,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2024-SE31",
@@ -2180,12 +2301,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 28,
     "casosAcumulados": 12384,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 52,
     "dosesAcumuladas": 36928,
     "mediaMovel7d": 24,
-    "tendencia3s": 29,
-    "tendencia5s": 29
+    "tendencia3s": 23,
+    "tendencia5s": 22,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2024-SE32",
@@ -2194,12 +2316,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 38,
     "casosAcumulados": 12422,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 71,
     "dosesAcumuladas": 36999,
     "mediaMovel7d": 31,
-    "tendencia3s": 37,
-    "tendencia5s": 38
+    "tendencia3s": 29,
+    "tendencia5s": 29,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2024-SE33",
@@ -2208,13 +2331,14 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 54,
     "casosAcumulados": 12476,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 450,
     "dosesAcumuladas": 37449,
     "mediaMovel7d": 40,
-    "tendencia3s": 53,
-    "tendencia5s": 50,
-    "marco": "COE Mpox & Emergência OMS Clado Ib",
+    "tendencia3s": 38,
+    "tendencia5s": 37,
+    "statusConsolidacao": "consolidado",
+    "marco": "COE Mpox & Emerg\u00eancia OMS Clado Ib",
     "marcoId": "m5"
   },
   {
@@ -2224,12 +2348,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 79,
     "casosAcumulados": 12555,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 403,
     "dosesAcumuladas": 37852,
     "mediaMovel7d": 57,
-    "tendencia3s": 78,
-    "tendencia5s": 71
+    "tendencia3s": 54,
+    "tendencia5s": 52,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2024-SE35",
@@ -2238,12 +2363,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 97,
     "casosAcumulados": 12652,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 307,
     "dosesAcumuladas": 38159,
     "mediaMovel7d": 77,
-    "tendencia3s": 98,
-    "tendencia5s": 95
+    "tendencia3s": 73,
+    "tendencia5s": 71,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2024-SE36",
@@ -2252,12 +2378,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 94,
     "casosAcumulados": 12746,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 251,
     "dosesAcumuladas": 38410,
     "mediaMovel7d": 90,
-    "tendencia3s": 98,
-    "tendencia5s": 103
+    "tendencia3s": 86,
+    "tendencia5s": 83,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2024-SE37",
@@ -2266,12 +2393,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 76,
     "casosAcumulados": 12822,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 286,
     "dosesAcumuladas": 38696,
     "mediaMovel7d": 89,
-    "tendencia3s": 79,
-    "tendencia5s": 92
+    "tendencia3s": 85,
+    "tendencia5s": 82,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2024-SE38",
@@ -2280,12 +2408,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 69,
     "casosAcumulados": 12891,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 380,
     "dosesAcumuladas": 39076,
     "mediaMovel7d": 80,
-    "tendencia3s": 67,
-    "tendencia5s": 75
+    "tendencia3s": 76,
+    "tendencia5s": 74,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2024-SE39",
@@ -2294,12 +2423,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 60,
     "casosAcumulados": 12951,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 446,
     "dosesAcumuladas": 39522,
     "mediaMovel7d": 68,
-    "tendencia3s": 60,
-    "tendencia5s": 59
+    "tendencia3s": 65,
+    "tendencia5s": 63,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2024-SE40",
@@ -2308,12 +2438,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 69,
     "casosAcumulados": 13020,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 425,
     "dosesAcumuladas": 39947,
     "mediaMovel7d": 66,
-    "tendencia3s": 66,
-    "tendencia5s": 60
+    "tendencia3s": 63,
+    "tendencia5s": 61,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2024-SE41",
@@ -2322,12 +2453,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 83,
     "casosAcumulados": 13103,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 334,
     "dosesAcumuladas": 40281,
     "mediaMovel7d": 71,
-    "tendencia3s": 82,
-    "tendencia5s": 74
+    "tendencia3s": 67,
+    "tendencia5s": 65,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2024-SE42",
@@ -2336,12 +2468,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 69,
     "casosAcumulados": 13172,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 258,
     "dosesAcumuladas": 40539,
     "mediaMovel7d": 74,
-    "tendencia3s": 74,
-    "tendencia5s": 75
+    "tendencia3s": 70,
+    "tendencia5s": 68,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2024-SE43",
@@ -2350,12 +2483,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 70,
     "casosAcumulados": 13242,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 267,
     "dosesAcumuladas": 40806,
     "mediaMovel7d": 74,
-    "tendencia3s": 68,
-    "tendencia5s": 74
+    "tendencia3s": 70,
+    "tendencia5s": 68,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2024-SE44",
@@ -2364,12 +2498,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 74,
     "casosAcumulados": 13316,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 352,
     "dosesAcumuladas": 41158,
     "mediaMovel7d": 71,
-    "tendencia3s": 74,
-    "tendencia5s": 72
+    "tendencia3s": 67,
+    "tendencia5s": 65,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2024-SE45",
@@ -2378,12 +2513,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 83,
     "casosAcumulados": 13399,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 435,
     "dosesAcumuladas": 41593,
     "mediaMovel7d": 76,
-    "tendencia3s": 82,
-    "tendencia5s": 77
+    "tendencia3s": 72,
+    "tendencia5s": 70,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2024-SE46",
@@ -2392,12 +2528,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 57,
     "casosAcumulados": 13456,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 78,
     "dosesAcumuladas": 41671,
     "mediaMovel7d": 71,
-    "tendencia3s": 63,
-    "tendencia5s": 68
+    "tendencia3s": 67,
+    "tendencia5s": 65,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2024-SE47",
@@ -2406,12 +2543,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 54,
     "casosAcumulados": 13510,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 62,
     "dosesAcumuladas": 41733,
     "mediaMovel7d": 65,
-    "tendencia3s": 50,
-    "tendencia5s": 58
+    "tendencia3s": 62,
+    "tendencia5s": 60,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2024-SE48",
@@ -2420,12 +2558,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 46,
     "casosAcumulados": 13556,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 45,
     "dosesAcumuladas": 41778,
     "mediaMovel7d": 52,
-    "tendencia3s": 47,
-    "tendencia5s": 46
+    "tendencia3s": 49,
+    "tendencia5s": 48,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2024-SE49",
@@ -2434,12 +2573,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 55,
     "casosAcumulados": 13611,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 41,
     "dosesAcumuladas": 41819,
     "mediaMovel7d": 52,
-    "tendencia3s": 52,
-    "tendencia5s": 46
+    "tendencia3s": 49,
+    "tendencia5s": 48,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2024-SE50",
@@ -2448,12 +2588,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 43,
     "casosAcumulados": 13654,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 55,
     "dosesAcumuladas": 41874,
     "mediaMovel7d": 48,
-    "tendencia3s": 47,
-    "tendencia5s": 46
+    "tendencia3s": 46,
+    "tendencia5s": 44,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2024-SE51",
@@ -2462,12 +2603,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 36,
     "casosAcumulados": 13690,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 73,
     "dosesAcumuladas": 41947,
     "mediaMovel7d": 45,
-    "tendencia3s": 35,
-    "tendencia5s": 39
+    "tendencia3s": 43,
+    "tendencia5s": 41,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2024-SE52",
@@ -2476,12 +2618,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 32,
     "casosAcumulados": 13722,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 80,
     "dosesAcumuladas": 42027,
     "mediaMovel7d": 37,
-    "tendencia3s": 32,
-    "tendencia5s": 33
+    "tendencia3s": 35,
+    "tendencia5s": 34,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2025-SE01",
@@ -2490,12 +2633,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 18,
     "casosAcumulados": 13740,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 77,
     "dosesAcumuladas": 42104,
     "mediaMovel7d": 29,
-    "tendencia3s": 20,
-    "tendencia5s": 20
+    "tendencia3s": 28,
+    "tendencia5s": 27,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2025-SE02",
@@ -2504,12 +2648,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 44,
     "casosAcumulados": 13784,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 78,
     "dosesAcumuladas": 42182,
     "mediaMovel7d": 31,
-    "tendencia3s": 37,
-    "tendencia5s": 31
+    "tendencia3s": 29,
+    "tendencia5s": 29,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2025-SE03",
@@ -2518,12 +2663,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 23,
     "casosAcumulados": 13807,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 63,
     "dosesAcumuladas": 42245,
     "mediaMovel7d": 28,
-    "tendencia3s": 31,
-    "tendencia5s": 28
+    "tendencia3s": 27,
+    "tendencia5s": 26,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2025-SE04",
@@ -2532,12 +2678,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 33,
     "casosAcumulados": 13840,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 45,
     "dosesAcumuladas": 42290,
     "mediaMovel7d": 33,
-    "tendencia3s": 28,
-    "tendencia5s": 31
+    "tendencia3s": 31,
+    "tendencia5s": 30,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2025-SE05",
@@ -2546,12 +2693,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 36,
     "casosAcumulados": 13876,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 41,
     "dosesAcumuladas": 42331,
     "mediaMovel7d": 31,
-    "tendencia3s": 37,
-    "tendencia5s": 36
+    "tendencia3s": 29,
+    "tendencia5s": 29,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2025-SE06",
@@ -2560,12 +2708,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 46,
     "casosAcumulados": 13922,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 54,
     "dosesAcumuladas": 42385,
     "mediaMovel7d": 38,
-    "tendencia3s": 45,
-    "tendencia5s": 40
+    "tendencia3s": 36,
+    "tendencia5s": 35,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2025-SE07",
@@ -2574,12 +2723,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 16,
     "casosAcumulados": 13938,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 73,
     "dosesAcumuladas": 42458,
     "mediaMovel7d": 33,
-    "tendencia3s": 23,
-    "tendencia5s": 31
+    "tendencia3s": 31,
+    "tendencia5s": 30,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2025-SE08",
@@ -2588,12 +2738,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 30,
     "casosAcumulados": 13968,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 80,
     "dosesAcumuladas": 42538,
     "mediaMovel7d": 31,
-    "tendencia3s": 23,
-    "tendencia5s": 27
+    "tendencia3s": 29,
+    "tendencia5s": 29,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2025-SE09",
@@ -2602,12 +2753,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 23,
     "casosAcumulados": 13991,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 68,
     "dosesAcumuladas": 42606,
     "mediaMovel7d": 23,
-    "tendencia3s": 27,
-    "tendencia5s": 22
+    "tendencia3s": 22,
+    "tendencia5s": 21,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2025-SE10",
@@ -2616,12 +2768,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 17,
     "casosAcumulados": 14008,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 49,
     "dosesAcumuladas": 42655,
     "mediaMovel7d": 23,
-    "tendencia3s": 17,
-    "tendencia5s": 16
+    "tendencia3s": 22,
+    "tendencia5s": 21,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2025-SE11",
@@ -2630,12 +2783,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 41,
     "casosAcumulados": 14049,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 40,
     "dosesAcumuladas": 42695,
     "mediaMovel7d": 27,
-    "tendencia3s": 36,
-    "tendencia5s": 33
+    "tendencia3s": 26,
+    "tendencia5s": 25,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2025-SE12",
@@ -2644,12 +2798,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 36,
     "casosAcumulados": 14085,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 49,
     "dosesAcumuladas": 42744,
     "mediaMovel7d": 31,
-    "tendencia3s": 41,
-    "tendencia5s": 35
+    "tendencia3s": 29,
+    "tendencia5s": 29,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2025-SE13",
@@ -2658,12 +2813,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 32,
     "casosAcumulados": 14117,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 68,
     "dosesAcumuladas": 42812,
     "mediaMovel7d": 36,
-    "tendencia3s": 32,
-    "tendencia5s": 37
+    "tendencia3s": 34,
+    "tendencia5s": 33,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2025-SE14",
@@ -2672,12 +2828,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 22,
     "casosAcumulados": 14139,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 80,
     "dosesAcumuladas": 42892,
     "mediaMovel7d": 30,
-    "tendencia3s": 23,
-    "tendencia5s": 30
+    "tendencia3s": 28,
+    "tendencia5s": 28,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2025-SE15",
@@ -2686,12 +2843,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 28,
     "casosAcumulados": 14167,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 73,
     "dosesAcumuladas": 42965,
     "mediaMovel7d": 27,
-    "tendencia3s": 25,
-    "tendencia5s": 24
+    "tendencia3s": 26,
+    "tendencia5s": 25,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2025-SE16",
@@ -2700,12 +2858,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 25,
     "casosAcumulados": 14192,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 54,
     "dosesAcumuladas": 43019,
     "mediaMovel7d": 25,
-    "tendencia3s": 27,
-    "tendencia5s": 23
+    "tendencia3s": 24,
+    "tendencia5s": 23,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2025-SE17",
@@ -2714,12 +2873,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 20,
     "casosAcumulados": 14212,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 41,
     "dosesAcumuladas": 43060,
     "mediaMovel7d": 24,
-    "tendencia3s": 20,
-    "tendencia5s": 21
+    "tendencia3s": 23,
+    "tendencia5s": 22,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2025-SE18",
@@ -2728,12 +2888,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 26,
     "casosAcumulados": 14238,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 45,
     "dosesAcumuladas": 43105,
     "mediaMovel7d": 24,
-    "tendencia3s": 24,
-    "tendencia5s": 24
+    "tendencia3s": 23,
+    "tendencia5s": 22,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2025-SE19",
@@ -2742,12 +2903,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 31,
     "casosAcumulados": 14269,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 63,
     "dosesAcumuladas": 43168,
     "mediaMovel7d": 26,
-    "tendencia3s": 31,
-    "tendencia5s": 27
+    "tendencia3s": 25,
+    "tendencia5s": 24,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2025-SE20",
@@ -2756,12 +2918,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 25,
     "casosAcumulados": 14294,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 78,
     "dosesAcumuladas": 43246,
     "mediaMovel7d": 27,
-    "tendencia3s": 27,
-    "tendencia5s": 28
+    "tendencia3s": 26,
+    "tendencia5s": 25,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2025-SE21",
@@ -2770,12 +2933,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 26,
     "casosAcumulados": 14320,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 77,
     "dosesAcumuladas": 43323,
     "mediaMovel7d": 27,
-    "tendencia3s": 25,
-    "tendencia5s": 28
+    "tendencia3s": 26,
+    "tendencia5s": 25,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2025-SE22",
@@ -2784,12 +2948,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 24,
     "casosAcumulados": 14344,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 60,
     "dosesAcumuladas": 43383,
     "mediaMovel7d": 25,
-    "tendencia3s": 25,
-    "tendencia5s": 25
+    "tendencia3s": 24,
+    "tendencia5s": 23,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2025-SE23",
@@ -2798,12 +2963,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 18,
     "casosAcumulados": 14362,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 43,
     "dosesAcumuladas": 43426,
     "mediaMovel7d": 23,
-    "tendencia3s": 19,
-    "tendencia5s": 19
+    "tendencia3s": 22,
+    "tendencia5s": 21,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2025-SE24",
@@ -2812,12 +2978,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 24,
     "casosAcumulados": 14386,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 42,
     "dosesAcumuladas": 43468,
     "mediaMovel7d": 22,
-    "tendencia3s": 22,
-    "tendencia5s": 21
+    "tendencia3s": 21,
+    "tendencia5s": 20,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2025-SE25",
@@ -2826,12 +2993,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 14,
     "casosAcumulados": 14400,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 57,
     "dosesAcumuladas": 43525,
     "mediaMovel7d": 19,
-    "tendencia3s": 17,
-    "tendencia5s": 16
+    "tendencia3s": 18,
+    "tendencia5s": 17,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2025-SE26",
@@ -2840,12 +3008,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 18,
     "casosAcumulados": 14418,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 75,
     "dosesAcumuladas": 43600,
     "mediaMovel7d": 19,
-    "tendencia3s": 16,
-    "tendencia5s": 16
+    "tendencia3s": 18,
+    "tendencia5s": 17,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2025-SE27",
@@ -2854,12 +3023,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 20,
     "casosAcumulados": 14438,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 79,
     "dosesAcumuladas": 43679,
     "mediaMovel7d": 17,
-    "tendencia3s": 20,
-    "tendencia5s": 18
+    "tendencia3s": 16,
+    "tendencia5s": 16,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2025-SE28",
@@ -2868,12 +3038,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 21,
     "casosAcumulados": 14459,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 65,
     "dosesAcumuladas": 43744,
     "mediaMovel7d": 20,
-    "tendencia3s": 21,
-    "tendencia5s": 19
+    "tendencia3s": 19,
+    "tendencia5s": 18,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2025-SE29",
@@ -2882,12 +3053,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 23,
     "casosAcumulados": 14482,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 47,
     "dosesAcumuladas": 43791,
     "mediaMovel7d": 21,
-    "tendencia3s": 23,
-    "tendencia5s": 23
+    "tendencia3s": 20,
+    "tendencia5s": 19,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2025-SE30",
@@ -2896,12 +3068,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 21,
     "casosAcumulados": 14503,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 40,
     "dosesAcumuladas": 43831,
     "mediaMovel7d": 22,
-    "tendencia3s": 22,
-    "tendencia5s": 22
+    "tendencia3s": 21,
+    "tendencia5s": 20,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2025-SE31",
@@ -2910,12 +3083,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 20,
     "casosAcumulados": 14523,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 52,
     "dosesAcumuladas": 43883,
     "mediaMovel7d": 21,
     "tendencia3s": 20,
-    "tendencia5s": 21
+    "tendencia5s": 19,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2025-SE32",
@@ -2924,12 +3098,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 19,
     "casosAcumulados": 14542,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 71,
     "dosesAcumuladas": 43954,
     "mediaMovel7d": 20,
     "tendencia3s": 19,
-    "tendencia5s": 19
+    "tendencia5s": 18,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2025-SE33",
@@ -2938,12 +3113,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 20,
     "casosAcumulados": 14562,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 80,
     "dosesAcumuladas": 44034,
     "mediaMovel7d": 20,
-    "tendencia3s": 20,
-    "tendencia5s": 19
+    "tendencia3s": 19,
+    "tendencia5s": 18,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2025-SE34",
@@ -2952,12 +3128,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 23,
     "casosAcumulados": 14585,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 71,
     "dosesAcumuladas": 44105,
     "mediaMovel7d": 21,
-    "tendencia3s": 23,
-    "tendencia5s": 21
+    "tendencia3s": 20,
+    "tendencia5s": 19,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2025-SE35",
@@ -2966,12 +3143,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 23,
     "casosAcumulados": 14608,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 51,
     "dosesAcumuladas": 44156,
     "mediaMovel7d": 22,
-    "tendencia3s": 24,
-    "tendencia5s": 23
+    "tendencia3s": 21,
+    "tendencia5s": 20,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2025-SE36",
@@ -2980,12 +3158,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 20,
     "casosAcumulados": 14628,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 40,
     "dosesAcumuladas": 44196,
     "mediaMovel7d": 22,
     "tendencia3s": 21,
-    "tendencia5s": 22
+    "tendencia5s": 20,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2025-SE37",
@@ -2994,12 +3173,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 18,
     "casosAcumulados": 14646,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 47,
     "dosesAcumuladas": 44243,
     "mediaMovel7d": 20,
-    "tendencia3s": 18,
-    "tendencia5s": 19
+    "tendencia3s": 19,
+    "tendencia5s": 18,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2025-SE38",
@@ -3008,12 +3188,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 17,
     "casosAcumulados": 14663,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 66,
     "dosesAcumuladas": 44309,
     "mediaMovel7d": 18,
     "tendencia3s": 17,
-    "tendencia5s": 17
+    "tendencia5s": 17,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2025-SE39",
@@ -3022,12 +3203,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 18,
     "casosAcumulados": 14681,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 79,
     "dosesAcumuladas": 44388,
     "mediaMovel7d": 18,
-    "tendencia3s": 18,
-    "tendencia5s": 17
+    "tendencia3s": 17,
+    "tendencia5s": 17,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2025-SE40",
@@ -3036,12 +3218,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 13,
     "casosAcumulados": 14694,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 75,
     "dosesAcumuladas": 44463,
     "mediaMovel7d": 16,
-    "tendencia3s": 14,
-    "tendencia5s": 14
+    "tendencia3s": 15,
+    "tendencia5s": 15,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2025-SE41",
@@ -3050,12 +3233,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 19,
     "casosAcumulados": 14713,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 57,
     "dosesAcumuladas": 44520,
     "mediaMovel7d": 17,
-    "tendencia3s": 17,
-    "tendencia5s": 17
+    "tendencia3s": 16,
+    "tendencia5s": 16,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2025-SE42",
@@ -3064,12 +3248,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 7,
     "casosAcumulados": 14720,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 42,
     "dosesAcumuladas": 44562,
     "mediaMovel7d": 13,
-    "tendencia3s": 10,
-    "tendencia5s": 11
+    "tendencia3s": 12,
+    "tendencia5s": 12,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2025-SE43",
@@ -3078,12 +3263,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 7,
     "casosAcumulados": 14727,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 43,
     "dosesAcumuladas": 44605,
     "mediaMovel7d": 11,
-    "tendencia3s": 5,
-    "tendencia5s": 7
+    "tendencia3s": 10,
+    "tendencia5s": 10,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2025-SE44",
@@ -3092,166 +3278,178 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 10,
     "casosAcumulados": 14737,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 60,
     "dosesAcumuladas": 44665,
     "mediaMovel7d": 8,
-    "tendencia3s": 10,
-    "tendencia5s": 8
+    "tendencia3s": 8,
+    "tendencia5s": 7,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2025-SE45",
     "ano": 2025,
     "semanaNum": 45,
-    "casosNovos": 19,
-    "casosAcumulados": 14756,
+    "casosNovos": 18,
+    "casosAcumulados": 14755,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 77,
     "dosesAcumuladas": 44742,
     "mediaMovel7d": 12,
-    "tendencia3s": 18,
-    "tendencia5s": 13
+    "tendencia3s": 11,
+    "tendencia5s": 11,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2025-SE46",
     "ano": 2025,
     "semanaNum": 46,
     "casosNovos": 10,
-    "casosAcumulados": 14766,
+    "casosAcumulados": 14765,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 78,
     "dosesAcumuladas": 44820,
     "mediaMovel7d": 13,
-    "tendencia3s": 13,
-    "tendencia5s": 14
+    "tendencia3s": 12,
+    "tendencia5s": 12,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2025-SE47",
     "ano": 2025,
     "semanaNum": 47,
     "casosNovos": 8,
-    "casosAcumulados": 14774,
+    "casosAcumulados": 14773,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 62,
     "dosesAcumuladas": 44882,
     "mediaMovel7d": 12,
-    "tendencia3s": 7,
-    "tendencia5s": 11
+    "tendencia3s": 11,
+    "tendencia5s": 11,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2025-SE48",
     "ano": 2025,
     "semanaNum": 48,
     "casosNovos": 12,
-    "casosAcumulados": 14786,
+    "casosAcumulados": 14785,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 45,
     "dosesAcumuladas": 44927,
     "mediaMovel7d": 10,
-    "tendencia3s": 11,
-    "tendencia5s": 10
+    "tendencia3s": 10,
+    "tendencia5s": 9,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2025-SE49",
     "ano": 2025,
     "semanaNum": 49,
     "casosNovos": 13,
-    "casosAcumulados": 14799,
+    "casosAcumulados": 14798,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 41,
     "dosesAcumuladas": 44968,
     "mediaMovel7d": 11,
-    "tendencia3s": 14,
-    "tendencia5s": 10
+    "tendencia3s": 10,
+    "tendencia5s": 10,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2025-SE50",
     "ano": 2025,
     "semanaNum": 50,
     "casosNovos": 19,
-    "casosAcumulados": 14818,
+    "casosAcumulados": 14817,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 55,
     "dosesAcumuladas": 45023,
     "mediaMovel7d": 15,
-    "tendencia3s": 18,
-    "tendencia5s": 17
+    "tendencia3s": 14,
+    "tendencia5s": 14,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2025-SE51",
     "ano": 2025,
     "semanaNum": 51,
     "casosNovos": 16,
-    "casosAcumulados": 14834,
+    "casosAcumulados": 14833,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 73,
     "dosesAcumuladas": 45096,
     "mediaMovel7d": 16,
-    "tendencia3s": 18,
-    "tendencia5s": 18
+    "tendencia3s": 15,
+    "tendencia5s": 15,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2025-SE52",
     "ano": 2025,
     "semanaNum": 52,
     "casosNovos": 10,
-    "casosAcumulados": 14844,
+    "casosAcumulados": 14843,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 80,
     "dosesAcumuladas": 45176,
     "mediaMovel7d": 15,
-    "tendencia3s": 11,
-    "tendencia5s": 14
+    "tendencia3s": 14,
+    "tendencia5s": 14,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2026-SE01",
     "ano": 2026,
     "semanaNum": 1,
     "casosNovos": 4,
-    "casosAcumulados": 14848,
+    "casosAcumulados": 14847,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 77,
     "dosesAcumuladas": 45253,
     "mediaMovel7d": 10,
-    "tendencia3s": 4,
-    "tendencia5s": 7
+    "tendencia3s": 10,
+    "tendencia5s": 9,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2026-SE02",
     "ano": 2026,
     "semanaNum": 2,
     "casosNovos": 17,
-    "casosAcumulados": 14865,
+    "casosAcumulados": 14864,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 78,
     "dosesAcumuladas": 45331,
     "mediaMovel7d": 10,
-    "tendencia3s": 14,
-    "tendencia5s": 10
+    "tendencia3s": 10,
+    "tendencia5s": 9,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2026-SE03",
     "ano": 2026,
     "semanaNum": 3,
-    "casosNovos": 15,
+    "casosNovos": 16,
     "casosAcumulados": 14880,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 63,
     "dosesAcumuladas": 45394,
     "mediaMovel7d": 12,
-    "tendencia3s": 18,
-    "tendencia5s": 13
+    "tendencia3s": 11,
+    "tendencia5s": 11,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2026-SE04",
@@ -3260,12 +3458,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 18,
     "casosAcumulados": 14898,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 45,
     "dosesAcumuladas": 45439,
     "mediaMovel7d": 17,
-    "tendencia3s": 17,
-    "tendencia5s": 18
+    "tendencia3s": 16,
+    "tendencia5s": 16,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2026-SE05",
@@ -3274,12 +3473,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 15,
     "casosAcumulados": 14913,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 41,
     "dosesAcumuladas": 45480,
     "mediaMovel7d": 16,
-    "tendencia3s": 16,
-    "tendencia5s": 18
+    "tendencia3s": 15,
+    "tendencia5s": 15,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2026-SE06",
@@ -3288,12 +3488,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 13,
     "casosAcumulados": 14926,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 54,
     "dosesAcumuladas": 45534,
     "mediaMovel7d": 15,
-    "tendencia3s": 13,
-    "tendencia5s": 14
+    "tendencia3s": 14,
+    "tendencia5s": 14,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2026-SE07",
@@ -3302,12 +3503,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 15,
     "casosAcumulados": 14941,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 73,
     "dosesAcumuladas": 45607,
     "mediaMovel7d": 14,
-    "tendencia3s": 14,
-    "tendencia5s": 14
+    "tendencia3s": 13,
+    "tendencia5s": 13,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2026-SE08",
@@ -3316,12 +3518,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 17,
     "casosAcumulados": 14958,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 80,
     "dosesAcumuladas": 45687,
     "mediaMovel7d": 15,
-    "tendencia3s": 17,
-    "tendencia5s": 15
+    "tendencia3s": 14,
+    "tendencia5s": 14,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2026-SE09",
@@ -3330,68 +3533,73 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 38,
     "casosAcumulados": 14996,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 68,
     "dosesAcumuladas": 45755,
     "mediaMovel7d": 23,
-    "tendencia3s": 35,
-    "tendencia5s": 30
+    "tendencia3s": 22,
+    "tendencia5s": 21,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2026-SE10",
     "ano": 2026,
     "semanaNum": 10,
-    "casosNovos": 30,
-    "casosAcumulados": 15026,
+    "casosNovos": 29,
+    "casosAcumulados": 15025,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 49,
     "dosesAcumuladas": 45804,
     "mediaMovel7d": 28,
-    "tendencia3s": 35,
-    "tendencia5s": 34
+    "tendencia3s": 27,
+    "tendencia5s": 26,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2026-SE11",
     "ano": 2026,
     "semanaNum": 11,
     "casosNovos": 17,
-    "casosAcumulados": 15043,
+    "casosAcumulados": 15042,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 40,
     "dosesAcumuladas": 45844,
     "mediaMovel7d": 28,
-    "tendencia3s": 18,
-    "tendencia5s": 27
+    "tendencia3s": 27,
+    "tendencia5s": 26,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2026-SE12",
     "ano": 2026,
     "semanaNum": 12,
     "casosNovos": 16,
-    "casosAcumulados": 15059,
+    "casosAcumulados": 15058,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 49,
     "dosesAcumuladas": 45893,
     "mediaMovel7d": 21,
-    "tendencia3s": 14,
-    "tendencia5s": 19
+    "tendencia3s": 20,
+    "tendencia5s": 19,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2026-SE13",
     "ano": 2026,
     "semanaNum": 13,
-    "casosNovos": 15,
+    "casosNovos": 16,
     "casosAcumulados": 15074,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 68,
     "dosesAcumuladas": 45961,
     "mediaMovel7d": 16,
     "tendencia3s": 15,
-    "tendencia5s": 11
+    "tendencia5s": 15,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2026-SE14",
@@ -3400,12 +3608,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 16,
     "casosAcumulados": 15090,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 80,
     "dosesAcumuladas": 46041,
     "mediaMovel7d": 16,
-    "tendencia3s": 16,
-    "tendencia5s": 13
+    "tendencia3s": 15,
+    "tendencia5s": 15,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2026-SE15",
@@ -3414,12 +3623,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 18,
     "casosAcumulados": 15108,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 73,
     "dosesAcumuladas": 46114,
-    "mediaMovel7d": 16,
-    "tendencia3s": 18,
-    "tendencia5s": 17
+    "mediaMovel7d": 17,
+    "tendencia3s": 16,
+    "tendencia5s": 16,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2026-SE16",
@@ -3428,12 +3638,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 17,
     "casosAcumulados": 15125,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 54,
     "dosesAcumuladas": 46168,
     "mediaMovel7d": 17,
-    "tendencia3s": 18,
-    "tendencia5s": 17
+    "tendencia3s": 16,
+    "tendencia5s": 16,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2026-SE17",
@@ -3442,12 +3653,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 5,
     "casosAcumulados": 15130,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 41,
     "dosesAcumuladas": 46209,
     "mediaMovel7d": 13,
-    "tendencia3s": 7,
-    "tendencia5s": 10
+    "tendencia3s": 12,
+    "tendencia5s": 12,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2026-SE18",
@@ -3456,12 +3668,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 14,
     "casosAcumulados": 15144,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 45,
     "dosesAcumuladas": 46254,
     "mediaMovel7d": 12,
     "tendencia3s": 11,
-    "tendencia5s": 11
+    "tendencia5s": 11,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2026-SE19",
@@ -3470,12 +3683,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 15,
     "casosAcumulados": 15159,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 63,
     "dosesAcumuladas": 46317,
     "mediaMovel7d": 11,
-    "tendencia3s": 16,
-    "tendencia5s": 12
+    "tendencia3s": 10,
+    "tendencia5s": 10,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2026-SE20",
@@ -3484,12 +3698,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 17,
     "casosAcumulados": 15176,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 78,
     "dosesAcumuladas": 46395,
     "mediaMovel7d": 15,
-    "tendencia3s": 17,
-    "tendencia5s": 16
+    "tendencia3s": 14,
+    "tendencia5s": 14,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2026-SE21",
@@ -3498,12 +3713,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 15,
     "casosAcumulados": 15191,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 77,
     "dosesAcumuladas": 46472,
     "mediaMovel7d": 16,
-    "tendencia3s": 16,
-    "tendencia5s": 18
+    "tendencia3s": 15,
+    "tendencia5s": 15,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2026-SE22",
@@ -3512,12 +3728,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 10,
     "casosAcumulados": 15201,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 60,
     "dosesAcumuladas": 46532,
     "mediaMovel7d": 14,
-    "tendencia3s": 11,
-    "tendencia5s": 13
+    "tendencia3s": 13,
+    "tendencia5s": 13,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2026-SE23",
@@ -3526,12 +3743,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 4,
     "casosAcumulados": 15205,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 43,
     "dosesAcumuladas": 46575,
     "mediaMovel7d": 10,
-    "tendencia3s": 4,
-    "tendencia5s": 6
+    "tendencia3s": 10,
+    "tendencia5s": 9,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2026-SE24",
@@ -3540,12 +3758,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 9,
     "casosAcumulados": 15214,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 42,
     "dosesAcumuladas": 46617,
     "mediaMovel7d": 8,
-    "tendencia3s": 7,
-    "tendencia5s": 6
+    "tendencia3s": 8,
+    "tendencia5s": 7,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2026-SE25",
@@ -3554,12 +3773,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 13,
     "casosAcumulados": 15227,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 57,
     "dosesAcumuladas": 46674,
     "mediaMovel7d": 9,
-    "tendencia3s": 13,
-    "tendencia5s": 9
+    "tendencia3s": 9,
+    "tendencia5s": 8,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2026-SE26",
@@ -3568,12 +3788,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 7,
     "casosAcumulados": 15234,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 75,
     "dosesAcumuladas": 46749,
     "mediaMovel7d": 10,
-    "tendencia3s": 9,
-    "tendencia5s": 9
+    "tendencia3s": 10,
+    "tendencia5s": 9,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2026-SE27",
@@ -3582,12 +3803,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 6,
     "casosAcumulados": 15240,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 79,
     "dosesAcumuladas": 46828,
     "mediaMovel7d": 9,
-    "tendencia3s": 5,
-    "tendencia5s": 8
+    "tendencia3s": 9,
+    "tendencia5s": 8,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2026-SE28",
@@ -3596,12 +3818,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 2,
     "casosAcumulados": 15242,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 65,
     "dosesAcumuladas": 46893,
     "mediaMovel7d": 5,
-    "tendencia3s": 3,
-    "tendencia5s": 3
+    "tendencia3s": 5,
+    "tendencia5s": 5,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2026-SE29",
@@ -3610,12 +3833,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 10,
     "casosAcumulados": 15252,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 47,
     "dosesAcumuladas": 46940,
     "mediaMovel7d": 6,
-    "tendencia3s": 8,
-    "tendencia5s": 5
+    "tendencia3s": 6,
+    "tendencia5s": 6,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2026-SE30",
@@ -3624,12 +3848,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 5,
     "casosAcumulados": 15257,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 40,
     "dosesAcumuladas": 46980,
     "mediaMovel7d": 6,
-    "tendencia3s": 7,
-    "tendencia5s": 6
+    "tendencia3s": 6,
+    "tendencia5s": 6,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2026-SE31",
@@ -3638,12 +3863,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 14,
     "casosAcumulados": 15271,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 52,
     "dosesAcumuladas": 47032,
     "mediaMovel7d": 10,
-    "tendencia3s": 12,
-    "tendencia5s": 11
+    "tendencia3s": 10,
+    "tendencia5s": 9,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2026-SE32",
@@ -3652,12 +3878,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 7,
     "casosAcumulados": 15278,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 71,
     "dosesAcumuladas": 47103,
     "mediaMovel7d": 9,
-    "tendencia3s": 10,
-    "tendencia5s": 10
+    "tendencia3s": 9,
+    "tendencia5s": 8,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2026-SE33",
@@ -3666,12 +3893,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 10,
     "casosAcumulados": 15288,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 80,
     "dosesAcumuladas": 47183,
     "mediaMovel7d": 10,
-    "tendencia3s": 8,
-    "tendencia5s": 10
+    "tendencia3s": 10,
+    "tendencia5s": 9,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2026-SE34",
@@ -3680,12 +3908,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 17,
     "casosAcumulados": 15305,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 71,
     "dosesAcumuladas": 47254,
     "mediaMovel7d": 11,
-    "tendencia3s": 16,
-    "tendencia5s": 15
+    "tendencia3s": 10,
+    "tendencia5s": 10,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2026-SE35",
@@ -3694,12 +3923,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 9,
     "casosAcumulados": 15314,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 51,
     "dosesAcumuladas": 47305,
     "mediaMovel7d": 12,
-    "tendencia3s": 12,
-    "tendencia5s": 11
+    "tendencia3s": 11,
+    "tendencia5s": 11,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2026-SE36",
@@ -3708,12 +3938,13 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 9,
     "casosAcumulados": 15323,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 40,
     "dosesAcumuladas": 47345,
     "mediaMovel7d": 12,
-    "tendencia3s": 8,
-    "tendencia5s": 11
+    "tendencia3s": 11,
+    "tendencia5s": 11,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2026-SE37",
@@ -3722,147 +3953,186 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "casosNovos": 16,
     "casosAcumulados": 15339,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 47,
     "dosesAcumuladas": 47392,
     "mediaMovel7d": 11,
-    "tendencia3s": 15,
-    "tendencia5s": 13
+    "tendencia3s": 10,
+    "tendencia5s": 10,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2026-SE38",
     "ano": 2026,
     "semanaNum": 38,
-    "casosNovos": 10,
-    "casosAcumulados": 15349,
+    "casosNovos": 9,
+    "casosAcumulados": 15348,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 66,
     "dosesAcumuladas": 47458,
-    "mediaMovel7d": 12,
-    "tendencia3s": 12,
-    "tendencia5s": 11
+    "mediaMovel7d": 11,
+    "tendencia3s": 10,
+    "tendencia5s": 10,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2026-SE39",
     "ano": 2026,
     "semanaNum": 39,
     "casosNovos": 28,
-    "casosAcumulados": 15377,
+    "casosAcumulados": 15376,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 79,
     "dosesAcumuladas": 47537,
     "mediaMovel7d": 18,
-    "tendencia3s": 24,
-    "tendencia5s": 22
+    "tendencia3s": 17,
+    "tendencia5s": 17,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2026-SE40",
     "ano": 2026,
     "semanaNum": 40,
-    "casosNovos": 32,
-    "casosAcumulados": 15409,
+    "casosNovos": 31,
+    "casosAcumulados": 15407,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 75,
     "dosesAcumuladas": 47612,
     "mediaMovel7d": 23,
-    "tendencia3s": 34,
-    "tendencia5s": 31
+    "tendencia3s": 22,
+    "tendencia5s": 21,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2026-SE41",
     "ano": 2026,
     "semanaNum": 41,
-    "casosNovos": 48,
-    "casosAcumulados": 15457,
+    "casosNovos": 49,
+    "casosAcumulados": 15456,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 57,
     "dosesAcumuladas": 47669,
     "mediaMovel7d": 36,
-    "tendencia3s": 46,
-    "tendencia5s": 44
+    "tendencia3s": 34,
+    "tendencia5s": 33,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2026-SE42",
     "ano": 2026,
     "semanaNum": 42,
-    "casosNovos": 50,
-    "casosAcumulados": 15507,
+    "casosNovos": 52,
+    "casosAcumulados": 15508,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 42,
     "dosesAcumuladas": 47711,
-    "mediaMovel7d": 43,
-    "tendencia3s": 52,
-    "tendencia5s": 54
+    "mediaMovel7d": 44,
+    "tendencia3s": 42,
+    "tendencia5s": 40,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2026-SE43",
     "ano": 2026,
     "semanaNum": 43,
-    "casosNovos": 73,
-    "casosAcumulados": 15580,
+    "casosNovos": 75,
+    "casosAcumulados": 15583,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 43,
     "dosesAcumuladas": 47754,
-    "mediaMovel7d": 57,
-    "tendencia3s": 70,
-    "tendencia5s": 68
+    "mediaMovel7d": 59,
+    "tendencia3s": 56,
+    "tendencia5s": 54,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2026-SE44",
     "ano": 2026,
     "semanaNum": 44,
-    "casosNovos": 119,
-    "casosAcumulados": 15699,
+    "casosNovos": 134,
+    "casosAcumulados": 15717,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 60,
     "dosesAcumuladas": 47814,
-    "mediaMovel7d": 81,
-    "tendencia3s": 115,
-    "tendencia5s": 104
+    "mediaMovel7d": 87,
+    "tendencia3s": 83,
+    "tendencia5s": 80,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2026-SE45",
     "ano": 2026,
     "semanaNum": 45,
-    "casosNovos": 188,
-    "casosAcumulados": 15887,
+    "casosNovos": 212,
+    "casosAcumulados": 15929,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 77,
     "dosesAcumuladas": 47891,
-    "mediaMovel7d": 127,
-    "tendencia3s": 184,
-    "tendencia5s": 165
+    "mediaMovel7d": 140,
+    "tendencia3s": 133,
+    "tendencia5s": 129,
+    "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2026-SE46",
     "ano": 2026,
     "semanaNum": 46,
-    "casosNovos": 58,
-    "casosAcumulados": 15945,
+    "casosNovos": 267,
+    "casosAcumulados": 16196,
     "obitosNovos": 0,
-    "obitosAcumulados": 19,
+    "obitosAcumulados": 12,
     "dosesNovas": 78,
     "dosesAcumuladas": 47969,
-    "mediaMovel7d": 122,
-    "tendencia3s": 91,
-    "tendencia5s": 124,
+    "mediaMovel7d": 204,
+    "tendencia3s": 194,
+    "tendencia5s": 188,
+    "statusConsolidacao": "consolidado"
+  },
+  {
+    "semana": "2026-SE47",
+    "ano": 2026,
+    "semanaNum": 47,
+    "casosNovos": 255,
+    "casosAcumulados": 16451,
+    "obitosNovos": 0,
+    "obitosAcumulados": 12,
+    "dosesNovas": 65,
+    "dosesAcumuladas": 48034,
+    "mediaMovel7d": 245,
+    "tendencia3s": 233,
+    "tendencia5s": 225,
+    "statusConsolidacao": "consolidado"
+  },
+  {
+    "semana": "2026-SE48",
+    "ano": 2026,
+    "semanaNum": 48,
+    "casosNovos": 25,
+    "casosAcumulados": 16476,
+    "obitosNovos": 0,
+    "obitosAcumulados": 12,
+    "dosesNovas": 65,
+    "dosesAcumuladas": 48099,
+    "mediaMovel7d": 182,
+    "tendencia3s": 173,
+    "tendencia5s": 167,
     "statusConsolidacao": "preliminar_em_curso",
     "dadosTempoReal": {
       "statusEstoqueVacinas": "esgotado",
-      "notaVigilancia": "Semana epidemiológica aberta em monitoramento contínuo. Sujeito à consolidação oficial pelo Ministério da Saúde na próxima terça-feira."
+      "notaVigilancia": "Semana epidemiol\u00f3gica aberta em monitoramento cont\u00ednuo. Sujeito \u00e0 consolida\u00e7\u00e3o oficial pelo Minist\u00e9rio da Sa\u00fade."
     }
   }
 ];
 
-import { statesData } from './epidemiology';
+import { statesData } from './epidemiology.ts';
 
 export function getApplicableMilestones(selectedUF: string | null): MilestoneNote[] {
   if (!selectedUF) return epidemicMilestones;
@@ -3874,9 +4144,10 @@ export function getApplicableMilestones(selectedUF: string | null): MilestoneNot
 export function getEpidemicCurve(
   selectedUF: string | null,
   startWeek?: string,
-  endWeek?: string
+  endWeek?: string,
+  sourceSeries?: EpidemiologicalWeekData[]
 ): EpidemiologicalWeekData[] {
-  let data = epidemicTimeSeries;
+  let data = sourceSeries || epidemicTimeSeries;
   if (startWeek || endWeek) {
     data = data.filter((d) => {
       if (startWeek && d.semana < startWeek) return false;
@@ -3886,7 +4157,8 @@ export function getEpidemicCurve(
   }
   if (!selectedUF) return data;
   const state = statesData.find((s) => s.uf === selectedUF);
-  const ratio = state ? (state.casosConfirmados + state.casosProvaveis) / 15934 : 1;
+  const totalCasosNacionais = data.length > 0 ? data[data.length - 1].casosAcumulados : 16477;
+  const ratio = state ? (state.casosConfirmados + state.casosProvaveis) / (totalCasosNacionais || 16477) : 1;
   return data.map((d) => ({
     ...d,
     casosNovos: Math.round(d.casosNovos * ratio),

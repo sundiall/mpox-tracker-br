@@ -2,8 +2,8 @@ name: Atualização Automática de Dados & Deploy MPOX Brasil
 
 on:
   schedule:
-    # Checagem horária contínua com gatekeeper adaptativo (07h às 22h BRT em campanha; 2x/dia em calma)
-    - cron: '0 * * * *'
+    # Execução 30 minutos após cada hora e consolidação oficial (03:30 BRT SVSA/MS e 21:30 BRT PowerBI)
+    - cron: '30 * * * *'
   workflow_dispatch: # Permite execução manual a qualquer momento via GitHub Actions
   push:
     branches:
@@ -45,7 +45,7 @@ jobs:
           python scripts/agentic_monitor.py
           
           # Verificar se houve alteração nos dados coletados
-          git add public/data/ src/data/sync_status.ts src/data/alerts.ts src/data/vaccination_sites.ts src/data/vaccines.ts
+          git add public/data/ src/data/
           if git diff --staged --quiet; then
             echo "has_changes=false" >> $GITHUB_OUTPUT
             echo "ℹ️ [Estratégia A] Nenhum dado novo detectado. Omitindo etapas de build e deploy para economizar minutos de Actions."
@@ -73,7 +73,7 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add public/data/ src/data/sync_status.ts src/data/alerts.ts src/data/vaccination_sites.ts src/data/vaccines.ts
+          git add public/data/ src/data/
           git commit -m "chore: atualização automática de dados e RSS [skip ci]"
           git push
 

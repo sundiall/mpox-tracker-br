@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import type { FC } from 'react';
 import { 
   Activity, 
@@ -7,16 +7,17 @@ import {
   Syringe, 
   TrendingDown, 
   TrendingUp, 
-  Minus,
-  HelpCircle,
-  Building2,
-  Clock,
-  Filter,
-  ExternalLink
+  Minus, 
+  HelpCircle, 
+  Building2, 
+  Clock, 
+  Filter, 
+  ExternalLink 
 } from 'lucide-react';
 import { nationalSummary } from '../data/epidemiology';
 import type { StateEpidemiology } from '../data/epidemiology';
 import { epidemicTimeSeries } from '../data/time_series';
+import type { EpidemiologicalWeekData } from '../data/time_series';
 import { syncMetadata } from '../data/sync_status';
 import { KPICard } from './KPICard';
 import { EpidemicCurveChart } from './EpidemicCurveChart';
@@ -39,47 +40,87 @@ export const DashboardView: FC<DashboardViewProps> = ({
   onSelectUF,
   onNavigateToTab
 }) => {
+  const [liveTimeSeries, setLiveTimeSeries] = useState<EpidemiologicalWeekData[]>(epidemicTimeSeries);
+  const [liveStates, setLiveStates] = useState<StateEpidemiology[]>(states);
+
+  useEffect(() => {
+    fetch(`/data/time_series.json?t=${Date.now()}`)
+      .then((res) => (res.ok ? res.json() : null))
+      .then((data) => {
+        if (data?.epidemicTimeSeries && Array.isArray(data.epidemicTimeSeries) && data.epidemicTimeSeries.length > 0) {
+          setLiveTimeSeries(data.epidemicTimeSeries);
+        }
+      })
+      .catch(() => {});
+
+    fetch(`/data/epidemiology.json?t=${Date.now()}`)
+      .then((res) => (res.ok ? res.json() : null))
+      .then((data) => {
+        if (data?.statesData && Array.isArray(data.statesData) && data.statesData.length > 0) {
+          setLiveStates(data.statesData);
+        }
+      })
+      .catch(() => {});
+  }, []);
+
+  const allWeeks = useMemo(() => liveTimeSeries.map((d) => d.semana), [liveTimeSeries]);
+  const latestWeek = useMemo(() => {
+    return allWeeks.length > 0 ? allWeeks[allWeeks.length - 1] : '2026-SE48';
+  }, [allWeeks]);
+
+  const formatWeekLabel = (w: string) => {
+    const m = w.match(/^(\d{4})-SE(\d{1,2})$/);
+    if (!m) return w;
+    return `SE ${m[2]}/${m[1]}`;
+  };
+
   const [inspectingState, setInspectingState] = useState<StateEpidemiology | null>(null);
   const [selectedPeriod, setSelectedPeriod] = useState<TemporalPeriod>('historico');
   const [customStartWeek, setCustomStartWeek] = useState<string>('2022-SE22');
-  const [customEndWeek, setCustomEndWeek] = useState<string>('2026-SE46');
-
-  const allWeeks = useMemo(() => epidemicTimeSeries.map((d) => d.semana), []);
+  const [customEndWeekOverride, setCustomEndWeekOverride] = useState<string | null>(null);
+  const customEndWeek = customEndWeekOverride ?? latestWeek;
+  const setCustomEndWeek = (w: string) => setCustomEndWeekOverride(w);
 
   // Estados em ordem alfabética estrita para o seletor superior
   const sortedStates = useMemo(() => {
-    return [...states].sort((a, b) => a.nome.localeCompare(b.nome, 'pt-BR'));
-  }, [states]);
+    return [...liveStates].sort((a, b) => a.nome.localeCompare(b.nome, 'pt-BR'));
+  }, [liveStates]);
 
-  const currentState = selectedUF ? states.find((s) => s.uf === selectedUF) : null;
+  const currentState = selectedUF ? liveStates.find((s) => s.uf === selectedUF) : null;
   const stateWeight = (selectedUF && currentState) ? (currentState.casosConfirmados / nationalSummary.totalConfirmados) : 1.0;
 
   // Definição unificada do intervalo temporal compartilhado por todas as tarjetas e gráficos
   const periodConfig = useMemo(() => {
     let start = '2022-SE22';
-    let end = '2026-SE46';
+    let end = latestWeek;
     let nome = 'Série Histórica Completa';
-    let label = 'SE 22/2022 a SE 46/2026';
+    let label = `SE 22/2022 a ${formatWeekLabel(latestWeek)}`;
 
     switch (selectedPeriod) {
       case 'ano2026':
         start = '2026-SE01';
-        end = '2026-SE46';
+        end = latestWeek;
         nome = 'Ano Corrente 2026';
-        label = 'SE 01/2026 a SE 46/2026';
+        label = `SE 01/2026 a ${formatWeekLabel(latestWeek)}`;
         break;
-      case 'ultimas12s':
-        start = '2026-SE35';
-        end = '2026-SE46';
+      case 'ultimas12s': {
+        const idx = allWeeks.indexOf(latestWeek);
+        const startIdx = Math.max(0, idx - 11);
+        start = allWeeks[startIdx] || '2026-SE35';
+        end = latestWeek;
         nome = 'Últimas 12 Semanas';
-        label = 'SE 35/2026 a SE 46/2026';
+        label = `${formatWeekLabel(start)} a ${formatWeekLabel(end)}`;
         break;
-      case 'ultimas5s':
-        start = '2026-SE42';
-        end = '2026-SE46';
+      }
+      case 'ultimas5s': {
+        const idx = allWeeks.indexOf(latestWeek);
+        const startIdx = Math.max(0, idx - 4);
+        start = allWeeks[startIdx] || '2026-SE44';
+        end = latestWeek;
         nome = 'Últimas 5 Semanas';
-        label = 'SE 42/2026 a SE 46/2026';
+        label = `${formatWeekLabel(start)} a ${formatWeekLabel(end)}`;
         break;
+      }
       case 'personalizado':
         start = customStartWeek <= customEndWeek ? customStartWeek : customEndWeek;
         end = customStartWeek <= customEndWeek ? customEndWeek : customStartWeek;
@@ -89,13 +130,13 @@ export const DashboardView: FC<DashboardViewProps> = ({
       case 'historico':
       default:
         start = '2022-SE22';
-        end = '2026-SE46';
+        end = latestWeek;
         nome = 'Série Histórica Completa';
-        label = 'SE 22/2022 a SE 46/2026';
+        label = `SE 22/2022 a ${formatWeekLabel(latestWeek)}`;
         break;
     }
 
-    const slice = epidemicTimeSeries.filter((d) => d.semana >= start && d.semana <= end);
+    const slice = liveTimeSeries.filter((d) => d.semana >= start && d.semana <= end);
     const casosNacionais = slice.reduce((acc, d) => acc + d.casosNovos, 0);
     const dosesNacionais = slice.reduce((acc, d) => acc + d.dosesNovas, 0);
     const obitosNacionais = slice.reduce((acc, d) => acc + d.obitosNovos, 0);
@@ -114,7 +155,7 @@ export const DashboardView: FC<DashboardViewProps> = ({
       dosesNacionais: selectedPeriod === 'historico' ? nationalSummary.totalDosesAplicadas : dosesNacionais,
       periodScale: casosNacionais / 15488
     };
-  }, [selectedPeriod, customStartWeek, customEndWeek]);
+  }, [selectedPeriod, customStartWeek, customEndWeek, latestWeek, allWeeks, liveTimeSeries]);
 
   // Métricas dinamicamente calculadas para o período e território ativos
   const totalConfirmados = selectedUF 
@@ -162,7 +203,7 @@ export const DashboardView: FC<DashboardViewProps> = ({
                 Vigilância Epidemiológica Unificada
               </span>
               <span className="text-xs text-slate-400 font-mono">
-                Semana Atual: <strong className="text-cyan-300">SE 46/2026</strong> • Dados até 16/11/2026
+                Semana Atual: <strong className="text-cyan-300">{formatWeekLabel(latestWeek)}</strong> • Dados consolidados até {syncMetadata.ultimaAtualizacaoFormatada.split(' ')[0]}
               </span>
             </div>
             <h2 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
@@ -257,7 +298,7 @@ export const DashboardView: FC<DashboardViewProps> = ({
             <div className="flex flex-wrap gap-1 bg-slate-950 p-1 rounded-lg border border-slate-800">
               {[
                 { id: 'historico', label: 'Série Histórica (2022–2026)' },
-                { id: 'ano2026', label: 'Ano 2026 (SE 01–46)' },
+                { id: 'ano2026', label: `Ano 2026 (SE 01–${latestWeek.replace('2026-SE', '')})` },
                 { id: 'ultimas12s', label: 'Últimas 12 Semanas' },
                 { id: 'ultimas5s', label: 'Últimas 5 Semanas' },
                 { id: 'personalizado', label: 'Personalizado' }
@@ -370,6 +411,7 @@ export const DashboardView: FC<DashboardViewProps> = ({
 
       {/* Gráfico 1: Curva Epidêmica com Doses Aplicadas Superpostas, Hitos e Notas */}
       <EpidemicCurveChart 
+        timeSeries={liveTimeSeries}
         selectedUF={selectedUF} 
         onSelectUF={onSelectUF} 
         startWeek={periodConfig.start}
@@ -393,7 +435,7 @@ export const DashboardView: FC<DashboardViewProps> = ({
 
       {/* Tabela Navegável com Tabs por Cada Região e Colorimetria Mantida */}
       <SortableStateTable 
-        states={states} 
+        states={liveStates} 
         onOpenStateInspector={(state) => setInspectingState(state)} 
         selectedPeriod={selectedPeriod}
         periodLabel={periodConfig.label}

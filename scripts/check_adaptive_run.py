@@ -64,8 +64,8 @@ def main():
             if 7 <= hour_brt <= 22:
                 print(f"✅ [CAMPANHA_ATIVA - Dia Útil] Postos em pleno funcionamento (07h às 22h). Hora atual: {hour_brt}h BRT.")
                 set_github_output(True, f"Horário comercial e estendido ({hour_brt}h BRT)")
-            elif hour_brt in [23, 4]:
-                # Checagens noturnas essenciais de consolidação
+            elif hour_brt in [23, 4, 3]:
+                # Checagens noturnas essenciais de consolidação (incluindo 03:30 BRT SVSA/MS)
                 print(f"✅ [CAMPANHA_ATIVA] Checagem de consolidação noturna/madrugada ({hour_brt}h BRT).")
                 set_github_output(True, f"Consolidação noturna ({hour_brt}h BRT)")
             else:
