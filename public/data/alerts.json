@@ -44,6 +44,17 @@
     "categoria": "Imunização"
   },
   {
+    "id": "alert-rj-2026-11-23-mpox-prefeitura-do-rio-suspende-vacina-o",
+    "dataPublicacao": "2026-11-23",
+    "orgaoEmissor": "SES-RJ",
+    "ufRelacionada": "RJ",
+    "titulo": "Mpox: Prefeitura do Rio suspende vacinação - O GLOBO",
+    "tipo": "alerta_urgente",
+    "resumo": "Mpox: Prefeitura do Rio suspende vacinação  O GLOBO",
+    "linkOficial": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOdDZ2LU56ZDQ4d2o3eWpSUVZlaUJ4M0ttX1dQcVJvN004aFdxR2dmRkM5Z0cyZHJyOUN1bnltd01lRGRIb2ZfeEVTTjBaOUUtMFVDdG41MVdZdks2OHJRLWJ6ZGdqV1FyT2VwUHgzN2JoU2xpdmpWZkE2VXVjcE5xU0hGbzVRVzcxbEtzMi13Q0l1WHVTSlU0bUNadkJSaE1ReG1oaU9XTmVqOWFrWF9HbjU5Qk8yRnZuTHhnejQ2Y0VQRW9ORllkZFF2dWNhZUZsMWt1Qk5DQll6ZXNhX0HSAewBQVVfeXFMUDhlNko0bjVDd2ZrN3YzV0ZPS0NPZGdEcFBjUHhsa0RKX04zWVFKbllvWGpBUmxkYUp4aUtqY3JlUDAzTHdRN0hxUnB5eFFiLXU5VnRHa0hhekNVM1FuRVR2aUZpeFowMF9FNE9jaTZxRG9rVzRuNkR6WEFVT1JwaE9KakZYWEZGYWxDeGp3b1hyYTVWTW5KMEgtTkZSQzNXS3BPY1RnYTl2Z3pOSzhCSUtyUVh5YnBpWmMxOUxmVTNrekF3RVJYZ0RSek10VFlUSlVCYTNuUkdzckNwWEhyVTh4elhNeFlLc0x6eEw?oc=5",
+    "categoria": "Imunização"
+  },
+  {
     "id": "alert-rj-2026-11-23-vacina-contra-mpox-acaba-no-rio-ap-s-8-m",
     "dataPublicacao": "2026-11-23",
     "orgaoEmissor": "SMS-Rio",
