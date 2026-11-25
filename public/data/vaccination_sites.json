@@ -18,7 +18,7 @@
     "dataAtualizacaoStatus": "2026-11-23",
     "notaStatus": "Esgotamento total das doses no Rio de Janeiro após aplicação de mais de 8 mil doses, paralisando os postos de vacinação na capital.",
     "fonteStatus": "https://www.ini.fiocruz.br/ini-fiocruz-e-a-unidade-de-referencia-para-atendimento-de-casos-de-mpox-com-atendimento-24h-todos-os-dias/",
-    "previsaoFutura": "Aguardando nova distribuição do Ministério da Saúde."
+    "previsaoFutura": "Aguardando envio e redistribuição de novos lotes pelo Ministério da Saúde."
   },
   {
     "id": "rj-2",
@@ -39,7 +39,7 @@
     "dataAtualizacaoStatus": "2026-11-23",
     "notaStatus": "Esgotamento total das doses no município do Rio de Janeiro relatado em boletins recentes, com paralisação geral dos postos.",
     "fonteStatus": "https://prefeitura.rio/saude/vacina-contra-mpox-segue-disponivel-apenas-no-super-centro-de-botafogo/",
-    "previsaoFutura": "Aguardando envio de novos lotes pelo Ministério da Saúde."
+    "previsaoFutura": "Aguardando envio e redistribuição de novos lotes pelo Ministério da Saúde."
   },
   {
     "id": "rj-3",
@@ -60,7 +60,7 @@
     "dataAtualizacaoStatus": "2026-11-23",
     "notaStatus": "Esgotamento geral das doses de vacina contra mpox na cidade do Rio de Janeiro.",
     "fonteStatus": "https://prefeitura.rio/saude/vacina-contra-mpox-segue-disponivel-apenas-no-super-centro-de-botafogo/",
-    "previsaoFutura": "Reposição condicionada a novas remessas federais."
+    "previsaoFutura": "Aguardando envio e redistribuição de novos lotes pelo Ministério da Saúde."
   },
   {
     "id": "rj-4",
@@ -81,7 +81,7 @@
     "dataAtualizacaoStatus": "2026-11-23",
     "notaStatus": "Paralisação geral da vacinação por esgotamento de estoque no município do Rio.",
     "fonteStatus": "https://prefeitura.rio/saude/vacina-contra-mpox-segue-disponivel-apenas-no-super-centro-de-botafogo/",
-    "previsaoFutura": "Sem prazo definido para normalização."
+    "previsaoFutura": "Aguardando envio e redistribuição de novos lotes pelo Ministério da Saúde."
   },
   {
     "id": "rj-5",
@@ -102,7 +102,7 @@
     "dataAtualizacaoStatus": "2026-11-23",
     "notaStatus": "Doses esgotadas no polo central da Cinelândia. Atendimento suspenso temporariamente por falta de vacinas.",
     "fonteStatus": "https://prefeitura.rio/saude/vacina-contra-mpox-segue-disponivel-apenas-no-super-centro-de-botafogo/",
-    "previsaoFutura": "Aguardando novos lotes federais."
+    "previsaoFutura": "Aguardando envio e redistribuição de novos lotes pelo Ministério da Saúde."
   },
   {
     "id": "sp-1",
