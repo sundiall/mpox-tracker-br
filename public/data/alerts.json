@@ -1,5 +1,27 @@
 [
   {
+    "id": "alert-sp-inicio-vacinacao-2026-11-24",
+    "dataPublicacao": "2026-11-24",
+    "orgaoEmissor": "SES-SP",
+    "ufRelacionada": "SP",
+    "titulo": "São Paulo começa vacinação contra Mpox para grupos prioritários",
+    "tipo": "disponibilidade_vacina",
+    "resumo": "O estado de São Paulo iniciou a aplicação e distribuição de novas doses da vacina contra mpox voltada para os grupos prioritários definidos pelo Ministério da Saúde.",
+    "linkOficial": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOZGlHRGtmTGdsY2t6cTF2YkFuenRTbHZwVXdJd2RNZWEyMExjUS1QX0hZY3ptTWlyWE5ld0pxVFJQQ1ZfVThuQU5HczlSMDdOSm9kUGpfZFV2NUtZRUlCYk9RNjlpdWJpcUw3ZnNMN1kyam5PTVRLRjA4M3lSbDRlTF9CMGhGN2ZzNVpucG9qejc2Z0kzODRUQ25qX1lGOGxxSjJhTw?oc=5",
+    "categoria": "Imunização"
+  },
+  {
+    "id": "alert-rj-suspensao-2026-11-24",
+    "dataPublicacao": "2026-11-24",
+    "orgaoEmissor": "SMS-Rio",
+    "ufRelacionada": "RJ",
+    "titulo": "Rio de Janeiro suspende vacinação contra Mpox por falta de doses",
+    "tipo": "alerta_urgente",
+    "resumo": "Após esgotar o lote inicial de 8 mil doses, a aplicação da vacina contra mpox foi temporariamente suspensa nos postos e centros de referência do Rio de Janeiro até nova distribuição.",
+    "linkOficial": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPTmg3d3B6YWVOb0NiWGNoZTI0YnRhOE1FWDFoMHppWWgyLXpfTjF1T2RqSlVtWG45bjYxTDVpeTlZakdldHhfX1FlWWZURXdDdER4TjBQZFlNajBkZ1U0UFZTdC1LOEZxdWxDWEpyNFZYNDVGbS0welJST1NIQjF6dGthd2tQQmRFU2JHRGVfbllzcW1kazNGM25nZVVFTC1rak5KTXQwMkVmelV2a0RSOEVIUExvTUNwZVNweFBpQWl4U05WelhJRE1udGZVYTkwRUtvRmd3?oc=5",
+    "categoria": "Imunização"
+  },
+  {
     "id": "alert-tier1-rede-referencia-2026-11-19",
     "dataPublicacao": "2026-11-19",
     "orgaoEmissor": "Ministério da Saúde",

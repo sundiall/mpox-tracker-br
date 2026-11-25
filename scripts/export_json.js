@@ -13,9 +13,32 @@ if (!fs.existsSync(outputDir)) {
   fs.mkdirSync(outputDir, { recursive: true });
 }
 
+// Preservar alertas dinâmicos gerados pelo agente se já existirem
+const alertsJsonPath = path.join(outputDir, 'alerts.json');
+let alertsToExport = officialAlerts;
+if (fs.existsSync(alertsJsonPath)) {
+  try {
+    const existingAlerts = JSON.parse(fs.readFileSync(alertsJsonPath, 'utf-8'));
+    if (Array.isArray(existingAlerts) && existingAlerts.length > 0) {
+      const seenIds = new Set(existingAlerts.map((a) => a.id));
+      const seenTitles = new Set(existingAlerts.map((a) => a.titulo?.toLowerCase().trim()));
+      const merged = [...existingAlerts];
+      for (const baseAlert of officialAlerts) {
+        if (!seenIds.has(baseAlert.id) && !seenTitles.has(baseAlert.titulo?.toLowerCase().trim())) {
+          merged.push(baseAlert);
+        }
+      }
+      merged.sort((a, b) => new Date(b.dataPublicacao).getTime() - new Date(a.dataPublicacao).getTime());
+      alertsToExport = merged;
+    }
+  } catch (e) {
+    console.warn('Aviso ao mesclar alerts.json:', e);
+  }
+}
+
 fs.writeFileSync(
-  path.join(outputDir, 'alerts.json'),
-  JSON.stringify(officialAlerts, null, 2),
+  alertsJsonPath,
+  JSON.stringify(alertsToExport, null, 2),
   'utf-8'
 );
 

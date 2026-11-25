@@ -1,7 +1,7 @@
 export interface OfficialAlert {
   id: string;
   dataPublicacao: string; // YYYY-MM-DD
-  orgaoEmissor: 'Ministério da Saúde' | 'Anvisa' | 'Fiocruz' | 'SES-RJ' | 'SES-SP' | 'OMS / OPAS' | 'Prefeitura de BH' | 'SMS-Rio' | 'SES-MG';
+  orgaoEmissor: 'Ministério da Saúde' | 'Anvisa' | 'Fiocruz' | 'SES-RJ' | 'SES-SP' | 'OMS / OPAS' | 'Prefeitura de BH' | 'SMS-Rio' | 'SES-MG' | string;
   ufRelacionada: string; // 'Nacional' ou UF
   titulo: string;
   tipo: 'alerta_urgente' | 'disponibilidade_vacina' | 'nota_tecnica' | 'avanco_cientifico';
@@ -12,114 +12,135 @@ export interface OfficialAlert {
 
 export const officialAlerts: OfficialAlert[] = [
   {
-    id: 'alert-tier1-rede-referencia-2026-11-19',
-    dataPublicacao: '2026-11-19',
-    orgaoEmissor: 'Ministério da Saúde',
-    ufRelacionada: 'Nacional',
-    titulo: 'Mapeamento oficial: Rede de CRIEs e polos estratégicos para vacinação de Mpox em estados prioritários (Tier 1)',
-    tipo: 'nota_tecnica',
-    resumo: 'A plataforma incorporou a rede oficial de Centros de Referência para Imunobiológicos Especiais (CRIEs) e ambulatórios de IST/PrEP em 7 estados de alta prioridade (Ceará, Distrito Federal, Santa Catarina, Paraná, Rio Grande do Sul, Pernambuco e Rondônia). As unidades estão estruturadas para aplicação por regulação e agendamento nominal conforme critérios técnicos do PNI/SVSA.',
-    linkOficial: 'https://www.gov.br/saude/pt-br/composicao/svsa/cnie/painel-mpox',
-    categoria: 'Imunização'
+    "id": "alert-sp-inicio-vacinacao-2026-11-24",
+    "dataPublicacao": "2026-11-24",
+    "orgaoEmissor": "SES-SP",
+    "ufRelacionada": "SP",
+    "titulo": "São Paulo começa vacinação contra Mpox para grupos prioritários",
+    "tipo": "disponibilidade_vacina",
+    "resumo": "O estado de São Paulo iniciou a aplicação e distribuição de novas doses da vacina contra mpox voltada para os grupos prioritários definidos pelo Ministério da Saúde.",
+    "linkOficial": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOZGlHRGtmTGdsY2t6cTF2YkFuenRTbHZwVXdJd2RNZWEyMExjUS1QX0hZY3ptTWlyWE5ld0pxVFJQQ1ZfVThuQU5HczlSMDdOSm9kUGpfZFV2NUtZRUlCYk9RNjlpdWJpcUw3ZnNMN1kyam5PTVRLRjA4M3lSbDRlTF9CMGhGN2ZzNVpucG9qejc2Z0kzODRUQ25qX1lGOGxxSjJhTw?oc=5",
+    "categoria": "Imunização"
   },
   {
-    id: 'alert-rj-reabastecimento-2026-11-19',
-    dataPublicacao: '2026-11-19',
-    orgaoEmissor: 'SES-RJ',
-    ufRelacionada: 'RJ',
-    titulo: 'Rio de Janeiro retoma vacinação contra Mpox em 3 Super Centros após reabastecimento com 1.000 frascos',
-    tipo: 'disponibilidade_vacina',
-    resumo: 'O Ministério da Saúde enviou remessa emergencial com 1.000 frascos de vacina MVA-BN (potencial de até 5.000 doses fracionadas de 0,1 mL) à capital fluminense. A vacinação foi retomada nos Super Centros Cariocas de Botafogo, Shopping Nova América (Zona Norte) e ParkShopping Campo Grande (Zona Oeste) para usuários de PrEP e pessoas vivendo com HIV com CD4 < 200.',
-    linkOficial: 'https://prefeitura.rio/saude',
-    categoria: 'Imunização'
+    "id": "alert-rj-suspensao-2026-11-24",
+    "dataPublicacao": "2026-11-24",
+    "orgaoEmissor": "SMS-Rio",
+    "ufRelacionada": "RJ",
+    "titulo": "Rio de Janeiro suspende vacinação contra Mpox por falta de doses",
+    "tipo": "alerta_urgente",
+    "resumo": "Após esgotar o lote inicial de 8 mil doses, a aplicação da vacina contra mpox foi temporariamente suspensa nos postos e centros de referência do Rio de Janeiro até nova distribuição.",
+    "linkOficial": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPTmg3d3B6YWVOb0NiWGNoZTI0YnRhOE1FWDFoMHppWWgyLXpfTjF1T2RqSlVtWG45bjYxTDVpeTlZakdldHhfX1FlWWZURXdDdER4TjBQZFlNajBkZ1U0UFZTdC1LOEZxdWxDWEpyNFZYNDVGbS0welJST1NIQjF6dGthd2tQQmRFU2JHRGVfbllzcW1kazNGM25nZVVFTC1rak5KTXQwMkVmelV2a0RSOEVIUExvTUNwZVNweFBpQWl4U05WelhJRE1udGZVYTkwRUtvRmd3?oc=5",
+    "categoria": "Imunização"
   },
   {
-    id: 'alert-bh-ampliacao-2026-11-19',
-    dataPublicacao: '2026-11-19',
-    orgaoEmissor: 'Prefeitura de BH',
-    ufRelacionada: 'MG',
-    titulo: 'Prefeitura de Belo Horizonte amplia vacinação contra Mpox nesta quinta-feira (19/11) e anuncia expansão para 30/11',
-    tipo: 'disponibilidade_vacina',
-    resumo: 'A Secretaria Municipal de Saúde de BH disponibilizou doses da vacina MVA-BN em 5 serviços de referência (Hospital Eduardo de Menezes, URS Centro-Sul, CTA/SAE Sagrada Família, CTR Orestes Diniz e CRIE Hospital Odilon Behrens). A imunização atende usuários de PrEP, PVHA com CD4 < 200 e laboratoristas a partir de 19/11, e será estendida a todas as pessoas com HIV/Aids a partir de 30/11.',
-    linkOficial: 'https://prefeitura.pbh.gov.br/noticias',
-    categoria: 'Imunização'
+    "id": "alert-tier1-rede-referencia-2026-11-19",
+    "dataPublicacao": "2026-11-19",
+    "orgaoEmissor": "Ministério da Saúde",
+    "ufRelacionada": "Nacional",
+    "titulo": "Mapeamento oficial: Rede de CRIEs e polos estratégicos para vacinação de Mpox em estados prioritários (Tier 1)",
+    "tipo": "nota_tecnica",
+    "resumo": "A plataforma incorporou a rede oficial de Centros de Referência para Imunobiológicos Especiais (CRIEs) e ambulatórios de IST/PrEP em 7 estados de alta prioridade (Ceará, Distrito Federal, Santa Catarina, Paraná, Rio Grande do Sul, Pernambuco e Rondônia). As unidades estão estruturadas para aplicação por regulação e agendamento nominal conforme critérios técnicos do PNI/SVSA.",
+    "linkOficial": "https://www.gov.br/saude/pt-br/composicao/svsa/cnie/painel-mpox",
+    "categoria": "Imunização"
   },
   {
-    id: 'alert-sp-novas-doses-2026-11-19',
-    dataPublicacao: '2026-11-19',
-    orgaoEmissor: 'SES-SP',
-    ufRelacionada: 'SP',
-    titulo: 'São Paulo recebe 1.000 novas doses de vacina contra Mpox e abastece rede de SAEs e Centros de Referência',
-    tipo: 'disponibilidade_vacina',
-    resumo: 'O estado e município de São Paulo receberam novo lote federal com 1.000 doses da vacina MVA-BN. A distribuição contempla a rede de Serviços de Atenção Especializada (SAEs Campos Elíseos, Lapa, Santana, Butantã, Santo Amaro, Ipiranga, Cidade Líder II) e CRIEs para usuários de PrEP em acompanhamento e PVHA elegíveis.',
-    linkOficial: 'https://www.saude.sp.gov.br',
-    categoria: 'Imunização'
+    "id": "alert-rj-reabastecimento-2026-11-19",
+    "dataPublicacao": "2026-11-19",
+    "orgaoEmissor": "SES-RJ",
+    "ufRelacionada": "RJ",
+    "titulo": "Rio de Janeiro retoma vacinação contra Mpox em 3 Super Centros após reabastecimento com 1.000 frascos",
+    "tipo": "disponibilidade_vacina",
+    "resumo": "O Ministério da Saúde enviou remessa emergencial com 1.000 frascos de vacina MVA-BN (potencial de até 5.000 doses fracionadas de 0,1 mL) à capital fluminense. A vacinação foi retomada nos Super Centros Cariocas de Botafogo, Shopping Nova América (Zona Norte) e ParkShopping Campo Grande (Zona Oeste) para usuários de PrEP e pessoas vivendo com HIV com CD4 < 200.",
+    "linkOficial": "https://prefeitura.rio/saude",
+    "categoria": "Imunização"
   },
   {
-    id: 'alert-rj-esgotamento-2026',
-    dataPublicacao: '2026-11-18',
-    orgaoEmissor: 'SES-RJ',
-    ufRelacionada: 'RJ',
-    titulo: 'Histórico: Doses de vacina contra Mpox temporariamente esgotadas no Rio de Janeiro após intensa procura',
-    tipo: 'alerta_urgente',
-    resumo: 'A Secretaria Municipal de Saúde do Rio de Janeiro comunicou o esgotamento temporário das doses da vacina MVA-BN na rede municipal devido à alta procura no início da semana, prontamente sanado com a chegada do novo lote em 19/11.',
-    linkOficial: 'https://prefeitura.rio/saude',
-    categoria: 'Imunização'
+    "id": "alert-bh-ampliacao-2026-11-19",
+    "dataPublicacao": "2026-11-19",
+    "orgaoEmissor": "Prefeitura de BH",
+    "ufRelacionada": "MG",
+    "titulo": "Prefeitura de Belo Horizonte amplia vacinação contra Mpox nesta quinta-feira (19/11) e anuncia expansão para 30/11",
+    "tipo": "disponibilidade_vacina",
+    "resumo": "A Secretaria Municipal de Saúde de BH disponibilizou doses da vacina MVA-BN em 5 serviços de referência (Hospital Eduardo de Menezes, URS Centro-Sul, CTA/SAE Sagrada Família, CTR Orestes Diniz e CRIE Hospital Odilon Behrens). A imunização atende usuários de PrEP, PVHA com CD4 < 200 e laboratoristas a partir de 19/11, e será estendida a todas as pessoas com HIV/Aids a partir de 30/11.",
+    "linkOficial": "https://prefeitura.pbh.gov.br/noticias",
+    "categoria": "Imunização"
   },
   {
-    id: 'alert-1',
-    dataPublicacao: '2026-11-12',
-    orgaoEmissor: 'Ministério da Saúde',
-    ufRelacionada: 'Nacional',
-    titulo: 'Vigilância Genômica confirma circulação estável de Clado IIb e ausência de Clado Ib no território nacional',
-    tipo: 'nota_tecnica',
-    resumo: 'A Rede Nacional de Sequenciamento Genômico da SVSA analisou mais de 800 amostras recentes de lesões, confirmando que todos os genomas identificados pertencem à linhagem Clado IIb (circulante desde 2022). Não há detecção até o momento do Clado Ib no Brasil.',
-    linkOficial: 'https://www.gov.br/saude/pt-br/composicao/svsa/cnie/painel-mpox',
-    categoria: 'Vigilância'
+    "id": "alert-sp-novas-doses-2026-11-19",
+    "dataPublicacao": "2026-11-19",
+    "orgaoEmissor": "SES-SP",
+    "ufRelacionada": "SP",
+    "titulo": "São Paulo recebe 1.000 novas doses de vacina contra Mpox e abastece rede de SAEs e Centros de Referência",
+    "tipo": "disponibilidade_vacina",
+    "resumo": "O estado e município de São Paulo receberam novo lote federal com 1.000 doses da vacina MVA-BN. A distribuição contempla a rede de Serviços de Atenção Especializada (SAEs Campos Elíseos, Lapa, Santana, Butantã, Santo Amaro, Ipiranga, Cidade Líder II) e CRIEs para usuários de PrEP em acompanhamento e PVHA elegíveis.",
+    "linkOficial": "https://www.saude.sp.gov.br",
+    "categoria": "Imunização"
   },
   {
-    id: 'alert-2',
-    dataPublicacao: '2026-10-28',
-    orgaoEmissor: 'SES-RJ',
-    ufRelacionada: 'RJ',
-    titulo: 'Secretaria de Saúde do Rio de Janeiro reabastece 4 polos estratégicos com doses intradérmicas de MVA-BN',
-    tipo: 'disponibilidade_vacina',
-    resumo: 'O Rio de Janeiro recebeu novo lote com 1.200 frascos, permitindo atendimento de até 6.000 pessoas via aplicação fracionada intradérmica (0,1 mL). O imunizante está disponível sem necessidade de agendamento no CMS Lapa e polos descentralizados para usuários cadastrados em PrEP.',
-    linkOficial: 'https://www.saude.rj.gov.br',
-    categoria: 'Imunização'
+    "id": "alert-rj-esgotamento-2026",
+    "dataPublicacao": "2026-11-18",
+    "orgaoEmissor": "SES-RJ",
+    "ufRelacionada": "RJ",
+    "titulo": "Histórico: Doses de vacina contra Mpox temporariamente esgotadas no Rio de Janeiro após intensa procura",
+    "tipo": "alerta_urgente",
+    "resumo": "A Secretaria Municipal de Saúde do Rio de Janeiro comunicou o esgotamento temporário das doses da vacina MVA-BN na rede municipal devido à alta procura no início da semana, prontamente sanado com a chegada do novo lote em 19/11.",
+    "linkOficial": "https://prefeitura.rio/saude",
+    "categoria": "Imunização"
   },
   {
-    id: 'alert-3',
-    dataPublicacao: '2026-10-15',
-    orgaoEmissor: 'SES-SP',
-    ufRelacionada: 'SP',
-    titulo: 'São Paulo intensifica busca ativa em centros de acolhimento e unidades de referência',
-    tipo: 'disponibilidade_vacina',
-    resumo: 'A Secretaria de Estado da Saúde de São Paulo orientou os CTAs e CRTs a ofertarem a segunda dose da vacina MVA-BN aos usuários com mais de 28 dias da primeira aplicação para garantir consolidação da imunidade.',
-    linkOficial: 'https://www.saude.sp.gov.br',
-    categoria: 'Imunização'
+    "id": "alert-1",
+    "dataPublicacao": "2026-11-12",
+    "orgaoEmissor": "Ministério da Saúde",
+    "ufRelacionada": "Nacional",
+    "titulo": "Vigilância Genômica confirma circulação estável de Clado IIb e ausência de Clado Ib no território nacional",
+    "tipo": "nota_tecnica",
+    "resumo": "A Rede Nacional de Sequenciamento Genômico da SVSA analisou mais de 800 amostras recentes de lesões, confirmando que todos os genomas identificados pertencem à linhagem Clado IIb (circulante desde 2022). Não há detecção até o momento do Clado Ib no Brasil.",
+    "linkOficial": "https://www.gov.br/saude/pt-br/composicao/svsa/cnie/painel-mpox",
+    "categoria": "Vigilância"
   },
   {
-    id: 'alert-4',
-    dataPublicacao: '2026-09-20',
-    orgaoEmissor: 'Fiocruz',
-    ufRelacionada: 'Nacional',
-    titulo: 'Ensaio clínico da Fiocruz avalia eficácia duradoura da resposta celular induzida por dose fracionada',
-    tipo: 'avanco_cientifico',
-    resumo: 'Pesquisadores do Instituto Oswaldo Cruz (IOC/Fiocruz) demonstraram que a via intradérmica de 0,1 mL estimula memória imunológica duradoura de Linfócitos T CD4+ e CD8+, com níveis de células T de memória comparáveis ao regime subcutâneo pleno de 0,5 mL.',
-    linkOficial: 'https://portal.fiocruz.br',
-    categoria: 'Pesquisa e Ensaios'
+    "id": "alert-2",
+    "dataPublicacao": "2026-10-28",
+    "orgaoEmissor": "SES-RJ",
+    "ufRelacionada": "RJ",
+    "titulo": "Secretaria de Saúde do Rio de Janeiro reabastece 4 polos estratégicos com doses intradérmicas de MVA-BN",
+    "tipo": "disponibilidade_vacina",
+    "resumo": "O Rio de Janeiro recebeu novo lote com 1.200 frascos, permitindo atendimento de até 6.000 pessoas via aplicação fracionada intradérmica (0,1 mL). O imunizante está disponível sem necessidade de agendamento no CMS Lapa e polos descentralizados para usuários cadastrados em PrEP.",
+    "linkOficial": "https://www.saude.rj.gov.br",
+    "categoria": "Imunização"
   },
   {
-    id: 'alert-5',
-    dataPublicacao: '2026-08-30',
-    orgaoEmissor: 'OMS / OPAS',
-    ufRelacionada: 'Nacional',
-    titulo: 'Atualização das Diretrizes de Manejo Clínico: Redução do Estigma e Abordagem Centrada na Comunidade',
-    tipo: 'nota_tecnica',
-    resumo: 'A Organização Pan-Americana da Saúde enfatiza a importância de campanhas de informação sem estigmatização, articuladas diretamente com movimentos sociais e serviços de saúde sexual, garantindo privacidade e acolhimento.',
-    linkOficial: 'https://www.paho.org/pt/brasil',
-    categoria: 'Epidemiologia'
+    "id": "alert-3",
+    "dataPublicacao": "2026-10-15",
+    "orgaoEmissor": "SES-SP",
+    "ufRelacionada": "SP",
+    "titulo": "São Paulo intensifica busca ativa em centros de acolhimento e unidades de referência",
+    "tipo": "disponibilidade_vacina",
+    "resumo": "A Secretaria de Estado da Saúde de São Paulo orientou os CTAs e CRTs a ofertarem a segunda dose da vacina MVA-BN aos usuários com mais de 28 dias da primeira aplicação para garantir consolidação da imunidade.",
+    "linkOficial": "https://www.saude.sp.gov.br",
+    "categoria": "Imunização"
+  },
+  {
+    "id": "alert-4",
+    "dataPublicacao": "2026-09-20",
+    "orgaoEmissor": "Fiocruz",
+    "ufRelacionada": "Nacional",
+    "titulo": "Ensaio clínico da Fiocruz avalia eficácia duradoura da resposta celular induzida por dose fracionada",
+    "tipo": "avanco_cientifico",
+    "resumo": "Pesquisadores do Instituto Oswaldo Cruz (IOC/Fiocruz) demonstraram que a via intradérmica de 0,1 mL estimula memória imunológica duradoura de Linfócitos T CD4+ e CD8+, com níveis de células T de memória comparáveis ao regime subcutâneo pleno de 0,5 mL.",
+    "linkOficial": "https://portal.fiocruz.br",
+    "categoria": "Pesquisa e Ensaios"
+  },
+  {
+    "id": "alert-5",
+    "dataPublicacao": "2026-08-30",
+    "orgaoEmissor": "OMS / OPAS",
+    "ufRelacionada": "Nacional",
+    "titulo": "Atualização das Diretrizes de Manejo Clínico: Redução do Estigma e Abordagem Centrada na Comunidade",
+    "tipo": "nota_tecnica",
+    "resumo": "A Organização Pan-Americana da Saúde enfatiza a importância de campanhas de informação sem estigmatização, articuladas diretamente com movimentos sociais e serviços de saúde sexual, garantindo privacidade e acolhimento.",
+    "linkOficial": "https://www.paho.org/pt/brasil",
+    "categoria": "Epidemiologia"
   }
 ];
-

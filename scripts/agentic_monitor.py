@@ -185,6 +185,15 @@ DIRETRIZES AGÉNTICAS DE AVALIAÇÃO:
 4. PRESERVAÇÃO DE FONTES:
    - Indique a URL oficial da matéria que sustenta diretamente a interpretação. Evite links de agregadores genéricos quando houver link institucional.
 
+5. SEÇÃO DE ALERTAS & NOTÍCIAS OFICIAIS ('alertasNoticias'):
+   - Identifique e sintetize todas as notícias relevantes e recentes sobre Mpox para a seção oficial de Alertas & Notícias da plataforma.
+   - Para esgotamento ou suspensão de doses em postos, classifique como tipo 'alerta_urgente' e categoria 'Imunização'.
+   - Para chegada de novos lotes, início de vacinação ou distribuição, classifique como tipo 'disponibilidade_vacina' e categoria 'Imunização'.
+   - Para estudos, vigilância genômica ou notas técnicas, classifique como 'nota_tecnica' ou 'avanco_cientifico'.
+   - O 'orgaoEmissor' deve ser o órgão oficial ou fonte jornalística (ex: 'SMS-Rio', 'SES-SP', 'Ministério da Saúde', 'Fiocruz', 'EBC / Agência Brasil').
+   - A 'dataPublicacao' deve ser 'YYYY-MM-DD'.
+   - O 'id' deve ser um slug único sem espaços (ex: 'alert-rj-suspensao-2026-11-24', 'alert-sp-inicio-vacinacao-2026-11-24').
+
 Estrutura JSON esperada:
 {{
   "alteracoesEstoque": [
@@ -206,12 +215,17 @@ Estrutura JSON esperada:
       "descricao": "resumo do marco"
     }}
   ],
-  "alertasUrgentes": [
+  "alertasNoticias": [
     {{
-      "titulo": "título do alerta",
-      "tipo": "disponibilidade_vacina" | "criterios_elegibilidade" | "nota_tecnica",
-      "resumo": "resumo sucinto",
-      "linkOficial": "url da matéria"
+      "id": "slug-identificador-unico",
+      "dataPublicacao": "YYYY-MM-DD",
+      "orgaoEmissor": "Ministério da Saúde" | "Anvisa" | "Fiocruz" | "SES-RJ" | "SES-SP" | "OMS / OPAS" | "Prefeitura de BH" | "SMS-Rio" | "SES-MG" | "Fonte Oficial",
+      "ufRelacionada": "Nacional" | "RJ" | "SP" | "MG" | "UF correspondente",
+      "titulo": "título claro e factual da notícia",
+      "tipo": "alerta_urgente" | "disponibilidade_vacina" | "nota_tecnica" | "avanco_cientifico",
+      "resumo": "resumo detalhado com informações práticas (doses, locais, público elegível)",
+      "linkOficial": "URL da matéria ou comunicado oficial",
+      "categoria": "Vigilância" | "Imunização" | "Pesquisa e Ensaios" | "Epidemiologia"
     }}
   ]
 }}
@@ -350,18 +364,56 @@ def fallback_heuristic_analysis(items):
                         "fonte": it.get("link")
                     })
 
-        if "vacina" in texto:
+        if has_mpox and any(w in texto for w in ["vacina", "doses", "esgotou", "suspensa", "distribui", "lote", "saúde", "imunização"]):
+            # Extrair data YYYY-MM-DD
+            item_date = get_item_datetime(it)
+            date_str = item_date.strftime("%Y-%m-%d") if item_date != datetime.min else datetime.now().strftime("%Y-%m-%d")
+            
+            # Identificar órgão emissor provável
+            orgao = "Ministério da Saúde"
+            if any(w in texto for w in ["rio", "carioca", "sms-rio", "ses-rj"]):
+                orgao = "SMS-Rio" if "município" in texto or "capital" in texto or "postos" in texto else "SES-RJ"
+            elif any(w in texto for w in ["são paulo", "sp", "ses-sp", "capital paulista"]):
+                orgao = "SES-SP"
+            elif any(w in texto for w in ["belo horizonte", "bh", "pbh", "ses-mg"]):
+                orgao = "Prefeitura de BH"
+            elif "fiocruz" in texto:
+                orgao = "Fiocruz"
+            elif "ebc" in texto or "agência brasil" in texto or "agencia brasil" in texto:
+                orgao = "Agência Brasil"
+
+            uf = "Nacional"
+            if any(w in texto for w in ["rio de janeiro", "rio", "carioca"]):
+                uf = "RJ"
+            elif any(w in texto for w in ["são paulo", "sp"]):
+                uf = "SP"
+            elif any(w in texto for w in ["belo horizonte", "minas gerais", "mg"]):
+                uf = "MG"
+
+            tipo = "alerta_urgente" if is_esgotamento else ("disponibilidade_vacina" if is_reabastecimento else "nota_tecnica")
+            cat = "Imunização" if (is_esgotamento or is_reabastecimento or "vacina" in texto) else "Vigilância"
+            
+            # Gerar slug id único
+            clean_slug = re.sub(r'[^a-z0-9]+', '-', it.get("titulo", "").lower().strip())[:40].strip('-')
+            slug_id = f"alert-{uf.lower()}-{date_str}-{clean_slug}"
+
             alertas.append({
+                "id": slug_id,
+                "dataPublicacao": date_str,
+                "orgaoEmissor": orgao,
+                "ufRelacionada": uf,
                 "titulo": it.get("titulo"),
-                "tipo": "disponibilidade_vacina",
+                "tipo": tipo,
                 "resumo": it.get("resumo"),
-                "linkOficial": it.get("link")
+                "linkOficial": it.get("link"),
+                "categoria": cat
             })
 
     return {
         "alteracoesEstoque": alteracoes,
         "novosMarcos": [],
-        "alertasUrgentes": alertas[:6]
+        "alertasNoticias": alertas[:10],
+        "alertasUrgentes": alertas[:10]
     }
 
 def update_sites_and_alerts_from_report(analise, output_dir):
@@ -446,6 +498,98 @@ def update_sites_and_alerts_from_report(analise, output_dir):
     except Exception as e:
         print(f"⚠️ Erro ao conciliar alterações de postos: {e}")
 
+def update_alerts_from_report(analise, output_dir):
+    """
+    Atualiza a seção oficial de Alertas & Notícias (public/data/alerts.json e src/data/alerts.ts)
+    com base nas notícias e comunicados agénticos estruturados extraídos pelo Agente.
+    """
+    new_alerts = analise.get("alertasNoticias", []) or analise.get("alertasUrgentes", [])
+    if not new_alerts:
+        return
+
+    alerts_json_path = os.path.join(output_dir, "alerts.json")
+    alerts_ts_path = os.path.join(os.path.dirname(__file__), "..", "src", "data", "alerts.ts")
+
+    existing_alerts = []
+    if os.path.exists(alerts_json_path):
+        try:
+            with open(alerts_json_path, "r", encoding="utf-8") as f:
+                existing_alerts = json.load(f)
+        except Exception:
+            existing_alerts = []
+
+    seen_ids = {a.get("id") for a in existing_alerts if a.get("id")}
+    seen_titles = {a.get("titulo", "").strip().lower() for a in existing_alerts if a.get("titulo")}
+
+    valid_new = []
+    for na in new_alerts:
+        title = na.get("titulo", "").strip()
+        if not title:
+            continue
+        title_lower = title.lower()
+        if title_lower in seen_titles:
+            continue
+
+        slug = na.get("id")
+        if not slug or slug in seen_ids:
+            clean_slug = re.sub(r'[^a-z0-9]+', '-', title_lower)[:35].strip('-')
+            slug = f"alert-{na.get('ufRelacionada', 'br').lower()}-{na.get('dataPublicacao', '2026')}-{clean_slug}"
+
+        clean_alert = {
+            "id": slug,
+            "dataPublicacao": na.get("dataPublicacao", datetime.now().strftime("%Y-%m-%d")),
+            "orgaoEmissor": na.get("orgaoEmissor", "Ministério da Saúde"),
+            "ufRelacionada": na.get("ufRelacionada", "Nacional"),
+            "titulo": title,
+            "tipo": na.get("tipo", "disponibilidade_vacina"),
+            "resumo": na.get("resumo", ""),
+            "linkOficial": na.get("linkOficial", ""),
+            "categoria": na.get("categoria", "Imunização")
+        }
+        valid_new.append(clean_alert)
+        seen_ids.add(slug)
+        seen_titles.add(title_lower)
+
+    if not valid_new:
+        return
+
+    merged = valid_new + existing_alerts
+    def parse_alert_date(a):
+        try:
+            return datetime.strptime(a.get("dataPublicacao", "2026-01-01"), "%Y-%m-%d")
+        except Exception:
+            return datetime.min
+
+    merged.sort(key=parse_alert_date, reverse=True)
+
+    try:
+        with open(alerts_json_path, "w", encoding="utf-8") as f:
+            json.dump(merged, f, ensure_ascii=False, indent=2)
+        print(f"✅ [Agente] public/data/alerts.json atualizado com {len(valid_new)} novas notícias/alertas (total: {len(merged)}).")
+    except Exception as e:
+        print(f"⚠️ Erro ao salvar alerts.json: {e}")
+
+    try:
+        ts_content = f"""export interface OfficialAlert {{
+  id: string;
+  dataPublicacao: string; // YYYY-MM-DD
+  orgaoEmissor: 'Ministério da Saúde' | 'Anvisa' | 'Fiocruz' | 'SES-RJ' | 'SES-SP' | 'OMS / OPAS' | 'Prefeitura de BH' | 'SMS-Rio' | 'SES-MG' | string;
+  ufRelacionada: string; // 'Nacional' ou UF
+  titulo: string;
+  tipo: 'alerta_urgente' | 'disponibilidade_vacina' | 'nota_tecnica' | 'avanco_cientifico';
+  resumo: string;
+  linkOficial: string;
+  categoria: 'Vigilância' | 'Imunização' | 'Pesquisa e Ensaios' | 'Epidemiologia';
+}}
+
+export const officialAlerts: OfficialAlert[] = {json.dumps(merged, ensure_ascii=False, indent=2)};
+"""
+        with open(alerts_ts_path, "w", encoding="utf-8") as f:
+            f.write(ts_content)
+        print(f"✅ [Agente] src/data/alerts.ts sincronizado com os novos comunicados.")
+    except Exception as e:
+        print(f"⚠️ Erro ao sincronizar src/data/alerts.ts: {e}")
+
 def main():
     items = fetch_feed_items()
     gemini_key = os.environ.get("GEMINI_API_KEY", "").strip()
@@ -471,6 +615,9 @@ def main():
 
     # Conciliar alterações detectadas com os postos de vacinação
     update_sites_and_alerts_from_report(analise, output_dir)
+
+    # Atualizar automaticamente a seção oficial de Alertas & Notícias
+    update_alerts_from_report(analise, output_dir)
 
     # Atualização dinâmica e adaptativa do estado de vigilância
     state_file = os.path.join(output_dir, "monitor_state.json")
