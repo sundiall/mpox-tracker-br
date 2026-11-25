@@ -132,6 +132,17 @@
     "categoria": "Imunização"
   },
   {
+    "id": "alert-rj-2026-11-18-minist-rio-da-sa-de-envia-ao-munic",
+    "dataPublicacao": "2026-11-18",
+    "orgaoEmissor": "SMS-Rio",
+    "ufRelacionada": "RJ",
+    "titulo": "Ministério da Saúde envia ao município do Rio mais mil frascos de vacina contra mpox - GOV.BR",
+    "tipo": "disponibilidade_vacina",
+    "resumo": "Ministério da Saúde envia ao município do Rio mais mil frascos de vacina contra mpox  GOV.BR",
+    "linkOficial": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQbl9qdXR0TUdTNkZIT2JIU0dOeEd5Y1VDSE5YZ0pZaGhHWTVWNFFtMEdYS2pDQXFTWURiRkh4TEdHaHd5Z19tWDRtSmYtRnBhR0VFZkJLNWdua1U0WUUta2RER0Vma25vV0lkb3RDNU1pdG5UU0ZUNER2WHM1dFRNdFhjUE1uQTJNeFNkTl9WSHR2YzVVTl9naVJJSDRIZFFvNnZxY3JuOFAwRklNdGVLZlFjXzZJbFU2cWxnMUVEcEhaNUkxQ2w0cVoxZE1OSDFiOFpuNGtobHphVllkNVhsTw?oc=5",
+    "categoria": "Imunização"
+  },
+  {
     "id": "alert-rj-2026-11-18-s-o-paulo-recebe-mil-novas-doses-de-vaci",
     "dataPublicacao": "2026-11-18",
     "orgaoEmissor": "SES-RJ",
