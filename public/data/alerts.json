@@ -121,6 +121,17 @@
     "categoria": "Imunização"
   },
   {
+    "id": "alert-rj-2026-11-18-s-o-paulo-recebe-mil-novas-doses-de-vaci",
+    "dataPublicacao": "2026-11-18",
+    "orgaoEmissor": "SES-RJ",
+    "ufRelacionada": "RJ",
+    "titulo": "São Paulo recebe mil novas doses de vacina contra a mpox - Diário Carioca",
+    "tipo": "disponibilidade_vacina",
+    "resumo": "São Paulo recebe mil novas doses de vacina contra a mpox  Diário Carioca",
+    "linkOficial": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNU0RGOXB1N0VFV25fNVJIektkV25FLUp4MmhlR0EwRTZ3Z1kyM2xDNFZDSmpZckU5Zjc3WFBBUGdjVEo1YWllSkQxWTlzS2pSTFlMRFQwRng4dTJmc3VmZWxsdENad1V1ZXZwZ01PZmpuMVkwb3RGbk40Zk9uVlJJUVN3UWNyaWIwc2l3?oc=5",
+    "categoria": "Imunização"
+  },
+  {
     "id": "alert-sp-2026-11-18-18-11-2026-s-o-paulo-recebe-mil-novas-do",
     "dataPublicacao": "2026-11-18",
     "orgaoEmissor": "SES-SP",
