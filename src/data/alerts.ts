@@ -78,6 +78,17 @@ export const officialAlerts: OfficialAlert[] = [
     "categoria": "Imunização"
   },
   {
+    "id": "alert-rj-2026-11-24-vacina-contra-mpox-acaba-no-rio-ap-s-8-m",
+    "dataPublicacao": "2026-11-24",
+    "orgaoEmissor": "SMS-Rio",
+    "ufRelacionada": "RJ",
+    "titulo": "Vacina contra mpox acaba no Rio após 8 mil doses e postos param - Prensa Mercosur",
+    "tipo": "alerta_urgente",
+    "resumo": "Vacina contra mpox acaba no Rio após 8 mil doses e postos param  Prensa Mercosur",
+    "linkOficial": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOUnZZRUFzelNNakRvMnlLLUppQ05Yd05mVXk2WGp2RENXWUFCVUhkWHNZcmRtR3J3bGlMMnNYRWNsOXViRkNiUXBSRk5GOTJfLU9YclZDODdvb2ZST2lqWFk3anpKN2VhNGEtQWowaW5Bc0ViRmFKamN0YlhMbmNMRXVEcmY3RkhqRm5aMkU1akFnNVY5eW5CX21YU3IwREh4SVhuaA?oc=5",
+    "categoria": "Imunização"
+  },
+  {
     "id": "alert-rj-2026-11-24-rio-de-janeiro-suspende-vacina-o-co",
     "dataPublicacao": "2026-11-24",
     "orgaoEmissor": "SES-RJ",

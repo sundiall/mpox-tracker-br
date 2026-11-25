@@ -1,17 +1,5 @@
 {
-  "ultimaAtualizacao": "2026-11-25T17:40:39.819583",
-  "totalItens": 1,
-  "itens": [
-    {
-      "id": "rss-1",
-      "dataPublicacao": "2026-11-25",
-      "orgaoEmissor": "Fiocruz",
-      "ufRelacionada": "RJ",
-      "titulo": "Sarau na Fiocruz Mata Atlântica debate saúde e ecologia",
-      "tipo": "disponibilidade_vacina",
-      "resumo": "Sarau na Fiocruz Mata Atlântica debate saúde e ecologia \n\n            Em sua 5ª edição e com uma temática que celebra as tradicionais festas juninas, o evento Sarau Junino: Saúde e Ecologia em Cena, promovido pela Fiocruz Mata Atlântica (FMA), abre as portas, neste sábado (28/11)...",
-      "linkOficial": "https://agencia.fiocruz.br/sarau-na-fiocruz-mata-atlantica-debate-saude-e-ecologia",
-      "categoria": "Imunização"
-    }
-  ]
+  "ultimaAtualizacao": "2026-11-25T18:38:49.937593",
+  "totalItens": 0,
+  "itens": []
 }
