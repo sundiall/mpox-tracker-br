@@ -1,5 +1,16 @@
 [
   {
+    "id": "alert-sp-2026-11-24-s-o-paulo-inicia-vacina-o-contra-mp",
+    "dataPublicacao": "2026-11-24",
+    "orgaoEmissor": "SES-SP",
+    "ufRelacionada": "SP",
+    "titulo": "São Paulo inicia vacinação contra Mpox para grupos prioritários",
+    "tipo": "disponibilidade_vacina",
+    "resumo": "O estado de São Paulo iniciou a aplicação e distribuição de novas doses da vacina contra mpox em centros de referência e unidades especializadas para o público elegível.",
+    "linkOficial": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOZGlHRGtmTGdsY2t6cTF2YkFuenRTbHZwVXdJd2RNZWEyMExjUS1QX0hZY3ptTWlyWE5ld0pxVFJQQ1ZfVThuQU5HczlSMDdOSj9kUGpfZFV2NUtZRUlCYk9RNjlpdWJpcUw3ZnNMN1kyam5PTVRLRjA4M3lSbDRlTF9CMGhGN2ZzNVpucG9qejc2Z0kzODRUQ25qX1lGOGxxSjJhTw?oc=5",
+    "categoria": "Imunização"
+  },
+  {
     "id": "alert-sp-inicio-vacinacao-2026-11-24",
     "dataPublicacao": "2026-11-24",
     "orgaoEmissor": "SES-SP",
@@ -86,6 +97,17 @@
     "resumo": "A Rede Nacional de Sequenciamento Genômico da SVSA analisou mais de 800 amostras recentes de lesões, confirmando que todos os genomas identificados pertencem à linhagem Clado IIb (circulante desde 2022). Não há detecção até o momento do Clado Ib no Brasil.",
     "linkOficial": "https://www.gov.br/saude/pt-br/composicao/svsa/cnie/painel-mpox",
     "categoria": "Vigilância"
+  },
+  {
+    "id": "alert-ms-aquisicao-lotes-2026-11-08",
+    "dataPublicacao": "2026-11-08",
+    "orgaoEmissor": "Ministério da Saúde",
+    "ufRelacionada": "Nacional",
+    "titulo": "Ministério da Saúde garante 25 mil doses de vacina contra mpox",
+    "tipo": "nota_tecnica",
+    "resumo": "O Ministério da Saúde formalizou a aquisição de um novo lote com 25 mil doses de vacinas contra mpox por meio de negociações internacionais e parcerias com a OPAS para abastecer a rede nacional.",
+    "linkOficial": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPRmVKTFRmZHlRajRWVWcydFdJRGVyVHVTSTdjc25LLVdWT2tueWNsZXBsZkgwaTg2dXk4V09jUGZmSHNhTmh4SkFGMlNxaUNsMm1DTWFKVFNtWjdaZWxEWFlud1dfYXN4emZmbHFYNHdYNXBpaW1yUlRxNzhMczliSXl0VWFuQ0lxNlpoRVFGTXpIR1p5OFdicHhtS2pqQTkteHZYRUUycm5abW1FU05rUW9HV2xneTYwT2Y3UVhvQldrUFdpQnJGa2JsQk5vZE1LSGJ5ZVAwRDIwakVGcy1IZmZn?oc=5",
+    "categoria": "Imunização"
   },
   {
     "id": "alert-2",
