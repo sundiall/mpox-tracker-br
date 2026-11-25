@@ -12,6 +12,17 @@ export interface OfficialAlert {
 
 export const officialAlerts: OfficialAlert[] = [
   {
+    "id": "alert-sp-2026-11-25-s-o-paulo-recebe-mil-doses-da-vacina-con",
+    "dataPublicacao": "2026-11-25",
+    "orgaoEmissor": "SES-SP",
+    "ufRelacionada": "SP",
+    "titulo": "São Paulo recebe mil doses da vacina contra a mpox; veja quem pode tomar - Estadão",
+    "tipo": "disponibilidade_vacina",
+    "resumo": "São Paulo recebe mil doses da vacina contra a mpox; veja quem pode tomar  Estadão",
+    "linkOficial": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQWFktaG85MWhkbTRMRFhFaTQtOUdVMTBQa2ZBVER3bk91UUNBLVZLZVRtR09KYlJ5UEF6cHZXZ0IySVliOTZIQWIwcWhyamptQUNlSlhQMkFJYVhSSnFtYThPNG1ZelE0TEg2Vy1fZDczS2UxNGktbG5DaklObEhQd2FuTnlIb0djc0JxUGxGMmxwcEpmb1ZnaDVTV3M4N0xGbVI5Y0lRMkhKZlViaUFaM2lqdVRoZTAtUU9z?oc=5",
+    "categoria": "Imunização"
+  },
+  {
     "id": "alert-sp-2026-11-25-mpox-n-mero-de-casos-passa-de-1-500-no-b",
     "dataPublicacao": "2026-11-25",
     "orgaoEmissor": "SES-SP",
