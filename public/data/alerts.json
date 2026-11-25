@@ -121,6 +121,17 @@
     "categoria": "Imunização"
   },
   {
+    "id": "alert-sp-2026-11-18-18-11-2026-s-o-paulo-recebe-mil-novas-do",
+    "dataPublicacao": "2026-11-18",
+    "orgaoEmissor": "SES-SP",
+    "ufRelacionada": "SP",
+    "titulo": "18/11/2026 - São Paulo recebe mil novas doses da vacina contra a Mpox - Secretaria de Estado da Saúde de São Paulo",
+    "tipo": "disponibilidade_vacina",
+    "resumo": "18/11/2026 - São Paulo recebe mil novas doses da vacina contra a Mpox  Secretaria de Estado da Saúde de São Paulo",
+    "linkOficial": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxORkFocy1paUFwNWpCNXJJcTR3YWxYSTRqajk4QWxKa3VZS0lYa2RwbXVhWllYQ0dZY1NXWjYzT2JNWGJFeXlfSmh1dVFiR21ZYlVWQnB4bkJMX3ZCbG5yWGllZTZuRk5TM2x1bU1EVzdELTE0aEJyV2RyempMV3NVb2J5Q21ja3p3dzZXd1NsM3F0UU1ua2Y0VlZrZmJleHFYSzVqalNTT0N0RGloZWpsc2ZNUzZqaW1CVmlGeUN3UGM4THF2TXVoZlFydU1oSkJK?oc=5",
+    "categoria": "Imunização"
+  },
+  {
     "id": "alert-sp-2026-11-18-sp-ganha-novas-doses-da-vacina-contra-a",
     "dataPublicacao": "2026-11-18",
     "orgaoEmissor": "SES-SP",

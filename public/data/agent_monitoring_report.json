@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-25T00:31:21.976639",
+  "timestamp": "2026-11-25T00:36:39.129597",
   "totalItensVarredura": 24,
   "analiseAgente": {
     "alteracoesEstoque": [
@@ -107,6 +107,17 @@
         "categoria": "Imunização"
       },
       {
+        "id": "alert-sp-2026-11-18-18-11-2026-s-o-paulo-recebe-mil-novas-do",
+        "dataPublicacao": "2026-11-18",
+        "orgaoEmissor": "SES-SP",
+        "ufRelacionada": "SP",
+        "titulo": "18/11/2026 - São Paulo recebe mil novas doses da vacina contra a Mpox - Secretaria de Estado da Saúde de São Paulo",
+        "tipo": "disponibilidade_vacina",
+        "resumo": "18/11/2026 - São Paulo recebe mil novas doses da vacina contra a Mpox  Secretaria de Estado da Saúde de São Paulo",
+        "linkOficial": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxORkFocy1paUFwNWpCNXJJcTR3YWxYSTRqajk4QWxKa3VZS0lYa2RwbXVhWllYQ0dZY1NXWjYzT2JNWGJFeXlfSmh1dVFiR21ZYlVWQnB4bkJMX3ZCbG5yWGllZTZuRk5TM2x1bU1EVzdELTE0aEJyV2RyempMV3NVb2J5Q21ja3p3dzZXd1NsM3F0UU1ua2Y0VlZrZmJleHFYSzVqalNTT0N0RGloZWpsc2ZNUzZqaW1CVmlGeUN3UGM4THF2TXVoZlFydU1oSkJK?oc=5",
+        "categoria": "Imunização"
+      },
+      {
         "id": "alert-rj-2026-11-18-minist-rio-envia-vacina-contra-mpox-ao-r",
         "dataPublicacao": "2026-11-18",
         "orgaoEmissor": "SES-RJ",
@@ -148,17 +159,6 @@
         "tipo": "disponibilidade_vacina",
         "resumo": "PBH inicia vacinação contra mpox para grupos prioritários e imunização será ampliada nesta quinta-feira (19)  Prefeitura de Belo Horizonte",
         "linkOficial": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxObGVKcUNXWjZlUTNZalFHaWNMbjJYdTR5aHZFeHd6WmNVSWt3ZTZOYVdSU3pEWGpkNGg1MzlCdFlVdjBnQWhRd0JIZWh4WF9NTjY1TkdUYjU2ZWY3M0dGZ0wyYTZJUld1TmQ2U1VPZWo4QlNQOTBGRE1JdnRWYnZ3aHlyallBRDNuYXA0NnFHRlpYbDVQc2c5T2NrS1lIWXBvZlpWcEJ6bVlvSld4ZWNJYWhDT0dDREFYSVo2dTZlUXhSb1pWVVN6ZQ?oc=5",
-        "categoria": "Imunização"
-      },
-      {
-        "id": "alert-sp-2026-11-18-s-o-paulo-recebe-mil-novas-doses-da-vaci",
-        "dataPublicacao": "2026-11-18",
-        "orgaoEmissor": "SES-SP",
-        "ufRelacionada": "SP",
-        "titulo": "São Paulo recebe mil novas doses da vacina contra a Mpox - agenciasp.sp.gov.br",
-        "tipo": "disponibilidade_vacina",
-        "resumo": "São Paulo recebe mil novas doses da vacina contra a Mpox  agenciasp.sp.gov.br",
-        "linkOficial": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNSkYzc1Jsbm1KZFk2TXJxYVhJVGd6YmpGZEktc05fWU9weXYtcDFzTGJScFI1SGh6bC1OSWt6VFhqNlJsWlZ0SzhTZFJDVzZTMWJyV0NNcDFJcmpYblpBZVJKV0NJcnJrX3lybjVsVERZdDllWl9sNHFlanpwSXhySFo0MVo5bXhRMGt6OHJzVGFBaEp0T29sS2lsRQ?oc=5",
         "categoria": "Imunização"
       }
     ],
@@ -219,6 +219,17 @@
         "categoria": "Imunização"
       },
       {
+        "id": "alert-sp-2026-11-18-18-11-2026-s-o-paulo-recebe-mil-novas-do",
+        "dataPublicacao": "2026-11-18",
+        "orgaoEmissor": "SES-SP",
+        "ufRelacionada": "SP",
+        "titulo": "18/11/2026 - São Paulo recebe mil novas doses da vacina contra a Mpox - Secretaria de Estado da Saúde de São Paulo",
+        "tipo": "disponibilidade_vacina",
+        "resumo": "18/11/2026 - São Paulo recebe mil novas doses da vacina contra a Mpox  Secretaria de Estado da Saúde de São Paulo",
+        "linkOficial": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxORkFocy1paUFwNWpCNXJJcTR3YWxYSTRqajk4QWxKa3VZS0lYa2RwbXVhWllYQ0dZY1NXWjYzT2JNWGJFeXlfSmh1dVFiR21ZYlVWQnB4bkJMX3ZCbG5yWGllZTZuRk5TM2x1bU1EVzdELTE0aEJyV2RyempMV3NVb2J5Q21ja3p3dzZXd1NsM3F0UU1ua2Y0VlZrZmJleHFYSzVqalNTT0N0RGloZWpsc2ZNUzZqaW1CVmlGeUN3UGM4THF2TXVoZlFydU1oSkJK?oc=5",
+        "categoria": "Imunização"
+      },
+      {
         "id": "alert-rj-2026-11-18-minist-rio-envia-vacina-contra-mpox-ao-r",
         "dataPublicacao": "2026-11-18",
         "orgaoEmissor": "SES-RJ",
@@ -260,17 +271,6 @@
         "tipo": "disponibilidade_vacina",
         "resumo": "PBH inicia vacinação contra mpox para grupos prioritários e imunização será ampliada nesta quinta-feira (19)  Prefeitura de Belo Horizonte",
         "linkOficial": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxObGVKcUNXWjZlUTNZalFHaWNMbjJYdTR5aHZFeHd6WmNVSWt3ZTZOYVdSU3pEWGpkNGg1MzlCdFlVdjBnQWhRd0JIZWh4WF9NTjY1TkdUYjU2ZWY3M0dGZ0wyYTZJUld1TmQ2U1VPZWo4QlNQOTBGRE1JdnRWYnZ3aHlyallBRDNuYXA0NnFHRlpYbDVQc2c5T2NrS1lIWXBvZlpWcEJ6bVlvSld4ZWNJYWhDT0dDREFYSVo2dTZlUXhSb1pWVVN6ZQ?oc=5",
-        "categoria": "Imunização"
-      },
-      {
-        "id": "alert-sp-2026-11-18-s-o-paulo-recebe-mil-novas-doses-da-vaci",
-        "dataPublicacao": "2026-11-18",
-        "orgaoEmissor": "SES-SP",
-        "ufRelacionada": "SP",
-        "titulo": "São Paulo recebe mil novas doses da vacina contra a Mpox - agenciasp.sp.gov.br",
-        "tipo": "disponibilidade_vacina",
-        "resumo": "São Paulo recebe mil novas doses da vacina contra a Mpox  agenciasp.sp.gov.br",
-        "linkOficial": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNSkYzc1Jsbm1KZFk2TXJxYVhJVGd6YmpGZEktc05fWU9weXYtcDFzTGJScFI1SGh6bC1OSWt6VFhqNlJsWlZ0SzhTZFJDVzZTMWJyV0NNcDFJcmpYblpBZVJKV0NJcnJrX3lybjVsVERZdDllWl9sNHFlanpwSXhySFo0MVo5bXhRMGt6OHJzVGFBaEp0T29sS2lsRQ?oc=5",
         "categoria": "Imunização"
       }
     ]
