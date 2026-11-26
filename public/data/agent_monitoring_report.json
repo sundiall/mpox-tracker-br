@@ -1,10 +1,67 @@
 {
-  "timestamp": "2026-11-26T13:52:08.727831",
-  "totalItensVarredura": 27,
+  "timestamp": "2026-11-26T15:29:45.293850",
+  "totalItensVarredura": 23,
   "analiseAgente": {
-    "alteracoesEstoque": [],
+    "alteracoesEstoque": [
+      {
+        "siteId": "rj-1",
+        "unidade": "Instituto Nacional de Infectologia Evandro Chagas (CRIE / INI / Fiocruz)",
+        "uf": "RJ",
+        "statusEstoque": "esgotado",
+        "motivo": "Esgotamento ou suspensão explícita de doses noticiada em comunicado oficial.",
+        "previsaoFutura": "Aguardando envio e redistribuição de novos lotes pelo Ministério da Saúde.",
+        "fonte": "https://news.google.com/rss/articles/CBMif0FVX3lxTE92ODNoYXJXWTlxbHYyQTZ1Z0JBSzVZTFBPV2RmVE50NTZhajVOODNndG42Ul9wRXNxSGsyTTFVQk1WeVRlc19FSnB5eXU1OW1yeHgyczlWQlJTdkVNUU1nc1Z4R2pCMEtwSWtUY0VDTlJuaU5aZ3lMeExkNl9rSnM?oc=5"
+      },
+      {
+        "siteId": "rj-2",
+        "unidade": "Super Centro Carioca de Vacinação — Botafogo",
+        "uf": "RJ",
+        "statusEstoque": "esgotado",
+        "motivo": "Esgotamento ou suspensão explícita de doses noticiada em comunicado oficial.",
+        "previsaoFutura": "Aguardando envio e redistribuição de novos lotes pelo Ministério da Saúde.",
+        "fonte": "https://news.google.com/rss/articles/CBMif0FVX3lxTE92ODNoYXJXWTlxbHYyQTZ1Z0JBSzVZTFBPV2RmVE50NTZhajVOODNndG42Ul9wRXNxSGsyTTFVQk1WeVRlc19FSnB5eXU1OW1yeHgyczlWQlJTdkVNUU1nc1Z4R2pCMEtwSWtUY0VDTlJuaU5aZ3lMeExkNl9rSnM?oc=5"
+      },
+      {
+        "siteId": "rj-3",
+        "unidade": "Super Centro Carioca de Vacinação — Zona Norte (Shopping Nova América)",
+        "uf": "RJ",
+        "statusEstoque": "esgotado",
+        "motivo": "Esgotamento ou suspensão explícita de doses noticiada em comunicado oficial.",
+        "previsaoFutura": "Aguardando envio e redistribuição de novos lotes pelo Ministério da Saúde.",
+        "fonte": "https://news.google.com/rss/articles/CBMif0FVX3lxTE92ODNoYXJXWTlxbHYyQTZ1Z0JBSzVZTFBPV2RmVE50NTZhajVOODNndG42Ul9wRXNxSGsyTTFVQk1WeVRlc19FSnB5eXU1OW1yeHgyczlWQlJTdkVNUU1nc1Z4R2pCMEtwSWtUY0VDTlJuaU5aZ3lMeExkNl9rSnM?oc=5"
+      },
+      {
+        "siteId": "rj-4",
+        "unidade": "Super Centro Carioca de Vacinação — Zona Oeste (ParkShopping Campo Grande)",
+        "uf": "RJ",
+        "statusEstoque": "esgotado",
+        "motivo": "Esgotamento ou suspensão explícita de doses noticiada em comunicado oficial.",
+        "previsaoFutura": "Aguardando envio e redistribuição de novos lotes pelo Ministério da Saúde.",
+        "fonte": "https://news.google.com/rss/articles/CBMif0FVX3lxTE92ODNoYXJXWTlxbHYyQTZ1Z0JBSzVZTFBPV2RmVE50NTZhajVOODNndG42Ul9wRXNxSGsyTTFVQk1WeVRlc19FSnB5eXU1OW1yeHgyczlWQlJTdkVNUU1nc1Z4R2pCMEtwSWtUY0VDTlJuaU5aZ3lMeExkNl9rSnM?oc=5"
+      },
+      {
+        "siteId": "rj-5",
+        "unidade": "Centro Especial de Vacinação Dr. Álvaro Aguiar (CEVAA)",
+        "uf": "RJ",
+        "statusEstoque": "esgotado",
+        "motivo": "Esgotamento ou suspensão explícita de doses noticiada em comunicado oficial.",
+        "previsaoFutura": "Aguardando envio e redistribuição de novos lotes pelo Ministério da Saúde.",
+        "fonte": "https://news.google.com/rss/articles/CBMif0FVX3lxTE92ODNoYXJXWTlxbHYyQTZ1Z0JBSzVZTFBPV2RmVE50NTZhajVOODNndG42Ul9wRXNxSGsyTTFVQk1WeVRlc19FSnB5eXU1OW1yeHgyczlWQlJTdkVNUU1nc1Z4R2pCMEtwSWtUY0VDTlJuaU5aZ3lMeExkNl9rSnM?oc=5"
+      }
+    ],
     "novosMarcos": [],
     "alertasNoticias": [
+      {
+        "id": "alert-rj-2026-11-26-rn-inicia-vacina-o-contra-mpox-com-doses",
+        "dataPublicacao": "2026-11-26",
+        "orgaoEmissor": "SES-RJ",
+        "ufRelacionada": "RJ",
+        "titulo": "RN inicia vacinação contra mpox com doses destinadas a grupos específicos - Portal Diário do RN",
+        "tipo": "disponibilidade_vacina",
+        "resumo": "RN inicia vacinação contra mpox com doses destinadas a grupos específicos  Portal Diário do RN",
+        "linkOficial": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOZ3Z6elpjdXBvX1R0eWxNbmZEbDYxMnpNeTlXaUExUmVXbDZxX2hzLXZhY2k2N05QVVZ4T0o1U21WWmswRXFULVM5QmVONUxrUTRZWHF0RUJWZWJROUJVZDNTeE9tV1JRV0JSQUc2V1lNZzJIUkxMdGNjemNrdnpQVXJkaHRTRnZIU1dOSGh1SFNRZE0taHJhelltci0yRl9nVVE?oc=5",
+        "categoria": "Imunização"
+      },
       {
         "id": "alert-rj-2026-11-25-rio-recebe-nesta-semana-novas-doses-de-v",
         "dataPublicacao": "2026-11-25",
@@ -72,6 +129,17 @@
         "categoria": "Imunização"
       },
       {
+        "id": "alert-rj-2026-11-23-vacina-contra-mpox-acaba-no-rio-ap-s-8-m",
+        "dataPublicacao": "2026-11-23",
+        "orgaoEmissor": "SMS-Rio",
+        "ufRelacionada": "RJ",
+        "titulo": "Vacina contra mpox acaba no Rio após 8 mil doses e postos param - Povo na Rua",
+        "tipo": "alerta_urgente",
+        "resumo": "Vacina contra mpox acaba no Rio após 8 mil doses e postos param  Povo na Rua",
+        "linkOficial": "https://news.google.com/rss/articles/CBMif0FVX3lxTE92ODNoYXJXWTlxbHYyQTZ1Z0JBSzVZTFBPV2RmVE50NTZhajVOODNndG42Ul9wRXNxSGsyTTFVQk1WeVRlc19FSnB5eXU1OW1yeHgyczlWQlJTdkVNUU1nc1Z4R2pCMEtwSWtUY0VDTlJuaU5aZ3lMeExkNl9rSnM?oc=5",
+        "categoria": "Imunização"
+      },
+      {
         "id": "alert-rj-2026-11-23-mpox-prefeitura-do-rio-suspende-vacina-o",
         "dataPublicacao": "2026-11-23",
         "orgaoEmissor": "SES-RJ",
@@ -83,17 +151,6 @@
         "categoria": "Imunização"
       },
       {
-        "id": "alert-rj-2026-11-19-rio-de-janeiro-recebe-mais-mil-frascos-d",
-        "dataPublicacao": "2026-11-19",
-        "orgaoEmissor": "SES-RJ",
-        "ufRelacionada": "RJ",
-        "titulo": "Rio de Janeiro recebe mais mil frascos de vacina contra Mpox - CNN Brasil",
-        "tipo": "disponibilidade_vacina",
-        "resumo": "Rio de Janeiro recebe mais mil frascos de vacina contra Mpox  CNN Brasil",
-        "linkOficial": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPa2U2T3V4YkdIRFpsSi1RMmRlX1M4NnpUOVNuVUo3Y1lybGlhWHRBVkdvcjFnVVhsdW9OV2pHMWxrQUZUN2xodUtUMGFOcWIzYnRXSjJtMVViT3FNQmlWZEY2T09nQ3lVUmVMN05qVEpCWUVDNFpWdDF2bUotd1dDRGlTemxoRk85SkFaeTk4ZEJGaTFpSW82cXhVamNXandBQkd4Ry1NMjhLb0lFVnNJ?oc=5",
-        "categoria": "Imunização"
-      },
-      {
         "id": "alert-sp-2026-11-18-sp-ganha-novas-doses-da-vacina-contra-a",
         "dataPublicacao": "2026-11-18",
         "orgaoEmissor": "SES-SP",
@@ -102,22 +159,22 @@
         "tipo": "disponibilidade_vacina",
         "resumo": "SP ganha novas doses da vacina contra a mpox; saiba quem pode receber  Agência Brasil",
         "linkOficial": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQcmM2MDJIeG5QQ2ttVXJYTXlTUWZXeWFKWWJaMjREWTZQNGRELXBGZ201OEFULUVzQWJ6V0V3Ynhad2RJWjBiNDRrMnNDVjZ0SjI2eXdrVFRqaEQtVHJYZERDd1pkakJlcmRpWHFRaXZIUndVal9UVmtrN2xxTlVJcy10S2toQloxU0p5Rzg2eUZHaTVMMDNXYk1ORlZBMTBDRl9JSjIxbW1ObTJGYXRUMDdWNjlOTTFCaW9Jc19uaw?oc=5",
-        "categoria": "Imunização"
-      },
-      {
-        "id": "alert-rj-2026-11-18-minist-rio-envia-vacina-contra-mpox-ao-r",
-        "dataPublicacao": "2026-11-18",
-        "orgaoEmissor": "SES-RJ",
-        "ufRelacionada": "RJ",
-        "titulo": "Ministério envia vacina contra mpox ao Rio, que está com aplicação suspensa por falta de doses - G1",
-        "tipo": "alerta_urgente",
-        "resumo": "Ministério envia vacina contra mpox ao Rio, que está com aplicação suspensa por falta de doses  G1",
-        "linkOficial": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxOamNLUm5QcFFwb2dSdnlwUXQxWlhTdVNESlRqbGZQeDllMzNxM2k5alA2dWZodFlHTlEtbXJ1X1VIU29iNUdzZGtTazFVRjlueUJaX3ZZVmQxSHgxZjJuUDV3aFJOX3JVcF9kQmJwNWlIWjR0azY0R2NpWk11cGFtR2FSRTdtWXM5eDBlQU1DSXpYMnRYai03WmdESGdyQ3U3eU96ZS04V2dYTi14OWhpZm1hMmFkRWxpTmVBOVZyM0xsT2V2XzBqaHNVMlY2V2Vsc1NvWldqWUlKTW43SWgtclBfcGN4MlZwUnlhSEZJYkEyZ2ZK0gGDAkFVX3lxTE9fWDhKRi1lU3pZWVdhWkV5Y0hGeEdlUVd0b2hnWkg2NVdZTzJ3Tk9VNEM0R0swS050TlpxNVdlTVdPZ3lPb2lfUGVpWW9JX1NhU3hkc2J2aWlBUUpfR3ljaDhIUjFNSUpNZnAtVGpzd0k4M1M5Y0g1MnNqejNISTk5cE9nOWVzRDVTOWNnWUxERUt1SGJJTlZSZWNobnB1bkVqQ0FnbW02c3FRUl8wbXhnZUpkTTBQYjhVTXAtS2lEQllkUmtTSmNWVDFVYzN5QTJObnAxNmVHUVJrWEhOUlpxeW1scEJKVEVScUlIWHNjeDhrSGMtblhOcEtCV3FEUlIwb1E?oc=5",
         "categoria": "Imunização"
       }
     ],
     "alertasUrgentes": [
       {
+        "id": "alert-rj-2026-11-26-rn-inicia-vacina-o-contra-mpox-com-doses",
+        "dataPublicacao": "2026-11-26",
+        "orgaoEmissor": "SES-RJ",
+        "ufRelacionada": "RJ",
+        "titulo": "RN inicia vacinação contra mpox com doses destinadas a grupos específicos - Portal Diário do RN",
+        "tipo": "disponibilidade_vacina",
+        "resumo": "RN inicia vacinação contra mpox com doses destinadas a grupos específicos  Portal Diário do RN",
+        "linkOficial": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOZ3Z6elpjdXBvX1R0eWxNbmZEbDYxMnpNeTlXaUExUmVXbDZxX2hzLXZhY2k2N05QVVZ4T0o1U21WWmswRXFULVM5QmVONUxrUTRZWHF0RUJWZWJROUJVZDNTeE9tV1JRV0JSQUc2V1lNZzJIUkxMdGNjemNrdnpQVXJkaHRTRnZIU1dOSGh1SFNRZE0taHJhelltci0yRl9nVVE?oc=5",
+        "categoria": "Imunização"
+      },
+      {
         "id": "alert-rj-2026-11-25-rio-recebe-nesta-semana-novas-doses-de-v",
         "dataPublicacao": "2026-11-25",
         "orgaoEmissor": "SES-RJ",
@@ -184,6 +241,17 @@
         "categoria": "Imunização"
       },
       {
+        "id": "alert-rj-2026-11-23-vacina-contra-mpox-acaba-no-rio-ap-s-8-m",
+        "dataPublicacao": "2026-11-23",
+        "orgaoEmissor": "SMS-Rio",
+        "ufRelacionada": "RJ",
+        "titulo": "Vacina contra mpox acaba no Rio após 8 mil doses e postos param - Povo na Rua",
+        "tipo": "alerta_urgente",
+        "resumo": "Vacina contra mpox acaba no Rio após 8 mil doses e postos param  Povo na Rua",
+        "linkOficial": "https://news.google.com/rss/articles/CBMif0FVX3lxTE92ODNoYXJXWTlxbHYyQTZ1Z0JBSzVZTFBPV2RmVE50NTZhajVOODNndG42Ul9wRXNxSGsyTTFVQk1WeVRlc19FSnB5eXU1OW1yeHgyczlWQlJTdkVNUU1nc1Z4R2pCMEtwSWtUY0VDTlJuaU5aZ3lMeExkNl9rSnM?oc=5",
+        "categoria": "Imunização"
+      },
+      {
         "id": "alert-rj-2026-11-23-mpox-prefeitura-do-rio-suspende-vacina-o",
         "dataPublicacao": "2026-11-23",
         "orgaoEmissor": "SES-RJ",
@@ -195,17 +263,6 @@
         "categoria": "Imunização"
       },
       {
-        "id": "alert-rj-2026-11-19-rio-de-janeiro-recebe-mais-mil-frascos-d",
-        "dataPublicacao": "2026-11-19",
-        "orgaoEmissor": "SES-RJ",
-        "ufRelacionada": "RJ",
-        "titulo": "Rio de Janeiro recebe mais mil frascos de vacina contra Mpox - CNN Brasil",
-        "tipo": "disponibilidade_vacina",
-        "resumo": "Rio de Janeiro recebe mais mil frascos de vacina contra Mpox  CNN Brasil",
-        "linkOficial": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPa2U2T3V4YkdIRFpsSi1RMmRlX1M4NnpUOVNuVUo3Y1lybGlhWHRBVkdvcjFnVVhsdW9OV2pHMWxrQUZUN2xodUtUMGFOcWIzYnRXSjJtMVViT3FNQmlWZEY2T09nQ3lVUmVMN05qVEpCWUVDNFpWdDF2bUotd1dDRGlTemxoRk85SkFaeTk4ZEJGaTFpSW82cXhVamNXandBQkd4Ry1NMjhLb0lFVnNJ?oc=5",
-        "categoria": "Imunização"
-      },
-      {
         "id": "alert-sp-2026-11-18-sp-ganha-novas-doses-da-vacina-contra-a",
         "dataPublicacao": "2026-11-18",
         "orgaoEmissor": "SES-SP",
@@ -214,17 +271,6 @@
         "tipo": "disponibilidade_vacina",
         "resumo": "SP ganha novas doses da vacina contra a mpox; saiba quem pode receber  Agência Brasil",
         "linkOficial": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQcmM2MDJIeG5QQ2ttVXJYTXlTUWZXeWFKWWJaMjREWTZQNGRELXBGZ201OEFULUVzQWJ6V0V3Ynhad2RJWjBiNDRrMnNDVjZ0SjI2eXdrVFRqaEQtVHJYZERDd1pkakJlcmRpWHFRaXZIUndVal9UVmtrN2xxTlVJcy10S2toQloxU0p5Rzg2eUZHaTVMMDNXYk1ORlZBMTBDRl9JSjIxbW1ObTJGYXRUMDdWNjlOTTFCaW9Jc19uaw?oc=5",
-        "categoria": "Imunização"
-      },
-      {
-        "id": "alert-rj-2026-11-18-minist-rio-envia-vacina-contra-mpox-ao-r",
-        "dataPublicacao": "2026-11-18",
-        "orgaoEmissor": "SES-RJ",
-        "ufRelacionada": "RJ",
-        "titulo": "Ministério envia vacina contra mpox ao Rio, que está com aplicação suspensa por falta de doses - G1",
-        "tipo": "alerta_urgente",
-        "resumo": "Ministério envia vacina contra mpox ao Rio, que está com aplicação suspensa por falta de doses  G1",
-        "linkOficial": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxOamNLUm5QcFFwb2dSdnlwUXQxWlhTdVNESlRqbGZQeDllMzNxM2k5alA2dWZodFlHTlEtbXJ1X1VIU29iNUdzZGtTazFVRjlueUJaX3ZZVmQxSHgxZjJuUDV3aFJOX3JVcF9kQmJwNWlIWjR0azY0R2NpWk11cGFtR2FSRTdtWXM5eDBlQU1DSXpYMnRYai03WmdESGdyQ3U3eU96ZS04V2dYTi14OWhpZm1hMmFkRWxpTmVBOVZyM0xsT2V2XzBqaHNVMlY2V2Vsc1NvWldqWUlKTW43SWgtclBfcGN4MlZwUnlhSEZJYkEyZ2ZK0gGDAkFVX3lxTE9fWDhKRi1lU3pZWVdhWkV5Y0hGeEdlUVd0b2hnWkg2NVdZTzJ3Tk9VNEM0R0swS050TlpxNVdlTVdPZ3lPb2lfUGVpWW9JX1NhU3hkc2J2aWlBUUpfR3ljaDhIUjFNSUpNZnAtVGpzd0k4M1M5Y0g1MnNqejNISTk5cE9nOWVzRDVTOWNnWUxERUt1SGJJTlZSZWNobnB1bkVqQ0FnbW02c3FRUl8wbXhnZUpkTTBQYjhVTXAtS2lEQllkUmtTSmNWVDFVYzN5QTJObnAxNmVHUVJrWEhOUlpxeW1scEJKVEVScUlIWHNjeDhrSGMtblhOcEtCV3FEUlIwb1E?oc=5",
         "categoria": "Imunização"
       }
     ]
