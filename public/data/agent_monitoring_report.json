@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-11-26T22:26:18.934275",
-  "totalItensVarredura": 27,
+  "timestamp": "2026-11-26T23:26:58.175670",
+  "totalItensVarredura": 13,
   "analiseAgente": {
     "alteracoesEstoque": [
       {
@@ -52,28 +52,6 @@
     "novosMarcos": [],
     "alertasNoticias": [
       {
-        "id": "alert-rj-2026-11-25-rio-recebe-nesta-semana-novas-doses-de-v",
-        "dataPublicacao": "2026-11-25",
-        "orgaoEmissor": "SES-RJ",
-        "ufRelacionada": "RJ",
-        "titulo": "Rio recebe nesta semana novas doses de vacina contra a mpox - Poder360",
-        "tipo": "disponibilidade_vacina",
-        "resumo": "Rio recebe nesta semana novas doses de vacina contra a mpox  Poder360",
-        "linkOficial": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQalBaM1VNVnBEU3hyYTFUV2JfNXhhN05MdDNSNXEySHRWT0ZxQkVUYlp3X2lGRWJDQzFaS1EtMVBnci05NUNPLUdxOEVmX1BSWjBwQlR0OUstcEtMNnlXbDJzMWFxZjNxbUt3ZUg0SG1oWHJQQXM2ZWhXU0VXLUhwam1xdk5LSzB3bnp1aGJxSVFPUHdQVFZUTnNSRjBRTWMtZHc?oc=5",
-        "categoria": "Imunização"
-      },
-      {
-        "id": "alert-sp-2026-11-25-mpox-n-mero-de-casos-passa-de-1-500-no-b",
-        "dataPublicacao": "2026-11-25",
-        "orgaoEmissor": "SES-SP",
-        "ufRelacionada": "SP",
-        "titulo": "Mpox: número de casos passa de 1 500 no Brasil e São Paulo inicia vacinação com novas doses - VEJA",
-        "tipo": "disponibilidade_vacina",
-        "resumo": "Mpox: número de casos passa de 1 500 no Brasil e São Paulo inicia vacinação com novas doses  VEJA",
-        "linkOficial": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPS3RNR2xIakQ1YkFwazNKMXBrbldRN09heVZheTR0NmVXQXJXUzRyMG5qZmMyeWNITG05U2NVNmhia1VJRmQ3WFh3QjJvQWhveWQzbnBBSzkxQlY0Q1NCOFFpc1QzeTdEendDUVhkYS1PNkNOQV93OEFsbkg2OENJODRHNElaZkR0dlJidDR2M1l0NkZYbnI1S2FVZGtlaHVvbDNIcGg3SzdacjBfV3VHZ1VEOS1lRTNEODJSVkdpWGs?oc=5",
-        "categoria": "Imunização"
-      },
-      {
         "id": "alert-rj-2026-11-25-rio-recebe-novo-lote-da-vacina-contra-mp",
         "dataPublicacao": "2026-11-25",
         "orgaoEmissor": "SES-RJ",
@@ -82,17 +60,6 @@
         "tipo": "disponibilidade_vacina",
         "resumo": "Rio recebe novo lote da vacina contra mpox para grupos de risco  Povo na Rua",
         "linkOficial": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNQVEzMHZkUVp1YnJkMDZxSjNib3hqTVRXbzlBRnFrZ1NESGQ0NEpnNnhFd3IzYnVwY0xJZ0ttcXNjWmppTU83NXN1VGQxTUlkRGprVnNrVC1QXzZncXhqaGY2c003NTd1bzQzMlJmT3Z2VFY1MHpQYUtCdHVUako4eWdfZw?oc=5",
-        "categoria": "Imunização"
-      },
-      {
-        "id": "alert-rj-2026-11-25-rio-recebe-nesta-semana-novas-doses-de-v",
-        "dataPublicacao": "2026-11-25",
-        "orgaoEmissor": "SES-RJ",
-        "ufRelacionada": "RJ",
-        "titulo": "Rio recebe nesta semana novas doses de vacina contra a mpox - Agência Brasil",
-        "tipo": "disponibilidade_vacina",
-        "resumo": "Rio recebe nesta semana novas doses de vacina contra a mpox  Agência Brasil",
-        "linkOficial": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOWDJWaHFiVFV1QTc2b0xaUHFhNnBhUVZxZmpVa1lrcU05UTNxdDF5bkl2V1RGX1E3cTBGQkY2NnlGaGhrb0ZndUpSSVZQTW1Td0RJQ0k3SE5BZjBjbmloR09XeEtWTFgzWERGT2VTcFpEbkhSWXlnZy0yZTA2ZVE3N3RCTnlTRktyYlNwZFVKdjV3Rk1WVkZoRmNORUxrb1FpVVJXSDA3em0xTGpieWdYWlln?oc=5",
         "categoria": "Imunização"
       },
       {
@@ -107,17 +74,6 @@
         "categoria": "Imunização"
       },
       {
-        "id": "alert-rj-2026-11-24-rio-de-janeiro-suspende-vacina-o-contra",
-        "dataPublicacao": "2026-11-24",
-        "orgaoEmissor": "SES-RJ",
-        "ufRelacionada": "RJ",
-        "titulo": "Rio de Janeiro suspende vacinação contra Mpox por falta de doses - Agência Brasil",
-        "tipo": "alerta_urgente",
-        "resumo": "Rio de Janeiro suspende vacinação contra Mpox por falta de doses  Agência Brasil",
-        "linkOficial": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPTmg3d3B6YWVOb0NiWGNoZTI0YnRhOE1FWDFoMHppWWgyLXpfTjF1T2RqSlVtWG45bjYxTDVpeTlZakdldHhfX1FlWWZURXdDdER4TjBQZFlNajBkZ1U0UFZTdC1LOEZxdWxDWEpyNFZYNDVGbS0welJST1NIQjF6dGthd2tQQmRFU2JHRGVfbllzcW1kazNGM25nZVVFTC1rak5KTXQwMkVmelV2a0RSOEVIUExvTUNwZVNweFBpQWl4U05WelhJRE1udGZVYTkwRUtvRmd3?oc=5",
-        "categoria": "Imunização"
-      },
-      {
         "id": "alert-rj-2026-11-23-vacina-contra-mpox-acaba-no-rio-ap-s-8-m",
         "dataPublicacao": "2026-11-23",
         "orgaoEmissor": "SMS-Rio",
@@ -126,17 +82,6 @@
         "tipo": "alerta_urgente",
         "resumo": "Vacina contra mpox acaba no Rio após 8 mil doses e postos param  Povo na Rua",
         "linkOficial": "https://news.google.com/rss/articles/CBMif0FVX3lxTE92ODNoYXJXWTlxbHYyQTZ1Z0JBSzVZTFBPV2RmVE50NTZhajVOODNndG42Ul9wRXNxSGsyTTFVQk1WeVRlc19FSnB5eXU1OW1yeHgyczlWQlJTdkVNUU1nc1Z4R2pCMEtwSWtUY0VDTlJuaU5aZ3lMeExkNl9rSnM?oc=5",
-        "categoria": "Imunização"
-      },
-      {
-        "id": "alert-rj-2026-11-23-mpox-prefeitura-do-rio-suspende-vacina-o",
-        "dataPublicacao": "2026-11-23",
-        "orgaoEmissor": "SES-RJ",
-        "ufRelacionada": "RJ",
-        "titulo": "Mpox: Prefeitura do Rio suspende vacinação - O GLOBO",
-        "tipo": "alerta_urgente",
-        "resumo": "Mpox: Prefeitura do Rio suspende vacinação  O GLOBO",
-        "linkOficial": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOdDZ2LU56ZDQ4d2o3eWpSUVZlaUJ4M0ttX1dQcVJvN004aFdxR2dmRkM5Z0cyZHJyOUN1bnltd01lRGRIb2ZfeEVTTjBaOUUtMFVDdG41MVdZdks2OHJRLWJ6ZGdqV1FyT2VwUHgzN2JoU2xpdmpWZkE2VXVjcE5xU0hGbzVRVzcxbEtzMi13Q0l1WHVTSlU0bUNadkJSaE1ReG1oaU9XTmVqOWFrWF9HbjU5Qk8yRnZuTHhnejQ2Y0VQRW9ORllkZFF2dWNhZUZsMWt1Qk5DQll6ZXNhX0HSAewBQVVfeXFMUDhlNko0bjVDd2ZrN3YzV0ZPS0NPZGdEcFBjUHhsa0RKX04zWVFKbllvWGpBUmxkYUp4aUtqY3JlUDAzTHdRN0hxUnB5eFFiLXU5VnRHa0hhekNVM1FuRVR2aUZpeFowMF9FNE9jaTZxRG9rVzRuNkR6WEFVT1JwaE9KakZYWEZGYWxDeGp3b1hyYTVWTW5KMEgtTkZSQzNXS3BPY1RnYTl2Z3pOSzhCSUtyUVh5YnBpWmMxOUxmVTNrekF3RVJYZ0RSek10VFlUSlVCYTNuUkdzckNwWEhyVTh4elhNeFlLc0x6eEw?oc=5",
         "categoria": "Imunização"
       },
       {
@@ -151,41 +96,19 @@
         "categoria": "Imunização"
       },
       {
-        "id": "alert-sp-2026-11-18-s-o-paulo-recebe-mil-novas-doses-da-vaci",
+        "id": "alert-rj-2026-11-18-minist-rio-envia-vacina-contra-mpox-ao-r",
         "dataPublicacao": "2026-11-18",
-        "orgaoEmissor": "SES-SP",
-        "ufRelacionada": "SP",
-        "titulo": "São Paulo recebe mil novas doses da vacina contra a Mpox - agenciasp.sp.gov.br",
-        "tipo": "disponibilidade_vacina",
-        "resumo": "São Paulo recebe mil novas doses da vacina contra a Mpox  agenciasp.sp.gov.br",
-        "linkOficial": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNSkYzc1Jsbm1KZFk2TXJxYVhJVGd6YmpGZEktc05fWU9weXYtcDFzTGJScFI1SGh6bC1OSWt6VFhqNlJsWlZ0SzhTZFJDVzZTMWJyV0NNcDFJcmpYblpBZVJKV0NJcnJrX3lybjVsVERZdDllWl9sNHFlanpwSXhySFo0MVo5bXhRMGt6OHJzVGFBaEp0T29sS2lsRQ?oc=5",
+        "orgaoEmissor": "SES-RJ",
+        "ufRelacionada": "RJ",
+        "titulo": "Ministério envia vacina contra mpox ao Rio, que está com aplicação suspensa por falta de doses - G1",
+        "tipo": "alerta_urgente",
+        "resumo": "Ministério envia vacina contra mpox ao Rio, que está com aplicação suspensa por falta de doses  G1",
+        "linkOficial": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxOamNLUm5QcFFwb2dSdnlwUXQxWlhTdVNESlRqbGZQeDllMzNxM2k5alA2dWZodFlHTlEtbXJ1X1VIU29iNUdzZGtTazFVRjlueUJaX3ZZVmQxSHgxZjJuUDV3aFJOX3JVcF9kQmJwNWlIWjR0azY0R2NpWk11cGFtR2FSRTdtWXM5eDBlQU1DSXpYMnRYai03WmdESGdyQ3U3eU96ZS04V2dYTi14OWhpZm1hMmFkRWxpTmVBOVZyM0xsT2V2XzBqaHNVMlY2V2Vsc1NvWldqWUlKTW43SWgtclBfcGN4MlZwUnlhSEZJYkEyZ2ZK0gGDAkFVX3lxTE9fWDhKRi1lU3pZWVdhWkV5Y0hGeEdlUVd0b2hnWkg2NVdZTzJ3Tk9VNEM0R0swS050TlpxNVdlTVdPZ3lPb2lfUGVpWW9JX1NhU3hkc2J2aWlBUUpfR3ljaDhIUjFNSUpNZnAtVGpzd0k4M1M5Y0g1MnNqejNISTk5cE9nOWVzRDVTOWNnWUxERUt1SGJJTlZSZWNobnB1bkVqQ0FnbW02c3FRUl8wbXhnZUpkTTBQYjhVTXAtS2lEQllkUmtTSmNWVDFVYzN5QTJObnAxNmVHUVJrWEhOUlpxeW1scEJKVEVScUlIWHNjeDhrSGMtblhOcEtCV3FEUlIwb1E?oc=5",
         "categoria": "Imunização"
       }
     ],
     "alertasUrgentes": [
       {
-        "id": "alert-rj-2026-11-25-rio-recebe-nesta-semana-novas-doses-de-v",
-        "dataPublicacao": "2026-11-25",
-        "orgaoEmissor": "SES-RJ",
-        "ufRelacionada": "RJ",
-        "titulo": "Rio recebe nesta semana novas doses de vacina contra a mpox - Poder360",
-        "tipo": "disponibilidade_vacina",
-        "resumo": "Rio recebe nesta semana novas doses de vacina contra a mpox  Poder360",
-        "linkOficial": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQalBaM1VNVnBEU3hyYTFUV2JfNXhhN05MdDNSNXEySHRWT0ZxQkVUYlp3X2lGRWJDQzFaS1EtMVBnci05NUNPLUdxOEVmX1BSWjBwQlR0OUstcEtMNnlXbDJzMWFxZjNxbUt3ZUg0SG1oWHJQQXM2ZWhXU0VXLUhwam1xdk5LSzB3bnp1aGJxSVFPUHdQVFZUTnNSRjBRTWMtZHc?oc=5",
-        "categoria": "Imunização"
-      },
-      {
-        "id": "alert-sp-2026-11-25-mpox-n-mero-de-casos-passa-de-1-500-no-b",
-        "dataPublicacao": "2026-11-25",
-        "orgaoEmissor": "SES-SP",
-        "ufRelacionada": "SP",
-        "titulo": "Mpox: número de casos passa de 1 500 no Brasil e São Paulo inicia vacinação com novas doses - VEJA",
-        "tipo": "disponibilidade_vacina",
-        "resumo": "Mpox: número de casos passa de 1 500 no Brasil e São Paulo inicia vacinação com novas doses  VEJA",
-        "linkOficial": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPS3RNR2xIakQ1YkFwazNKMXBrbldRN09heVZheTR0NmVXQXJXUzRyMG5qZmMyeWNITG05U2NVNmhia1VJRmQ3WFh3QjJvQWhveWQzbnBBSzkxQlY0Q1NCOFFpc1QzeTdEendDUVhkYS1PNkNOQV93OEFsbkg2OENJODRHNElaZkR0dlJidDR2M1l0NkZYbnI1S2FVZGtlaHVvbDNIcGg3SzdacjBfV3VHZ1VEOS1lRTNEODJSVkdpWGs?oc=5",
-        "categoria": "Imunização"
-      },
-      {
         "id": "alert-rj-2026-11-25-rio-recebe-novo-lote-da-vacina-contra-mp",
         "dataPublicacao": "2026-11-25",
         "orgaoEmissor": "SES-RJ",
@@ -194,17 +117,6 @@
         "tipo": "disponibilidade_vacina",
         "resumo": "Rio recebe novo lote da vacina contra mpox para grupos de risco  Povo na Rua",
         "linkOficial": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNQVEzMHZkUVp1YnJkMDZxSjNib3hqTVRXbzlBRnFrZ1NESGQ0NEpnNnhFd3IzYnVwY0xJZ0ttcXNjWmppTU83NXN1VGQxTUlkRGprVnNrVC1QXzZncXhqaGY2c003NTd1bzQzMlJmT3Z2VFY1MHpQYUtCdHVUako4eWdfZw?oc=5",
-        "categoria": "Imunização"
-      },
-      {
-        "id": "alert-rj-2026-11-25-rio-recebe-nesta-semana-novas-doses-de-v",
-        "dataPublicacao": "2026-11-25",
-        "orgaoEmissor": "SES-RJ",
-        "ufRelacionada": "RJ",
-        "titulo": "Rio recebe nesta semana novas doses de vacina contra a mpox - Agência Brasil",
-        "tipo": "disponibilidade_vacina",
-        "resumo": "Rio recebe nesta semana novas doses de vacina contra a mpox  Agência Brasil",
-        "linkOficial": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOWDJWaHFiVFV1QTc2b0xaUHFhNnBhUVZxZmpVa1lrcU05UTNxdDF5bkl2V1RGX1E3cTBGQkY2NnlGaGhrb0ZndUpSSVZQTW1Td0RJQ0k3SE5BZjBjbmloR09XeEtWTFgzWERGT2VTcFpEbkhSWXlnZy0yZTA2ZVE3N3RCTnlTRktyYlNwZFVKdjV3Rk1WVkZoRmNORUxrb1FpVVJXSDA3em0xTGpieWdYWlln?oc=5",
         "categoria": "Imunização"
       },
       {
@@ -219,17 +131,6 @@
         "categoria": "Imunização"
       },
       {
-        "id": "alert-rj-2026-11-24-rio-de-janeiro-suspende-vacina-o-contra",
-        "dataPublicacao": "2026-11-24",
-        "orgaoEmissor": "SES-RJ",
-        "ufRelacionada": "RJ",
-        "titulo": "Rio de Janeiro suspende vacinação contra Mpox por falta de doses - Agência Brasil",
-        "tipo": "alerta_urgente",
-        "resumo": "Rio de Janeiro suspende vacinação contra Mpox por falta de doses  Agência Brasil",
-        "linkOficial": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPTmg3d3B6YWVOb0NiWGNoZTI0YnRhOE1FWDFoMHppWWgyLXpfTjF1T2RqSlVtWG45bjYxTDVpeTlZakdldHhfX1FlWWZURXdDdER4TjBQZFlNajBkZ1U0UFZTdC1LOEZxdWxDWEpyNFZYNDVGbS0welJST1NIQjF6dGthd2tQQmRFU2JHRGVfbllzcW1kazNGM25nZVVFTC1rak5KTXQwMkVmelV2a0RSOEVIUExvTUNwZVNweFBpQWl4U05WelhJRE1udGZVYTkwRUtvRmd3?oc=5",
-        "categoria": "Imunização"
-      },
-      {
         "id": "alert-rj-2026-11-23-vacina-contra-mpox-acaba-no-rio-ap-s-8-m",
         "dataPublicacao": "2026-11-23",
         "orgaoEmissor": "SMS-Rio",
@@ -238,17 +139,6 @@
         "tipo": "alerta_urgente",
         "resumo": "Vacina contra mpox acaba no Rio após 8 mil doses e postos param  Povo na Rua",
         "linkOficial": "https://news.google.com/rss/articles/CBMif0FVX3lxTE92ODNoYXJXWTlxbHYyQTZ1Z0JBSzVZTFBPV2RmVE50NTZhajVOODNndG42Ul9wRXNxSGsyTTFVQk1WeVRlc19FSnB5eXU1OW1yeHgyczlWQlJTdkVNUU1nc1Z4R2pCMEtwSWtUY0VDTlJuaU5aZ3lMeExkNl9rSnM?oc=5",
-        "categoria": "Imunização"
-      },
-      {
-        "id": "alert-rj-2026-11-23-mpox-prefeitura-do-rio-suspende-vacina-o",
-        "dataPublicacao": "2026-11-23",
-        "orgaoEmissor": "SES-RJ",
-        "ufRelacionada": "RJ",
-        "titulo": "Mpox: Prefeitura do Rio suspende vacinação - O GLOBO",
-        "tipo": "alerta_urgente",
-        "resumo": "Mpox: Prefeitura do Rio suspende vacinação  O GLOBO",
-        "linkOficial": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOdDZ2LU56ZDQ4d2o3eWpSUVZlaUJ4M0ttX1dQcVJvN004aFdxR2dmRkM5Z0cyZHJyOUN1bnltd01lRGRIb2ZfeEVTTjBaOUUtMFVDdG41MVdZdks2OHJRLWJ6ZGdqV1FyT2VwUHgzN2JoU2xpdmpWZkE2VXVjcE5xU0hGbzVRVzcxbEtzMi13Q0l1WHVTSlU0bUNadkJSaE1ReG1oaU9XTmVqOWFrWF9HbjU5Qk8yRnZuTHhnejQ2Y0VQRW9ORllkZFF2dWNhZUZsMWt1Qk5DQll6ZXNhX0HSAewBQVVfeXFMUDhlNko0bjVDd2ZrN3YzV0ZPS0NPZGdEcFBjUHhsa0RKX04zWVFKbllvWGpBUmxkYUp4aUtqY3JlUDAzTHdRN0hxUnB5eFFiLXU5VnRHa0hhekNVM1FuRVR2aUZpeFowMF9FNE9jaTZxRG9rVzRuNkR6WEFVT1JwaE9KakZYWEZGYWxDeGp3b1hyYTVWTW5KMEgtTkZSQzNXS3BPY1RnYTl2Z3pOSzhCSUtyUVh5YnBpWmMxOUxmVTNrekF3RVJYZ0RSek10VFlUSlVCYTNuUkdzckNwWEhyVTh4elhNeFlLc0x6eEw?oc=5",
         "categoria": "Imunização"
       },
       {
@@ -263,14 +153,14 @@
         "categoria": "Imunização"
       },
       {
-        "id": "alert-sp-2026-11-18-s-o-paulo-recebe-mil-novas-doses-da-vaci",
+        "id": "alert-rj-2026-11-18-minist-rio-envia-vacina-contra-mpox-ao-r",
         "dataPublicacao": "2026-11-18",
-        "orgaoEmissor": "SES-SP",
-        "ufRelacionada": "SP",
-        "titulo": "São Paulo recebe mil novas doses da vacina contra a Mpox - agenciasp.sp.gov.br",
-        "tipo": "disponibilidade_vacina",
-        "resumo": "São Paulo recebe mil novas doses da vacina contra a Mpox  agenciasp.sp.gov.br",
-        "linkOficial": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNSkYzc1Jsbm1KZFk2TXJxYVhJVGd6YmpGZEktc05fWU9weXYtcDFzTGJScFI1SGh6bC1OSWt6VFhqNlJsWlZ0SzhTZFJDVzZTMWJyV0NNcDFJcmpYblpBZVJKV0NJcnJrX3lybjVsVERZdDllWl9sNHFlanpwSXhySFo0MVo5bXhRMGt6OHJzVGFBaEp0T29sS2lsRQ?oc=5",
+        "orgaoEmissor": "SES-RJ",
+        "ufRelacionada": "RJ",
+        "titulo": "Ministério envia vacina contra mpox ao Rio, que está com aplicação suspensa por falta de doses - G1",
+        "tipo": "alerta_urgente",
+        "resumo": "Ministério envia vacina contra mpox ao Rio, que está com aplicação suspensa por falta de doses  G1",
+        "linkOficial": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxOamNLUm5QcFFwb2dSdnlwUXQxWlhTdVNESlRqbGZQeDllMzNxM2k5alA2dWZodFlHTlEtbXJ1X1VIU29iNUdzZGtTazFVRjlueUJaX3ZZVmQxSHgxZjJuUDV3aFJOX3JVcF9kQmJwNWlIWjR0azY0R2NpWk11cGFtR2FSRTdtWXM5eDBlQU1DSXpYMnRYai03WmdESGdyQ3U3eU96ZS04V2dYTi14OWhpZm1hMmFkRWxpTmVBOVZyM0xsT2V2XzBqaHNVMlY2V2Vsc1NvWldqWUlKTW43SWgtclBfcGN4MlZwUnlhSEZJYkEyZ2ZK0gGDAkFVX3lxTE9fWDhKRi1lU3pZWVdhWkV5Y0hGeEdlUVd0b2hnWkg2NVdZTzJ3Tk9VNEM0R0swS050TlpxNVdlTVdPZ3lPb2lfUGVpWW9JX1NhU3hkc2J2aWlBUUpfR3ljaDhIUjFNSUpNZnAtVGpzd0k4M1M5Y0g1MnNqejNISTk5cE9nOWVzRDVTOWNnWUxERUt1SGJJTlZSZWNobnB1bkVqQ0FnbW02c3FRUl8wbXhnZUpkTTBQYjhVTXAtS2lEQllkUmtTSmNWVDFVYzN5QTJObnAxNmVHUVJrWEhOUlpxeW1scEJKVEVScUlIWHNjeDhrSGMtblhOcEtCV3FEUlIwb1E?oc=5",
         "categoria": "Imunização"
       }
     ]
