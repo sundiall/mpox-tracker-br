@@ -1,21 +1,10 @@
 {
-  "timestamp": "2026-11-26T01:52:58.040331",
-  "totalItensVarredura": 27,
+  "timestamp": "2026-11-26T06:23:59.764414",
+  "totalItensVarredura": 28,
   "analiseAgente": {
     "alteracoesEstoque": [],
     "novosMarcos": [],
     "alertasNoticias": [
-      {
-        "id": "alert-rj-2026-11-25-mpox-minist-rio-da-sa-de-anuncia-novas-d",
-        "dataPublicacao": "2026-11-25",
-        "orgaoEmissor": "SES-RJ",
-        "ufRelacionada": "RJ",
-        "titulo": "Mpox: Ministério da Saúde anuncia novas doses da vacina para o Rio - O Dia",
-        "tipo": "disponibilidade_vacina",
-        "resumo": "Mpox: Ministério da Saúde anuncia novas doses da vacina para o Rio  O Dia",
-        "linkOficial": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOcW92RkFSOXVuS19YSkZGWXF0cXR1cFRNMlo5MmRJSDRiSmkwa1BHMUQ0a1JGUTlTWlgwbVlIekxkb0pMSkI5T09aMkxVU1Vpb3N0dlBsd3lwcTRZazg0QnlTODZ4VFhMX19VVGIteG9tUXpvQS1naW52SXVuY1NERks4UTF1MWZxcy1RMFNQVXNtWXZna1lPSkdyM2VpYkhITERXUHB5YXpkVWs5Q0JWU21jY3RRaGRUOG1HeDFxdmlJbkl1TmhZUERCZ9IB0AFBVV95cUxNQnZFNkFvbFI5alJNZkN0a18zUEJkR1Jadnh5b1ZISE5ocklLTHMwbzJmNHBaemJsVDFnenNsSDJ1dUM1eEZxX2dHZXRGcFowSDBsVDhRODd3VllPOGVEUE9ZVkVpNWNKT3JEU2daZWNZakFnak1JcEVZbnhXYlp0aHVqQnhSR1JnRVM1MjAwQzFvdFlDRk1pa29WVEZ1a3NyZVk3VG1CSXBJcnlUa01UUjRCQjJid1diNGZGYUZuTFdyMjdBNjVFUDJjX0xpR3ha?oc=5",
-        "categoria": "Imunização"
-      },
       {
         "id": "alert-rj-2026-11-25-rio-recebe-nesta-semana-novas-doses-de-v",
         "dataPublicacao": "2026-11-25",
@@ -80,6 +69,17 @@
         "tipo": "alerta_urgente",
         "resumo": "Rio de Janeiro suspende vacinação contra Mpox por falta de doses  Agência Brasil",
         "linkOficial": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPTmg3d3B6YWVOb0NiWGNoZTI0YnRhOE1FWDFoMHppWWgyLXpfTjF1T2RqSlVtWG45bjYxTDVpeTlZakdldHhfX1FlWWZURXdDdER4TjBQZFlNajBkZ1U0UFZTdC1LOEZxdWxDWEpyNFZYNDVGbS0welJST1NIQjF6dGthd2tQQmRFU2JHRGVfbllzcW1kazNGM25nZVVFTC1rak5KTXQwMkVmelV2a0RSOEVIUExvTUNwZVNweFBpQWl4U05WelhJRE1udGZVYTkwRUtvRmd3?oc=5",
+        "categoria": "Imunização"
+      },
+      {
+        "id": "alert-rj-2026-11-23-mpox-prefeitura-do-rio-suspende-vacina-o",
+        "dataPublicacao": "2026-11-23",
+        "orgaoEmissor": "SES-RJ",
+        "ufRelacionada": "RJ",
+        "titulo": "Mpox: Prefeitura do Rio suspende vacinação - O GLOBO",
+        "tipo": "alerta_urgente",
+        "resumo": "Mpox: Prefeitura do Rio suspende vacinação  O GLOBO",
+        "linkOficial": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOdDZ2LU56ZDQ4d2o3eWpSUVZlaUJ4M0ttX1dQcVJvN004aFdxR2dmRkM5Z0cyZHJyOUN1bnltd01lRGRIb2ZfeEVTTjBaOUUtMFVDdG41MVdZdks2OHJRLWJ6ZGdqV1FyT2VwUHgzN2JoU2xpdmpWZkE2VXVjcE5xU0hGbzVRVzcxbEtzMi13Q0l1WHVTSlU0bUNadkJSaE1ReG1oaU9XTmVqOWFrWF9HbjU5Qk8yRnZuTHhnejQ2Y0VQRW9ORllkZFF2dWNhZUZsMWt1Qk5DQll6ZXNhX0HSAewBQVVfeXFMUDhlNko0bjVDd2ZrN3YzV0ZPS0NPZGdEcFBjUHhsa0RKX04zWVFKbllvWGpBUmxkYUp4aUtqY3JlUDAzTHdRN0hxUnB5eFFiLXU5VnRHa0hhekNVM1FuRVR2aUZpeFowMF9FNE9jaTZxRG9rVzRuNkR6WEFVT1JwaE9KakZYWEZGYWxDeGp3b1hyYTVWTW5KMEgtTkZSQzNXS3BPY1RnYTl2Z3pOSzhCSUtyUVh5YnBpWmMxOUxmVTNrekF3RVJYZ0RSek10VFlUSlVCYTNuUkdzckNwWEhyVTh4elhNeFlLc0x6eEw?oc=5",
         "categoria": "Imunização"
       },
       {
@@ -118,17 +118,6 @@
     ],
     "alertasUrgentes": [
       {
-        "id": "alert-rj-2026-11-25-mpox-minist-rio-da-sa-de-anuncia-novas-d",
-        "dataPublicacao": "2026-11-25",
-        "orgaoEmissor": "SES-RJ",
-        "ufRelacionada": "RJ",
-        "titulo": "Mpox: Ministério da Saúde anuncia novas doses da vacina para o Rio - O Dia",
-        "tipo": "disponibilidade_vacina",
-        "resumo": "Mpox: Ministério da Saúde anuncia novas doses da vacina para o Rio  O Dia",
-        "linkOficial": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOcW92RkFSOXVuS19YSkZGWXF0cXR1cFRNMlo5MmRJSDRiSmkwa1BHMUQ0a1JGUTlTWlgwbVlIekxkb0pMSkI5T09aMkxVU1Vpb3N0dlBsd3lwcTRZazg0QnlTODZ4VFhMX19VVGIteG9tUXpvQS1naW52SXVuY1NERks4UTF1MWZxcy1RMFNQVXNtWXZna1lPSkdyM2VpYkhITERXUHB5YXpkVWs5Q0JWU21jY3RRaGRUOG1HeDFxdmlJbkl1TmhZUERCZ9IB0AFBVV95cUxNQnZFNkFvbFI5alJNZkN0a18zUEJkR1Jadnh5b1ZISE5ocklLTHMwbzJmNHBaemJsVDFnenNsSDJ1dUM1eEZxX2dHZXRGcFowSDBsVDhRODd3VllPOGVEUE9ZVkVpNWNKT3JEU2daZWNZakFnak1JcEVZbnhXYlp0aHVqQnhSR1JnRVM1MjAwQzFvdFlDRk1pa29WVEZ1a3NyZVk3VG1CSXBJcnlUa01UUjRCQjJid1diNGZGYUZuTFdyMjdBNjVFUDJjX0xpR3ha?oc=5",
-        "categoria": "Imunização"
-      },
-      {
         "id": "alert-rj-2026-11-25-rio-recebe-nesta-semana-novas-doses-de-v",
         "dataPublicacao": "2026-11-25",
         "orgaoEmissor": "SES-RJ",
@@ -192,6 +181,17 @@
         "tipo": "alerta_urgente",
         "resumo": "Rio de Janeiro suspende vacinação contra Mpox por falta de doses  Agência Brasil",
         "linkOficial": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPTmg3d3B6YWVOb0NiWGNoZTI0YnRhOE1FWDFoMHppWWgyLXpfTjF1T2RqSlVtWG45bjYxTDVpeTlZakdldHhfX1FlWWZURXdDdER4TjBQZFlNajBkZ1U0UFZTdC1LOEZxdWxDWEpyNFZYNDVGbS0welJST1NIQjF6dGthd2tQQmRFU2JHRGVfbllzcW1kazNGM25nZVVFTC1rak5KTXQwMkVmelV2a0RSOEVIUExvTUNwZVNweFBpQWl4U05WelhJRE1udGZVYTkwRUtvRmd3?oc=5",
+        "categoria": "Imunização"
+      },
+      {
+        "id": "alert-rj-2026-11-23-mpox-prefeitura-do-rio-suspende-vacina-o",
+        "dataPublicacao": "2026-11-23",
+        "orgaoEmissor": "SES-RJ",
+        "ufRelacionada": "RJ",
+        "titulo": "Mpox: Prefeitura do Rio suspende vacinação - O GLOBO",
+        "tipo": "alerta_urgente",
+        "resumo": "Mpox: Prefeitura do Rio suspende vacinação  O GLOBO",
+        "linkOficial": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOdDZ2LU56ZDQ4d2o3eWpSUVZlaUJ4M0ttX1dQcVJvN004aFdxR2dmRkM5Z0cyZHJyOUN1bnltd01lRGRIb2ZfeEVTTjBaOUUtMFVDdG41MVdZdks2OHJRLWJ6ZGdqV1FyT2VwUHgzN2JoU2xpdmpWZkE2VXVjcE5xU0hGbzVRVzcxbEtzMi13Q0l1WHVTSlU0bUNadkJSaE1ReG1oaU9XTmVqOWFrWF9HbjU5Qk8yRnZuTHhnejQ2Y0VQRW9ORllkZFF2dWNhZUZsMWt1Qk5DQll6ZXNhX0HSAewBQVVfeXFMUDhlNko0bjVDd2ZrN3YzV0ZPS0NPZGdEcFBjUHhsa0RKX04zWVFKbllvWGpBUmxkYUp4aUtqY3JlUDAzTHdRN0hxUnB5eFFiLXU5VnRHa0hhekNVM1FuRVR2aUZpeFowMF9FNE9jaTZxRG9rVzRuNkR6WEFVT1JwaE9KakZYWEZGYWxDeGp3b1hyYTVWTW5KMEgtTkZSQzNXS3BPY1RnYTl2Z3pOSzhCSUtyUVh5YnBpWmMxOUxmVTNrekF3RVJYZ0RSek10VFlUSlVCYTNuUkdzckNwWEhyVTh4elhNeFlLc0x6eEw?oc=5",
         "categoria": "Imunização"
       },
       {
