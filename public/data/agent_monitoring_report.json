@@ -1,21 +1,56 @@
 {
-  "timestamp": "2026-11-26T21:22:00.363970",
-  "totalItensVarredura": 26,
+  "timestamp": "2026-11-26T22:26:18.934275",
+  "totalItensVarredura": 27,
   "analiseAgente": {
-    "alteracoesEstoque": [],
+    "alteracoesEstoque": [
+      {
+        "siteId": "rj-1",
+        "unidade": "Instituto Nacional de Infectologia Evandro Chagas (CRIE / INI / Fiocruz)",
+        "uf": "RJ",
+        "statusEstoque": "esgotado",
+        "motivo": "Esgotamento ou suspensão explícita de doses noticiada em comunicado oficial.",
+        "previsaoFutura": "Aguardando envio e redistribuição de novos lotes pelo Ministério da Saúde.",
+        "fonte": "https://news.google.com/rss/articles/CBMif0FVX3lxTE92ODNoYXJXWTlxbHYyQTZ1Z0JBSzVZTFBPV2RmVE50NTZhajVOODNndG42Ul9wRXNxSGsyTTFVQk1WeVRlc19FSnB5eXU1OW1yeHgyczlWQlJTdkVNUU1nc1Z4R2pCMEtwSWtUY0VDTlJuaU5aZ3lMeExkNl9rSnM?oc=5"
+      },
+      {
+        "siteId": "rj-2",
+        "unidade": "Super Centro Carioca de Vacinação — Botafogo",
+        "uf": "RJ",
+        "statusEstoque": "esgotado",
+        "motivo": "Esgotamento ou suspensão explícita de doses noticiada em comunicado oficial.",
+        "previsaoFutura": "Aguardando envio e redistribuição de novos lotes pelo Ministério da Saúde.",
+        "fonte": "https://news.google.com/rss/articles/CBMif0FVX3lxTE92ODNoYXJXWTlxbHYyQTZ1Z0JBSzVZTFBPV2RmVE50NTZhajVOODNndG42Ul9wRXNxSGsyTTFVQk1WeVRlc19FSnB5eXU1OW1yeHgyczlWQlJTdkVNUU1nc1Z4R2pCMEtwSWtUY0VDTlJuaU5aZ3lMeExkNl9rSnM?oc=5"
+      },
+      {
+        "siteId": "rj-3",
+        "unidade": "Super Centro Carioca de Vacinação — Zona Norte (Shopping Nova América)",
+        "uf": "RJ",
+        "statusEstoque": "esgotado",
+        "motivo": "Esgotamento ou suspensão explícita de doses noticiada em comunicado oficial.",
+        "previsaoFutura": "Aguardando envio e redistribuição de novos lotes pelo Ministério da Saúde.",
+        "fonte": "https://news.google.com/rss/articles/CBMif0FVX3lxTE92ODNoYXJXWTlxbHYyQTZ1Z0JBSzVZTFBPV2RmVE50NTZhajVOODNndG42Ul9wRXNxSGsyTTFVQk1WeVRlc19FSnB5eXU1OW1yeHgyczlWQlJTdkVNUU1nc1Z4R2pCMEtwSWtUY0VDTlJuaU5aZ3lMeExkNl9rSnM?oc=5"
+      },
+      {
+        "siteId": "rj-4",
+        "unidade": "Super Centro Carioca de Vacinação — Zona Oeste (ParkShopping Campo Grande)",
+        "uf": "RJ",
+        "statusEstoque": "esgotado",
+        "motivo": "Esgotamento ou suspensão explícita de doses noticiada em comunicado oficial.",
+        "previsaoFutura": "Aguardando envio e redistribuição de novos lotes pelo Ministério da Saúde.",
+        "fonte": "https://news.google.com/rss/articles/CBMif0FVX3lxTE92ODNoYXJXWTlxbHYyQTZ1Z0JBSzVZTFBPV2RmVE50NTZhajVOODNndG42Ul9wRXNxSGsyTTFVQk1WeVRlc19FSnB5eXU1OW1yeHgyczlWQlJTdkVNUU1nc1Z4R2pCMEtwSWtUY0VDTlJuaU5aZ3lMeExkNl9rSnM?oc=5"
+      },
+      {
+        "siteId": "rj-5",
+        "unidade": "Centro Especial de Vacinação Dr. Álvaro Aguiar (CEVAA)",
+        "uf": "RJ",
+        "statusEstoque": "esgotado",
+        "motivo": "Esgotamento ou suspensão explícita de doses noticiada em comunicado oficial.",
+        "previsaoFutura": "Aguardando envio e redistribuição de novos lotes pelo Ministério da Saúde.",
+        "fonte": "https://news.google.com/rss/articles/CBMif0FVX3lxTE92ODNoYXJXWTlxbHYyQTZ1Z0JBSzVZTFBPV2RmVE50NTZhajVOODNndG42Ul9wRXNxSGsyTTFVQk1WeVRlc19FSnB5eXU1OW1yeHgyczlWQlJTdkVNUU1nc1Z4R2pCMEtwSWtUY0VDTlJuaU5aZ3lMeExkNl9rSnM?oc=5"
+      }
+    ],
     "novosMarcos": [],
     "alertasNoticias": [
-      {
-        "id": "alert-rj-2026-11-26-rn-inicia-vacina-o-contra-mpox-com-doses",
-        "dataPublicacao": "2026-11-26",
-        "orgaoEmissor": "SES-RJ",
-        "ufRelacionada": "RJ",
-        "titulo": "RN inicia vacinação contra mpox com doses destinadas a grupos específicos - Portal Diário do RN",
-        "tipo": "disponibilidade_vacina",
-        "resumo": "RN inicia vacinação contra mpox com doses destinadas a grupos específicos  Portal Diário do RN",
-        "linkOficial": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOZ3Z6elpjdXBvX1R0eWxNbmZEbDYxMnpNeTlXaUExUmVXbDZxX2hzLXZhY2k2N05QVVZ4T0o1U21WWmswRXFULVM5QmVONUxrUTRZWHF0RUJWZWJROUJVZDNTeE9tV1JRV0JSQUc2V1lNZzJIUkxMdGNjemNrdnpQVXJkaHRTRnZIU1dOSGh1SFNRZE0taHJhelltci0yRl9nVVE?oc=5",
-        "categoria": "Imunização"
-      },
       {
         "id": "alert-rj-2026-11-25-rio-recebe-nesta-semana-novas-doses-de-v",
         "dataPublicacao": "2026-11-25",
@@ -80,6 +115,17 @@
         "tipo": "alerta_urgente",
         "resumo": "Rio de Janeiro suspende vacinação contra Mpox por falta de doses  Agência Brasil",
         "linkOficial": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPTmg3d3B6YWVOb0NiWGNoZTI0YnRhOE1FWDFoMHppWWgyLXpfTjF1T2RqSlVtWG45bjYxTDVpeTlZakdldHhfX1FlWWZURXdDdER4TjBQZFlNajBkZ1U0UFZTdC1LOEZxdWxDWEpyNFZYNDVGbS0welJST1NIQjF6dGthd2tQQmRFU2JHRGVfbllzcW1kazNGM25nZVVFTC1rak5KTXQwMkVmelV2a0RSOEVIUExvTUNwZVNweFBpQWl4U05WelhJRE1udGZVYTkwRUtvRmd3?oc=5",
+        "categoria": "Imunização"
+      },
+      {
+        "id": "alert-rj-2026-11-23-vacina-contra-mpox-acaba-no-rio-ap-s-8-m",
+        "dataPublicacao": "2026-11-23",
+        "orgaoEmissor": "SMS-Rio",
+        "ufRelacionada": "RJ",
+        "titulo": "Vacina contra mpox acaba no Rio após 8 mil doses e postos param - Povo na Rua",
+        "tipo": "alerta_urgente",
+        "resumo": "Vacina contra mpox acaba no Rio após 8 mil doses e postos param  Povo na Rua",
+        "linkOficial": "https://news.google.com/rss/articles/CBMif0FVX3lxTE92ODNoYXJXWTlxbHYyQTZ1Z0JBSzVZTFBPV2RmVE50NTZhajVOODNndG42Ul9wRXNxSGsyTTFVQk1WeVRlc19FSnB5eXU1OW1yeHgyczlWQlJTdkVNUU1nc1Z4R2pCMEtwSWtUY0VDTlJuaU5aZ3lMeExkNl9rSnM?oc=5",
         "categoria": "Imunização"
       },
       {
@@ -118,17 +164,6 @@
     ],
     "alertasUrgentes": [
       {
-        "id": "alert-rj-2026-11-26-rn-inicia-vacina-o-contra-mpox-com-doses",
-        "dataPublicacao": "2026-11-26",
-        "orgaoEmissor": "SES-RJ",
-        "ufRelacionada": "RJ",
-        "titulo": "RN inicia vacinação contra mpox com doses destinadas a grupos específicos - Portal Diário do RN",
-        "tipo": "disponibilidade_vacina",
-        "resumo": "RN inicia vacinação contra mpox com doses destinadas a grupos específicos  Portal Diário do RN",
-        "linkOficial": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOZ3Z6elpjdXBvX1R0eWxNbmZEbDYxMnpNeTlXaUExUmVXbDZxX2hzLXZhY2k2N05QVVZ4T0o1U21WWmswRXFULVM5QmVONUxrUTRZWHF0RUJWZWJROUJVZDNTeE9tV1JRV0JSQUc2V1lNZzJIUkxMdGNjemNrdnpQVXJkaHRTRnZIU1dOSGh1SFNRZE0taHJhelltci0yRl9nVVE?oc=5",
-        "categoria": "Imunização"
-      },
-      {
         "id": "alert-rj-2026-11-25-rio-recebe-nesta-semana-novas-doses-de-v",
         "dataPublicacao": "2026-11-25",
         "orgaoEmissor": "SES-RJ",
@@ -192,6 +227,17 @@
         "tipo": "alerta_urgente",
         "resumo": "Rio de Janeiro suspende vacinação contra Mpox por falta de doses  Agência Brasil",
         "linkOficial": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPTmg3d3B6YWVOb0NiWGNoZTI0YnRhOE1FWDFoMHppWWgyLXpfTjF1T2RqSlVtWG45bjYxTDVpeTlZakdldHhfX1FlWWZURXdDdER4TjBQZFlNajBkZ1U0UFZTdC1LOEZxdWxDWEpyNFZYNDVGbS0welJST1NIQjF6dGthd2tQQmRFU2JHRGVfbllzcW1kazNGM25nZVVFTC1rak5KTXQwMkVmelV2a0RSOEVIUExvTUNwZVNweFBpQWl4U05WelhJRE1udGZVYTkwRUtvRmd3?oc=5",
+        "categoria": "Imunização"
+      },
+      {
+        "id": "alert-rj-2026-11-23-vacina-contra-mpox-acaba-no-rio-ap-s-8-m",
+        "dataPublicacao": "2026-11-23",
+        "orgaoEmissor": "SMS-Rio",
+        "ufRelacionada": "RJ",
+        "titulo": "Vacina contra mpox acaba no Rio após 8 mil doses e postos param - Povo na Rua",
+        "tipo": "alerta_urgente",
+        "resumo": "Vacina contra mpox acaba no Rio após 8 mil doses e postos param  Povo na Rua",
+        "linkOficial": "https://news.google.com/rss/articles/CBMif0FVX3lxTE92ODNoYXJXWTlxbHYyQTZ1Z0JBSzVZTFBPV2RmVE50NTZhajVOODNndG42Ul9wRXNxSGsyTTFVQk1WeVRlc19FSnB5eXU1OW1yeHgyczlWQlJTdkVNUU1nc1Z4R2pCMEtwSWtUY0VDTlJuaU5aZ3lMeExkNl9rSnM?oc=5",
         "categoria": "Imunização"
       },
       {
