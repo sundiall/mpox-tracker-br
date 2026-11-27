@@ -1,38 +1,67 @@
 {
-  "timestamp": "2026-11-27T21:27:43.477159",
-  "totalItensVarredura": 24,
+  "timestamp": "2026-11-27T22:27:07.153962",
+  "totalItensVarredura": 28,
   "analiseAgente": {
     "alteracoesEstoque": [
+      {
+        "siteId": "rj-1",
+        "unidade": "Instituto Nacional de Infectologia Evandro Chagas (CRIE / INI / Fiocruz)",
+        "uf": "RJ",
+        "statusEstoque": "esgotado",
+        "motivo": "Esgotamento ou suspensão explícita de doses noticiada em comunicado oficial.",
+        "previsaoFutura": "Aguardando envio e redistribuição de novos lotes pelo Ministério da Saúde.",
+        "fonte": "https://news.google.com/rss/articles/CBMif0FVX3lxTE92ODNoYXJXWTlxbHYyQTZ1Z0JBSzVZTFBPV2RmVE50NTZhajVOODNndG42Ul9wRXNxSGsyTTFVQk1WeVRlc19FSnB5eXU1OW1yeHgyczlWQlJTdkVNUU1nc1Z4R2pCMEtwSWtUY0VDTlJuaU5aZ3lMeExkNl9rSnM?oc=5"
+      },
       {
         "siteId": "rj-2",
         "unidade": "Super Centro Carioca de Vacinação — Botafogo",
         "uf": "RJ",
-        "statusEstoque": "disponivel",
-        "motivo": "Vacinação ativa/reabastecida segundo comunicado oficial.",
-        "previsaoFutura": "Doses ativas para os grupos prioritários elegíveis.",
-        "fonte": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNU0RGOXB1N0VFV25fNVJIektkV25FLUp4MmhlR0EwRTZ3Z1kyM2xDNFZDSmpZckU5Zjc3WFBBUGdjVEo1YWllSkQxWTlzS2pSTFlMRFQwRng4dTJmc3VmZWxsdENad1V1ZXZwZ01PZmpuMVkwb3RGbk40Zk9uVlJJUVN3UWNyaWIwc2l3?oc=5"
+        "statusEstoque": "esgotado",
+        "motivo": "Esgotamento ou suspensão explícita de doses noticiada em comunicado oficial.",
+        "previsaoFutura": "Aguardando envio e redistribuição de novos lotes pelo Ministério da Saúde.",
+        "fonte": "https://news.google.com/rss/articles/CBMif0FVX3lxTE92ODNoYXJXWTlxbHYyQTZ1Z0JBSzVZTFBPV2RmVE50NTZhajVOODNndG42Ul9wRXNxSGsyTTFVQk1WeVRlc19FSnB5eXU1OW1yeHgyczlWQlJTdkVNUU1nc1Z4R2pCMEtwSWtUY0VDTlJuaU5aZ3lMeExkNl9rSnM?oc=5"
       },
       {
         "siteId": "rj-3",
         "unidade": "Super Centro Carioca de Vacinação — Zona Norte (Shopping Nova América)",
         "uf": "RJ",
-        "statusEstoque": "disponivel",
-        "motivo": "Vacinação ativa/reabastecida segundo comunicado oficial.",
-        "previsaoFutura": "Doses ativas para os grupos prioritários elegíveis.",
-        "fonte": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNU0RGOXB1N0VFV25fNVJIektkV25FLUp4MmhlR0EwRTZ3Z1kyM2xDNFZDSmpZckU5Zjc3WFBBUGdjVEo1YWllSkQxWTlzS2pSTFlMRFQwRng4dTJmc3VmZWxsdENad1V1ZXZwZ01PZmpuMVkwb3RGbk40Zk9uVlJJUVN3UWNyaWIwc2l3?oc=5"
+        "statusEstoque": "esgotado",
+        "motivo": "Esgotamento ou suspensão explícita de doses noticiada em comunicado oficial.",
+        "previsaoFutura": "Aguardando envio e redistribuição de novos lotes pelo Ministério da Saúde.",
+        "fonte": "https://news.google.com/rss/articles/CBMif0FVX3lxTE92ODNoYXJXWTlxbHYyQTZ1Z0JBSzVZTFBPV2RmVE50NTZhajVOODNndG42Ul9wRXNxSGsyTTFVQk1WeVRlc19FSnB5eXU1OW1yeHgyczlWQlJTdkVNUU1nc1Z4R2pCMEtwSWtUY0VDTlJuaU5aZ3lMeExkNl9rSnM?oc=5"
       },
       {
         "siteId": "rj-4",
         "unidade": "Super Centro Carioca de Vacinação — Zona Oeste (ParkShopping Campo Grande)",
         "uf": "RJ",
-        "statusEstoque": "disponivel",
-        "motivo": "Vacinação ativa/reabastecida segundo comunicado oficial.",
-        "previsaoFutura": "Doses ativas para os grupos prioritários elegíveis.",
-        "fonte": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNU0RGOXB1N0VFV25fNVJIektkV25FLUp4MmhlR0EwRTZ3Z1kyM2xDNFZDSmpZckU5Zjc3WFBBUGdjVEo1YWllSkQxWTlzS2pSTFlMRFQwRng4dTJmc3VmZWxsdENad1V1ZXZwZ01PZmpuMVkwb3RGbk40Zk9uVlJJUVN3UWNyaWIwc2l3?oc=5"
+        "statusEstoque": "esgotado",
+        "motivo": "Esgotamento ou suspensão explícita de doses noticiada em comunicado oficial.",
+        "previsaoFutura": "Aguardando envio e redistribuição de novos lotes pelo Ministério da Saúde.",
+        "fonte": "https://news.google.com/rss/articles/CBMif0FVX3lxTE92ODNoYXJXWTlxbHYyQTZ1Z0JBSzVZTFBPV2RmVE50NTZhajVOODNndG42Ul9wRXNxSGsyTTFVQk1WeVRlc19FSnB5eXU1OW1yeHgyczlWQlJTdkVNUU1nc1Z4R2pCMEtwSWtUY0VDTlJuaU5aZ3lMeExkNl9rSnM?oc=5"
+      },
+      {
+        "siteId": "rj-5",
+        "unidade": "Centro Especial de Vacinação Dr. Álvaro Aguiar (CEVAA)",
+        "uf": "RJ",
+        "statusEstoque": "esgotado",
+        "motivo": "Esgotamento ou suspensão explícita de doses noticiada em comunicado oficial.",
+        "previsaoFutura": "Aguardando envio e redistribuição de novos lotes pelo Ministério da Saúde.",
+        "fonte": "https://news.google.com/rss/articles/CBMif0FVX3lxTE92ODNoYXJXWTlxbHYyQTZ1Z0JBSzVZTFBPV2RmVE50NTZhajVOODNndG42Ul9wRXNxSGsyTTFVQk1WeVRlc19FSnB5eXU1OW1yeHgyczlWQlJTdkVNUU1nc1Z4R2pCMEtwSWtUY0VDTlJuaU5aZ3lMeExkNl9rSnM?oc=5"
       }
     ],
     "novosMarcos": [],
     "alertasNoticias": [
+      {
+        "id": "alert-rj-2026-11-25-rio-recebe-nesta-semana-novas-doses-de-v",
+        "dataPublicacao": "2026-11-25",
+        "orgaoEmissor": "SES-RJ",
+        "ufRelacionada": "RJ",
+        "titulo": "Rio recebe nesta semana novas doses de vacina contra a mpox - Poder360",
+        "tipo": "disponibilidade_vacina",
+        "resumo": "Rio recebe nesta semana novas doses de vacina contra a mpox  Poder360",
+        "linkOficial": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQalBaM1VNVnBEU3hyYTFUV2JfNXhhN05MdDNSNXEySHRWT0ZxQkVUYlp3X2lGRWJDQzFaS1EtMVBnci05NUNPLUdxOEVmX1BSWjBwQlR0OUstcEtMNnlXbDJzMWFxZjNxbUt3ZUg0SG1oWHJQQXM2ZWhXU0VXLUhwam1xdk5LSzB3bnp1aGJxSVFPUHdQVFZUTnNSRjBRTWMtZHc?oc=5",
+        "categoria": "Imunização"
+      },
       {
         "id": "alert-sp-2026-11-25-mpox-n-mero-de-casos-passa-de-1-500-no-b",
         "dataPublicacao": "2026-11-25",
@@ -42,6 +71,17 @@
         "tipo": "disponibilidade_vacina",
         "resumo": "Mpox: número de casos passa de 1 500 no Brasil e São Paulo inicia vacinação com novas doses  VEJA",
         "linkOficial": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPS3RNR2xIakQ1YkFwazNKMXBrbldRN09heVZheTR0NmVXQXJXUzRyMG5qZmMyeWNITG05U2NVNmhia1VJRmQ3WFh3QjJvQWhveWQzbnBBSzkxQlY0Q1NCOFFpc1QzeTdEendDUVhkYS1PNkNOQV93OEFsbkg2OENJODRHNElaZkR0dlJidDR2M1l0NkZYbnI1S2FVZGtlaHVvbDNIcGg3SzdacjBfV3VHZ1VEOS1lRTNEODJSVkdpWGs?oc=5",
+        "categoria": "Imunização"
+      },
+      {
+        "id": "alert-rj-2026-11-25-rio-recebe-novo-lote-da-vacina-contra-mp",
+        "dataPublicacao": "2026-11-25",
+        "orgaoEmissor": "SES-RJ",
+        "ufRelacionada": "RJ",
+        "titulo": "Rio recebe novo lote da vacina contra mpox para grupos de risco - Povo na Rua",
+        "tipo": "disponibilidade_vacina",
+        "resumo": "Rio recebe novo lote da vacina contra mpox para grupos de risco  Povo na Rua",
+        "linkOficial": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNQVEzMHZkUVp1YnJkMDZxSjNib3hqTVRXbzlBRnFrZ1NESGQ0NEpnNnhFd3IzYnVwY0xJZ0ttcXNjWmppTU83NXN1VGQxTUlkRGprVnNrVC1QXzZncXhqaGY2c003NTd1bzQzMlJmT3Z2VFY1MHpQYUtCdHVUako4eWdfZw?oc=5",
         "categoria": "Imunização"
       },
       {
@@ -78,25 +118,14 @@
         "categoria": "Imunização"
       },
       {
-        "id": "alert-rj-2026-11-18-s-o-paulo-recebe-mil-novas-doses-de-vaci",
-        "dataPublicacao": "2026-11-18",
-        "orgaoEmissor": "SES-RJ",
+        "id": "alert-rj-2026-11-23-vacina-contra-mpox-acaba-no-rio-ap-s-8-m",
+        "dataPublicacao": "2026-11-23",
+        "orgaoEmissor": "SMS-Rio",
         "ufRelacionada": "RJ",
-        "titulo": "São Paulo recebe mil novas doses de vacina contra a mpox - Diário Carioca",
-        "tipo": "disponibilidade_vacina",
-        "resumo": "São Paulo recebe mil novas doses de vacina contra a mpox  Diário Carioca",
-        "linkOficial": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNU0RGOXB1N0VFV25fNVJIektkV25FLUp4MmhlR0EwRTZ3Z1kyM2xDNFZDSmpZckU5Zjc3WFBBUGdjVEo1YWllSkQxWTlzS2pSTFlMRFQwRng4dTJmc3VmZWxsdENad1V1ZXZwZ01PZmpuMVkwb3RGbk40Zk9uVlJJUVN3UWNyaWIwc2l3?oc=5",
-        "categoria": "Imunização"
-      },
-      {
-        "id": "alert-rj-2026-11-18-rio-recebe-mil-frascos-de-vacina-de-mpox",
-        "dataPublicacao": "2026-11-18",
-        "orgaoEmissor": "SES-RJ",
-        "ufRelacionada": "RJ",
-        "titulo": "Rio recebe mil frascos de vacina de mpox para 5 mil doses - Povo na Rua",
-        "tipo": "disponibilidade_vacina",
-        "resumo": "Rio recebe mil frascos de vacina de mpox para 5 mil doses  Povo na Rua",
-        "linkOficial": "https://news.google.com/rss/articles/CBMifkFVX3lxTE01UDc5N29URFlWQTdrR192a21pSnpOZnRNV2pOT1ZzNUNCb3VpZDVuaEpDRkt2Vmc3cVFTOGpaSzVfZUtRN0tPbnJfa3J5NmJSdlkwT296QUR5ZGE1M0J2al96MVU3cTVmdVJNNUZzYUFMVHoyRHpnbDczeTBtZw?oc=5",
+        "titulo": "Vacina contra mpox acaba no Rio após 8 mil doses e postos param - Povo na Rua",
+        "tipo": "alerta_urgente",
+        "resumo": "Vacina contra mpox acaba no Rio após 8 mil doses e postos param  Povo na Rua",
+        "linkOficial": "https://news.google.com/rss/articles/CBMif0FVX3lxTE92ODNoYXJXWTlxbHYyQTZ1Z0JBSzVZTFBPV2RmVE50NTZhajVOODNndG42Ul9wRXNxSGsyTTFVQk1WeVRlc19FSnB5eXU1OW1yeHgyczlWQlJTdkVNUU1nc1Z4R2pCMEtwSWtUY0VDTlJuaU5aZ3lMeExkNl9rSnM?oc=5",
         "categoria": "Imunização"
       },
       {
@@ -124,6 +153,17 @@
     ],
     "alertasUrgentes": [
       {
+        "id": "alert-rj-2026-11-25-rio-recebe-nesta-semana-novas-doses-de-v",
+        "dataPublicacao": "2026-11-25",
+        "orgaoEmissor": "SES-RJ",
+        "ufRelacionada": "RJ",
+        "titulo": "Rio recebe nesta semana novas doses de vacina contra a mpox - Poder360",
+        "tipo": "disponibilidade_vacina",
+        "resumo": "Rio recebe nesta semana novas doses de vacina contra a mpox  Poder360",
+        "linkOficial": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQalBaM1VNVnBEU3hyYTFUV2JfNXhhN05MdDNSNXEySHRWT0ZxQkVUYlp3X2lGRWJDQzFaS1EtMVBnci05NUNPLUdxOEVmX1BSWjBwQlR0OUstcEtMNnlXbDJzMWFxZjNxbUt3ZUg0SG1oWHJQQXM2ZWhXU0VXLUhwam1xdk5LSzB3bnp1aGJxSVFPUHdQVFZUTnNSRjBRTWMtZHc?oc=5",
+        "categoria": "Imunização"
+      },
+      {
         "id": "alert-sp-2026-11-25-mpox-n-mero-de-casos-passa-de-1-500-no-b",
         "dataPublicacao": "2026-11-25",
         "orgaoEmissor": "SES-SP",
@@ -132,6 +172,17 @@
         "tipo": "disponibilidade_vacina",
         "resumo": "Mpox: número de casos passa de 1 500 no Brasil e São Paulo inicia vacinação com novas doses  VEJA",
         "linkOficial": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPS3RNR2xIakQ1YkFwazNKMXBrbldRN09heVZheTR0NmVXQXJXUzRyMG5qZmMyeWNITG05U2NVNmhia1VJRmQ3WFh3QjJvQWhveWQzbnBBSzkxQlY0Q1NCOFFpc1QzeTdEendDUVhkYS1PNkNOQV93OEFsbkg2OENJODRHNElaZkR0dlJidDR2M1l0NkZYbnI1S2FVZGtlaHVvbDNIcGg3SzdacjBfV3VHZ1VEOS1lRTNEODJSVkdpWGs?oc=5",
+        "categoria": "Imunização"
+      },
+      {
+        "id": "alert-rj-2026-11-25-rio-recebe-novo-lote-da-vacina-contra-mp",
+        "dataPublicacao": "2026-11-25",
+        "orgaoEmissor": "SES-RJ",
+        "ufRelacionada": "RJ",
+        "titulo": "Rio recebe novo lote da vacina contra mpox para grupos de risco - Povo na Rua",
+        "tipo": "disponibilidade_vacina",
+        "resumo": "Rio recebe novo lote da vacina contra mpox para grupos de risco  Povo na Rua",
+        "linkOficial": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNQVEzMHZkUVp1YnJkMDZxSjNib3hqTVRXbzlBRnFrZ1NESGQ0NEpnNnhFd3IzYnVwY0xJZ0ttcXNjWmppTU83NXN1VGQxTUlkRGprVnNrVC1QXzZncXhqaGY2c003NTd1bzQzMlJmT3Z2VFY1MHpQYUtCdHVUako4eWdfZw?oc=5",
         "categoria": "Imunização"
       },
       {
@@ -168,25 +219,14 @@
         "categoria": "Imunização"
       },
       {
-        "id": "alert-rj-2026-11-18-s-o-paulo-recebe-mil-novas-doses-de-vaci",
-        "dataPublicacao": "2026-11-18",
-        "orgaoEmissor": "SES-RJ",
+        "id": "alert-rj-2026-11-23-vacina-contra-mpox-acaba-no-rio-ap-s-8-m",
+        "dataPublicacao": "2026-11-23",
+        "orgaoEmissor": "SMS-Rio",
         "ufRelacionada": "RJ",
-        "titulo": "São Paulo recebe mil novas doses de vacina contra a mpox - Diário Carioca",
-        "tipo": "disponibilidade_vacina",
-        "resumo": "São Paulo recebe mil novas doses de vacina contra a mpox  Diário Carioca",
-        "linkOficial": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNU0RGOXB1N0VFV25fNVJIektkV25FLUp4MmhlR0EwRTZ3Z1kyM2xDNFZDSmpZckU5Zjc3WFBBUGdjVEo1YWllSkQxWTlzS2pSTFlMRFQwRng4dTJmc3VmZWxsdENad1V1ZXZwZ01PZmpuMVkwb3RGbk40Zk9uVlJJUVN3UWNyaWIwc2l3?oc=5",
-        "categoria": "Imunização"
-      },
-      {
-        "id": "alert-rj-2026-11-18-rio-recebe-mil-frascos-de-vacina-de-mpox",
-        "dataPublicacao": "2026-11-18",
-        "orgaoEmissor": "SES-RJ",
-        "ufRelacionada": "RJ",
-        "titulo": "Rio recebe mil frascos de vacina de mpox para 5 mil doses - Povo na Rua",
-        "tipo": "disponibilidade_vacina",
-        "resumo": "Rio recebe mil frascos de vacina de mpox para 5 mil doses  Povo na Rua",
-        "linkOficial": "https://news.google.com/rss/articles/CBMifkFVX3lxTE01UDc5N29URFlWQTdrR192a21pSnpOZnRNV2pOT1ZzNUNCb3VpZDVuaEpDRkt2Vmc3cVFTOGpaSzVfZUtRN0tPbnJfa3J5NmJSdlkwT296QUR5ZGE1M0J2al96MVU3cTVmdVJNNUZzYUFMVHoyRHpnbDczeTBtZw?oc=5",
+        "titulo": "Vacina contra mpox acaba no Rio após 8 mil doses e postos param - Povo na Rua",
+        "tipo": "alerta_urgente",
+        "resumo": "Vacina contra mpox acaba no Rio após 8 mil doses e postos param  Povo na Rua",
+        "linkOficial": "https://news.google.com/rss/articles/CBMif0FVX3lxTE92ODNoYXJXWTlxbHYyQTZ1Z0JBSzVZTFBPV2RmVE50NTZhajVOODNndG42Ul9wRXNxSGsyTTFVQk1WeVRlc19FSnB5eXU1OW1yeHgyczlWQlJTdkVNUU1nc1Z4R2pCMEtwSWtUY0VDTlJuaU5aZ3lMeExkNl9rSnM?oc=5",
         "categoria": "Imunização"
       },
       {
