@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-11-27T20:27:26.409424",
-  "totalItensVarredura": 26,
+  "timestamp": "2026-11-27T21:27:43.477159",
+  "totalItensVarredura": 24,
   "analiseAgente": {
     "alteracoesEstoque": [
       {
@@ -111,17 +111,6 @@
         "categoria": "Imunização"
       },
       {
-        "id": "alert-sp-2026-11-18-sp-ganha-novas-doses-da-vacina-contra-a",
-        "dataPublicacao": "2026-11-18",
-        "orgaoEmissor": "SES-SP",
-        "ufRelacionada": "SP",
-        "titulo": "SP ganha novas doses da vacina contra a mpox; saiba quem pode receber - Agência Brasil",
-        "tipo": "disponibilidade_vacina",
-        "resumo": "SP ganha novas doses da vacina contra a mpox; saiba quem pode receber  Agência Brasil",
-        "linkOficial": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQcmM2MDJIeG5QQ2ttVXJYTXlTUWZXeWFKWWJaMjREWTZQNGRELXBGZ201OEFULUVzQWJ6V0V3Ynhad2RJWjBiNDRrMnNDVjZ0SjI2eXdrVFRqaEQtVHJYZERDd1pkakJlcmRpWHFRaXZIUndVal9UVmtrN2xxTlVJcy10S2toQloxU0p5Rzg2eUZHaTVMMDNXYk1ORlZBMTBDRl9JSjIxbW1ObTJGYXRUMDdWNjlOTTFCaW9Jc19uaw?oc=5",
-        "categoria": "Imunização"
-      },
-      {
         "id": "alert-rj-2026-11-18-minist-rio-envia-vacina-contra-mpox-ao-r",
         "dataPublicacao": "2026-11-18",
         "orgaoEmissor": "SES-RJ",
@@ -209,17 +198,6 @@
         "tipo": "disponibilidade_vacina",
         "resumo": "São Paulo recebe mil novas doses da vacina contra a Mpox  agenciasp.sp.gov.br",
         "linkOficial": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNSkYzc1Jsbm1KZFk2TXJxYVhJVGd6YmpGZEktc05fWU9weXYtcDFzTGJScFI1SGh6bC1OSWt6VFhqNlJsWlZ0SzhTZFJDVzZTMWJyV0NNcDFJcmpYblpBZVJKV0NJcnJrX3lybjVsVERZdDllWl9sNHFlanpwSXhySFo0MVo5bXhRMGt6OHJzVGFBaEp0T29sS2lsRQ?oc=5",
-        "categoria": "Imunização"
-      },
-      {
-        "id": "alert-sp-2026-11-18-sp-ganha-novas-doses-da-vacina-contra-a",
-        "dataPublicacao": "2026-11-18",
-        "orgaoEmissor": "SES-SP",
-        "ufRelacionada": "SP",
-        "titulo": "SP ganha novas doses da vacina contra a mpox; saiba quem pode receber - Agência Brasil",
-        "tipo": "disponibilidade_vacina",
-        "resumo": "SP ganha novas doses da vacina contra a mpox; saiba quem pode receber  Agência Brasil",
-        "linkOficial": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQcmM2MDJIeG5QQ2ttVXJYTXlTUWZXeWFKWWJaMjREWTZQNGRELXBGZ201OEFULUVzQWJ6V0V3Ynhad2RJWjBiNDRrMnNDVjZ0SjI2eXdrVFRqaEQtVHJYZERDd1pkakJlcmRpWHFRaXZIUndVal9UVmtrN2xxTlVJcy10S2toQloxU0p5Rzg2eUZHaTVMMDNXYk1ORlZBMTBDRl9JSjIxbW1ObTJGYXRUMDdWNjlOTTFCaW9Jc19uaw?oc=5",
         "categoria": "Imunização"
       },
       {
