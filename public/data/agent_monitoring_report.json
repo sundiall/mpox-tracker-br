@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-11-27T16:34:51.888476",
-  "totalItensVarredura": 28,
+  "timestamp": "2026-11-27T18:14:58.038572",
+  "totalItensVarredura": 29,
   "analiseAgente": {
     "alteracoesEstoque": [
       {
@@ -129,17 +129,6 @@
         "categoria": "Imunização"
       },
       {
-        "id": "alert-rj-2026-11-19-rio-de-janeiro-recebe-mais-mil-frascos-d",
-        "dataPublicacao": "2026-11-19",
-        "orgaoEmissor": "SES-RJ",
-        "ufRelacionada": "RJ",
-        "titulo": "Rio de Janeiro recebe mais mil frascos de vacina contra Mpox - CNN Brasil",
-        "tipo": "disponibilidade_vacina",
-        "resumo": "Rio de Janeiro recebe mais mil frascos de vacina contra Mpox  CNN Brasil",
-        "linkOficial": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPa2U2T3V4YkdIRFpsSi1RMmRlX1M4NnpUOVNuVUo3Y1lybGlhWHRBVkdvcjFnVVhsdW9OV2pHMWxrQUZUN2xodUtUMGFOcWIzYnRXSjJtMVViT3FNQmlWZEY2T09nQ3lVUmVMN05qVEpCWUVDNFpWdDF2bUotd1dDRGlTemxoRk85SkFaeTk4ZEJGaTFpSW82cXhVamNXandBQkd4Ry1NMjhLb0lFVnNJ?oc=5",
-        "categoria": "Imunização"
-      },
-      {
         "id": "alert-sp-2026-11-18-s-o-paulo-recebe-mil-novas-doses-da-vaci",
         "dataPublicacao": "2026-11-18",
         "orgaoEmissor": "SES-SP",
@@ -238,17 +227,6 @@
         "tipo": "alerta_urgente",
         "resumo": "Vacina contra mpox acaba no Rio após 8 mil doses e postos param  Povo na Rua",
         "linkOficial": "https://news.google.com/rss/articles/CBMif0FVX3lxTE92ODNoYXJXWTlxbHYyQTZ1Z0JBSzVZTFBPV2RmVE50NTZhajVOODNndG42Ul9wRXNxSGsyTTFVQk1WeVRlc19FSnB5eXU1OW1yeHgyczlWQlJTdkVNUU1nc1Z4R2pCMEtwSWtUY0VDTlJuaU5aZ3lMeExkNl9rSnM?oc=5",
-        "categoria": "Imunização"
-      },
-      {
-        "id": "alert-rj-2026-11-19-rio-de-janeiro-recebe-mais-mil-frascos-d",
-        "dataPublicacao": "2026-11-19",
-        "orgaoEmissor": "SES-RJ",
-        "ufRelacionada": "RJ",
-        "titulo": "Rio de Janeiro recebe mais mil frascos de vacina contra Mpox - CNN Brasil",
-        "tipo": "disponibilidade_vacina",
-        "resumo": "Rio de Janeiro recebe mais mil frascos de vacina contra Mpox  CNN Brasil",
-        "linkOficial": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPa2U2T3V4YkdIRFpsSi1RMmRlX1M4NnpUOVNuVUo3Y1lybGlhWHRBVkdvcjFnVVhsdW9OV2pHMWxrQUZUN2xodUtUMGFOcWIzYnRXSjJtMVViT3FNQmlWZEY2T09nQ3lVUmVMN05qVEpCWUVDNFpWdDF2bUotd1dDRGlTemxoRk85SkFaeTk4ZEJGaTFpSW82cXhVamNXandBQkd4Ry1NMjhLb0lFVnNJ?oc=5",
         "categoria": "Imunização"
       },
       {
