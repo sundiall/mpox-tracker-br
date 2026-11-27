@@ -514,7 +514,7 @@ export const weeklyByYearData: WeeklyByYearPoint[] = [
     "2023": 24,
     "2024": 75,
     "2025": 11,
-    "2026": 213
+    "2026": 214
   },
   {
     "semana": 45,
@@ -522,7 +522,7 @@ export const weeklyByYearData: WeeklyByYearPoint[] = [
     "2023": 38,
     "2024": 78,
     "2025": 17,
-    "2026": 269
+    "2026": 285
   },
   {
     "semana": 46,
@@ -530,7 +530,7 @@ export const weeklyByYearData: WeeklyByYearPoint[] = [
     "2023": 18,
     "2024": 59,
     "2025": 11,
-    "2026": 299
+    "2026": 311
   },
   {
     "semana": 47,
@@ -538,7 +538,7 @@ export const weeklyByYearData: WeeklyByYearPoint[] = [
     "2023": 26,
     "2024": 53,
     "2025": 8,
-    "2026": 57
+    "2026": 91
   },
   {
     "semana": 48,
@@ -4055,8 +4055,8 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "semana": "2026-SE44",
     "ano": 2026,
     "semanaNum": 44,
-    "casosNovos": 213,
-    "casosAcumulados": 15907,
+    "casosNovos": 214,
+    "casosAcumulados": 15908,
     "obitosNovos": 0,
     "obitosAcumulados": 12,
     "dosesNovas": 60,
@@ -4070,45 +4070,45 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "semana": "2026-SE45",
     "ano": 2026,
     "semanaNum": 45,
-    "casosNovos": 269,
-    "casosAcumulados": 16176,
+    "casosNovos": 285,
+    "casosAcumulados": 16193,
     "obitosNovos": 0,
     "obitosAcumulados": 12,
     "dosesNovas": 77,
     "dosesAcumuladas": 47891,
-    "mediaMovel7d": 202,
-    "tendencia3s": 192,
-    "tendencia5s": 186,
+    "mediaMovel7d": 207,
+    "tendencia3s": 197,
+    "tendencia5s": 190,
     "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2026-SE46",
     "ano": 2026,
     "semanaNum": 46,
-    "casosNovos": 299,
-    "casosAcumulados": 16475,
+    "casosNovos": 311,
+    "casosAcumulados": 16504,
     "obitosNovos": 0,
     "obitosAcumulados": 12,
     "dosesNovas": 78,
     "dosesAcumuladas": 47969,
-    "mediaMovel7d": 260,
-    "tendencia3s": 247,
-    "tendencia5s": 239,
+    "mediaMovel7d": 270,
+    "tendencia3s": 256,
+    "tendencia5s": 248,
     "statusConsolidacao": "consolidado"
   },
   {
     "semana": "2026-SE47",
     "ano": 2026,
     "semanaNum": 47,
-    "casosNovos": 57,
-    "casosAcumulados": 16532,
+    "casosNovos": 91,
+    "casosAcumulados": 16595,
     "obitosNovos": 0,
     "obitosAcumulados": 12,
     "dosesNovas": 65,
     "dosesAcumuladas": 48034,
-    "mediaMovel7d": 208,
-    "tendencia3s": 198,
-    "tendencia5s": 191,
+    "mediaMovel7d": 229,
+    "tendencia3s": 218,
+    "tendencia5s": 211,
     "statusConsolidacao": "consolidado"
   },
   {
@@ -4116,14 +4116,14 @@ export const epidemicTimeSeries: EpidemiologicalWeekData[] = [
     "ano": 2026,
     "semanaNum": 48,
     "casosNovos": 0,
-    "casosAcumulados": 16532,
+    "casosAcumulados": 16595,
     "obitosNovos": 0,
     "obitosAcumulados": 12,
     "dosesNovas": 65,
     "dosesAcumuladas": 48099,
-    "mediaMovel7d": 119,
-    "tendencia3s": 113,
-    "tendencia5s": 109,
+    "mediaMovel7d": 134,
+    "tendencia3s": 127,
+    "tendencia5s": 123,
     "statusConsolidacao": "preliminar_em_curso",
     "dadosTempoReal": {
       "statusEstoqueVacinas": "esgotado",

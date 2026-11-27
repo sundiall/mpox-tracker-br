@@ -253,6 +253,17 @@
     "categoria": "Imunização"
   },
   {
+    "id": "alert-rj-2026-11-18-rio-recebe-mil-frascos-de-vacina-de-mpox",
+    "dataPublicacao": "2026-11-18",
+    "orgaoEmissor": "SES-RJ",
+    "ufRelacionada": "RJ",
+    "titulo": "Rio recebe mil frascos de vacina de mpox para 5 mil doses - Povo na Rua",
+    "tipo": "disponibilidade_vacina",
+    "resumo": "Rio recebe mil frascos de vacina de mpox para 5 mil doses  Povo na Rua",
+    "linkOficial": "https://news.google.com/rss/articles/CBMifkFVX3lxTE01UDc5N29URFlWQTdrR192a21pSnpOZnRNV2pOT1ZzNUNCb3VpZDVuaEpDRkt2Vmc3cVFTOGpaSzVfZUtRN0tPbnJfa3J5NmJSdlkwT296QUR5ZGE1M0J2al96MVU3cTVmdVJNNUZzYUFMVHoyRHpnbDczeTBtZw?oc=5",
+    "categoria": "Imunização"
+  },
+  {
     "id": "alert-rj-2026-11-18-minist-rio-da-sa-de-envia-ao-munic",
     "dataPublicacao": "2026-11-18",
     "orgaoEmissor": "SMS-Rio",
