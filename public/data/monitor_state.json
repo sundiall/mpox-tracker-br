@@ -1,12 +1,12 @@
 {
   "modo": "CAMPANHA_ATIVA",
   "motivo": "Campanha de vacinação ativa e alterações recentes detectadas nos postos",
-  "ultimaAlteracaoCritica": "2026-11-27T12:25:21.887003",
+  "ultimaAlteracaoCritica": "2026-11-27T13:48:23.238495",
   "horarioAberturaDiaUtilBRT": 7,
   "horarioFechamentoDiaUtilBRT": 22,
   "horarioAberturaFimSemanaBRT": 8,
   "horarioFechamentoFimSemanaBRT": 22,
   "frequenciaSugeridaMinutos": 60,
   "diasSemNovidades": 0,
-  "ultimaChecagem": "2026-11-27T12:25:21.887003"
+  "ultimaChecagem": "2026-11-27T13:48:23.238495"
 }
