@@ -38,7 +38,7 @@ export interface NationalSummary {
 // Dados oficiais consolidados pelo Centro Nacional de Inteligência Epidemiológica (CNIE/SVSA/MS)
 // Fonte direta: https://www.gov.br/saude/pt-br/composicao/svsa/cnie/painel-mpox
 export const nationalSummary: NationalSummary = {
-  "ultimaAtualizacao": "2026-11-28T08:16:41.879928-03:00",
+  "ultimaAtualizacao": "2026-11-28T09:14:12.466785-03:00",
   "totalConfirmados": 16590,
   "totalProvaveis": 458,
   "totalSuspeitos": 619,
