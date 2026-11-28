@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-28T00:17:44.375541",
+  "timestamp": "2026-11-28T01:50:08.534272",
   "totalItensVarredura": 27,
   "analiseAgente": {
     "alteracoesEstoque": [
@@ -52,6 +52,28 @@
     "novosMarcos": [],
     "alertasNoticias": [
       {
+        "id": "alert-rj-2026-11-25-rio-recebe-nesta-semana-novas-doses-de-v",
+        "dataPublicacao": "2026-11-25",
+        "orgaoEmissor": "SES-RJ",
+        "ufRelacionada": "RJ",
+        "titulo": "Rio recebe nesta semana novas doses de vacina contra a mpox - Poder360",
+        "tipo": "disponibilidade_vacina",
+        "resumo": "Rio recebe nesta semana novas doses de vacina contra a mpox  Poder360",
+        "linkOficial": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQalBaM1VNVnBEU3hyYTFUV2JfNXhhN05MdDNSNXEySHRWT0ZxQkVUYlp3X2lGRWJDQzFaS1EtMVBnci05NUNPLUdxOEVmX1BSWjBwQlR0OUstcEtMNnlXbDJzMWFxZjNxbUt3ZUg0SG1oWHJQQXM2ZWhXU0VXLUhwam1xdk5LSzB3bnp1aGJxSVFPUHdQVFZUTnNSRjBRTWMtZHc?oc=5",
+        "categoria": "Imunização"
+      },
+      {
+        "id": "alert-sp-2026-11-25-mpox-n-mero-de-casos-passa-de-1-500-no-b",
+        "dataPublicacao": "2026-11-25",
+        "orgaoEmissor": "SES-SP",
+        "ufRelacionada": "SP",
+        "titulo": "Mpox: número de casos passa de 1 500 no Brasil e São Paulo inicia vacinação com novas doses - VEJA",
+        "tipo": "disponibilidade_vacina",
+        "resumo": "Mpox: número de casos passa de 1 500 no Brasil e São Paulo inicia vacinação com novas doses  VEJA",
+        "linkOficial": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPS3RNR2xIakQ1YkFwazNKMXBrbldRN09heVZheTR0NmVXQXJXUzRyMG5qZmMyeWNITG05U2NVNmhia1VJRmQ3WFh3QjJvQWhveWQzbnBBSzkxQlY0Q1NCOFFpc1QzeTdEendDUVhkYS1PNkNOQV93OEFsbkg2OENJODRHNElaZkR0dlJidDR2M1l0NkZYbnI1S2FVZGtlaHVvbDNIcGg3SzdacjBfV3VHZ1VEOS1lRTNEODJSVkdpWGs?oc=5",
+        "categoria": "Imunização"
+      },
+      {
         "id": "alert-rj-2026-11-25-rio-recebe-novo-lote-da-vacina-contra-mp",
         "dataPublicacao": "2026-11-25",
         "orgaoEmissor": "SES-RJ",
@@ -107,25 +129,14 @@
         "categoria": "Imunização"
       },
       {
-        "id": "alert-rj-2026-11-18-minist-rio-da-sa-de-envia-ao-munic-pio-d",
-        "dataPublicacao": "2026-11-18",
-        "orgaoEmissor": "SMS-Rio",
-        "ufRelacionada": "RJ",
-        "titulo": "Ministério da Saúde envia ao município do Rio mais mil frascos de vacina contra mpox - Governo Federal",
-        "tipo": "disponibilidade_vacina",
-        "resumo": "Ministério da Saúde envia ao município do Rio mais mil frascos de vacina contra mpox  Governo Federal",
-        "linkOficial": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQbl9qdXR0TUdTNkZIT2JIU0dOeEd5Y1VDSE5YZ0pZaGhHWTVWNFFtMEdYS2pDQXFTWURiRkh4TEdHaHd5Z19tWDRtSmYtRnBhR0VFZkJLNWdua1U0WUUta2RER0Vma25vV0lkb3RDNU1pdG5UU0ZUNER2WHM1dFRNdFhjUE1uQTJNeFNkTl9WSHR2YzVVTl9naVJJSDRIZFFvNnZxY3JuOFAwRklNdGVLZlFjXzZJbFU2cWxnMUVEcEhaNUkxQ2w0cVoxZE1OSDFiOFpuNGtobHphVllkNVhsTw?oc=5",
-        "categoria": "Imunização"
-      },
-      {
-        "id": "alert-sp-2026-11-18-sp-ganha-novas-doses-da-vacina-contra-a",
+        "id": "alert-sp-2026-11-18-s-o-paulo-recebe-mil-novas-doses-da-vaci",
         "dataPublicacao": "2026-11-18",
         "orgaoEmissor": "SES-SP",
         "ufRelacionada": "SP",
-        "titulo": "SP ganha novas doses da vacina contra a mpox; saiba quem pode receber - Agência Brasil",
+        "titulo": "São Paulo recebe mil novas doses da vacina contra a Mpox - agenciasp.sp.gov.br",
         "tipo": "disponibilidade_vacina",
-        "resumo": "SP ganha novas doses da vacina contra a mpox; saiba quem pode receber  Agência Brasil",
-        "linkOficial": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQcmM2MDJIeG5QQ2ttVXJYTXlTUWZXeWFKWWJaMjREWTZQNGRELXBGZ201OEFULUVzQWJ6V0V3Ynhad2RJWjBiNDRrMnNDVjZ0SjI2eXdrVFRqaEQtVHJYZERDd1pkakJlcmRpWHFRaXZIUndVal9UVmtrN2xxTlVJcy10S2toQloxU0p5Rzg2eUZHaTVMMDNXYk1ORlZBMTBDRl9JSjIxbW1ObTJGYXRUMDdWNjlOTTFCaW9Jc19uaw?oc=5",
+        "resumo": "São Paulo recebe mil novas doses da vacina contra a Mpox  agenciasp.sp.gov.br",
+        "linkOficial": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNSkYzc1Jsbm1KZFk2TXJxYVhJVGd6YmpGZEktc05fWU9weXYtcDFzTGJScFI1SGh6bC1OSWt6VFhqNlJsWlZ0SzhTZFJDVzZTMWJyV0NNcDFJcmpYblpBZVJKV0NJcnJrX3lybjVsVERZdDllWl9sNHFlanpwSXhySFo0MVo5bXhRMGt6OHJzVGFBaEp0T29sS2lsRQ?oc=5",
         "categoria": "Imunização"
       },
       {
@@ -142,6 +153,28 @@
     ],
     "alertasUrgentes": [
       {
+        "id": "alert-rj-2026-11-25-rio-recebe-nesta-semana-novas-doses-de-v",
+        "dataPublicacao": "2026-11-25",
+        "orgaoEmissor": "SES-RJ",
+        "ufRelacionada": "RJ",
+        "titulo": "Rio recebe nesta semana novas doses de vacina contra a mpox - Poder360",
+        "tipo": "disponibilidade_vacina",
+        "resumo": "Rio recebe nesta semana novas doses de vacina contra a mpox  Poder360",
+        "linkOficial": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQalBaM1VNVnBEU3hyYTFUV2JfNXhhN05MdDNSNXEySHRWT0ZxQkVUYlp3X2lGRWJDQzFaS1EtMVBnci05NUNPLUdxOEVmX1BSWjBwQlR0OUstcEtMNnlXbDJzMWFxZjNxbUt3ZUg0SG1oWHJQQXM2ZWhXU0VXLUhwam1xdk5LSzB3bnp1aGJxSVFPUHdQVFZUTnNSRjBRTWMtZHc?oc=5",
+        "categoria": "Imunização"
+      },
+      {
+        "id": "alert-sp-2026-11-25-mpox-n-mero-de-casos-passa-de-1-500-no-b",
+        "dataPublicacao": "2026-11-25",
+        "orgaoEmissor": "SES-SP",
+        "ufRelacionada": "SP",
+        "titulo": "Mpox: número de casos passa de 1 500 no Brasil e São Paulo inicia vacinação com novas doses - VEJA",
+        "tipo": "disponibilidade_vacina",
+        "resumo": "Mpox: número de casos passa de 1 500 no Brasil e São Paulo inicia vacinação com novas doses  VEJA",
+        "linkOficial": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPS3RNR2xIakQ1YkFwazNKMXBrbldRN09heVZheTR0NmVXQXJXUzRyMG5qZmMyeWNITG05U2NVNmhia1VJRmQ3WFh3QjJvQWhveWQzbnBBSzkxQlY0Q1NCOFFpc1QzeTdEendDUVhkYS1PNkNOQV93OEFsbkg2OENJODRHNElaZkR0dlJidDR2M1l0NkZYbnI1S2FVZGtlaHVvbDNIcGg3SzdacjBfV3VHZ1VEOS1lRTNEODJSVkdpWGs?oc=5",
+        "categoria": "Imunização"
+      },
+      {
         "id": "alert-rj-2026-11-25-rio-recebe-novo-lote-da-vacina-contra-mp",
         "dataPublicacao": "2026-11-25",
         "orgaoEmissor": "SES-RJ",
@@ -197,25 +230,14 @@
         "categoria": "Imunização"
       },
       {
-        "id": "alert-rj-2026-11-18-minist-rio-da-sa-de-envia-ao-munic-pio-d",
-        "dataPublicacao": "2026-11-18",
-        "orgaoEmissor": "SMS-Rio",
-        "ufRelacionada": "RJ",
-        "titulo": "Ministério da Saúde envia ao município do Rio mais mil frascos de vacina contra mpox - Governo Federal",
-        "tipo": "disponibilidade_vacina",
-        "resumo": "Ministério da Saúde envia ao município do Rio mais mil frascos de vacina contra mpox  Governo Federal",
-        "linkOficial": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQbl9qdXR0TUdTNkZIT2JIU0dOeEd5Y1VDSE5YZ0pZaGhHWTVWNFFtMEdYS2pDQXFTWURiRkh4TEdHaHd5Z19tWDRtSmYtRnBhR0VFZkJLNWdua1U0WUUta2RER0Vma25vV0lkb3RDNU1pdG5UU0ZUNER2WHM1dFRNdFhjUE1uQTJNeFNkTl9WSHR2YzVVTl9naVJJSDRIZFFvNnZxY3JuOFAwRklNdGVLZlFjXzZJbFU2cWxnMUVEcEhaNUkxQ2w0cVoxZE1OSDFiOFpuNGtobHphVllkNVhsTw?oc=5",
-        "categoria": "Imunização"
-      },
-      {
-        "id": "alert-sp-2026-11-18-sp-ganha-novas-doses-da-vacina-contra-a",
+        "id": "alert-sp-2026-11-18-s-o-paulo-recebe-mil-novas-doses-da-vaci",
         "dataPublicacao": "2026-11-18",
         "orgaoEmissor": "SES-SP",
         "ufRelacionada": "SP",
-        "titulo": "SP ganha novas doses da vacina contra a mpox; saiba quem pode receber - Agência Brasil",
+        "titulo": "São Paulo recebe mil novas doses da vacina contra a Mpox - agenciasp.sp.gov.br",
         "tipo": "disponibilidade_vacina",
-        "resumo": "SP ganha novas doses da vacina contra a mpox; saiba quem pode receber  Agência Brasil",
-        "linkOficial": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQcmM2MDJIeG5QQ2ttVXJYTXlTUWZXeWFKWWJaMjREWTZQNGRELXBGZ201OEFULUVzQWJ6V0V3Ynhad2RJWjBiNDRrMnNDVjZ0SjI2eXdrVFRqaEQtVHJYZERDd1pkakJlcmRpWHFRaXZIUndVal9UVmtrN2xxTlVJcy10S2toQloxU0p5Rzg2eUZHaTVMMDNXYk1ORlZBMTBDRl9JSjIxbW1ObTJGYXRUMDdWNjlOTTFCaW9Jc19uaw?oc=5",
+        "resumo": "São Paulo recebe mil novas doses da vacina contra a Mpox  agenciasp.sp.gov.br",
+        "linkOficial": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNSkYzc1Jsbm1KZFk2TXJxYVhJVGd6YmpGZEktc05fWU9weXYtcDFzTGJScFI1SGh6bC1OSWt6VFhqNlJsWlZ0SzhTZFJDVzZTMWJyV0NNcDFJcmpYblpBZVJKV0NJcnJrX3lybjVsVERZdDllWl9sNHFlanpwSXhySFo0MVo5bXhRMGt6OHJzVGFBaEp0T29sS2lsRQ?oc=5",
         "categoria": "Imunização"
       },
       {
